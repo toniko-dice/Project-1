@@ -1,0 +1,146 @@
+@import 'tailwindcss';
+
+/*
+  ─────────────────────────────────────────────────────────────
+  ДИЗАЙН ТОКЕНИ — единственото място, където се сменят цветове.
+  ─────────────────────────────────────────────────────────────
+
+  Всеки токен тук ражда истински Tailwind клас:
+    --color-tile  →  bg-tile, text-tile, border-tile
+    --color-ink   →  text-ink, bg-ink, border-ink
+
+  НЕ пишете „bg-[--color-tile]" — тази скоба е синтаксис от Tailwind 3
+  и в 4 дава невалидно правило, което браузърът мълчаливо изхвърля.
+  Пишете „bg-tile".
+
+  Стойностите могат да се презапишат от админа
+  (Настройки → Дизайн), който инжектира същите променливи по-надолу
+  в каскадата. Тук са резервните стойности.
+*/
+@theme {
+  /* ── Марка ── */
+  --color-brand: #00a862;
+  --color-brand-dark: #00854e;
+  --color-brand-light: #e6f7ef;
+
+  /* ── Повърхности ── */
+  --color-page: #ffffff;
+  --color-surface: #ffffff;
+  --color-topbar: #f5f5f5;
+
+  /* Плочките в мега менюто и продуктовите мрежи */
+  --color-tile: #f2f2f2;
+  --color-tile-hover: #e8e8e8;
+
+  /* Състояния на навигацията */
+  --color-nav-hover: #f0f0f0;
+  --color-nav-active: #ececec;
+
+  /* ── Текст ── */
+  --color-ink: #1a1a1a;
+  --color-ink-muted: #6b6b6b;
+
+  /* ── Линии ── */
+  --color-line: #e3e3e3;
+  --color-line-strong: #c9c9c9;
+
+  /* ── Тъмни банери ── */
+  --color-night: #000000;
+  --color-night-soft: #121212;
+
+  /* ── Сигнални цветове ── */
+  --color-accent: #e2551f; /* оранжев — промоции, баджове върху снимки */
+  --color-info: #1a6bd6; /* син — етикет „Ново" над име на продукт */
+  --color-alert: #e0342b; /* червен — етикети HOT/НОВО в менюто */
+
+  /* ── Шрифтове ── */
+  --font-heading: var(--font-rubik), system-ui, sans-serif;
+  --font-body: var(--font-nunito), system-ui, sans-serif;
+
+  /* ── Радиуси ── */
+  --radius-tile: 0.5rem;
+  --radius-banner: 0.75rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-page);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  /* Видим фокус за клавиатурна навигация — задължителен, не се маха. */
+  :focus-visible {
+    outline: 3px solid var(--color-brand);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Цените се подравняват по колони — табуларни цифри. */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer utilities {
+  .container-site {
+    width: 100%;
+    max-width: 88rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-site {
+      padding-inline: 2rem;
+    }
+  }
+
+  /* Хоризонтални карусели — скриваме скролбара, но пазим достъпа с клавиатура. */
+  .scroll-row {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding-bottom: 0.5rem;
+  }
+
+  .scroll-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scroll-row > * {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+  }
+}
+
+/* Уважаваме системната настройка за намалено движение. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

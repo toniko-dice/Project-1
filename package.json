@@ -1,0 +1,46 @@
+{
+  "name": "ecoflow-bg",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "dev:webpack": "next dev --webpack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "payload": "payload",
+    "generate:types": "payload generate:types",
+    "generate:importmap": "payload generate:importmap",
+    "seed": "payload run src/seed.ts",
+    "seed:menu": "payload run src/seed-menu.ts",
+    "migrate": "payload migrate",
+    "migrate:create": "payload migrate:create",
+    "migrate:status": "payload migrate:status",
+    "migrate:fresh": "payload migrate:fresh"
+  },
+  "dependencies": {
+    "@payloadcms/db-sqlite": "^3.88.0",
+    "@payloadcms/next": "^3.88.0",
+    "@payloadcms/richtext-lexical": "^3.88.0",
+    "@payloadcms/ui": "^3.88.0",
+    "@phosphor-icons/react": "^2.1.10",
+    "graphql": "^16.14.2",
+    "next": "16.3.1",
+    "payload": "^3.88.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "sass": "^1.103.0",
+    "sharp": "^0.35.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
