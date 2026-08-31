@@ -9,6 +9,7 @@ import { buildConfig } from 'payload'
 import sharp from 'sharp'
 
 import { Awards } from './collections/Awards'
+import { Backups } from './collections/Backups'
 import { Categories } from './collections/Categories'
 import { Media } from './collections/Media'
 import { MenuPanels } from './collections/MenuPanels'
@@ -16,6 +17,7 @@ import { Pages } from './collections/Pages'
 import { Products } from './collections/Products'
 import { Testimonials } from './collections/Testimonials'
 import { Users } from './collections/Users'
+import { dailyBackupTask } from './jobs/backupTask'
 import { Design } from './globals/Design'
 import { Footer } from './globals/Footer'
 import { Header } from './globals/Header'
@@ -32,8 +34,16 @@ export default buildConfig({
       titleSuffix: '— EcoFlow България',
     },
   },
-  collections: [Pages, Products, Categories, MenuPanels, Media, Testimonials, Awards, Users],
+  collections: [Pages, Products, Categories, MenuPanels, Media, Testimonials, Awards, Backups, Users],
   globals: [Header, Footer, Design, SiteSettings],
+  // Архивирането по график минава през опашката за задачи на Payload.
+  // Работи само докато сървърът върви — при спряна машина архив не се прави.
+  jobs: {
+    tasks: [dailyBackupTask],
+    autoRun: [{ cron: '0 */5 * * * *', queue: 'nightly', limit: 5 }],
+    shouldAutoRun: () => true,
+    deleteJobOnComplete: true,
+  },
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: { outputFile: path.resolve(dirname, 'payload-types.ts') },

@@ -3,10 +3,14 @@ import { revalidateAll, revalidateAllOnDelete } from '../lib/revalidate'
 
 export const Categories: CollectionConfig = {
   slug: 'categories',
+  // Записите се подреждат с влачене в списъчния изглед.
+  orderable: true,
+  // Списъкът се отваря в подредбата, зададена с влаченето.
+  defaultSort: '_order',
   labels: { singular: 'Категория', plural: 'Категории' },
   admin: {
     useAsTitle: 'title',
-    defaultColumns: ['title', 'slug', 'parent', 'order'],
+    defaultColumns: ['title', 'slug', 'parent'],
     group: 'Каталог',
     description:
       'Категориите са на две нива: главна категория (напр. „Портативни електроцентрали") и серия под нея (напр. „Серия DELTA"). Серията се закача към главната чрез полето „Подкатегория на".',
@@ -44,13 +48,6 @@ export const Categories: CollectionConfig = {
                   'Оставете празно за главна категория. Попълнете, за да стане серия под друга категория.',
               },
               filterOptions: ({ id }) => (id ? { id: { not_equals: id } } : true),
-            },
-            {
-              name: 'order',
-              type: 'number',
-              defaultValue: 0,
-              label: 'Подредба',
-              admin: { description: 'По-малко число = по-напред.' },
             },
             {
               name: 'showInStrip',

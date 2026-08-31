@@ -3,6 +3,10 @@ import { revalidateAll, revalidateAllOnDelete } from '../lib/revalidate'
 
 export const Products: CollectionConfig = {
   slug: 'products',
+  // Записите се подреждат с влачене в списъчния изглед.
+  orderable: true,
+  // Списъкът се отваря в подредбата, зададена с влаченето.
+  defaultSort: '_order',
   labels: { singular: 'Продукт', plural: 'Продукти' },
   admin: {
     useAsTitle: 'title',

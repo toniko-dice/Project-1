@@ -14,12 +14,28 @@ export const Footer: GlobalConfig = {
       label: 'Колони с линкове',
       labels: { singular: 'Колона', plural: 'Колони' },
       maxRows: 6,
+      admin: {
+        components: {
+          RowLabel: {
+            path: '@/components/admin/RowLabel#RowLabel',
+            clientProps: { field: 'heading', fallback: 'Колона' },
+          },
+        },
+      },
       fields: [
         { name: 'heading', type: 'text', required: true, label: 'Заглавие' },
         {
           name: 'links',
           type: 'array',
           label: 'Линкове',
+          admin: {
+            components: {
+              RowLabel: {
+                path: '@/components/admin/RowLabel#RowLabel',
+                clientProps: { field: 'label', fallback: 'Линк' },
+              },
+            },
+          },
           fields: [
             { name: 'label', type: 'text', required: true, label: 'Текст' },
             { name: 'url', type: 'text', required: true, label: 'Адрес' },
@@ -40,6 +56,14 @@ export const Footer: GlobalConfig = {
       name: 'social',
       type: 'array',
       label: 'Социални мрежи',
+      admin: {
+        components: {
+          RowLabel: {
+            path: '@/components/admin/RowLabel#RowLabel',
+            clientProps: { field: 'platform', fallback: 'Мрежа' },
+          },
+        },
+      },
       fields: [
         {
           name: 'platform',
@@ -62,6 +86,14 @@ export const Footer: GlobalConfig = {
       name: 'legalLinks',
       type: 'array',
       label: 'Правни линкове',
+      admin: {
+        components: {
+          RowLabel: {
+            path: '@/components/admin/RowLabel#RowLabel',
+            clientProps: { field: 'label', fallback: 'Линк' },
+          },
+        },
+      },
       fields: [
         { name: 'label', type: 'text', required: true, label: 'Текст' },
         { name: 'url', type: 'text', required: true, label: 'Адрес' },

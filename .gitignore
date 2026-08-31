@@ -44,3 +44,8 @@ next-env.d.ts
 /media
 *.db
 *.db-journal
+
+# Архиви
+/backups
+/.backup-tmp
+/.restore-staging

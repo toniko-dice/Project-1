@@ -39,6 +39,10 @@ const cardFields = (titleRequired: boolean): Field[] => [
 
 export const MenuPanels: CollectionConfig = {
   slug: 'menu-panels',
+  // Записите се подреждат с влачене в списъчния изглед.
+  orderable: true,
+  // Списъкът се отваря в подредбата, зададена с влаченето.
+  defaultSort: '_order',
   labels: { singular: 'Панел в менюто', plural: 'Панели в менюто' },
   admin: {
     useAsTitle: 'title',
@@ -80,6 +84,12 @@ export const MenuPanels: CollectionConfig = {
         description:
           'Всяка секция е един ред със заглавие, линк „Виж всички" вдясно и мрежа с продукти. В референтния дизайн панелът има две секции — продукти и аксесоари.',
         initCollapsed: false,
+        components: {
+          RowLabel: {
+            path: '@/components/admin/RowLabel#RowLabel',
+            clientProps: { field: 'heading', fallback: 'Секция' },
+          },
+        },
       },
       fields: [
         { name: 'heading', type: 'text', required: true, label: 'Заглавие на секцията' },
@@ -117,6 +127,12 @@ export const MenuPanels: CollectionConfig = {
           admin: {
             description:
               'До 5 карти, ако плочката „Виж всички" е включена, иначе до 6. Подредбата тук е подредбата на екрана.',
+            components: {
+              RowLabel: {
+                path: '@/components/admin/RowLabel#RowLabel',
+                clientProps: { field: 'title', fallback: 'Карта' },
+              },
+            },
           },
           fields: cardFields(true),
         },

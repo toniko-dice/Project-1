@@ -14,6 +14,10 @@ import {
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
+  // Записите се подреждат с влачене в списъчния изглед.
+  orderable: true,
+  // Списъкът се отваря в подредбата, зададена с влаченето.
+  defaultSort: '_order',
   labels: { singular: 'Страница', plural: 'Страници' },
   admin: {
     useAsTitle: 'title',

@@ -49,7 +49,9 @@ export const SiteSettings: GlobalConfig = {
           name: 'showBgnPrices',
           type: 'checkbox',
           label: 'Показване на левова равностойност',
-          defaultValue: true,
+          // Двойното обозначаване отпадна като изискване на 8 август 2026 г.
+          // Кодът за преизчисляване се запазва, но не се показва по подразбиране.
+          defaultValue: false,
           admin: {
             description:
               'Двойно обозначаване EUR / BGN по фиксирания курс 1.95583. Изисква се през преходния период след въвеждането на еврото.',

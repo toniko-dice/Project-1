@@ -3,8 +3,16 @@ import { revalidateAll, revalidateAllOnDelete } from '../lib/revalidate'
 
 export const Testimonials: CollectionConfig = {
   slug: 'testimonials',
+  // Записите се подреждат с влачене в списъчния изглед.
+  orderable: true,
+  // Списъкът се отваря в подредбата, зададена с влаченето.
+  defaultSort: '_order',
   labels: { singular: 'Отзив', plural: 'Отзиви' },
-  admin: { useAsTitle: 'author', defaultColumns: ['author', 'location'], group: 'Съдържание' },
+  admin: {
+    useAsTitle: 'author',
+    defaultColumns: ['author', 'location'],
+    group: 'Съдържание',
+  },
   access: { read: () => true },
   hooks: {
     afterChange: [revalidateAll],

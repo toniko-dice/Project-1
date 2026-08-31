@@ -15,6 +15,14 @@ export const PromoCards: Block = {
       minRows: 1,
       maxRows: 3,
       labels: { singular: 'Карта', plural: 'Карти' },
+      admin: {
+        components: {
+          RowLabel: {
+            path: '@/components/admin/RowLabel#RowLabel',
+            clientProps: { field: 'heading', fallback: 'Карта' },
+          },
+        },
+      },
       fields: [
         { name: 'heading', type: 'text', required: true, label: 'Заглавие' },
         { name: 'description', type: 'textarea', label: 'Описание' },

@@ -86,7 +86,7 @@ for (const [i, [title, slug]] of CATEGORY_DEFS.entries()) {
   const icon = await upload(title.slice(0, 12), title, 160, 160, '#f1f3f5', '#0f172a')
   const doc = await payload.create({
     collection: 'categories',
-    data: { title, slug, icon, order: i, description: title },
+    data: { title, slug, icon, description: title },
   })
   categoryIds[slug] = doc.id
 }
@@ -163,9 +163,9 @@ for (const [author, location, quote] of TESTIMONIALS) {
 
 console.log('Създаване на отличия…')
 const awardIds: number[] = []
-for (const [i, name] of ['iF Design Award', 'Red Dot', 'Good Design', 'CES Innovation', 'TIME Best Inventions'].entries()) {
+for (const name of ['iF Design Award', 'Red Dot', 'Good Design', 'CES Innovation', 'TIME Best Inventions']) {
   const logo = await upload(name, `Лого на ${name}`, 240, 96, '#ffffff', '#0f172a')
-  const doc = await payload.create({ collection: 'awards', data: { name, logo, order: i } })
+  const doc = await payload.create({ collection: 'awards', data: { name, logo } })
   awardIds.push(doc.id)
 }
 
@@ -412,7 +412,7 @@ await payload.updateGlobal({
     logo: logoImg,
     brandColor: '#00A862',
     shopUrl: 'https://example.com/shop',
-    showBgnPrices: true,
+    showBgnPrices: false,
     companyName: 'Вашата фирма ЕООД',
     vatNumber: '000000000',
     address: 'ул. Примерна 1\n1000 София',

@@ -3,8 +3,16 @@ import { revalidateAll, revalidateAllOnDelete } from '../lib/revalidate'
 
 export const Awards: CollectionConfig = {
   slug: 'awards',
+  // Записите се подреждат с влачене в списъчния изглед.
+  orderable: true,
+  // Списъкът се отваря в подредбата, зададена с влаченето.
+  defaultSort: '_order',
   labels: { singular: 'Отличие', plural: 'Отличия и медии' },
-  admin: { useAsTitle: 'name', group: 'Съдържание' },
+  admin: {
+    useAsTitle: 'name',
+    defaultColumns: ['name', 'url'],
+    group: 'Съдържание',
+  },
   access: { read: () => true },
   hooks: {
     afterChange: [revalidateAll],
@@ -21,6 +29,5 @@ export const Awards: CollectionConfig = {
       admin: { description: 'Прозрачен PNG или SVG. Показва се в секцията "Отличени от".' },
     },
     { name: 'url', type: 'text', label: 'Линк' },
-    { name: 'order', type: 'number', defaultValue: 0, label: 'Подредба' },
   ],
 }

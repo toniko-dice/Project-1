@@ -74,8 +74,10 @@ export interface Config {
     media: Media;
     testimonials: Testimonial;
     awards: Award;
+    backups: Backup;
     users: User;
     'payload-kv': PayloadKv;
+    'payload-jobs': PayloadJob;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -89,8 +91,10 @@ export interface Config {
     media: MediaSelect<false> | MediaSelect<true>;
     testimonials: TestimonialsSelect<false> | TestimonialsSelect<true>;
     awards: AwardsSelect<false> | AwardsSelect<true>;
+    backups: BackupsSelect<false> | BackupsSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
+    'payload-jobs': PayloadJobsSelect<false> | PayloadJobsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -104,12 +108,14 @@ export interface Config {
     footer: Footer;
     design: Design;
     'site-settings': SiteSetting;
+    'payload-jobs-stats': PayloadJobsStat;
   };
   globalsSelect: {
     header: HeaderSelect<false> | HeaderSelect<true>;
     footer: FooterSelect<false> | FooterSelect<true>;
     design: DesignSelect<false> | DesignSelect<true>;
     'site-settings': SiteSettingsSelect<false> | SiteSettingsSelect<true>;
+    'payload-jobs-stats': PayloadJobsStatsSelect<false> | PayloadJobsStatsSelect<true>;
   };
   locale: null;
   widgets: {
@@ -117,7 +123,13 @@ export interface Config {
   };
   user: User;
   jobs: {
-    tasks: unknown;
+    tasks: {
+      dailyBackup: TaskDailyBackup;
+      inline: {
+        input: unknown;
+        output: unknown;
+      };
+    };
     workflows: unknown;
   };
 }
@@ -147,6 +159,7 @@ export interface UserAuthOperations {
  */
 export interface Page {
   id: number;
+  _order?: string | null;
   title: string;
   /**
    * Началната страница трябва да е с адрес "home". Останалите — напр. "za-nas".
@@ -394,6 +407,7 @@ export interface Media {
  */
 export interface Category {
   id: number;
+  _order?: string | null;
   title: string;
   /**
    * Напр. „delta-seriya" → /categories/delta-seriya. Само латиница и тирета.
@@ -403,10 +417,6 @@ export interface Category {
    * Оставете празно за главна категория. Попълнете, за да стане серия под друга категория.
    */
   parent?: (number | null) | Category;
-  /**
-   * По-малко число = по-напред.
-   */
-  order?: number | null;
   /**
    * Отнася се за лентата с кръгли икони на началната страница.
    */
@@ -432,6 +442,7 @@ export interface Category {
  */
 export interface Product {
   id: number;
+  _order?: string | null;
   title: string;
   /**
    * Напр. "delta-pro-ultra-x".
@@ -485,6 +496,7 @@ export interface Product {
  */
 export interface Testimonial {
   id: number;
+  _order?: string | null;
   author: string;
   location?: string | null;
   quote: string;
@@ -500,13 +512,13 @@ export interface Testimonial {
  */
 export interface Award {
   id: number;
+  _order?: string | null;
   name: string;
   /**
    * Прозрачен PNG или SVG. Показва се в секцията "Отличени от".
    */
   logo: number | Media;
   url?: string | null;
-  order?: number | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -518,6 +530,7 @@ export interface Award {
  */
 export interface MenuPanel {
   id: number;
+  _order?: string | null;
   /**
    * Текстът, който се вижда в сайдбара. Напр. „Серия EcoFlow DELTA".
    */
@@ -592,6 +605,34 @@ export interface MenuPanel {
   createdAt: string;
 }
 /**
+ * Всеки архив съдържа базата и качените снимки. Бутонът „Създай архив сега“ е над списъка. Свалете копие на компютъра си — архивите тук лежат на същия диск и не пазят от отказ на хардуера.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "backups".
+ */
+export interface Backup {
+  id: number;
+  /**
+   * За какво е този архив. Напр. „Преди пренареждане на менюто“.
+   */
+  label: string;
+  trigger?: ('ръчно' | 'по график' | 'качен') | null;
+  includesMedia?: boolean | null;
+  mediaFiles?: number | null;
+  note?: string | null;
+  updatedAt: string;
+  createdAt: string;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  focalX?: number | null;
+  focalY?: number | null;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "users".
  */
@@ -636,6 +677,107 @@ export interface PayloadKv {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "payload-jobs".
+ */
+export interface PayloadJob {
+  id: number;
+  /**
+   * Input data provided to the job
+   */
+  input?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  taskStatus?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  completedAt?: string | null;
+  totalTried?: number | null;
+  /**
+   * If hasError is true this job will not be retried
+   */
+  hasError?: boolean | null;
+  /**
+   * If hasError is true, this is the error that caused it
+   */
+  error?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  /**
+   * Task execution log
+   */
+  log?:
+    | {
+        executedAt: string;
+        completedAt: string;
+        taskSlug: 'inline' | 'dailyBackup';
+        taskID: string;
+        input?:
+          | {
+              [k: string]: unknown;
+            }
+          | unknown[]
+          | string
+          | number
+          | boolean
+          | null;
+        output?:
+          | {
+              [k: string]: unknown;
+            }
+          | unknown[]
+          | string
+          | number
+          | boolean
+          | null;
+        state: 'failed' | 'succeeded';
+        error?:
+          | {
+              [k: string]: unknown;
+            }
+          | unknown[]
+          | string
+          | number
+          | boolean
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  taskSlug?: ('inline' | 'dailyBackup') | null;
+  queue?: string | null;
+  waitUntil?: string | null;
+  processing?: boolean | null;
+  meta?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
@@ -668,6 +810,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'awards';
         value: number | Award;
+      } | null)
+    | ({
+        relationTo: 'backups';
+        value: number | Backup;
       } | null)
     | ({
         relationTo: 'users';
@@ -720,6 +866,7 @@ export interface PayloadMigration {
  * via the `definition` "pages_select".
  */
 export interface PagesSelect<T extends boolean = true> {
+  _order?: T;
   title?: T;
   slug?: T;
   layout?:
@@ -884,6 +1031,7 @@ export interface PagesSelect<T extends boolean = true> {
  * via the `definition` "products_select".
  */
 export interface ProductsSelect<T extends boolean = true> {
+  _order?: T;
   title?: T;
   slug?: T;
   category?: T;
@@ -918,10 +1066,10 @@ export interface ProductsSelect<T extends boolean = true> {
  * via the `definition` "categories_select".
  */
 export interface CategoriesSelect<T extends boolean = true> {
+  _order?: T;
   title?: T;
   slug?: T;
   parent?: T;
-  order?: T;
   showInStrip?: T;
   icon?: T;
   heroImage?: T;
@@ -937,6 +1085,7 @@ export interface CategoriesSelect<T extends boolean = true> {
  * via the `definition` "menu-panels_select".
  */
 export interface MenuPanelsSelect<T extends boolean = true> {
+  _order?: T;
   title?: T;
   slug?: T;
   sections?:
@@ -1040,6 +1189,7 @@ export interface MediaSelect<T extends boolean = true> {
  * via the `definition` "testimonials_select".
  */
 export interface TestimonialsSelect<T extends boolean = true> {
+  _order?: T;
   author?: T;
   location?: T;
   quote?: T;
@@ -1054,12 +1204,34 @@ export interface TestimonialsSelect<T extends boolean = true> {
  * via the `definition` "awards_select".
  */
 export interface AwardsSelect<T extends boolean = true> {
+  _order?: T;
   name?: T;
   logo?: T;
   url?: T;
-  order?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "backups_select".
+ */
+export interface BackupsSelect<T extends boolean = true> {
+  label?: T;
+  trigger?: T;
+  includesMedia?: T;
+  mediaFiles?: T;
+  note?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  url?: T;
+  thumbnailURL?: T;
+  filename?: T;
+  mimeType?: T;
+  filesize?: T;
+  width?: T;
+  height?: T;
+  focalX?: T;
+  focalY?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1091,6 +1263,38 @@ export interface UsersSelect<T extends boolean = true> {
 export interface PayloadKvSelect<T extends boolean = true> {
   key?: T;
   data?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "payload-jobs_select".
+ */
+export interface PayloadJobsSelect<T extends boolean = true> {
+  input?: T;
+  taskStatus?: T;
+  completedAt?: T;
+  totalTried?: T;
+  hasError?: T;
+  error?: T;
+  log?:
+    | T
+    | {
+        executedAt?: T;
+        completedAt?: T;
+        taskSlug?: T;
+        taskID?: T;
+        input?: T;
+        output?: T;
+        state?: T;
+        error?: T;
+        id?: T;
+      };
+  taskSlug?: T;
+  queue?: T;
+  waitUntil?: T;
+  processing?: T;
+  meta?: T;
+  updatedAt?: T;
+  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1345,6 +1549,24 @@ export interface SiteSetting {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "payload-jobs-stats".
+ */
+export interface PayloadJobsStat {
+  id: number;
+  stats?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "header_select".
  */
 export interface HeaderSelect<T extends boolean = true> {
@@ -1476,6 +1698,16 @@ export interface SiteSettingsSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "payload-jobs-stats_select".
+ */
+export interface PayloadJobsStatsSelect<T extends boolean = true> {
+  stats?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "collections_widget".
  */
 export interface CollectionsWidget {
@@ -1483,6 +1715,14 @@ export interface CollectionsWidget {
     [k: string]: unknown;
   };
   width: 'full';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "TaskDailyBackup".
+ */
+export interface TaskDailyBackup {
+  input?: unknown;
+  output?: unknown;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

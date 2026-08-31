@@ -18,6 +18,14 @@ export const BenefitsGrid: Block = {
       minRows: 2,
       maxRows: 6,
       labels: { singular: 'Предимство', plural: 'Предимства' },
+      admin: {
+        components: {
+          RowLabel: {
+            path: '@/components/admin/RowLabel#RowLabel',
+            clientProps: { field: 'title', fallback: 'Предимство' },
+          },
+        },
+      },
       fields: [
         {
           name: 'icon',
