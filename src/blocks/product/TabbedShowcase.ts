@@ -35,7 +35,11 @@ export const TabbedShowcase: Block = {
           type: 'array',
           label: 'Редове',
           labels: { singular: 'Ред', plural: 'Редове' },
-          minRows: 2,
+          /*
+            Няма долна граница нарочно. На оригинала има раздели с една
+            стойност и раздели изобщо без стойности — изискване за поне два
+            реда блокира публикуването на верни данни.
+          */
           maxRows: 6,
           admin: { ...rowLabel('label', 'Ред') },
           fields: [

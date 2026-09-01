@@ -25,6 +25,12 @@ const nunito = Nunito_Sans({
 })
 
 export const metadata: Metadata = {
+  /*
+    Без това Next оставя относителни адреси в og:image и данните за
+    търсачките. Google не разчита относителен адрес и снимката не влиза
+    в резултатите. Оправя целия сайт наведнъж, не само една страница.
+  */
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
   title: {
     default: 'EcoFlow България — Портативни електроцентрали и домашно захранване',
     template: '%s — EcoFlow България',

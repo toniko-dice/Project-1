@@ -450,6 +450,22 @@ export interface Product {
    * Напр. "delta-pro-ultra-x".
    */
   slug: string;
+  /**
+   * Номерът на артикула в dice.bg. Служи за сверяване при внос и за търсачките.
+   */
+  sku?: string | null;
+  /**
+   * Обикновено EcoFlow. Сменя се при аксесоари на друг производител — в каталога има артикули на Anker, VEMARK, 4smarts и други.
+   */
+  brand?: string | null;
+  /**
+   * Основният баркод на производителя, 13 цифри. Влиза в данните за търсачките и позволява на Google да разпознае продукта еднозначно.
+   */
+  ean?: string | null;
+  /**
+   * Складов или доставчиков номер. Служи за сверяване при внос и не се показва никъде на сайта.
+   */
+  barcodeInternal?: string | null;
   category: number | Category;
   /**
    * Попълва се само — взима се от избраната по-горе категория.
@@ -459,6 +475,16 @@ export interface Product {
    * Редът под името в продуктовата карта. Напр. "6144Wh капацитет / 7200W изход".
    */
   tagline?: string | null;
+  /**
+   * Кратките изречения в кутията за покупка, под цената. Три до пет са достатъчни — това е първото, което клиентът чете.
+   */
+  highlights?:
+    | {
+        title: string;
+        text: string;
+        id?: string | null;
+      }[]
+    | null;
   badge?: ('none' | 'new' | 'sale' | 'bestseller' | 'limited') | null;
   /**
    * Служи само за подреждане и филтриране на списъка тук. Не влияе на изгледа на страницата — той зависи единствено от добавените секции.
@@ -515,6 +541,14 @@ export interface Product {
       }[]
     | null;
   description?: string | null;
+  /**
+   * Ако е празно, се ползва името на продукта.
+   */
+  metaTitle?: string | null;
+  /**
+   * Ако е празно, се ползва кратката спецификация.
+   */
+  metaDescription?: string | null;
   sections?:
     | (
         | {
@@ -819,6 +853,7 @@ export interface Product {
     | null;
   updatedAt: string;
   createdAt: string;
+  _status?: ('draft' | 'published') | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1364,9 +1399,20 @@ export interface ProductsSelect<T extends boolean = true> {
   _order?: T;
   title?: T;
   slug?: T;
+  sku?: T;
+  brand?: T;
+  ean?: T;
+  barcodeInternal?: T;
   category?: T;
   categoryName?: T;
   tagline?: T;
+  highlights?:
+    | T
+    | {
+        title?: T;
+        text?: T;
+        id?: T;
+      };
   badge?: T;
   productType?: T;
   price?: T;
@@ -1402,6 +1448,8 @@ export interface ProductsSelect<T extends boolean = true> {
         id?: T;
       };
   description?: T;
+  metaTitle?: T;
+  metaDescription?: T;
   sections?:
     | T
     | {
@@ -1592,6 +1640,7 @@ export interface ProductsSelect<T extends boolean = true> {
       };
   updatedAt?: T;
   createdAt?: T;
+  _status?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

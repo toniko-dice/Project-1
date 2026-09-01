@@ -1,0 +1,341 @@
+{
+  "_bележка": "Съдържание за внасяне. Пуска се с: npm run import:product delta-3-classic",
+  "_iztochnik": "eu.ecoflow.com/products/delta-3-classic-portable-power-station, снето на 31.08.2026",
+
+  "produkt": {
+    "title": "EcoFlow DELTA 3 Classic",
+    "slug": "delta-3-classic",
+    "categorySlug": "portativni-elektrocentrali",
+    "productType": "hero",
+    "tagline": "1024Wh капацитет / 1800W изход",
+    "badge": "none",
+    "price": 549,
+    "compareAtPrice": 599,
+    "externalUrl": "https://dice.bg/portativna-profesionalna-elektrocentrala-za-zarezhdane-na-ustrojstva-ecoflow-delta-3-classic-portable-power-station-1024wh-t-mnosiv",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "description": "Портативна електроцентрала с 1024Wh капацитет и 1800W изход. Зарежда се до 80% за 45 минути от контакта, работи под 30 dB и превключва при спиране на тока за 10 милисекунди.",
+    "highlights": [
+      {
+        "title": "1800W мощност",
+        "text": "3600W пиково натоварване. С технологията X-Boost захранва и уреди до 2400W — хладилник, кана за къмпинг, лаптоп, електроинструменти."
+      },
+      {
+        "title": "Три начина за зареждане, готов за 45 минути",
+        "text": "От нула до 80% за 45 минути от контакта. Зарежда се още от соларни панели и от автомобил."
+      },
+      {
+        "title": "Лек, компактен, подвижен",
+        "text": "Влиза еднакво добре на открито, в кола и на работна площадка."
+      }
+    ],
+    "metaTitle": "EcoFlow DELTA 3 Classic 1024Wh — портативна електроцентрала",
+    "metaDescription": "1024Wh капацитет, 1800W изход, 3600W пик. Зареждане до 80% за 45 минути. Официален дистрибутор за България."
+  },
+
+  "galeriya": [
+    { "file": "ecoflow-delta-3-classic-1024wh-portable-power-station-1218691755_2000x.webp", "alt": "EcoFlow DELTA 3 Classic — изглед отпред" },
+    { "file": "ecoflow-delta-3-classic-1024wh-portable-power-station-1218691756_2000x.webp", "alt": "EcoFlow DELTA 3 Classic — изглед отстрани" },
+    { "file": "ecoflow-delta-3-classic-1024wh-portable-power-station-1242802812_2000x.webp", "alt": "EcoFlow DELTA 3 Classic — контакти и дисплей" },
+    { "file": "ecoflow-delta-3-classic-1024wh-portable-power-station-1227843557_2000x.jpg", "alt": "EcoFlow DELTA 3 Classic в употреба на открито" },
+    { "file": "ecoflow-delta-3-classic-1024wh-portable-power-station-1227843556_2000x.jpg", "alt": "EcoFlow DELTA 3 Classic до палатка" },
+    { "file": "ecoflow-delta-3-classic-1024wh-portable-power-station-1227843555_2000x.webp", "alt": "EcoFlow DELTA 3 Classic — детайл от корпуса" },
+    { "file": "ecoflow-delta-3-classic-1024wh-portable-power-station-1231866624_2000x.webp", "alt": "EcoFlow DELTA 3 Classic — размери" },
+    { "file": "ecoflow-delta-3-classic-1024wh-portable-power-station-1237498038_2000x.webp", "alt": "EcoFlow DELTA 3 Classic — дръжка за носене" }
+  ],
+
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "anchorLabel": "Преглед",
+      "heading": "Най-изгодната електроцентрала от 1 kWh на EcoFlow",
+      "subheading": "Разумният избор за работа и почивка на открито",
+      "image": "01_25653e45-72da-49fd-b077-cad440edb445.webp",
+      "imageAlt": "Ключови характеристики на EcoFlow DELTA 3 Classic",
+      "layout": "image-full",
+      "theme": "light"
+    },
+    {
+      "blockType": "keySpecStrip",
+      "items": [
+        { "value": "1024Wh", "label": "капацитет" },
+        { "value": "1800W", "label": "максимална мощност" },
+        { "value": "3600W", "label": "пикова мощност" },
+        { "value": "45 мин", "label": "до 80% заряд" },
+        { "value": "10 ms", "label": "превключване при спиране на тока" },
+        { "value": "30 dB", "label": "шум при 600W" },
+        { "value": "10 години", "label": "живот на батерията" }
+      ]
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "heading": "1800W мощност, 3600W пик",
+      "tabs": [
+        {
+          "label": "Къмпинг",
+          "image": "03-01-Camping.jpg",
+          "imageAlt": "DELTA 3 Classic захранва техника на къмпинг",
+          "rows": [
+            { "label": "Лампа за къмпинг", "sublabel": "10 W", "value": "58 ч" },
+            { "label": "Електрически грил", "sublabel": "1150 W", "value": "0,7 ч" },
+            { "label": "Електрическа кана", "sublabel": "1500 W", "value": "0,5 ч" }
+          ]
+        },
+        {
+          "label": "Заснемане на открито",
+          "image": "02-02.webp",
+          "imageAlt": "DELTA 3 Classic захранва снимачна техника в багажник",
+          "rows": [
+            { "label": "Фотоапарат", "sublabel": "16 W", "value": "60 зареждания" },
+            { "label": "Дрон", "sublabel": "40 Wh", "value": "25 зареждания" },
+            { "label": "Лаптоп", "sublabel": "60 W", "value": "16 зареждания" }
+          ]
+        },
+        {
+          "label": "Работа на открито",
+          "image": "03-02-Outdoor_Work.jpg",
+          "imageAlt": "DELTA 3 Classic захранва инструменти на работна площадка",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "heading": "Зареден за 45 минути",
+      "body": "От нула до 80% за 45 минути от контакта. Технологията X-Stream управлява зареждането така, че да е бързо, без да съкращава живота на батерията.",
+      "image": "04_4a9d492f-44aa-4639-9de4-8678c00375b6.webp",
+      "imageAlt": "X-Stream — технология за бързо зареждане на EcoFlow",
+      "layout": "image-full",
+      "theme": "dark"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "heading": "Три начина за зареждане",
+      "tabs": [
+        {
+          "label": "От контакт",
+          "image": "05-AC_Charging.webp",
+          "imageAlt": "Зареждане на DELTA 3 Classic от електрически контакт",
+          "rows": [
+            { "label": "До 80%", "sublabel": "1400W вход", "value": "45 мин" },
+            { "label": "Пълен заряд", "sublabel": "1400W вход", "value": "60 мин" }
+          ]
+        },
+        {
+          "label": "От слънце",
+          "image": "05-Solar_Charging.jpg",
+          "imageAlt": "Зареждане на DELTA 3 Classic от соларни панели",
+          "rows": [
+            { "label": "Пълен заряд", "sublabel": "500W соларен вход", "value": "2 ч 30 мин" }
+          ]
+        },
+        {
+          "label": "От автомобил",
+          "image": "05-Car_Charging.jpg",
+          "imageAlt": "Зареждане на DELTA 3 Classic от автомобил чрез алтернатор",
+          "rows": [
+            { "label": "До 80%", "sublabel": "алтернатор 500W", "value": "1 ч 48 мин" },
+            { "label": "Пълен заряд", "sublabel": "алтернатор 500W", "value": "2 ч 30 мин" }
+          ]
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "heading": "Компактен и подвижен",
+      "body": "12,1 кг и 398 × 200 × 283 мм. Влиза в багажник, качва се по стълби и не изисква отделно място. За къмпинг, теренна работа или снимки — навсякъде, където трябва сигурен ток.",
+      "image": "06_012f061a-09e5-43fd-b94d-e93b9b5504c6.jpg",
+      "imageAlt": "DELTA 3 Classic — компактен и лесен за пренасяне",
+      "layout": "image-right",
+      "theme": "light"
+    },
+    {
+      "blockType": "featureSection",
+      "heading": "Превключва за милисекунди",
+      "body": "При спиране на тока поема захранването за под 10 милисекунди. Компютърът не се рестартира, хладилникът не усеща прекъсване, чувствителната техника продължава да работи.",
+      "image": "07_707be1f4-f38a-4610-a46f-00cfc99a46d1.webp",
+      "imageAlt": "DELTA 3 Classic като резервно захранване при спиране на тока",
+      "layout": "image-left",
+      "theme": "light",
+      "stats": [{ "value": "10 ms", "label": "време за превключване" }]
+    },
+    {
+      "blockType": "featureSection",
+      "heading": "LFP клетки от автомобилен клас",
+      "body": "Батерията използва литиево-желязо-фосфатни клетки от типа, който се влага в електромобили. Устойчиви на температурни разлики и на честа употреба.",
+      "image": "08_d1f399c6-8ca2-4a1f-8780-768ad3f0e985.webp",
+      "imageAlt": "LFP клетки от автомобилен клас в DELTA 3 Classic",
+      "layout": "image-right",
+      "theme": "dark"
+    },
+    {
+      "blockType": "featureSection",
+      "heading": "Десет години живот",
+      "body": "Около десет години експлоатация по вътрешни симулационни изпитания на EcoFlow. Гаранция 3 години, плюс още 2 при регистрация в приложението. Работи тихо — под 30 dB при натоварване до 600W.",
+      "image": "09.webp",
+      "imageAlt": "DELTA 3 Classic — издръжливост и тиха работа",
+      "layout": "image-full",
+      "theme": "dark",
+      "stats": [
+        { "value": "3 + 2", "label": "години гаранция" },
+        { "value": "30 dB", "label": "шум при 600W" }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "heading": "Повече информация, по-лесно управление",
+      "body": "Приложението OASIS 3.0 показва колко ток влиза и излиза, добива от соларните панели и състоянието на батерията. Може да зададете кога уредът да се зарежда и кога да отдава — при нощна тарифа зарежда нощем и захранва през деня.",
+      "image": "10_820a8008-d66a-4177-b0d9-97943ccd356e.webp",
+      "imageAlt": "Приложението EcoFlow OASIS 3.0 — потребление, добив и график",
+      "layout": "image-full",
+      "theme": "light"
+    },
+    {
+      "blockType": "comparisonTable",
+      "anchorLabel": "Сравнение",
+      "heading": "Моделите от 1 kWh",
+      "_vnimanie_ceni": "Цените ТРЯБВА да са от dice.bg, не от eu.ecoflow.com — бутонът води там. Потвърдена е само тази на Classic (549 €). Другите две са европейски и чакат проверка. Ако dice.bg не продава даден модел, махни цената и бутона за него — колоната остава само за сравнение.",
+      "columns": [
+        {
+          "label": "DELTA 3 Classic",
+          "tagline": "Най-изгодният за туризъм",
+          "price": 549,
+          "comparePrice": 599,
+          "ctaLabel": "Купи сега",
+          "ctaUrl": "https://dice.bg/portativna-profesionalna-elektrocentrala-za-zarezhdane-na-ustrojstva-ecoflow-delta-3-classic-portable-power-station-1024wh-t-mnosiv",
+          "highlight": true
+        },
+        { "label": "DELTA 3", "tagline": "За дома и на открито" },
+        { "label": "DELTA 3 Plus", "tagline": "Най-висока производителност" }
+      ],
+      "rows": [
+        { "label": "Капацитет", "values": ["1024Wh", "1024Wh", "1024Wh"] },
+        { "label": "Размери", "values": ["398 × 200 × 283 мм", "около 397,6 × 202 × 283,6 мм", "около 397,6 × 202 × 283,6 мм"] },
+        { "label": "Тегло", "values": ["12,1 кг ± 0,3 кг", "около 12,5 кг", "около 12,5 кг"] },
+        { "label": "Изход променлив ток", "values": ["1800W", "1800W", "1800W"] },
+        { "label": "USB-A", "values": ["1 × 18W", "2 × 18W", "2 × 36W"] },
+        { "label": "USB-C", "values": ["1×100W + 1×30W", "2 × 100W", "2 × 140W"] },
+        { "label": "Изход 12V", "values": ["няма", "има", "има"] },
+        { "label": "Общо изходи", "values": ["5", "13", "13"] },
+        { "label": "Вход променлив ток", "values": ["1400W", "1500W", "1500W"] },
+        { "label": "Максимален соларен вход", "values": ["500W", "500W", "1000W"] },
+        { "label": "Режим Storm Guard", "values": ["има", "има", "има"] },
+        { "label": "Допълнителна батерия", "values": ["не", "да (1–5kWh)", "да (1–5kWh)"] }
+      ]
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        { "name": "EcoFlow DELTA 3 Classic", "qty": 1 },
+        { "name": "Захранващ кабел за контакт", "qty": 1 },
+        { "name": "Ръководство и гаранционна карта", "qty": 1 }
+      ]
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "footnotes",
+      "items": [
+        { "text": "При правилна употреба животът на DELTA 3 Classic се оценява на около 10 години според вътрешни симулационни изпитания на EcoFlow. Данните са ориентировъчни; реалният срок зависи от условията на употреба." },
+        { "text": "Времената за работа на уредите са изчислени при идеални условия. Реалните резултати може да се различават." },
+        { "text": "Данните за скоростта на зареждане идват от лабораторията на EcoFlow и са ориентировъчни. Реалните стойности зависят от средата, състоянието на уреда и версията на софтуера." },
+        { "text": "Разширената гаранция от 2 години изисква регистрация на продукта в приложението EcoFlow." },
+        { "text": "Алтернаторът EcoFlow 500W Alternator Charger се продава отделно." },
+        { "text": "Нивото на шума е измерено от разстояние 0,5 м при околна температура 25°C." },
+        { "text": "Ако не е указано друго, всички изображения, видеа и други материали за продукта на тази страница са само ориентировъчни. Реалният вид, цвят и размер може да се различават." }
+      ]
+    }
+  ],
+
+  "specGroups": [
+    {
+      "groupLabel": "Общи",
+      "rows": [
+        { "label": "Цвят", "value": "сив" },
+        { "label": "Капацитет", "value": "1024 Wh" },
+        { "label": "Тегло", "value": "12,1 кг ± 0,3 кг" },
+        { "label": "Размери", "value": "398 × 200 × 283 мм" },
+        { "label": "Брой изходи", "value": "5" }
+      ]
+    },
+    {
+      "groupLabel": "Изход променлив ток",
+      "rows": [
+        { "label": "Брой контакти", "value": "3" },
+        { "label": "Максимална мощност", "value": "1800W" },
+        { "label": "Пикова мощност", "value": "3600W" },
+        { "label": "Мощност с X-Boost", "value": "2400W" },
+        { "label": "Напрежение", "value": "230V" },
+        { "label": "Време за превключване (UPS)", "value": "10 ms" }
+      ]
+    },
+    {
+      "groupLabel": "USB изходи",
+      "rows": [
+        { "label": "USB-A", "value": "1 × 12W" },
+        { "label": "USB-C", "value": "1 × 100W + 1 × 30W" }
+      ]
+    },
+    {
+      "groupLabel": "Зареждане",
+      "rows": [
+        { "label": "От контакт", "value": "1400W (60 мин)" },
+        { "label": "От соларни панели", "value": "500W максимум" },
+        { "label": "От генератор", "value": "1400W" }
+      ]
+    },
+    {
+      "groupLabel": "Батерия",
+      "rows": [
+        { "label": "Тип клетки", "value": "LFP" },
+        { "label": "Допълнителна батерия", "value": "не се поддържа" }
+      ]
+    },
+    {
+      "groupLabel": "Свързаност",
+      "rows": [
+        { "label": "Wi-Fi", "value": "да" },
+        { "label": "Bluetooth", "value": "да" },
+        { "label": "Управление от приложение", "value": "да" }
+      ]
+    },
+    {
+      "groupLabel": "Шум",
+      "rows": [
+        { "label": "При 600W", "value": "под 30 dB" },
+        { "label": "При 1200W", "value": "под 40 dB" }
+      ]
+    },
+    {
+      "groupLabel": "Работни условия",
+      "rows": [
+        { "label": "Максимална надморска височина", "value": "3000 м" },
+        { "label": "Температура при работа", "value": "-10°C до 45°C" },
+        { "label": "Температура при зареждане", "value": "0°C до 45°C" },
+        { "label": "Температура при съхранение", "value": "-10°C до 45°C" }
+      ]
+    },
+    {
+      "groupLabel": "Гаранция",
+      "rows": [
+        { "label": "Срок", "value": "3 + 2 години" },
+        { "label": "Условие", "value": "3 години стандартна, плюс 2 при регистрация в приложението" }
+      ]
+    }
+  ],
+
+  "_neyasni": [
+    "USB-A: сравнителната таблица на EcoFlow казва 18W, таблицата със спецификации казва 12W. В спецификациите е записано 12W, в сравнението — 18W, точно както е в оригинала. Да се провери в партньорския портал коя е вярната.",
+    "Разделът „Работа на открито\" е без редове — на оригинала не се виждаха стойностите за него.",
+    "Липсва деветата снимка за галерията (1233346667).",
+    "Снимка 12 (какво има в кутията) не се използва — текстът е въведен като истински редове, за да се превежда и чете от търсачките. Файлът е наличен, ако предпочетеш картинката.",
+    "Сравнителна таблица: цената на DELTA 3 и DELTA 3 Plus е махната нарочно. Трябват цените от dice.bg, а не европейските (749 и 849 €). Ако dice.bg ги продава — попълни цената, старата цена и адреса. Ако не ги продава — остави ги без цена и бутон, само за сравнение.",
+    "На страницата на EcoFlow цената на Classic в сравнителната таблица е 599 € зачертано 599 € — очевидна тяхна грешка от изтекла промоция. Ползвана е цената от dice.bg: 549 € от 599 €."
+  ]
+}

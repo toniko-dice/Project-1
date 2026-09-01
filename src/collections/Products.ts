@@ -17,6 +17,14 @@ export const Products: CollectionConfig = {
       'Продуктовата страница се сглобява от секции, също като обикновените страници. Продукт без добавени секции показва галерия, цена, бутон и описание.',
   },
   access: { read: () => true },
+  /*
+    Чернови. Внесеният продукт не бива да излиза наживо, преди собственикът
+    да го е прегледал — при внасяне на 45 продукта наведнъж това е разликата
+    между спокойна проверка и 45 недовършени страници пред клиентите.
+
+    Последствие: продукт се вижда на сайта чак след „Публикувай".
+  */
+  versions: { drafts: true },
   hooks: {
     afterChange: [revalidateAll],
     afterDelete: [revalidateAllOnDelete],
@@ -36,6 +44,50 @@ export const Products: CollectionConfig = {
               unique: true,
               label: 'URL адрес',
               admin: { description: 'Напр. "delta-pro-ultra-x".' },
+            },
+            {
+              name: 'sku',
+              type: 'text',
+              label: 'Каталожен номер (SKU)',
+              admin: {
+                description:
+                  'Номерът на артикула в dice.bg. Служи за сверяване при внос и за търсачките.',
+              },
+            },
+            {
+              name: 'brand',
+              type: 'text',
+              label: 'Марка',
+              defaultValue: 'EcoFlow',
+              admin: {
+                description:
+                  'Обикновено EcoFlow. Сменя се при аксесоари на друг производител — в каталога има артикули на Anker, VEMARK, 4smarts и други.',
+              },
+            },
+            {
+              type: 'row',
+              fields: [
+                {
+                  name: 'ean',
+                  type: 'text',
+                  label: 'Баркод EAN',
+                  admin: {
+                    width: '50%',
+                    description:
+                      'Основният баркод на производителя, 13 цифри. Влиза в данните за търсачките и позволява на Google да разпознае продукта еднозначно.',
+                  },
+                },
+                {
+                  name: 'barcodeInternal',
+                  type: 'text',
+                  label: 'Втори баркод (вътрешен)',
+                  admin: {
+                    width: '50%',
+                    description:
+                      'Складов или доставчиков номер. Служи за сверяване при внос и не се показва никъде на сайта.',
+                  },
+                },
+              ],
             },
             {
               name: 'category',
@@ -69,6 +121,32 @@ export const Products: CollectionConfig = {
                 description:
                   'Редът под името в продуктовата карта. Напр. "6144Wh капацитет / 7200W изход".',
               },
+            },
+            {
+              /*
+                Акцентите стоят в кутията за покупка, не в секциите на
+                страницата — виждат се без скролване. Затова са поле на
+                продукта, а не блок.
+              */
+              name: 'highlights',
+              type: 'array',
+              label: 'Акценти под цената',
+              labels: { singular: 'Акцент', plural: 'Акценти' },
+              maxRows: 5,
+              admin: {
+                description:
+                  'Кратките изречения в кутията за покупка, под цената. Три до пет са достатъчни — това е първото, което клиентът чете.',
+                components: {
+                  RowLabel: {
+                    path: '@/components/admin/RowLabel#RowLabel',
+                    clientProps: { field: 'title', fallback: 'Акцент' },
+                  },
+                },
+              },
+              fields: [
+                { name: 'title', type: 'text', required: true, label: 'Заглавие' },
+                { name: 'text', type: 'textarea', required: true, label: 'Пояснение' },
+              ],
             },
             {
               name: 'badge',
@@ -247,6 +325,23 @@ export const Products: CollectionConfig = {
               ],
             },
             { name: 'description', type: 'textarea', label: 'Пълно описание' },
+          ],
+        },
+        {
+          label: 'SEO',
+          fields: [
+            {
+              name: 'metaTitle',
+              type: 'text',
+              label: 'Заглавие за търсачки',
+              admin: { description: 'Ако е празно, се ползва името на продукта.' },
+            },
+            {
+              name: 'metaDescription',
+              type: 'textarea',
+              label: 'Описание за търсачки',
+              admin: { description: 'Ако е празно, се ползва кратката спецификация.' },
+            },
           ],
         },
         {

@@ -18,7 +18,8 @@
     "migrate:create": "payload migrate:create",
     "migrate:status": "payload migrate:status",
     "migrate:fresh": "payload migrate:fresh",
-    "backfill:order": "payload run src/backfill-order.ts"
+    "backfill:order": "payload run src/backfill-order.ts",
+    "import:product": "payload run src/import-product.ts"
   },
   "dependencies": {
     "@payloadcms/db-sqlite": "^3.88.0",
