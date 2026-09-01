@@ -437,6 +437,8 @@ export interface Category {
   createdAt: string;
 }
 /**
+ * Продуктовата страница се сглобява от секции, също като обикновените страници. Продукт без добавени секции показва галерия, цена, бутон и описание.
+ *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "products".
  */
@@ -459,6 +461,10 @@ export interface Product {
   tagline?: string | null;
   badge?: ('none' | 'new' | 'sale' | 'bestseller' | 'limited') | null;
   /**
+   * Служи само за подреждане и филтриране на списъка тук. Не влияе на изгледа на страницата — той зависи единствено от добавените секции.
+   */
+  productType?: ('hero' | 'accessory') | null;
+  /**
    * Цената в евро. Левовата равностойност се изчислява автоматично по фиксирания курс 1.95583.
    */
   price: number;
@@ -479,6 +485,28 @@ export interface Product {
         id?: string | null;
       }[]
     | null;
+  /**
+   * Оригиналът показва спецификациите като плосък списък. Групите са наша добавка — при 30+ реда плоският списък е нечетим. Заглавието на групата е по избор: оставите ли го празно, редовете се сливат с предишната група.
+   */
+  specGroups?:
+    | {
+        /**
+         * Напр. Изход променлив ток. Може да остане празно.
+         */
+        groupLabel?: string | null;
+        rows?:
+          | {
+              label: string;
+              value: string;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * Не въвеждайте тук. Полето е пренесено в „Спецификации по групи" и предстои да бъде премахнато.
+   */
   specs?:
     | {
         label: string;
@@ -487,6 +515,308 @@ export interface Product {
       }[]
     | null;
   description?: string | null;
+  sections?:
+    | (
+        | {
+            /**
+             * Ако попълните, секцията се появява в закаченото меню най-горе. Оставете празно, за да не се показва.
+             */
+            anchorLabel?: string | null;
+            items?:
+              | {
+                  /**
+                   * Едрият текст. Напр. 1024Wh.
+                   */
+                  value: string;
+                  /**
+                   * Дребният текст отдолу. Напр. Капацитет.
+                   */
+                  label: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'keySpecStrip';
+          }
+        | {
+            /**
+             * Ако попълните, секцията се появява в закаченото меню най-горе. Оставете празно, за да не се показва.
+             */
+            anchorLabel?: string | null;
+            heading: string;
+            subheading?: string | null;
+            body?: string | null;
+            /**
+             * Препоръчително 1680px широчина, както в оригинала.
+             */
+            image: number | Media;
+            layout?: ('image-right' | 'image-left' | 'image-full') | null;
+            theme?: ('light' | 'dark') | null;
+            /**
+             * По избор. Напр. 3600W и под него — пикова мощност.
+             */
+            stats?:
+              | {
+                  value: string;
+                  label: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'featureSection';
+          }
+        | {
+            /**
+             * Ако попълните, секцията се появява в закаченото меню най-горе. Оставете празно, за да не се показва.
+             */
+            anchorLabel?: string | null;
+            heading?: string | null;
+            tabs?:
+              | {
+                  label: string;
+                  image: number | Media;
+                  rows?:
+                    | {
+                        /**
+                         * По избор. Малка иконка вляво от реда.
+                         */
+                        icon?: (number | null) | Media;
+                        /**
+                         * Напр. лампа за къмпинг, или: от контакт.
+                         */
+                        label: string;
+                        /**
+                         * Напр. 10 W или 1400W.
+                         */
+                        sublabel?: string | null;
+                        /**
+                         * Напр. 58 ч или 45 мин. Взима се от официален източник — не се пресмята.
+                         */
+                        value: string;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'tabbedShowcase';
+          }
+        | {
+            /**
+             * Ако попълните, секцията се появява в закаченото меню най-горе. Оставете празно, за да не се показва.
+             */
+            anchorLabel?: string | null;
+            heading?: string | null;
+            options?:
+              | {
+                  /**
+                   * Напр. самостоятелно, или: с панел 220W.
+                   */
+                  label: string;
+                  price: number;
+                  /**
+                   * Отстъпката се смята от двете цени.
+                   */
+                  comparePrice?: number | null;
+                  /**
+                   * Адресът на този вариант в магазина.
+                   */
+                  externalUrl?: string | null;
+                  /**
+                   * Ако вариантът е отделен продукт в нашия каталог.
+                   */
+                  product?: (number | null) | Product;
+                  isCurrent?: boolean | null;
+                  soldOut?: boolean | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'bundleOptions';
+          }
+        | {
+            /**
+             * Ако попълните, секцията се появява в закаченото меню най-горе. Оставете празно, за да не се показва.
+             */
+            anchorLabel?: string | null;
+            heading?: string | null;
+            /**
+             * Всяка колона е един модел. Редовете по-долу трябва да са в същия ред.
+             */
+            columns?:
+              | {
+                  /**
+                   * Ако моделът е в нашия каталог, останалото се допълва от него.
+                   */
+                  product?: (number | null) | Product;
+                  /**
+                   * Ползва се, когато моделът не е в каталога ни.
+                   */
+                  label?: string | null;
+                  /**
+                   * По избор. Ако е празно, се взима от продукта.
+                   */
+                  image?: (number | null) | Media;
+                  /**
+                   * Напр. най-изгодният за туризъм.
+                   */
+                  tagline?: string | null;
+                  price?: number | null;
+                  comparePrice?: number | null;
+                  ctaLabel?: string | null;
+                  ctaUrl?: string | null;
+                  highlight?: boolean | null;
+                  id?: string | null;
+                }[]
+              | null;
+            /**
+             * Всеки ред е един показател. Стойностите се въвеждат по една за колона.
+             */
+            rows?:
+              | {
+                  /**
+                   * Напр. капацитет, изход променлив ток, тегло.
+                   */
+                  label: string;
+                  /**
+                   * По една за всяка колона, в същия ред като колоните по-горе.
+                   */
+                  values?:
+                    | {
+                        value?: string | null;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'comparisonTable';
+          }
+        | {
+            /**
+             * Ако попълните, секцията се появява в закаченото меню най-горе. Оставете празно, за да не се показва.
+             */
+            anchorLabel?: string | null;
+            heading?: string | null;
+            items?:
+              | {
+                  image?: (number | null) | Media;
+                  /**
+                   * Напр. кабел за зареждане.
+                   */
+                  name: string;
+                  qty?: number | null;
+                  id?: string | null;
+                }[]
+              | null;
+            /**
+             * По избор.
+             */
+            caption?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'inTheBox';
+          }
+        | {
+            /**
+             * Ако попълните, секцията се появява в закаченото меню най-горе. Оставете празно, за да не се показва.
+             */
+            anchorLabel?: string | null;
+            /**
+             * Съдържанието идва от раздел „Спецификации" на продукта — тук не се въвежда нищо.
+             */
+            heading?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'specTable';
+          }
+        | {
+            /**
+             * Ако попълните, секцията се появява в закаченото меню най-горе. Оставете празно, за да не се показва.
+             */
+            anchorLabel?: string | null;
+            heading?: string | null;
+            items?:
+              | {
+                  question: string;
+                  answer: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'faqBlock';
+          }
+        | {
+            /**
+             * Ако попълните, секцията се появява в закаченото меню най-горе. Оставете празно, за да не се показва.
+             */
+            anchorLabel?: string | null;
+            heading?: string | null;
+            /**
+             * Подредбата тук е подредбата на екрана.
+             */
+            products?: (number | Product)[] | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'relatedProducts';
+          }
+        | {
+            /**
+             * Ако попълните, секцията се появява в закаченото меню най-горе. Оставете празно, за да не се показва.
+             */
+            anchorLabel?: string | null;
+            /**
+             * Номерацията се слага автоматично по реда тук.
+             */
+            items?:
+              | {
+                  text: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'footnotes';
+          }
+        | {
+            /**
+             * Ако попълните, секцията се появява в закаченото меню най-горе. Оставете празно, за да не се показва.
+             */
+            anchorLabel?: string | null;
+            heading?: string | null;
+            body?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
+            /**
+             * Разгъва се при клик върху заглавието.
+             */
+            collapsed?: boolean | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'legalText';
+          }
+      )[]
+    | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -1038,6 +1368,7 @@ export interface ProductsSelect<T extends boolean = true> {
   categoryName?: T;
   tagline?: T;
   badge?: T;
+  productType?: T;
   price?: T;
   compareAtPrice?: T;
   externalUrl?: T;
@@ -1050,6 +1381,19 @@ export interface ProductsSelect<T extends boolean = true> {
         image?: T;
         id?: T;
       };
+  specGroups?:
+    | T
+    | {
+        groupLabel?: T;
+        rows?:
+          | T
+          | {
+              label?: T;
+              value?: T;
+              id?: T;
+            };
+        id?: T;
+      };
   specs?:
     | T
     | {
@@ -1058,6 +1402,194 @@ export interface ProductsSelect<T extends boolean = true> {
         id?: T;
       };
   description?: T;
+  sections?:
+    | T
+    | {
+        keySpecStrip?:
+          | T
+          | {
+              anchorLabel?: T;
+              items?:
+                | T
+                | {
+                    value?: T;
+                    label?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        featureSection?:
+          | T
+          | {
+              anchorLabel?: T;
+              heading?: T;
+              subheading?: T;
+              body?: T;
+              image?: T;
+              layout?: T;
+              theme?: T;
+              stats?:
+                | T
+                | {
+                    value?: T;
+                    label?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        tabbedShowcase?:
+          | T
+          | {
+              anchorLabel?: T;
+              heading?: T;
+              tabs?:
+                | T
+                | {
+                    label?: T;
+                    image?: T;
+                    rows?:
+                      | T
+                      | {
+                          icon?: T;
+                          label?: T;
+                          sublabel?: T;
+                          value?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        bundleOptions?:
+          | T
+          | {
+              anchorLabel?: T;
+              heading?: T;
+              options?:
+                | T
+                | {
+                    label?: T;
+                    price?: T;
+                    comparePrice?: T;
+                    externalUrl?: T;
+                    product?: T;
+                    isCurrent?: T;
+                    soldOut?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        comparisonTable?:
+          | T
+          | {
+              anchorLabel?: T;
+              heading?: T;
+              columns?:
+                | T
+                | {
+                    product?: T;
+                    label?: T;
+                    image?: T;
+                    tagline?: T;
+                    price?: T;
+                    comparePrice?: T;
+                    ctaLabel?: T;
+                    ctaUrl?: T;
+                    highlight?: T;
+                    id?: T;
+                  };
+              rows?:
+                | T
+                | {
+                    label?: T;
+                    values?:
+                      | T
+                      | {
+                          value?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        inTheBox?:
+          | T
+          | {
+              anchorLabel?: T;
+              heading?: T;
+              items?:
+                | T
+                | {
+                    image?: T;
+                    name?: T;
+                    qty?: T;
+                    id?: T;
+                  };
+              caption?: T;
+              id?: T;
+              blockName?: T;
+            };
+        specTable?:
+          | T
+          | {
+              anchorLabel?: T;
+              heading?: T;
+              id?: T;
+              blockName?: T;
+            };
+        faqBlock?:
+          | T
+          | {
+              anchorLabel?: T;
+              heading?: T;
+              items?:
+                | T
+                | {
+                    question?: T;
+                    answer?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        relatedProducts?:
+          | T
+          | {
+              anchorLabel?: T;
+              heading?: T;
+              products?: T;
+              id?: T;
+              blockName?: T;
+            };
+        footnotes?:
+          | T
+          | {
+              anchorLabel?: T;
+              items?:
+                | T
+                | {
+                    text?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        legalText?:
+          | T
+          | {
+              anchorLabel?: T;
+              heading?: T;
+              body?: T;
+              collapsed?: T;
+              id?: T;
+              blockName?: T;
+            };
+      };
   updatedAt?: T;
   createdAt?: T;
 }

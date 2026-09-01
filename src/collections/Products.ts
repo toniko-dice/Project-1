@@ -1,4 +1,5 @@
 import type { CollectionConfig } from 'payload'
+import { productBlocks } from '../blocks/product'
 import { revalidateAll, revalidateAllOnDelete } from '../lib/revalidate'
 
 export const Products: CollectionConfig = {
@@ -10,8 +11,10 @@ export const Products: CollectionConfig = {
   labels: { singular: 'Продукт', plural: 'Продукти' },
   admin: {
     useAsTitle: 'title',
-    defaultColumns: ['title', 'categoryName', 'price', 'badge'],
+    defaultColumns: ['title', 'categoryName', 'productType', 'price', 'badge'],
     group: 'Каталог',
+    description:
+      'Продуктовата страница се сглобява от секции, също като обикновените страници. Продукт без добавени секции показва галерия, цена, бутон и описание.',
   },
   access: { read: () => true },
   hooks: {
@@ -79,6 +82,20 @@ export const Products: CollectionConfig = {
                 { label: 'ОГРАНИЧЕНА НАЛИЧНОСТ', value: 'limited' },
               ],
               defaultValue: 'none',
+            },
+            {
+              name: 'productType',
+              type: 'select',
+              label: 'Вид на продукта',
+              defaultValue: 'accessory',
+              options: [
+                { label: 'Основен продукт', value: 'hero' },
+                { label: 'Аксесоар', value: 'accessory' },
+              ],
+              admin: {
+                description:
+                  'Служи само за подреждане и филтриране на списъка тук. Не влияе на изгледа на страницата — той зависи единствено от добавените секции.',
+              },
             },
           ],
         },
@@ -162,11 +179,61 @@ export const Products: CollectionConfig = {
           label: 'Спецификации',
           fields: [
             {
+              name: 'specGroups',
+              type: 'array',
+              label: 'Спецификации по групи',
+              labels: { singular: 'Група', plural: 'Групи' },
+              admin: {
+                description:
+                  'Оригиналът показва спецификациите като плосък списък. Групите са наша добавка — при 30+ реда плоският списък е нечетим. Заглавието на групата е по избор: оставите ли го празно, редовете се сливат с предишната група.',
+                components: {
+                  RowLabel: {
+                    path: '@/components/admin/RowLabel#RowLabel',
+                    clientProps: { field: 'groupLabel', fallback: 'Група' },
+                  },
+                },
+              },
+              fields: [
+                {
+                  name: 'groupLabel',
+                  type: 'text',
+                  label: 'Заглавие на групата',
+                  admin: { description: 'Напр. Изход променлив ток. Може да остане празно.' },
+                },
+                {
+                  name: 'rows',
+                  type: 'array',
+                  label: 'Редове',
+                  labels: { singular: 'Ред', plural: 'Редове' },
+                  admin: {
+                    components: {
+                      RowLabel: {
+                        path: '@/components/admin/RowLabel#RowLabel',
+                        clientProps: { field: 'label', fallback: 'Ред' },
+                      },
+                    },
+                  },
+                  fields: [
+                    { name: 'label', type: 'text', required: true, label: 'Показател' },
+                    { name: 'value', type: 'text', required: true, label: 'Стойност' },
+                  ],
+                },
+              ],
+            },
+            {
+              /*
+                Старото плоско поле. Съдържанието му е пренесено в „Спецификации
+                по групи" с миграция. Стои временно, за да може пренасянето да
+                бъде проверено; пада с отделна миграция след потвърждение.
+              */
               name: 'specs',
               type: 'array',
-              label: 'Технически данни',
+              label: 'Технически данни (остаряло)',
               labels: { singular: 'Ред', plural: 'Редове' },
               admin: {
+                description:
+                  'Не въвеждайте тук. Полето е пренесено в „Спецификации по групи" и предстои да бъде премахнато.',
+                initCollapsed: true,
                 components: {
                   RowLabel: {
                     path: '@/components/admin/RowLabel#RowLabel',
@@ -180,6 +247,20 @@ export const Products: CollectionConfig = {
               ],
             },
             { name: 'description', type: 'textarea', label: 'Пълно описание' },
+          ],
+        },
+        {
+          label: 'Секции на страницата',
+          description:
+            'Всяка секция се добавя, мести с дръжката вляво и трие поотделно. Продукт без секции показва галерия, цена, бутон и описание.',
+          fields: [
+            {
+              name: 'sections',
+              type: 'blocks',
+              label: 'Секции на страницата',
+              labels: { singular: 'Секция', plural: 'Секции' },
+              blocks: productBlocks,
+            },
           ],
         },
       ],

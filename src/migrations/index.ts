@@ -3,6 +3,7 @@ import * as migration_20260831_132415_bgn_default from './20260831_132415_bgn_de
 import * as migration_20260831_133313_add_orderable from './20260831_133313_add_orderable';
 import * as migration_20260831_133437_drop_order from './20260831_133437_drop_order';
 import * as migration_20260831_142059_backups from './20260831_142059_backups';
+import * as migration_20260831_154352_product_sections from './20260831_154352_product_sections';
 
 export const migrations = [
   {
@@ -28,6 +29,11 @@ export const migrations = [
   {
     up: migration_20260831_142059_backups.up,
     down: migration_20260831_142059_backups.down,
-    name: '20260831_142059_backups'
+    name: '20260831_142059_backups',
+  },
+  {
+    up: migration_20260831_154352_product_sections.up,
+    down: migration_20260831_154352_product_sections.down,
+    name: '20260831_154352_product_sections'
   },
 ];
