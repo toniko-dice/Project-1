@@ -32,12 +32,17 @@ export const FeatureSection: Block = {
           type: 'select',
           label: 'Разположение',
           defaultValue: 'image-right',
-          admin: { width: '50%' },
           options: [
             { label: 'Снимка вдясно', value: 'image-right' },
             { label: 'Снимка вляво', value: 'image-left' },
+            { label: 'Текст отгоре, снимка отдолу', value: 'stacked' },
             { label: 'Снимка на цяла ширина, текст върху нея', value: 'image-full' },
           ],
+          admin: {
+            width: '50%',
+            description:
+              'За снимка, която сама съдържа текст или графики — колаж, екрани от приложение — изберете „Текст отгоре, снимка отдолу". Тогава снимката се показва цяла, без изрязване и без слой върху нея.',
+          },
         },
         {
           name: 'theme',

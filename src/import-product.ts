@@ -142,12 +142,25 @@ const mediaIdFor = async (
     return match.id
   }
 
-  const filePath = path.join(ROOT, folder, file)
+  /*
+    Търси се и в двете папки.
+
+    Секция може да сочи към снимка от галерията — например колона в
+    сравнителната таблица показва продукта. Търсене само в подадената
+    папка би я обявило за липсваща.
+  */
+  let filePath = path.join(ROOT, folder, file)
   if (!(await exists(filePath))) {
-    // Една липсваща снимка не бива да спира целия внос.
-    missingFiles.push(key)
-    console.warn(`  ⚠ липсва файл: ${key} — полето остава празно`)
-    return null
+    const other = folder === 'sekcii' ? 'galeryia' : 'sekcii'
+    const alt2 = path.join(ROOT, other, file)
+    if (await exists(alt2)) {
+      filePath = alt2
+    } else {
+      // Една липсваща снимка не бива да спира целия внос.
+      missingFiles.push(key)
+      console.warn(`  ⚠ липсва файл: ${key} — полето остава празно`)
+      return null
+    }
   }
 
   const ext = path.extname(file).toLowerCase()

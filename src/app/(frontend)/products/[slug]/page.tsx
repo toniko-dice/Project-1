@@ -90,7 +90,7 @@ export default async function ProductPage({ params }: Args) {
     { value: product.image },
     ...(product.gallery ?? []).map((g) => ({ value: g.image })),
   ]
-    .map(({ value }) => ({ url: mediaUrl(value, 'card') ?? '', alt: mediaAlt(value) }))
+    .map(({ value }) => ({ url: mediaUrl(value, 'large') ?? '', alt: mediaAlt(value) }))
     .filter((img) => img.url)
 
   const discount = discountPercent(product.price, product.compareAtPrice)

@@ -397,6 +397,22 @@ export interface Media {
       filesize?: number | null;
       filename?: string | null;
     };
+    content?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    large?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
   };
 }
 /**
@@ -585,7 +601,10 @@ export interface Product {
              * Препоръчително 1680px широчина, както в оригинала.
              */
             image: number | Media;
-            layout?: ('image-right' | 'image-left' | 'image-full') | null;
+            /**
+             * За снимка, която сама съдържа текст или графики — колаж, екрани от приложение — изберете „Текст отгоре, снимка отдолу". Тогава снимката се показва цяла, без изрязване и без слой върху нея.
+             */
+            layout?: ('image-right' | 'image-left' | 'stacked' | 'image-full') | null;
             theme?: ('light' | 'dark') | null;
             /**
              * По избор. Напр. 3600W и под него — пикова мощност.
@@ -1754,6 +1773,26 @@ export interface MediaSelect<T extends boolean = true> {
               filename?: T;
             };
         wide?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+            };
+        content?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+            };
+        large?:
           | T
           | {
               url?: T;

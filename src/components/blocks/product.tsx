@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import type { Product } from '@/payload-types'
 import { discountPercent, formatEur } from '@/lib/format'
-import { mediaAlt, mediaUrl } from '@/lib/media'
+import { mediaAlt, mediaDims, mediaUrl } from '@/lib/media'
 import { ProductCard } from '../ProductCard'
 import { ProductTabs, type ShowcaseTab } from './ProductTabs'
 
@@ -67,13 +67,15 @@ const FeatureSectionBlock = ({
   block: BlockOf<'featureSection'>
   id?: string | null
 }) => {
-  const img = mediaUrl(block.image, 'banner')
+  // `content` пази съотношението — секционните снимки не бива да се режат.
+  const img = mediaUrl(block.image, 'content')
   const dark = block.theme === 'dark'
   const full = block.layout === 'image-full'
+  const stacked = block.layout === 'stacked'
   const stats = block.stats ?? []
 
   const text = (
-    <div className={full ? 'max-w-2xl' : ''}>
+    <div className={full ? 'max-w-2xl' : stacked ? 'mx-auto max-w-3xl text-center' : ''}>
       {block.subheading ? (
         <p className="mb-2 text-xs font-semibold uppercase tracking-[0.12em] opacity-80">
           {block.subheading}
@@ -91,7 +93,9 @@ const FeatureSectionBlock = ({
       ) : null}
 
       {stats.length ? (
-        <ul className="mt-6 flex flex-wrap gap-x-10 gap-y-4">
+        <ul
+          className={`mt-6 flex flex-wrap gap-x-10 gap-y-4 ${stacked ? 'justify-center' : ''}`}
+        >
           {stats.map((s, i) => (
             <li key={i}>
               <p className="tabular text-xl font-bold sm:text-2xl">{s.value}</p>
@@ -104,6 +108,42 @@ const FeatureSectionBlock = ({
       ) : null}
     </div>
   )
+
+  /*
+    Текст отгоре, снимка отдолу.
+
+    За снимка, която сама съдържа текст или графики — колаж, екрани от
+    приложение, три панела един до друг — текстът върху нея я затъмнява и
+    изрязва. Тук снимката се показва цяла: собствените ѝ размери, без
+    наложено съотношение и без слой отгоре.
+
+    Тъмната тема сменя фона на секцията и цвета на текста, но не пипа
+    самата снимка.
+  */
+  if (stacked) {
+    const dims = mediaDims(block.image)
+
+    return (
+      <Section id={id} className={dark ? 'bg-night py-12 text-white' : 'py-12'}>
+        <div className="container-site">
+          {text}
+
+          {img ? (
+            <Image
+              src={img}
+              alt={mediaAlt(block.image)}
+              width={dims.width}
+              height={dims.height}
+              // Контейнерът е max-width: 88rem — по-широка снимка не се показва.
+              sizes="(max-width: 1408px) 100vw, 1408px"
+              loading="lazy"
+              className="mt-8 h-auto w-full rounded-xl"
+            />
+          ) : null}
+        </div>
+      </Section>
+    )
+  }
 
   if (full) {
     return (
@@ -121,7 +161,7 @@ const FeatureSectionBlock = ({
                   className="object-cover"
                 />
               ) : null}
-              <div className={`absolute inset-0 ${dark ? 'bg-black/50' : 'bg-white/40'}`} />
+              <div className={`absolute inset-0 ${dark ? 'bg-black/50' : 'bg-white/20'}`} />
               <div
                 className={`absolute inset-0 flex flex-col justify-center p-6 sm:p-12 ${
                   dark ? 'text-white' : 'text-ink'
@@ -136,23 +176,32 @@ const FeatureSectionBlock = ({
     )
   }
 
+  const sideDims = mediaDims(block.image)
+
   return (
     <Section id={id} className={dark ? 'bg-night py-12 text-white' : 'py-12'}>
       <div className="container-site grid items-center gap-8 lg:grid-cols-2">
         <div className={block.layout === 'image-left' ? 'lg:order-2' : ''}>{text}</div>
 
         <div className={block.layout === 'image-left' ? 'lg:order-1' : ''}>
+          {/*
+            Снимката пази собственото си съотношение.
+
+            Преди тук стоеше наложено aspect-[4/3] с object-cover — панорамна
+            снимка 2,24 губеше по 40% отстрани. Височината вече следва
+            съдържанието; двете колони са центрирани вертикално.
+          */}
           {img ? (
-            <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-tile">
-              <Image
-                src={img}
-                alt={mediaAlt(block.image)}
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                loading="lazy"
-                className="object-cover"
-              />
-            </div>
+            <Image
+              src={img}
+              alt={mediaAlt(block.image)}
+              width={sideDims.width}
+              height={sideDims.height}
+              // На широк екран колоната е половин контейнер: 1408 / 2 = 704px.
+              sizes="(max-width: 1024px) 100vw, 704px"
+              loading="lazy"
+              className="h-auto w-full rounded-xl"
+            />
           ) : null}
         </div>
       </div>
@@ -173,7 +222,7 @@ const TabbedShowcaseBlock = ({
 }) => {
   const tabs: ShowcaseTab[] = (block.tabs ?? []).map((t) => ({
     label: t.label,
-    imageUrl: mediaUrl(t.image, 'banner'),
+    imageUrl: mediaUrl(t.image, 'content'),
     imageAlt: mediaAlt(t.image) || t.label,
     rows: (t.rows ?? []).map((r) => ({
       iconUrl: mediaUrl(r.icon, 'thumbnail'),

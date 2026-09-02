@@ -2,8 +2,22 @@ import type { Media } from '@/payload-types'
 
 type MaybeMedia = number | Media | null | undefined
 
-/** Payload връща или ID, или пълния обект според дълбочината на заявката. */
-export const mediaUrl = (value: MaybeMedia, size?: 'thumbnail' | 'card' | 'banner' | 'wide'): string | null => {
+/**
+ * Размерите от `Media.ts`.
+ *
+ * Първите четири изрязват до точно съотношение; `content` и `large` пазят
+ * пропорцията и се ползват там, където снимката не бива да се реже.
+ */
+export type MediaSize = 'thumbnail' | 'card' | 'banner' | 'wide' | 'content' | 'large'
+
+/**
+ * Payload връща или ID, или пълния обект според дълбочината на заявката.
+ *
+ * Ако исканият размер липсва — например при снимка, качена преди той да
+ * бъде добавен — се връща оригиналът. Затова старите изображения работят
+ * без преобразуване.
+ */
+export const mediaUrl = (value: MaybeMedia, size?: MediaSize): string | null => {
   if (!value || typeof value === 'number') return null
   if (size && value.sizes?.[size]?.url) return value.sizes[size]!.url!
   return value.url ?? null
