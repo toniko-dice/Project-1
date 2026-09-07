@@ -189,8 +189,13 @@ export const stageRestore = async (
 
 /** Трие най-старите архиви, за да останат последните `KEEP_LAST`. */
 export const pruneOldBackups = async (payload: Payload): Promise<number> => {
+  /*
+    Защитените архиви изобщо не влизат в сметката. Такъв е архивът преди
+    миграция — той е точно този, който трябва да оцелее най-дълго.
+  */
   const all = await payload.find({
     collection: 'backups',
+    where: { protected: { not_equals: true } },
     sort: '-createdAt',
     depth: 0,
     pagination: false,
@@ -206,7 +211,12 @@ export const pruneOldBackups = async (payload: Payload): Promise<number> => {
 /** Създава архив и го записва като документ в колекция „Архиви". */
 export const createBackup = async (
   payload: Payload,
-  opts: { includeMedia?: boolean; label?: string; trigger?: 'ръчно' | 'по график' } = {},
+  opts: {
+    includeMedia?: boolean
+    label?: string
+    trigger?: 'ръчно' | 'по график'
+    protected?: boolean
+  } = {},
 ) => {
   const includeMedia = opts.includeMedia ?? true
   const label =
@@ -222,6 +232,7 @@ export const createBackup = async (
       includesMedia: includeMedia,
       mediaFiles: result.mediaFiles,
       trigger: opts.trigger ?? 'ръчно',
+      protected: opts.protected ?? false,
     },
     filePath: result.filePath,
   })

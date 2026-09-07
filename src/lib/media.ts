@@ -16,11 +16,23 @@ export type MediaSize = 'thumbnail' | 'card' | 'banner' | 'wide' | 'content' | '
  * Ако исканият размер липсва — например при снимка, качена преди той да
  * бъде добавен — се връща оригиналът. Затова старите изображения работят
  * без преобразуване.
+ *
+ * Адресът носи времето на последната промяна като параметър `?v=`.
+ * При презаписване или изрязване в админа Payload запазва същото име на
+ * файла; без параметъра браузърът и кешът на Next.js виждат същия адрес,
+ * решават, че нищо не се е променило, и продължават да показват старата
+ * версия. Смяната на `updatedAt` сменя адреса и ги кара да я изтеглят
+ * наново.
  */
 export const mediaUrl = (value: MaybeMedia, size?: MediaSize): string | null => {
   if (!value || typeof value === 'number') return null
-  if (size && value.sizes?.[size]?.url) return value.sizes[size]!.url!
-  return value.url ?? null
+
+  const base = size && value.sizes?.[size]?.url ? value.sizes[size]!.url! : value.url
+  if (!base) return null
+
+  const stamp = value.updatedAt ? Date.parse(value.updatedAt) : 0
+  // Date.parse дава NaN при негоден запис — тогава адресът остава чист.
+  return Number.isFinite(stamp) && stamp > 0 ? `${base}?v=${stamp}` : base
 }
 
 export const mediaAlt = (value: MaybeMedia): string => {

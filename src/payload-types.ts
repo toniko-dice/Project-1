@@ -162,7 +162,7 @@ export interface Page {
   _order?: string | null;
   title: string;
   /**
-   * Началната страница трябва да е с адрес "home". Останалите — напр. "za-nas".
+   * Само малки латински букви, цифри и тирета. Кирилицата се транслитерира, интервалите стават тирета, представки като „products/" се махат. Не е нужно да пишете пътя — само името.
    */
   slug: string;
   layout?:
@@ -426,7 +426,7 @@ export interface Category {
   _order?: string | null;
   title: string;
   /**
-   * Напр. „delta-seriya" → /categories/delta-seriya. Само латиница и тирета.
+   * Само малки латински букви, цифри и тирета. Кирилицата се транслитерира, интервалите стават тирета, представки като „products/" се махат. Не е нужно да пишете пътя — само името.
    */
   slug: string;
   /**
@@ -463,7 +463,7 @@ export interface Product {
   _order?: string | null;
   title: string;
   /**
-   * Напр. "delta-pro-ultra-x".
+   * Само малки латински букви, цифри и тирета. Кирилицата се транслитерира, интервалите стават тирета, представки като „products/" се махат. Не е нужно да пишете пътя — само името.
    */
   slug: string;
   /**
@@ -920,7 +920,7 @@ export interface MenuPanel {
    */
   title: string;
   /**
-   * Адресът, към който води подточката. Напр. „delta-seriya" → /categories/delta-seriya
+   * Само малки латински букви, цифри и тирета. Кирилицата се транслитерира, интервалите стават тирета, представки като „products/" се махат. Не е нужно да пишете пътя — само името.
    */
   slug: string;
   /**
@@ -1003,6 +1003,10 @@ export interface Backup {
   trigger?: ('ръчно' | 'по график' | 'качен') | null;
   includesMedia?: boolean | null;
   mediaFiles?: number | null;
+  /**
+   * Защитените архиви не се трият от автоматичното чистене, което пази последните 10. Архивите преди миграция се отбелязват така сами.
+   */
+  protected?: boolean | null;
   note?: string | null;
   updatedAt: string;
   createdAt: string;
@@ -1840,6 +1844,7 @@ export interface BackupsSelect<T extends boolean = true> {
   trigger?: T;
   includesMedia?: T;
   mediaFiles?: T;
+  protected?: T;
   note?: T;
   updatedAt?: T;
   createdAt?: T;

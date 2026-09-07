@@ -8,7 +8,7 @@ export const Backups: CollectionConfig = {
   labels: { singular: 'Архив', plural: 'Архиви' },
   admin: {
     useAsTitle: 'label',
-    defaultColumns: ['label', 'trigger', 'includesMedia', 'filesize', 'createdAt'],
+    defaultColumns: ['label', 'trigger', 'protected', 'includesMedia', 'filesize', 'createdAt'],
     group: 'Настройки',
     description:
       'Всеки архив съдържа базата и качените снимки. Бутонът „Създай архив сега“ е над списъка. Свалете копие на компютъра си — архивите тук лежат на същия диск и не пазят от отказ на хардуера.',
@@ -65,6 +65,16 @@ export const Backups: CollectionConfig = {
           admin: { width: '25%', readOnly: true },
         },
       ],
+    },
+    {
+      name: 'protected',
+      type: 'checkbox',
+      label: 'Защитен от изтриване',
+      defaultValue: false,
+      admin: {
+        description:
+          'Защитените архиви не се трият от автоматичното чистене, което пази последните 10. Архивите преди миграция се отбелязват така сами.',
+      },
     },
     { name: 'note', type: 'textarea', label: 'Бележка' },
     {

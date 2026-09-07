@@ -2,6 +2,21 @@ import { MigrateUpArgs, MigrateDownArgs, sql } from '@payloadcms/db-sqlite'
 
 export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   /*
+    Външните ключове се изключват за ЦЯЛАТА функция.
+
+    SQLite не може да променя колони — Payload прави нова таблица, копира
+    редовете и трие старата. Ако при DROP TABLE ключовете са включени,
+    всеки ред от другите таблици, който сочи натам, се изтрива по
+    ON DELETE CASCADE.
+
+    Точно това се случи тук: изтри 18 реда в pages_rels, 54 в
+    _pages_v_rels и остави началната страница без продукти. OFF беше
+    върнато на ON преди 14 от 15-те DROP-а.
+
+    OFF е ПЪРВИЯТ ред, ON е ПОСЛЕДНИЯТ. Нищо между тях не пипа ключовете.
+  */
+  await db.run(sql`PRAGMA foreign_keys=OFF;`)
+  /*
     РЪЧНА ПОПРАВКА в генерираната заявка за products.
 
     Генераторът написа SELECT "_status" FROM products, но колоната се
@@ -459,7 +474,6 @@ export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   await db.run(sql`CREATE INDEX \`_products_v_rels_parent_idx\` ON \`_products_v_rels\` (\`parent_id\`);`)
   await db.run(sql`CREATE INDEX \`_products_v_rels_path_idx\` ON \`_products_v_rels\` (\`path\`);`)
   await db.run(sql`CREATE INDEX \`_products_v_rels_products_id_idx\` ON \`_products_v_rels\` (\`products_id\`);`)
-  await db.run(sql`PRAGMA foreign_keys=OFF;`)
   await db.run(sql`CREATE TABLE \`__new_products_highlights\` (
   	\`_order\` integer NOT NULL,
   	\`_parent_id\` integer NOT NULL,
@@ -472,7 +486,6 @@ export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   await db.run(sql`INSERT INTO \`__new_products_highlights\`("_order", "_parent_id", "id", "title", "text") SELECT "_order", "_parent_id", "id", "title", "text" FROM \`products_highlights\`;`)
   await db.run(sql`DROP TABLE \`products_highlights\`;`)
   await db.run(sql`ALTER TABLE \`__new_products_highlights\` RENAME TO \`products_highlights\`;`)
-  await db.run(sql`PRAGMA foreign_keys=ON;`)
   await db.run(sql`CREATE INDEX \`products_highlights_order_idx\` ON \`products_highlights\` (\`_order\`);`)
   await db.run(sql`CREATE INDEX \`products_highlights_parent_id_idx\` ON \`products_highlights\` (\`_parent_id\`);`)
   await db.run(sql`CREATE TABLE \`__new_products_gallery\` (
@@ -721,9 +734,11 @@ export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   await db.run(sql`CREATE INDEX \`products_updated_at_idx\` ON \`products\` (\`updated_at\`);`)
   await db.run(sql`CREATE INDEX \`products_created_at_idx\` ON \`products\` (\`created_at\`);`)
   await db.run(sql`CREATE INDEX \`products__status_idx\` ON \`products\` (\`_status\`);`)
+  await db.run(sql`PRAGMA foreign_keys=ON;`)
 }
 
 export async function down({ db, payload, req }: MigrateDownArgs): Promise<void> {
+  await db.run(sql`PRAGMA foreign_keys=OFF;`)
   await db.run(sql`DROP TABLE \`_products_v_version_highlights\`;`)
   await db.run(sql`DROP TABLE \`_products_v_version_gallery\`;`)
   await db.run(sql`DROP TABLE \`_products_v_version_spec_groups_rows\`;`)
@@ -753,7 +768,6 @@ export async function down({ db, payload, req }: MigrateDownArgs): Promise<void>
   await db.run(sql`DROP TABLE \`_products_v_blocks_legal_text\`;`)
   await db.run(sql`DROP TABLE \`_products_v\`;`)
   await db.run(sql`DROP TABLE \`_products_v_rels\`;`)
-  await db.run(sql`PRAGMA foreign_keys=OFF;`)
   await db.run(sql`CREATE TABLE \`__new_products\` (
   	\`id\` integer PRIMARY KEY NOT NULL,
   	\`_order\` text,
@@ -785,7 +799,6 @@ export async function down({ db, payload, req }: MigrateDownArgs): Promise<void>
   await db.run(sql`INSERT INTO \`__new_products\`("id", "_order", "title", "slug", "sku", "brand", "ean", "barcode_internal", "category_id", "tagline", "badge", "product_type", "price", "compare_at_price", "external_url", "cta_label", "availability", "image_id", "description", "meta_title", "meta_description", "updated_at", "created_at") SELECT "id", "_order", "title", "slug", "sku", "brand", "ean", "barcode_internal", "category_id", "tagline", "badge", "product_type", "price", "compare_at_price", "external_url", "cta_label", "availability", "image_id", "description", "meta_title", "meta_description", "updated_at", "created_at" FROM \`products\`;`)
   await db.run(sql`DROP TABLE \`products\`;`)
   await db.run(sql`ALTER TABLE \`__new_products\` RENAME TO \`products\`;`)
-  await db.run(sql`PRAGMA foreign_keys=ON;`)
   await db.run(sql`CREATE INDEX \`products__order_idx\` ON \`products\` (\`_order\`);`)
   await db.run(sql`CREATE UNIQUE INDEX \`products_slug_idx\` ON \`products\` (\`slug\`);`)
   await db.run(sql`CREATE INDEX \`products_category_idx\` ON \`products\` (\`category_id\`);`)
@@ -1013,4 +1026,5 @@ export async function down({ db, payload, req }: MigrateDownArgs): Promise<void>
   await db.run(sql`ALTER TABLE \`__new_products_blocks_footnotes_items\` RENAME TO \`products_blocks_footnotes_items\`;`)
   await db.run(sql`CREATE INDEX \`products_blocks_footnotes_items_order_idx\` ON \`products_blocks_footnotes_items\` (\`_order\`);`)
   await db.run(sql`CREATE INDEX \`products_blocks_footnotes_items_parent_id_idx\` ON \`products_blocks_footnotes_items\` (\`_parent_id\`);`)
+  await db.run(sql`PRAGMA foreign_keys=ON;`)
 }

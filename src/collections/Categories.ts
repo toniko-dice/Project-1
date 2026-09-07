@@ -1,4 +1,5 @@
 import type { CollectionConfig } from 'payload'
+import { cleanSlug } from '../lib/slug'
 import { revalidateAll, revalidateAllOnDelete } from '../lib/revalidate'
 
 export const Categories: CollectionConfig = {
@@ -35,7 +36,13 @@ export const Categories: CollectionConfig = {
               unique: true,
               label: 'URL адрес',
               admin: {
-                description: 'Напр. „delta-seriya" → /categories/delta-seriya. Само латиница и тирета.',
+                description:
+                  'Само малки латински букви, цифри и тирета. Кирилицата се транслитерира, интервалите стават тирета, представки като „products/" се махат. Не е нужно да пишете пътя — само името.',
+              },
+              hooks: {
+                beforeValidate: [
+                  ({ value }) => (typeof value === 'string' ? cleanSlug(value) : value),
+                ],
               },
             },
             {

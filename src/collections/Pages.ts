@@ -1,4 +1,5 @@
 import type { CollectionConfig } from 'payload'
+import { cleanSlug } from '../lib/slug'
 import { revalidatePage, revalidatePageDelete } from '../lib/revalidate'
 import {
   BannerProductRow,
@@ -41,7 +42,13 @@ export const Pages: CollectionConfig = {
       unique: true,
       label: 'URL адрес',
       admin: {
-        description: 'Началната страница трябва да е с адрес "home". Останалите — напр. "za-nas".',
+        description:
+          'Само малки латински букви, цифри и тирета. Кирилицата се транслитерира, интервалите стават тирета, представки като „products/" се махат. Не е нужно да пишете пътя — само името.',
+      },
+      hooks: {
+        beforeValidate: [
+          ({ value }) => (typeof value === 'string' ? cleanSlug(value) : value),
+        ],
       },
     },
     {

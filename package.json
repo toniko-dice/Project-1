@@ -14,12 +14,13 @@
     "generate:importmap": "payload generate:importmap",
     "seed": "payload run src/seed.ts",
     "seed:menu": "payload run src/seed-menu.ts",
-    "migrate": "payload migrate",
+    "migrate": "payload run src/pre-migrate.ts && payload run src/health-check.ts && payload migrate && payload run src/health-check.ts",
     "migrate:create": "payload migrate:create",
     "migrate:status": "payload migrate:status",
     "migrate:fresh": "payload migrate:fresh",
     "backfill:order": "payload run src/backfill-order.ts",
-    "import:product": "payload run src/import-product.ts"
+    "import:product": "payload run src/import-product.ts",
+    "health": "payload run src/health-check.ts"
   },
   "dependencies": {
     "@payloadcms/db-sqlite": "^3.88.0",

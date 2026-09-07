@@ -1,4 +1,5 @@
 import type { CollectionConfig } from 'payload'
+import { cleanSlug } from '../lib/slug'
 import { productBlocks } from '../blocks/product'
 import { revalidateAll, revalidateAllOnDelete } from '../lib/revalidate'
 
@@ -43,7 +44,15 @@ export const Products: CollectionConfig = {
               required: true,
               unique: true,
               label: 'URL адрес',
-              admin: { description: 'Напр. "delta-pro-ultra-x".' },
+              admin: {
+                description:
+                  'Само малки латински букви, цифри и тирета. Кирилицата се транслитерира, интервалите стават тирета, представки като „products/" се махат. Не е нужно да пишете пътя — само името.',
+              },
+              hooks: {
+                beforeValidate: [
+                  ({ value }) => (typeof value === 'string' ? cleanSlug(value) : value),
+                ],
+              },
             },
             {
               name: 'sku',

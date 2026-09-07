@@ -1,4 +1,5 @@
 import type { CollectionConfig, Field } from 'payload'
+import { cleanSlug } from '../lib/slug'
 import { revalidateAll, revalidateAllOnDelete } from '../lib/revalidate'
 
 /**
@@ -72,7 +73,12 @@ export const MenuPanels: CollectionConfig = {
       label: 'URL адрес на страницата',
       admin: {
         description:
-          'Адресът, към който води подточката. Напр. „delta-seriya" → /categories/delta-seriya',
+          'Само малки латински букви, цифри и тирета. Кирилицата се транслитерира, интервалите стават тирета, представки като „products/" се махат. Не е нужно да пишете пътя — само името.',
+      },
+      hooks: {
+        beforeValidate: [
+          ({ value }) => (typeof value === 'string' ? cleanSlug(value) : value),
+        ],
       },
     },
     {

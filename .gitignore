@@ -49,3 +49,7 @@ next-env.d.ts
 /backups
 /.backup-tmp
 /.restore-staging
+
+# Проверки на здравето
+/.health
+/.rescue
