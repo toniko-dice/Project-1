@@ -97,6 +97,9 @@ const FeatureSectionBlock = ({
   // „Под" е по-едро подзаглавие между заглавието и текста; „над" е малкият ред.
   const subBelow = block.subheadingPosition === 'below'
 
+  // Секция само със снимка — главният банер в оригинала е точно такъв.
+  const hasText = Boolean(block.heading || block.subheading || block.body || stats.length)
+
   const text = (
     <div className={full ? 'max-w-2xl' : stacked ? 'text-center' : ''}>
       {block.subheading && !subBelow ? (
@@ -116,9 +119,11 @@ const FeatureSectionBlock = ({
         </p>
       ) : null}
 
-      <h2 className="text-2xl font-semibold leading-tight tracking-tight sm:text-3xl lg:text-4xl">
-        {block.heading}
-      </h2>
+      {block.heading ? (
+        <h2 className="text-2xl font-semibold leading-tight tracking-tight sm:text-3xl lg:text-4xl">
+          {block.heading}
+        </h2>
+      ) : null}
 
       {block.subheading && subBelow ? (
         <p
@@ -177,14 +182,15 @@ const FeatureSectionBlock = ({
     return (
       <Section id={id} className={dark ? 'bg-night py-10 text-white lg:py-16' : 'py-10 lg:py-16'}>
         <div className="container-site">
-          {text}
+          {hasText ? text : null}
 
           {img ? (
             <SectionImage
               image={img}
               // Контейнерът е max-width: 88rem — по-широка снимка не се показва.
               sizes="(max-width: 1408px) 100vw, 1408px"
-              className="mt-10 h-auto w-full rounded-2xl"
+              // Без текст отгоре разстоянието е излишно.
+              className={`h-auto w-full rounded-2xl ${hasText ? 'mt-10' : ''}`}
             />
           ) : null}
         </div>
@@ -222,8 +228,13 @@ const FeatureSectionBlock = ({
 
   return (
     <Section id={id} className={dark ? 'bg-night py-12 text-white' : 'py-12'}>
-      <div className="container-site grid items-center gap-8 lg:grid-cols-2">
-        <div className={block.layout === 'image-left' ? 'lg:order-2' : ''}>{text}</div>
+      {/* Без текст двете колони нямат смисъл — снимката заема цялата ширина. */}
+      <div
+        className={`container-site ${hasText ? 'grid items-center gap-8 lg:grid-cols-2' : ''}`}
+      >
+        {hasText ? (
+          <div className={block.layout === 'image-left' ? 'lg:order-2' : ''}>{text}</div>
+        ) : null}
 
         <div className={block.layout === 'image-left' ? 'lg:order-1' : ''}>
           {/*

@@ -13,7 +13,15 @@ export const FeatureSection: Block = {
   admin: blockLabel('heading'),
   fields: [
     anchorField,
-    { name: 'heading', type: 'text', required: true, label: 'Заглавие' },
+    {
+      name: 'heading',
+      type: 'text',
+      label: 'Заглавие',
+      admin: {
+        description:
+          'По избор. Празно заглавие дава секция само със снимката — така е главният банер в оригинала, чието заглавие стои на следващата секция.',
+      },
+    },
     {
       type: 'row',
       fields: [

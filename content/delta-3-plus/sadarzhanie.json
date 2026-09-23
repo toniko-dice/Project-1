@@ -1,22 +1,22 @@
 {
-  "_bележка": "Съдържание за внасяне. Пуска се с: npm run import:product delta-3. Снимките се свалят по линковете в _svali_snimki в content/delta-3/galeriya/ и content/delta-3/sekcii/ със същите имена.",
-  "_iztochnik": "eu.ecoflow.com/products/delta-3-series-portable-power-station?variant=49573797495127 (вариант DELTA 3), прочетено от браузъра на 22.09.2026. Страницата е обща за DELTA 3 и DELTA 3 Plus — числата са сведени до DELTA 3 по таблицата със спецификации.",
+  "_bележка": "Съдържание за внасяне. Пуска се с: npm run import:product delta-3-plus. Снимките се свалят по линковете в _svali_snimki в content/delta-3-plus/galeriya/ и content/delta-3-plus/sekcii/ със същите имена.",
+  "_iztochnik": "eu.ecoflow.com/products/delta-3-series-portable-power-station?variant=49573797593431 (вариант DELTA 3 Plus), прочетено от браузъра на 23.09.2026. Страницата е обща за DELTA 3 и DELTA 3 Plus — секциите и снимките са едни и същи; числата са сведени до Plus по таблицата със спецификации.",
   "produkt": {
-    "title": "EcoFlow DELTA 3",
-    "slug": "delta-3",
+    "title": "EcoFlow DELTA 3 Plus",
+    "slug": "delta-3-plus",
     "categorySlug": "delta-3-seriya",
     "productType": "hero",
     "tagline": "1024Wh капацитет / 1800W изход",
     "badge": "none",
-    "price": 649,
-    "compareAtPrice": 919.81,
-    "externalUrl": "https://dice.bg/ecoflow-delta-3-portable-power-station-1024wh-portativna-profesionalna-elektrotsentrala-za-zarezhdane-na-ustroystva-tamnosiv-item70511",
+    "price": 799,
+    "compareAtPrice": 1022,
+    "externalUrl": "https://dice.bg/ecoflow-delta-3-plus-portable-power-station-1024wh-portativna-profesionalna-elektrotsentrala-za-zarezhdane-na-ustroystva-tamnosiv-item70512",
     "ctaLabel": "Купи сега",
     "availability": "in-stock",
     "brand": "EcoFlow",
-    "sku": "70511",
-    "ean": "4895251626422",
-    "description": "Портативна електроцентрала с 1024Wh капацитет и 1800W изход (3600W пик, до 2400W с X-Boost). Пълен заряд от контакта за 56 минути, пет начина за зареждане, LFP клетки с 4000 цикъла, UPS под 10 ms, 30 dB шум, разширяване до 5 kWh.",
+    "sku": "70512",
+    "ean": "4895251626354",
+    "description": "Портативна електроцентрала с 1024Wh капацитет и 1800W изход (3600W пик, до 2400W с X-Boost). Пълен заряд от контакта за 56 минути, два соларни входа до 1000W (70 минути), USB-C 2 × 140W, LFP клетки с 4000 цикъла, UPS под 10 ms, 30 dB шум, разширяване до 5 kWh.",
     "highlights": [
       {
         "title": "1024Wh капацитет, 1800W изход",
@@ -24,7 +24,7 @@
       },
       {
         "title": "5 бързи начина за зареждане",
-        "text": "Контакт (пълен заряд за 56 мин), слънце, алтернаторно зарядно 800W, Smart Generator и комбинирано."
+        "text": "Контакт (пълен заряд за 56 мин), слънце (2 × 500W, 70 мин), алтернаторно зарядно 800W, Smart Generator и комбинирано."
       },
       {
         "title": "Разширяем капацитет 1–5 kWh",
@@ -43,29 +43,29 @@
         "text": ""
       }
     ],
-    "metaTitle": "EcoFlow DELTA 3 1024Wh — портативна електроцентрала 1800W",
-    "metaDescription": "1024Wh, 1800W изход, 3600W пик. Пълен заряд за 56 минути, 5 начина за зареждане, LFP 4000 цикъла, разширяване до 5 kWh. Официален дистрибутор за България."
+    "metaTitle": "EcoFlow DELTA 3 Plus 1024Wh — портативна електроцентрала 1800W",
+    "metaDescription": "1024Wh, 1800W изход, 3600W пик. Пълен заряд за 56 минути, соларен вход 2 × 500W за 70 минути, USB-C 140W, LFP 4000 цикъла, разширяване до 5 kWh. Официален дистрибутор за България."
   },
   "galeriya": [
     {
       "file": "ecoflow-delta-3-series-portable-power-station-60905350299991.png",
-      "alt": "EcoFlow DELTA 3 — изглед отпред"
+      "alt": "EcoFlow DELTA 3 Plus — изглед отпред"
     },
     {
       "file": "ecoflow-delta-3-series-portable-power-station-60905350332759.png",
-      "alt": "EcoFlow DELTA 3 — изглед отпред, дисплей"
+      "alt": "EcoFlow DELTA 3 Plus — изглед отпред, дисплей"
     },
     {
       "file": "ecoflow-delta-3-series-portable-power-station-60175528657239.png",
-      "alt": "EcoFlow DELTA 3 на къмпинг"
+      "alt": "EcoFlow DELTA 3 Plus на къмпинг"
     },
     {
       "file": "ecoflow-delta-3-series-portable-power-station-1242802780.png",
-      "alt": "EcoFlow DELTA 3 със соларен панел"
+      "alt": "EcoFlow DELTA 3 Plus със соларен панел"
     },
     {
       "file": "ecoflow-delta-3-series-portable-power-station-1248890635.png",
-      "alt": "EcoFlow DELTA 3 — изглед отстрани"
+      "alt": "EcoFlow DELTA 3 Plus — изглед отстрани"
     }
   ],
   "sekcii": [
@@ -110,12 +110,12 @@
           "label": "пълен заряд от контакта"
         },
         {
-          "value": "10 ms",
-          "label": "превключване при спиране на тока"
+          "value": "1000W",
+          "label": "соларен вход (2 × 500W)"
         },
         {
-          "value": "30 dB",
-          "label": "шум при 600W"
+          "value": "140W",
+          "label": "USB-C, 2 порта"
         },
         {
           "value": "до 5 kWh",
@@ -133,35 +133,35 @@
         {
           "label": "От контакт",
           "image": "PC_2_1_D3P_AC_Charging.jpg",
-          "imageAlt": "Зареждане на DELTA 3 от контакт",
+          "imageAlt": "Зареждане на DELTA 3 Plus от контакт",
           "caption": "1500W вход — пълен заряд за 56 минути. [1] С технологията X-Stream DELTA 3 се зарежда от 0 до 100% за 56 минути. Половин час на контакта дава часове резервно захранване преди спиране на тока.",
           "rows": []
         },
         {
           "label": "От слънце",
           "image": "PC_2_2_D3P_Solar_Charging.jpg",
-          "imageAlt": "Зареждане на DELTA 3 от соларни панели",
-          "caption": "Соларен вход с MPPT до 500W — пълен заряд за около 2 часа, дори при ограничено слънце. [2] На открито се презарежда, докато обядвате.",
+          "imageAlt": "Зареждане на DELTA 3 Plus от соларни панели",
+          "caption": "Два соларни входа с MPPT, общо до 1000W (2 × 500W) — пълен заряд за 70 минути, дори при ограничено слънце. [2] На открито се презарежда, докато обядвате.",
           "rows": []
         },
         {
           "label": "От автомобил",
           "image": "PC_2_3_D3P_Car_Charging.jpg",
-          "imageAlt": "Зареждане на DELTA 3 от автомобил",
+          "imageAlt": "Зареждане на DELTA 3 Plus от автомобил",
           "caption": "С алтернаторното зарядно EcoFlow 800W — пълен заряд за около 1,3 часа, докато шофирате. [3]",
           "rows": []
         },
         {
           "label": "Комбинирано",
           "image": "PC_2_4_D3P_Multi-Charging.jpg",
-          "imageAlt": "Комбинирано зареждане на DELTA 3 от контакт и слънце",
+          "imageAlt": "Комбинирано зареждане на DELTA 3 Plus от контакт и слънце",
           "caption": "Контакт + слънце — пълен заряд за 56 минути с 1500W общ вход. [4] В ежедневието включвате и двете, а системата дава предимство на слънцето, за да пестите.",
           "rows": []
         },
         {
           "label": "От генератор",
           "image": "PC_2_5_D3P__Generator_Charging.jpg",
-          "imageAlt": "Зареждане на DELTA 3 от Smart Generator",
+          "imageAlt": "Зареждане на DELTA 3 Plus от Smart Generator",
           "caption": "С EcoFlow Smart Generator — до 1500W вход, пълен заряд за 56 минути. Ток и без слънце и без мрежа. [5]",
           "rows": []
         }
@@ -176,28 +176,28 @@
         {
           "label": "Кемпер",
           "image": "PC_3_1_D3P_RV.jpg",
-          "imageAlt": "DELTA 3 в кемпер",
+          "imageAlt": "DELTA 3 Plus в кемпер",
           "caption": "",
           "rows": []
         },
         {
           "label": "Резервно захранване у дома",
           "image": "PC_3_2_D3P_Home_backup.jpg",
-          "imageAlt": "DELTA 3 като резервно захранване у дома",
+          "imageAlt": "DELTA 3 Plus като резервно захранване у дома",
           "caption": "",
           "rows": []
         },
         {
           "label": "На открито",
           "image": "PC_3_3_D3P__Outdoors.jpg",
-          "imageAlt": "DELTA 3 на открито",
+          "imageAlt": "DELTA 3 Plus на открито",
           "caption": "",
           "rows": []
         },
         {
           "label": "Професионална работа",
           "image": "PC_3_4_D3P_Professional_work.jpg",
-          "imageAlt": "DELTA 3 на работна площадка",
+          "imageAlt": "DELTA 3 Plus на работна площадка",
           "caption": "",
           "rows": []
         }
@@ -212,14 +212,14 @@
         {
           "label": "11 изхода",
           "image": "PC_4_1_D3P__11_Outputs.jpg",
-          "imageAlt": "DELTA 3 — 11 изхода",
+          "imageAlt": "DELTA 3 Plus — 11 изхода",
           "caption": "",
           "rows": []
         },
         {
           "label": "Компактен и лек",
           "image": "PC_4_2_D3P_Compact_and_lightweight.jpg",
-          "imageAlt": "DELTA 3 — компактен и лек",
+          "imageAlt": "DELTA 3 Plus — компактен и лек",
           "caption": "",
           "rows": []
         }
@@ -260,21 +260,21 @@
         {
           "label": "LFP батерия",
           "image": "PC_8_1_D3P_LFP_Battery.jpg",
-          "imageAlt": "DELTA 3 — LFP батерия",
+          "imageAlt": "DELTA 3 Plus — LFP батерия",
           "caption": "Третото поколение LiFePO4 (LFP) клетки се зареждат бързо, без да губят дълготрайност. 4000 цикъла до 80% капацитет [7] — до 10 години надеждна употреба, 25% над стандарта в индустрията.",
           "rows": []
         },
         {
           "label": "IP65 батериен пакет",
           "image": "PC_8_2_D3P_IP65_Battery_Pack.jpg",
-          "imageAlt": "DELTA 3 — IP65 батериен пакет",
+          "imageAlt": "DELTA 3 Plus — IP65 батериен пакет",
           "caption": "Батерията е с IP65 защита от пръски вода и прах — издържа на тежки условия и работи дълго.",
           "rows": []
         },
         {
           "label": "BMS",
           "image": "PC_8_3_D3P_BMS.jpg",
-          "imageAlt": "DELTA 3 — BMS",
+          "imageAlt": "DELTA 3 Plus — BMS",
           "caption": "Интелигентната система за управление на батерията следи температурата, напрежението и тока в реално време и пази клетките от презареждане и прегряване.",
           "rows": []
         }
@@ -289,14 +289,14 @@
         {
           "label": "По-малък размер, същата мощност",
           "image": "PC_9_1_D3P_Smaller_Size_Same_Power.jpg",
-          "imageAlt": "DELTA 3 с DELTA 3 Extra Battery",
+          "imageAlt": "DELTA 3 Plus с DELTA 3 Plus Extra Battery",
           "caption": "Същата мощност, по-компактно. С EcoFlow DELTA 3 Extra Battery (1 kWh) стигате 2 kWh капацитет — с една трета по-малко и по-леко от батерията на DELTA 2.",
           "rows": []
         },
         {
           "label": "1 допълнителна батерия, 5× мощност",
           "image": "PC_9_2_1_D3P_Extra_Battery_5x_the_Power.jpg",
-          "imageAlt": "DELTA 3 с допълнителни батерии до 5 kWh",
+          "imageAlt": "DELTA 3 Plus с допълнителни батерии до 5 kWh",
           "caption": "Една допълнителна батерия, петкратно повече енергия — до 5 kWh за дни резервно захранване.",
           "rows": []
         }
@@ -306,7 +306,7 @@
       "blockType": "comparisonTable",
       "anchorLabel": "Сравнение",
       "heading": "Моделите от 1 kWh",
-      "_vnimanie_ceni": "Колоните Classic и Plus да се вържат към продуктите от админа (Classic вече съществува).",
+      "_vnimanie_ceni": "Колоните Classic и DELTA 3 се връзват към продуктите от админа (и двата съществуват).",
       "columns": [
         {
           "label": "DELTA 3 Classic",
@@ -316,18 +316,18 @@
         {
           "label": "DELTA 3",
           "tagline": "За дома и на открито",
-          "highlight": true,
-          "image": "ecoflow-delta-3-series-portable-power-station-60905350299991.png",
-          "imageAlt": "EcoFlow DELTA 3",
-          "price": 649,
-          "comparePrice": 919.81,
-          "ctaLabel": "Купи сега",
-          "ctaUrl": "https://dice.bg/ecoflow-delta-3-portable-power-station-1024wh-portativna-profesionalna-elektrotsentrala-za-zarezhdane-na-ustroystva-tamnosiv-item70511",
           "productSlug": "delta-3"
         },
         {
           "label": "DELTA 3 Plus",
           "tagline": "Най-висока производителност",
+          "highlight": true,
+          "image": "ecoflow-delta-3-series-portable-power-station-60905350299991.png",
+          "imageAlt": "EcoFlow DELTA 3 Plus",
+          "price": 799,
+          "comparePrice": 1022,
+          "ctaLabel": "Купи сега",
+          "ctaUrl": "https://dice.bg/ecoflow-delta-3-plus-portable-power-station-1024wh-portativna-profesionalna-elektrotsentrala-za-zarezhdane-na-ustroystva-tamnosiv-item70512",
           "productSlug": "delta-3-plus"
         }
       ],
@@ -422,10 +422,10 @@
       "heading": "Какво има в кутията",
       "items": [
         {
-          "name": "EcoFlow DELTA 3",
+          "name": "EcoFlow DELTA 3 Plus",
           "qty": 1,
           "image": "ecoflow-delta-3-series-portable-power-station-60905350299991.png",
-          "imageAlt": "EcoFlow DELTA 3"
+          "imageAlt": "EcoFlow DELTA 3 Plus"
         },
         {
           "name": "Захранващ кабел за контакт",
@@ -440,7 +440,7 @@
           "imageAlt": "Ръководства и гаранционна карта"
         }
       ],
-      "_iztochnik": "Проверено по DELTA_3_PC.png на EcoFlow: устройство, AC кабел, ръководства и гаранционна карта — 3 елемента."
+      "_iztochnik": "Проверено по DELTA_3_Plus_PC.png на EcoFlow: устройство, AC кабел, ръководства и гаранционна карта — 3 елемента."
     },
     {
       "blockType": "specTable",
@@ -454,7 +454,7 @@
           "text": "Пълен заряд за 56 минути от контакт с 1500W вход е измерен при оптимални условия в лабораторията на EcoFlow."
         },
         {
-          "text": "Времето за зареждане от соларни панели е при 500W вход и идеални условия; реалното време зависи от слънцето."
+          "text": "Времето за зареждане от соларни панели е при 2 × 500W вход и идеални условия; реалното време зависи от слънцето."
         },
         {
           "text": "Алтернаторното зарядно EcoFlow 800W се продава отделно."
@@ -483,7 +483,7 @@
       "rows": [
         {
           "label": "Цвят",
-          "value": "тъмносив"
+          "value": "сребрист"
         },
         {
           "label": "Капацитет",
@@ -532,7 +532,7 @@
         },
         {
           "label": "Време за превключване (UPS)",
-          "value": "<10 ms"
+          "value": "<10 ms, HID"
         }
       ]
     },
@@ -541,7 +541,7 @@
       "rows": [
         {
           "label": "USB-A (бързо зареждане)",
-          "value": "2 × 18W"
+          "value": "2 × 36W"
         },
         {
           "label": "USB-A",
@@ -549,7 +549,7 @@
         },
         {
           "label": "USB-C",
-          "value": "2 × 100W"
+          "value": "2 × 140W"
         }
       ]
     },
@@ -575,7 +575,7 @@
         },
         {
           "label": "От соларни панели",
-          "value": "1 × 500W, 11–60V (около 130 мин)"
+          "value": "2 × 500W, 11–60V (около 70 мин)"
         },
         {
           "label": "От автомобил (алтернаторно зарядно)",
@@ -669,17 +669,13 @@
       "https://eu.ecoflow.com/cdn/shop/files/PC_8_3_D3P_BMS.jpg",
       "https://eu.ecoflow.com/cdn/shop/files/PC_9_1_D3P_Smaller_Size_Same_Power.jpg",
       "https://eu.ecoflow.com/cdn/shop/files/PC_9_2_1_D3P_Extra_Battery_5x_the_Power.jpg"
-    ]
+    ],
+    "_bележка": "Всички файлове са същите като при DELTA 3 — вече са в Медия. Копирай galeriya/ и sekcii/ от content/delta-3/ (вносът преизползва файловете по име, не качва втори път). Единствен нов е 1_1_89e83263… (колажът), ако още не е свален за DELTA 3."
   },
-  "_prevod_nadpisi": {
-    "_bележка": "Файловете с PC_ представка са банери с вградени английски надписи (заглавие + текст върху снимката). Да се проверят при сваляне; готовите български текстове са в секциите по-горе (heading/caption на съответния раздел).",
-    "D3P-UPS-EU-PC.jpg": "UPS диаграма — надписите вероятно са на английски",
-    "6_1_KSP_5-_Inteligent.jpg": "екран на приложението — английски",
-    "1_1_89e83263-2f74-494c-9408-ceb946b52290.jpg": "колаж с 9 плочки — виж prevod-nadpisi.md"
-  },
+  "_prevod_nadpisi": "виж content/delta-3/prevod-nadpisi.md — банерите са същите",
   "_neyasni": [
+    "Страницата на EcoFlow е обща за DELTA 3 и Plus: банерите са едни и същи, включително колажът с „1800W output“ и „0–100% in 56 minutes“ — валидни и за Plus.",
     "Бележките под линия [1]–[7] не можаха да се прочетат от страницата (сгънат блок) — написани са по смисъл; да се проверят в портала.",
-    "Сравнителната таблица: EcoFlow сравняват DELTA 3 Series с DELTA 2 (картинка). При нас е Classic / DELTA 3 / Plus — Classic и Plus да се вържат към продуктите от админа.",
-    "Гаранция: EcoFlow пишат 5 години за серията; при Classic беше 3+2. Записано 5."
+    "Цвят: EcoFlow пишат „Silver“ за Plus; в dice.bg адресът е „tamnosiv“. Записано „сребрист“ по EcoFlow — провери коя е реалната наличност."
   ]
 }

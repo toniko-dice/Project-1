@@ -742,7 +742,10 @@ export interface Product {
              * Ако попълните, секцията се появява в закаченото меню най-горе. Оставете празно, за да не се показва.
              */
             anchorLabel?: string | null;
-            heading: string;
+            /**
+             * По избор. Празно заглавие дава секция само със снимката — така е главният банер в оригинала, чието заглавие стои на следващата секция.
+             */
+            heading?: string | null;
             subheading?: string | null;
             subheadingPosition?: ('above' | 'below') | null;
             body?: string | null;
