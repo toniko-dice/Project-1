@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Nunito_Sans, Rubik } from 'next/font/google'
+import { Inter } from 'next/font/google'
 
 import { DesignTokens } from '@/components/DesignTokens'
 import { Footer } from '@/components/Footer'
@@ -7,20 +7,24 @@ import { Header } from '@/components/Header'
 import './globals.css'
 
 /*
-  Двойката Rubik / Nunito Sans идва от препоръката на ui-ux-pro-max за електронна търговия.
-  И двата шрифта покриват кирилица. display: swap предотвратява невидим текст при зареждане.
+  Единственият шрифт на сайта.
+
+  Оригиналът на eu.ecoflow.com е на неутрален гротеск от типа Helvetica.
+  Rubik и Nunito Sans са заоблени и меки — разпознават се отдалеч като
+  друг сайт. Inter е най-близкото с пълна кирилица в Google Fonts.
+
+  Подмножеството „cyrillic" НЕ се подразбира. Без него браузърът тегли
+  само латиницата, кирилицата пада на системния шрифт и в един ред
+  излизат два различни шрифта.
+
+  Смяната на шрифта на целия сайт е този блок плюс двете променливи в
+  globals.css. В компонентите няма име на шрифт — само ролите
+  „font-heading" и „font-body".
 */
-const rubik = Rubik({
+const inter = Inter({
   subsets: ['cyrillic', 'latin'],
   weight: ['400', '500', '600', '700'],
-  variable: '--font-rubik',
-  display: 'swap',
-})
-
-const nunito = Nunito_Sans({
-  subsets: ['cyrillic', 'latin'],
-  weight: ['400', '600', '700'],
-  variable: '--font-nunito',
+  variable: '--font-sans',
   display: 'swap',
 })
 
@@ -41,7 +45,7 @@ export const metadata: Metadata = {
 
 export default function FrontendLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="bg" className={`${rubik.variable} ${nunito.variable}`}>
+    <html lang="bg" className={inter.variable}>
       <head>
         <DesignTokens />
       </head>

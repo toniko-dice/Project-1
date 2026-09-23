@@ -14,7 +14,29 @@ export const FeatureSection: Block = {
   fields: [
     anchorField,
     { name: 'heading', type: 'text', required: true, label: 'Заглавие' },
-    { name: 'subheading', type: 'text', label: 'Подзаглавие' },
+    {
+      type: 'row',
+      fields: [
+        { name: 'subheading', type: 'text', label: 'Подзаглавие', admin: { width: '60%' } },
+        {
+          /*
+            „Над" е по подразбиране, за да не се разместят съществуващите
+            секции — при Classic подзаглавието стои над заглавието като
+            малък ред. В оригинала на Max има и обратното: заглавие, под
+            него по-едро подзаглавие, после текстът.
+          */
+          name: 'subheadingPosition',
+          type: 'select',
+          label: 'Място на подзаглавието',
+          defaultValue: 'above',
+          options: [
+            { label: 'Над заглавието (малък ред)', value: 'above' },
+            { label: 'Под заглавието (по-едро)', value: 'below' },
+          ],
+          admin: { width: '40%' },
+        },
+      ],
+    },
     { name: 'body', type: 'textarea', label: 'Текст' },
     {
       name: 'image',

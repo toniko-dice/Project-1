@@ -4,7 +4,7 @@
   "produkt": {
     "title": "EcoFlow DELTA 3 Classic",
     "slug": "delta-3-classic",
-    "categorySlug": "portativni-elektrocentrali",
+    "categorySlug": "delta-3-seriya",
     "productType": "hero",
     "tagline": "1024Wh капацитет / 1800W изход",
     "badge": "none",
@@ -164,7 +164,8 @@
           "imageAlt": "DELTA 3 Classic захранва инструменти на работна площадка",
           "rows": []
         }
-      ]
+      ],
+      "layout": "side-panel"
     },
     {
       "blockType": "featureSection",
@@ -173,7 +174,7 @@
       "image": "04_4a9d492f-44aa-4639-9de4-8678c00375b6.webp",
       "imageAlt": "X-Stream — технология за бързо зареждане на EcoFlow",
       "layout": "stacked",
-      "theme": "dark"
+      "theme": "light"
     },
     {
       "blockType": "tabbedShowcase",
@@ -194,7 +195,8 @@
               "sublabel": "1400W вход",
               "value": "60 мин"
             }
-          ]
+          ],
+          "caption": "До 80% за 45 минути и пълен заряд за 60 минути от контакт с 1400W вход. [3]"
         },
         {
           "label": "От слънце",
@@ -206,7 +208,8 @@
               "sublabel": "500W соларен вход",
               "value": "2 ч 30 мин"
             }
-          ]
+          ],
+          "caption": "Пълен заряд за около 2 ч 30 мин с до 500W соларен вход. [3]"
         },
         {
           "label": "От автомобил",
@@ -223,9 +226,11 @@
               "sublabel": "алтернатор 500W",
               "value": "2 ч 30 мин"
             }
-          ]
+          ],
+          "caption": "До 80% за 1,8 ч или 100% за 2,5 ч с алтернаторното зарядно EcoFlow 500W. [5]"
         }
-      ]
+      ],
+      "layout": "image-top"
     },
     {
       "blockType": "featureSection",
@@ -233,7 +238,7 @@
       "body": "12,1 кг и 398 × 200 × 283 мм. Влиза в багажник, качва се по стълби и не изисква отделно място. За къмпинг, теренна работа или снимки — навсякъде, където трябва сигурен ток.",
       "image": "06_012f061a-09e5-43fd-b94d-e93b9b5504c6.jpg",
       "imageAlt": "DELTA 3 Classic — компактен и лесен за пренасяне",
-      "layout": "image-right",
+      "layout": "stacked",
       "theme": "light"
     },
     {
@@ -242,14 +247,9 @@
       "body": "При спиране на тока поема захранването за под 10 милисекунди. Компютърът не се рестартира, хладилникът не усеща прекъсване, чувствителната техника продължава да работи.",
       "image": "07_707be1f4-f38a-4610-a46f-00cfc99a46d1.webp",
       "imageAlt": "DELTA 3 Classic като резервно захранване при спиране на тока",
-      "layout": "image-left",
+      "layout": "stacked",
       "theme": "light",
-      "stats": [
-        {
-          "value": "10 ms",
-          "label": "време за превключване"
-        }
-      ]
+      "stats": []
     },
     {
       "blockType": "featureSection",
@@ -257,8 +257,9 @@
       "body": "Батерията използва литиево-желязо-фосфатни клетки от типа, който се влага в електромобили. Устойчиви на температурни разлики и на честа употреба.",
       "image": "08_d1f399c6-8ca2-4a1f-8780-768ad3f0e985.webp",
       "imageAlt": "LFP клетки от автомобилен клас в DELTA 3 Classic",
-      "layout": "image-right",
-      "theme": "dark"
+      "layout": "stacked",
+      "theme": "light",
+      "subheading": "Дълготраен, издръжлив, винаги готов при авария"
     },
     {
       "blockType": "featureSection",
@@ -267,17 +268,8 @@
       "image": "09.webp",
       "imageAlt": "DELTA 3 Classic — издръжливост и тиха работа",
       "layout": "stacked",
-      "theme": "dark",
-      "stats": [
-        {
-          "value": "3 + 2",
-          "label": "години гаранция"
-        },
-        {
-          "value": "30 dB",
-          "label": "шум при 600W"
-        }
-      ]
+      "theme": "light",
+      "stats": []
     },
     {
       "blockType": "featureSection",
@@ -303,15 +295,18 @@
           "ctaUrl": "https://dice.bg/portativna-profesionalna-elektrocentrala-za-zarezhdane-na-ustrojstva-ecoflow-delta-3-classic-portable-power-station-1024wh-t-mnosiv",
           "highlight": true,
           "image": "ecoflow-delta-3-classic-1024wh-portable-power-station-1218691755_2000x.webp",
-          "imageAlt": "EcoFlow DELTA 3 Classic"
+          "imageAlt": "EcoFlow DELTA 3 Classic",
+          "productSlug": "delta-3-classic"
         },
         {
           "label": "DELTA 3",
-          "tagline": "За дома и на открито"
+          "tagline": "За дома и на открито",
+          "productSlug": "delta-3"
         },
         {
           "label": "DELTA 3 Plus",
-          "tagline": "Най-висока производителност"
+          "tagline": "Най-висока производителност",
+          "productSlug": "delta-3-plus"
         }
       ],
       "rows": [
@@ -348,19 +343,11 @@
           ]
         },
         {
-          "label": "USB-A",
+          "label": "USB портове",
           "values": [
-            "1 × 18W",
-            "2 × 18W",
-            "2 × 36W"
-          ]
-        },
-        {
-          "label": "USB-C",
-          "values": [
-            "1×100W + 1×30W",
-            "2 × 100W",
-            "2 × 140W"
+            "USB-A: 1 × 18W\nUSB-C: 1×100W + 1×30W",
+            "USB-A: 2 × 18W\nUSB-C: 2 × 100W",
+            "USB-A: 2 × 36W\nUSB-C: 2 × 140W"
           ]
         },
         {
@@ -412,7 +399,8 @@
           ]
         }
       ],
-      "_snimki": "Колоните DELTA 3 и DELTA 3 Plus са без снимка — няма файлове за тях в папката. Добави ги в galeryia/ и попълни image + imageAlt."
+      "_snimki": "Колоните DELTA 3 и DELTA 3 Plus са без снимка — няма файлове за тях в папката. Добави ги в galeryia/ и попълни image + imageAlt.",
+      "_productSlug": "Вносът връзва колоната към продукта с този slug, ако съществува (снимка, цена, бутон идват от продукта). Ако не съществува — остава ръчното име."
     },
     {
       "blockType": "inTheBox",
@@ -421,17 +409,24 @@
       "items": [
         {
           "name": "EcoFlow DELTA 3 Classic",
-          "qty": 1
+          "qty": 1,
+          "image": "ecoflow-delta-3-classic-1024wh-portable-power-station-1218691755_2000x.webp",
+          "imageAlt": "EcoFlow DELTA 3 Classic"
         },
         {
           "name": "Захранващ кабел за контакт",
-          "qty": 1
+          "qty": 1,
+          "image": "kutiya-kabel.webp",
+          "imageAlt": "Захранващ кабел за контакт"
         },
         {
           "name": "Ръководство и гаранционна карта",
-          "qty": 1
+          "qty": 1,
+          "image": "kutiya-rakovodstvo.webp",
+          "imageAlt": "Ръководство за бърз старт и гаранционна карта"
         }
-      ]
+      ],
+      "_snimki": "kutiya-kabel.webp и kutiya-rakovodstvo.webp са изрязани от екранна снимка на eu.ecoflow.com (327 и 474 px) — заместители до чист файл от партньорския портал."
     },
     {
       "blockType": "specTable",
@@ -636,5 +631,17 @@
     "Сравнителна таблица: цената на DELTA 3 и DELTA 3 Plus е махната нарочно. Трябват цените от dice.bg, а не европейските (749 и 849 €). Ако dice.bg ги продава — попълни цената, старата цена и адреса. Ако не ги продава — остави ги без цена и бутон, само за сравнение.",
     "На страницата на EcoFlow цената на Classic в сравнителната таблица е 599 € зачертано 599 € — очевидна тяхна грешка от изтекла промоция. Ползвана е цената от dice.bg: 549 € от 599 €.",
     "Четири секции (колаж, X-Stream, трите панела, приложението) са с подредба stacked — текст отгоре, снимка отдолу, без слой. Изисква task-image-fixes.md."
-  ]
+  ],
+  "_snimki_s_nadpisi": {
+    "prevedeni": [
+      "01_25653e45-72da-49fd-b077-cad440edb445.webp — колажът след „Преглед\" (преведен от собственика, заменен в админа)"
+    ],
+    "chakat": [
+      "03-01-Camping.jpg — снимката на къмпинга в „1800W мощност\" (панел с уреди вдясно)",
+      "08_d1f399c6-8ca2-4a1f-8780-768ad3f0e985.webp — LFP клетки (25% more / 25% less)",
+      "09.webp — третата снимка в „Десет години живот\" (30dB / Library Level)",
+      "10_820a8008-d66a-4177-b0d9-97943ccd356e.webp — екраните на приложението (Output / Solar Generation / Scheduled Tasks)",
+      "kutiya-kabel.webp, kutiya-rakovodstvo.webp — изрезки от екранна снимка, трябват чисти файлове"
+    ]
+  }
 }

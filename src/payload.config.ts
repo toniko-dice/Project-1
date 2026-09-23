@@ -15,6 +15,7 @@ import { Media } from './collections/Media'
 import { MenuPanels } from './collections/MenuPanels'
 import { Pages } from './collections/Pages'
 import { Products } from './collections/Products'
+import { Subscribers } from './collections/Subscribers'
 import { Testimonials } from './collections/Testimonials'
 import { Users } from './collections/Users'
 import { dailyBackupTask } from './jobs/backupTask'
@@ -34,7 +35,18 @@ export default buildConfig({
       titleSuffix: '— EcoFlow България',
     },
   },
-  collections: [Pages, Products, Categories, MenuPanels, Media, Testimonials, Awards, Backups, Users],
+  collections: [
+    Pages,
+    Products,
+    Categories,
+    MenuPanels,
+    Media,
+    Testimonials,
+    Awards,
+    Subscribers,
+    Backups,
+    Users,
+  ],
   globals: [Header, Footer, Design, SiteSettings],
   // Архивирането по график минава през опашката за задачи на Payload.
   // Работи само докато сървърът върви — при спряна машина архив не се прави.
@@ -62,6 +74,7 @@ export default buildConfig({
     fallbackLanguage: 'bg',
   },
   upload: {
-    limits: { fileSize: 15_000_000 },
+    // 20 MB — заради банерните видеа. Снимките са далеч под този размер.
+    limits: { fileSize: 20_000_000 },
   },
 })

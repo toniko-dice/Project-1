@@ -33,5 +33,14 @@ export default async function DynamicPage({ params }: Args) {
 
   if (!page) notFound()
 
-  return <RenderBlocks layout={page.layout} showBgn={Boolean(settings.showBgnPrices)} />
+  return (
+    /*
+      Съставените страници са на светлосив фон, за да изпъкват белите карти
+      и банерите — както в оригинала. Продуктовата страница остава бяла,
+      затова сивото се слага тук, а не на `body`.
+    */
+    <div className="bg-canvas">
+      <RenderBlocks layout={page.layout} showBgn={Boolean(settings.showBgnPrices)} />
+    </div>
+  )
 }

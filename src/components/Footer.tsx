@@ -7,6 +7,7 @@ import {
 } from '@phosphor-icons/react/dist/ssr'
 import Link from 'next/link'
 
+import { NewsletterForm } from './NewsletterForm'
 import { getGlobal } from '@/lib/payload'
 
 const SOCIAL_ICONS = {
@@ -42,32 +43,15 @@ export const Footer = async () => {
               ) : null}
             </div>
 
-            {/*
-              Формата е подготвена за свързване с външна услуга за бюлетин.
-              Полето има видим етикет, а не само placeholder.
-            */}
-            <form className="flex flex-col gap-2 sm:flex-row" action="#" method="post">
-              <div className="flex-1">
-                <label htmlFor="newsletter-email" className="mb-1 block text-xs font-medium">
-                  Имейл адрес
-                </label>
-                <input
-                  id="newsletter-email"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                  placeholder="ime@primer.bg"
-                  className="min-h-11 w-full rounded-md border border-line bg-surface px-3 text-sm"
-                />
-              </div>
-              <button
-                type="submit"
-                className="mt-auto inline-flex min-h-11 cursor-pointer items-center justify-center rounded-md bg-brand px-5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand-dark"
-              >
-                Абонирайте се
-              </button>
-            </form>
+            {/* Записва в колекция „Абонати" през сървърен път. */}
+            <div className="relative">
+              <NewsletterForm
+                consentText={
+                  settings.newsletterConsentText ??
+                  'Съгласен съм да получавам новини и оферти от EcoFlow България. Мога да се отпиша по всяко време.'
+                }
+              />
+            </div>
           </div>
         </div>
       ) : null}

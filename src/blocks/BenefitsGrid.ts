@@ -1,4 +1,5 @@
 import type { Block } from 'payload'
+import { requiredUnlessHidden } from './shared'
 
 /**
  * Ред с предимства на магазина — "Защо да пазарувате при нас".
@@ -30,7 +31,7 @@ export const BenefitsGrid: Block = {
         {
           name: 'icon',
           type: 'select',
-          required: true,
+          validate: requiredUnlessHidden,
           label: 'Икона',
           defaultValue: 'shield',
           options: [
@@ -44,7 +45,7 @@ export const BenefitsGrid: Block = {
             { label: 'Сертификат (оторизиран)', value: 'certificate' },
           ],
         },
-        { name: 'title', type: 'text', required: true, label: 'Заглавие' },
+        { name: 'title', type: 'text', validate: requiredUnlessHidden, label: 'Заглавие' },
         { name: 'description', type: 'textarea', label: 'Описание' },
       ],
     },

@@ -61,7 +61,16 @@ export const Categories: CollectionConfig = {
               type: 'checkbox',
               label: 'Показване в лентата с икони',
               defaultValue: false,
-              admin: { description: 'Отнася се за лентата с кръгли икони на началната страница.' },
+              admin: { description: 'Отнася се за лентата с икони на началната страница.' },
+            },
+            {
+              name: 'stripBadge',
+              type: 'text',
+              label: 'Етикет в лентата',
+              admin: {
+                description:
+                  'По избор. Показва се в червено под името в лентата с категории. Напр. „Ново".',
+              },
             },
           ],
         },

@@ -8,6 +8,16 @@
  * пускане сравнява с предишната снимка. Разлика с минус при таблиците с
  * връзки означава, че нещо е изяло редове — точно каквото направи
  * миграцията 20260901_142626 с началната страница.
+ *
+ * ВАЖНО ЗА ЧЕТЕНЕТО НА ДАННИТЕ
+ *
+ * Броячите се вадят с чист SQL, не през `payload.find`.
+ *
+ * Скриптът работи и ПРЕДИ миграция — тоест в момент, когато кодът вече
+ * описва колони, които базата още няма. Заявката на Payload изброява
+ * всяка колона от конфигурацията поименно и се проваля с „no such
+ * column" точно тогава, когато снимката е най-нужна. Чистият SQL брои
+ * това, което наистина стои в базата.
  */
 import config from '@payload-config'
 import fs from 'fs/promises'
@@ -32,6 +42,10 @@ const query = async (raw: string): Promise<Record<string, unknown>[]> => {
 
 const num = (v: unknown): number => (typeof v === 'number' ? v : Number(v ?? 0))
 
+/** Имената на колоните на дадена таблица. Празен списък, ако я няма. */
+const columnsOf = async (table: string): Promise<string[]> =>
+  (await query(`PRAGMA table_info(${table})`)).map((c) => String(c.name))
+
 type Snapshot = {
   взето: string
   колекции: Record<string, { общо: number; публикувани?: number }>
@@ -44,7 +58,8 @@ type Snapshot = {
 
 const колекции: Snapshot['колекции'] = {}
 
-for (const slug of [
+// Адресът на колекцията и името на таблицата се различават с тиретата.
+const COLLECTIONS = [
   'products',
   'categories',
   'pages',
@@ -53,19 +68,24 @@ for (const slug of [
   'testimonials',
   'awards',
   'backups',
-] as const) {
-  const all = await payload.find({ collection: slug, limit: 0, depth: 0, draft: true })
-  const entry: { общо: number; публикувани?: number } = { общо: all.totalDocs }
+] as const
 
-  // Само колекциите с чернови имат смисъл да се броят по статус.
-  if (slug === 'products' || slug === 'pages') {
-    const pub = await payload.find({
-      collection: slug,
-      where: { _status: { equals: 'published' } },
-      limit: 0,
-      depth: 0,
-    })
-    entry.публикувани = pub.totalDocs
+for (const slug of COLLECTIONS) {
+  const table = slug.replace(/-/g, '_')
+  const cols = await columnsOf(table)
+
+  if (!cols.length) {
+    // Таблицата още не съществува — по-добре пропусната, отколкото нула.
+    continue
+  }
+
+  const rows = await query(`SELECT COUNT(*) AS n FROM ${table}`)
+  const entry: { общо: number; публикувани?: number } = { общо: num(rows[0]?.n) }
+
+  // Само колекциите с чернови имат колона за статус.
+  if (cols.includes('_status')) {
+    const pub = await query(`SELECT COUNT(*) AS n FROM ${table} WHERE _status = 'published'`)
+    entry.публикувани = num(pub[0]?.n)
   }
 
   колекции[slug] = entry
@@ -80,9 +100,7 @@ const relTables = (
 ).map((r) => String(r.name))
 
 for (const table of relTables) {
-  const cols = (await query(`PRAGMA table_info(${table})`))
-    .map((c) => String(c.name))
-    .filter((c) => c.endsWith('_id') && c !== 'parent_id')
+  const cols = (await columnsOf(table)).filter((c) => c.endsWith('_id') && c !== 'parent_id')
 
   for (const col of cols) {
     const rows = await query(`SELECT COUNT(*) AS n FROM ${table} WHERE ${col} IS NOT NULL`)
@@ -96,27 +114,30 @@ for (const table of relTables) {
 
 const начална: Snapshot['начална'] = {}
 
-const home = await payload.find({
-  collection: 'pages',
-  where: { slug: { equals: 'home' } },
-  limit: 1,
-  depth: 0,
-  draft: true,
-})
+/*
+  Продуктите на началната страница висят в `pages_rels`, а не в самите
+  блокове. Затова се броят по пътя на блока — така се вижда не само общият
+  брой, а и кой блок е останал празен.
+*/
+const homeRows = await query("SELECT id FROM pages WHERE slug = 'home' LIMIT 1")
+const homeId = homeRows[0]?.id
 
-const layout = (home.docs[0] as unknown as Record<string, unknown> | undefined)?.layout as
-  | { blockType?: string; products?: unknown[] }[]
-  | undefined
+if (homeId !== undefined && (await columnsOf('pages_rels')).includes('products_id')) {
+  const perPath = await query(
+    `SELECT path, COUNT(*) AS n FROM pages_rels
+      WHERE parent_id = ${num(homeId)} AND products_id IS NOT NULL
+      GROUP BY path ORDER BY path`,
+  )
 
-if (layout) {
-  начална['секции'] = layout.length
-  let блокове = 0
-  for (const [i, block] of layout.entries()) {
-    if (!Array.isArray(block.products)) continue
-    блокове += 1
-    начална[`блок ${i} (${block.blockType})`] = block.products.length
+  let общо = 0
+  for (const row of perPath) {
+    const n = num(row.n)
+    общо += n
+    начална[`блок ${String(row.path)}`] = n
   }
-  начална['продуктови блокове'] = блокове
+
+  начална['продуктови блокове'] = perPath.length
+  начална['продукти общо'] = общо
 }
 
 /* ─────────── проблеми ─────────── */
@@ -126,11 +147,10 @@ const проблеми: Snapshot['проблеми'] = {}
 const bezSnimka = await query('SELECT COUNT(*) AS n FROM products WHERE image_id IS NULL')
 проблеми['продукти без основна снимка'] = num(bezSnimka[0]?.n)
 
-const mediaDocs = await payload.find({ collection: 'media', limit: 0, depth: 0 })
-const mediaAll = await payload.find({ collection: 'media', pagination: false, depth: 0 })
+const mediaRows = await query('SELECT filename FROM media')
 let липсващи = 0
-for (const m of mediaAll.docs) {
-  const f = (m as unknown as Record<string, unknown>).filename
+for (const m of mediaRows) {
+  const f = m.filename
   if (typeof f !== 'string') continue
   try {
     await fs.access(path.join(process.cwd(), 'media', f))
@@ -139,7 +159,7 @@ for (const m of mediaAll.docs) {
   }
 }
 проблеми['медия без файл на диска'] = липсващи
-проблеми['медия общо'] = mediaDocs.totalDocs
+проблеми['медия общо'] = mediaRows.length
 
 /* ─────────── запис и сравнение ─────────── */
 

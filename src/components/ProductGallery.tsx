@@ -4,7 +4,15 @@ import { CaretLeft, CaretRight } from '@phosphor-icons/react/dist/ssr'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 
-export type GalleryImage = { url: string; alt: string }
+import { Lightbox } from './Lightbox'
+
+/**
+ * Трите адреса са на една и съща снимка в три размера:
+ *  - `url`      — за галерията на страницата
+ *  - `fullUrl`  — оригиналът, за уголемяването на цял екран
+ *  - `thumbUrl` — за лентата с миниатюри под уголемената снимка
+ */
+export type GalleryImage = { url: string; fullUrl: string; thumbUrl: string; alt: string }
 
 /**
  * Продуктова галерия.
@@ -15,9 +23,14 @@ export type GalleryImage = { url: string; alt: string }
  *
  * Няма безкраен цикъл: на първата снимка стрелката назад изчезва, на
  * последната — напред.
+ *
+ * Клик върху снимката я отваря на цял екран. Индексът се държи тук и се
+ * споделя с наслагването, затова при затваряне галерията остава на
+ * снимката, до която е стигнал потребителят.
  */
 export const ProductGallery = ({ images }: { images: GalleryImage[] }) => {
   const [index, setIndex] = useState(0)
+  const [open, setOpen] = useState(false)
   const trackRef = useRef<HTMLDivElement>(null)
   const isProgrammatic = useRef(false)
 
@@ -33,6 +46,26 @@ export const ProductGallery = ({ images }: { images: GalleryImage[] }) => {
     window.setTimeout(() => {
       isProgrammatic.current = false
     }, 400)
+  }
+
+  /*
+    Затваряне на уголемяването.
+
+    Лентата долу се мести на снимката, гледана горе, и фокусът се връща
+    върху нея — иначе след затваряне фокусът пада на `body` и следващият
+    Tab тръгва от началото на страницата.
+  */
+  const closeLightbox = () => {
+    setOpen(false)
+
+    const track = trackRef.current
+    if (!track) return
+    isProgrammatic.current = true
+    track.scrollTo({ left: index * track.clientWidth })
+    window.setTimeout(() => {
+      isProgrammatic.current = false
+    }, 200)
+    track.focus()
   }
 
   // Плъзгане с пръст — индексът следва позицията на лентата.
@@ -68,7 +101,7 @@ export const ProductGallery = ({ images }: { images: GalleryImage[] }) => {
           ref={trackRef}
           role="group"
           aria-roledescription="карусел"
-          aria-label="Снимки на продукта"
+          aria-label="Снимки на продукта. Enter уголемява снимката."
           tabIndex={0}
           onKeyDown={(e) => {
             if (e.key === 'ArrowRight') {
@@ -79,13 +112,19 @@ export const ProductGallery = ({ images }: { images: GalleryImage[] }) => {
               e.preventDefault()
               go(index - 1)
             }
+            // Лентата е фокусируемият елемент, затова уголемяването виси тук.
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault()
+              setOpen(true)
+            }
           }}
           className="flex snap-x snap-mandatory overflow-x-auto rounded-xl bg-tile [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {images.map((img, i) => (
             <div
               key={i}
-              className="relative aspect-square w-full shrink-0 snap-start"
+              onClick={() => setOpen(true)}
+              className="relative aspect-square w-full shrink-0 cursor-zoom-in snap-start"
               aria-label={`Снимка ${i + 1} от ${images.length}`}
             >
               <Image
@@ -145,6 +184,19 @@ export const ProductGallery = ({ images }: { images: GalleryImage[] }) => {
             </button>
           ))}
         </div>
+      ) : null}
+
+      {open ? (
+        <Lightbox
+          images={images.map((img) => ({
+            url: img.fullUrl,
+            thumbUrl: img.thumbUrl,
+            alt: img.alt,
+          }))}
+          index={index}
+          onIndex={setIndex}
+          onClose={closeLightbox}
+        />
       ) : null}
     </div>
   )

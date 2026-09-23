@@ -5,6 +5,7 @@ import Link from 'next/link'
 import type { Award, Page, Testimonial } from '@/payload-types'
 import { mediaAlt, mediaUrl } from '@/lib/media'
 import { Icon } from '../Icon'
+import { ImagePlaceholder } from '../ImagePlaceholder'
 
 type Layout = NonNullable<Page['layout']>
 type BlockOf<T extends string> = Extract<Layout[number], { blockType: T }>
@@ -17,16 +18,16 @@ export const BenefitsGridBlock = ({ block }: { block: BlockOf<'benefitsGrid'> })
   if (!items.length) return null
 
   return (
-    <section className="container-site py-10">
+    <section className="container-site py-8 lg:py-12">
       {block.sectionTitle ? (
-        <h2 className="mb-6 text-xl font-semibold sm:text-2xl">{block.sectionTitle}</h2>
+        <h2 className="mb-6 text-xl font-medium tracking-tight sm:text-2xl lg:text-[28px]">{block.sectionTitle}</h2>
       ) : null}
 
       <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
         {items.map((item, i) => (
           <li key={i} className="flex flex-col gap-2 border-l border-line pl-4">
-            <Icon name={item.icon} size={28} className="text-brand" />
-            <h3 className="text-sm font-semibold">{item.title}</h3>
+            <Icon name={item.icon ?? 'shield'} size={28} className="text-brand" />
+            {item.title ? <h3 className="text-sm font-semibold">{item.title}</h3> : null}
             {item.description ? (
               <p className="text-xs leading-relaxed text-ink-muted">{item.description}</p>
             ) : null}
@@ -42,8 +43,8 @@ export const TestimonialsBlockRenderer = ({ block }: { block: BlockOf<'testimoni
   if (!testimonials.length) return null
 
   return (
-    <section className="container-site py-10">
-      <h2 className="mb-6 text-xl font-semibold sm:text-2xl">{block.sectionTitle}</h2>
+    <section className="container-site py-8 lg:py-12">
+      <h2 className="mb-6 text-xl font-medium tracking-tight sm:text-2xl lg:text-[28px]">{block.sectionTitle}</h2>
 
       <ul className="scroll-row lg:grid lg:grid-cols-4 lg:gap-4">
         {testimonials.map((t) => {
@@ -63,7 +64,9 @@ export const TestimonialsBlockRenderer = ({ block }: { block: BlockOf<'testimoni
                     className="object-cover"
                   />
                 </div>
-              ) : null}
+              ) : (
+                <ImagePlaceholder className="aspect-[4/3] w-full" />
+              )}
 
               <div className="p-4">
                 {t.rating ? (
@@ -113,16 +116,20 @@ export const LogoWallBlock = ({ block }: { block: BlockOf<'logoWall'> }) => {
   if (!awards.length) return null
 
   return (
-    <section className="container-site py-10">
+    <section className="container-site py-8 lg:py-12">
       {block.sectionTitle ? (
-        <h2 className="mb-6 text-xl font-semibold sm:text-2xl">{block.sectionTitle}</h2>
+        <h2 className="mb-6 text-xl font-medium tracking-tight sm:text-2xl lg:text-[28px]">{block.sectionTitle}</h2>
       ) : null}
 
       <ul className="flex flex-wrap items-center gap-x-10 gap-y-6">
         {awards.map((a) => {
           const logo = mediaUrl(a.logo, 'thumbnail')
-          if (!logo) return null
-          const img = (
+          /*
+            Отличие без лого преди изчезваше от реда изцяло. Сега се вижда
+            със заместител — липсващото лого е нещо, което собственикът
+            трябва да забележи, а не да гадае защо реда е по-къс.
+          */
+          const img = logo ? (
             <Image
               src={logo}
               alt={a.name}
@@ -130,6 +137,8 @@ export const LogoWallBlock = ({ block }: { block: BlockOf<'logoWall'> }) => {
               height={48}
               className="h-10 w-auto object-contain opacity-70 transition-opacity duration-200 hover:opacity-100"
             />
+          ) : (
+            <ImagePlaceholder className="h-10 w-28 rounded" compact />
           )
           return (
             <li key={a.id}>

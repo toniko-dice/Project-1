@@ -4,6 +4,8 @@ import { ArrowRight, CaretDown, CaretUp, List, MagnifyingGlass, X } from '@phosp
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { formatEur } from '@/lib/format'
+import { ImagePlaceholder } from './ImagePlaceholder'
 
 export type MenuCard = {
   imageUrl: string | null
@@ -13,6 +15,9 @@ export type MenuCard = {
   url?: string | null
   label?: string | null
   ribbon?: string | null
+  /** Цената идва само от продукта — ръчните карти нямат такова поле. */
+  price?: number | null
+  comparePrice?: number | null
 }
 
 export type MenuSection = {
@@ -50,7 +55,9 @@ const Card = ({ card, large = false }: { card: MenuCard; large?: boolean }) => {
             sizes={large ? '360px' : '200px'}
             className="object-contain p-3"
           />
-        ) : null}
+        ) : (
+          <ImagePlaceholder className="absolute inset-0" compact />
+        )}
 
         {card.ribbon ? (
           <span className="absolute left-2 top-2 rounded-sm bg-accent px-1.5 py-0.5 text-[10px] font-bold uppercase text-white">
@@ -71,6 +78,14 @@ const Card = ({ card, large = false }: { card: MenuCard; large?: boolean }) => {
             className={`mt-1 leading-snug text-ink-muted ${large ? 'text-sm' : 'text-xs'}`}
           >
             {card.specLine}
+          </p>
+        ) : null}
+        {typeof card.price === 'number' ? (
+          <p className={`tabular mt-1.5 ${large ? 'text-sm' : 'text-xs'}`}>
+            <span className="font-semibold">{formatEur(card.price)}</span>
+            {card.comparePrice ? (
+              <s className="ml-1.5 text-ink-muted">{formatEur(card.comparePrice)}</s>
+            ) : null}
           </p>
         ) : null}
       </div>
@@ -181,7 +196,12 @@ const MegaMenu = ({ item, onClose }: { item: NavItem; onClose: () => void }) => 
       onMouseLeave={onClose}
     >
       <div className="container-site flex gap-8 py-8">
-        {/* Сайдбар */}
+        {/*
+          Сайдбарът има смисъл само при избор. При единствена точка той би
+          показвал един-единствен, вече избран ред — тогава картите взимат
+          цялата ширина.
+        */}
+        {allEntries.length > 1 ? (
         <div className="w-64 shrink-0">
           {item.groups.map((group) => {
             const isOpen = openGroups.includes(group.heading)
@@ -234,6 +254,7 @@ const MegaMenu = ({ item, onClose }: { item: NavItem; onClose: () => void }) => 
             )
           })}
         </div>
+        ) : null}
 
         {/* Панел */}
         <div className="min-w-0 flex-1">
@@ -256,6 +277,8 @@ export const HeaderNav = ({
   items,
   logoUrl,
   logoAlt,
+  logoWidth = 600,
+  logoHeight = 120,
   logoSuffix,
   logoTagline,
   ctaLabel,
@@ -265,6 +288,8 @@ export const HeaderNav = ({
   items: NavItem[]
   logoUrl: string | null
   logoAlt: string
+  logoWidth?: number
+  logoHeight?: number
   logoSuffix?: string | null
   logoTagline?: string | null
   ctaLabel?: string | null
@@ -300,7 +325,20 @@ export const HeaderNav = ({
         <Link href="/" className="flex shrink-0 flex-col justify-center" aria-label="Начална страница">
           <span className="flex items-center gap-2">
             {logoUrl ? (
-              <Image src={logoUrl} alt={logoAlt} width={132} height={24} className="h-6 w-auto" priority />
+              /*
+                Широко лого: 24 px високо, ширина по съотношението на файла,
+                най-много 160 px. Ширината и височината са истинските, за да
+                не трепва при зареждане. Квадратното лого изобщо не стига
+                дотук — Header.tsx подава null и излиза надписът.
+              */
+              <Image
+                src={logoUrl}
+                alt={logoAlt}
+                width={logoWidth}
+                height={logoHeight}
+                className="h-6 w-auto max-w-40 object-contain object-left"
+                priority
+              />
             ) : (
               <span className="font-heading text-lg font-bold tracking-tight">
                 ECOFLOW
@@ -317,7 +355,7 @@ export const HeaderNav = ({
           ) : null}
         </Link>
 
-        <nav aria-label="Основна навигация" className="hidden flex-1 justify-center lg:flex">
+        <nav aria-label="Основна навигация" className="hidden min-w-0 flex-1 justify-center lg:flex">
           <ul className="flex items-center">
             {items.map((item, i) => {
               const hasMenu = item.groups.length > 0
@@ -343,7 +381,11 @@ export const HeaderNav = ({
                 </>
               )
 
-              const base = `relative inline-flex min-h-16 cursor-pointer items-center gap-1 px-3 text-[15px] transition-colors duration-200 hover:text-brand ${
+              /*
+                Точката никога не се чупи на два реда. При недостиг на място
+                се свиват шрифтът (14 px под 1440) и разстоянията — не текстът.
+              */
+              const base = `relative inline-flex min-h-16 cursor-pointer items-center gap-1 whitespace-nowrap px-2 text-sm transition-colors duration-200 hover:text-brand 2xl:px-3 2xl:text-[15px] ${
                 isOpen ? 'border-b-2 border-ink font-medium' : ''
               }`
 

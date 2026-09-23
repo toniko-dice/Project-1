@@ -1,10 +1,49 @@
+import { Star, StarHalf } from '@phosphor-icons/react/dist/ssr'
 import Image from 'next/image'
 import Link from 'next/link'
 
 import type { Product } from '@/payload-types'
-import { AVAILABILITY_LABELS, BADGE_LABELS, discountPercent, formatBgn, formatEur } from '@/lib/format'
-import { mediaAlt, mediaUrl } from '@/lib/media'
+import { AVAILABILITY_LABELS, formatBgn, formatEur } from '@/lib/format'
+import { productCardData } from '@/lib/media'
+import { ImagePlaceholder } from './ImagePlaceholder'
 
+/**
+ * Звездички с брой отзиви.
+ *
+ * Рисуват се САМО когато и оценката, и броят са попълнени. Празни звезди
+ * при липса на отзиви изглеждат като лоша оценка, а не като липса на
+ * данни — затова редът просто отсъства.
+ */
+const Rating = ({ rating, count }: { rating: number; count: number }) => {
+  const цели = Math.floor(rating)
+  const половин = rating - цели >= 0.25 && rating - цели < 0.75
+  const закръглени = rating - цели >= 0.75 ? цели + 1 : цели
+
+  return (
+    <p
+      className="flex items-center gap-1 text-xs text-ink-muted"
+      aria-label={`Оценка ${rating} от 5 при ${count} отзива`}
+    >
+      <span className="flex text-ink" aria-hidden="true">
+        {Array.from({ length: 5 }, (_, i) => {
+          if (i < закръглени) return <Star key={i} size={13} weight="fill" />
+          if (i === закръглени && половин) return <StarHalf key={i} size={13} weight="fill" />
+          return <Star key={i} size={13} className="text-line-strong" />
+        })}
+      </span>
+      <span aria-hidden="true">({count})</span>
+    </p>
+  )
+}
+
+/**
+ * Продуктова карта.
+ *
+ * Бяла карта без рамка върху сивия фон на страницата — както в оригинала.
+ * Цялата карта е един линк към продуктовата страница; черният бутон
+ * „Купи сега" беше махнат, защото в реда с пет карти пет черни бутона
+ * дърпат погледа повече от самите продукти.
+ */
 export const ProductCard = ({
   product,
   showBgn = true,
@@ -14,83 +53,70 @@ export const ProductCard = ({
   showBgn?: boolean
   className?: string
 }) => {
-  const img = mediaUrl(product.image, 'card')
-  const discount = discountPercent(product.price, product.compareAtPrice)
+  // Всичко идва от продукта през общия помощник — същото като в менюто.
+  const data = productCardData(product)
   const soldOut = product.availability === 'out-of-stock'
 
+  const rating = typeof product.rating === 'number' ? product.rating : null
+  const reviews = typeof product.reviewCount === 'number' ? product.reviewCount : null
+
   return (
-    <article
-      className={`group flex flex-col overflow-hidden rounded-lg border border-line bg-surface transition-shadow duration-200 hover:shadow-md ${className}`}
+    <Link
+      href={`/products/${product.slug}`}
+      className={`group flex cursor-pointer flex-col overflow-hidden rounded-xl bg-surface p-4 transition-shadow duration-200 hover:shadow-md ${className}`}
     >
-      <div className="relative aspect-square bg-tile">
-        {img ? (
+      {/* Снимката стои на бял фон, центрирана, без изрязване. */}
+      <div className="relative h-48 w-full sm:h-60">
+        {data.imageUrl ? (
           <Image
-            src={img}
-            alt={mediaAlt(product.image)}
+            src={data.imageUrl}
+            alt={data.imageAlt}
             fill
             sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 18vw"
-            className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
+            loading="lazy"
+            className="object-contain transition-transform duration-300 group-hover:scale-105"
           />
-        ) : null}
-
-        {product.badge && product.badge !== 'none' ? (
-          <span
-            className={`absolute left-2 top-2 rounded px-2 py-1 text-[11px] font-semibold tracking-wide ${
-              product.badge === 'sale'
-                ? 'bg-accent text-white'
-                : 'bg-ink text-white'
-            }`}
-          >
-            {BADGE_LABELS[product.badge]}
-          </span>
-        ) : null}
-
-        {discount ? (
-          <span className="absolute right-2 top-2 rounded bg-accent px-2 py-1 text-[11px] font-semibold text-white">
-            −{discount}%
-          </span>
-        ) : null}
+        ) : (
+          <ImagePlaceholder className="absolute inset-0 rounded-lg" />
+        )}
       </div>
 
-      <div className="flex flex-1 flex-col gap-1 p-3">
-        <h3 className="text-sm font-semibold leading-snug">{product.title}</h3>
+      <div className="mt-4 flex flex-1 flex-col gap-1">
+        {/* Етикетът е НАД името, в оранжево — не в ъгъла върху снимката. */}
+        {/* Собствената карта на продукта показва неговия етикет. */}
+        {data.badge ? <p className="text-sm text-flame">{data.badge}</p> : null}
 
-        {product.tagline ? (
-          <p className="text-xs leading-relaxed text-ink-muted">{product.tagline}</p>
+        <h3 className="text-[17px] font-medium leading-snug">{data.title}</h3>
+
+        {data.tagline ? (
+          <p className="line-clamp-2 text-sm leading-snug text-ink-muted">{data.tagline}</p>
         ) : null}
 
         <div className="mt-auto pt-3">
-          <div className="flex items-baseline gap-2">
-            <span className="tabular text-base font-bold">{formatEur(product.price)}</span>
-            {product.compareAtPrice ? (
-              <s className="tabular text-xs text-ink-muted">
-                {formatEur(product.compareAtPrice)}
-              </s>
+          <p className="flex flex-wrap items-baseline gap-2">
+            <span className="tabular font-semibold">от {formatEur(product.price)}</span>
+            {data.comparePrice ? (
+              <s className="tabular text-sm text-ink-muted">{formatEur(data.comparePrice)}</s>
             ) : null}
-          </div>
+          </p>
 
           {showBgn ? (
-            <p className="tabular mt-0.5 text-[11px] text-ink-muted">
-              {formatBgn(product.price)}
-            </p>
+            <p className="tabular mt-0.5 text-xs text-ink-muted">{formatBgn(product.price)}</p>
+          ) : null}
+
+          {rating !== null && reviews !== null ? (
+            <div className="mt-1">
+              <Rating rating={rating} count={reviews} />
+            </div>
           ) : null}
 
           {soldOut ? (
             <p className="mt-2 text-xs font-medium text-ink-muted">
               {AVAILABILITY_LABELS[product.availability ?? 'in-stock']}
             </p>
-          ) : (
-            <Link
-              href={product.externalUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 inline-flex min-h-11 w-full cursor-pointer items-center justify-center rounded-md bg-ink px-4 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand"
-            >
-              {product.ctaLabel ?? 'Купи сега'}
-            </Link>
-          )}
+          ) : null}
         </div>
       </div>
-    </article>
+    </Link>
   )
 }

@@ -1,10 +1,20 @@
 import type { CollectionConfig } from 'payload'
+import { revalidateAll, revalidateAllOnDelete } from '../lib/revalidate'
 
 export const Media: CollectionConfig = {
   slug: 'media',
   labels: { singular: 'Файл', plural: 'Медия' },
   admin: { group: 'Съдържание' },
   access: { read: () => true },
+  /*
+    Снимката се показва навсякъде, а адресът ѝ носи `?v=<време на промяна>`.
+    Без тези куки презаписана или изрязана снимка остава със стария адрес в
+    кешираните страници и не се сменя до следващия билд.
+  */
+  hooks: {
+    afterChange: [revalidateAll],
+    afterDelete: [revalidateAllOnDelete],
+  },
   upload: {
     staticDir: 'media',
 
@@ -73,8 +83,38 @@ export const Media: CollectionConfig = {
         width: 2000,
         formatOptions: { format: 'webp', options: { quality: 82 } },
       },
+
+      /*
+        Най-големият вариант за фронта.
+
+        Оригиналът НЕ се сервира на посетители — той е архив (виж по-горе) и
+        е JPEG: PC_3_1_D3P_RV е 454 KB срещу 80 KB за същата снимка в webp.
+        Браузър с devicePixelRatio ≥ 1,5 избираше точно него и страницата
+        излизаше 5–6 MB. `full` дава същата резолюция в webp.
+
+        `withoutEnlargement` е задължително: без него оригинал от 2048 px
+        се разтяга до 2400 и качеството пада, вместо да се запази. С него
+        Sharp спира на ширината на оригинала — 2048 px оригинал дава
+        `…-2048x640.webp`.
+
+        Качество 85, не 82: това е най-голямото копие и единственото, което
+        се гледа на 4K екран.
+      */
+      {
+        name: 'full',
+        width: 2400,
+        withoutEnlargement: true,
+        formatOptions: { format: 'webp', options: { quality: 85 } },
+      },
     ],
-    mimeTypes: ['image/*'],
+    /*
+      Приема и видео заради банерите с движещ се фон.
+
+      Sharp не пипа видеата — Payload прескача `imageSizes` за файлове,
+      които не са изображения, така че размерите по-горе остават празни за
+      тях. Затова видеото се вгражда с оригиналния си адрес.
+    */
+    mimeTypes: ['image/*', 'video/mp4', 'video/webm'],
   },
   fields: [
     {

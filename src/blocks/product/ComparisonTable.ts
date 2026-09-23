@@ -19,6 +19,14 @@ export const ComparisonTable: Block = {
     anchorField,
     { name: 'heading', type: 'text', label: 'Заглавие' },
     {
+      name: 'intro',
+      type: 'textarea',
+      label: 'Текст под заглавието',
+      admin: {
+        description: 'По избор. Центриран текст между заглавието и таблицата.',
+      },
+    },
+    {
       name: 'columns',
       type: 'array',
       label: 'Колони',

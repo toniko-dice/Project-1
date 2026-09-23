@@ -3,9 +3,11 @@ import Link from 'next/link'
 
 import type { Product } from '@/payload-types'
 import { discountPercent, formatEur } from '@/lib/format'
-import { mediaAlt, mediaDims, mediaUrl } from '@/lib/media'
+import { mediaAlt, mediaUrl, productCardData, sectionImage } from '@/lib/media'
+import { SectionImage } from '../SectionImage'
 import { ProductCard } from '../ProductCard'
-import { ProductTabs, type ShowcaseTab } from './ProductTabs'
+import { ProductTabs, type ShowcaseTab, type TabsLayout } from './ProductTabs'
+import { ImagePlaceholder } from '../ImagePlaceholder'
 
 type Sections = NonNullable<Product['sections']>
 type Section = Sections[number]
@@ -33,9 +35,28 @@ const Section = ({
   </section>
 )
 
-const SectionHeading = ({ children }: { children: React.ReactNode }) =>
+/**
+ * Заглавие на секция.
+ *
+ * В оригинала всяко заглавие на секция стои в центъра — затова центърът е
+ * по подразбиране и тук. Подравняването вляво остава за подредбите със
+ * снимка отстрани, където заглавието е част от текстовата колона.
+ */
+const BlockHeading = ({
+  children,
+  align = 'center',
+}: {
+  children: React.ReactNode
+  align?: 'center' | 'left'
+}) =>
   children ? (
-    <h2 className="mb-6 text-2xl font-semibold sm:text-3xl">{children}</h2>
+    <h2
+      className={`mb-8 text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl ${
+        align === 'center' ? 'text-center' : ''
+      }`}
+    >
+      {children}
+    </h2>
   ) : null
 
 /* ─────────── Лента с ключови показатели ─────────── */
@@ -67,27 +88,54 @@ const FeatureSectionBlock = ({
   block: BlockOf<'featureSection'>
   id?: string | null
 }) => {
-  // `content` пази съотношението — секционните снимки не бива да се режат.
-  const img = mediaUrl(block.image, 'content')
+  // Оригиналът (или `large`), без прекодиране — виж `sectionImage`.
+  const img = sectionImage(block.image)
   const dark = block.theme === 'dark'
   const full = block.layout === 'image-full'
   const stacked = block.layout === 'stacked'
   const stats = block.stats ?? []
+  // „Под" е по-едро подзаглавие между заглавието и текста; „над" е малкият ред.
+  const subBelow = block.subheadingPosition === 'below'
 
   const text = (
-    <div className={full ? 'max-w-2xl' : stacked ? 'mx-auto max-w-3xl text-center' : ''}>
-      {block.subheading ? (
-        <p className="mb-2 text-xs font-semibold uppercase tracking-[0.12em] opacity-80">
+    <div className={full ? 'max-w-2xl' : stacked ? 'text-center' : ''}>
+      {block.subheading && !subBelow ? (
+        /*
+          При стекираната подредба малкият надпис стои НАД заглавието, с
+          обикновена дебелина и малки букви — точно както в оригинала. При
+          останалите подредби остава етикетът с главни букви.
+        */
+        <p
+          className={
+            stacked
+              ? `mb-2 text-sm ${dark ? 'opacity-80' : 'text-ink-muted'}`
+              : 'mb-2 text-xs font-semibold uppercase tracking-[0.12em] opacity-80'
+          }
+        >
           {block.subheading}
         </p>
       ) : null}
 
-      <h2 className="text-2xl font-semibold leading-tight sm:text-3xl lg:text-4xl">
+      <h2 className="text-2xl font-semibold leading-tight tracking-tight sm:text-3xl lg:text-4xl">
         {block.heading}
       </h2>
 
+      {block.subheading && subBelow ? (
+        <p
+          className={`mt-3 text-lg font-medium leading-snug sm:text-[22px] ${
+            stacked ? 'mx-auto max-w-[56rem]' : ''
+          }`}
+        >
+          {block.subheading}
+        </p>
+      ) : null}
+
       {block.body ? (
-        <p className={`mt-4 leading-relaxed ${dark || full ? 'opacity-90' : 'text-ink-muted'}`}>
+        <p
+          className={`mt-4 leading-relaxed ${stacked ? 'mx-auto max-w-[56rem]' : ''} ${
+            dark || full ? 'opacity-90' : 'text-ink-muted'
+          }`}
+        >
           {block.body}
         </p>
       ) : null}
@@ -121,23 +169,22 @@ const FeatureSectionBlock = ({
     самата снимка.
   */
   if (stacked) {
-    const dims = mediaDims(block.image)
-
+    /*
+      Разстоянието между секциите е голямо нарочно — в оригинала е около
+      120 px на десктоп. При по-малко секциите се слепват и страницата
+      изглежда като един непрекъснат блок.
+    */
     return (
-      <Section id={id} className={dark ? 'bg-night py-12 text-white' : 'py-12'}>
+      <Section id={id} className={dark ? 'bg-night py-10 text-white lg:py-16' : 'py-10 lg:py-16'}>
         <div className="container-site">
           {text}
 
           {img ? (
-            <Image
-              src={img}
-              alt={mediaAlt(block.image)}
-              width={dims.width}
-              height={dims.height}
+            <SectionImage
+              image={img}
               // Контейнерът е max-width: 88rem — по-широка снимка не се показва.
               sizes="(max-width: 1408px) 100vw, 1408px"
-              loading="lazy"
-              className="mt-8 h-auto w-full rounded-xl"
+              className="mt-10 h-auto w-full rounded-2xl"
             />
           ) : null}
         </div>
@@ -152,13 +199,10 @@ const FeatureSectionBlock = ({
           <div className="relative overflow-hidden rounded-xl">
             <div className="relative aspect-[4/5] w-full sm:aspect-[16/9]">
               {img ? (
-                <Image
-                  src={img}
-                  alt={mediaAlt(block.image)}
-                  fill
+                <SectionImage
+                  image={img}
                   sizes="100vw"
-                  loading="lazy"
-                  className="object-cover"
+                  className="absolute inset-0 size-full object-cover"
                 />
               ) : null}
               <div className={`absolute inset-0 ${dark ? 'bg-black/50' : 'bg-white/20'}`} />
@@ -176,8 +220,6 @@ const FeatureSectionBlock = ({
     )
   }
 
-  const sideDims = mediaDims(block.image)
-
   return (
     <Section id={id} className={dark ? 'bg-night py-12 text-white' : 'py-12'}>
       <div className="container-site grid items-center gap-8 lg:grid-cols-2">
@@ -192,14 +234,10 @@ const FeatureSectionBlock = ({
             съдържанието; двете колони са центрирани вертикално.
           */}
           {img ? (
-            <Image
-              src={img}
-              alt={mediaAlt(block.image)}
-              width={sideDims.width}
-              height={sideDims.height}
+            <SectionImage
+              image={img}
               // На широк екран колоната е половин контейнер: 1408 / 2 = 704px.
               sizes="(max-width: 1024px) 100vw, 704px"
-              loading="lazy"
               className="h-auto w-full rounded-xl"
             />
           ) : null}
@@ -220,25 +258,40 @@ const TabbedShowcaseBlock = ({
   id?: string | null
   index: number
 }) => {
-  const tabs: ShowcaseTab[] = (block.tabs ?? []).map((t) => ({
-    label: t.label,
-    imageUrl: mediaUrl(t.image, 'content'),
-    imageAlt: mediaAlt(t.image) || t.label,
-    rows: (t.rows ?? []).map((r) => ({
-      iconUrl: mediaUrl(r.icon, 'thumbnail'),
-      iconAlt: mediaAlt(r.icon),
-      label: r.label,
-      sublabel: r.sublabel,
-      value: r.value,
-    })),
-  }))
+  const tabs: ShowcaseTab[] = (block.tabs ?? []).map((t) => {
+    return {
+      label: t.label,
+      // Оригиналът, без прекодиране; снимката се показва цяла.
+      image: sectionImage(t.image),
+      imageAlt: mediaAlt(t.image) || t.label,
+      caption: t.caption,
+      rows: (t.rows ?? []).map((r) => ({
+        iconUrl: mediaUrl(r.icon, 'thumbnail'),
+        iconAlt: mediaAlt(r.icon),
+        label: r.label,
+        sublabel: r.sublabel,
+        value: r.value,
+      })),
+    }
+  })
 
   if (!tabs.length) return null
 
+  const layout: TabsLayout =
+    block.layout === 'image-top' || block.layout === 'tabs-top' ? block.layout : 'side-panel'
+
   return (
-    <Section id={id} className="container-site py-12">
-      <SectionHeading>{block.heading}</SectionHeading>
-      <ProductTabs tabs={tabs} idBase={id ?? `showcase-${index}`} />
+    <Section id={id} className="container-site py-12 lg:py-16">
+      <BlockHeading>{block.heading}</BlockHeading>
+
+      {block.intro ? (
+        /* Същият вид като текста в секция с изображение — центриран, сив, до ~900px. */
+        <p className="mx-auto -mt-4 mb-8 max-w-[56rem] text-center leading-relaxed text-ink-muted">
+          {block.intro}
+        </p>
+      ) : null}
+
+      <ProductTabs tabs={tabs} idBase={id ?? `showcase-${index}`} layout={layout} />
     </Section>
   )
 }
@@ -263,7 +316,7 @@ const BundleOptionsBlock = ({
 
   return (
     <Section id={id} className="container-site py-12">
-      <SectionHeading>{block.heading ?? 'Варианти'}</SectionHeading>
+      <BlockHeading>{block.heading ?? 'Варианти'}</BlockHeading>
 
       <ul className="flex flex-col gap-3">
         {options.map((o, i) => {
@@ -351,103 +404,169 @@ const ComparisonTableBlock = ({
 
   const cols = columns.map((c) => {
     const product = typeof c.product === 'number' ? null : c.product
+    /*
+      Всичко идва от продукта; полетата в колоната са замяна. Размерът е
+      „content", не квадрат: „card" и „thumbnail" режат по центъра и при
+      висок кадър на електроцентрала отхапват основата.
+    */
+    const data = productCardData(
+      product,
+      {
+        title: c.label,
+        image: c.image,
+        tagline: c.tagline,
+        price: c.price,
+        comparePrice: c.comparePrice,
+        // Бутонът води към магазина, не към продуктовата страница.
+        url: c.ctaUrl || product?.externalUrl,
+      },
+      'content',
+    )
     return {
-      name: c.label || product?.title || '',
-      imageUrl: mediaUrl(c.image, 'card') ?? mediaUrl(product?.image, 'card'),
-      imageAlt: mediaAlt(c.image) || product?.title || '',
-      tagline: c.tagline,
-      price: c.price ?? product?.price ?? null,
-      comparePrice: c.comparePrice ?? product?.compareAtPrice ?? null,
+      name: data.title,
+      imageUrl: data.imageUrl,
+      imageAlt: data.imageAlt,
+      tagline: data.tagline,
+      price: data.price,
+      comparePrice: data.comparePrice,
       ctaLabel: c.ctaLabel || product?.ctaLabel || 'Купи сега',
-      ctaUrl: c.ctaUrl || product?.externalUrl || null,
+      ctaUrl: data.url,
       highlight: Boolean(c.highlight),
     }
   })
 
   return (
-    <Section id={id} className="container-site py-12">
-      <SectionHeading>{block.heading}</SectionHeading>
+    <Section id={id} className="py-12 lg:py-16">
+      <div className="container-site">
+        <BlockHeading>{block.heading}</BlockHeading>
 
-      {/* Широката таблица се скролва вътре в себе си, за да не чупи страницата. */}
-      <div className="overflow-x-auto">
-        <table className="w-full min-w-[46rem] border-collapse text-sm">
-          <thead>
-            <tr>
-              <th className="sticky left-0 z-10 w-40 bg-surface p-3 text-left align-bottom" />
-              {cols.map((c, i) => (
-                <th
-                  key={i}
-                  scope="col"
-                  className={`p-3 text-center align-bottom ${c.highlight ? 'bg-tile' : ''}`}
-                >
-                  {c.imageUrl ? (
-                    <span className="mb-2 block">
-                      <Image
-                        src={c.imageUrl}
-                        alt={c.imageAlt}
-                        width={140}
-                        height={140}
-                        loading="lazy"
-                        className="mx-auto h-28 w-auto object-contain"
-                      />
+        {block.intro ? (
+          /* Същият вид като при секцията с раздели — центриран, сив, до ~900px. */
+          <p className="mx-auto -mt-4 mb-8 max-w-[56rem] text-center leading-relaxed text-ink-muted">
+            {block.intro}
+          </p>
+        ) : null}
+
+        {/*
+          Цялата таблица лежи върху светлосиво поле, както в оригинала.
+
+          Колоните са равностойни — текущият продукт НЕ се подчертава с фон.
+          Това е таблица за сравнение; оцветена колона насочва избора.
+
+          Широката таблица се скролва вътре в себе си, а колоната с
+          показателите остава залепена вляво, за да се вижда кой ред се чете.
+        */}
+        <div className="overflow-x-auto rounded-2xl bg-shade py-8">
+          <table className="w-full min-w-[46rem] border-collapse">
+            <thead>
+              <tr>
+                <th className="sticky left-0 z-10 w-48 bg-shade px-4 text-left align-bottom" />
+                {cols.map((c, i) => (
+                  <th key={i} scope="col" className="px-4 text-center align-top">
+                    {/*
+                      Мястото за снимката е с постоянна височина и когато
+                      снимка няма. Иначе колоната без снимка вдига името си
+                      нагоре и трите имена застават на различни нива.
+
+                      Височината е зададена на самата снимка, не като горна
+                      граница — при „max-h" с „w-auto" размерът зависи от
+                      декодираната снимка и клетката се срутва, ако тя
+                      закъснее.
+                    */}
+                    <span className="mb-4 flex h-44 items-end justify-center">
+                      {c.imageUrl ? (
+                        <Image
+                          src={c.imageUrl}
+                          alt={c.imageAlt}
+                          width={360}
+                          height={360}
+                          sizes="240px"
+                          loading="lazy"
+                          className="h-44 w-auto max-w-full object-contain"
+                        />
+                      ) : (
+                        <ImagePlaceholder className="size-44 rounded-lg" />
+                      )}
                     </span>
-                  ) : null}
 
-                  <span className="block font-semibold">{c.name}</span>
-
-                  {c.tagline ? (
-                    <span className="mt-1 block text-xs font-normal text-ink-muted">
-                      {c.tagline}
-                    </span>
-                  ) : null}
-
-                  {c.price !== null ? (
-                    <span className="mt-2 flex items-baseline justify-center gap-2">
-                      {c.comparePrice ? (
-                        <s className="tabular text-xs font-normal text-ink-muted">
-                          {formatEur(c.comparePrice)}
-                        </s>
-                      ) : null}
-                      <span className="tabular font-bold">{formatEur(c.price)}</span>
-                    </span>
-                  ) : null}
-
-                  {c.ctaUrl ? (
-                    <Link
-                      href={c.ctaUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-2 inline-flex min-h-11 cursor-pointer items-center justify-center rounded-md bg-ink px-4 text-xs font-semibold text-white transition-colors duration-200 hover:bg-brand"
+                    {/*
+                      Текущият продукт се различава само по дебелината на
+                      името. Толкова стига, за да се хване с поглед.
+                    */}
+                    <span
+                      className={`block text-xl sm:text-2xl ${
+                        c.highlight ? 'font-bold' : 'font-semibold'
+                      }`}
                     >
-                      {c.ctaLabel}
-                    </Link>
-                  ) : null}
-                </th>
-              ))}
-            </tr>
-          </thead>
+                      {c.name}
+                    </span>
 
-          <tbody>
-            {rows.map((row, ri) => (
-              <tr key={ri} className="border-t border-line">
-                <th
-                  scope="row"
-                  className="sticky left-0 z-10 bg-surface p-3 text-left font-medium text-ink-muted"
-                >
-                  {row.label}
-                </th>
-                {cols.map((c, ci) => (
-                  <td
-                    key={ci}
-                    className={`p-3 text-center ${c.highlight ? 'bg-tile' : ''}`}
-                  >
-                    {(row.values ?? [])[ci]?.value ?? '—'}
-                  </td>
+                    {c.tagline ? (
+                      <span className="mx-auto mt-2 block max-w-64 text-sm font-normal">
+                        {c.tagline}
+                      </span>
+                    ) : null}
+
+                    {c.price !== null ? (
+                      <span className="mt-3 flex flex-wrap items-baseline justify-center gap-2">
+                        <span className="tabular text-lg font-bold text-alert">
+                          {formatEur(c.price)}
+                        </span>
+                        {c.comparePrice ? (
+                          <s className="tabular text-sm font-normal text-ink-muted">
+                            {formatEur(c.comparePrice)}
+                          </s>
+                        ) : null}
+                      </span>
+                    ) : null}
+
+                    {/*
+                      Колона без адрес не оставя празно място за бутон —
+                      моделите, които още не са в каталога, показват само
+                      снимка, име и описание.
+                    */}
+                    {c.ctaUrl ? (
+                      <Link
+                        href={c.ctaUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mx-auto mt-4 flex min-h-12 w-full max-w-60 cursor-pointer items-center justify-center rounded-lg bg-ink px-4 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand"
+                      >
+                        {c.ctaLabel}
+                      </Link>
+                    ) : null}
+                  </th>
                 ))}
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+
+            <tbody>
+              {rows.map((row, ri) => (
+                <tr key={ri} className="border-t border-line">
+                  <th
+                    scope="row"
+                    className="sticky left-0 z-10 bg-shade px-4 py-6 text-left align-middle text-sm font-normal text-ink-muted"
+                  >
+                    {row.label}
+                  </th>
+                  {cols.map((c, ci) => (
+                    /*
+                      Стойностите идват с нов ред вътре в текста — например
+                      USB-A и USB-C на два реда. Без whitespace-pre-line те
+                      се слепват в едно изречение.
+                    */
+                    <td
+                      key={ci}
+                      className="whitespace-pre-line px-4 py-6 text-center align-middle text-base font-semibold"
+                    >
+                      {(row.values ?? [])[ci]?.value ?? '—'}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </Section>
   )
@@ -460,34 +579,54 @@ const InTheBoxBlock = ({ block, id }: { block: BlockOf<'inTheBox'>; id?: string 
   if (!items.length) return null
 
   return (
-    <Section id={id} className="container-site py-12">
-      <SectionHeading>{block.heading ?? 'Какво има в кутията'}</SectionHeading>
+    <Section id={id} className="container-site py-12 lg:py-16">
+      <BlockHeading>{block.heading ?? 'Какво има в кутията'}</BlockHeading>
 
-      <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+      <ul className="grid gap-4 md:grid-cols-3">
         {items.map((item, i) => {
-          const img = mediaUrl(item.image, 'card')
+          /*
+            Размер „content", не „card". Изрезките на кабела и на
+            ръководството са широки; квадратното изрязване на „card" отсича
+            краищата им. Фонът на картата е същият сив като на изрезките —
+            затова около тях не се вижда ръб.
+          */
+          const img = sectionImage(item.image)
+
           return (
-            <li key={i} className="rounded-lg border border-line bg-surface p-3 text-center">
+            <li key={i} className="flex flex-col rounded-2xl bg-panel p-6 lg:min-h-[550px]">
+              <p className="text-base font-semibold">
+                {item.name} <span className="tabular">×{item.qty ?? 1}</span>
+              </p>
+
+              {/* Картата без снимка показва само името и остава със същата височина. */}
               {img ? (
-                <div className="relative mb-2 aspect-square w-full">
-                  <Image
-                    src={img}
+                <span className="flex flex-1 items-center justify-center pt-6">
+                  <SectionImage
+                    image={img}
                     alt={mediaAlt(item.image) || item.name}
-                    fill
-                    sizes="(max-width: 640px) 45vw, 20vw"
-                    loading="lazy"
-                    className="object-contain"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    /*
+                      Ширината е определена, височината следва съотношението
+                      и се спира на 320 px. С „w-auto" размерът зависи от
+                      декодираната снимка — ако тя закъснее или не се зареди,
+                      картата се срутва до нула.
+                    */
+                    className="h-auto max-h-80 w-full object-contain"
                   />
-                </div>
-              ) : null}
-              <p className="text-sm font-medium">{item.name}</p>
-              <p className="tabular text-xs text-ink-muted">×{item.qty ?? 1}</p>
+                </span>
+              ) : (
+                <span className="flex flex-1 items-center justify-center pt-6">
+                  <ImagePlaceholder className="h-48 w-full rounded-lg" />
+                </span>
+              )}
             </li>
           )
         })}
       </ul>
 
-      {block.caption ? <p className="mt-4 text-xs text-ink-muted">{block.caption}</p> : null}
+      {block.caption ? (
+        <p className="mt-6 text-center text-xs text-ink-muted">{block.caption}</p>
+      ) : null}
     </Section>
   )
 }
@@ -507,8 +646,8 @@ const SpecTableBlock = ({
   if (!groups.length) return null
 
   return (
-    <Section id={id} className="container-site py-12">
-      <SectionHeading>{block.heading ?? 'Спецификации'}</SectionHeading>
+    <Section id={id} className="container-site py-12 lg:py-16">
+      <BlockHeading>{block.heading ?? 'Спецификации'}</BlockHeading>
 
       <div className="grid gap-x-12 gap-y-8 lg:grid-cols-2">
         {groups.map((group, gi) => (
@@ -542,13 +681,19 @@ const FaqBlockRenderer = ({ block, id }: { block: BlockOf<'faqBlock'>; id?: stri
   if (!items.length) return null
 
   return (
-    <Section id={id} className="container-site py-12">
-      <SectionHeading>{block.heading ?? 'Често задавани въпроси'}</SectionHeading>
+    <Section id={id} className="container-site py-12 lg:py-16">
+      <BlockHeading>{block.heading ?? 'Често задавани въпроси'}</BlockHeading>
 
-      <div className="divide-y divide-line border-y border-line">
+      {/* Колоната е тясна като при другите текстови секции — дълъг ред се чете зле. */}
+      <div className="mx-auto max-w-[56rem] divide-y divide-line border-y border-line">
         {items.map((item, i) => (
-          /* details/summary работят и без JavaScript. */
-          <details key={i} className="group">
+          /*
+            details/summary работят и без JavaScript. Общото `name` прави
+            акордеона изключващ — отварянето на въпрос затваря предишния,
+            без нито ред скрипт. Браузър, който не го разбира, просто
+            оставя няколко отворени.
+          */
+          <details key={i} name={`${id ?? 'faq'}-items`} className="group">
             <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 py-4 text-sm font-medium">
               {item.question}
               <span
@@ -581,8 +726,8 @@ const RelatedProductsBlock = ({
   if (!products.length) return null
 
   return (
-    <Section id={id} className="container-site py-12">
-      <SectionHeading>{block.heading ?? 'Може да ви заинтересува'}</SectionHeading>
+    <Section id={id} className="container-site py-12 lg:py-16">
+      <BlockHeading>{block.heading ?? 'Може да ви заинтересува'}</BlockHeading>
 
       <ul className="scroll-row">
         {products.map((p) => (

@@ -1,5 +1,5 @@
 import type { Block } from 'payload'
-import { linkField, themeField } from './shared'
+import { linkField, requiredUnlessHidden, themeField } from './shared'
 
 /** Две или три промо карти една до друга — "Специални програми" и "Станете член". */
 export const PromoCards: Block = {
@@ -24,9 +24,9 @@ export const PromoCards: Block = {
         },
       },
       fields: [
-        { name: 'heading', type: 'text', required: true, label: 'Заглавие' },
+        { name: 'heading', type: 'text', validate: requiredUnlessHidden, label: 'Заглавие' },
         { name: 'description', type: 'textarea', label: 'Описание' },
-        { name: 'image', type: 'upload', relationTo: 'media', required: true, label: 'Изображение' },
+        { name: 'image', type: 'upload', relationTo: 'media', validate: requiredUnlessHidden, label: 'Изображение' },
         linkField(),
         themeField,
       ],

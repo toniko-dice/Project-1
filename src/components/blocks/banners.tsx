@@ -1,218 +1,273 @@
+import { CaretRight } from '@phosphor-icons/react/dist/ssr'
 import Image from 'next/image'
 import Link from 'next/link'
 
 import type { Page } from '@/payload-types'
-import { mediaAlt, mediaUrl } from '@/lib/media'
+import { bannerImage, mediaAlt, mediaUrl } from '@/lib/media'
+import { SectionImage } from '../SectionImage'
+import { HeroSlider, type HeroSlide } from '../HeroSlider'
+import { ScrollRow } from '../ScrollRow'
+import { BannerButton, BannerEyebrow, PageSection, SectionHeading } from './section'
+import { ImagePlaceholder } from '../ImagePlaceholder'
 
 type Layout = NonNullable<Page['layout']>
 type BlockOf<T extends string> = Extract<Layout[number], { blockType: T }>
 
-/** Затъмняващият слой пази контраста на текста върху снимка. */
-const OVERLAY: Record<string, string> = {
-  none: '',
-  light: 'bg-black/25',
-  medium: 'bg-black/45',
-  strong: 'bg-black/65',
-}
-
-const ALIGN: Record<string, string> = {
-  left: 'items-start text-left',
-  center: 'items-center text-center',
-  right: 'items-end text-right',
-}
-
-export const CtaButton = ({
-  label,
-  url,
-  newTab,
-  variant = 'solid',
-}: {
-  label?: string | null
-  url?: string | null
-  newTab?: boolean | null
-  variant?: 'solid' | 'light'
-}) => {
-  if (!url || !label) return null
-  const styles =
-    variant === 'light'
-      ? 'bg-surface text-ink hover:bg-tile'
-      : 'bg-brand text-white hover:bg-brand-dark'
-
-  return (
-    <Link
-      href={url}
-      {...(newTab ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-      className={`inline-flex min-h-11 cursor-pointer items-center justify-center rounded-full px-7 text-sm font-semibold transition-colors duration-200 ${styles}`}
-    >
-      {label}
-    </Link>
-  )
-}
+/* ─────────── Голям банер ─────────── */
 
 export const HeroBannerBlock = ({ block }: { block: BlockOf<'heroBanner'> }) => {
-  const desktop = mediaUrl(block.image, 'banner')
-  const mobile = mediaUrl(block.imageMobile, 'banner') ?? desktop
-  const dark = block.theme !== 'light'
+  const slides: HeroSlide[] = (block.slides ?? []).map((slide) => ({
+    // Webp размерите, изрязани от CSS — виж `bannerImage`.
+    desktop: bannerImage(slide.image),
+    mobile: bannerImage(slide.imageMobile),
+    alt: mediaAlt(slide.image),
+    badgeUrl: mediaUrl(slide.badgeImage, 'content'),
+    badgeAlt: mediaAlt(slide.badgeImage),
+    eyebrow: slide.eyebrow,
+    eyebrowColor: slide.eyebrowColor,
+    heading: slide.heading,
+    subheading: slide.subheading,
+    note: slide.note,
+    overlay: slide.overlay,
+    align: slide.align,
+    dark: slide.theme !== 'light',
+    ctaLabel: slide.cta?.label,
+    ctaUrl: slide.cta?.url,
+    ctaNewTab: slide.cta?.newTab,
+    ctaStyle: slide.cta?.style,
+  }))
 
-  return (
-    <section className="container-site pt-4">
-      <div className="relative overflow-hidden rounded-xl">
-        <div className="relative aspect-[4/5] w-full sm:aspect-[21/9]">
-          {desktop ? (
-            <>
-              <Image
-                src={mobile ?? desktop}
-                alt={mediaAlt(block.image)}
-                fill
-                priority
-                sizes="100vw"
-                className="object-cover sm:hidden"
-              />
-              <Image
-                src={desktop}
-                alt={mediaAlt(block.image)}
-                fill
-                priority
-                sizes="100vw"
-                className="hidden object-cover sm:block"
-              />
-            </>
-          ) : (
-            <div className="absolute inset-0 bg-night" />
-          )}
+  if (!slides.length) return null
 
-          <div className={`absolute inset-0 ${OVERLAY[block.overlay ?? 'medium'] ?? ''}`} />
-
-          <div
-            className={`absolute inset-0 flex flex-col justify-center gap-3 p-6 sm:p-12 lg:p-16 ${
-              ALIGN[block.align ?? 'left']
-            } ${dark ? 'text-white' : 'text-ink'}`}
-          >
-            {block.eyebrow ? (
-              <p className="text-xs font-semibold uppercase tracking-[0.12em] opacity-90">
-                {block.eyebrow}
-              </p>
-            ) : null}
-
-            <h1 className="max-w-2xl text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
-              {block.heading}
-            </h1>
-
-            {block.subheading ? (
-              <p className="max-w-xl text-sm opacity-95 sm:text-base">{block.subheading}</p>
-            ) : null}
-
-            {block.note ? <p className="text-xs opacity-80">{block.note}</p> : null}
-
-            <div className="mt-2">
-              <CtaButton
-                label={block.cta?.label}
-                url={block.cta?.url}
-                newTab={block.cta?.newTab}
-                variant={dark ? 'light' : 'solid'}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
+  return <HeroSlider slides={slides} autoplaySeconds={block.autoplaySeconds} />
 }
+
+/* ─────────── Широк банер ─────────── */
 
 export const WideBannerBlock = ({ block }: { block: BlockOf<'wideBanner'> }) => {
-  const img = mediaUrl(block.image, 'wide')
+  // Webp размерите, изрязани от CSS — виж `bannerImage`.
+  const img = bannerImage(block.image)
   const dark = block.theme !== 'light'
 
   return (
-    <section className="container-site py-6">
-      <div className="relative overflow-hidden rounded-xl">
+    <PageSection>
+      <SectionHeading>{block.sectionTitle}</SectionHeading>
+
+      <div className="relative overflow-hidden rounded-2xl">
         <div className="relative aspect-[16/9] w-full sm:aspect-[3/1]">
           {img ? (
-            <Image src={img} alt={mediaAlt(block.image)} fill sizes="100vw" className="object-cover" />
+            <SectionImage
+              image={img}
+              sizes="100vw"
+              className="absolute inset-0 size-full object-cover"
+            />
           ) : (
-            <div className="absolute inset-0 bg-night-soft" />
+            <ImagePlaceholder className="absolute inset-0" />
           )}
 
-          <div className={`absolute inset-0 ${dark ? 'bg-black/40' : 'bg-white/30'}`} />
+          <div className="absolute inset-0 flex items-center">
+            <div className="w-full px-6 sm:px-12">
+              <div
+                className={`flex max-w-lg flex-col gap-3 ${dark ? 'text-white' : 'text-ink'}`}
+              >
+                <BannerEyebrow
+                  text={block.eyebrow}
+                  color={block.eyebrowColor}
+                  dark={dark}
+                />
 
-          <div
-            className={`absolute inset-0 flex flex-col justify-center gap-3 p-6 sm:p-10 ${
-              ALIGN[block.align ?? 'left']
-            } ${dark ? 'text-white' : 'text-ink'}`}
-          >
-            <h2 className="max-w-xl text-2xl font-bold sm:text-3xl">{block.heading}</h2>
-            {block.subheading ? (
-              <p className="max-w-lg text-sm opacity-95">{block.subheading}</p>
-            ) : null}
-            <div className="mt-1">
-              <CtaButton
-                label={block.cta?.label}
-                url={block.cta?.url}
-                newTab={block.cta?.newTab}
-                variant={dark ? 'light' : 'solid'}
-              />
+                <h3 className="text-2xl font-normal leading-tight sm:text-3xl lg:text-[32px]">
+                  {block.heading}
+                </h3>
+
+                {block.subheading ? (
+                  <p className="text-[15px] leading-snug sm:text-base">{block.subheading}</p>
+                ) : null}
+
+                {/* Цената е по избор — банерите за серия нямат такава. */}
+                {block.priceNote ? (
+                  <p className="tabular text-base font-medium">{block.priceNote}</p>
+                ) : null}
+
+                <div className="mt-2">
+                  <BannerButton
+                    label={block.cta?.label}
+                    url={block.cta?.url}
+                    newTab={block.cta?.newTab}
+                    style={block.cta?.style}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </PageSection>
   )
 }
+
+/* ─────────── Две половинки ─────────── */
 
 export const PromoCardsBlock = ({ block }: { block: BlockOf<'promoCards'> }) => {
   const cards = block.cards ?? []
   if (!cards.length) return null
 
   return (
-    <section className="container-site py-6">
-      {block.sectionTitle ? (
-        <h2 className="mb-4 text-xl font-semibold sm:text-2xl">{block.sectionTitle}</h2>
-      ) : null}
+    <PageSection>
+      <SectionHeading>{block.sectionTitle}</SectionHeading>
 
       <div className={`grid gap-4 ${cards.length >= 3 ? 'md:grid-cols-3' : 'md:grid-cols-2'}`}>
         {cards.map((card, i) => {
-          const img = mediaUrl(card.image, 'banner')
+          const img = mediaUrl(card.image, 'content')
           const dark = card.theme !== 'light'
           return (
-            <div key={i} className="relative overflow-hidden rounded-xl">
-              <div className="relative aspect-[16/10] w-full">
+            <div key={i} className="relative overflow-hidden rounded-2xl">
+              {/*
+                Високи карти — около 1,45:1. Преди тук стоеше 16:10 и
+                картите излизаха ниски ленти, а текстът им се лепеше за дъното.
+              */}
+              <div className="relative aspect-[4/3] w-full sm:aspect-[1.45/1]">
                 {img ? (
                   <Image
                     src={img}
                     alt={mediaAlt(card.image)}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
+                    loading="lazy"
                     className="object-cover"
                   />
                 ) : (
-                  <div className="absolute inset-0 bg-night-soft" />
+                  <ImagePlaceholder className="absolute inset-0" />
                 )}
 
-                <div className={`absolute inset-0 ${dark ? 'bg-black/35' : 'bg-white/25'}`} />
-
+                {/* Текстът е ГОРЕ вляво, не долу — както в оригинала. */}
                 <div
-                  className={`absolute inset-0 flex flex-col justify-end gap-2 p-6 ${
+                  className={`absolute inset-0 flex flex-col items-start gap-2 p-6 sm:p-8 ${
                     dark ? 'text-white' : 'text-ink'
                   }`}
                 >
-                  <h3 className="text-lg font-semibold sm:text-xl">{card.heading}</h3>
+                  <h3 className="text-xl font-medium leading-tight sm:text-2xl">
+                    {card.heading}
+                  </h3>
+
                   {card.description ? (
-                    <p className="max-w-sm text-sm opacity-95">{card.description}</p>
+                    <p className="max-w-sm text-[15px] leading-snug">{card.description}</p>
                   ) : null}
-                  <div className="mt-1">
-                    <CtaButton
-                      label={card.cta?.label}
-                      url={card.cta?.url}
-                      newTab={card.cta?.newTab}
-                      variant={dark ? 'light' : 'solid'}
-                    />
-                  </div>
+
+                  {/*
+                    Текстов линк със стрелка, не овален бутон. В оригинала
+                    двете половинки са единственото място с такъв линк.
+                  */}
+                  {card.cta?.url && card.cta?.label ? (
+                    <Link
+                      href={card.cta.url}
+                      {...(card.cta.newTab
+                        ? { target: '_blank', rel: 'noopener noreferrer' }
+                        : {})}
+                      className="mt-1 inline-flex min-h-11 cursor-pointer items-center gap-1 text-[15px] hover:underline"
+                    >
+                      {card.cta.label}
+                      <CaretRight size={14} weight="bold" aria-hidden="true" />
+                    </Link>
+                  ) : null}
                 </div>
               </div>
             </div>
           )
         })}
       </div>
+    </PageSection>
+  )
+}
+
+/* ─────────── Лента с банери ─────────── */
+
+const CARD_BUTTON: Record<string, string> = {
+  white: 'bg-white text-ink hover:bg-tile',
+  outline: 'border border-white text-white hover:bg-white/15',
+  black: 'bg-ink text-white hover:bg-night',
+}
+
+export const BannerCarouselBlock = ({ block }: { block: BlockOf<'bannerCarousel'> }) => {
+  const cards = block.cards ?? []
+  if (!cards.length) return null
+
+  return (
+    <section className="py-8 lg:py-12">
+      <div className="container-site">
+        <SectionHeading>{block.heading}</SectionHeading>
+      </div>
+
+      {/*
+        Лентата излиза извън контейнера: първата карта застава на неговия
+        ляв ръб, а съседната се подава отдясно. Виж `.bleed-row` в globals.css.
+      */}
+      <ScrollRow
+        label={block.heading ?? 'Банери'}
+        className="bleed-row flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      >
+        {cards.map((card, i) => {
+          const img = mediaUrl(card.image, 'content')
+          const dark = card.textTheme !== 'dark'
+          const buttons = card.buttons ?? []
+
+          return (
+            <article
+              key={i}
+              className="relative w-[300px] shrink-0 snap-start overflow-hidden rounded-2xl sm:w-[400px]"
+            >
+              <div className="relative aspect-[4/5] w-full">
+                {img ? (
+                  <Image
+                    src={img}
+                    alt={mediaAlt(card.image)}
+                    fill
+                    sizes="(max-width: 640px) 300px, 400px"
+                    loading="lazy"
+                    className="object-cover"
+                  />
+                ) : (
+                  <ImagePlaceholder className="absolute inset-0" />
+                )}
+
+                <div
+                  className={`absolute inset-0 flex flex-col items-start gap-2 p-6 ${
+                    dark ? 'text-white' : 'text-ink'
+                  }`}
+                >
+                  {card.tag ? <p className="text-sm text-flame">{card.tag}</p> : null}
+
+                  {card.heading ? (
+                    <h3 className="text-[22px] font-medium leading-tight">{card.heading}</h3>
+                  ) : null}
+
+                  {card.subheading ? (
+                    <p className="text-[15px] leading-snug">{card.subheading}</p>
+                  ) : null}
+
+                  {buttons.length ? (
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {buttons.map((b, bi) =>
+                        b.url ? (
+                          <Link
+                            key={bi}
+                            href={b.url}
+                            className={`inline-flex h-11 cursor-pointer items-center justify-center rounded-full px-5 text-sm font-medium transition-colors duration-200 ${
+                              CARD_BUTTON[b.style ?? 'white'] ?? CARD_BUTTON.white
+                            }`}
+                          >
+                            {b.label}
+                          </Link>
+                        ) : null,
+                      )}
+                    </div>
+                  ) : null}
+                </div>
+              </div>
+            </article>
+          )
+        })}
+      </ScrollRow>
     </section>
   )
 }

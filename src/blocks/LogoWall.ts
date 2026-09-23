@@ -1,4 +1,5 @@
 import type { Block } from 'payload'
+import { requiredUnlessHidden } from './shared'
 
 /** Ред с лога на отличия и медии — "Отличени от". */
 export const LogoWall: Block = {
@@ -17,7 +18,7 @@ export const LogoWall: Block = {
       type: 'relationship',
       relationTo: 'awards',
       hasMany: true,
-      required: true,
+      validate: requiredUnlessHidden,
       label: 'Отличия',
     },
   ],

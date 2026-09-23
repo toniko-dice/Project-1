@@ -1,4 +1,5 @@
 import type { Block } from 'payload'
+import { requiredUnlessHidden } from './shared'
 
 /** Хоризонтално превъртащ се ред с продукти — секцията "Най-търсени" в референцията. */
 export const ProductCarousel: Block = {
@@ -6,14 +7,14 @@ export const ProductCarousel: Block = {
   labels: { singular: 'Продуктов карусел', plural: 'Продуктови карусели' },
   imageAltText: 'Хоризонтално превъртащ се ред с продукти',
   fields: [
-    { name: 'sectionTitle', type: 'text', required: true, label: 'Заглавие на секцията' },
+    { name: 'sectionTitle', type: 'text', validate: requiredUnlessHidden, label: 'Заглавие на секцията' },
     { name: 'subtitle', type: 'text', label: 'Подзаглавие' },
     {
       name: 'products',
       type: 'relationship',
       relationTo: 'products',
       hasMany: true,
-      required: true,
+      validate: requiredUnlessHidden,
       label: 'Продукти',
     },
     {

@@ -10,6 +10,15 @@ import * as migration_20260901_142503_product_meta from './20260901_142503_produ
 import * as migration_20260901_142626_product_drafts from './20260901_142626_product_drafts';
 import * as migration_20260902_110340_media_content_sizes from './20260902_110340_media_content_sizes';
 import * as migration_20260902_154058_backup_protected from './20260902_154058_backup_protected';
+import * as migration_20260907_122748_tabbed_showcase_layout from './20260907_122748_tabbed_showcase_layout';
+import * as migration_20260908_141956_home_page_fields from './20260908_141956_home_page_fields';
+import * as migration_20260908_142134_hero_slides from './20260908_142134_hero_slides';
+import * as migration_20260909_131953_utility_bar_toggle from './20260909_131953_utility_bar_toggle';
+import * as migration_20260917_143201_menu_panel_auto from './20260917_143201_menu_panel_auto';
+import * as migration_20260921_064425_menu_card_product from './20260921_064425_menu_card_product';
+import * as migration_20260921_074512_feature_sub_tabs_intro from './20260921_074512_feature_sub_tabs_intro';
+import * as migration_20260923_075913_media_full_size from './20260923_075913_media_full_size';
+import * as migration_20260923_133550_comparison_intro from './20260923_133550_comparison_intro';
 
 export const migrations = [
   {
@@ -70,6 +79,51 @@ export const migrations = [
   {
     up: migration_20260902_154058_backup_protected.up,
     down: migration_20260902_154058_backup_protected.down,
-    name: '20260902_154058_backup_protected'
+    name: '20260902_154058_backup_protected',
+  },
+  {
+    up: migration_20260907_122748_tabbed_showcase_layout.up,
+    down: migration_20260907_122748_tabbed_showcase_layout.down,
+    name: '20260907_122748_tabbed_showcase_layout',
+  },
+  {
+    up: migration_20260908_141956_home_page_fields.up,
+    down: migration_20260908_141956_home_page_fields.down,
+    name: '20260908_141956_home_page_fields',
+  },
+  {
+    up: migration_20260908_142134_hero_slides.up,
+    down: migration_20260908_142134_hero_slides.down,
+    name: '20260908_142134_hero_slides',
+  },
+  {
+    up: migration_20260909_131953_utility_bar_toggle.up,
+    down: migration_20260909_131953_utility_bar_toggle.down,
+    name: '20260909_131953_utility_bar_toggle',
+  },
+  {
+    up: migration_20260917_143201_menu_panel_auto.up,
+    down: migration_20260917_143201_menu_panel_auto.down,
+    name: '20260917_143201_menu_panel_auto',
+  },
+  {
+    up: migration_20260921_064425_menu_card_product.up,
+    down: migration_20260921_064425_menu_card_product.down,
+    name: '20260921_064425_menu_card_product',
+  },
+  {
+    up: migration_20260921_074512_feature_sub_tabs_intro.up,
+    down: migration_20260921_074512_feature_sub_tabs_intro.down,
+    name: '20260921_074512_feature_sub_tabs_intro',
+  },
+  {
+    up: migration_20260923_075913_media_full_size.up,
+    down: migration_20260923_075913_media_full_size.down,
+    name: '20260923_075913_media_full_size',
+  },
+  {
+    up: migration_20260923_133550_comparison_intro.up,
+    down: migration_20260923_133550_comparison_intro.down,
+    name: '20260923_133550_comparison_intro'
   },
 ];

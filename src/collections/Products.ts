@@ -1,7 +1,7 @@
 import type { CollectionConfig } from 'payload'
 import { cleanSlug } from '../lib/slug'
 import { productBlocks } from '../blocks/product'
-import { revalidateAll, revalidateAllOnDelete } from '../lib/revalidate'
+import { expireEverything, revalidateProduct, revalidateProductDelete } from '../lib/revalidate'
 
 export const Products: CollectionConfig = {
   slug: 'products',
@@ -19,6 +19,36 @@ export const Products: CollectionConfig = {
   },
   access: { read: () => true },
   /*
+    Какво носи продуктът, когато е ВРЪЗКА в друг документ — карта в
+    карусел, колона в сравнителна таблица, свързан продукт.
+
+    Само полетата за карта. Не е пестене — е защита от увисване. Сравнителната
+    таблица на продукта сочи самия продукт (моделът се сравнява с братята
+    си). Без това ограничение попълването на връзките при `depth: 2` зарежда
+    продукта вътре в собствения му запис; зареждачът на Payload връща
+    същото чакащо обещание и то чака само себе си — четенето (и записът)
+    никога не завършва, без грешка. Проверено: `find` с depth 2 виси,
+    с този списък минава за милисекунди.
+
+    Всичко, което картите четат от свързан продукт, е тук. Нова карта,
+    която иска друго поле, го добавя тук, не вдига дълбочината.
+  */
+  defaultPopulate: {
+    title: true,
+    slug: true,
+    image: true,
+    tagline: true,
+    price: true,
+    compareAtPrice: true,
+    badge: true,
+    availability: true,
+    rating: true,
+    reviewCount: true,
+    externalUrl: true,
+    ctaLabel: true,
+    _status: true,
+  },
+  /*
     Чернови. Внесеният продукт не бива да излиза наживо, преди собственикът
     да го е прегледал — при внасяне на 45 продукта наведнъж това е разликата
     между спокойна проверка и 45 недовършени страници пред клиентите.
@@ -27,9 +57,34 @@ export const Products: CollectionConfig = {
   */
   versions: { drafts: true },
   hooks: {
-    afterChange: [revalidateAll],
-    afterDelete: [revalidateAllOnDelete],
+    afterChange: [revalidateProduct],
+    afterDelete: [revalidateProductDelete],
   },
+  endpoints: [
+    {
+      /*
+        Опресняване на кеша по заявка — за вноса.
+
+        `import:product` пише през локалното API извън Next и не може да
+        изчисти кеша на работещия сървър (виж CLAUDE.md, т. 14). Когато
+        публикува направо, скриптът вика този път и сървърът изчиства
+        всичко сам — сайтът показва новото веднага, без рестарт.
+
+        Достъп: влязъл потребител или ключът на инсталацията в заглавие
+        `x-revalidate-key` — скриптът върви на същата машина със същия
+        `.env`. Без нито едното: 403.
+      */
+      path: '/revalidate',
+      method: 'post',
+      handler: (req) => {
+        const key = req.headers.get('x-revalidate-key')
+        const allowed = Boolean(req.user) || (Boolean(key) && key === process.env.PAYLOAD_SECRET)
+        if (!allowed) return Response.json({ error: 'Няма достъп.' }, { status: 403 })
+        expireEverything()
+        return Response.json({ ok: true })
+      },
+    },
+  ],
   fields: [
     {
       type: 'tabs',
@@ -133,6 +188,43 @@ export const Products: CollectionConfig = {
             },
             {
               /*
+                Оценка и брой отзиви.
+
+                Показват се в продуктовата карта САМО ако и двете са
+                попълнени. Празни полета не рисуват празни звезди — липсата
+                на отзиви не бива да изглежда като лоша оценка.
+
+                Данните са реални отзиви на клиенти на фирмата. Отзивите на
+                eu.ecoflow.com са техни и не се преписват.
+              */
+              type: 'row',
+              fields: [
+                {
+                  name: 'rating',
+                  type: 'number',
+                  label: 'Оценка',
+                  min: 0,
+                  max: 5,
+                  admin: {
+                    width: '50%',
+                    step: 0.5,
+                    description: 'От 0 до 5, през 0,5. Празно = не се показва.',
+                  },
+                },
+                {
+                  name: 'reviewCount',
+                  type: 'number',
+                  label: 'Брой отзиви',
+                  min: 0,
+                  admin: {
+                    width: '50%',
+                    description: 'Попълва се само при реални отзиви за този продукт.',
+                  },
+                },
+              ],
+            },
+            {
+              /*
                 Акцентите стоят в кутията за покупка, не в секциите на
                 страницата — виждат се без скролване. Затова са поле на
                 продукта, а не блок.
@@ -141,10 +233,11 @@ export const Products: CollectionConfig = {
               type: 'array',
               label: 'Акценти под цената',
               labels: { singular: 'Акцент', plural: 'Акценти' },
-              maxRows: 5,
+              // EcoFlow слагат до шест точки (DELTA 3 Max Plus); осем оставя място.
+              maxRows: 8,
               admin: {
                 description:
-                  'Кратките изречения в кутията за покупка, под цената. Три до пет са достатъчни — това е първото, което клиентът чете.',
+                  'Кратките изречения в кутията за покупка, под цената. Три до шест са достатъчни — това е първото, което клиентът чете.',
                 components: {
                   RowLabel: {
                     path: '@/components/admin/RowLabel#RowLabel',
@@ -154,7 +247,13 @@ export const Products: CollectionConfig = {
               },
               fields: [
                 { name: 'title', type: 'text', required: true, label: 'Заглавие' },
-                { name: 'text', type: 'textarea', required: true, label: 'Пояснение' },
+                {
+                  name: 'text',
+                  type: 'textarea',
+                  label: 'Пояснение',
+                  // По избор: на EcoFlow има точки само със заглавие („5-годишна гаранция").
+                  admin: { description: 'По избор. Празно — акцентът е само заглавието, на един ред.' },
+                },
               ],
             },
             {

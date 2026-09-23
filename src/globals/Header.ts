@@ -19,6 +19,16 @@ export const Header: GlobalConfig = {
           label: 'Лента най-горе',
           fields: [
             {
+              name: 'utilityBarEnabled',
+              type: 'checkbox',
+              label: 'Показване на горната лента',
+              defaultValue: false,
+              admin: {
+                description:
+                  'Тънката сива лента НАД менюто — линк, промо текст и надпис за регион. Изключена по подразбиране. Полетата отдолу се пазят и когато е изключена.',
+              },
+            },
+            {
               type: 'row',
               fields: [
                 { name: 'topLeftLabel', type: 'text', label: 'Ляв линк — текст', admin: { width: '50%' } },

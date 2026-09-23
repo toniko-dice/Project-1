@@ -1,5 +1,10 @@
 import type { Page } from '@/payload-types'
-import { HeroBannerBlock, PromoCardsBlock, WideBannerBlock } from './blocks/banners'
+import {
+  BannerCarouselBlock,
+  HeroBannerBlock,
+  PromoCardsBlock,
+  WideBannerBlock,
+} from './blocks/banners'
 import { BenefitsGridBlock, LogoWallBlock, TestimonialsBlockRenderer } from './blocks/content'
 import {
   BannerProductRowBlock,
@@ -25,11 +30,20 @@ export const RenderBlocks = ({
       {layout.map((block, i) => {
         const key = `${block.blockType}-${i}`
 
+        /*
+          Скритата секция остава в базата и в админа, но не се рендерира.
+          Проверката е тук, а не във всеки блок — иначе при всеки нов блок
+          трябва да се помни да я добави.
+        */
+        if (block.hidden) return null
+
         switch (block.blockType) {
           case 'heroBanner':
             return <HeroBannerBlock key={key} block={block} />
           case 'categoryStrip':
             return <CategoryStripBlock key={key} block={block} />
+          case 'bannerCarousel':
+            return <BannerCarouselBlock key={key} block={block} />
           case 'productCarousel':
             return <ProductCarouselBlock key={key} block={block} showBgn={showBgn} />
           case 'bannerProductRow':

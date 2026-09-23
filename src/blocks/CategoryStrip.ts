@@ -1,4 +1,5 @@
 import type { Block } from 'payload'
+import { requiredUnlessHidden } from './shared'
 
 export const CategoryStrip: Block = {
   slug: 'categoryStrip',
@@ -10,7 +11,7 @@ export const CategoryStrip: Block = {
       type: 'relationship',
       relationTo: 'categories',
       hasMany: true,
-      required: true,
+      validate: requiredUnlessHidden,
       label: 'Категории',
       admin: { description: 'Подредбата тук определя реда на екрана. Препоръчително 6–9 броя.' },
     },

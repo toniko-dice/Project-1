@@ -1,0 +1,697 @@
+{
+  "_bележка": "Съдържание за внасяне. Пуска се с: npm run import:product delta-pro-3. Снимките се свалят по линковете в _svali_snimki в content/delta-pro-3/galeriya/ и content/delta-pro-3/sekcii/ със същите имена.",
+  "_iztochnik": "eu.ecoflow.com/products/delta-pro-3-portable-power-station?variant=48911033270615 (вариант DELTA Pro 3, без комплекти), прочетено от браузъра на 23.09.2026. Секциите са в реда на оригинала.",
+  "produkt": {
+    "title": "EcoFlow DELTA Pro 3",
+    "slug": "delta-pro-3",
+    "categorySlug": "delta-pro-seriya",
+    "productType": "hero",
+    "tagline": "4096Wh капацитет / 4000W изход",
+    "badge": "none",
+    "price": 2699,
+    "compareAtPrice": 2999,
+    "externalUrl": "https://dice.bg/ecoflow-delta-pro-3-portable-power-station-4096wh-portativna-profesionalna-elektrotsentrala-za-zarezhdane-na-ustroystva-cheren-item70376",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "70376",
+    "ean": "4895251622622",
+    "description": "Портативна електроцентрала с 4096Wh капацитет и 4000W изход (8000W пик, до 6000W с X-Boost). Разширяване до 12 kWh, 30 dB при 2000W, до 2600W соларен вход, UPS от 10 ms, шест начина за зареждане — 0–80% за един час. LFP клетки с 4000 цикъла, 5 години гаранция.",
+    "highlights": [
+      {
+        "title": "Мощност за цялото семейство",
+        "text": "4000W изход за най-тежките уреди — от пералня до зарядно за електромобил. X-Boost вдига до 6000W при нужда."
+      },
+      {
+        "title": "Разширяване до 12 kWh",
+        "text": "От 4 до 12 kWh — расте заедно с нуждите ви."
+      },
+      {
+        "title": "Тих като шепот — 30 dB при 2000W",
+        "text": "По-тих от работещ хладилник."
+      },
+      {
+        "title": "Съхранявайте слънце, режете сметки",
+        "text": "До 2600W соларен вход — трупате енергия през деня и зареждате електромобила през нощта. Спестявате до 1533 € годишно.*"
+      },
+      {
+        "title": "Пазител при спиране на тока",
+        "text": "Превключване за 10 ms — хладилникът, осветлението и най-важното продължават да работят."
+      },
+      {
+        "title": "6 начина за бързо зареждане",
+        "text": "0–80% за един час, или до 80% от слънце за 1,5 часа."
+      },
+      {
+        "title": "Лесна настройка и пренасяне",
+        "text": "Включваш и работи — за дома, кемпера и хижата извън мрежата."
+      }
+    ],
+    "metaTitle": "EcoFlow DELTA Pro 3 4096Wh — портативна електроцентрала 4000W",
+    "metaDescription": "4096Wh, 4000W изход, 8000W пик, до 6000W с X-Boost. Разширяване до 12 kWh, 30 dB, 2600W соларен вход, UPS 10 ms, LFP 4000 цикъла, 5 години гаранция. Официален дистрибутор за България."
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-delta-pro-3-portable-power-station-58715243872599.png",
+      "alt": "EcoFlow DELTA Pro 3 — изглед отпред"
+    },
+    {
+      "file": "ecoflow-delta-pro-3-portable-power-station-58715243577687.png",
+      "alt": "EcoFlow DELTA Pro 3 — отпред, изходи"
+    },
+    {
+      "file": "ecoflow-delta-pro-3-portable-power-station-58715243741527.png",
+      "alt": "EcoFlow DELTA Pro 3 — изглед отстрани"
+    },
+    {
+      "file": "ecoflow-delta-pro-3-portable-power-station-58715243675991.png",
+      "alt": "EcoFlow DELTA Pro 3 — с изтеглена дръжка"
+    },
+    {
+      "file": "ecoflow-delta-pro-3-portable-power-station-58715243708759.png",
+      "alt": "EcoFlow DELTA Pro 3 — изглед отзад, входове"
+    },
+    {
+      "file": "ecoflow-delta-pro-3-portable-power-station-58715243610455.png",
+      "alt": "EcoFlow DELTA Pro 3 — изглед отгоре"
+    },
+    {
+      "file": "ecoflow-delta-pro-3-portable-power-station-58715243643223.png",
+      "alt": "EcoFlow DELTA Pro 3 — изглед отдолу, колела"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Най-портативната домашна соларна батерия [1]",
+      "body": "",
+      "image": "pc_eu_overview_22467963-dcc5-4216-83d2-5ad56e05fbcc.jpg"
+    },
+    {
+      "blockType": "keySpecStrip",
+      "items": [
+        {
+          "value": "4096Wh",
+          "label": "капацитет"
+        },
+        {
+          "value": "4000W",
+          "label": "номинален изход"
+        },
+        {
+          "value": "8000W",
+          "label": "пикова мощност"
+        },
+        {
+          "value": "6000W",
+          "label": "с X-Boost"
+        },
+        {
+          "value": "до 12 kWh",
+          "label": "с допълнителни батерии"
+        },
+        {
+          "value": "2600W",
+          "label": "соларен вход"
+        },
+        {
+          "value": "30 dB",
+          "label": "шум при 2000W"
+        },
+        {
+          "value": "10 ms",
+          "label": "превключване при спиране на тока"
+        }
+      ]
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Приложения",
+      "layout": "tabs-top",
+      "heading": "Енергия за всеки момент, в който трябва ток",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Много уреди наведнъж",
+          "image": "pc_eu_Multiple_Devices_053c6553-b9e1-4211-b302-46c97b0f2098.jpg",
+          "imageAlt": "DELTA Pro 3 захранва няколко уреда в кухнята",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Работа на обекта",
+          "image": "pc_en_ON_site_DIY_Project.jpg",
+          "imageAlt": "DELTA Pro 3 на работна площадка",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Зареждане на електромобил",
+          "image": "pc_eu_EV_Charging_e9ed308a-9d68-4f2c-9145-703dafe9ec74.jpg",
+          "imageAlt": "DELTA Pro 3 зарежда електромобил в гараж",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Захранване на целия дом",
+          "image": "pc_eu_Whole_home_Use_1da2d54e-641b-44d1-bc38-e07ed7496041.jpg",
+          "imageAlt": "DELTA Pro 3 с ръчен превключвател към домашната мрежа",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Хижа извън мрежата",
+          "image": "pc_eu_Off_grid_Cabin_fd276b7a-4aca-4f58-b0ac-5ba3dc7f466c.jpg",
+          "imageAlt": "DELTA Pro 3 със соларни панели пред хижа",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Кемпер",
+          "image": "pc_eu_RV_Use_071be8bb-e63a-417a-91a8-319f6256b011.jpg",
+          "imageAlt": "DELTA Pro 3 на къмпинг с кемпер",
+          "caption": "",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Разширяване",
+      "heading": "Разширяем капацитет за по-дълга работа и по-големи спестявания",
+      "body": "Свържете паралелно и разширете капацитета до 12 kWh. Уредите работят по-дълго, съхранявате повече слънчева енергия и намалявате сметките за ток. Повече капацитет означава повече резерв, повече спестявания и по-малко прекъсвания.",
+      "image": "pc_eu_Expandable_Capacity_for_Longer_Runtime_95c1c334-49e1-4a1d-87ea-ae16daccf062.jpg"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "layout": "tabs-top",
+      "heading": "Тих комфорт за семейството и съседите",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Тих като шепот",
+          "image": "PC_Silent_as_a_Whisper_5780ab62-4d6b-4649-a115-f9ff36523f61.jpg",
+          "imageAlt": "DELTA Pro 3 работи тихо до легло в спалня",
+          "caption": "С технологията X-Quiet работи на едва 30 dB под 2000W — достатъчно тихо, за да стои до леглото ви, без да смущава съня.",
+          "rows": []
+        },
+        {
+          "label": "Безпроблемно резервно захранване",
+          "image": "PC_Seamless_Power_Backup_c77b01b4-d8f1-4c86-a760-f9221d150862.jpg",
+          "imageAlt": "DELTA Pro 3 захранва работно място при спиране на тока",
+          "caption": "Пазете данните и техниката си с бързо превключване за 10 ms. NAS системи, сървъри и домашно кино продължават да работят без прекъсване при всяко спиране на тока.",
+          "rows": []
+        }
+      ],
+      "_bележка": "В оригинала разделите са над снимката, а текстът на активния раздел — под нея. Подредбата tabs-top засега не показва caption — виж задачата за Code."
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Зареждане",
+      "heading": "6 уникални начина за зареждане — по всяко време, навсякъде [3]",
+      "body": "",
+      "image": "pc_eu_6_Unique_Ways_to_Charge.jpg"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Бързо зареждане навсякъде [3]",
+      "body": "Революционната технология за бързо зареждане X-Stream на EcoFlow задава нов стандарт в индустрията. Зареждане от 0 до 80% само за един час. С комбинирано зареждане от няколко източника — до 7000W свръхбързо зареждане.",
+      "image": "pc_Charge_Fast_Everywhere_eu.jpg"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Безопасност",
+      "layout": "tabs-top",
+      "heading": "Усетете сигурността, която EcoFlow ви дава",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Най-модерна LFP технология",
+          "image": "pc_State-of-the-art_LFP_Tech_eu.jpg",
+          "imageAlt": "DELTA Pro 3 — LFP клетки на батерията",
+          "caption": "Изработен с LFP клетки от автомобилен клас, EcoFlow DELTA Pro 3 има първия в индустрията батериен пакет с IP65 защита — устойчив на удари, вода, прах и риск от пожар. С 4000 цикъла до 80% това е енергия всеки ден в продължение на 11 години.* Надеждна работа при всякакво време — спокойствие във всяка ситуация.",
+          "rows": []
+        },
+        {
+          "label": "BMS с технологията X-Guard",
+          "image": "pc_BMS_powered_by_ground-breaking_X-Guard_eu.jpg",
+          "imageAlt": "DELTA Pro 3 — система за управление на батерията",
+          "caption": "Доверете се на системата за управление на батерията с X-Guard, която следи 40 показателя за безопасност 24/7 и осигурява предупреждения и активна защита денонощно. Управлявате всичко от приложението — умна и сигурна енергия.",
+          "rows": []
+        },
+        {
+          "label": "Революционно издръжлива конструкция",
+          "image": "pc_Revolutionising_Durable_Construction_eu.jpg",
+          "imageAlt": "DELTA Pro 3 — шаси с интегрирани клетки",
+          "caption": "Новаторската интеграция „клетка към шаси“ (Cell-to-Chassis, CTC) укрепва EcoFlow DELTA Pro 3. Съчетана с UL-сертифициран огнеустойчив корпус клас 5VA, тя пренаписва стандартите в индустрията за здравина и защита.",
+          "rows": []
+        },
+        {
+          "label": "5 години гаранция, нула грижи",
+          "image": "pc_5_Years_Warranty_Zero_Worries_eu.jpg",
+          "imageAlt": "DELTA Pro 3 — 5 години гаранция",
+          "caption": "По-дълготраен и по-производителен — даваме 5 години гаранция за всичко, което надминава традиционните бензинови генератори и е наравно с елита в портативната енергия. Бърза и ефективна поддръжка от нашия сервиз — бързи решения и минимален престой. Това е нашият ангажимент към качеството.",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Приложение",
+      "heading": "Пълен контрол от едно място с приложението EcoFlow",
+      "body": "",
+      "image": "pc_EcoFlow_App_eu_2a99f650-55c5-459a-bc38-49bde4211c40.jpg"
+    },
+    {
+      "blockType": "comparisonTable",
+      "anchorLabel": "Сравнение",
+      "heading": "DELTA Pro срещу DELTA Pro 3",
+      "intro": "В сравнение с DELTA Pro, DELTA Pro 3 е много по-тих, с по-голям капацитет, по-висока ефективност на зареждане, по-лесен за пренасяне и с компактен дизайн на допълнителната батерия.",
+      "columns": [
+        {
+          "label": "EcoFlow DELTA Pro 3",
+          "tagline": "Препоръчан",
+          "highlight": true,
+          "image": "ecoflow-delta-pro-3-portable-power-station-58715243872599.png",
+          "imageAlt": "EcoFlow DELTA Pro 3",
+          "price": 2699,
+          "comparePrice": 2999,
+          "ctaLabel": "Купи сега",
+          "ctaUrl": "https://dice.bg/ecoflow-delta-pro-3-portable-power-station-4096wh-portativna-profesionalna-elektrotsentrala-za-zarezhdane-na-ustroystva-cheren-item70376",
+          "productSlug": "delta-pro-3"
+        },
+        {
+          "label": "EcoFlow DELTA Pro",
+          "tagline": "",
+          "productSlug": "delta-pro"
+        }
+      ],
+      "rows": [
+        {
+          "label": "Капацитет",
+          "values": [
+            "4 kWh – 12 kWh",
+            "3,6 kWh – 10,8 kWh"
+          ]
+        },
+        {
+          "label": "Максимален продължителен изход",
+          "values": [
+            "4000W",
+            "3600W"
+          ]
+        },
+        {
+          "label": "Пикова мощност",
+          "values": [
+            "8000W, 400 ms",
+            "7200W, 100 ms"
+          ]
+        },
+        {
+          "label": "Контакти (AC)",
+          "values": [
+            "5",
+            "4"
+          ]
+        },
+        {
+          "label": "DC изходи",
+          "values": [
+            "2 × USB-C, макс. 100W | 2 × USB-A, макс. 18W\n1 × DC5521, макс. 5A | 1 × Anderson, макс. 30A\n1 × порт за дистанционно управление",
+            "2 × USB-C, макс. 100W | 2 × USB-A, макс. 18W\n1 × DC5521, макс. 5A | 1 × Anderson, макс. 30A\n1 × порт за дистанционно управление"
+          ]
+        },
+        {
+          "label": "Вход от контакт (AC)",
+          "values": [
+            "макс. 2900W, 230V~12,5A",
+            "макс. 2900W, 230V~12,5A"
+          ]
+        },
+        {
+          "label": "Соларен вход",
+          "values": [
+            "2 порта:\nHPV: 30–150V, 15A, макс. 1600W\nLPV: 11–60V, 20A, макс. 1000W",
+            "1 порт:\n11–150V, 15A, макс. 1600W"
+          ]
+        },
+        {
+          "label": "Вход от зарядна станция за електромобил",
+          "values": [
+            "макс. 4000W, 220–240V~20A",
+            "макс. 3400W, 230V~15A"
+          ]
+        },
+        {
+          "label": "Комбинирано зареждане (с 1 допълнителна батерия)",
+          "values": [
+            "макс. 7000W",
+            "макс. 6600W"
+          ]
+        },
+        {
+          "label": "Шум",
+          "values": [
+            "30 dB (под 2 kW, 25 °C, 1 m)",
+            "45 dB (под 2 kW, 25 °C, 1 m)"
+          ]
+        },
+        {
+          "label": "UPS / EPS",
+          "values": [
+            "<10 ms, UPS",
+            "30 ms, EPS"
+          ]
+        },
+        {
+          "label": "Свързаност",
+          "values": [
+            "Wi-Fi 2,4 GHz / Bluetooth / CAN",
+            "Wi-Fi 2,4 GHz / Bluetooth"
+          ]
+        }
+      ],
+      "_iztochnik": "Таблицата е от картинката pc_eu_75b0dc32-2cd8-4279-b9cd-767c6bc1e2f9.jpg на eu.ecoflow.com (секция „DELTA Pro vs. DELTA Pro 3“), пренесена дословно. Колоната DELTA Pro се връзва към продукта, когато бъде внесен."
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow DELTA Pro 3",
+          "qty": 1,
+          "image": "sl_DP3.png",
+          "imageAlt": "EcoFlow DELTA Pro 3"
+        },
+        {
+          "name": "Захранващ кабел за контакт",
+          "qty": 1,
+          "image": "sl_dpu_accessories.png",
+          "imageAlt": "Захранващ кабел за контакт"
+        },
+        {
+          "name": "Протектор за дръжката",
+          "qty": 1,
+          "image": "Grip_Protector.png",
+          "imageAlt": "Протектор за дръжката"
+        },
+        {
+          "name": "Кратко ръководство",
+          "qty": 1,
+          "image": "Quick_Start_Guide.png",
+          "imageAlt": "Кратко ръководство"
+        },
+        {
+          "name": "Ръководство за безопасност",
+          "qty": 1,
+          "image": "Safety_Guide.png",
+          "imageAlt": "Ръководство за безопасност"
+        },
+        {
+          "name": "Гаранционна карта",
+          "qty": 1,
+          "image": "Warranty_Card.png",
+          "imageAlt": "Гаранционна карта"
+        }
+      ],
+      "_iztochnik": "Списъкът е от секцията „What's in the box – EcoFlow DELTA Pro 3“ на eu.ecoflow.com — шест елемента, точно както при тях."
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "faqBlock",
+      "anchorLabel": "Въпроси",
+      "heading": "Често задавани въпроси",
+      "items": [
+        {
+          "question": "Какъв е максималният соларен вход на EcoFlow DELTA Pro 3?",
+          "answer": "EcoFlow DELTA Pro 3 има два соларни входа — за високо и за ниско напрежение. Високо напрежение (HPV): 30–150V, макс. 15A, макс. 1600W. Ниско напрежение (LPV): 11–60V, макс. 20A, макс. 1000W."
+        },
+        {
+          "question": "Как се нулират Bluetooth и Wi-Fi връзките на EcoFlow DELTA Pro 3?",
+          "answer": "При изключено устройство задръжте бутона за захранване повече от 5 секунди. Дисплеят светва и след това примигва веднъж (трябва да примигне веднъж) — това означава, че Bluetooth връзката е нулирана успешно."
+        },
+        {
+          "question": "Може ли EcoFlow DELTA Pro 3 да се зарежда от зарядна станция за електромобил?",
+          "answer": "Да, поддържа зарядни станции Level 1/2. Необходим е специален адаптер на EcoFlow — EV X-Stream Adapter (DELTA Pro Ultra). През порта AC POWER IN/OUT и този адаптер се свързва зарядна станция 240V, при което скоростта на зареждане достига 4000W (Level 2)."
+        },
+        {
+          "question": "Ако е свързан към соларни панели, ще се включи ли EcoFlow DELTA Pro 3 автоматично, докато е изключен?",
+          "answer": "Да, но при определени условия на осветеност. При слаба светлина устройството може да не се включи."
+        },
+        {
+          "question": "Кои продукти на EcoFlow са съвместими с EcoFlow DELTA Pro 3? (други продукти на EcoFlow)",
+          "answer": "EcoFlow 800W Alternator Charger, EcoFlow Smart Generator (Dual Fuel), EcoFlow DELTA Pro to Smart Generator Adapter, EcoFlow PowerInsight Home Energy Manager, EcoFlow WAVE 2. Всички устройства трябва да са с най-новия фърмуер, за да е гарантирана съвместимостта."
+        },
+        {
+          "question": "Кои продукти на EcoFlow са съвместими с EcoFlow DELTA Pro 3? (серия EcoFlow DELTA Pro)",
+          "answer": "EcoFlow DELTA Pro Smart Extra Battery, EcoFlow DELTA Pro Remote Control. Всички устройства трябва да са с най-новия фърмуер, за да е гарантирана съвместимостта."
+        },
+        {
+          "question": "Колко цикъла издържа батерията на EcoFlow DELTA Pro 3?",
+          "answer": "4000 цикъла. След 4000 цикъла при 0,5C/0,5C и 25 °C батерията запазва над 80% от състоянието си (SoH)."
+        },
+        {
+          "question": "Какъв е работният температурен диапазон на EcoFlow DELTA Pro 3?",
+          "answer": "Оптимална работна температура: 20–30 °C. Зареждане: 0–45 °C. Разреждане: –10 до 45 °C. Препоръчителна температура за дълго съхранение: 20–30 °C."
+        },
+        {
+          "question": "Каква е защитата на EcoFlow DELTA Pro 3 от вода и прах? Може ли да се ползва на открито?",
+          "answer": "Батерийният пакет е ключовият компонент и неговата защита е най-важна. За да се намали рискът от късо съединение и пожар при навлизане на вода, батерийният пакет на EcoFlow DELTA Pro 3 е херметизиран и има защита IP65 — не пропуска прах и издържа на пръски вода. Самото устройство обаче няма защита от вода и прах (IP20). Подходящо е за проветриви закрити помещения или за защитени места на открито, далеч от дъжд и прах. Средата при инсталиране и употреба трябва да е суха и чиста, за да работи устройството нормално и дълго."
+        },
+        {
+          "question": "Има ли EcoFlow DELTA Pro 3 защита GFCI (дефектнотокова)?",
+          "answer": "EcoFlow DELTA Pro 3 има вградена GFCI верига. При нужда може да се свърже и външна GFCI защита — тогава в приложението трябва да се включи опцията за поддръжка на GFCI, за да работи външната защита правилно."
+        },
+        {
+          "question": "Съвместима ли е допълнителната батерия на EcoFlow DELTA Pro 3 с EcoFlow DELTA Pro?",
+          "answer": "Не, не се поддържа."
+        },
+        {
+          "question": "Съвместима ли е EcoFlow DELTA Pro Smart Extra Battery с EcoFlow DELTA Pro 3?",
+          "answer": "Да, поддържа се. Всички устройства трябва да са с най-новия фърмуер, за да е гарантирана съвместимостта."
+        },
+        {
+          "question": "Може ли EcoFlow DELTA Pro 3 да се ползва заедно с EcoFlow DELTA Pro?",
+          "answer": "Не, не се поддържа."
+        },
+        {
+          "question": "Могат ли EcoFlow DELTA Pro 3 Smart Extra Battery и EcoFlow DELTA Pro Smart Extra Battery да се ползват едновременно с EcoFlow DELTA Pro 3?",
+          "answer": "Поддържа се. Заради различния капацитет на двете батерии обаче ще има известен дисбаланс в нивата на заряд (SOC)."
+        }
+      ],
+      "_bележка": "Четирите въпроса за Manual Transfer Switch от оригинала са пропуснати — отнасят се за комплекта с превключвател, който не продаваме отделно тук. Ако го въведем, се добавят."
+    },
+    {
+      "blockType": "footnotes",
+      "items": [
+        {
+          "text": "Ако не е указано друго, сравненията са спрямо продуктовите серии на EcoFlow."
+        },
+        {
+          "text": "Наличността е ограничена до официалните канали и оторизираните дистрибутори."
+        },
+        {
+          "text": "Реалната наличност може да зависи от местното законодателство, условията на средата, наличието на мрежа или услуга и съвместимостта на устройствата."
+        },
+        {
+          "text": "Време за зареждане до 80%."
+        },
+        {
+          "text": "Време за зареждане до 100%."
+        },
+        {
+          "text": "Микроинвертор: 800W; DELTA Pro 3: 4000W изход."
+        },
+        {
+          "text": "Ръчният превключвател (Manual Transfer Switch) изисква монтаж от правоспособен електротехник. Разходите по монтажа са за сметка на купувача."
+        },
+        {
+          "text": "Изпитано в контролирани лабораторни условия при зареждане и разреждане с 0,5C и 25 °C."
+        },
+        {
+          "text": "* Годишни енергийни спестявания = дневни спестявания × 365 дни. ** Годишни спестявания в пари = годишни енергийни спестявания × 0,35 €/kWh. Изчислението предполага, че слънцето стига за пълно зареждане на DELTA Pro 3 (или с допълнителна батерия) всеки ден. Реалните спестявания зависят от слънцегреенето в региона."
+        },
+        {
+          "text": "EcoFlow DELTA Pro 3 не е съвместим с EcoFlow DELTA Pro."
+        }
+      ],
+      "_iztochnik": "Бележки 1–8 са дословно от долния край на страницата на EcoFlow; 9 е от секцията за спестявания (*/**), 10 — от секцията „Compatibility“."
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Общи",
+      "rows": [
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Капацитет",
+          "value": "4096 Wh"
+        },
+        {
+          "label": "Тегло",
+          "value": "51,5 кг"
+        },
+        {
+          "label": "Размери",
+          "value": "693 × 341 × 410 мм"
+        },
+        {
+          "label": "Тип батерия",
+          "value": "LFP (литиево-желязо-фосфатна)"
+        },
+        {
+          "label": "Цикли на батерията",
+          "value": "4000 до 80% капацитет"
+        },
+        {
+          "label": "Свързаност",
+          "value": "Wi-Fi 2,4 GHz / Bluetooth / CAN"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Изход променлив ток",
+      "rows": [
+        {
+          "label": "Контакти",
+          "value": "5, макс. 4000W (8000W пик)"
+        },
+        {
+          "label": "Мощност с X-Boost",
+          "value": "6000W"
+        }
+      ]
+    },
+    {
+      "groupLabel": "USB изходи",
+      "rows": [
+        {
+          "label": "USB-A (бързо зареждане)",
+          "value": "2 × (5V 2,4A / 9V 2A / 12V 1,5A), макс. 18W"
+        },
+        {
+          "label": "USB-C",
+          "value": "2 × (5/9/12/15/20V 5A), макс. 100W"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Изход постоянен ток",
+      "rows": [
+        {
+          "label": "12V DC",
+          "value": "12,6V / 30A, общо 378W"
+        },
+        {
+          "label": "DC5521",
+          "value": "1 ×, макс. 5A"
+        },
+        {
+          "label": "Anderson",
+          "value": "1 ×, макс. 30A"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Зареждане",
+      "rows": [
+        {
+          "label": "От контакт",
+          "value": "200–240V ~ 12,5A, 50/60 Hz, макс. 2900W"
+        },
+        {
+          "label": "От соларни панели",
+          "value": "2600W, 2 порта: HPV 30–150V / 15A, макс. 1600W; LPV 11–60V / 20A, макс. 1000W"
+        },
+        {
+          "label": "От автомобил",
+          "value": "12V макс. 8A; 48V макс. 20A"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Допълнителна батерия",
+      "rows": [
+        {
+          "label": "Разширяване",
+          "value": "до две DELTA Pro 3 Smart Extra Battery / DELTA Pro Smart Extra Battery"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Условия и гаранция",
+      "rows": [
+        {
+          "label": "Гаранция",
+          "value": "5 години"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-3-portable-power-station-58715243872599.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-3-portable-power-station-58715243577687.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-3-portable-power-station-58715243741527.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-3-portable-power-station-58715243675991.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-3-portable-power-station-58715243708759.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-3-portable-power-station-58715243610455.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-3-portable-power-station-58715243643223.png"
+    ],
+    "sekcii": [
+      "https://eu.ecoflow.com/cdn/shop/files/pc_eu_overview_22467963-dcc5-4216-83d2-5ad56e05fbcc.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_eu_Multiple_Devices_053c6553-b9e1-4211-b302-46c97b0f2098.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_en_ON_site_DIY_Project.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_eu_EV_Charging_e9ed308a-9d68-4f2c-9145-703dafe9ec74.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_eu_Whole_home_Use_1da2d54e-641b-44d1-bc38-e07ed7496041.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_eu_Off_grid_Cabin_fd276b7a-4aca-4f58-b0ac-5ba3dc7f466c.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_eu_RV_Use_071be8bb-e63a-417a-91a8-319f6256b011.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_eu_Expandable_Capacity_for_Longer_Runtime_95c1c334-49e1-4a1d-87ea-ae16daccf062.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_Silent_as_a_Whisper_5780ab62-4d6b-4649-a115-f9ff36523f61.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_Seamless_Power_Backup_c77b01b4-d8f1-4c86-a760-f9221d150862.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_eu_6_Unique_Ways_to_Charge.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Charge_Fast_Everywhere_eu.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_State-of-the-art_LFP_Tech_eu.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_BMS_powered_by_ground-breaking_X-Guard_eu.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Revolutionising_Durable_Construction_eu.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_5_Years_Warranty_Zero_Worries_eu.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_EcoFlow_App_eu_2a99f650-55c5-459a-bc38-49bde4211c40.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/sl_DP3.png",
+      "https://eu.ecoflow.com/cdn/shop/files/sl_dpu_accessories.png",
+      "https://eu.ecoflow.com/cdn/shop/files/Grip_Protector.png",
+      "https://eu.ecoflow.com/cdn/shop/files/Quick_Start_Guide.png",
+      "https://eu.ecoflow.com/cdn/shop/files/Safety_Guide.png",
+      "https://eu.ecoflow.com/cdn/shop/files/Warranty_Card.png",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_eu_75b0dc32-2cd8-4279-b9cd-767c6bc1e2f9.jpg"
+    ],
+    "_bележка": "pc_eu_75b0dc32-….jpg е картинката на сравнителната таблица DELTA Pro / DELTA Pro 3 — само за справка, таблицата е въведена като данни. Всички pc_ файлове са с вградени английски надписи — виж _prevod_nadpisi."
+  },
+  "_prevod_nadpisi": "виж prevod-nadpisi.md в същата папка",
+  "_neyasni": [
+    "Подредба tabs-top не показва caption — секциите „Тих комфорт“ и „Усетете сигурността“ имат текст под снимката в оригинала. Записан е в caption; трябва малка промяна в блока (виж задачата).",
+    "В таблицата със спецификации на EcoFlow има ред с объркан етикет: заглавие „4000W, 6000W (X-Boost)“ срещу стойност „Supports up to two … Extra Batteries“. Записан е като „Допълнителна батерия“; мощността е в „Изход променлив ток“.",
+    "Гаранция 5 години — от банера и текста на EcoFlow; в спецификациите им няма отделен ред.",
+    "Цветът е „черен“ по адреса в dice.bg (…-cheren-…); на снимките корпусът е сиво-черен.",
+    "Колоната DELTA Pro в сравнението ще се върже автоматично, когато продуктът delta-pro бъде внесен."
+  ]
+}

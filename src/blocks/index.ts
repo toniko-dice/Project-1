@@ -1,6 +1,7 @@
 export { HeroBanner } from './HeroBanner'
 export { CategoryStrip } from './CategoryStrip'
 export { ProductCarousel } from './ProductCarousel'
+export { BannerCarousel } from './BannerCarousel'
 export { BannerProductRow } from './BannerProductRow'
 export { PromoCards } from './PromoCards'
 export { WideBanner } from './WideBanner'

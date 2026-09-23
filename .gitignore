@@ -53,3 +53,11 @@ next-env.d.ts
 # Проверки на здравето
 /.health
 /.rescue
+
+# Снимките на продуктите — свалят се наново по snimki-za-svalyane.txt,
+# а истинските се пазят в архива заедно с media/. Git държи само
+# текстовото съдържание (sadarzhanie.json, бележките, списъците с адреси).
+content/*/galeriya/
+content/*/galeryia/
+content/*/sekcii/
+content/referentsia/

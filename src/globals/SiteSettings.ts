@@ -61,6 +61,23 @@ export const SiteSettings: GlobalConfig = {
     },
     {
       type: 'collapsible',
+      label: 'Бюлетин',
+      fields: [
+        {
+          name: 'newsletterConsentText',
+          type: 'textarea',
+          label: 'Текст на съгласието',
+          defaultValue:
+            'Съгласен съм да получавам новини и оферти от EcoFlow България. Мога да се отпиша по всяко време.',
+          admin: {
+            description:
+              'Стои до задължителната отметка във формата за бюлетин. Изисква се от ЗЗЛД — затова е поле, а не зашит текст.',
+          },
+        },
+      ],
+    },
+    {
+      type: 'collapsible',
       label: 'Контакти',
       fields: [
         { name: 'companyName', type: 'text', label: 'Фирма' },

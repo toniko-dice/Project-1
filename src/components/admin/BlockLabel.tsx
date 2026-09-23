@@ -31,7 +31,19 @@ export const BlockLabel = ({ field, rowLabel, rowNumber }: Props) => {
   const anchor = ctx?.data?.anchorLabel
   const suffix = text || (typeof anchor === 'string' ? anchor.trim() : '')
 
-  return <span>{suffix ? `${index} · ${name} — ${suffix}` : `${index} · ${name}`}</span>
+  /*
+    Скритата секция трябва да личи от списъка. Иначе собственикът вижда
+    секция, търси я на сайта и не я намира — а причината е една отметка,
+    която е вътре в блока.
+  */
+  const скрит = ctx?.data?.hidden === true ? ' (скрит)' : ''
+
+  return (
+    <span>
+      {suffix ? `${index} · ${name} — ${suffix}` : `${index} · ${name}`}
+      {скрит ? <em style={{ opacity: 0.7 }}>{скрит}</em> : null}
+    </span>
+  )
 }
 
 export default BlockLabel

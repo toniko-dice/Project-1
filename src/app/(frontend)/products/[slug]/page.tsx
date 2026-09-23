@@ -90,7 +90,19 @@ export default async function ProductPage({ params }: Args) {
     { value: product.image },
     ...(product.gallery ?? []).map((g) => ({ value: g.image })),
   ]
-    .map(({ value }) => ({ url: mediaUrl(value, 'large') ?? '', alt: mediaAlt(value) }))
+    /*
+      Три размера на една и съща снимка.
+
+      `fullUrl` е оригиналът и се ползва само при уголемяване на цял екран.
+      На 27" екран снимката заема над 2000 px — по-малкият `large` там вече
+      се вижда мек. За галерията на страницата `large` стига.
+    */
+    .map(({ value }) => ({
+      url: mediaUrl(value, 'large') ?? '',
+      fullUrl: mediaUrl(value) ?? '',
+      thumbUrl: mediaUrl(value, 'thumbnail') ?? '',
+      alt: mediaAlt(value),
+    }))
     .filter((img) => img.url)
 
   const discount = discountPercent(product.price, product.compareAtPrice)
@@ -176,8 +188,9 @@ export default async function ProductPage({ params }: Args) {
             <ul className="rounded-lg bg-tile p-4 text-sm leading-relaxed">
               {highlights.map((h, i) => (
                 <li key={i} className={i > 0 ? 'mt-2' : ''}>
-                  <strong className="font-semibold">{h.title}</strong>{' '}
-                  <span className="text-ink-muted">{h.text}</span>
+                  <strong className="font-semibold">{h.title}</strong>
+                  {/* Без пояснение — само заглавието, без празен ред. */}
+                  {h.text?.trim() ? <span className="text-ink-muted"> {h.text}</span> : null}
                 </li>
               ))}
             </ul>

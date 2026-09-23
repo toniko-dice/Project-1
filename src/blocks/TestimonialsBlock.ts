@@ -1,4 +1,5 @@
 import type { Block } from 'payload'
+import { requiredUnlessHidden } from './shared'
 
 /** Отзиви от клиенти със снимка — "Истински отзиви. Истинска мощност." */
 export const TestimonialsBlock: Block = {
@@ -9,7 +10,7 @@ export const TestimonialsBlock: Block = {
     {
       name: 'sectionTitle',
       type: 'text',
-      required: true,
+      validate: requiredUnlessHidden,
       label: 'Заглавие на секцията',
       defaultValue: 'Истински отзиви. Истинска мощност.',
     },
@@ -18,7 +19,7 @@ export const TestimonialsBlock: Block = {
       type: 'relationship',
       relationTo: 'testimonials',
       hasMany: true,
-      required: true,
+      validate: requiredUnlessHidden,
       label: 'Отзиви',
     },
   ],

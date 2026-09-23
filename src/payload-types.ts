@@ -74,6 +74,7 @@ export interface Config {
     media: Media;
     testimonials: Testimonial;
     awards: Award;
+    subscribers: Subscriber;
     backups: Backup;
     users: User;
     'payload-kv': PayloadKv;
@@ -91,6 +92,7 @@ export interface Config {
     media: MediaSelect<false> | MediaSelect<true>;
     testimonials: TestimonialsSelect<false> | TestimonialsSelect<true>;
     awards: AwardsSelect<false> | AwardsSelect<true>;
+    subscribers: SubscribersSelect<false> | SubscribersSelect<true>;
     backups: BackupsSelect<false> | BackupsSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
@@ -169,54 +171,84 @@ export interface Page {
     | (
         | {
             /**
-             * Малкият текст над заглавието. Напр. "Сезон на бурите".
+             * Секцията остава тук, но не се показва на сайта.
              */
-            eyebrow?: string | null;
-            heading: string;
-            subheading?: string | null;
+            hidden?: boolean | null;
             /**
-             * Напр. срок на промоцията: "5 – 31 август".
+             * Нула спира автоматичната смяна. Важи само при повече от един слайд.
              */
-            note?: string | null;
-            /**
-             * Препоръчително 2400×1000px. Текстът ляга върху него.
-             */
-            image: number | Media;
-            /**
-             * По желание. Ако е празно, се ползва основното.
-             */
-            imageMobile?: (number | null) | Media;
-            cta?: {
-              label?: string | null;
-              /**
-               * Вътрешен път (/products) или пълен адрес към външния магазин.
-               */
-              url?: string | null;
-              newTab?: boolean | null;
-            };
-            align?: ('left' | 'center' | 'right') | null;
-            theme?: ('dark' | 'light') | null;
-            /**
-             * Увеличете, ако текстът не се чете добре върху снимката. Изисква се контраст 4.5:1.
-             */
-            overlay?: ('none' | 'light' | 'medium' | 'strong') | null;
+            autoplaySeconds?: number | null;
+            slides?:
+              | {
+                  /**
+                   * По избор. Малка картинка — в оригинала това е „30 дни гаранция за цената". Показва се с истинската си височина, до 40px.
+                   */
+                  badgeImage?: (number | null) | Media;
+                  /**
+                   * Малкият текст над заглавието. Напр. „Серия EcoFlow STREAM".
+                   */
+                  eyebrow?: string | null;
+                  eyebrowColor?: ('white' | 'orange') | null;
+                  heading?: string | null;
+                  subheading?: string | null;
+                  /**
+                   * Напр. срок на промоцията: „5 – 31 август".
+                   */
+                  note?: string | null;
+                  /**
+                   * Препоръчително 2400×1000px. Текстът ляга върху него.
+                   */
+                  image?: (number | null) | Media;
+                  /**
+                   * По желание. Ако е празно, се ползва основното.
+                   */
+                  imageMobile?: (number | null) | Media;
+                  cta?: {
+                    label?: string | null;
+                    /**
+                     * Вътрешен път (/products) или пълен адрес към външния магазин.
+                     */
+                    url?: string | null;
+                    newTab?: boolean | null;
+                    /**
+                     * Зависи от снимката отдолу. В оригинала бутоните върху банери са бели.
+                     */
+                    style?: ('light' | 'dark') | null;
+                  };
+                  align?: ('left' | 'center' | 'right') | null;
+                  theme?: ('dark' | 'light') | null;
+                  /**
+                   * Увеличете, ако текстът не се чете добре върху снимката.
+                   */
+                  overlay?: ('none' | 'light' | 'medium' | 'strong') | null;
+                  id?: string | null;
+                }[]
+              | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'heroBanner';
           }
         | {
             /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
              * Подредбата тук определя реда на екрана. Препоръчително 6–9 броя.
              */
-            categories: (number | Category)[];
+            categories?: (number | Category)[] | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'categoryStrip';
           }
         | {
-            sectionTitle: string;
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            sectionTitle?: string | null;
             subtitle?: string | null;
-            products: (number | Product)[];
+            products?: (number | Product)[] | null;
             cardStyle?: ('image' | 'price') | null;
             id?: string | null;
             blockName?: string | null;
@@ -224,12 +256,54 @@ export interface Page {
           }
         | {
             /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            heading?: string | null;
+            cards?:
+              | {
+                  /**
+                   * Запълва цялата карта. Препоръчително 800×1000px (портрет).
+                   */
+                  image?: (number | null) | Media;
+                  /**
+                   * Малкият оранжев текст най-отгоре. Напр. „Ново" или „Горещо 🔥".
+                   */
+                  tag?: string | null;
+                  heading?: string | null;
+                  subheading?: string | null;
+                  textTheme?: ('light' | 'dark') | null;
+                  /**
+                   * До два бутона на един ред под текста. Може и без нито един.
+                   */
+                  buttons?:
+                    | {
+                        label?: string | null;
+                        url?: string | null;
+                        style?: ('white' | 'outline' | 'black') | null;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'bannerCarousel';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
              * Напр. "Домашно резервно захранване".
              */
-            sectionTitle: string;
+            sectionTitle?: string | null;
             showBanner?: boolean | null;
             banner?: {
               eyebrow?: string | null;
+              eyebrowColor?: ('white' | 'orange') | null;
               heading?: string | null;
               subheading?: string | null;
               /**
@@ -237,9 +311,13 @@ export interface Page {
                */
               priceNote?: string | null;
               /**
-               * Препоръчително 2400×800px.
+               * Препоръчително 2400×800px. Остава задължително и при видео — показва се, докато то се зареди.
                */
               image?: (number | null) | Media;
+              /**
+               * По избор. MP4 (H.264), 1920px широчина, без звук, до 20 MB. Върти се само, без бутони. При включена системна настройка за намалено движение се показва снимката.
+               */
+              video?: (number | null) | Media;
               cta?: {
                 label?: string | null;
                 /**
@@ -247,6 +325,10 @@ export interface Page {
                  */
                 url?: string | null;
                 newTab?: boolean | null;
+                /**
+                 * Зависи от снимката отдолу. В оригинала бутоните върху банери са бели.
+                 */
+                style?: ('light' | 'dark') | null;
               };
               theme?: ('dark' | 'light') | null;
             };
@@ -257,21 +339,30 @@ export interface Page {
             showMoreTile?: boolean | null;
             moreTile?: {
               label?: string | null;
-              description?: string | null;
-              image?: (number | null) | Media;
               url?: string | null;
+              /**
+               * В оригинала това е групова снимка на продуктите от серията.
+               */
+              image?: (number | null) | Media;
+              description?: string | null;
+              secondaryLabel?: string | null;
+              secondaryUrl?: string | null;
             };
             id?: string | null;
             blockName?: string | null;
             blockType: 'bannerProductRow';
           }
         | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
             sectionTitle?: string | null;
             cards?:
               | {
-                  heading: string;
+                  heading?: string | null;
                   description?: string | null;
-                  image: number | Media;
+                  image?: (number | null) | Media;
                   cta?: {
                     label?: string | null;
                     /**
@@ -279,6 +370,10 @@ export interface Page {
                      */
                     url?: string | null;
                     newTab?: boolean | null;
+                    /**
+                     * Зависи от снимката отдолу. В оригинала бутоните върху банери са бели.
+                     */
+                    style?: ('light' | 'dark') | null;
                   };
                   theme?: ('dark' | 'light') | null;
                   id?: string | null;
@@ -289,9 +384,23 @@ export interface Page {
             blockType: 'promoCards';
           }
         | {
-            heading: string;
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * По избор. В оригинала някои банери са без заглавие над тях.
+             */
+            sectionTitle?: string | null;
+            eyebrow?: string | null;
+            eyebrowColor?: ('white' | 'orange') | null;
+            heading?: string | null;
             subheading?: string | null;
-            image: number | Media;
+            /**
+             * По избор. Напр. „от 1199 €". Празно поле не показва нищо.
+             */
+            priceNote?: string | null;
+            image?: (number | null) | Media;
             cta?: {
               label?: string | null;
               /**
@@ -299,6 +408,10 @@ export interface Page {
                */
               url?: string | null;
               newTab?: boolean | null;
+              /**
+               * Зависи от снимката отдолу. В оригинала бутоните върху банери са бели.
+               */
+              style?: ('light' | 'dark') | null;
             };
             align?: ('left' | 'center' | 'right') | null;
             theme?: ('dark' | 'light') | null;
@@ -307,11 +420,15 @@ export interface Page {
             blockType: 'wideBanner';
           }
         | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
             sectionTitle?: string | null;
             items?:
               | {
-                  icon: 'shield' | 'globe' | 'card' | 'support' | 'return' | 'truck' | 'bolt' | 'certificate';
-                  title: string;
+                  icon?: ('shield' | 'globe' | 'card' | 'support' | 'return' | 'truck' | 'bolt' | 'certificate') | null;
+                  title?: string | null;
                   description?: string | null;
                   id?: string | null;
                 }[]
@@ -321,15 +438,23 @@ export interface Page {
             blockType: 'benefitsGrid';
           }
         | {
-            sectionTitle: string;
-            testimonials: (number | Testimonial)[];
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            sectionTitle?: string | null;
+            testimonials?: (number | Testimonial)[] | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'testimonialsBlock';
           }
         | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
             sectionTitle?: string | null;
-            awards: (number | Award)[];
+            awards?: (number | Award)[] | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'logoWall';
@@ -413,6 +538,14 @@ export interface Media {
       filesize?: number | null;
       filename?: string | null;
     };
+    full?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
   };
 }
 /**
@@ -434,9 +567,13 @@ export interface Category {
    */
   parent?: (number | null) | Category;
   /**
-   * Отнася се за лентата с кръгли икони на началната страница.
+   * Отнася се за лентата с икони на началната страница.
    */
   showInStrip?: boolean | null;
+  /**
+   * По избор. Показва се в червено под името в лентата с категории. Напр. „Ново".
+   */
+  stripBadge?: string | null;
   /**
    * За лентата с категории. Препоръчително 160×160px.
    */
@@ -492,12 +629,23 @@ export interface Product {
    */
   tagline?: string | null;
   /**
-   * Кратките изречения в кутията за покупка, под цената. Три до пет са достатъчни — това е първото, което клиентът чете.
+   * От 0 до 5, през 0,5. Празно = не се показва.
+   */
+  rating?: number | null;
+  /**
+   * Попълва се само при реални отзиви за този продукт.
+   */
+  reviewCount?: number | null;
+  /**
+   * Кратките изречения в кутията за покупка, под цената. Три до шест са достатъчни — това е първото, което клиентът чете.
    */
   highlights?:
     | {
         title: string;
-        text: string;
+        /**
+         * По избор. Празно — акцентът е само заглавието, на един ред.
+         */
+        text?: string | null;
         id?: string | null;
       }[]
     | null;
@@ -596,6 +744,7 @@ export interface Product {
             anchorLabel?: string | null;
             heading: string;
             subheading?: string | null;
+            subheadingPosition?: ('above' | 'below') | null;
             body?: string | null;
             /**
              * Препоръчително 1680px широчина, както в оригинала.
@@ -626,10 +775,22 @@ export interface Product {
              */
             anchorLabel?: string | null;
             heading?: string | null;
+            /**
+             * По избор. Показва се при всички подредби, центриран под заглавието — както текстът в секция с изображение.
+             */
+            intro?: string | null;
+            /**
+             * При „снимка с панел отстрани" се показват редовете със стойности вдясно от снимката. При „снимка отгоре" редовете не се показват — под разделите излиза само текстът от полето „Текст под разделите". При „раздели над снимката" разделите са центрирани над снимката, а текстът под разделите не се показва.
+             */
+            layout?: ('side-panel' | 'image-top' | 'tabs-top') | null;
             tabs?:
               | {
                   label: string;
                   image: number | Media;
+                  /**
+                   * Показва се само при подредба „снимка отгоре". Едно изречение под лентата с разделите. Празно поле не показва нищо. Полето се пази и при другите подредби.
+                   */
+                  caption?: string | null;
                   rows?:
                     | {
                         /**
@@ -698,6 +859,10 @@ export interface Product {
              */
             anchorLabel?: string | null;
             heading?: string | null;
+            /**
+             * По избор. Центриран текст между заглавието и таблицата.
+             */
+            intro?: string | null;
             /**
              * Всяка колона е един модел. Редовете по-долу трябва да са в същия ред.
              */
@@ -916,13 +1081,21 @@ export interface MenuPanel {
   id: number;
   _order?: string | null;
   /**
-   * Текстът, който се вижда в сайдбара. Напр. „Серия EcoFlow DELTA".
+   * Текстът, който се вижда в сайдбара. Напр. „Серия EcoFlow DELTA". При автоматичен режим може да е празно — тогава се взима името на категорията.
    */
-  title: string;
+  title?: string | null;
   /**
    * Само малки латински букви, цифри и тирета. Кирилицата се транслитерира, интервалите стават тирета, представки като „products/" се махат. Не е нужно да пишете пътя — само името.
    */
   slug: string;
+  /**
+   * Автоматично: продуктите на избраната категория се показват сами — първите седем, голяма първа карта, „Виж всички" към категорията. Ръчен избор: секциите и картите по-долу се попълват на ръка.
+   */
+  mode?: ('auto' | 'manual') | null;
+  /**
+   * Продуктите ѝ се показват в панела. Ако е празно, панелът се държи като ръчен.
+   */
+  category?: (number | null) | Category;
   /**
    * Всяка секция е един ред със заглавие, линк „Виж всички" вдясно и мрежа с продукти. В референтния дизайн панелът има две секции — продукти и аксесоари.
    */
@@ -932,21 +1105,31 @@ export interface MenuPanel {
         viewAllLabel?: string | null;
         viewAllUrl?: string | null;
         /**
-         * Заема цялата височина на мрежата. Оставете името празно, за да я скриете.
+         * Заема цялата височина на мрежата. Оставете името и продукта празни, за да я скриете.
          */
         featured?: {
           /**
-           * Продуктова снимка на прозрачен фон. Препоръчително 600×600px.
+           * По избор. Снимката, името, редът със спецификации и адресът се взимат от продукта. Полетата по-долу ги заменят, ако са попълнени.
+           */
+          product?: (number | null) | Product;
+          /**
+           * По избор. Ако е празно, се взима главната снимка на продукта. Продуктова снимка на прозрачен фон, препоръчително 600×600px.
            */
           image?: (number | null) | Media;
+          /**
+           * По избор. Ако е празно, се взима от продукта.
+           */
           title?: string | null;
           /**
-           * Сивият текст под името. Напр. „1024Wh капацитет | 1800W изход | LFP".
+           * По избор. Ако е празно, се взима от продукта (кратката спецификация). Сивият текст под името, напр. „1024Wh капацитет | 1800W изход | LFP".
            */
           specLine?: string | null;
+          /**
+           * По избор. Ако е празно, води към страницата на продукта.
+           */
           url?: string | null;
           /**
-           * Малък син надпис над името. Напр. „Ново". Оставете празно, ако не трябва.
+           * По избор. Малък син надпис над името, напр. „Ново". Етикетът на продукта НЕ се пренася сам — вие решавате къде да има етикет.
            */
           label?: string | null;
           /**
@@ -960,17 +1143,27 @@ export interface MenuPanel {
         cards?:
           | {
               /**
-               * Продуктова снимка на прозрачен фон. Препоръчително 600×600px.
+               * По избор. Снимката, името, редът със спецификации и адресът се взимат от продукта. Полетата по-долу ги заменят, ако са попълнени.
+               */
+              product?: (number | null) | Product;
+              /**
+               * По избор. Ако е празно, се взима главната снимка на продукта. Продуктова снимка на прозрачен фон, препоръчително 600×600px.
                */
               image?: (number | null) | Media;
-              title: string;
               /**
-               * Сивият текст под името. Напр. „1024Wh капацитет | 1800W изход | LFP".
+               * По избор при избран продукт — тогава се взима името му. Задължително без продукт.
+               */
+              title?: string | null;
+              /**
+               * По избор. Ако е празно, се взима от продукта (кратката спецификация). Сивият текст под името, напр. „1024Wh капацитет | 1800W изход | LFP".
                */
               specLine?: string | null;
+              /**
+               * По избор. Ако е празно, води към страницата на продукта.
+               */
               url?: string | null;
               /**
-               * Малък син надпис над името. Напр. „Ново". Оставете празно, ако не трябва.
+               * По избор. Малък син надпис над името, напр. „Ново". Етикетът на продукта НЕ се пренася сам — вие решавате къде да има етикет.
                */
               label?: string | null;
               /**
@@ -985,6 +1178,29 @@ export interface MenuPanel {
         id?: string | null;
       }[]
     | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Хората, абонирани за бюлетина през формата на сайта. Бутонът „Изтегли CSV" е над списъка.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "subscribers".
+ */
+export interface Subscriber {
+  id: number;
+  email: string;
+  subscribedAt?: string | null;
+  status?: ('active' | 'unsubscribed') | null;
+  /**
+   * Страницата, от която е дошъл абонатът.
+   */
+  source?: string | null;
+  /**
+   * Изисква се от ЗЗЛД. Записва се какво е отметнал абонатът в момента на абонирането — не се пипа после.
+   */
+  consent?: boolean | null;
+  note?: string | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -1200,6 +1416,10 @@ export interface PayloadLockedDocument {
         value: number | Award;
       } | null)
     | ({
+        relationTo: 'subscribers';
+        value: number | Subscriber;
+      } | null)
+    | ({
         relationTo: 'backups';
         value: number | Backup;
       } | null)
@@ -1263,28 +1483,39 @@ export interface PagesSelect<T extends boolean = true> {
         heroBanner?:
           | T
           | {
-              eyebrow?: T;
-              heading?: T;
-              subheading?: T;
-              note?: T;
-              image?: T;
-              imageMobile?: T;
-              cta?:
+              hidden?: T;
+              autoplaySeconds?: T;
+              slides?:
                 | T
                 | {
-                    label?: T;
-                    url?: T;
-                    newTab?: T;
+                    badgeImage?: T;
+                    eyebrow?: T;
+                    eyebrowColor?: T;
+                    heading?: T;
+                    subheading?: T;
+                    note?: T;
+                    image?: T;
+                    imageMobile?: T;
+                    cta?:
+                      | T
+                      | {
+                          label?: T;
+                          url?: T;
+                          newTab?: T;
+                          style?: T;
+                        };
+                    align?: T;
+                    theme?: T;
+                    overlay?: T;
+                    id?: T;
                   };
-              align?: T;
-              theme?: T;
-              overlay?: T;
               id?: T;
               blockName?: T;
             };
         categoryStrip?:
           | T
           | {
+              hidden?: T;
               categories?: T;
               id?: T;
               blockName?: T;
@@ -1292,6 +1523,7 @@ export interface PagesSelect<T extends boolean = true> {
         productCarousel?:
           | T
           | {
+              hidden?: T;
               sectionTitle?: T;
               subtitle?: T;
               products?: T;
@@ -1299,25 +1531,55 @@ export interface PagesSelect<T extends boolean = true> {
               id?: T;
               blockName?: T;
             };
+        bannerCarousel?:
+          | T
+          | {
+              hidden?: T;
+              heading?: T;
+              cards?:
+                | T
+                | {
+                    image?: T;
+                    tag?: T;
+                    heading?: T;
+                    subheading?: T;
+                    textTheme?: T;
+                    buttons?:
+                      | T
+                      | {
+                          label?: T;
+                          url?: T;
+                          style?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
         bannerProductRow?:
           | T
           | {
+              hidden?: T;
               sectionTitle?: T;
               showBanner?: T;
               banner?:
                 | T
                 | {
                     eyebrow?: T;
+                    eyebrowColor?: T;
                     heading?: T;
                     subheading?: T;
                     priceNote?: T;
                     image?: T;
+                    video?: T;
                     cta?:
                       | T
                       | {
                           label?: T;
                           url?: T;
                           newTab?: T;
+                          style?: T;
                         };
                     theme?: T;
                   };
@@ -1327,9 +1589,11 @@ export interface PagesSelect<T extends boolean = true> {
                 | T
                 | {
                     label?: T;
-                    description?: T;
-                    image?: T;
                     url?: T;
+                    image?: T;
+                    description?: T;
+                    secondaryLabel?: T;
+                    secondaryUrl?: T;
                   };
               id?: T;
               blockName?: T;
@@ -1337,6 +1601,7 @@ export interface PagesSelect<T extends boolean = true> {
         promoCards?:
           | T
           | {
+              hidden?: T;
               sectionTitle?: T;
               cards?:
                 | T
@@ -1350,6 +1615,7 @@ export interface PagesSelect<T extends boolean = true> {
                           label?: T;
                           url?: T;
                           newTab?: T;
+                          style?: T;
                         };
                     theme?: T;
                     id?: T;
@@ -1360,8 +1626,13 @@ export interface PagesSelect<T extends boolean = true> {
         wideBanner?:
           | T
           | {
+              hidden?: T;
+              sectionTitle?: T;
+              eyebrow?: T;
+              eyebrowColor?: T;
               heading?: T;
               subheading?: T;
+              priceNote?: T;
               image?: T;
               cta?:
                 | T
@@ -1369,6 +1640,7 @@ export interface PagesSelect<T extends boolean = true> {
                     label?: T;
                     url?: T;
                     newTab?: T;
+                    style?: T;
                   };
               align?: T;
               theme?: T;
@@ -1378,6 +1650,7 @@ export interface PagesSelect<T extends boolean = true> {
         benefitsGrid?:
           | T
           | {
+              hidden?: T;
               sectionTitle?: T;
               items?:
                 | T
@@ -1393,6 +1666,7 @@ export interface PagesSelect<T extends boolean = true> {
         testimonialsBlock?:
           | T
           | {
+              hidden?: T;
               sectionTitle?: T;
               testimonials?: T;
               id?: T;
@@ -1401,6 +1675,7 @@ export interface PagesSelect<T extends boolean = true> {
         logoWall?:
           | T
           | {
+              hidden?: T;
               sectionTitle?: T;
               awards?: T;
               id?: T;
@@ -1429,6 +1704,8 @@ export interface ProductsSelect<T extends boolean = true> {
   category?: T;
   categoryName?: T;
   tagline?: T;
+  rating?: T;
+  reviewCount?: T;
   highlights?:
     | T
     | {
@@ -1496,6 +1773,7 @@ export interface ProductsSelect<T extends boolean = true> {
               anchorLabel?: T;
               heading?: T;
               subheading?: T;
+              subheadingPosition?: T;
               body?: T;
               image?: T;
               layout?: T;
@@ -1515,11 +1793,14 @@ export interface ProductsSelect<T extends boolean = true> {
           | {
               anchorLabel?: T;
               heading?: T;
+              intro?: T;
+              layout?: T;
               tabs?:
                 | T
                 | {
                     label?: T;
                     image?: T;
+                    caption?: T;
                     rows?:
                       | T
                       | {
@@ -1559,6 +1840,7 @@ export interface ProductsSelect<T extends boolean = true> {
           | {
               anchorLabel?: T;
               heading?: T;
+              intro?: T;
               columns?:
                 | T
                 | {
@@ -1675,6 +1957,7 @@ export interface CategoriesSelect<T extends boolean = true> {
   slug?: T;
   parent?: T;
   showInStrip?: T;
+  stripBadge?: T;
   icon?: T;
   heroImage?: T;
   heroTagline?: T;
@@ -1692,6 +1975,8 @@ export interface MenuPanelsSelect<T extends boolean = true> {
   _order?: T;
   title?: T;
   slug?: T;
+  mode?: T;
+  category?: T;
   sections?:
     | T
     | {
@@ -1701,6 +1986,7 @@ export interface MenuPanelsSelect<T extends boolean = true> {
         featured?:
           | T
           | {
+              product?: T;
               image?: T;
               title?: T;
               specLine?: T;
@@ -1711,6 +1997,7 @@ export interface MenuPanelsSelect<T extends boolean = true> {
         cards?:
           | T
           | {
+              product?: T;
               image?: T;
               title?: T;
               specLine?: T;
@@ -1806,6 +2093,16 @@ export interface MediaSelect<T extends boolean = true> {
               filesize?: T;
               filename?: T;
             };
+        full?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+            };
       };
 }
 /**
@@ -1832,6 +2129,20 @@ export interface AwardsSelect<T extends boolean = true> {
   name?: T;
   logo?: T;
   url?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "subscribers_select".
+ */
+export interface SubscribersSelect<T extends boolean = true> {
+  email?: T;
+  subscribedAt?: T;
+  status?: T;
+  source?: T;
+  consent?: T;
+  note?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -1961,6 +2272,10 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
  */
 export interface Header {
   id: number;
+  /**
+   * Тънката сива лента НАД менюто — линк, промо текст и надпис за регион. Изключена по подразбиране. Полетата отдолу се пазят и когато е изключена.
+   */
+  utilityBarEnabled?: boolean | null;
   topLeftLabel?: string | null;
   topLeftUrl?: string | null;
   topPromoText?: string | null;
@@ -2163,6 +2478,10 @@ export interface SiteSetting {
    * Двойно обозначаване EUR / BGN по фиксирания курс 1.95583. Изисква се през преходния период след въвеждането на еврото.
    */
   showBgnPrices?: boolean | null;
+  /**
+   * Стои до задължителната отметка във формата за бюлетин. Изисква се от ЗЗЛД — затова е поле, а не зашит текст.
+   */
+  newsletterConsentText?: string | null;
   companyName?: string | null;
   vatNumber?: string | null;
   address?: string | null;
@@ -2195,6 +2514,7 @@ export interface PayloadJobsStat {
  * via the `definition` "header_select".
  */
 export interface HeaderSelect<T extends boolean = true> {
+  utilityBarEnabled?: T;
   topLeftLabel?: T;
   topLeftUrl?: T;
   topPromoText?: T;
@@ -2311,6 +2631,7 @@ export interface SiteSettingsSelect<T extends boolean = true> {
   brandColor?: T;
   shopUrl?: T;
   showBgnPrices?: T;
+  newsletterConsentText?: T;
   companyName?: T;
   vatNumber?: T;
   address?: T;
