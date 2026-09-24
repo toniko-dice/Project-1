@@ -10,12 +10,29 @@ export const RelatedProducts: Block = {
     anchorField,
     { name: 'heading', type: 'text', label: 'Заглавие', defaultValue: 'Може да ви заинтересува' },
     {
+      name: 'mode',
+      type: 'select',
+      label: 'Съдържание',
+      defaultValue: 'auto',
+      options: [
+        { label: 'Автоматично — съвместими аксесоари', value: 'auto' },
+        { label: 'Ръчен избор', value: 'manual' },
+      ],
+      admin: {
+        description:
+          'Автоматично: аксесоарите, при които в „Съвместим с" е избран този продукт или неговата серия. Ръчно: списъкът по-долу.',
+      },
+    },
+    {
       name: 'products',
       type: 'relationship',
       relationTo: 'products',
       hasMany: true,
       label: 'Продукти',
-      admin: { description: 'Подредбата тук е подредбата на екрана.' },
+      admin: {
+        condition: (_, siblingData) => siblingData?.mode !== 'auto',
+        description: 'Подредбата тук е подредбата на екрана.',
+      },
     },
   ],
 }

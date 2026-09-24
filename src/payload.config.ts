@@ -15,6 +15,7 @@ import { Media } from './collections/Media'
 import { MenuPanels } from './collections/MenuPanels'
 import { Pages } from './collections/Pages'
 import { Products } from './collections/Products'
+import { Redirects } from './collections/Redirects'
 import { Subscribers } from './collections/Subscribers'
 import { Testimonials } from './collections/Testimonials'
 import { Users } from './collections/Users'
@@ -46,6 +47,7 @@ export default buildConfig({
     Subscribers,
     Backups,
     Users,
+    Redirects,
   ],
   globals: [Header, Footer, Design, SiteSettings],
   // Архивирането по график минава през опашката за задачи на Payload.

@@ -77,6 +77,7 @@ export interface Config {
     subscribers: Subscriber;
     backups: Backup;
     users: User;
+    redirects: Redirect;
     'payload-kv': PayloadKv;
     'payload-jobs': PayloadJob;
     'payload-locked-documents': PayloadLockedDocument;
@@ -95,6 +96,7 @@ export interface Config {
     subscribers: SubscribersSelect<false> | SubscribersSelect<true>;
     backups: BackupsSelect<false> | BackupsSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
+    redirects: RedirectsSelect<false> | RedirectsSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-jobs': PayloadJobsSelect<false> | PayloadJobsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
@@ -549,7 +551,7 @@ export interface Media {
   };
 }
 /**
- * Категориите са на две нива: главна категория (напр. „Портативни електроцентрали") и серия под нея (напр. „Серия DELTA"). Серията се закача към главната чрез полето „Подкатегория на".
+ * Категориите са на три нива: главна категория („Портативни електроцентрали") → серия („DELTA серия") → подсерия („DELTA 3 серия"). Всяко ниво се закача към горното с полето „Подкатегория на". Продуктът се слага в най-долното ниво, което го описва.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "categories".
@@ -563,7 +565,7 @@ export interface Category {
    */
   slug: string;
   /**
-   * Оставете празно за главна категория. Попълнете, за да стане серия под друга категория.
+   * Празно = главна категория. Изберете главна, за да стане серия; изберете серия, за да стане подсерия. Подсерията няма собствена страница — показва се като раздел на страницата на серията.
    */
   parent?: (number | null) | Category;
   /**
@@ -583,9 +585,314 @@ export interface Category {
    */
   heroImage?: (number | null) | Media;
   heroTagline?: string | null;
+  /**
+   * По избор. Показва се между описанието и продуктите. Препоръчително 2400×800px.
+   */
+  banner?: (number | null) | Media;
+  /**
+   * Кратък въвеждащ текст под името на категорията. Ползва се и като описание за търсачки, ако полето в раздел SEO е празно.
+   */
   description?: string | null;
+  layout?:
+    | (
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Нула спира автоматичната смяна. Важи само при повече от един слайд.
+             */
+            autoplaySeconds?: number | null;
+            slides?:
+              | {
+                  /**
+                   * По избор. Малка картинка — в оригинала това е „30 дни гаранция за цената". Показва се с истинската си височина, до 40px.
+                   */
+                  badgeImage?: (number | null) | Media;
+                  /**
+                   * Малкият текст над заглавието. Напр. „Серия EcoFlow STREAM".
+                   */
+                  eyebrow?: string | null;
+                  eyebrowColor?: ('white' | 'orange') | null;
+                  heading?: string | null;
+                  subheading?: string | null;
+                  /**
+                   * Напр. срок на промоцията: „5 – 31 август".
+                   */
+                  note?: string | null;
+                  /**
+                   * Препоръчително 2400×1000px. Текстът ляга върху него.
+                   */
+                  image?: (number | null) | Media;
+                  /**
+                   * По желание. Ако е празно, се ползва основното.
+                   */
+                  imageMobile?: (number | null) | Media;
+                  cta?: {
+                    label?: string | null;
+                    /**
+                     * Вътрешен път (/products) или пълен адрес към външния магазин.
+                     */
+                    url?: string | null;
+                    newTab?: boolean | null;
+                    /**
+                     * Зависи от снимката отдолу. В оригинала бутоните върху банери са бели.
+                     */
+                    style?: ('light' | 'dark') | null;
+                  };
+                  align?: ('left' | 'center' | 'right') | null;
+                  theme?: ('dark' | 'light') | null;
+                  /**
+                   * Увеличете, ако текстът не се чете добре върху снимката.
+                   */
+                  overlay?: ('none' | 'light' | 'medium' | 'strong') | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'heroBanner';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Подредбата тук определя реда на екрана. Препоръчително 6–9 броя.
+             */
+            categories?: (number | Category)[] | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'categoryStrip';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            sectionTitle?: string | null;
+            subtitle?: string | null;
+            products?: (number | Product)[] | null;
+            cardStyle?: ('image' | 'price') | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'productCarousel';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            heading?: string | null;
+            cards?:
+              | {
+                  /**
+                   * Запълва цялата карта. Препоръчително 800×1000px (портрет).
+                   */
+                  image?: (number | null) | Media;
+                  /**
+                   * Малкият оранжев текст най-отгоре. Напр. „Ново" или „Горещо 🔥".
+                   */
+                  tag?: string | null;
+                  heading?: string | null;
+                  subheading?: string | null;
+                  textTheme?: ('light' | 'dark') | null;
+                  /**
+                   * До два бутона на един ред под текста. Може и без нито един.
+                   */
+                  buttons?:
+                    | {
+                        label?: string | null;
+                        url?: string | null;
+                        style?: ('white' | 'outline' | 'black') | null;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'bannerCarousel';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Напр. "Домашно резервно захранване".
+             */
+            sectionTitle?: string | null;
+            showBanner?: boolean | null;
+            banner?: {
+              eyebrow?: string | null;
+              eyebrowColor?: ('white' | 'orange') | null;
+              heading?: string | null;
+              subheading?: string | null;
+              /**
+               * Напр. "от 7 299 €" или "спестявате до 1 200 €".
+               */
+              priceNote?: string | null;
+              /**
+               * Препоръчително 2400×800px. Остава задължително и при видео — показва се, докато то се зареди.
+               */
+              image?: (number | null) | Media;
+              /**
+               * По избор. MP4 (H.264), 1920px широчина, без звук, до 20 MB. Върти се само, без бутони. При включена системна настройка за намалено движение се показва снимката.
+               */
+              video?: (number | null) | Media;
+              cta?: {
+                label?: string | null;
+                /**
+                 * Вътрешен път (/products) или пълен адрес към външния магазин.
+                 */
+                url?: string | null;
+                newTab?: boolean | null;
+                /**
+                 * Зависи от снимката отдолу. В оригинала бутоните върху банери са бели.
+                 */
+                style?: ('light' | 'dark') | null;
+              };
+              theme?: ('dark' | 'light') | null;
+            };
+            /**
+             * Подредбата тук определя реда на екрана. Препоръчително 4–5 броя — на широк екран се показват пет колони.
+             */
+            products?: (number | Product)[] | null;
+            showMoreTile?: boolean | null;
+            moreTile?: {
+              label?: string | null;
+              url?: string | null;
+              /**
+               * В оригинала това е групова снимка на продуктите от серията.
+               */
+              image?: (number | null) | Media;
+              description?: string | null;
+              secondaryLabel?: string | null;
+              secondaryUrl?: string | null;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'bannerProductRow';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            sectionTitle?: string | null;
+            cards?:
+              | {
+                  heading?: string | null;
+                  description?: string | null;
+                  image?: (number | null) | Media;
+                  cta?: {
+                    label?: string | null;
+                    /**
+                     * Вътрешен път (/products) или пълен адрес към външния магазин.
+                     */
+                    url?: string | null;
+                    newTab?: boolean | null;
+                    /**
+                     * Зависи от снимката отдолу. В оригинала бутоните върху банери са бели.
+                     */
+                    style?: ('light' | 'dark') | null;
+                  };
+                  theme?: ('dark' | 'light') | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'promoCards';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * По избор. В оригинала някои банери са без заглавие над тях.
+             */
+            sectionTitle?: string | null;
+            eyebrow?: string | null;
+            eyebrowColor?: ('white' | 'orange') | null;
+            heading?: string | null;
+            subheading?: string | null;
+            /**
+             * По избор. Напр. „от 1199 €". Празно поле не показва нищо.
+             */
+            priceNote?: string | null;
+            image?: (number | null) | Media;
+            cta?: {
+              label?: string | null;
+              /**
+               * Вътрешен път (/products) или пълен адрес към външния магазин.
+               */
+              url?: string | null;
+              newTab?: boolean | null;
+              /**
+               * Зависи от снимката отдолу. В оригинала бутоните върху банери са бели.
+               */
+              style?: ('light' | 'dark') | null;
+            };
+            align?: ('left' | 'center' | 'right') | null;
+            theme?: ('dark' | 'light') | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'wideBanner';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            sectionTitle?: string | null;
+            items?:
+              | {
+                  icon?: ('shield' | 'globe' | 'card' | 'support' | 'return' | 'truck' | 'bolt' | 'certificate') | null;
+                  title?: string | null;
+                  description?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'benefitsGrid';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            sectionTitle?: string | null;
+            testimonials?: (number | Testimonial)[] | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'testimonialsBlock';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            sectionTitle?: string | null;
+            awards?: (number | Award)[] | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'logoWall';
+          }
+      )[]
+    | null;
   metaTitle?: string | null;
   metaDescription?: string | null;
+  /**
+   * Включи за категории с под 3 продукта или без собствен текст — да не се индексират като празни страници. Страницата остава достъпна; само излиза от sitemap.xml и получава noindex.
+   */
+  noindex?: boolean | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -624,6 +931,9 @@ export interface Product {
    * Попълва се само — взима се от избраната по-горе категория.
    */
   categoryName?: string | null;
+  categorySlug?: string | null;
+  categoryParentSlug?: string | null;
+  categoryGrandparentSlug?: string | null;
   /**
    * Редът под името в продуктовата карта. Напр. "6144Wh капацитет / 7200W изход".
    */
@@ -674,6 +984,21 @@ export interface Product {
         image: number | Media;
         id?: string | null;
       }[]
+    | null;
+  /**
+   * Избери серии или конкретни модели, с които работи. Показва се на страницата на серията и в „Свързани продукти" на модела.
+   */
+  compatibleWith?:
+    | (
+        | {
+            relationTo: 'categories';
+            value: number | Category;
+          }
+        | {
+            relationTo: 'products';
+            value: number | Product;
+          }
+      )[]
     | null;
   /**
    * Оригиналът показва спецификациите като плосък списък. Групите са наша добавка — при 30+ реда плоският списък е нечетим. Заглавието на групата е по избор: оставите ли го празно, редовете се сливат с предишната група.
@@ -982,6 +1307,10 @@ export interface Product {
             anchorLabel?: string | null;
             heading?: string | null;
             /**
+             * Автоматично: аксесоарите, при които в „Съвместим с" е избран този продукт или неговата серия. Ръчно: списъкът по-долу.
+             */
+            mode?: ('auto' | 'manual') | null;
+            /**
              * Подредбата тук е подредбата на екрана.
              */
             products?: (number | Product)[] | null;
@@ -1105,7 +1434,14 @@ export interface MenuPanel {
   sections?:
     | {
         heading: string;
+        /**
+         * Страницата, към която водят линкът „Виж всички" и плочката в края на мрежата. Адресът се извежда от категорията.
+         */
+        viewAllCategory?: (number | null) | Category;
         viewAllLabel?: string | null;
+        /**
+         * Ползва се само ако е попълнен — вместо категорията по-горе.
+         */
         viewAllUrl?: string | null;
         /**
          * Заема цялата височина на мрежата. Оставете името и продукта празни, за да я скриете.
@@ -1177,6 +1513,9 @@ export interface MenuPanel {
             }[]
           | null;
         showViewAllTile?: boolean | null;
+        /**
+         * Празно — плочката води към категорията по-горе.
+         */
         viewAllTileUrl?: string | null;
         id?: string | null;
       }[]
@@ -1264,6 +1603,26 @@ export interface User {
     | null;
   password?: string | null;
   collection: 'users';
+}
+/**
+ * Стари адреси, които водят към новите. Попълва се само — при смяна на категория или на адрес на продукт. Ред се трие само ако старият адрес вече не трябва да работи.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "redirects".
+ */
+export interface Redirect {
+  id: number;
+  /**
+   * Пътят без домейна, напр. /products/delta-3.
+   */
+  from: string;
+  to: string;
+  /**
+   * Какво е предизвикало пренасочването — за четене от човек.
+   */
+  reason?: string | null;
+  updatedAt: string;
+  createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1429,6 +1788,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'users';
         value: number | User;
+      } | null)
+    | ({
+        relationTo: 'redirects';
+        value: number | Redirect;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -1706,6 +2069,9 @@ export interface ProductsSelect<T extends boolean = true> {
   barcodeInternal?: T;
   category?: T;
   categoryName?: T;
+  categorySlug?: T;
+  categoryParentSlug?: T;
+  categoryGrandparentSlug?: T;
   tagline?: T;
   rating?: T;
   reviewCount?: T;
@@ -1730,6 +2096,7 @@ export interface ProductsSelect<T extends boolean = true> {
         image?: T;
         id?: T;
       };
+  compatibleWith?: T;
   specGroups?:
     | T
     | {
@@ -1918,6 +2285,7 @@ export interface ProductsSelect<T extends boolean = true> {
           | {
               anchorLabel?: T;
               heading?: T;
+              mode?: T;
               products?: T;
               id?: T;
               blockName?: T;
@@ -1964,9 +2332,216 @@ export interface CategoriesSelect<T extends boolean = true> {
   icon?: T;
   heroImage?: T;
   heroTagline?: T;
+  banner?: T;
   description?: T;
+  layout?:
+    | T
+    | {
+        heroBanner?:
+          | T
+          | {
+              hidden?: T;
+              autoplaySeconds?: T;
+              slides?:
+                | T
+                | {
+                    badgeImage?: T;
+                    eyebrow?: T;
+                    eyebrowColor?: T;
+                    heading?: T;
+                    subheading?: T;
+                    note?: T;
+                    image?: T;
+                    imageMobile?: T;
+                    cta?:
+                      | T
+                      | {
+                          label?: T;
+                          url?: T;
+                          newTab?: T;
+                          style?: T;
+                        };
+                    align?: T;
+                    theme?: T;
+                    overlay?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        categoryStrip?:
+          | T
+          | {
+              hidden?: T;
+              categories?: T;
+              id?: T;
+              blockName?: T;
+            };
+        productCarousel?:
+          | T
+          | {
+              hidden?: T;
+              sectionTitle?: T;
+              subtitle?: T;
+              products?: T;
+              cardStyle?: T;
+              id?: T;
+              blockName?: T;
+            };
+        bannerCarousel?:
+          | T
+          | {
+              hidden?: T;
+              heading?: T;
+              cards?:
+                | T
+                | {
+                    image?: T;
+                    tag?: T;
+                    heading?: T;
+                    subheading?: T;
+                    textTheme?: T;
+                    buttons?:
+                      | T
+                      | {
+                          label?: T;
+                          url?: T;
+                          style?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        bannerProductRow?:
+          | T
+          | {
+              hidden?: T;
+              sectionTitle?: T;
+              showBanner?: T;
+              banner?:
+                | T
+                | {
+                    eyebrow?: T;
+                    eyebrowColor?: T;
+                    heading?: T;
+                    subheading?: T;
+                    priceNote?: T;
+                    image?: T;
+                    video?: T;
+                    cta?:
+                      | T
+                      | {
+                          label?: T;
+                          url?: T;
+                          newTab?: T;
+                          style?: T;
+                        };
+                    theme?: T;
+                  };
+              products?: T;
+              showMoreTile?: T;
+              moreTile?:
+                | T
+                | {
+                    label?: T;
+                    url?: T;
+                    image?: T;
+                    description?: T;
+                    secondaryLabel?: T;
+                    secondaryUrl?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        promoCards?:
+          | T
+          | {
+              hidden?: T;
+              sectionTitle?: T;
+              cards?:
+                | T
+                | {
+                    heading?: T;
+                    description?: T;
+                    image?: T;
+                    cta?:
+                      | T
+                      | {
+                          label?: T;
+                          url?: T;
+                          newTab?: T;
+                          style?: T;
+                        };
+                    theme?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        wideBanner?:
+          | T
+          | {
+              hidden?: T;
+              sectionTitle?: T;
+              eyebrow?: T;
+              eyebrowColor?: T;
+              heading?: T;
+              subheading?: T;
+              priceNote?: T;
+              image?: T;
+              cta?:
+                | T
+                | {
+                    label?: T;
+                    url?: T;
+                    newTab?: T;
+                    style?: T;
+                  };
+              align?: T;
+              theme?: T;
+              id?: T;
+              blockName?: T;
+            };
+        benefitsGrid?:
+          | T
+          | {
+              hidden?: T;
+              sectionTitle?: T;
+              items?:
+                | T
+                | {
+                    icon?: T;
+                    title?: T;
+                    description?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        testimonialsBlock?:
+          | T
+          | {
+              hidden?: T;
+              sectionTitle?: T;
+              testimonials?: T;
+              id?: T;
+              blockName?: T;
+            };
+        logoWall?:
+          | T
+          | {
+              hidden?: T;
+              sectionTitle?: T;
+              awards?: T;
+              id?: T;
+              blockName?: T;
+            };
+      };
   metaTitle?: T;
   metaDescription?: T;
+  noindex?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -1984,6 +2559,7 @@ export interface MenuPanelsSelect<T extends boolean = true> {
     | T
     | {
         heading?: T;
+        viewAllCategory?: T;
         viewAllLabel?: T;
         viewAllUrl?: T;
         featured?:
@@ -2197,6 +2773,17 @@ export interface UsersSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "redirects_select".
+ */
+export interface RedirectsSelect<T extends boolean = true> {
+  from?: T;
+  to?: T;
+  reason?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv_select".
  */
 export interface PayloadKvSelect<T extends boolean = true> {
@@ -2301,7 +2888,14 @@ export interface Header {
    */
   items?:
     | {
+        /**
+         * Страницата, към която води точката. Адресът се извежда от категорията и следва преименуванията ѝ.
+         */
+        category?: (number | null) | Category;
         label: string;
+        /**
+         * Само ако точката води извън категориите.
+         */
         url?: string | null;
         badge?: ('none' | 'hot' | 'new') | null;
         /**
@@ -2529,6 +3123,7 @@ export interface HeaderSelect<T extends boolean = true> {
   items?:
     | T
     | {
+        category?: T;
         label?: T;
         url?: T;
         badge?: T;

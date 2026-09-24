@@ -1,32 +1,7 @@
 import type { CollectionConfig } from 'payload'
 import { cleanSlug } from '../lib/slug'
 import { revalidatePage, revalidatePageDelete } from '../lib/revalidate'
-import type { Block } from 'payload'
-import { hiddenField } from '../blocks/shared'
-import {
-  BannerCarousel,
-  BannerProductRow,
-  BenefitsGrid,
-  CategoryStrip,
-  HeroBanner,
-  LogoWall,
-  ProductCarousel,
-  PromoCards,
-  TestimonialsBlock,
-  WideBanner,
-} from '../blocks'
-
-/**
- * Слага отметката „Скрит" най-отгоре във всеки блок.
- *
- * Тук, а не поотделно във всеки файл — така новите блокове я получават
- * сами и няма как да се забрави. Блокът не се променя на място, а се
- * копира: конфигурациите се внасят и другаде.
- */
-const withHidden = (block: Block): Block => ({
-  ...block,
-  fields: [hiddenField, ...block.fields],
-})
+import { layoutField } from '../blocks/pageLayout'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -66,24 +41,7 @@ export const Pages: CollectionConfig = {
         ],
       },
     },
-    {
-      name: 'layout',
-      type: 'blocks',
-      label: 'Секции на страницата',
-      labels: { singular: 'Секция', plural: 'Секции' },
-      blocks: [
-        HeroBanner,
-        CategoryStrip,
-        ProductCarousel,
-        BannerCarousel,
-        BannerProductRow,
-        PromoCards,
-        WideBanner,
-        BenefitsGrid,
-        TestimonialsBlock,
-        LogoWall,
-      ].map(withHidden),
-    },
+    layoutField(),
     {
       type: 'collapsible',
       label: 'SEO',

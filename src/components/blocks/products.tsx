@@ -5,6 +5,7 @@ import Link from 'next/link'
 import type { Category, Page, Product } from '@/payload-types'
 import { formatEur } from '@/lib/format'
 import { bannerImage, mediaUrl, productImage } from '@/lib/media'
+import { categoryPath, productPath } from '@/lib/urls'
 import { SectionImage } from '../SectionImage'
 import { ProductCard } from '../ProductCard'
 import { ScrollRow } from '../ScrollRow'
@@ -49,7 +50,7 @@ export const CategoryStripBlock = ({ block }: { block: BlockOf<'categoryStrip'> 
             return (
               <Link
                 key={cat.id}
-                href={`/categories/${cat.slug}`}
+                href={categoryPath(cat.slug)}
                 className="flex min-w-[110px] max-w-[180px] flex-1 basis-0 snap-start flex-col items-center gap-2 rounded-lg p-2 text-center transition-colors duration-150 hover:bg-tile"
               >
                 {/*
@@ -118,7 +119,7 @@ export const ProductCarouselBlock = ({
             return (
               <div key={p.id} className="w-[248px] shrink-0 snap-start sm:w-[300px]">
                 <Link
-                  href={`/products/${p.slug}`}
+                  href={productPath(p)}
                   className="group block cursor-pointer overflow-hidden rounded-xl bg-night"
                 >
                   <div className="p-4 text-white">

@@ -1,5 +1,6 @@
 import type { Media, Product } from '@/payload-types'
 import { BADGE_LABELS } from './format'
+import { productPath } from './urls'
 
 type MaybeMedia = number | Media | null | undefined
 type MaybeProduct = number | Product | null | undefined
@@ -133,7 +134,7 @@ export const productCardData = (
     imageAlt: image.alt || title,
     title,
     tagline: filled(overrides.tagline) ?? filled(doc?.tagline) ?? null,
-    url: filled(overrides.url) ?? (doc ? `/products/${doc.slug}` : null),
+    url: filled(overrides.url) ?? (doc ? productPath(doc) : null),
     price: overrides.price ?? doc?.price ?? null,
     comparePrice: overrides.comparePrice ?? doc?.compareAtPrice ?? null,
     label: filled(overrides.label),

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import type { Product } from '@/payload-types'
 import { AVAILABILITY_LABELS, formatBgn, formatEur } from '@/lib/format'
 import { productCardData } from '@/lib/media'
+import { productPath } from '@/lib/urls'
 import { ImagePlaceholder } from './ImagePlaceholder'
 
 /**
@@ -62,7 +63,7 @@ export const ProductCard = ({
 
   return (
     <Link
-      href={`/products/${product.slug}`}
+      href={productPath(product)}
       className={`group flex cursor-pointer flex-col overflow-hidden rounded-xl bg-surface p-4 transition-shadow duration-200 hover:shadow-md ${className}`}
     >
       {/* Снимката стои на бял фон, центрирана, без изрязване. */}

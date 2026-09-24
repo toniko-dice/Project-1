@@ -14,6 +14,7 @@
     "generate:types": "payload generate:types",
     "generate:importmap": "payload generate:importmap",
     "media:regenerate": "payload run src/media-regenerate.ts --",
+    "migrate:tree": "payload run src/migrate-tree.ts --",
     "seed": "payload run src/seed.ts --",
     "seed:menu": "payload run src/seed-menu.ts",
     "migrate": "payload run src/pre-migrate.ts && payload run src/health-check.ts && payload migrate && payload run src/health-check.ts",

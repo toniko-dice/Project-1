@@ -36,6 +36,10 @@ export const Products: CollectionConfig = {
   defaultPopulate: {
     title: true,
     slug: true,
+    // Виртуалните полета за адреса — без тях свързаният продукт няма адрес.
+    categorySlug: true,
+    categoryParentSlug: true,
+    categoryGrandparentSlug: true,
     image: true,
     tagline: true,
     price: true,
@@ -176,6 +180,35 @@ export const Products: CollectionConfig = {
                 readOnly: true,
                 description: 'Попълва се само — взима се от избраната по-горе категория.',
               },
+            },
+            /*
+              Адресът на продукта е `/kategorii/<серия>/<slug>`, а серията е
+              категорията от ВТОРО ниво над него. За да се знае на кое ниво
+              е категорията, трябват родителят и родителят на родителя.
+
+              Тези три полета са ВИРТУАЛНИ — не се пазят в базата, Payload
+              ги сглобява при четене от самите категории. Така адресът е
+              верен при всяка дълбочина на четенето (карта в меню с depth 1,
+              списък с depth 2) и не остарява при преименуване. Истински
+              колони щяха да се разминат при първото местене на категория.
+            */
+            {
+              name: 'categorySlug',
+              type: 'text',
+              virtual: 'category.slug',
+              admin: { hidden: true },
+            },
+            {
+              name: 'categoryParentSlug',
+              type: 'text',
+              virtual: 'category.parent.slug',
+              admin: { hidden: true },
+            },
+            {
+              name: 'categoryGrandparentSlug',
+              type: 'text',
+              virtual: 'category.parent.parent.slug',
+              admin: { hidden: true },
             },
             {
               name: 'tagline',
@@ -358,6 +391,30 @@ export const Products: CollectionConfig = {
                 },
               },
               fields: [{ name: 'image', type: 'upload', relationTo: 'media', required: true }],
+            },
+          ],
+        },
+        {
+          label: 'Съвместимост',
+          description:
+            'За аксесоари. Оттук се пълнят сами разделът „Аксесоари" на страницата на серията, „Свързани продукти" на модела и секцията „Аксесоари" в панела на менюто.',
+          fields: [
+            {
+              /*
+                Аксесоарът стои в СВОЯТА категория (Кабели, Адаптери) и има
+                един адрес. За кои станции е — казва това поле, не отделна
+                подкатегория „Аксесоари за DELTA". Иначе един кабел, който
+                пасва на три серии, трябва да е на три места.
+              */
+              name: 'compatibleWith',
+              type: 'relationship',
+              relationTo: ['categories', 'products'],
+              hasMany: true,
+              label: 'Съвместим с',
+              admin: {
+                description:
+                  'Избери серии или конкретни модели, с които работи. Показва се на страницата на серията и в „Свързани продукти" на модела.',
+              },
             },
           ],
         },

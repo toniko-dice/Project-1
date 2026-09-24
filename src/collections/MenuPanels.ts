@@ -181,6 +181,24 @@ export const MenuPanels: CollectionConfig = {
       fields: [
         { name: 'heading', type: 'text', required: true, label: 'Заглавие на секцията' },
         {
+          /*
+            „Виж всички" сочи КАТЕГОРИЯ, не адрес.
+
+            Ръчно изписаните адреси от първия seed сочеха категории,
+            които не съществуват (`/categories/delta-seriya`) — всяко
+            „Виж всички" даваше 404. Адресът вече се извежда от
+            категорията и следва преименуванията ѝ.
+          */
+          name: 'viewAllCategory',
+          type: 'relationship',
+          relationTo: 'categories',
+          label: 'Категория на „Виж всички"',
+          admin: {
+            description:
+              'Страницата, към която водят линкът „Виж всички" и плочката в края на мрежата. Адресът се извежда от категорията.',
+          },
+        },
+        {
           type: 'row',
           fields: [
             {
@@ -193,8 +211,11 @@ export const MenuPanels: CollectionConfig = {
             {
               name: 'viewAllUrl',
               type: 'text',
-              label: 'Адрес на „Виж всички"',
-              admin: { width: '50%' },
+              label: 'Друг адрес (по избор)',
+              admin: {
+                width: '50%',
+                description: 'Ползва се само ако е попълнен — вместо категорията по-горе.',
+              },
             },
           ],
         },
@@ -236,10 +257,11 @@ export const MenuPanels: CollectionConfig = {
             {
               name: 'viewAllTileUrl',
               type: 'text',
-              label: 'Адрес на плочката',
+              label: 'Друг адрес на плочката (по избор)',
               admin: {
                 width: '50%',
                 condition: (_, sibling) => Boolean(sibling?.showViewAllTile),
+                description: 'Празно — плочката води към категорията по-горе.',
               },
             },
           ],

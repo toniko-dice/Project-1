@@ -1,6 +1,7 @@
 import type { CollectionConfig } from 'payload'
 import { cleanSlug } from '../lib/slug'
-import { revalidateAll, revalidateAllOnDelete } from '../lib/revalidate'
+import { layoutField } from '../blocks/pageLayout'
+import { revalidateAllOnDelete, revalidateCategory } from '../lib/revalidate'
 
 export const Categories: CollectionConfig = {
   slug: 'categories',
@@ -14,11 +15,11 @@ export const Categories: CollectionConfig = {
     defaultColumns: ['title', 'slug', 'parent'],
     group: 'Каталог',
     description:
-      'Категориите са на две нива: главна категория (напр. „Портативни електроцентрали") и серия под нея (напр. „Серия DELTA"). Серията се закача към главната чрез полето „Подкатегория на".',
+      'Категориите са на три нива: главна категория („Портативни електроцентрали") → серия („DELTA серия") → подсерия („DELTA 3 серия"). Всяко ниво се закача към горното с полето „Подкатегория на". Продуктът се слага в най-долното ниво, което го описва.',
   },
   access: { read: () => true },
   hooks: {
-    afterChange: [revalidateAll],
+    afterChange: [revalidateCategory],
     afterDelete: [revalidateAllOnDelete],
   },
   fields: [
@@ -52,7 +53,7 @@ export const Categories: CollectionConfig = {
               label: 'Подкатегория на',
               admin: {
                 description:
-                  'Оставете празно за главна категория. Попълнете, за да стане серия под друга категория.',
+                  'Празно = главна категория. Изберете главна, за да стане серия; изберете серия, за да стане подсерия. Подсерията няма собствена страница — показва се като раздел на страницата на серията.',
               },
               filterOptions: ({ id }) => (id ? { id: { not_equals: id } } : true),
             },
@@ -92,14 +93,48 @@ export const Categories: CollectionConfig = {
               admin: { description: 'Банерът най-отгоре на страницата. Препоръчително 2400×800px.' },
             },
             { name: 'heroTagline', type: 'text', label: 'Подзаглавие в банера' },
-            { name: 'description', type: 'textarea', label: 'Описание под продуктите' },
+            {
+              name: 'banner',
+              type: 'upload',
+              relationTo: 'media',
+              label: 'Широк банер над списъка',
+              admin: {
+                description:
+                  'По избор. Показва се между описанието и продуктите. Препоръчително 2400×800px.',
+              },
+            },
+            {
+              name: 'description',
+              type: 'textarea',
+              label: 'Описание под заглавието',
+              admin: {
+                description:
+                  'Кратък въвеждащ текст под името на категорията. Ползва се и като описание за търсачки, ако полето в раздел SEO е празно.',
+              },
+            },
           ],
+        },
+        {
+          label: 'Секции',
+          description:
+            'По избор. Промо секции над списъка с продукти — същите блокове като при страниците. Празно = само заглавие, описание и списък.',
+          fields: [layoutField()],
         },
         {
           label: 'SEO',
           fields: [
             { name: 'metaTitle', type: 'text', label: 'Заглавие за търсачки' },
             { name: 'metaDescription', type: 'textarea', label: 'Описание за търсачки' },
+            {
+              name: 'noindex',
+              type: 'checkbox',
+              label: 'Да не се индексира от търсачки',
+              defaultValue: false,
+              admin: {
+                description:
+                  'Включи за категории с под 3 продукта или без собствен текст — да не се индексират като празни страници. Страницата остава достъпна; само излиза от sitemap.xml и получава noindex.',
+              },
+            },
           ],
         },
       ],

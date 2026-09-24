@@ -3,7 +3,8 @@ import { unstable_cache } from 'next/cache'
 import { getPayload } from 'payload'
 import { cache } from 'react'
 
-import type { Product } from '@/payload-types'
+import type { Category, Product } from '@/payload-types'
+import type { Where } from 'payload'
 
 export const getPayloadClient = cache(async () => getPayload({ config }))
 
@@ -101,16 +102,24 @@ export const getProduct = cache(async (slug: string) =>
   ),
 )
 
-/** Адресите на публикуваните продукти — за предварително построяване на страниците. */
-export const getPublishedProductSlugs = cache(async (): Promise<string[]> => {
+/**
+ * Публикуваните продукти — за предварително построяване и за sitemap.
+ *
+ * `depth: 2` е нужен заради адреса: серията на продукта е категорията от
+ * второ ниво, тоест трябват родителят и родителят на родителя.
+ */
+export type ProductForUrl = Pick<Product, 'id' | 'slug' | 'title' | 'category' | 'updatedAt'>
+
+export const getPublishedProducts = cache(async (): Promise<ProductForUrl[]> => {
   const payload = await getPayloadClient()
   const result = await payload.find({
     collection: 'products',
     where: { _status: { equals: 'published' } },
-    depth: 0,
+    depth: 2,
     pagination: false,
+    select: { slug: true, title: true, category: true, updatedAt: true },
   })
-  return result.docs.map((p) => p.slug)
+  return result.docs
 })
 
 /**
@@ -149,21 +158,123 @@ export const getSubcategories = cache(async (parentId: number) =>
   }),
 )
 
-/** Публикуваните продукти в категория. Черновите не се показват. */
-export const getProductsInCategory = cache(async (categoryId: number) =>
-  cached(['products-in-category', String(categoryId)], ['product', 'category'], async () => {
-    const payload = await getPayloadClient()
-    const result = await payload.find({
-      collection: 'products',
-      where: {
-        and: [{ category: { equals: categoryId } }, { _status: { equals: 'published' } }],
+/**
+ * Всички категории, плоско, с родителите като номера.
+ *
+ * Дървото е малко (около трийсет реда) и се ползва навсякъде: трохи,
+ * раздели, адреси, sitemap. Една заявка за всичко е по-евтина от
+ * изкачване родител по родител.
+ */
+export const getCategoryTree = cache(async (): Promise<Category[]> =>
+  timed('getCategoryTree', () =>
+    cached(['category-tree'], ['category'], async () => {
+      const payload = await getPayloadClient()
+      const result = await payload.find({
+        collection: 'categories',
+        sort: '_order',
+        pagination: false,
+        depth: 0,
+      })
+      return result.docs
+    }),
+  ),
+)
+
+/** Номерата на категорията и на всичко под нея, на произволна дълбочина. */
+export const categoryBranchIds = (tree: Category[], rootId: number): number[] => {
+  const ids = [rootId]
+  for (let i = 0; i < ids.length; i += 1) {
+    for (const c of tree) {
+      const parent = typeof c.parent === 'number' ? c.parent : c.parent?.id
+      if (parent === ids[i]) ids.push(c.id)
+    }
+  }
+  return ids
+}
+
+/**
+ * Публикуваните продукти в категория И във всичко под нея.
+ *
+ * Страницата на серия показва продуктите от подсериите си, а главната —
+ * от всички серии. Събира се с ЕДНА заявка по списък с номера, не с по
+ * една заявка на ниво.
+ */
+export const getCategoryProducts = cache(async (slug: string, ids: number[]) =>
+  timed(`getCategoryProducts(${slug})`, () =>
+    cached(
+      ['category-products', slug, ids.join(',')],
+      ['product', 'category', `category:${slug}`],
+      async () => {
+        if (!ids.length) return []
+        const payload = await getPayloadClient()
+        const result = await payload.find({
+          collection: 'products',
+          where: {
+            and: [{ category: { in: ids } }, { _status: { equals: 'published' } }],
+          },
+          sort: ['_order', 'title'],
+          pagination: false,
+          depth: 2,
+        })
+        return result.docs
       },
-      sort: '_order',
-      pagination: false,
-      depth: 1,
-    })
-    return result.docs
-  }),
+    ),
+  ),
+)
+
+/**
+ * Аксесоарите, съвместими с дадени категории или модели.
+ *
+ * Аксесоарът стои в своята категория (Кабели, Адаптери) и сочи с
+ * „Съвместим с" сериите и моделите, за които става. Оттук се пълнят
+ * разделът „Аксесоари" на серията, „Свързани продукти" на модела и
+ * секцията „Аксесоари" в панела на менюто — един списък, три места.
+ */
+export const getCompatibleAccessories = cache(
+  async (categoryIds: number[], productIds: number[] = []) =>
+    timed(`getCompatibleAccessories(${categoryIds.length}/${productIds.length})`, () =>
+      cached(
+        ['accessories', categoryIds.join(','), productIds.join(',')],
+        ['product', 'category'],
+        async () => {
+          if (!categoryIds.length && !productIds.length) return []
+          const payload = await getPayloadClient()
+
+          /*
+            Връзката е полиморфна (категории И продукти), затова двете
+            страни се търсят поотделно — Payload не приема смесен списък
+            в едно `in`.
+          */
+          const or: Where[] = []
+          if (categoryIds.length) or.push({ 'compatibleWith.value': { in: categoryIds } })
+          if (productIds.length) or.push({ 'compatibleWith.value': { in: productIds } })
+
+          const result = await payload.find({
+            collection: 'products',
+            where: { and: [{ _status: { equals: 'published' } }, { or }] },
+            sort: ['_order', 'title'],
+            pagination: false,
+            depth: 2,
+          })
+
+          /*
+            Полиморфната връзка не различава „категория 9" от „продукт 9" в
+            заявката — и двете са номер 9. Затова съвпадението се
+            потвърждава тук, по вид и номер.
+          */
+          const cats = new Set(categoryIds)
+          const prods = new Set(productIds)
+          return result.docs.filter((doc) =>
+            (doc.compatibleWith ?? []).some((rel) => {
+              if (!rel || typeof rel !== 'object') return false
+              const id = typeof rel.value === 'number' ? rel.value : rel.value?.id
+              if (typeof id !== 'number') return false
+              return rel.relationTo === 'categories' ? cats.has(id) : prods.has(id)
+            }),
+          )
+        },
+      ),
+    ),
 )
 
 /** Адресите на всички категории — за предварително построяване на страниците. */

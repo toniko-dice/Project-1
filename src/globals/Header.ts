@@ -91,10 +91,33 @@ export const Header: GlobalConfig = {
               },
               fields: [
                 {
+                  /*
+                    Точката сочи КАТЕГОРИЯ, не адрес — както „Виж всички"
+                    в панелите. Ръчните адреси от seed-а сочеха
+                    несъществуващи страници (`/power-stations`).
+                  */
+                  name: 'category',
+                  type: 'relationship',
+                  relationTo: 'categories',
+                  label: 'Категория',
+                  admin: {
+                    description:
+                      'Страницата, към която води точката. Адресът се извежда от категорията и следва преименуванията ѝ.',
+                  },
+                },
+                {
                   type: 'row',
                   fields: [
                     { name: 'label', type: 'text', required: true, label: 'Текст', admin: { width: '40%' } },
-                    { name: 'url', type: 'text', label: 'Адрес', admin: { width: '40%' } },
+                    {
+                      name: 'url',
+                      type: 'text',
+                      label: 'Друг адрес (по избор)',
+                      admin: {
+                        width: '40%',
+                        description: 'Само ако точката води извън категориите.',
+                      },
+                    },
                     {
                       name: 'badge',
                       type: 'select',

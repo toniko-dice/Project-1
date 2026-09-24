@@ -728,12 +728,20 @@ const RelatedProductsBlock = ({
   block,
   id,
   showBgn,
+  accessories,
 }: {
   block: BlockOf<'relatedProducts'>
   id?: string | null
   showBgn: boolean
+  /** Съвместимите аксесоари — за автоматичния режим. */
+  accessories: Product[]
 }) => {
-  const products = resolved<Product>(block.products)
+  /*
+    Автоматично: аксесоарите, при които в „Съвместим с" е избран този
+    продукт или серията му. Списъкът се събира на страницата, за да е
+    една заявка, а не по една на блок.
+  */
+  const products = block.mode === 'manual' ? resolved<Product>(block.products) : accessories
   if (!products.length) return null
 
   return (
@@ -828,11 +836,13 @@ export const RenderProductSections = ({
   anchorIds,
   product,
   showBgn,
+  accessories = [],
 }: {
   sections: Sections
   anchorIds: (string | null)[]
   product: Product
   showBgn: boolean
+  accessories?: Product[]
 }) => (
   <>
     {sections.map((block, i) => {
@@ -857,7 +867,15 @@ export const RenderProductSections = ({
         case 'faqBlock':
           return <FaqBlockRenderer key={key} block={block} id={id} />
         case 'relatedProducts':
-          return <RelatedProductsBlock key={key} block={block} id={id} showBgn={showBgn} />
+          return (
+            <RelatedProductsBlock
+              key={key}
+              block={block}
+              id={id}
+              showBgn={showBgn}
+              accessories={accessories}
+            />
+          )
         case 'footnotes':
           return <FootnotesBlock key={key} block={block} id={id} />
         case 'legalText':

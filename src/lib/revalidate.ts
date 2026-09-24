@@ -1,4 +1,5 @@
 import { revalidatePath, revalidateTag } from 'next/cache'
+import { CATEGORY_BASE, categoryPath, productPath, seriesSlug } from './urls'
 import type {
   CollectionAfterChangeHook,
   CollectionAfterDeleteHook,
@@ -88,24 +89,96 @@ export const revalidatePageDelete: CollectionAfterDeleteHook = ({ doc }) => {
  * Продуктът се вижда на много места — собствената му страница, началната,
  * категорията му, менюто, сравнителните таблици. Затова се чисти всичко.
  */
-export const revalidateProduct: CollectionAfterChangeHook = ({ doc, previousDoc }) => {
-  expireEverything()
-  if (doc?.slug) safeRevalidate(`/products/${doc.slug}`)
-  if (previousDoc?.slug && previousDoc.slug !== doc?.slug) {
-    safeRevalidate(`/products/${previousDoc.slug}`)
+/**
+ * Записва пренасочване от стар адрес към нов.
+ *
+ * Адресът на продукта съдържа серията му, затова смяна на категория или
+ * на slug сменя адреса. Старият остава да работи — линковете отвън
+ * (Google, dice.bg, споделено в социална мрежа) не бива да умират, а
+ * собственикът не трябва да поддържа списък на ръка.
+ *
+ * Дубликат не се създава: полето `from` е уникално и грешката се преглъща.
+ */
+const записПренасочване = async (
+  req: { payload: { create: (args: unknown) => Promise<unknown> } },
+  from: string,
+  to: string,
+  reason: string,
+) => {
+  if (!from || from === to) return
+  try {
+    await req.payload.create({
+      collection: 'redirects',
+      data: { from, to, reason },
+    })
+  } catch {
+    /*
+      Най-честата причина е „вече съществува" — старият адрес е бил сменян
+      и преди. Тогава първият запис е по-верният: той сочи най-стария
+      адрес към текущия, а този щеше да сочи същото.
+    */
   }
+}
+
+export const revalidateProduct: CollectionAfterChangeHook = async ({ doc, previousDoc, req }) => {
+  /* Адресът зависи от slug-а И от серията — и двете могат да се сменят. */
+  const старСлъг = previousDoc?.slug
+  const стараСерия = seriesSlug(previousDoc?.category)
+  const новаСерия = seriesSlug(doc?.category)
+
+  if (старСлъг && (старСлъг !== doc?.slug || стараСерия !== новаСерия)) {
+    const от = стараСерия
+      ? `${CATEGORY_BASE}/${стараСерия}/${старСлъг}`
+      : `${CATEGORY_BASE}/produkt/${старСлъг}`
+    await записПренасочване(
+      req as never,
+      от,
+      productPath(doc as never),
+      старСлъг !== doc?.slug ? 'Сменен адрес на продукта' : 'Продуктът смени категорията си',
+    )
+  }
+
+  expireEverything()
+  /*
+    Адресът на продукта съдържа серията му, а тя се чете от категорията —
+    тук документът е с малка дълбочина. Затова се опреснява цялото
+    разклонение на адресите, а не един път: тагът е едър и без това.
+  */
+  safeRevalidate(CATEGORY_BASE, 'layout')
   return doc
 }
 
 export const revalidateProductDelete: CollectionAfterDeleteHook = ({ doc }) => {
   expireEverything()
-  if (doc?.slug) safeRevalidate(`/products/${doc.slug}`)
+  safeRevalidate(CATEGORY_BASE, 'layout')
   return doc
 }
 
 /** Категориите, панелите, отзивите, отличията и медията се показват навсякъде. */
 export const revalidateAll: CollectionAfterChangeHook = ({ doc }) => {
   expireEverything()
+  return doc
+}
+
+/**
+ * Категория: същото, плюс пренасочване при смяна на адреса.
+ *
+ * Смяната на slug на категория мени и адресите на продуктите под нея —
+ * те се преизчисляват сами, защото се сглобяват от текущата категория.
+ * Тук се пази само адресът на самата категория.
+ */
+export const revalidateCategory: CollectionAfterChangeHook = async ({ doc, previousDoc, req }) => {
+  expireEverything()
+
+  if (previousDoc?.slug && previousDoc.slug !== doc?.slug) {
+    await записПренасочване(
+      req as never,
+      categoryPath(previousDoc.slug),
+      categoryPath(doc.slug),
+      'Сменен адрес на категорията',
+    )
+  }
+
   return doc
 }
 

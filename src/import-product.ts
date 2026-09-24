@@ -450,7 +450,52 @@ const sections = (await prepareBlock(content!.sekcii ?? [])) as unknown[]
 
 /* ─────────── продуктът ─────────── */
 
-const { categorySlug: _drop, ...productFields } = content!.produkt as Record<string, unknown>
+const {
+  categorySlug: _drop,
+  compatibleWithSlugs,
+  ...productFields
+} = content!.produkt as Record<string, unknown>
+
+/* ─────────── съвместимост ─────────── */
+
+/**
+ * „Съвместим с": слъгове на категории И на продукти, смесено.
+ *
+ * Аксесоарът не се слага в подкатегория „за DELTA" — казва с кои серии и
+ * модели работи и се появява сам на страницата на серията, в „Свързани
+ * продукти" на модела и в панела на менюто.
+ */
+const compatibleWith: { relationTo: 'categories' | 'products'; value: number }[] = []
+
+for (const slug of Array.isArray(compatibleWithSlugs) ? compatibleWithSlugs : []) {
+  if (typeof slug !== 'string') continue
+
+  const кат = await payload.find({
+    collection: 'categories',
+    where: { slug: { equals: slug } },
+    limit: 1,
+    depth: 0,
+  })
+  if (кат.docs[0]) {
+    compatibleWith.push({ relationTo: 'categories', value: кат.docs[0].id })
+    continue
+  }
+
+  const прод = await payload.find({
+    collection: 'products',
+    where: { slug: { equals: slug } },
+    limit: 1,
+    depth: 0,
+    draft: true,
+  })
+  if (прод.docs[0]) {
+    compatibleWith.push({ relationTo: 'products', value: прод.docs[0].id })
+    continue
+  }
+
+  missingFiles.push(`съвместимост: няма категория или продукт „${slug}"`)
+  console.warn(`  ⚠ „Съвместим с": няма категория или продукт „${slug}"`)
+}
 
 const data = {
   ...productFields,
@@ -459,6 +504,7 @@ const data = {
   gallery: restGallery.map((image) => ({ image })),
   specGroups: content!.specGroups ?? [],
   sections,
+  ...(compatibleWith.length ? { compatibleWith } : {}),
 } as Record<string, unknown>
 
 const existingProduct = await payload.find({

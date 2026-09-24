@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { notFound } from 'next/navigation'
+import { notFound, redirect } from 'next/navigation'
 
 import { RenderProductSections } from '@/components/blocks/product'
 import { ProductAnchorNav, type Anchor } from '@/components/ProductAnchorNav'
@@ -14,25 +14,41 @@ import {
   formatEur,
 } from '@/lib/format'
 import { mediaAlt, mediaUrl } from '@/lib/media'
-import { getGlobal, getProduct, getPublishedProductSlugs } from '@/lib/payload'
+import {
+  getCategoryTree,
+  getCompatibleAccessories,
+  getGlobal,
+  getProduct,
+  getPublishedProducts,
+} from '@/lib/payload'
+import { Breadcrumbs, breadcrumbSchema, type Crumb } from '@/components/Breadcrumbs'
+import { ancestry, categoryCrumbs } from '@/lib/tree'
+import { productPath } from '@/lib/urls'
 
-type Args = { params: Promise<{ slug: string }> }
+/** Адресът носи серията и slug-а: /kategorii/delta-seriya/delta-3. */
+type Args = { params: Promise<{ slug: string; product: string }> }
 
 export const generateStaticParams = async () => {
-  const slugs = await getPublishedProductSlugs()
-  return slugs.map((slug) => ({ slug }))
+  const products = await getPublishedProducts()
+  return products.map((p) => {
+    // Същият адрес, който сглобява и всеки линк — без второ правило.
+    const [, , series, slug] = productPath(p).split('/')
+    return { slug: series, product: slug }
+  })
 }
 
 export const generateMetadata = async ({ params }: Args): Promise<Metadata> => {
-  const { slug } = await params
+  const { product: slug } = await params
   const product = await getProduct(slug)
   if (!product) return {}
 
   const image = mediaUrl(product.image, 'banner') ?? mediaUrl(product.image)
 
   return {
-    title: product.title,
-    description: product.tagline ?? product.description ?? undefined,
+    title: product.metaTitle ?? `${product.title} — EcoFlow България`,
+    description: product.metaDescription ?? product.tagline ?? product.description ?? undefined,
+    // Продуктът има ЕДИН адрес — този под серията си.
+    alternates: { canonical: new URL(productPath(product), SITE_URL).toString() },
     openGraph: image ? { images: [{ url: image }] } : undefined,
   }
 }
@@ -59,10 +75,47 @@ const validGtin13 = (value?: string | null): string | null => {
 }
 
 export default async function ProductPage({ params }: Args) {
-  const { slug } = await params
-  const [product, settings] = await Promise.all([getProduct(slug), getGlobal('site-settings')])
+  const { slug: series, product: slug } = await params
+  const [product, settings, tree] = await Promise.all([
+    getProduct(slug),
+    getGlobal('site-settings'),
+    getCategoryTree(),
+  ])
 
   if (!product) notFound()
+
+  /*
+    Адресът съдържа серията. Ако някой отвори продукта под чужда серия —
+    стар линк след преместване — правилният адрес е един и той е този под
+    серията му. Пренасочването е постоянно (виж `redirects`), но тук се
+    прихваща и случаят, в който записът в пренасочванията липсва.
+  */
+  const правилен = productPath(product)
+  if (правилен !== `/kategorii/${series}/${slug}`) redirect(правилен)
+
+  const категория =
+    product.category && typeof product.category !== 'number' ? product.category : null
+
+  /*
+    Аксесоарите за блока „Свързани продукти" в автоматичен режим.
+
+    Търси се НАГОРЕ по дървото, не надолу: кабел, отбелязан като съвместим
+    с „DELTA серия", важи за всеки модел в нея. Затова се подават
+    категорията на продукта и всички над нея, плюс самия продукт — за
+    аксесоарите, вързани към конкретния модел.
+  */
+  const accessories = категория
+    ? await getCompatibleAccessories(
+        ancestry(tree, категория).map((c) => c.id),
+        [product.id],
+      )
+    : []
+  const crumbs: Crumb[] = категория
+    ? [...categoryCrumbs(tree, категория), { label: product.title, url: productPath(product) }]
+    : [
+        { label: 'Начало', url: '/' },
+        { label: product.title, url: productPath(product) },
+      ]
 
   const showBgn = Boolean(settings.showBgnPrices)
   const sections = product.sections ?? []
@@ -145,11 +198,15 @@ export default async function ProductPage({ params }: Args) {
       <script
         type="application/ld+json"
         // Съдържанието е наше, сглобено от полета — не идва от посетител.
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([schema, breadcrumbSchema(crumbs)]) }}
       />
 
+      <div className="container-site pt-6">
+        <Breadcrumbs items={crumbs} />
+      </div>
+
       {/* ── Галерия и купуване ── */}
-      <div className="container-site grid gap-8 py-8 lg:grid-cols-2 lg:gap-12">
+      <div className="container-site grid gap-8 pb-8 pt-4 lg:grid-cols-2 lg:gap-12">
         <ProductGallery images={images} />
 
         <div className="flex flex-col gap-4 lg:pt-8">
@@ -228,6 +285,7 @@ export default async function ProductPage({ params }: Args) {
         anchorIds={anchorIds}
         product={product}
         showBgn={showBgn}
+        accessories={accessories}
       />
     </>
   )

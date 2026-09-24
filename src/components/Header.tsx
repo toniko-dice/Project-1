@@ -2,8 +2,16 @@ import { GlobeSimple } from '@phosphor-icons/react/dist/ssr'
 import Link from 'next/link'
 
 import type { Category, MenuPanel, Product } from '@/payload-types'
-import { getGlobal, getMenuProducts, getProductsByIds } from '@/lib/payload'
+import {
+  categoryBranchIds,
+  getCategoryTree,
+  getCompatibleAccessories,
+  getGlobal,
+  getMenuProducts,
+  getProductsByIds,
+} from '@/lib/payload'
 import { mediaAlt, mediaDims, mediaUrl, productCardData } from '@/lib/media'
+import { categoryPath } from '@/lib/urls'
 import { HeaderNav, type MenuCard, type MenuSection, type NavItem } from './HeaderNav'
 
 type RawCard = NonNullable<NonNullable<MenuPanel['sections']>[number]>['featured']
@@ -85,11 +93,15 @@ const soonCard = (): MenuCard => ({
  * продукти дават по-малко карти, без празни места. Категория без продукти
  * показва заместители с надпис „Скоро" — панелът не остава празен.
  */
-const autoSections = (category: Category, products: Product[]): MenuSection[] => {
+const autoSections = (
+  category: Category,
+  products: Product[],
+  accessories: Product[],
+): MenuSection[] => {
   const [first, ...rest] = products
-  const url = `/categories/${category.slug}`
+  const url = categoryPath(category.slug)
 
-  return [
+  const sections: MenuSection[] = [
     {
       heading: category.title,
       viewAllLabel: 'Виж всички',
@@ -100,19 +112,50 @@ const autoSections = (category: Category, products: Product[]): MenuSection[] =>
       viewAllTileUrl: url,
     },
   ]
+
+  /*
+    Аксесоарите в панела идват от полето „Съвместим с" на самите аксесоари,
+    не от подкатегория „Аксесоари за DELTA". Секцията се появява само ако
+    има какво да покаже.
+  */
+  if (accessories.length) {
+    sections.push({
+      heading: 'Аксесоари',
+      viewAllLabel: 'Виж всички',
+      viewAllUrl: url,
+      featured: null,
+      cards: accessories.slice(0, 6).map(productCard),
+      showViewAllTile: false,
+      viewAllTileUrl: null,
+    })
+  }
+
+  return sections
+}
+
+/**
+ * Адресът на „Виж всички": категорията, или ръчно вписаният адрес.
+ *
+ * Категорията е основната, защото адресът ѝ следва преименуванията;
+ * ръчното поле остава за връзка извън категориите.
+ */
+const viewAllUrl = (section: { viewAllCategory?: unknown; viewAllUrl?: string | null }) => {
+  const c = section.viewAllCategory
+  if (c && typeof c === 'object' && 'slug' in c) return categoryPath((c as Category).slug)
+  return section.viewAllUrl ?? null
 }
 
 const manualSections = (panel: MenuPanel, products: ProductsById): MenuSection[] =>
   (panel.sections ?? []).map((section) => ({
     heading: section.heading,
     viewAllLabel: section.viewAllLabel,
-    viewAllUrl: section.viewAllUrl,
+    viewAllUrl: viewAllUrl(section),
     featured: toCard(section.featured, products),
     cards: (section.cards ?? [])
       .map((c) => toCard(c as RawCard, products))
       .filter((c): c is MenuCard => c !== null),
     showViewAllTile: Boolean(section.showViewAllTile),
-    viewAllTileUrl: section.viewAllTileUrl,
+    viewAllTileUrl: section.viewAllTileUrl ?? viewAllUrl(section),
   }))
 
 /** Панел в автоматичен режим е само този с избрана категория; иначе се държи като ръчен. */
@@ -153,14 +196,46 @@ export const Header = async () => {
     }
   }
 
-  const [productsByCategory, cardProducts] = await Promise.all([
-    getMenuProducts(categoryIds),
+  const tree = await getCategoryTree()
+
+  /*
+    Автоматичният панел показва продуктите на цялото си разклонение:
+    панелът „DELTA серия" държи и DELTA 3, и DELTA Pro. Затова за всяка
+    категория се пращат номерата на нея и на всичко под нея.
+  */
+  const branchByCategory = new Map(categoryIds.map((id) => [id, categoryBranchIds(tree, id)]))
+  const allBranchIds = [...new Set([...branchByCategory.values()].flat())]
+
+  const [productsByCategory, cardProducts, accessories] = await Promise.all([
+    getMenuProducts(allBranchIds),
     getProductsByIds([...cardProductIds].sort((a, b) => a - b)),
+    getCompatibleAccessories(allBranchIds),
   ])
+
+  /* Продуктите и аксесоарите, събрани по КОРЕНА на всяко разклонение. */
+  const byCategory: Record<number, Product[]> = {}
+  const accessoriesByCategory: Record<number, Product[]> = {}
+
+  for (const [id, branch] of branchByCategory) {
+    byCategory[id] = branch.flatMap((child) => productsByCategory[child] ?? []).slice(0, 7)
+
+    const own = new Set(branch)
+    accessoriesByCategory[id] = accessories.filter((acc) =>
+      (acc.compatibleWith ?? []).some((rel) => {
+        if (!rel || typeof rel !== 'object' || rel.relationTo !== 'categories') return false
+        const catId = typeof rel.value === 'number' ? rel.value : rel.value?.id
+        return typeof catId === 'number' && own.has(catId)
+      }),
+    )
+  }
 
   const items: NavItem[] = (header.items ?? []).map((item) => ({
     label: item.label,
-    url: item.url,
+    // Точката сочи категория; ръчният адрес е само за страници извън тях.
+    url:
+      item.category && typeof item.category !== 'number'
+        ? categoryPath(item.category.slug)
+        : item.url,
     badge: item.badge === 'none' ? null : (item.badge as 'hot' | 'new' | null),
     groups: (item.groups ?? []).map((group) => ({
       heading: group.heading,
@@ -177,9 +252,13 @@ export const Header = async () => {
             key: `panel-${panel.id}`,
             // Празно заглавие в автоматичен режим значи „името на категорията".
             label: panel.title?.trim() || category?.title || panel.slug,
-            url: category ? `/categories/${category.slug}` : `/categories/${panel.slug}`,
+            url: category ? categoryPath(category.slug) : categoryPath(panel.slug),
             sections: category
-              ? autoSections(category, productsByCategory[category.id] ?? [])
+              ? autoSections(
+                  category,
+                  byCategory[category.id] ?? [],
+                  accessoriesByCategory[category.id] ?? [],
+                )
               : manualSections(panel, cardProducts),
           }
         })
