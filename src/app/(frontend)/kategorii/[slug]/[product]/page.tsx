@@ -45,7 +45,8 @@ export const generateMetadata = async ({ params }: Args): Promise<Metadata> => {
   const image = mediaUrl(product.image, 'banner') ?? mediaUrl(product.image)
 
   return {
-    title: product.metaTitle ?? `${product.title} — EcoFlow България`,
+    // Наставката „— EcoFlow България" идва от `title.template` в layout.
+    title: product.metaTitle ?? product.title,
     description: product.metaDescription ?? product.tagline ?? product.description ?? undefined,
     // Продуктът има ЕДИН адрес — този под серията си.
     alternates: { canonical: new URL(productPath(product), SITE_URL).toString() },

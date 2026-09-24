@@ -80,6 +80,8 @@ const ПРЕЗАПИС: Record<string, string> = {
   komplekti: 'komplekti',
   powerocean: 'powerocean',
   'mikroinvertori-i-montazh': 'mikroinvertori-i-montazh',
+  // „Други продукти" в менюто държи панелите на аксесоарите — там води и точката.
+  'drugi-produkti': 'aksesoari',
 }
 
 /** Точките в хедъра: по стар адрес или по надпис. */
@@ -89,6 +91,7 @@ const ТОЧКИ: Record<string, string> = {
   '/categories/solarni-paneli': 'solarni-paneli',
   '/categories/umni-ustroystva': 'umni-ustroystva',
   '/categories/komplekti': 'komplekti',
+  '/categories/drugi-produkti': 'aksesoari',
 }
 
 const всички = await payload.find({ collection: 'categories', pagination: false, depth: 0 })
@@ -448,12 +451,64 @@ for (const панел of await payload
 
 if (!документиСАдреси) console.log('  · нищо за преизчисляване')
 
+/* ─────────── 5. текстове, дошли от бележките ─────────── */
+
+console.log('\nТЕКСТОВЕ')
+let изчистени = 0
+
+/*
+  Бележките в `kategorii.md` са за хора, които четат файла („само ако
+  dice.bg го продава", „твърди/монтажни"). Първата версия на seed скрипта
+  ги записваше като подзаглавие на банера и те излизаха под заглавието на
+  категорийната страница — като текст за посетители.
+
+  Тук се чистят САМО тези, които съвпадат дума по дума с бележката или с
+  името на категорията. Текст, написан от собственика, не се пипа.
+*/
+const бележки = new Map<string, string>()
+{
+  const файл = await import('fs/promises').then((fs) =>
+    fs.readFile('content/kategorii.md', 'utf-8'),
+  )
+  for (const ред of файл.split(/\r?\n/)) {
+    const m = ред.match(/^(?:##\s+\d+\.|\s*-)\s+(.+)$/)
+    if (!m) continue
+    const части = m[1].split('|').map((x) => x.trim())
+    if (части.length < 3 || !части[1] || !части[2]) continue
+    if (части[2].toLowerCase().includes('в лентата')) continue
+    бележки.set(части[1], части[2])
+  }
+}
+
+for (const кат of (await payload.find({ collection: 'categories', pagination: false, depth: 0 }))
+  .docs) {
+  const промяна: Record<string, null> = {}
+
+  if (кат.heroTagline && кат.heroTagline.trim() === бележки.get(кат.slug)) {
+    промяна.heroTagline = null
+  }
+  // Описание, равно на самото име, е остатък от първия seed, не текст.
+  if (кат.description && кат.description.trim() === кат.title.trim()) {
+    промяна.description = null
+  }
+
+  if (!Object.keys(промяна).length) continue
+
+  кажи(`  · ${кат.slug}: изчистено ${Object.keys(промяна).join(', ')}`)
+  if (!сух) {
+    await payload.update({ collection: 'categories', id: кат.id, data: промяна, depth: 0 })
+  }
+  изчистени += 1
+}
+
+if (!изчистени) console.log('  · нищо за чистене')
+
 /* ─────────── обобщение ─────────── */
 
 console.log('')
 if (сух) console.log('(--dry-run: нищо не е записано)')
 console.log(
-  `✓ Продукти: ${преместени} · Категории изтрити: ${изтрити} · Панели: ${панелиОбновени} · Точки: ${точкиОбновени} · Пренасочвания: ${пренасочвания} · Документи с адреси: ${документиСАдреси}`,
+  `✓ Продукти: ${преместени} · Категории изтрити: ${изтрити} · Панели: ${панелиОбновени} · Точки: ${точкиОбновени} · Пренасочвания: ${пренасочвания} · Документи с адреси: ${документиСАдреси} · Изчистени текстове: ${изчистени}`,
 )
 
 if (чакат.length) {

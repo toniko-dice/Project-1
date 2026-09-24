@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { notFound, redirect } from 'next/navigation'
+import { notFound, permanentRedirect } from 'next/navigation'
 
 import type { Category } from '@/payload-types'
 import { Breadcrumbs, breadcrumbSchema } from '@/components/Breadcrumbs'
@@ -39,7 +39,8 @@ export const generateMetadata = async ({ params }: Args): Promise<Metadata> => {
   const image = mediaUrl(category.banner ?? category.heroImage, 'banner')
 
   return {
-    title: category.metaTitle ?? `${category.title} — EcoFlow България`,
+    // Наставката „— EcoFlow България" идва от `title.template` в layout.
+    title: category.metaTitle ?? category.title,
     description: category.metaDescription ?? category.description ?? undefined,
     /*
       Филтърът по подсерия НЕ е отделна страница за Google — canonical на
@@ -76,7 +77,8 @@ export default async function CategoryPage({ params }: Args) {
   */
   if (levelOf(tree, category) > 1) {
     const parent = ancestry(tree, category).at(-2)
-    if (parent) redirect(`${categoryPath(parent.slug)}?sub=${category.slug}`)
+    // 308, не 307: адресът на подсерията няма да се върне.
+    if (parent) permanentRedirect(`${categoryPath(parent.slug)}?sub=${category.slug}`)
   }
 
   const children = childrenOf(tree, category.id)
@@ -132,10 +134,17 @@ export default async function CategoryPage({ params }: Args) {
       <div className="container-site py-6 lg:py-8">
         <Breadcrumbs items={crumbs} />
 
-        {/* ── Заглавна част ── */}
-        <div className="relative mt-4 overflow-hidden rounded-2xl">
-          <div className="relative aspect-[16/9] w-full sm:aspect-[3/1]">
-            {heroUrl ? (
+        {/*
+          ── Заглавна част ──
+
+          Без заглавно изображение НЯМА сив правоъгълник със „Няма снимка":
+          на категорийната страница той е само празно място, защото
+          заглавието и описанието и без това стоят под него. Заместителят
+          остава там, където липсата подвежда — продуктова карта, икона.
+        */}
+        {heroUrl ? (
+          <div className="relative mt-4 overflow-hidden rounded-2xl">
+            <div className="relative aspect-[16/9] w-full sm:aspect-[3/1]">
               <Image
                 src={heroUrl}
                 alt={mediaAlt(category.heroImage)}
@@ -144,36 +153,31 @@ export default async function CategoryPage({ params }: Args) {
                 priority
                 className="object-cover"
               />
-            ) : (
-              <ImagePlaceholder className="absolute inset-0" />
-            )}
 
-            {/*
-              Цветът на текста следва това, което е отдолу. Бял текст върху
-              светлосивия заместител не се чете.
-            */}
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full px-6 sm:px-12">
-                <h1
-                  className={`text-2xl font-medium leading-tight tracking-tight sm:text-3xl lg:text-4xl ${
-                    heroUrl ? 'text-white drop-shadow' : 'text-ink'
-                  }`}
-                >
-                  {category.title}
-                </h1>
-                {category.heroTagline ? (
-                  <p
-                    className={`mt-2 max-w-lg text-[15px] sm:text-base ${
-                      heroUrl ? 'text-white drop-shadow' : 'text-ink-muted'
-                    }`}
-                  >
-                    {category.heroTagline}
-                  </p>
-                ) : null}
+              <div className="absolute inset-0 flex items-center">
+                <div className="w-full px-6 sm:px-12">
+                  <h1 className="text-2xl font-medium leading-tight tracking-tight text-white drop-shadow sm:text-3xl lg:text-4xl">
+                    {category.title}
+                  </h1>
+                  {category.heroTagline ? (
+                    <p className="mt-2 max-w-lg text-[15px] text-white drop-shadow sm:text-base">
+                      {category.heroTagline}
+                    </p>
+                  ) : null}
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        ) : (
+          <div className="mt-4 text-center">
+            <h1 className="text-2xl font-medium leading-tight tracking-tight sm:text-3xl lg:text-4xl">
+              {category.title}
+            </h1>
+            {category.heroTagline ? (
+              <p className="mt-2 text-[15px] text-ink-muted sm:text-base">{category.heroTagline}</p>
+            ) : null}
+          </div>
+        )}
 
         {category.description ? (
           <p className="mx-auto mt-6 max-w-[56rem] text-center leading-relaxed text-ink-muted">

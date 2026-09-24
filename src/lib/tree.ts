@@ -1,7 +1,7 @@
 import type { Category } from '@/payload-types'
 
 import type { Crumb } from '@/components/Breadcrumbs'
-import { categoryPath } from './urls'
+import { categoryUrl } from './urls'
 
 /**
  * Помощници за дървото на категориите.
@@ -40,8 +40,35 @@ export const childrenOf = (tree: Category[], id: number): Category[] =>
 export const levelOf = (tree: Category[], category: Category): number =>
   ancestry(tree, category).length - 1
 
-/** Хлебните трохи за категория. */
-export const categoryCrumbs = (tree: Category[], category: Category): Crumb[] => [
-  { label: 'Начало', url: '/' },
-  ...ancestry(tree, category).map((c) => ({ label: c.title, url: categoryPath(c.slug) })),
-]
+/**
+ * Хлебните трохи за категория.
+ *
+ * Подсерията няма собствена страница, затова трохата ѝ води към раздела
+ * на серията (`?sub=`). Адресът се сглобява от `categoryUrl`, която знае
+ * правилото — тук се подава веригата от родители, за да го определи.
+ */
+export const categoryCrumbs = (tree: Category[], category: Category): Crumb[] => {
+  const path = ancestry(tree, category)
+
+  return [
+    { label: 'Начало', url: '/' },
+    ...path.map((c, i) => ({
+      label: c.title,
+      /*
+        `categoryUrl` чака категорията със заредени родители. Тук дървото е
+        плоско (родителите са номера), затова веригата се навързва наум.
+      */
+      url: categoryUrl(
+        /*
+          Навързва се ОТЛЯВО: главната става родител на серията, серията —
+          на подсерията. Обратната посока слага главната за родител на
+          най-долната и `categoryUrl` я взима за серия.
+        */
+        path.slice(0, i + 1).reduce<Category | undefined>(
+          (родител, възел) => ({ ...възел, parent: родител ?? null }),
+          undefined,
+        ) as Category,
+      ),
+    })),
+  ]
+}

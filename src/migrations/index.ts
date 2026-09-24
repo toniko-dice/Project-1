@@ -20,6 +20,7 @@ import * as migration_20260921_074512_feature_sub_tabs_intro from './20260921_07
 import * as migration_20260923_075913_media_full_size from './20260923_075913_media_full_size';
 import * as migration_20260923_133550_comparison_intro from './20260923_133550_comparison_intro';
 import * as migration_20260924_102822_tree_and_urls from './20260924_102822_tree_and_urls';
+import * as migration_20260924_170000_home_page_urls from './20260924_170000_home_page_urls'
 
 export const migrations = [
   {
@@ -131,5 +132,10 @@ export const migrations = [
     up: migration_20260924_102822_tree_and_urls.up,
     down: migration_20260924_102822_tree_and_urls.down,
     name: '20260924_102822_tree_and_urls'
+  },
+  {
+    up: migration_20260924_170000_home_page_urls.up,
+    down: migration_20260924_170000_home_page_urls.down,
+    name: '20260924_170000_home_page_urls'
   },
 ];
