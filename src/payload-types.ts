@@ -923,6 +923,10 @@ export interface Product {
    */
   ean?: string | null;
   /**
+   * За комплекти с две устройства. По избор.
+   */
+  ean2?: string | null;
+  /**
    * Складов или доставчиков номер. Служи за сверяване при внос и не се показва никъде на сайта.
    */
   barcodeInternal?: string | null;
@@ -2066,6 +2070,7 @@ export interface ProductsSelect<T extends boolean = true> {
   sku?: T;
   brand?: T;
   ean?: T;
+  ean2?: T;
   barcodeInternal?: T;
   category?: T;
   categoryName?: T;

@@ -1,0 +1,507 @@
+{
+  "_bележка": "Съдържание за внасяне. Пуска се с: npm run import:product river-3-max-plus-wireless. Снимките се свалят по линковете в _svali_snimki в galeriya/ и sekcii/ със същите имена.",
+  "_iztochnik": "eu.ecoflow.com/products/river-3-plus-wireless-portable-power-station?variant=50786703737175 (вариант RIVER 3 Max Plus (Wireless)), прочетено от браузъра на 24.09.2026. Страницата е обща за RIVER 3 Plus (Wireless) и Max Plus; спецификациите за Max Plus са от таблицата „Specs – RIVER 3 Plus Series“ на eu.ecoflow.com/products/river-3-plus-portable-power-station.",
+  "produkt": {
+    "title": "EcoFlow RIVER 3 Max Plus (Wireless)",
+    "slug": "river-3-max-plus-wireless",
+    "categorySlug": "river-3-seriya",
+    "productType": "hero",
+    "tagline": "858Wh капацитет / 600W изход",
+    "badge": "none",
+    "price": 613.04,
+    "compareAtPrice": null,
+    "externalUrl": "https://dice.bg/portativna-elektrostancija-za-zarezhdane-na-razlichna-tehnika-i-ustrojstva-i-otdelna-v-nshna-baterija-rapid-5000-mah-ecoflow-river-3-max-plus-wireless-portable-power-station-858wh-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "74392",
+    "ean": "4895251639859",
+    "description": "Модулна портативна електроцентрала 858Wh (RIVER 3 Plus 286Wh + допълнителна батерия EB600 572Wh) с отделяща се външна батерия RAPID 5000mAh с 15W Qi2 безжично зареждане. 600W изход, 1200W с X-Boost, до 220W соларен вход, UPS под 10 ms, под 30 dB.",
+    "highlights": [
+      {
+        "title": "858Wh капацитет + RAPID 5000mAh",
+        "text": "Станция RIVER 3 Plus (286Wh) с допълнителна батерия EB600 (572Wh) и отделяща се външна батерия RAPID."
+      },
+      {
+        "title": "15W Qi2 безжично зареждане",
+        "text": "2 пъти по-бързо от Qi1."
+      },
+      {
+        "title": "600W изход, X-Boost до 1200W",
+        "text": ""
+      },
+      {
+        "title": "До 220W соларен вход",
+        "text": "Базовата станция (286Wh) се зарежда от 0 до 100% за само 1,5 часа."
+      },
+      {
+        "title": "UPS под 10 ms",
+        "text": "Непрекъсваемо резервно захранване."
+      },
+      {
+        "title": "Под 30 dB — тих като шепот",
+        "text": "За употреба 24/7."
+      },
+      {
+        "title": "Зареждане на USB устройства директно от соларен панел",
+        "text": ""
+      },
+      {
+        "title": "Кабел DC5521 към XT60i в комплекта",
+        "text": ""
+      }
+    ],
+    "metaTitle": "EcoFlow RIVER 3 Max Plus (Wireless) 858Wh — портативна електроцентрала с RAPID",
+    "metaDescription": "858Wh, 600W изход (1200W X-Boost), отделяща се RAPID 5000mAh с 15W Qi2 безжично зареждане, 220W соларен вход, UPS под 10 ms, под 30 dB. Официален дистрибутор за България.",
+    "ean2": "5895251639866"
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-river-3-plus-wireless-portable-power-station-1170560975.png",
+      "alt": "EcoFlow RIVER 3 Max Plus (Wireless) — изглед отпред"
+    },
+    {
+      "file": "ecoflow-river-3-plus-wireless-portable-power-station-1170560974.png",
+      "alt": "EcoFlow RIVER 3 Max Plus (Wireless) — отпред, изходи"
+    },
+    {
+      "file": "ecoflow-river-3-plus-wireless-portable-power-station-1170560973.png",
+      "alt": "EcoFlow RIVER 3 Max Plus (Wireless) — изглед отзад"
+    },
+    {
+      "file": "ecoflow-river-3-plus-wireless-portable-power-station-1170560971.png",
+      "alt": "EcoFlow RIVER 3 Max Plus (Wireless) — отгоре, гнездо за RAPID"
+    },
+    {
+      "file": "ecoflow-river-3-plus-wireless-portable-power-station-1170560972.png",
+      "alt": "EcoFlow RIVER 3 Max Plus (Wireless) — изглед отдолу"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "",
+      "body": "",
+      "image": "1_1_kv_d9588423-b500-4083-9171-99ac112bbe9d.jpg"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Модулна, изключително гъвкава електроцентрала за всяка ситуация",
+      "body": "",
+      "image": "01_2_6a12fb46-23f5-4091-8b91-05d94540e29e.jpg"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Модулен дизайн",
+      "heading": "Гъвкав модулен дизайн за всяка ситуация",
+      "subheading": "На път или като резервно захранване у дома — покрити сте.",
+      "subheadingPosition": "below",
+      "body": "RIVER 3 Max Plus (Wireless) е с модулен дизайн: отделяща се външна батерия RAPID (5000mAh) и разширяем капацитет с допълнителна батерия — ненадмината гъвкавост за всичките ви нужди от енергия. Вземете външната батерия за път, риболов или преход, а станцията оставете у дома или на къмпинга. Добавете допълнителната батерия за по-дълго резервно захранване и RIVER 3 Max Plus (Wireless) става вашето гъвкаво решение за всяка ситуация.",
+      "image": "02_01-Versatile_modular_design_for_every_situation.jpg"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-left",
+      "theme": "light",
+      "heading": "Закачане с едно движение, сигурен захват",
+      "body": "С pogo-pin контакти просто пъхате външната батерия в RIVER 3 Max Plus (Wireless) и тя започва да се зарежда автоматично. Сигурната връзка я държи на място при пренасяне.",
+      "image": "02_02-Snap-in_charging_with_a_steady_hold.jpg"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-right",
+      "theme": "light",
+      "heading": "Допълнително безжично зареждане",
+      "body": "Оставете iPhone или AirPods върху площадката и се зареждат безжично — на път или при работа от разстояние.",
+      "image": "02_03-Extra_wireless_charging_option.jpg"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "RAPID",
+      "layout": "tabs-top",
+      "heading": "Ново усещане за магнитно зареждане с RAPID",
+      "intro": "По-бързо, по-лесно и по-безопасно зареждане. RAPID използва патентованата технология X-Stream за енергийна плътност и бързо зареждане от класа на флагманските смартфони. Работи и с протокола PD3.0 за светкавично зареждане. В съчетание с Qi2-сертифицирано безжично зареждане и вграден кабел RAPID се закача с едно движение и зарежда с максимална скорост. Вградена стойка, магнитна връзка и температурна защита — безопасно и безпроблемно зареждане.",
+      "tabs": [
+        {
+          "label": "Двойно по-бързо безжично зареждане",
+          "image": "03_01-Qi2-cerfiticated_wireless_charging_that_s_twice_as_fast..jpg",
+          "imageAlt": "RAPID — 15W Qi2 безжично зареждане",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Максимална скорост с вградения кабел",
+          "image": "03_03-Max-speed_charging_with_a_built-in_cable.jpg",
+          "imageAlt": "RAPID — до 30W с вградения USB-C кабел",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Най-бързо презареждащата се външна батерия",
+          "image": "03_02-The_ultimate_fast-recharging_power_bank.jpg",
+          "imageAlt": "RAPID — 0–70% за 33 минути",
+          "caption": "",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Мощност",
+      "heading": "Надежден спътник при спиране на тока и сред природата",
+      "subheading": "До 600W изход",
+      "subheadingPosition": "below",
+      "body": "RIVER 3 Max Plus (Wireless) е звяр сред малките електроцентрали — до 600W номинална мощност. С технологията X-Boost захранва продължително нагревателни уреди до 1200W без усилие и поддържа 90% от домакинските уреди. А с вградената лампа никога няма да останете на тъмно.",
+      "image": "04-Your_reliable_companion_through_outages_or_in_the_wild..jpg"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Капацитет",
+      "layout": "tabs-top",
+      "heading": "Капацитет според растящите нужди",
+      "intro": "Разширяем до 858Wh с безжична връзка. Вдигнете нивото с RIVER 3 Plus (Wireless) и допълнителна батерия. С EB300 (286Wh) или EB600 (572Wh) — просто ги стиковате и получавате до 858Wh чиста енергия.",
+      "tabs": [
+        {
+          "label": "286Wh",
+          "image": "05_1_IMG_f92959a1-8be0-4a47-8778-9f532864448a.jpg",
+          "imageAlt": "RIVER 3 Plus (Wireless) — 286Wh, време на работа на уреди",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "572Wh",
+          "image": "05_2_IMG_e0117575-71fc-417d-8329-1a529caf38c5.jpg",
+          "imageAlt": "RIVER 3 Max (Wireless) — 572Wh, време на работа на уреди",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "858Wh",
+          "image": "05_3_IMG_e12b1d55-9722-4145-9058-85df35635fa7.jpg",
+          "imageAlt": "RIVER 3 Max Plus (Wireless) — 858Wh, време на работа на уреди",
+          "caption": "",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Зареждане",
+      "layout": "image-top",
+      "heading": "4 начина за зареждане — базовата станция безопасно от 0 до 100% за 1 час",
+      "intro": "Бърза подготовка за излет или спиране на тока. Времената са за станцията RIVER 3 Plus (286Wh) по данни на EcoFlow; с допълнителната батерия EB600 пълното зареждане отнема повече.",
+      "tabs": [
+        {
+          "label": "От слънце",
+          "image": "5_1_IMG.jpg",
+          "imageAlt": "Зареждане на RIVER 3 Plus (Wireless) от соларен панел",
+          "caption": "Зареждане от слънце: RIVER 3 Plus (Wireless) се пълни за само 1,5 часа с 220W соларен вход. За още по-голяма портативност — 45W сгъваем соларен панел (Type-C), който зарежда устройствата ви директно.",
+          "rows": []
+        },
+        {
+          "label": "От контакт",
+          "image": "08_2_IMG.jpg",
+          "imageAlt": "Зареждане на RIVER 3 Plus (Wireless) от контакт",
+          "caption": "Зареждане от контакт: RIVER 3 Plus (Wireless) се зарежда за 1 час с X-Stream, без да уврежда батерията — благодарение на клетките от автомобилен клас и технологията за поддържащо зареждане.",
+          "rows": []
+        },
+        {
+          "label": "От автомобил",
+          "image": "5_3_IMG.jpg",
+          "imageAlt": "Зареждане на RIVER 3 Plus (Wireless) в автомобил",
+          "caption": "Зареждане от автомобил: зареждайте RIVER 3 Plus (Wireless) от акумулатора на колата, докато шофирате — идеално за път.",
+          "rows": []
+        },
+        {
+          "label": "От генератор",
+          "image": "5_4_IMG.jpg",
+          "imageAlt": "Зареждане на RIVER 3 Plus (Wireless) от генератор",
+          "caption": "Зареждане от генератор: презареждане за само 1 час с бензинов генератор — за цял ден тиха, безопасна и ефективна енергия.",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Изключително компактна и лека",
+      "subheading": "Удобна енергия за из път",
+      "subheadingPosition": "below",
+      "body": "RIVER 3 Max Plus (Wireless) губи по-малко топлина, изисква по-малко място за охлаждане и е с компактен дизайн. Побира се лесно в малки пространства — шкаф, миниван или чанта — за удобно съхранение и пренасяне.",
+      "image": "12-IMG.jpg"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "UPS",
+      "heading": "Професионално автоматично превключване под 10 ms",
+      "subheading": "Безпроблемна работа от дома и игри",
+      "subheadingPosition": "below",
+      "body": "RIVER 3 Max Plus (Wireless) дава първокласна защита с превключване под 10 ms и пази чувствителната техника за домашен офис и игри при внезапно спиране на тока.",
+      "image": "6_1_IMG.jpg"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Приложение",
+      "heading": "Подобрено умно управление",
+      "subheading": "Удобен, интелигентен, персонализиран контрол на енергията",
+      "subheadingPosition": "below",
+      "body": "",
+      "image": "15_1_IMG.jpg"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Детайли на продукта",
+      "body": "",
+      "image": "16_1_IMG.jpg"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow RIVER 3 Max Plus (Wireless)",
+          "qty": 1,
+          "image": "ecoflow-river-3-plus-wireless-portable-power-station-1170560975.png",
+          "imageAlt": "EcoFlow RIVER 3 Max Plus (Wireless)"
+        },
+        {
+          "name": "Захранващ кабел за контакт",
+          "qty": 1,
+          "image": "kutiya-kabel.webp",
+          "imageAlt": "Захранващ кабел за контакт"
+        },
+        {
+          "name": "Кабел EcoFlow USB-B към USB-A за UPS комуникация",
+          "qty": 1
+        },
+        {
+          "name": "Кратко ръководство и гаранционна карта",
+          "qty": 1,
+          "image": "kutiya-rakovodstvo.webp",
+          "imageAlt": "Кратко ръководство и гаранционна карта"
+        }
+      ],
+      "_iztochnik": "Разделът „RIVER 3 Max Plus (Wireless)“ на „What's in the box“ (картинка 14_3_IMG_a0b5f108…jpg): устройство, AC кабел, USB-B→USB-A UPS кабел, кратко ръководство и гаранция. RAPID батерията е вътре в устройството."
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "footnotes",
+      "items": [
+        {
+          "text": "Времето на работа е по лабораторни тестове с обичайни домакински уреди при стайна температура. Твърдението за „двойно време на работа“ се отнася за уреди с малка мощност, например 3W лампа или Wi-Fi рутер."
+        },
+        {
+          "text": "Данните за шума са по лабораторни тестове при стайна температура 32 °C. При реална употреба са възможни малки отклонения."
+        },
+        {
+          "text": "Защитата IP54 се отнася само за батерийния пакет, не за цялото устройство. Не предпазва от потапяне, но при пръски вода или дъжд предотвратява пожар или взрив при късо съединение."
+        },
+        {
+          "text": "Всички резултати от тестове на тази страница са по вътрешни изпитания на EcoFlow в контролирана лабораторна среда и зависят от условията — температура, влажност, калибриране на оборудването. Дадени са само за информация; реалната употреба може да се различава."
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Общи",
+      "rows": [
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Капацитет",
+          "value": "858 Wh (RIVER 3 Plus 286 Wh + допълнителна батерия EB600 572 Wh)"
+        },
+        {
+          "label": "Размери на станцията",
+          "value": "234 × 232 × 156 мм"
+        },
+        {
+          "label": "Размери на допълнителната батерия EB600",
+          "value": "234 × 224 × 158 мм"
+        },
+        {
+          "label": "Тегло на станцията",
+          "value": "4,7 кг"
+        },
+        {
+          "label": "Тип батерия",
+          "value": "LiFePO4, 3000 цикъла до 80% капацитет"
+        },
+        {
+          "label": "UPS",
+          "value": "<10 ms"
+        },
+        {
+          "label": "Шум",
+          "value": "<30 dB"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Изходи",
+      "rows": [
+        {
+          "label": "Контакти (AC)",
+          "value": "3, общо 600W (1200W пик, 1200W с X-Boost)"
+        },
+        {
+          "label": "USB-A",
+          "value": "2 × 5V⎓2,4A, макс. 12W на порт, общо 24W"
+        },
+        {
+          "label": "USB-C",
+          "value": "1 × 5/9/12/15V 3A, 20V 5A, макс. 100W"
+        },
+        {
+          "label": "Изход за запалка",
+          "value": "1 × 12,6V, 10A, макс. 126W"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Зареждане",
+      "rows": [
+        {
+          "label": "От контакт",
+          "value": "200–240V, 6A, 50/60 Hz, 360W — станцията 0–100% за 60 мин"
+        },
+        {
+          "label": "От соларни панели",
+          "value": "220W, 11–55V, 13A — станцията 0–100% за 1,5 ч"
+        },
+        {
+          "label": "От автомобил",
+          "value": "11–55V, 8A, 220W — станцията 0–100% за 3,3 ч"
+        },
+        {
+          "label": "От генератор",
+          "value": "360W, 200–240V, 6A, 50/60 Hz — станцията 0–100% за 60 мин"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Външна батерия RAPID",
+      "rows": [
+        {
+          "label": "Капацитет",
+          "value": "5000 mAh"
+        },
+        {
+          "label": "Размери",
+          "value": "108 × 70 × 14,4 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "180 г"
+        },
+        {
+          "label": "Безжично зареждане",
+          "value": "15W (Qi2)"
+        },
+        {
+          "label": "Зареждане с кабел",
+          "value": "30W"
+        },
+        {
+          "label": "Вход за зареждане",
+          "value": "30W"
+        },
+        {
+          "label": "Гаранция",
+          "value": "2 години"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Условия и гаранция",
+      "rows": [
+        {
+          "label": "Оптимална работна температура",
+          "value": "20–30 °C"
+        },
+        {
+          "label": "Температура при зареждане",
+          "value": "0–45 °C"
+        },
+        {
+          "label": "Температура при разреждане",
+          "value": "–10 до 45 °C"
+        },
+        {
+          "label": "Температура за съхранение",
+          "value": "–10 до 45 °C"
+        },
+        {
+          "label": "Гаранция",
+          "value": "5 години (станция и допълнителна батерия); 2 години (RAPID)"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560975.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560974.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560973.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560971.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560972.png"
+    ],
+    "sekcii": [
+      "https://eu.ecoflow.com/cdn/shop/files/1_1_kv_d9588423-b500-4083-9171-99ac112bbe9d.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/01_2_6a12fb46-23f5-4091-8b91-05d94540e29e.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/02_01-Versatile_modular_design_for_every_situation.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/02_02-Snap-in_charging_with_a_steady_hold.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/02_03-Extra_wireless_charging_option.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/03_01-Qi2-cerfiticated_wireless_charging_that_s_twice_as_fast..jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/03_03-Max-speed_charging_with_a_built-in_cable.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/03_02-The_ultimate_fast-recharging_power_bank.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/04-Your_reliable_companion_through_outages_or_in_the_wild..jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/05_1_IMG_f92959a1-8be0-4a47-8778-9f532864448a.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/05_2_IMG_e0117575-71fc-417d-8329-1a529caf38c5.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/05_3_IMG_e12b1d55-9722-4145-9058-85df35635fa7.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/5_1_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/08_2_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/5_3_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/5_4_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/12-IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/6_1_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/15_1_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/16_1_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/14_3_IMG_a0b5f108-352d-45fd-b335-e44ae83175a9.jpg"
+    ],
+    "_bележка": "14_3_IMG_a0b5f108… е картинката „What's in the box“ за Max Plus — само за справка. kutiya-kabel.webp и kutiya-rakovodstvo.webp са вече в Медия."
+  },
+  "_prevod_nadpisi": "виж prevod-nadpisi.md в същата папка",
+  "_neyasni": [
+    "Текстовете на EcoFlow говорят за „RIVER 3 Plus (Wireless)“ (страницата е обща за серията). В описанието, акцентите и секциите за дизайн/мощност/UPS/приложение името е заменено с „RIVER 3 Max Plus (Wireless)“. В секциите „Капацитет“ и „Зареждане“ е оставено както при EcoFlow, защото числата (1 ч, 1,5 ч, 3,3 ч) са за базовата станция 286Wh, не за 858Wh — изрично е написано в увода.",
+    "Тегло на целия комплект (станция + EB600) EcoFlow не дават — записано е само теглото на станцията. Да се провери в портала.",
+    "Секцията с двете карти „Закачане с едно движение“ / „Допълнително безжично зареждане“ при EcoFlow е две колони една до друга; при нас е като две секции (снимка вляво / снимка вдясно).",
+    "Секцията „Капацитет според растящите нужди“ е с трите раздела 286/572/858Wh, както при EcoFlow — 858Wh е този продукт.",
+    "Gallery: избрани са 5-те снимки на стикованото устройство (Max Plus); снимките на самостоятелната станция и на Max (EB300) не са включени.",
+    "Баркодове: ean 4895251639859, ean2 5895251639866 (кой на станцията, кой на RAPID — неизвестно; и двата са от dice.bg)."
+  ]
+}
