@@ -673,14 +673,37 @@ const SpecTableBlock = ({
   product: Product
 }) => {
   const groups = product.specGroups ?? []
-  if (!groups.length) return null
+
+  /*
+    „Идентификация" се сглобява от полетата на продукта, не от
+    „Спецификации по групи". Така номерата се въвеждат веднъж — там,
+    където им е мястото — и излизат на всяка продуктова страница, без
+    повторен внос и без да се преписват на ръка във всяка таблица.
+
+    Празно поле не дава ред: таблица с „SKU: —" е по-лоша от липсващ ред.
+  */
+  const идентификация = [
+    { label: 'Артикулен номер (SKU)', value: product.sku?.trim() },
+    { label: 'Баркод (EAN)', value: product.ean?.trim() },
+    // Вторият баркод е само при комплекти от две устройства.
+    { label: 'Втори баркод (EAN)', value: product.ean2?.trim() },
+  ].filter((r): r is { label: string; value: string } => Boolean(r.value))
+
+  const всички = [
+    ...groups,
+    ...(идентификация.length
+      ? [{ groupLabel: 'Идентификация', rows: идентификация, id: 'identification' }]
+      : []),
+  ]
+
+  if (!всички.length) return null
 
   return (
     <Section id={id} className="container-site py-12 lg:py-16">
       <BlockHeading>{block.heading ?? 'Спецификации'}</BlockHeading>
 
       <div className="grid gap-x-12 gap-y-8 lg:grid-cols-2">
-        {groups.map((group, gi) => (
+        {всички.map((group, gi) => (
           <div key={gi}>
             {/* Група без заглавие продължава предишната — затова заглавието се пропуска. */}
             {group.groupLabel ? (
