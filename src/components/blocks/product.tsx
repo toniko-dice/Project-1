@@ -6,6 +6,7 @@ import { discountPercent, formatEur } from '@/lib/format'
 import { mediaAlt, mediaUrl, productCardData, sectionImage } from '@/lib/media'
 import { SectionImage } from '../SectionImage'
 import { ProductCard } from '../ProductCard'
+import { BoxTabs } from './BoxTabs'
 import { ProductTabs, type ShowcaseTab, type TabsLayout } from './ProductTabs'
 import { ImagePlaceholder } from '../ImagePlaceholder'
 
@@ -585,55 +586,73 @@ const ComparisonTableBlock = ({
 
 /* ─────────── Какво има в кутията ─────────── */
 
+type BoxItem = NonNullable<BlockOf<'inTheBox'>['items']>[number]
+
+/** Картите на една кутия — еднакви при раздели и без тях. */
+const BoxItems = ({ items }: { items: BoxItem[] }) => (
+  <ul className="grid gap-4 md:grid-cols-3">
+    {items.map((item, i) => {
+      /*
+        Размер „content", не „card". Изрезките на кабела и на ръководството
+        са широки; квадратното изрязване на „card" отсича краищата им.
+        Фонът на картата е същият сив като на изрезките — затова около тях
+        не се вижда ръб.
+      */
+      const img = sectionImage(item.image)
+
+      return (
+        <li key={i} className="flex flex-col rounded-2xl bg-panel p-6 lg:min-h-[550px]">
+          <p className="text-base font-semibold">
+            {item.name} <span className="tabular">×{item.qty ?? 1}</span>
+          </p>
+
+          {/* Картата без снимка показва само името и остава със същата височина. */}
+          {img ? (
+            <span className="flex flex-1 items-center justify-center pt-6">
+              <SectionImage
+                image={img}
+                alt={mediaAlt(item.image) || item.name}
+                sizes="(max-width: 768px) 100vw, 33vw"
+                /*
+                  Ширината е определена, височината следва съотношението и се
+                  спира на 320 px. С „w-auto" размерът зависи от декодираната
+                  снимка — ако тя закъснее или не се зареди, картата се
+                  срутва до нула.
+                */
+                className="h-auto max-h-80 w-full object-contain"
+              />
+            </span>
+          ) : (
+            <span className="flex flex-1 items-center justify-center pt-6">
+              <ImagePlaceholder className="h-48 w-full rounded-lg" />
+            </span>
+          )}
+        </li>
+      )
+    })}
+  </ul>
+)
+
 const InTheBoxBlock = ({ block, id }: { block: BlockOf<'inTheBox'>; id?: string | null }) => {
+  const groups = (block.groups ?? []).filter((g) => (g.items ?? []).length)
   const items = block.items ?? []
-  if (!items.length) return null
+
+  // Раздели има само когато са попълнени; иначе блокът е както досега.
+  if (!groups.length && !items.length) return null
 
   return (
     <Section id={id} className="container-site py-12 lg:py-16">
       <BlockHeading>{block.heading ?? 'Какво има в кутията'}</BlockHeading>
 
-      <ul className="grid gap-4 md:grid-cols-3">
-        {items.map((item, i) => {
-          /*
-            Размер „content", не „card". Изрезките на кабела и на
-            ръководството са широки; квадратното изрязване на „card" отсича
-            краищата им. Фонът на картата е същият сив като на изрезките —
-            затова около тях не се вижда ръб.
-          */
-          const img = sectionImage(item.image)
-
-          return (
-            <li key={i} className="flex flex-col rounded-2xl bg-panel p-6 lg:min-h-[550px]">
-              <p className="text-base font-semibold">
-                {item.name} <span className="tabular">×{item.qty ?? 1}</span>
-              </p>
-
-              {/* Картата без снимка показва само името и остава със същата височина. */}
-              {img ? (
-                <span className="flex flex-1 items-center justify-center pt-6">
-                  <SectionImage
-                    image={img}
-                    alt={mediaAlt(item.image) || item.name}
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    /*
-                      Ширината е определена, височината следва съотношението
-                      и се спира на 320 px. С „w-auto" размерът зависи от
-                      декодираната снимка — ако тя закъснее или не се зареди,
-                      картата се срутва до нула.
-                    */
-                    className="h-auto max-h-80 w-full object-contain"
-                  />
-                </span>
-              ) : (
-                <span className="flex flex-1 items-center justify-center pt-6">
-                  <ImagePlaceholder className="h-48 w-full rounded-lg" />
-                </span>
-              )}
-            </li>
-          )
-        })}
-      </ul>
+      {groups.length ? (
+        <BoxTabs
+          labels={groups.map((g) => g.label)}
+          panels={groups.map((g) => <BoxItems key={g.id ?? g.label} items={g.items ?? []} />)}
+          initial={block.defaultGroup ?? 0}
+        />
+      ) : (
+        <BoxItems items={items} />
+      )}
 
       {block.caption ? (
         <p className="mt-6 text-center text-xs text-ink-muted">{block.caption}</p>

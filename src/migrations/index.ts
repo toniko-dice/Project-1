@@ -22,6 +22,7 @@ import * as migration_20260923_133550_comparison_intro from './20260923_133550_c
 import * as migration_20260924_102822_tree_and_urls from './20260924_102822_tree_and_urls';
 import * as migration_20260924_132054_product_ean2 from './20260924_132054_product_ean2';
 import * as migration_20260924_170000_home_page_urls from './20260924_170000_home_page_urls';
+import * as migration_20260925_103626_box_groups from './20260925_103626_box_groups';
 
 export const migrations = [
   {
@@ -142,6 +143,11 @@ export const migrations = [
   {
     up: migration_20260924_170000_home_page_urls.up,
     down: migration_20260924_170000_home_page_urls.down,
-    name: '20260924_170000_home_page_urls'
+    name: '20260924_170000_home_page_urls',
+  },
+  {
+    up: migration_20260925_103626_box_groups.up,
+    down: migration_20260925_103626_box_groups.down,
+    name: '20260925_103626_box_groups'
   },
 ];

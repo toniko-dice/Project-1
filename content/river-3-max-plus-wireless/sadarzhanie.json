@@ -93,7 +93,7 @@
       "theme": "light",
       "heading": "Модулна, изключително гъвкава електроцентрала за всяка ситуация",
       "body": "",
-      "image": "01_2_6a12fb46-23f5-4091-8b91-05d94540e29e.jpg"
+      "image": "01_2_6a12fb46-23f5-4091-8b91-05d94540e29e.png"
     },
     {
       "blockType": "featureSection",
@@ -274,31 +274,97 @@
       "blockType": "inTheBox",
       "anchorLabel": "Какво има в кутията",
       "heading": "Какво има в кутията",
-      "items": [
+      "_iztochnik": "Трите раздела на „What's in the box“ на EcoFlow (картинки 14_1, 14_2, 14_3). Съдържанието е едно и също, различава се само устройството. Активен по подразбиране е разделът на този продукт (Max Plus).",
+      "groups": [
         {
-          "name": "EcoFlow RIVER 3 Max Plus (Wireless)",
-          "qty": 1,
-          "image": "ecoflow-river-3-plus-wireless-portable-power-station-1170560975.png",
-          "imageAlt": "EcoFlow RIVER 3 Max Plus (Wireless)"
+          "label": "RIVER 3 Plus (Wireless)",
+          "items": [
+            {
+              "name": "EcoFlow RIVER 3 Plus (Wireless)",
+              "qty": 1,
+              "image": "ecoflow-river-3-plus-wireless-portable-power-station-1170560970.png",
+              "imageAlt": "EcoFlow RIVER 3 Plus (Wireless)"
+            },
+            {
+              "name": "Захранващ кабел за контакт",
+              "qty": 1,
+              "image": "kutiya-kabel.webp",
+              "imageAlt": "Захранващ кабел за контакт"
+            },
+            {
+              "name": "Кабел EcoFlow USB-B към USB-A за UPS комуникация",
+              "qty": 1,
+              "image": "kutiya-kabel-ups.webp",
+              "imageAlt": "Кабел USB-B към USB-A за UPS комуникация"
+            },
+            {
+              "name": "Кратко ръководство и гаранционна карта",
+              "qty": 1,
+              "image": "kutiya-rakovodstvo.webp",
+              "imageAlt": "Кратко ръководство и гаранционна карта"
+            }
+          ]
         },
         {
-          "name": "Захранващ кабел за контакт",
-          "qty": 1,
-          "image": "kutiya-kabel.webp",
-          "imageAlt": "Захранващ кабел за контакт"
+          "label": "RIVER 3 Max (Wireless)",
+          "items": [
+            {
+              "name": "EcoFlow RIVER 3 Max (Wireless)",
+              "qty": 1,
+              "image": "ecoflow-river-3-plus-wireless-portable-power-station-1170566041.png",
+              "imageAlt": "EcoFlow RIVER 3 Max (Wireless)"
+            },
+            {
+              "name": "Захранващ кабел за контакт",
+              "qty": 1,
+              "image": "kutiya-kabel.webp",
+              "imageAlt": "Захранващ кабел за контакт"
+            },
+            {
+              "name": "Кабел EcoFlow USB-B към USB-A за UPS комуникация",
+              "qty": 1,
+              "image": "kutiya-kabel-ups.webp",
+              "imageAlt": "Кабел USB-B към USB-A за UPS комуникация"
+            },
+            {
+              "name": "Кратко ръководство и гаранционна карта",
+              "qty": 1,
+              "image": "kutiya-rakovodstvo.webp",
+              "imageAlt": "Кратко ръководство и гаранционна карта"
+            }
+          ]
         },
         {
-          "name": "Кабел EcoFlow USB-B към USB-A за UPS комуникация",
-          "qty": 1
-        },
-        {
-          "name": "Кратко ръководство и гаранционна карта",
-          "qty": 1,
-          "image": "kutiya-rakovodstvo.webp",
-          "imageAlt": "Кратко ръководство и гаранционна карта"
+          "label": "RIVER 3 Max Plus (Wireless)",
+          "items": [
+            {
+              "name": "EcoFlow RIVER 3 Max Plus (Wireless)",
+              "qty": 1,
+              "image": "ecoflow-river-3-plus-wireless-portable-power-station-1170560975.png",
+              "imageAlt": "EcoFlow RIVER 3 Max Plus (Wireless)"
+            },
+            {
+              "name": "Захранващ кабел за контакт",
+              "qty": 1,
+              "image": "kutiya-kabel.webp",
+              "imageAlt": "Захранващ кабел за контакт"
+            },
+            {
+              "name": "Кабел EcoFlow USB-B към USB-A за UPS комуникация",
+              "qty": 1,
+              "image": "kutiya-kabel-ups.webp",
+              "imageAlt": "Кабел USB-B към USB-A за UPS комуникация"
+            },
+            {
+              "name": "Кратко ръководство и гаранционна карта",
+              "qty": 1,
+              "image": "kutiya-rakovodstvo.webp",
+              "imageAlt": "Кратко ръководство и гаранционна карта"
+            }
+          ]
         }
       ],
-      "_iztochnik": "Разделът „RIVER 3 Max Plus (Wireless)“ на „What's in the box“ (картинка 14_3_IMG_a0b5f108…jpg): устройство, AC кабел, USB-B→USB-A UPS кабел, кратко ръководство и гаранция. RAPID батерията е вътре в устройството."
+      "defaultGroup": 2
     },
     {
       "blockType": "specTable",
@@ -471,8 +537,10 @@
       "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560972.png"
     ],
     "sekcii": [
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560970.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170566041.png",
       "https://eu.ecoflow.com/cdn/shop/files/1_1_kv_d9588423-b500-4083-9171-99ac112bbe9d.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/01_2_6a12fb46-23f5-4091-8b91-05d94540e29e.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/01_2_6a12fb46-23f5-4091-8b91-05d94540e29e.png",
       "https://eu.ecoflow.com/cdn/shop/files/02_01-Versatile_modular_design_for_every_situation.jpg",
       "https://eu.ecoflow.com/cdn/shop/files/02_02-Snap-in_charging_with_a_steady_hold.jpg",
       "https://eu.ecoflow.com/cdn/shop/files/02_03-Extra_wireless_charging_option.jpg",
@@ -493,7 +561,7 @@
       "https://eu.ecoflow.com/cdn/shop/files/16_1_IMG.jpg",
       "https://eu.ecoflow.com/cdn/shop/files/14_3_IMG_a0b5f108-352d-45fd-b335-e44ae83175a9.jpg"
     ],
-    "_bележка": "14_3_IMG_a0b5f108… е картинката „What's in the box“ за Max Plus — само за справка. kutiya-kabel.webp и kutiya-rakovodstvo.webp са вече в Медия."
+    "_bележка": "14_3_IMG_a0b5f108… е картинката „What's in the box“ за Max Plus — само за справка. kutiya-kabel.webp и kutiya-rakovodstvo.webp са вече в Медия. Снимките …1170560970.png и …1170566041.png са само за кутията (раздели Plus и Max) — в sekcii/. kutiya-kabel-ups.webp — изрежи кабела от 14_3_IMG… и го качи в sekcii/."
   },
   "_prevod_nadpisi": "виж prevod-nadpisi.md в същата папка",
   "_neyasni": [

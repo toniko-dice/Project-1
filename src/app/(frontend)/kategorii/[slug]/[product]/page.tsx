@@ -206,11 +206,20 @@ export default async function ProductPage({ params }: Args) {
         <Breadcrumbs items={crumbs} />
       </div>
 
-      {/* ── Галерия и купуване ── */}
-      <div className="container-site grid gap-8 pb-8 pt-4 lg:grid-cols-2 lg:gap-12">
+      {/*
+        ── Галерия и купуване ──
+
+        Двете колони започват на една и съща височина, както в оригинала.
+        Преди информационната колона имаше `lg:pt-8` и заглавието тръгваше
+        по-ниско от горния ръб на галерията.
+
+        `items-start` пази колоната да не се разтяга до височината на
+        галерията: по-късият текст стои горе, а не увисва центриран.
+      */}
+      <div className="container-site grid items-start gap-8 pb-8 pt-4 lg:grid-cols-2 lg:gap-12">
         <ProductGallery images={images} />
 
-        <div className="flex flex-col gap-4 lg:pt-8">
+        <div className="flex flex-col gap-4">
           {product.badge && product.badge !== 'none' ? (
             <span className="w-fit rounded bg-ink px-2 py-1 text-[11px] font-semibold tracking-wide text-white">
               {BADGE_LABELS[product.badge]}

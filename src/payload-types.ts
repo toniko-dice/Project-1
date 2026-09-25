@@ -1255,6 +1255,9 @@ export interface Product {
              */
             anchorLabel?: string | null;
             heading?: string | null;
+            /**
+             * Ползва се, когато няма раздели по-долу.
+             */
             items?:
               | {
                   image?: (number | null) | Media;
@@ -1266,6 +1269,30 @@ export interface Product {
                   id?: string | null;
                 }[]
               | null;
+            /**
+             * По избор. С попълнени раздели списъкът „Съдържание" по-горе НЕ се показва.
+             */
+            groups?:
+              | {
+                  label: string;
+                  items?:
+                    | {
+                        image?: (number | null) | Media;
+                        /**
+                         * Напр. кабел за зареждане.
+                         */
+                        name: string;
+                        qty?: number | null;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            /**
+             * Номер на раздела, който е отворен при зареждане — първият е 0. Празно значи първия.
+             */
+            defaultGroup?: number | null;
             /**
              * По избор.
              */
@@ -2258,6 +2285,21 @@ export interface ProductsSelect<T extends boolean = true> {
                     qty?: T;
                     id?: T;
                   };
+              groups?:
+                | T
+                | {
+                    label?: T;
+                    items?:
+                      | T
+                      | {
+                          image?: T;
+                          name?: T;
+                          qty?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              defaultGroup?: T;
               caption?: T;
               id?: T;
               blockName?: T;
