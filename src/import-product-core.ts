@@ -124,6 +124,21 @@ const MIME: Record<string, string> = {
   '.gif': 'image/gif',
 }
 
+/**
+ * Името без разширение и БЕЗ точки в края.
+ *
+ * Няколко файла от dice.bg са с двойна точка: `…_twice_as_fast..jpg`.
+ * `path.basename(f, '.jpg')` оставя точката — основата става
+ * „…_twice_as_fast.". Payload обаче я премахва при записа и файлът в Медия
+ * е „…_twice_as_fast.jpg". Сравнението по основа никога не съвпадаше и
+ * вносът качваше СЪЩИЯ файл наново при всяко пускане: до 28 септември 2026
+ * се бяха натрупали по седем копия на всеки от двата (`-1` … `-6`).
+ *
+ * Затова основата се подравнява с това, което Payload реално записва.
+ */
+const bareStem = (file: string): string =>
+  path.basename(file, path.extname(file)).replace(/\.+$/, '')
+
 /** Номерът, с който се пълнят полетата при проверка — нищо не се записва. */
 const DRY_ID = -1
 
@@ -239,7 +254,7 @@ export const importProduct = async (
     for (const dir of IMAGE_DIRS) {
       for (const name of await fs.readdir(path.join(ROOT, dir))) {
         if (!path.extname(name)) continue
-        const stem = path.basename(name, path.extname(name))
+        const stem = bareStem(name)
         filesByStem.set(stem, [...(filesByStem.get(stem) ?? []), path.join(ROOT, dir, name)])
       }
     }
@@ -256,9 +271,8 @@ export const importProduct = async (
 
   /** Основата на името, под която файлът се търси и качва в Медия. */
   const mediaStem = (file: string): string => {
-    const ext = path.extname(file)
-    const stem = path.basename(file, ext)
-    return stemsWithManyExts.has(stem) ? `${stem}-${ext.slice(1).toLowerCase()}` : stem
+    const stem = bareStem(file)
+    return stemsWithManyExts.has(stem) ? `${stem}-${path.extname(file).slice(1).toLowerCase()}` : stem
   }
 
   const uploadedCache = new Map<string, number>()
