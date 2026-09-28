@@ -24,6 +24,7 @@
 - RIVER серия | river-seriya | панелът „Серия EcoFlow RIVER“
   - RIVER 3 серия | river-3-seriya | RIVER 3, Plus, Max, UPS, Wireless
 - TRAIL серия | trail-seriya | панелът „Серия EcoFlow TRAIL“; само ако dice.bg го продава
+- Комплекти | komplekti-s-elektrocentrala | електроцентрала + соларен панел (DELTA/RIVER + панел); отделна серия, последна в менюто (28.09.2026 — преместена от главната „Комплекти“)
 
 ## 2. Домашни и балконски системи | domashni-sistemi | в лентата
 
@@ -55,8 +56,8 @@
 
 ## 6. Комплекти | komplekti | в лентата
 
-- Комплекти с електроцентрала | komplekti-s-elektrocentrala | DELTA/RIVER + панел
 - Комплекти за дома | komplekti-za-doma | 5 kWh Power Kit, STREAM + панели
+- (Комплектите с електроцентрала са в 1. Портативни електроцентрали → Комплекти)
 
 ---
 

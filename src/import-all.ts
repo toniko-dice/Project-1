@@ -28,9 +28,11 @@
 import config from '@payload-config'
 import { getPayload } from 'payload'
 
+import { createBackup } from './lib/backup'
 import {
   ImportError,
   type ImportResult,
+  checkDownloadNameConflicts,
   importProduct,
   productFolders,
   revalidateServer,
@@ -80,9 +82,43 @@ console.log(
 )
 console.log('')
 
-/* ─────────── вносът ─────────── */
+/* ─────────── проверки преди вноса ─────────── */
 
 const payload = await getPayload({ config })
+
+/*
+  Едно име, два различни адреса — спира се тук, преди да е пипнато нещо.
+  Общата папка `content/snimki/` е плоска и двете снимки биха се
+  припокрили мълчаливо.
+*/
+try {
+  await checkDownloadNameConflicts(всички)
+} catch (err) {
+  console.error(`\n✗ ${(err as Error).message}\n`)
+  process.exit(1)
+}
+
+/*
+  Архив преди всяко истинско пускане.
+
+  Вносът пипа много продукти наведнъж и може да подмени снимка в Медия.
+  Архивът е начинът да се върне всичко, ако се окаже, че подмяната не е
+  била желана — затова се прави ПРЕДИ, не след, и името му се изписва.
+*/
+if (!dryRun) {
+  try {
+    const { doc } = await createBackup(payload, {
+      label: `Преди внос на ${папки.length} продукта`,
+      trigger: 'ръчно',
+    })
+    console.log(`Архив преди вноса: „${doc.label}" (№ ${doc.id})`)
+    console.log('')
+  } catch (e) {
+    console.error(`\n✗ Архивът не се направи: ${(e as Error).message}`)
+    console.error('  Вносът е спрян — без архив няма връщане назад.\n')
+    process.exit(1)
+  }
+}
 
 type Ред = {
   folder: string
@@ -150,6 +186,34 @@ const несвалени = успешни.reduce((n, r) => n + r.резулта�
 const качени = успешни.reduce((n, r) => n + r.резултат!.uploadedNew, 0)
 const преизползвани = успешни.reduce((n, r) => n + r.резултат!.reusedExisting, 0)
 const липсващи = успешни.reduce((n, r) => n + r.резултат!.missingFiles.length, 0)
+const поФайлБрой = new Set(успешни.flatMap((r) => r.резултат!.replacements.map((з) => з.file))).size
+
+/* ─────────── подмени в Медия ─────────── */
+
+/*
+  Подмяната пипа снимка, която може да се ползва от други продукти —
+  затова се изписва поименно: кой файл, кой запис, откъде е новият и кои
+  продукти го ползват. Никога само число в обобщението.
+*/
+const подмени = успешни.flatMap((r) =>
+  r.резултат!.replacements.map((з) => ({ ...з, folder: r.folder })),
+)
+
+if (подмени.length) {
+  const поФайл = new Map<string, { mediaId: number; source: string; folders: string[] }>()
+  for (const з of подмени) {
+    const досега = поФайл.get(з.file)
+    if (досега) досега.folders.push(з.folder)
+    else поФайл.set(з.file, { mediaId: з.mediaId, source: з.source, folders: [з.folder] })
+  }
+
+  console.log('')
+  console.log(dryRun ? 'ЩЕ СЕ ПОДМЕНЯТ В МЕДИЯ:' : 'ПОДМЕНЕНИ В МЕДИЯ:')
+  for (const [file, д] of поФайл) {
+    console.log(`  ${file}  (запис № ${д.mediaId}, новият идва от „${д.source}")`)
+    console.log(`    ползват го: ${д.folders.join(', ')}`)
+  }
+}
 
 console.log('')
 console.log(`Публикувани: ${публикувани} · чернови: ${чернови} · грешки: ${грешки}`)
@@ -159,6 +223,7 @@ console.log(
     : `Снимки: ${свалени} свалени, ${качени} качени, ${преизползвани} преизползвани · липсващи файлове: ${липсващи}`,
 )
 if (несвалени) console.log(`  ⚠ не се свалиха ${несвалени} файла — виж редовете по-горе`)
+console.log(`Подменени записи в Медия: ${поФайлБрой}`)
 
 for (const ред of успешни) {
   if (ред.резултат!.publishError) {

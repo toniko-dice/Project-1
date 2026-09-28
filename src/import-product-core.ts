@@ -35,6 +35,7 @@ import { createHash } from 'crypto'
 import fs from 'fs/promises'
 import path from 'path'
 import type { Payload } from 'payload'
+import sharp from 'sharp'
 
 /* ─────────── видове ─────────── */
 
@@ -65,8 +66,12 @@ export type ImportResult = {
   sections: number
   linkedProducts: string[]
   unlinkedProducts: string[]
-  /** Файлове, свалени в папката на продукта при това пускане. */
+  /** Файлове, свалени в `content/_originali/` при това пускане. */
   downloaded: number
+  /** Откъде е взет всеки файл — за `--dry-run` и за обобщението. */
+  sources: [string, FileSource][]
+  /** Записи в Медия, подменени с различно съдържание. Никога мълчаливо. */
+  replacements: { file: string; mediaId: number; filename: string; source: FileSource }[]
   /** Адреси, които не се свалиха след трите опита. */
   failedDownloads: string[]
   missingFiles: string[]
@@ -250,6 +255,86 @@ const neededFiles = (content: Content): Set<string> => {
 
 export const CONTENT_ROOT = path.join(process.cwd(), 'content')
 
+/* ─────────── двете общи папки ─────────── */
+
+/**
+ * Преведените снимки — плоско, под ОРИГИНАЛНОТО име на файла.
+ *
+ * Собственикът превежда надписите върху снимките и не иска да ги разнася
+ * по стотици папки на продукти. Едно място за всички: файл оттук печели
+ * пред всичко останало, включително пред вече качения в Медия.
+ */
+export const SNIMKI_DIR = path.join(CONTENT_ROOT, 'snimki')
+
+/**
+ * Свалените оригинали — също плоско.
+ *
+ * Кеш, за да не се тегли един и същи файл по два пъти: общите снимки на
+ * RIVER 3 семейството се ползват от пет продукта. Не отиват в папката на
+ * продукта, за да не се размива кое е свалено и кое е сложено на ръка.
+ */
+export const ORIGINALI_DIR = path.join(CONTENT_ROOT, '_originali')
+
+/** Откъде е дошъл файлът — за обобщението и за `--dry-run`. */
+export type FileSource = 'snimki' | 'папка' | 'оригинали' | 'Медия' | 'ще се свали' | 'ЛИПСВА'
+
+/* ─────────── еднакви имена, различни адреси ─────────── */
+
+/**
+ * Проверява, че едно име на файл не сочи към два различни адреса.
+ *
+ * Имената идват от EcoFlow и dice и на практика са уникални, но общата
+ * папка `content/snimki/` е плоска: две различни снимки с едно име биха
+ * се припокрили и вторият продукт мълчаливо би показал снимката на
+ * първия. Затова се проверява ПРЕДИ вноса и при сблъсък се спира.
+ *
+ * Еднакво име с еднакъв адрес е нормално — общите снимки на едно
+ * семейство продукти дават един запис в Медия за всички.
+ */
+export const checkDownloadNameConflicts = async (folders: string[]): Promise<void> => {
+  const адресПоИме = new Map<string, { url: string; folder: string }>()
+  const сблъсъци: string[] = []
+
+  for (const folder of folders) {
+    let content: Content
+    try {
+      content = JSON.parse(
+        await fs.readFile(path.join(CONTENT_ROOT, folder, 'sadarzhanie.json'), 'utf-8'),
+      ) as Content
+    } catch {
+      continue // Негоден JSON се докладва при самия внос на този продукт.
+    }
+
+    for (const списък of [content._svali_snimki?.galeriya, content._svali_snimki?.sekcii]) {
+      for (const url of списък ?? []) {
+        if (typeof url !== 'string') continue
+        const name = fileNameFromUrl(url)
+        if (!name) continue
+
+        const преди = адресПоИме.get(name)
+        if (!преди) {
+          адресПоИме.set(name, { url, folder })
+        } else if (преди.url !== url) {
+          сблъсъци.push(
+            `  ${name}
+    ${преди.folder}: ${преди.url}
+    ${folder}: ${url}`,
+          )
+        }
+      }
+    }
+  }
+
+  if (сблъсъци.length) {
+    throw new ImportError(
+      'Едно и също име на файл сочи към различни адреси. Общата папка ' +
+        '`content/snimki/` е плоска, тоест двете снимки биха се припокрили.\n' +
+        'Преименувайте файла в sadarzhanie.json на единия продукт:\n' +
+        сблъсъци.join('\n'),
+    )
+  }
+}
+
 /**
  * Папките в `content/`, които изобщо описват продукт.
  *
@@ -306,32 +391,112 @@ export const importProduct = async (
     throw new ImportError('В sadarzhanie.json липсва produkt.slug.')
   }
 
+  /* ─────────── изображения ─────────── */
+
+  /*
+    Всички подпапки на content/<slug>/ се смятат за папки със снимки.
+
+    Имената им НЕ са зашити. Папката с галерията е кръстена веднъж
+    „galeryia" и веднъж „galeriya" — при зашит списък втората просто не се
+    претърсва и всяка снимка в нея излиза като липсваща, без да е ясно защо.
+    Освен това секция може да сочи снимка от галерията: колоната в
+    сравнителната таблица показва самия продукт.
+  */
+  const IMAGE_DIRS = (await fs.readdir(ROOT, { withFileTypes: true }))
+    .filter((e) => e.isDirectory())
+    .map((e) => e.name)
+    .sort()
+
+  /* ─────────── откъде идва един файл ─────────── */
+
+  /*
+    Редът е: преведена → папка на продукта → свален оригинал.
+
+    Първото е важното. Собственикът превежда надписите върху снимките и
+    пуска файла в `content/snimki/` под същото име; оттам нататък той
+    печели пред всичко, включително пред вече качения в Медия — иначе
+    преводът никога не би стигнал до сайта (виж подмяната в `mediaIdFor`).
+
+    Второто е за вече направените продукти: техните `galeriya/` и
+    `sekcii/` остават както са и не се местят никъде.
+
+    Третото е кешът със свалените оригинали — общ за всички продукти,
+    защото едно семейство продукти дели едни и същи снимки.
+  */
+  /*
+    Две карти на папка: по ПЪЛНО име и по основа.
+
+    Пълното име решава първо. `07.jpg` и `07.png` в една папка са различни
+    снимки (затова и `mediaStem` ги разделя) — карта само по основа връща
+    която readdir е дала първа и вносът тихо взима чуждата снимка. Основата
+    остава като резерва: `09.png` в JSON-а, `09.webp` на диска.
+  */
+  type Карти = { поИме: Map<string, string>; поОснова: Map<string, string> }
+
+  const прочетиПапка = async (dir: string, натрупай?: Карти): Promise<Карти> => {
+    const карти: Карти = натрупай ?? { поИме: new Map(), поОснова: new Map() }
+    try {
+      for (const name of await fs.readdir(dir)) {
+        if (!path.extname(name)) continue
+        const пълен = path.join(dir, name)
+        if (!карти.поИме.has(name)) карти.поИме.set(name, пълен)
+        const stem = bareStem(name)
+        if (!карти.поОснова.has(stem)) карти.поОснова.set(stem, пълен)
+      }
+    } catch {
+      // Папката още не съществува — нормално при първо пускане.
+    }
+    return карти
+  }
+
+  const преведени = await прочетиПапка(SNIMKI_DIR)
+  const оригинали = await прочетиПапка(ORIGINALI_DIR)
+
+  let вПапката: Карти = { поИме: new Map(), поОснова: new Map() }
+  for (const dir of IMAGE_DIRS) вПапката = await прочетиПапка(path.join(ROOT, dir), вПапката)
+
+  /** Пътят до файла и откъде е, или `null`, ако го няма никъде локално. */
+  const намериЛокално = (file: string): { path: string; source: FileSource } | null => {
+    const редът: [Карти, FileSource][] = [
+      [преведени, 'snimki'],
+      [вПапката, 'папка'],
+      [оригинали, 'оригинали'],
+    ]
+    for (const [карти, source] of редът) {
+      const точен = карти.поИме.get(file)
+      if (точен) return { path: точен, source }
+    }
+    const stem = bareStem(file)
+    for (const [карти, source] of редът) {
+      const близък = карти.поОснова.get(stem)
+      if (близък) return { path: близък, source }
+    }
+    return null
+  }
+
   /* ─────────── сваляне на липсващите снимки ─────────── */
 
   /*
-    Първата стъпка е да се осигурят ФАЙЛОВЕТЕ на диска, не записите в
-    Медия. Двете са различни неща и редът има значение:
+    Свалянето осигурява ФАЙЛА, не записа в Медия — двете са различни неща.
 
-    - Папката на продукта е архивът. Ако утре потрябва друг формат или
-      друга изрезка, има от какво да се направят — затова липсващ файл се
-      сваля дори когато вече е качен в Медия. Изтрита `galeriya/` се
-      връща от само себе си при следващия внос.
-    - Самото КАЧВАНЕ обаче пак тръгва от Медия (виж `mediaIdFor`). Иначе
-      всяко пускане би качвало наново вече качените снимки и Медия щеше да
-      се напълни с `-1`, `-2`, `-3`.
+    Файлът е архивът: ако утре потрябва друг формат или друга изрезка, има
+    от какво да се направят. Затова липсващ файл се сваля дори когато вече
+    е качен в Медия. Свалените отиват в общата `content/_originali/`, не в
+    папката на продукта: една снимка се ползва от пет продукта и няма
+    смисъл да се тегли пет пъти.
 
-    Ръчно преведена снимка НЕ се презаписва: сваля се само файл, който го
-    няма в нито една подпапка.
+    Налично се брои по ОСНОВА на името, не по цялото. Качването търси в
+    Медия по основа (`mediaStem`), тоест `PC_R3_01.jpg` вече покрива нужда
+    от `PC_R3_01.png`. При проверка по цялото име свалянето слагаше `.png`
+    до `.jpg`, двата се смятаха за различни снимки и в Медия влизаха като
+    `PC_R3_01-jpg` и `PC_R3_01-png`.
   */
-  const адреси = new Map<string, { url: string; dir: string }>()
-  for (const [dir, списък] of [
-    ['galeriya', content._svali_snimki?.galeriya],
-    ['sekcii', content._svali_snimki?.sekcii],
-  ] as const) {
+  const адреси = new Map<string, string>()
+  for (const списък of [content._svali_snimki?.galeriya, content._svali_snimki?.sekcii]) {
     for (const url of списък ?? []) {
       if (typeof url !== 'string') continue
       const name = fileNameFromUrl(url)
-      if (name && !адреси.has(name)) адреси.set(name, { url, dir })
+      if (name && !адреси.has(name)) адреси.set(name, url)
     }
   }
 
@@ -339,51 +504,22 @@ export const importProduct = async (
   const failedDownloads: string[] = []
 
   if (адреси.size && !options.noDownload) {
-    /*
-      Налично се брои по ОСНОВА на името, не по цялото име.
-
-      Качването търси в Медия по основа (`mediaStem`), тоест `PC_R3_01.jpg`
-      на диска вече покрива нужда от `PC_R3_01.png`. Ако проверката тук
-      беше по цялото име, свалянето щеше да сложи `.png` до `.jpg`, двата
-      файла щяха да се сметнат за различни снимки (различно съдържание при
-      различен формат) и в Медия щяха да влязат като `PC_R3_01-jpg` и
-      `PC_R3_01-png`. Точно това се случи при първото пускане.
-
-      Правилото „ръчно преведена снимка има предимство" значи същото:
-      файлът на собственика не се измества от свален.
-    */
-    const налични = new Set<string>()
-    for (const entry of await fs.readdir(ROOT, { withFileTypes: true })) {
-      if (!entry.isDirectory()) continue
-      for (const name of await fs.readdir(path.join(ROOT, entry.name))) налични.add(bareStem(name))
-    }
-
-    /*
-      Папката с галерията е кръстена и „galeryia", и „galeriya". Ако вече
-      има такава, свалянето отива в НЕЯ — иначе продуктът ще има две
-      папки с една и съща роля.
-    */
-    const папкаЗа = async (dir: string): Promise<string> => {
-      const съществуващи = (await fs.readdir(ROOT, { withFileTypes: true }))
-        .filter((e) => e.isDirectory())
-        .map((e) => e.name)
-      const образец = dir === 'galeriya' ? /galer/i : /sekc/i
-      return съществуващи.find((d) => образец.test(d)) ?? dir
-    }
-
     const задачи: (() => Promise<void>)[] = []
+
     for (const file of neededFiles(content)) {
-      if (налични.has(bareStem(file))) continue
-      const адрес = адреси.get(file)
-      if (!адрес) continue
+      if (намериЛокално(file)) continue
+      const url = адреси.get(file)
+      if (!url) continue
 
       задачи.push(async () => {
-        const dest = path.join(ROOT, await папкаЗа(адрес.dir), file)
+        const dest = path.join(ORIGINALI_DIR, file)
         try {
           if (dryRun) {
             log(`  ↓ би се свалил: ${file}`)
           } else {
-            await downloadFile(адрес.url, dest)
+            await downloadFile(url, dest)
+            оригинали.поИме.set(file, dest)
+            оригинали.поОснова.set(bareStem(file), dest)
             log(`  ↓ свален: ${file}`)
           }
           downloaded += 1
@@ -401,22 +537,6 @@ export const importProduct = async (
       await поPartии(задачи, 4)
     }
   }
-
-  /* ─────────── изображения ─────────── */
-
-  /*
-    Всички подпапки на content/<slug>/ се смятат за папки със снимки.
-
-    Имената им НЕ са зашити. Папката с галерията е кръстена веднъж
-    „galeryia" и веднъж „galeriya" — при зашит списък втората просто не се
-    претърсва и всяка снимка в нея излиза като липсваща, без да е ясно защо.
-    Освен това секция може да сочи снимка от галерията: колоната в
-    сравнителната таблица показва самия продукт.
-  */
-  const IMAGE_DIRS = (await fs.readdir(ROOT, { withFileTypes: true }))
-    .filter((e) => e.isDirectory())
-    .map((e) => e.name)
-    .sort()
 
   /*
     Празно не е грешка.
@@ -470,12 +590,186 @@ export const importProduct = async (
   let uploadedNew = 0
   let reusedExisting = 0
   const missingFiles: string[] = []
+  /** Откъде е взет всеки файл — за `--dry-run` и за обобщението. */
+  const sources = new Map<string, FileSource>()
+  /** Подменените записи в Медия. Никога не остават мълчаливи. */
+  const replacements: { file: string; mediaId: number; filename: string; source: FileSource }[] = []
+
+  /** Съвпада ли файлът в `media/` байт по байт с локалния. */
+  const същоСъдържание = async (
+    filename: string | null | undefined,
+    локален: string,
+  ): Promise<boolean> => {
+    if (!filename) return false
+    try {
+      const качен = await fs.readFile(path.resolve(process.cwd(), 'media', filename))
+      const местен = await fs.readFile(локален)
+      return качен.equals(местен)
+    } catch {
+      /*
+        Файлът в `media/` липсва — записът сочи в нищото. Тогава локалният
+        трябва да го замени, затова „не съвпадат".
+      */
+      return false
+    }
+  }
 
   /**
-   * Връща номера на изображението в Медия, качвайки го при нужда.
+   * Връща оригиналните байтове върху записания файл.
    *
-   * Проверява по име на файл — така повторно пускане на скрипта преизползва
-   * вече качените снимки вместо да трупа копия.
+   * Payload прекарва WebP, AVIF и GIF през Sharp БЕЗУСЛОВНО — заради
+   * евентуална анимация (`fileIsAnimatedType` в `generateFileData.js`).
+   * Дори без `formatOptions` `sharp().rotate().toBuffer()` прекодира:
+   * PC_5_1_D3P_X-Quiet излизаше 108 934 B от 139 274 B, при същите
+   * 2240×880. Не е преоразмеряване и не е наш код — но архивът не бива да
+   * е по-лош от подаденото.
+   *
+   * Размерите вече са направени; тук само файлът на оригинала се връща и
+   * `filesize` се изравнява. JPEG и PNG не минават през този път и вече
+   * съвпадат байт по байт — затова се проверява, вместо да се презаписва
+   * сляпо. Това е и което държи сравнението по-горе да дава „еднакви" при
+   * повторно пускане.
+   */
+  const върниОригинала = async (
+    filename: string | null | undefined,
+    data: Buffer,
+    realExt: string,
+    file: string,
+  ): Promise<void> => {
+    if (!filename) return
+    const stored = path.resolve(process.cwd(), 'media', filename)
+    const onDisk = await fs.readFile(stored)
+    if (onDisk.equals(data) || path.extname(filename).toLowerCase() !== realExt) return
+
+    await fs.writeFile(stored, data)
+    const запис = await payload.find({
+      collection: 'media',
+      where: { filename: { equals: filename } },
+      limit: 1,
+      depth: 0,
+    })
+    const id = запис.docs[0]?.id
+    if (typeof id === 'number') {
+      await payload.update({
+        collection: 'media',
+        id,
+        data: { filesize: data.length },
+        depth: 0,
+      })
+    }
+    log(`  · ${file}: оригиналът е върнат непрекодиран (${data.length} B)`)
+  }
+
+  /**
+   * Подменя съдържанието на ВЕЧЕ СЪЩЕСТВУВАЩ запис в Медия.
+   *
+   * Не минава през качването на Payload, а презаписва файла и прави
+   * размерите със Sharp — точно както `media:regenerate`. Причината е
+   * конкретна: `payload.update` с нов файл проверява дали името е заето и
+   * при заето слага наставка. Заетото име е СОБСТВЕНОТО име на записа,
+   * затова `PC_R3_01.jpg` ставаше `PC_R3_01-1.jpg`, после `-2`. Името
+   * спираше да съвпада с това в `sadarzhanie.json`, следващият внос не
+   * намираше записа по основа и качваше нов — подмяната се превръщаше в
+   * дублиране. Проверено два пъти.
+   *
+   * Така номерът, името и всички връзки към записа остават същите, а
+   * съдържанието е новото.
+   *
+   * Изисква новият файл да е в СЪЩИЯ формат като записания. Преведена
+   * снимка, записана в друг формат, би направила разширението лъжа —
+   * тогава подмяната се отказва и се изписва защо.
+   */
+  const подмениСъдържанието = async (
+    doc: {
+      id: number
+      filename?: string | null
+      sizes?: Record<string, { filename?: string | null } | null> | null
+    },
+    данни: Buffer,
+    realExt: string,
+    file: string,
+    alt: string,
+  ): Promise<boolean> => {
+    const filename = doc.filename
+    if (!filename) return false
+
+    if (path.extname(filename).toLowerCase() !== realExt) {
+      log(
+        `  ⚠ ${file}: преведената снимка е ${realExt.slice(1).toUpperCase()}, а в Медия стои ` +
+          `${filename} — запишете я в същия формат, за да я подменя`,
+      )
+      return false
+    }
+
+    const MEDIA_DIR = path.resolve(process.cwd(), 'media')
+    await fs.writeFile(path.join(MEDIA_DIR, filename), данни)
+
+    const мета = await sharp(данни).metadata()
+    const размери: Record<string, unknown> = {}
+
+    for (const size of payload.collections.media!.config.upload.imageSizes ?? []) {
+      const targetW = size.width ?? null
+      const targetH = size.height ?? null
+      try {
+        let pipeline = sharp(данни)
+          .rotate()
+          .resize({
+            width: targetW ?? undefined,
+            height: targetH ?? undefined,
+            position: size.position,
+            fit: size.fit,
+            withoutEnlargement: size.withoutEnlargement,
+          })
+        const format = size.formatOptions?.format
+        if (format) pipeline = pipeline.toFormat(format, size.formatOptions?.options)
+
+        const { data, info } = await pipeline.toBuffer({ resolveWithObject: true })
+        const stemНаФайла = path.basename(filename, path.extname(filename))
+        const име = `${stemНаФайла}-${info.width}x${info.height}.${info.format}`
+        await fs.writeFile(path.join(MEDIA_DIR, име), data)
+        размери[size.name] = {
+          filename: име,
+          width: info.width,
+          height: info.height,
+          mimeType: `image/${info.format}`,
+          filesize: data.length,
+        }
+      } catch {
+        // Размер, който не може да се направи (по-тясна снимка), просто липсва.
+      }
+    }
+
+    /*
+      Записва се САМО описанието. Файлът не се подава — иначе Payload би
+      качил снимката наново и точно това искаме да избегнем.
+    */
+    await payload.update({
+      collection: 'media',
+      id: doc.id,
+      data: {
+        alt: alt || file,
+        filesize: данни.length,
+        width: мета.width,
+        height: мета.height,
+        sizes: размери,
+      } as never,
+      depth: 0,
+    })
+
+    return true
+  }
+
+  /**
+   * Връща номера на изображението в Медия, качвайки или подменяйки при нужда.
+   *
+   * Редът е този от задачата: преведена снимка → папка на продукта →
+   * свален оригинал → Медия → сваляне → „липсва".
+   *
+   * Тънкото място е съчетаването на първите три с четвъртото. Локалният
+   * файл ПЕЧЕЛИ, но това не значи ново качване: ако в Медия вече има запис
+   * със същото име, той се ОБНОВЯВА на място, със същия номер. Така
+   * преведената снимка стига до всички продукти, които сочат записа, и
+   * нищо не се дублира. Ако съдържанието съвпада — не се прави нищо.
    */
   const mediaIdFor = async (
     dirHint: string,
@@ -507,103 +801,131 @@ export const importProduct = async (
       (doc) => doc.filename && path.basename(doc.filename, path.extname(doc.filename)) === stem,
     )
 
-    if (match) {
-      reusedExisting += 1
-      uploadedCache.set(key, match.id)
-      return match.id
-    }
+    const локален = намериЛокално(file)
 
-    /*
-      Подадената папка се проверява първа, после всички останали. Така
-      снимка, преместена в друга папка, продължава да се намира.
-    */
-    const order = [dirHint, ...IMAGE_DIRS.filter((d) => d !== dirHint)]
-
-    let filePath: string | null = null
-    for (const dir of order) {
-      const candidate = path.join(ROOT, dir, file)
-      if (await exists(candidate)) {
-        filePath = candidate
-        break
+    /* ─── няма локален файл: остава само вече каченото ─── */
+    if (!локален) {
+      if (match) {
+        reusedExisting += 1
+        sources.set(file, 'Медия')
+        uploadedCache.set(key, match.id)
+        return match.id
       }
-    }
-
-    if (!filePath) {
       // Една липсваща снимка не бива да спира целия внос.
       missingFiles.push(key)
+      sources.set(file, 'ЛИПСВА')
       log(
-        IMAGE_DIRS.length
-          ? `  ⚠ липсва файл: ${key} — търсен в: ${order.join(', ')}`
-          : `  ⚠ липсва файл: ${key} — няма го и в Медия, а content/${folder} е без папки със снимки`,
+        адреси.has(file) && options.noDownload
+          ? `  ⚠ липсва файл: ${key} — има адрес, но свалянето е изключено`
+          : `  ⚠ липсва файл: ${key} — няма го нито локално, нито в Медия`,
       )
       return null
     }
 
-    const ext = path.extname(file).toLowerCase()
+    const ext = path.extname(локален.path).toLowerCase()
     if (!MIME[ext]) {
       missingFiles.push(`${key} (непознат вид файл)`)
+      sources.set(file, 'ЛИПСВА')
       log(`  ⚠ непознат вид файл: ${key} — пропуснат`)
       return null
     }
 
-    const real = await sniffFormat(filePath)
+    const real = await sniffFormat(локален.path)
     const declared = ext === '.jpeg' ? 'jpg' : ext.slice(1)
     if (real && real !== declared) {
       log(`  · ${file}: файлът е ${real.toUpperCase()} въпреки разширението — в Медия ще е .${real}`)
     }
+    const realExt = real ? `.${real}` : ext
+
+    /* ─── има и локален, и в Медия: съвпадат ли ─── */
+    if (match) {
+      /*
+        ПОДМЯНА СЕ ПРАВИ САМО ЗА ФАЙЛ ОТ `content/snimki/`.
+
+        Задачата описва сравнение и за файловете в папката на продукта, но
+        то не може да работи: в Медия стои това, което Payload е ЗАПИСАЛ —
+        `07.png` от диска е `07-png.webp` в Медия, а качените преди
+        връщането на оригиналните байтове се различават и по съдържание.
+        Сравнението по байтове през два формата винаги дава „различни" и
+        първото пускане поиска 68 подмени, от които нито една истинска —
+        включително по деветте продукта, които §5 изрично защитава.
+
+        `content/snimki/` няма тази двусмисленост: там влиза само файл,
+        който собственикът е сложил НАРОЧНО, за да замени качения. Затова
+        подмяната е вързана за източника, а не за сравнението.
+      */
+      const еднакви =
+        локален.source !== 'snimki' || (await същоСъдържание(match.filename, локален.path))
+      if (еднакви) {
+        reusedExisting += 1
+        sources.set(file, локален.source)
+        uploadedCache.set(key, match.id)
+        return match.id
+      }
+
+      /*
+        Различават се — записът в Медия се обновява със СЪЩИЯ номер.
+
+        Обичайният случай: продуктът е внесен с оригиналите (английски
+        надписи), после собственикът превежда снимката и я пуска в
+        `content/snimki/`. Нов запис би значел, че старите продукти
+        продължават да сочат непреведената. Затова `update` с нов файл:
+        размерите се правят наново, всички, които сочат номера, виждат
+        новата снимка.
+
+        Всяка подмяна се ИЗПИСВА — никога мълчаливо (виж §5 на задачата).
+      */
+      replacements.push({
+        file,
+        mediaId: match.id,
+        filename: match.filename ?? '',
+        source: локален.source,
+      })
+
+      if (dryRun) {
+        sources.set(file, локален.source)
+        uploadedCache.set(key, match.id)
+        return match.id
+      }
+
+      const данни = await fs.readFile(локален.path)
+      const успя = await подмениСъдържанието(match as never, данни, realExt, file, alt)
+      if (!успя) {
+        // Подмяната не мина — старата снимка остава, за да не се счупи нищо.
+        replacements.pop()
+        reusedExisting += 1
+      }
+      sources.set(file, локален.source)
+      uploadedCache.set(key, match.id)
+      return match.id
+    }
+
+    /* ─── няма в Медия: качва се ─── */
 
     // При проверка файлът е намерен и това стига — нищо не се качва.
     if (dryRun) {
       uploadedNew += 1
+      sources.set(file, локален.source)
       uploadedCache.set(key, DRY_ID)
       return DRY_ID
     }
 
     /*
-      Файлът се подава като буфер с име по `mediaStem`, не като `filePath`:
+      Файлът се подава като буфер с име по `mediaStem`, не като път:
       така името в Медия е под контрол (виж по-горе), а JPEG и PNG остават
       байт по байт. WebP Payload прекарва през Sharp така или иначе.
     */
-    // Името и видът следват СЪДЪРЖАНИЕТО — както Payload би ги определил сам.
-    const realExt = real ? `.${real}` : ext
-    const data = await fs.readFile(filePath)
+    const data = await fs.readFile(локален.path)
     const doc = await payload.create({
       collection: 'media',
       data: { alt: alt || file },
-      file: { data, name: `${stem}${realExt}`, mimetype: MIME[realExt], size: data.length },
+      file: { data, name: `${stem}${realExt}`, mimetype: MIME[realExt]!, size: data.length },
     })
 
-    /*
-      Оригиналът се връща байт по байт.
-
-      Payload прекарва WebP, AVIF и GIF през Sharp БЕЗУСЛОВНО — заради
-      евентуална анимация (`fileIsAnimatedType` в `generateFileData.js`).
-      Дори без `formatOptions` `sharp().rotate().toBuffer()` прекодира:
-      PC_5_1_D3P_X-Quiet излизаше 108 934 B от 139 274 B, при същите
-      2240×880. Не е преоразмеряване и не е наш код — но архивът не бива да
-      е по-лош от подаденото.
-
-      Размерите вече са направени; тук само файлът на оригинала се връща и
-      `filesize` се изравнява. JPEG и PNG не минават през този път и вече
-      съвпадат байт по байт — затова се проверява, вместо да се презаписва
-      сляпо.
-    */
-    if (doc.filename) {
-      const stored = path.resolve(process.cwd(), 'media', doc.filename)
-      const onDisk = await fs.readFile(stored)
-      if (!onDisk.equals(data) && path.extname(doc.filename).toLowerCase() === realExt) {
-        await fs.writeFile(stored, data)
-        await payload.update({
-          collection: 'media',
-          id: doc.id,
-          data: { filesize: data.length },
-          depth: 0,
-        })
-        log(`  · ${file}: оригиналът е върнат непрекодиран (${data.length} B)`)
-      }
-    }
+    await върниОригинала(doc.filename, data, realExt, file)
 
     uploadedNew += 1
+    sources.set(file, локален.source)
     uploadedCache.set(key, doc.id)
     return doc.id
   }
@@ -843,6 +1165,8 @@ export const importProduct = async (
     linkedProducts,
     unlinkedProducts,
     downloaded,
+    sources: [...sources.entries()],
+    replacements,
     failedDownloads,
     missingFiles,
     publishError,
@@ -855,6 +1179,14 @@ export const importProduct = async (
     види преди същинския внос.
   */
   if (dryRun) {
+    /*
+      При проверка се изписва откъде би дошъл ВСЕКИ файл. Така собственикът
+      вижда кои от преведените снимки вече са разпознати — иначе трябва да
+      гадае дали файлът, който току-що е сложил в `content/snimki/`, е с
+      правилното име.
+    */
+    for (const [file, source] of sources) log(`  ${source.padEnd(12)} ${file}`)
+
     action = !existing
       ? 'създаден като чернова'
       : wasPublished

@@ -61,3 +61,9 @@ content/*/galeriya/
 content/*/galeryia/
 content/*/sekcii/
 content/referentsia/
+
+# Общите папки със снимки — държат се извън Git като media/
+content/snimki/*
+!content/snimki/.gitkeep
+content/_originali/*
+!content/_originali/.gitkeep

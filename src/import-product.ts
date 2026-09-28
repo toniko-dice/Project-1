@@ -18,7 +18,13 @@
 import config from '@payload-config'
 import { getPayload } from 'payload'
 
-import { ImportError, importProduct, revalidateServer } from './import-product-core'
+import {
+  ImportError,
+  checkDownloadNameConflicts,
+  importProduct,
+  productFolders,
+  revalidateServer,
+} from './import-product-core'
 
 const die = (message: string): never => {
   console.error(`\n✗ ${message}\n`)
@@ -39,6 +45,18 @@ if (!slug) {
 const noDownload = process.argv.includes('--no-download')
 
 const payload = await getPayload({ config })
+
+/*
+  Сблъсъкът на имена се проверява върху ВСИЧКИ папки, не само върху тази.
+  Общата `content/snimki/` е плоска: две различни снимки с едно име се
+  припокриват, независимо през кой продукт е влязла втората.
+*/
+try {
+  await checkDownloadNameConflicts(await productFolders())
+} catch (err) {
+  if (err instanceof ImportError) die(err.message)
+  throw err
+}
 
 let result
 try {
@@ -69,6 +87,13 @@ if (result.unlinkedProducts.length) {
   console.log(
     `  · колони без продукт в каталога (остават с ръчното име): ${result.unlinkedProducts.join(', ')}`,
   )
+}
+
+if (result.replacements.length) {
+  console.log('Подменени записи в Медия (същият номер, ново съдържание):')
+  for (const з of result.replacements) {
+    console.log(`  ${з.file} — запис № ${з.mediaId}, новият идва от „${з.source}"`)
+  }
 }
 
 if (result.failedDownloads.length) {
