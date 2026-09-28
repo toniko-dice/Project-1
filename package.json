@@ -23,6 +23,7 @@
     "migrate:fresh": "payload migrate:fresh",
     "backfill:order": "payload run src/backfill-order.ts",
     "import:product": "payload run src/import-product.ts",
+    "import:all": "payload run src/import-all.ts --",
     "health": "payload run src/health-check.ts"
   },
   "dependencies": {

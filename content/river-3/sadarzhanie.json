@@ -1,22 +1,22 @@
 {
-  "_bележка": "Съдържание за внасяне. Пуска се с: npm run import:product river-3-ups. Снимките се свалят по линковете в _svali_snimki в galeriya/ и sekcii/ със същите имена.",
-  "_iztochnik": "eu.ecoflow.com/products/river-3-portable-power-station?variant=49500668789079 (вариант RIVER 3 (UPS)), прочетено от браузъра на 25.09.2026. Страницата е обща за RIVER 3 и RIVER 3 (UPS); разликата е само UPS <10 ms вместо <20 ms.",
+  "_bележка": "Съдържание за внасяне. Пуска се с: npm run import:product river-3. Снимките се свалят по линковете в _svali_snimki в galeriya/ и sekcii/ със същите имена.",
+  "_iztochnik": "eu.ecoflow.com/products/river-3-portable-power-station (вариант RIVER 3, без UPS), прочетено на 25.09.2026. Същата страница като RIVER 3 (UPS); единствената разлика по EcoFlow е UPS <20 ms.",
   "produkt": {
-    "title": "EcoFlow RIVER 3 (UPS)",
-    "slug": "river-3-ups",
+    "title": "EcoFlow RIVER 3",
+    "slug": "river-3",
     "categorySlug": "river-3-seriya",
     "productType": "hero",
-    "tagline": "245Wh / 300W · UPS под 10 ms",
+    "tagline": "245Wh / 300W",
     "badge": "none",
-    "price": 219,
-    "compareAtPrice": 265.36,
-    "externalUrl": "https://dice.bg/ecoflow-river-3-ups-portable-power-station-256wh-portativna-elektrostantsia-za-zarezhdane-na-razlichna-tehnika-i-ustroystva-cheren-item70367",
+    "price": 198.89,
+    "compareAtPrice": 229.57,
+    "externalUrl": "https://dice.bg/ecoflow-river-3-portable-power-station-256wh-portativna-elektrostantsia-za-zarezhdane-na-razlichna-tehnika-i-ustroystva-cheren-item70366",
     "ctaLabel": "Купи сега",
     "availability": "in-stock",
     "brand": "EcoFlow",
-    "sku": "70367",
-    "ean": "4895251627030",
-    "description": "Компактна портативна електроцентрала с 245Wh капацитет и 300W изход (600W пик, до 600W с X-Boost). Пълен заряд за 1 час, до 2× по-дълга работа за уреди под 100W, под 30 dB, UPS под 10 ms, батериен пакет с IP54 защита, 5 изхода.",
+    "sku": "70366",
+    "ean": "4895251625463",
+    "description": "Компактна портативна електроцентрала с 245Wh капацитет и 300W изход (600W пик, до 600W с X-Boost). Пълен заряд за 1 час, до 2× по-дълга работа за уреди под 100W, под 30 dB, UPS под 20 ms, батериен пакет с IP54 защита, 5 изхода.",
     "highlights": [
       {
         "title": "245Wh капацитет, 300W изход",
@@ -27,7 +27,7 @@
         "text": "За уреди с малка мощност."
       },
       {
-        "title": "UPS под 10 ms",
+        "title": "UPS под 20 ms",
         "text": "Непрекъсваемо резервно захранване."
       },
       {
@@ -47,25 +47,25 @@
         "text": ""
       }
     ],
-    "metaTitle": "EcoFlow RIVER 3 (UPS) 245Wh — компактна портативна електроцентрала 300W",
-    "metaDescription": "245Wh, 300W изход, X-Boost 600W, пълен заряд за 1 час, UPS под 10 ms, под 30 dB, IP54 батериен пакет, LiFePO4 с 3000 цикъла. Официален дистрибутор за България."
+    "metaTitle": "EcoFlow RIVER 3 245Wh — компактна портативна електроцентрала 300W",
+    "metaDescription": "245Wh, 300W изход, X-Boost 600W, пълен заряд за 1 час, UPS под 20 ms, под 30 dB, IP54 батериен пакет, LiFePO4 с 3000 цикъла. Официален дистрибутор за България."
   },
   "galeriya": [
     {
       "file": "ecoflow-river-3-portable-power-station-59806313021783.png",
-      "alt": "EcoFlow RIVER 3 (UPS) — изглед отпред"
+      "alt": "EcoFlow RIVER 3 — изглед отпред"
     },
     {
       "file": "ecoflow-river-3-portable-power-station-59806313054551.png",
-      "alt": "EcoFlow RIVER 3 (UPS) — отпред, изходи"
+      "alt": "EcoFlow RIVER 3 — отпред, изходи"
     },
     {
       "file": "ecoflow-river-3-portable-power-station-59806313152855.png",
-      "alt": "EcoFlow RIVER 3 (UPS) — изглед отстрани"
+      "alt": "EcoFlow RIVER 3 — изглед отстрани"
     },
     {
       "file": "ecoflow-river-3-portable-power-station-59806313120087.png",
-      "alt": "EcoFlow RIVER 3 (UPS) — изглед отзад"
+      "alt": "EcoFlow RIVER 3 — изглед отзад"
     },
     {
       "file": "ecoflow-river-3-portable-power-station-59818276716887.jpg",
@@ -203,8 +203,8 @@
       "layout": "stacked",
       "theme": "light",
       "anchorLabel": "UPS",
-      "heading": "UPS под 10 ms за живот без прекъсване",
-      "body": "При спиране на тока контактът превключва към захранване от RIVER 3 (UPS) за незабележими под 10 ms. Най-важните домашни уреди продължават да работят — храната остава студена, охраната и връзката не спират. Безпроблемно автоматично превключване за постоянно спокойствие.",
+      "heading": "UPS под 20 ms за живот без прекъсване",
+      "body": "При спиране на тока контактът превключва към захранване от RIVER 3 за едва забележими 20 ms. Най-важните домашни уреди продължават да работят — храната остава студена, охраната и връзката не спират. Безпроблемно автоматично превключване за постоянно спокойствие.",
       "image": "PC_R3_05.jpg"
     },
     {
@@ -232,10 +232,10 @@
       "heading": "Какво има в кутията",
       "items": [
         {
-          "name": "EcoFlow RIVER 3 (UPS)",
+          "name": "EcoFlow RIVER 3",
           "qty": 1,
           "image": "ecoflow-river-3-portable-power-station-59806313021783.png",
-          "imageAlt": "EcoFlow RIVER 3 (UPS)"
+          "imageAlt": "EcoFlow RIVER 3"
         },
         {
           "name": "Захранващ кабел за контакт",
@@ -298,7 +298,7 @@
         },
         {
           "label": "UPS",
-          "value": "<10 ms"
+          "value": "<20 ms"
         },
         {
           "label": "Шум",
@@ -402,14 +402,13 @@
       "https://eu.ecoflow.com/cdn/shop/files/11_1_Product_Details_EU.jpg",
       "https://eu.ecoflow.com/cdn/shop/files/RIVER_3_PC.png"
     ],
-    "_bележка": "RIVER_3_PC.png е картинката „What's in the box“ — само за справка. kutiya-*.webp са в Медия."
+    "_bележка": "Всички файлове са същите като при RIVER 3 (UPS) — копирай galeriya/ и sekcii/ от content/river-3-ups/. Нищо ново за сваляне."
   },
   "_prevod_nadpisi": "виж prevod-nadpisi.md",
   "_neyasni": [
     "Капацитет: EcoFlow пишат 245Wh; в адреса на dice.bg е „256wh“. Записано 245Wh по EcoFlow.",
-    "Страницата е обща за RIVER 3 и RIVER 3 (UPS). Единствената разлика по EcoFlow е UPS <10 ms (срещу <20 ms). Секцията за UPS и акцентът са с 10 ms; останалите текстове говорят за „RIVER 3“ — оставени така.",
-    "Гаранция 5 години — EcoFlow не я изписват в спецификациите на тази страница (за RIVER 3 Plus е 5 години). Да се провери в портала.",
-    "Секцията „Еднократна инвестиция за 10 години“ при EcoFlow е три карти една до друга; при нас е с раздели над снимката.",
-    "Галерия: 6-те снимки на устройството (без комплектите със соларни панели). Снимката на варианта (…1245713322.png) е с рекламен стикер — не е включена."
+    "Същата страница като RIVER 3 (UPS); разликата по EcoFlow е само UPS <20 ms.",
+    "Гаранция 5 години — да се провери в портала.",
+    "Снимките са същите като при RIVER 3 (UPS) — вече в Медия; вносът ги преизползва по име (копирай galeriya/ и sekcii/ от content/river-3-ups/)."
   ]
 }
