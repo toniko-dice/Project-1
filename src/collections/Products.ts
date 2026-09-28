@@ -2,6 +2,7 @@ import type { CollectionConfig } from 'payload'
 import { cleanSlug } from '../lib/slug'
 import { productBlocks } from '../blocks/product'
 import { expireEverything, revalidateProduct, revalidateProductDelete } from '../lib/revalidate'
+import { fillSearchText } from '../lib/search'
 
 export const Products: CollectionConfig = {
   slug: 'products',
@@ -61,6 +62,8 @@ export const Products: CollectionConfig = {
   */
   versions: { drafts: true },
   hooks: {
+    /* Слепва полетата за търсене в `searchText` преди всеки запис. */
+    beforeChange: [fillSearchText],
     afterChange: [revalidateProduct],
     afterDelete: [revalidateProductDelete],
   },
@@ -229,6 +232,23 @@ export const Products: CollectionConfig = {
               type: 'text',
               virtual: 'category.parent.parent.slug',
               admin: { hidden: true },
+            },
+            {
+              /*
+                Полетата за търсене, слепени с малки букви — име, кратка
+                спецификация, адрес, каталожен номер и двата баркода.
+
+                Истинска колона, не виртуално поле: по виртуално не може да
+                се търси, а `LIKE` в SQLite пренебрегва регистъра само за
+                латиница. Подробностите са в `src/lib/search.ts`.
+
+                Попълва се сама от куката `fillSearchText`; собственикът не
+                я вижда и не я пипа.
+              */
+              name: 'searchText',
+              type: 'text',
+              label: 'Текст за търсене',
+              admin: { hidden: true, readOnly: true },
             },
             {
               name: 'tagline',

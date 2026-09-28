@@ -938,6 +938,7 @@ export interface Product {
   categorySlug?: string | null;
   categoryParentSlug?: string | null;
   categoryGrandparentSlug?: string | null;
+  searchText?: string | null;
   /**
    * Редът под името в продуктовата карта. Напр. "6144Wh капацитет / 7200W изход".
    */
@@ -2104,6 +2105,7 @@ export interface ProductsSelect<T extends boolean = true> {
   categorySlug?: T;
   categoryParentSlug?: T;
   categoryGrandparentSlug?: T;
+  searchText?: T;
   tagline?: T;
   rating?: T;
   reviewCount?: T;

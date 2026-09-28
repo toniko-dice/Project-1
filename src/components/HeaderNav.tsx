@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { formatEur } from '@/lib/format'
 import { ImagePlaceholder } from './ImagePlaceholder'
+import { SearchBar } from './SearchBar'
 
 export type MenuCard = {
   imageUrl: string | null
@@ -298,6 +299,7 @@ export const HeaderNav = ({
 }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [searchOpen, setSearchOpen] = useState(false)
   const navRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -305,6 +307,7 @@ export const HeaderNav = ({
       if (e.key === 'Escape') {
         setOpenIndex(null)
         setMobileOpen(false)
+        setSearchOpen(false)
       }
     }
     document.addEventListener('keydown', onKey)
@@ -395,7 +398,11 @@ export const HeaderNav = ({
                     <button
                       type="button"
                       aria-expanded={isOpen}
-                      onClick={() => setOpenIndex(isOpen ? null : i)}
+                      onClick={() => {
+                        setOpenIndex(isOpen ? null : i)
+                        /* Клик по точка от менюто прибира лентата за търсене. */
+                        setSearchOpen(false)
+                      }}
                       onMouseEnter={() => setOpenIndex(i)}
                       className={base}
                     >
@@ -418,10 +425,22 @@ export const HeaderNav = ({
 
         <div className="ml-auto flex items-center gap-1">
           {searchEnabled ? (
+            /*
+              Една и съща икона на всички ширини — на телефон отваря
+              същата лента, само че списъкът ѝ заема цялата ширина.
+            */
             <button
               type="button"
-              aria-label="Търсене"
-              className="inline-flex size-11 cursor-pointer items-center justify-center rounded transition-colors duration-200 hover:bg-nav-hover"
+              aria-label={searchOpen ? 'Затваряне на търсенето' : 'Търсене'}
+              aria-expanded={searchOpen}
+              onClick={() => {
+                setSearchOpen(!searchOpen)
+                setOpenIndex(null)
+                setMobileOpen(false)
+              }}
+              className={`inline-flex size-11 cursor-pointer items-center justify-center rounded transition-colors duration-200 hover:bg-nav-hover ${
+                searchOpen ? 'bg-nav-active' : ''
+              }`}
             >
               <MagnifyingGlass size={20} aria-hidden="true" />
             </button>
@@ -450,7 +469,15 @@ export const HeaderNav = ({
         </div>
       </div>
 
-      {openIndex !== null && items[openIndex]?.groups.length ? (
+      {searchOpen ? <SearchBar onClose={() => setSearchOpen(false)} /> : null}
+
+      {/*
+        Мега менюто и лентата за търсене излизат на едно и също място —
+        под хедъра. Докато се търси, минаването с мишката над точка от
+        менюто не бива да покрива списъка с резултати; затова менюто чака
+        лентата да се затвори (клик по точка я затваря).
+      */}
+      {!searchOpen && openIndex !== null && items[openIndex]?.groups.length ? (
         <MegaMenu item={items[openIndex]} onClose={() => setOpenIndex(null)} />
       ) : null}
 

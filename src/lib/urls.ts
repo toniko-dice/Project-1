@@ -112,3 +112,15 @@ export const productPath = (product: ProductLike): string => {
 /** Адресът на продукт; `null`, ако продуктът не е зареден. */
 export const productUrl = (value: number | Product | null | undefined): string | null =>
   value && typeof value !== 'number' ? productPath(value) : null
+
+/* ─────────── търсене ─────────── */
+
+/** Страницата с резултати от търсенето. */
+export const SEARCH_PATH = '/tarsene'
+
+/** Пътят, от който лентата в хедъра дърпа падащия списък. */
+export const SEARCH_API_PATH = '/api/tarsene'
+
+/** Адресът на резултатите за дадено търсене. */
+export const searchUrl = (query: string): string =>
+  `${SEARCH_PATH}?q=${encodeURIComponent(query)}`

@@ -5,6 +5,7 @@ import { cache } from 'react'
 
 import type { Category, Product } from '@/payload-types'
 import type { Where } from 'payload'
+import { rankSearchResults, searchWhere, searchWords } from './search'
 
 export const getPayloadClient = cache(async () => getPayload({ config }))
 
@@ -361,6 +362,71 @@ export const getProductsByIds = cache(
         return byId
       }),
     ),
+)
+
+/* ─────────── търсене ─────────── */
+
+/** Колко резултата най-много се вадят от базата за едно търсене. */
+const SEARCH_LIMIT = 100
+
+/**
+ * Търсене на продукти по име, спецификация, адрес, SKU или баркод.
+ *
+ * Само публикуваните — чернова не бива да се намира, както не се вижда и
+ * в менюто или в категорията.
+ *
+ * Резултатите се вадят в подредбата от админа (`_order`, после името) и
+ * чак после се подреждат по точност (`rankSearchResults`). Затова се
+ * взимат до сто наведнъж, а НЕ само шестте за падащия списък: точното
+ * съвпадение по баркод може да е на трийсето място по `_order` и при
+ * рязане преди подреждането изобщо не би стигнало до потребителя.
+ *
+ * Кешът е с тага `product` — вносът и всеки запис в админа го изчистват,
+ * тоест нов продукт се намира веднага, без рестарт. Десетте секунди са
+ * таван за случаите, когато нещо е променено извън Payload.
+ */
+export const searchProducts = cache(async (query: string): Promise<Product[]> => {
+  const words = searchWords(query)
+  if (!words.length) return []
+
+  return timed(`searchProducts(${words.join(' ')})`, () =>
+    unstable_cache(
+      async () => {
+        const payload = await getPayloadClient()
+        const result = await payload.find({
+          collection: 'products',
+          where: searchWhere(words),
+          sort: ['_order', 'title'],
+          limit: SEARCH_LIMIT,
+          // Стига за снимката на картата; адресът идва от виртуалните полета.
+          depth: 1,
+        })
+        return rankSearchResults(result.docs, query)
+      },
+      ['search', words.join(' ')],
+      { tags: ['product'], revalidate: 10 },
+    )(),
+  )
+})
+
+/**
+ * Най-скоро добавените публикувани продукти.
+ *
+ * Ползва се от страницата с резултати, когато търсенето не е намерило
+ * нищо — празна страница с едно изречение е задънена улица.
+ */
+export const getLatestProducts = cache(async (limit = 4): Promise<Product[]> =>
+  cached(['latest-products', String(limit)], ['product'], async () => {
+    const payload = await getPayloadClient()
+    const result = await payload.find({
+      collection: 'products',
+      where: { _status: { equals: 'published' } },
+      sort: '-createdAt',
+      limit,
+      depth: 1,
+    })
+    return result.docs
+  }),
 )
 
 type GlobalSlug = 'header' | 'footer' | 'site-settings' | 'design'
