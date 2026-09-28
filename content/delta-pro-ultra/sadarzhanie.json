@@ -1,0 +1,567 @@
+{
+  "_bележка": "Съдържание за внасяне. Пуска се с: npm run import:all (или import:product delta-pro-ultra). Снимките се свалят по линковете в _svali_snimki.",
+  "_iztochnik": "eu.ecoflow.com/products/delta-pro-ultra?variant=50980677747031 (вариант DELTA Pro Ultra — 1 × инвертор + 1 × батерия), прочетено на 28.09.2026.",
+  "produkt": {
+    "title": "EcoFlow DELTA Pro Ultra",
+    "slug": "delta-pro-ultra",
+    "categorySlug": "delta-pro-seriya",
+    "productType": "hero",
+    "tagline": "6144Wh / 6900W · инвертор + батерия, до 30 kWh",
+    "badge": "none",
+    "price": 3999,
+    "compareAtPrice": 5112.41,
+    "externalUrl": "https://dice.bg/ecoflow-delta-pro-ultra-whole-home-backup-power-6144wh-inovativna-profesionalna-elektrotsentrala-i-rezervno-zahranvane-za-tseliya-dom-cheren-item72779",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "72779",
+    "ean": "4895251608596",
+    "description": "Най-мощното решение на EcoFlow за захранване извън мрежата: инвертор 6900W и батерия 6144Wh, разширяема до 30 kWh с до 5 батерии. Соларен вход до 5600W, зареждане от контакт, генератор и зарядна станция за електромобил — до 8800W комбинирано. UPS под 20 ms, 0 dB под 2000W, LFP клетки с 3500+ цикъла, IP54, 5 години гаранция.",
+    "highlights": [
+      {
+        "title": "6–30 kWh капацитет за седмици комфорт",
+        "text": "Една батерия 6144Wh, до 5 в стек."
+      },
+      {
+        "title": "Един модул 6900W покрива всички уреди",
+        "text": "С X-Fusion — 6900W дори по време на зареждане."
+      },
+      {
+        "title": "5 начина за бързо зареждане",
+        "text": "Слънце, контакт, генератор, EV станция и комбинирано до 8800W."
+      },
+      {
+        "title": "Умно управление на енергията в приложението EcoFlow",
+        "text": ""
+      },
+      {
+        "title": "UPS 20 ms и 0 dB под 2000W",
+        "text": ""
+      },
+      {
+        "title": "X-Cooling и по-добра производителност с BMS",
+        "text": ""
+      },
+      {
+        "title": "5 години гаранция",
+        "text": ""
+      }
+    ],
+    "metaTitle": "EcoFlow DELTA Pro Ultra 6144Wh — домашна електроцентрала 6900W, до 30 kWh",
+    "metaDescription": "Инвертор 6900W + батерия 6144Wh, разширяване до 30 kWh, соларен вход до 5600W, зареждане до 8800W, UPS 20 ms, 0 dB под 2000W, LFP 3500+ цикъла, IP54. Официален дистрибутор за България."
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-delta-pro-ultra-home-diy-power-station-1174282884.png",
+      "alt": "EcoFlow DELTA Pro Ultra — инвертор и батерия"
+    },
+    {
+      "file": "ecoflow-delta-pro-ultra-home-diy-power-station-1174819351.png",
+      "alt": "EcoFlow DELTA Pro Ultra — изглед отпред"
+    },
+    {
+      "file": "ecoflow-delta-pro-ultra-home-diy-power-station-1175154526.png",
+      "alt": "EcoFlow DELTA Pro Ultra — под ъгъл"
+    },
+    {
+      "file": "ecoflow-delta-pro-ultra-home-diy-power-station-1174819350.png",
+      "alt": "EcoFlow DELTA Pro Ultra — изглед отзад"
+    },
+    {
+      "file": "ecoflow-delta-pro-ultra-home-diy-power-station-1174819349.png",
+      "alt": "EcoFlow DELTA Pro Ultra — изглед отстрани"
+    },
+    {
+      "file": "ecoflow-delta-pro-ultra-home-diy-power-station-1174819348.png",
+      "alt": "EcoFlow DELTA Pro Ultra — изглед отгоре"
+    },
+    {
+      "file": "ecoflow-delta-pro-ultra-home-diy-power-station-1175154529.jpg",
+      "alt": "EcoFlow DELTA Pro Ultra пред дома"
+    },
+    {
+      "file": "ecoflow-delta-pro-ultra-home-diy-power-station-1175154530.jpg",
+      "alt": "EcoFlow DELTA Pro Ultra на път"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "theme": "light",
+      "layout": "stacked",
+      "anchorLabel": "Преглед",
+      "heading": "Накратко",
+      "body": "",
+      "image": "EU_UKGroup_161269588.jpg"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "layout": "tabs-top",
+      "heading": "Най-мощното решение на EcoFlow за енергия извън мрежата*",
+      "intro": "DELTA Pro Ultra (инвертор + батерия) има най-високия изход и капацитет от всички портативни електроцентрали на EcoFlow досега. Освен огромно съхранение на енергия и гъвкав дизайн според нуждите ви, DELTA Pro Ultra работи със слънце, за да върви всичко най-важно — дори целият дом — седмици наред без прекъсване. * DELTA Pro Ultra има най-високия капацитет и изходна мощност сред настоящите портативни електроцентрали на EcoFlow.",
+      "tabs": [
+        {
+          "label": "Всеки ден",
+          "image": "pc_Home_Power_9d7ddf1d-9650-4061-920b-b9aad3a0f937.jpg",
+          "imageAlt": "DELTA Pro Ultra в ежедневието",
+          "caption": "Мощна енергия, която се вписва в ежедневието — зареждате електромобила, готвите, забавлявате гости на терасата — всичко от една система.",
+          "rows": []
+        },
+        {
+          "label": "Съхранение на слънце",
+          "image": "pc_Solar_Storage_157b2ab4-661d-48f6-b9af-fcabeb9478b1.jpg",
+          "imageAlt": "DELTA Pro Ultra съхранява соларна енергия",
+          "caption": "Произвеждате слънчева енергия през деня и я пазите за когато ви трябва. DELTA Pro Ultra прибира излишъка от панелите — нищо не се губи.",
+          "rows": []
+        },
+        {
+          "label": "Резервно захранване",
+          "image": "pc_Backup_44db2e51-52d4-4fbf-9c61-aff304d80d56.jpg",
+          "imageAlt": "DELTA Pro Ultra при спиране на тока",
+          "caption": "При буря или спиране на тока DELTA Pro Ultra мигновено захранва най-важното — или цялата къща.",
+          "rows": []
+        },
+        {
+          "label": "Индустрия и бизнес",
+          "image": "pc_Industrial_Commercial_Use.jpg",
+          "imageAlt": "DELTA Pro Ultra за професионална употреба",
+          "caption": "",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "theme": "light",
+      "layout": "stacked",
+      "anchorLabel": "Капацитет",
+      "heading": "6–30 kWh капацитет за седмици* комфорт",
+      "body": "Изведете сигурността на домашното захранване на друго ниво — до 30 kWh капацитет. За обикновено домакинство това са седмици резервно захранване за осветлението и уредите, хладилника включително (времето зависи от уредите). Стикова се и пести място — побира се удобно в гараж или сервизно помещение. * Времето за резервно захранване зависи от използваните уреди.",
+      "image": "pc_6-30kWh_Capacity_en_c3085275-6517-4178-81a2-cb355c2d6f6d.jpg"
+    },
+    {
+      "blockType": "featureSection",
+      "theme": "light",
+      "layout": "stacked",
+      "anchorLabel": "Мощност",
+      "heading": "Един модул 6900W покрива всички уреди",
+      "body": "С 6900W изход EcoFlow DELTA Pro Ultra върти без усилие и най-енергоемките домакински уреди — дори зарядно за електромобил. С X-Fusion гарантира пълните 6900W дори по време на зареждане.",
+      "image": "pc_6900W_output_f41c52a4-04d6-423f-8148-c4c3bf8253b6.jpg"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Приложения",
+      "layout": "tabs-top",
+      "heading": "Как DELTA Pro Ultra работи за вас",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Няколко зони",
+          "image": "pc_Multiple_Area_Uses_en_3ba69816-6653-4660-8c98-8d3d8d04b474.jpg",
+          "imageAlt": "DELTA Pro Ultra — захранване на няколко зони",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Целият дом",
+          "image": "pc_Whole-Home_Use_en_502aa7f5-8af6-4087-a118-8d147b8441fa.jpg",
+          "imageAlt": "DELTA Pro Ultra — захранване на целия дом",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Извън мрежата",
+          "image": "pc_Off-Grid_House_en_5cf6b265-db46-499d-9404-cc3cfd3f14eb.jpg",
+          "imageAlt": "DELTA Pro Ultra — къща извън мрежата",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Индустрия и бизнес",
+          "image": "pc_Industrial_Commercial_Use_ed701eb3-76c9-4da0-b029-a6be18daecb7.jpg",
+          "imageAlt": "DELTA Pro Ultra — индустриална и търговска употреба",
+          "caption": "",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "theme": "light",
+      "layout": "stacked",
+      "anchorLabel": "Зареждане",
+      "heading": "5 начина за бързо зареждане — винаги с енергия",
+      "body": "С EcoFlow DELTA Pro Ultra изборът е ваш. Освен обичайните начини — слънце и мрежа — вече зареждате и от бензинов генератор, и дори от зарядна станция за електромобил. С най-бързото зареждане в индустрията — 8800W — пълните две батерии само за 2 часа.",
+      "image": "pc_5_Ways_Charge.jpg"
+    },
+    {
+      "blockType": "featureSection",
+      "theme": "light",
+      "layout": "stacked",
+      "anchorLabel": "Приложение",
+      "heading": "Управление на енергията 24/7 с EcoFlow OASIS",
+      "body": "",
+      "image": "pc_EcoFlow_OASIS.jpg"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Система",
+      "layout": "tabs-top",
+      "heading": "Изградете своя енергийна система",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Един товар или зона",
+          "image": "Single_Load_or_Area.jpg",
+          "imageAlt": "Соларни панели + DELTA Pro Ultra",
+          "caption": "Соларни панели + DELTA Pro Ultra: пералня, сушилня, електромобил — съвместим със зарядни станции на други производители.",
+          "rows": []
+        },
+        {
+          "label": "Няколко товара или зони",
+          "image": "Multiple_Loads_or_Areas.jpg",
+          "imageAlt": "Соларни панели + ръчен превключвател + DELTA Pro Ultra",
+          "caption": "Соларни панели + ръчен превключвател* + DELTA Pro Ultra: сервизно помещение, кухня, хол. * Монтажът изисква правоспособен електротехник. Ако вече имате ръчен превключвател — за DELTA Pro Ultra той трябва да е с номинален работен ток над 40A.",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "theme": "light",
+      "layout": "stacked",
+      "heading": "Вземете я навсякъде*",
+      "body": "С количката DELTA Pro Ultra идва с вас — навън или при преместване. * Портативността се отнася за конфигурация с една батерия. Конфигурациите с няколко батерии са за стационарна употреба.",
+      "image": "pc_Take_With_You_Anywhere.jpg"
+    },
+    {
+      "blockType": "featureSection",
+      "theme": "light",
+      "layout": "stacked",
+      "anchorLabel": "UPS",
+      "heading": "Резервно захранване, което дори няма да забележите",
+      "body": "С UPS-а на EcoFlow DELTA Pro Ultra едва ще усетите спирането на тока. DELTA Pro Ultra пази чувствителната ви електроника денонощно и работи на тихите 0 dB — работите от дома или спите спокойно.* * При ниска консумация под 2000W.",
+      "image": "PC_30db.jpg"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Безопасност",
+      "layout": "tabs-top",
+      "heading": "Спокойствие с усъвършенстван дизайн",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "EcoFlow X-Cooling",
+          "image": "pc_82a0c46b-3cf0-4342-a510-f1a35fef5625.jpg",
+          "imageAlt": "DELTA Pro Ultra — X-Cooling",
+          "caption": "С гъвкавия си plug-and-play дизайн и ненадминат соларен вход EcoFlow DELTA Pro Ultra ви оставя да сглобите решение точно за вашите нужди. Има и заключване на соларните входове — за безопасност и сигурна връзка.",
+          "rows": []
+        },
+        {
+          "label": "По-добра производителност с BMS",
+          "image": "pc_BMS.jpg",
+          "imageAlt": "DELTA Pro Ultra — BMS",
+          "caption": "Най-модерната LFP технология и усъвършенстваната система за управление на батерията (BMS) следят ключовите данни и осигуряват безопасност, дълъг живот и висока производителност. Всяка батерия издържа 3500+ цикъла, преди капацитетът да падне до 80% — и продължава да работи и след това.",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Издръжливост",
+      "layout": "tabs-top",
+      "heading": "Издържа и в най-тежките условия",
+      "intro": "EcoFlow DELTA Pro Ultra се справя и с най-суровите условия. Екстремно време или мразовита зима — този гигант пази сигурността на захранването ви както винаги.",
+      "tabs": [
+        {
+          "label": "Работа от –20 °C до 45 °C",
+          "image": "Operating_temperatures__-4_to_113.jpg",
+          "imageAlt": "DELTA Pro Ultra — работен температурен диапазон",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Издържа високо напрежение до 290V",
+          "image": "dpu_mts_new_senario_window1-tuya.png",
+          "imageAlt": "DELTA Pro Ultra — защита от високо напрежение",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "IP54 — прах и пръски",
+          "image": "IP54_dustproof_and_splashproof.jpg",
+          "imageAlt": "DELTA Pro Ultra — IP54 защита",
+          "caption": "* IP54 защитата важи само когато всички портове са затворени с капачетата.",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "groups": [
+        {
+          "label": "Кутия с инвертора",
+          "items": [
+            {
+              "name": "EcoFlow DELTA Pro Ultra инвертор",
+              "qty": 1,
+              "image": "eu_EcoFlow_DELTA_Pro_Ultra_Inverter_cd6e154b-88b0-46b0-aebe-d5dc9eb165bf.png",
+              "imageAlt": "EcoFlow DELTA Pro Ultra инвертор"
+            },
+            {
+              "name": "Портативна стойка EcoFlow",
+              "qty": 1,
+              "image": "Ecoflow_Portable_Stand.png",
+              "imageAlt": "Портативна стойка"
+            },
+            {
+              "name": "Инструмент за сглобяване и разглобяване",
+              "qty": 1,
+              "image": "EcoFlow_Disassembly_and_Assembly_Tool.png",
+              "imageAlt": "Инструмент за сглобяване"
+            },
+            {
+              "name": "Кабел за зареждане от соларен панел към Low-PV входа",
+              "qty": 1,
+              "image": "EcoFlow_Solar_to_Low-PV_Port_Charging_Cable.png",
+              "imageAlt": "Кабел за соларен панел"
+            },
+            {
+              "name": "Захранващ кабел за контакт C20",
+              "qty": 1,
+              "image": "EcoFlow_AC_Charging_Cable-C20.png",
+              "imageAlt": "Захранващ кабел C20"
+            },
+            {
+              "name": "Кратко ръководство",
+              "qty": 1,
+              "image": "Quick_Start_Guide_7a73c3fc-94a6-46d8-afe1-36e2eca9a30e.png",
+              "imageAlt": "Кратко ръководство"
+            },
+            {
+              "name": "Гаранционна карта",
+              "qty": 1,
+              "image": "warranty_card_9a410ff6-cb42-448d-a2db-9b5808ecede8.png",
+              "imageAlt": "Гаранционна карта"
+            }
+          ]
+        },
+        {
+          "label": "Кутия с батерията",
+          "items": [
+            {
+              "name": "EcoFlow DELTA Pro Ultra батерия",
+              "qty": 1,
+              "image": "EcoFlow_DELTA_Pro_Ultra_Battery.png",
+              "imageAlt": "EcoFlow DELTA Pro Ultra батерия"
+            },
+            {
+              "name": "Кабел за свързване на батерията (DELTA Pro Ultra) — 0,2 m",
+              "qty": 1,
+              "image": "EcoFlow_Battery_Connection_Cable_DELTA_Pro_Ultra_-0.2m_8fdbf6c1-df4c-4fb6-94d7-b2606daf16f0.png",
+              "imageAlt": "Кабел за свързване на батерията"
+            },
+            {
+              "name": "Ръководство за безопасност",
+              "qty": 1,
+              "image": "Safety_Guide_6c8b730f-4064-4a88-927f-e59245fcb153.png",
+              "imageAlt": "Ръководство за безопасност"
+            }
+          ]
+        }
+      ],
+      "defaultGroup": 0,
+      "_iztochnik": "Двете секции „What's in the box (Inverter Box)“ и „(Battery Box)“ на EcoFlow — тук като два раздела."
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Инвертор",
+      "rows": [
+        {
+          "label": "Размери",
+          "value": "690 × 481 × 214 мм"
+        },
+        {
+          "label": "Тегло (нето / бруто)",
+          "value": "32,1 кг / 41,7 кг"
+        },
+        {
+          "label": "Максимален капацитет на батерията",
+          "value": "6 kWh (6144 Wh)"
+        },
+        {
+          "label": "Максимално разширяване",
+          "value": "30 kWh (6144 Wh × 5)"
+        },
+        {
+          "label": "Соларен вход",
+          "value": "High-PV: 80–450V, 15A, макс. 4000W; Low-PV: 30–150V, 15A, макс. 1600W"
+        },
+        {
+          "label": "Вход от контакт (AC)",
+          "value": "Зареждане/байпас: 200–240V ~ 12,5A, 50/60 Hz"
+        },
+        {
+          "label": "Вход/изход Power",
+          "value": "200–240V ~ 30A, 50/60 Hz, макс. 6900W"
+        },
+        {
+          "label": "Изход променлив ток",
+          "value": "Разреждане: 230V 50 Hz, общо 6900W; 4 × макс. 16A, 1 × макс. 30A. Байпас: 220–240V 50/60 Hz, общо 2900W, 5 × макс. 12,5A"
+        },
+        {
+          "label": "Изход постоянен ток",
+          "value": "12,6V ⎓ 30A, макс. 378W"
+        },
+        {
+          "label": "USB",
+          "value": "USB-C: 2 × 5/9/12/15V 3A, 20V 5A, макс. 100W на порт (общо 200W); USB-A: 2 × 5V 2,4A, макс. 12W (общо 24W)"
+        },
+        {
+          "label": "Температурен диапазон",
+          "value": "зареждане, разреждане и съхранение: –20 до 45 °C"
+        },
+        {
+          "label": "Работна влажност",
+          "value": "≤90%"
+        },
+        {
+          "label": "Максимална надморска височина",
+          "value": "≤3000 m"
+        },
+        {
+          "label": "Шум",
+          "value": "<30 dB"
+        },
+        {
+          "label": "UPS",
+          "value": "<20 ms"
+        },
+        {
+          "label": "Свързаност",
+          "value": "Wi-Fi 2,4 GHz / Bluetooth 5.0"
+        },
+        {
+          "label": "Защита",
+          "value": "IP54 (само при затворени портове)"
+        },
+        {
+          "label": "Дисплей",
+          "value": "LCD"
+        },
+        {
+          "label": "Сертификати",
+          "value": "CE (IEC/EN62368-1), IEC/EN62109-1/2, IEC/EN6240-1, EMC"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Батерия",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "EFYJ751-BP"
+        },
+        {
+          "label": "Капацитет",
+          "value": "102,4V ⎓ 60A, 6144 Wh"
+        },
+        {
+          "label": "Тегло",
+          "value": "50,7 кг"
+        },
+        {
+          "label": "Размери",
+          "value": "660 × 455 × 204 мм"
+        },
+        {
+          "label": "Тип клетки",
+          "value": "LFP"
+        },
+        {
+          "label": "Цикли",
+          "value": "80%+ състояние след 3500 цикъла при 0,5C/0,5C и 25 °C"
+        },
+        {
+          "label": "Защити",
+          "value": "от свръхнапрежение, претоварване, прегряване, късо съединение, ниска температура, ниско напрежение, свръхток"
+        },
+        {
+          "label": "Температура",
+          "value": "зареждане, разреждане и съхранение: –20 до 45 °C"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Условия и гаранция",
+      "rows": [
+        {
+          "label": "Гаранция",
+          "value": "5 години"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1174282884.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1174819351.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1175154526.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1174819350.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1174819349.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1174819348.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1175154529.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1175154530.jpg"
+    ],
+    "sekcii": [
+      "https://eu.ecoflow.com/cdn/shop/files/EU_UKGroup_161269588.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Home_Power_9d7ddf1d-9650-4061-920b-b9aad3a0f937.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Solar_Storage_157b2ab4-661d-48f6-b9af-fcabeb9478b1.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Backup_44db2e51-52d4-4fbf-9c61-aff304d80d56.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Industrial_Commercial_Use.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_6-30kWh_Capacity_en_c3085275-6517-4178-81a2-cb355c2d6f6d.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_6900W_output_f41c52a4-04d6-423f-8148-c4c3bf8253b6.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Multiple_Area_Uses_en_3ba69816-6653-4660-8c98-8d3d8d04b474.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Whole-Home_Use_en_502aa7f5-8af6-4087-a118-8d147b8441fa.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Off-Grid_House_en_5cf6b265-db46-499d-9404-cc3cfd3f14eb.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Industrial_Commercial_Use_ed701eb3-76c9-4da0-b029-a6be18daecb7.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_5_Ways_Charge.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_EcoFlow_OASIS.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/Single_Load_or_Area.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/Multiple_Loads_or_Areas.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Take_With_You_Anywhere.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_30db.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_82a0c46b-3cf0-4342-a510-f1a35fef5625.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_BMS.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/Operating_temperatures__-4_to_113.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/dpu_mts_new_senario_window1-tuya.png",
+      "https://eu.ecoflow.com/cdn/shop/files/IP54_dustproof_and_splashproof.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/eu_EcoFlow_DELTA_Pro_Ultra_Inverter_cd6e154b-88b0-46b0-aebe-d5dc9eb165bf.png",
+      "https://eu.ecoflow.com/cdn/shop/files/Ecoflow_Portable_Stand.png",
+      "https://eu.ecoflow.com/cdn/shop/files/EcoFlow_Disassembly_and_Assembly_Tool.png",
+      "https://eu.ecoflow.com/cdn/shop/files/EcoFlow_Solar_to_Low-PV_Port_Charging_Cable.png",
+      "https://eu.ecoflow.com/cdn/shop/files/EcoFlow_AC_Charging_Cable-C20.png",
+      "https://eu.ecoflow.com/cdn/shop/files/Quick_Start_Guide_7a73c3fc-94a6-46d8-afe1-36e2eca9a30e.png",
+      "https://eu.ecoflow.com/cdn/shop/files/warranty_card_9a410ff6-cb42-448d-a2db-9b5808ecede8.png",
+      "https://eu.ecoflow.com/cdn/shop/files/EcoFlow_DELTA_Pro_Ultra_Battery.png",
+      "https://eu.ecoflow.com/cdn/shop/files/EcoFlow_Battery_Connection_Cable_DELTA_Pro_Ultra_-0.2m_8fdbf6c1-df4c-4fb6-94d7-b2606daf16f0.png",
+      "https://eu.ecoflow.com/cdn/shop/files/Safety_Guide_6c8b730f-4064-4a88-927f-e59245fcb153.png"
+    ],
+    "_bележка": "Снимките за кутията (инвертор, стойка, инструмент, кабели, ръководства, батерия) са в списъка за sekcii/."
+  },
+  "_prevod_nadpisi": "виж prevod-nadpisi.md",
+  "_neyasni": [
+    "Секцията „Сравнение на DELTA Pro моделите“ и „Съвместимост“ на EcoFlow са празни блокове (без данни на страницата) — пропуснати.",
+    "Спецификациите на батерията: температурата на съхранение в оригинала е записана противоречиво („−20 до 45 °C (optimum 68–86 °F)“) — записан е диапазонът.",
+    "Секциите с 2–3 карти една до друга („Изградете своя система“, „Издържа и в най-тежките условия“, „Спокойствие…“) са с раздели над снимката.",
+    "Разделите „Всеки ден / Съхранение на слънце / Резервно / Индустрия“ — четвъртият е без текст и при EcoFlow."
+  ]
+}
