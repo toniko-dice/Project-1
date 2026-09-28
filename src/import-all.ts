@@ -4,6 +4,7 @@
  * Пуска се с:  npm run import:all
  *              npm run import:all -- --dry-run
  *              npm run import:all -- --only river-3-plus,river-3-ups
+ *              npm run import:all -- --no-download
  *
  * Минава през всяка папка в `content/`, която съдържа `sadarzhanie.json`,
  * по азбучен ред, и вика същото ядро като `import:product`. Папките без
@@ -39,6 +40,7 @@ import {
 
 const args = process.argv.slice(2)
 const dryRun = args.includes('--dry-run')
+const noDownload = args.includes('--no-download')
 
 const onlyArg = args.find((a) => a.startsWith('--only'))
 const onlyValue = onlyArg?.includes('=')
@@ -95,6 +97,7 @@ for (const [i, folder] of папки.entries()) {
   try {
     const резултат = await importProduct(payload, folder, {
       dryRun,
+      noDownload,
       // Отместено навътре, за да личи кой ред на кой продукт е.
       log: (m) => console.log(`    ${m}`),
     })
@@ -142,6 +145,8 @@ const успешни = редове.filter((r) => r.резултат)
 const публикувани = успешни.filter((r) => r.резултат!.action === 'обновен и публикуван').length
 const чернови = успешни.filter((r) => r.резултат!.action !== 'обновен и публикуван').length
 const грешки = редове.length - успешни.length
+const свалени = успешни.reduce((n, r) => n + r.резултат!.downloaded, 0)
+const несвалени = успешни.reduce((n, r) => n + r.резултат!.failedDownloads.length, 0)
 const качени = успешни.reduce((n, r) => n + r.резултат!.uploadedNew, 0)
 const преизползвани = успешни.reduce((n, r) => n + r.резултат!.reusedExisting, 0)
 const липсващи = успешни.reduce((n, r) => n + r.резултат!.missingFiles.length, 0)
@@ -150,9 +155,10 @@ console.log('')
 console.log(`Публикувани: ${публикувани} · чернови: ${чернови} · грешки: ${грешки}`)
 console.log(
   dryRun
-    ? `Снимки: ${качени} биха се качили, ${преизползвани} вече са в Медия · липсващи файлове: ${липсващи}`
-    : `Снимки: ${качени} качени, ${преизползвани} преизползвани · липсващи файлове: ${липсващи}`,
+    ? `Снимки: ${свалени} биха се свалили, ${качени} биха се качили, ${преизползвани} вече са в Медия · липсващи файлове: ${липсващи}`
+    : `Снимки: ${свалени} свалени, ${качени} качени, ${преизползвани} преизползвани · липсващи файлове: ${липсващи}`,
 )
+if (несвалени) console.log(`  ⚠ не се свалиха ${несвалени} файла — виж редовете по-горе`)
 
 for (const ред of успешни) {
   if (ред.резултат!.publishError) {

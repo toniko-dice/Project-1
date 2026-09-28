@@ -4,6 +4,9 @@
  * Пуска се с:  npm run import:product <slug>
  * Например:    npm run import:product delta-3-classic
  *
+ * С `--no-download` не сваля нищо — ползва само файловете на диска и вече
+ * качените в Медия.
+ *
  * Логиката е в `src/import-product-core.ts` — същата, която ползва и
  * `npm run import:all`. Тук са само аргументът, обобщението и изходният
  * код. Две реализации значеха, че групóвият внос един ден ще внася по друг
@@ -32,11 +35,14 @@ if (!slug) {
   die('Липсва адрес на продукта.\n  Пример: npm run import:product delta-3-classic')
 }
 
+// Изключва свалянето: ползват се само файловете на диска и вече качените.
+const noDownload = process.argv.includes('--no-download')
+
 const payload = await getPayload({ config })
 
 let result
 try {
-  result = await importProduct(payload, slug!)
+  result = await importProduct(payload, slug!, { noDownload })
 } catch (err) {
   if (err instanceof ImportError) die(err.message)
   throw err
@@ -45,6 +51,7 @@ try {
 /* ─────────── обобщение ─────────── */
 
 console.log('')
+if (result.downloaded) console.log(`✓ Свалени снимки: ${result.downloaded}`)
 console.log(
   `✓ Качени нови изображения: ${result.uploadedNew} (пропуснати вече съществуващи: ${result.reusedExisting})`,
 )
@@ -61,6 +68,12 @@ if (result.linkedProducts.length) {
 if (result.unlinkedProducts.length) {
   console.log(
     `  · колони без продукт в каталога (остават с ръчното име): ${result.unlinkedProducts.join(', ')}`,
+  )
+}
+
+if (result.failedDownloads.length) {
+  console.log(
+    `⚠ Не се свалиха: ${result.failedDownloads.length} — ${result.failedDownloads.join(', ')}`,
   )
 }
 

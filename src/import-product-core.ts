@@ -65,6 +65,10 @@ export type ImportResult = {
   sections: number
   linkedProducts: string[]
   unlinkedProducts: string[]
+  /** Файлове, свалени в папката на продукта при това пускане. */
+  downloaded: number
+  /** Адреси, които не се свалиха след трите опита. */
+  failedDownloads: string[]
   missingFiles: string[]
   publishError: string | null
   /** Нищо не е записано — само проверка. */
@@ -74,6 +78,8 @@ export type ImportResult = {
 export type ImportOptions = {
   /** Само проверява файловете и казва какво би направил. Нищо не се записва. */
   dryRun?: boolean
+  /** Изключва свалянето: ползват се само файловете на диска и Медия. */
+  noDownload?: boolean
   /** Къде отиват редовете за напредъка. Груповият внос ги отмества навътре. */
   log?: (message: string) => void
 }
@@ -149,6 +155,95 @@ type Content = {
   galeriya?: { file: string; alt?: string }[]
   sekcii?: Card[]
   specGroups?: unknown[]
+  /** Адресите, от които се свалят снимките. Името е последният сегмент. */
+  _svali_snimki?: { galeriya?: string[]; sekcii?: string[] }
+}
+
+/* ─────────── сваляне на снимките ─────────── */
+
+/** Името на файла от адрес: последният сегмент, без въпросителната. */
+const fileNameFromUrl = (url: string): string => {
+  try {
+    return decodeURIComponent(new URL(url).pathname.split('/').pop() ?? '')
+  } catch {
+    return ''
+  }
+}
+
+/**
+ * Сваля един файл и го записва БАЙТ ПО БАЙТ.
+ *
+ * Без преобразуване: ако сървърът подаде WebP под име `.jpg` — така се
+ * записва. Вносът разпознава вида по съдържанието (`sniffFormat`) и
+ * именува файла в Медия според него.
+ *
+ * Три опита: CDN-овете отказват единични заявки по-често, отколкото са
+ * наистина недостъпни. `User-Agent` на браузър, защото eu.ecoflow.com
+ * връща 403 на заявка без него.
+ */
+const downloadFile = async (url: string, dest: string): Promise<void> => {
+  let последна: Error | null = null
+
+  for (let опит = 1; опит <= 3; опит += 1) {
+    try {
+      const res = await fetch(url, {
+        headers: {
+          'User-Agent':
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36',
+          Accept: 'image/avif,image/webp,image/png,image/jpeg,*/*',
+        },
+        signal: AbortSignal.timeout(30_000),
+      })
+      if (!res.ok) throw new Error(`HTTP ${res.status}`)
+
+      const buf = Buffer.from(await res.arrayBuffer())
+      if (!buf.length) throw new Error('празен отговор')
+
+      await fs.mkdir(path.dirname(dest), { recursive: true })
+      await fs.writeFile(dest, buf)
+      return
+    } catch (e) {
+      последна = e instanceof Error ? e : new Error(String(e))
+      // Кратка пауза между опитите — веднага повторената заявка пада пак.
+      if (опит < 3) await new Promise((r) => setTimeout(r, опит * 500))
+    }
+  }
+
+  throw последна ?? new Error('неуспешно сваляне')
+}
+
+/** Изпълнява задачите най-много по `наведнъж` едновременно. */
+const поPartии = async (задачи: (() => Promise<void>)[], наведнъж = 4): Promise<void> => {
+  let следваща = 0
+  const работник = async () => {
+    while (следваща < задачи.length) {
+      const моя = следваща
+      следваща += 1
+      await задачи[моя]!()
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(наведнъж, задачи.length) }, работник))
+}
+
+/** Имената на файловете, които продуктът изобщо ползва. */
+const neededFiles = (content: Content): Set<string> => {
+  const files = new Set<string>()
+
+  for (const item of content.galeriya ?? []) {
+    if (typeof item?.file === 'string') files.add(item.file)
+  }
+
+  const обходи = (node: unknown): void => {
+    if (Array.isArray(node)) return node.forEach(обходи)
+    if (!node || typeof node !== 'object') return
+    for (const [key, value] of Object.entries(node as Card)) {
+      if ((key === 'image' || key === 'icon') && typeof value === 'string') files.add(value)
+      else обходи(value)
+    }
+  }
+  обходи(content.sekcii ?? [])
+
+  return files
 }
 
 /* ─────────── папки със съдържание ─────────── */
@@ -209,6 +304,102 @@ export const importProduct = async (
 
   if (!content.produkt?.slug) {
     throw new ImportError('В sadarzhanie.json липсва produkt.slug.')
+  }
+
+  /* ─────────── сваляне на липсващите снимки ─────────── */
+
+  /*
+    Първата стъпка е да се осигурят ФАЙЛОВЕТЕ на диска, не записите в
+    Медия. Двете са различни неща и редът има значение:
+
+    - Папката на продукта е архивът. Ако утре потрябва друг формат или
+      друга изрезка, има от какво да се направят — затова липсващ файл се
+      сваля дори когато вече е качен в Медия. Изтрита `galeriya/` се
+      връща от само себе си при следващия внос.
+    - Самото КАЧВАНЕ обаче пак тръгва от Медия (виж `mediaIdFor`). Иначе
+      всяко пускане би качвало наново вече качените снимки и Медия щеше да
+      се напълни с `-1`, `-2`, `-3`.
+
+    Ръчно преведена снимка НЕ се презаписва: сваля се само файл, който го
+    няма в нито една подпапка.
+  */
+  const адреси = new Map<string, { url: string; dir: string }>()
+  for (const [dir, списък] of [
+    ['galeriya', content._svali_snimki?.galeriya],
+    ['sekcii', content._svali_snimki?.sekcii],
+  ] as const) {
+    for (const url of списък ?? []) {
+      if (typeof url !== 'string') continue
+      const name = fileNameFromUrl(url)
+      if (name && !адреси.has(name)) адреси.set(name, { url, dir })
+    }
+  }
+
+  let downloaded = 0
+  const failedDownloads: string[] = []
+
+  if (адреси.size && !options.noDownload) {
+    /*
+      Налично се брои по ОСНОВА на името, не по цялото име.
+
+      Качването търси в Медия по основа (`mediaStem`), тоест `PC_R3_01.jpg`
+      на диска вече покрива нужда от `PC_R3_01.png`. Ако проверката тук
+      беше по цялото име, свалянето щеше да сложи `.png` до `.jpg`, двата
+      файла щяха да се сметнат за различни снимки (различно съдържание при
+      различен формат) и в Медия щяха да влязат като `PC_R3_01-jpg` и
+      `PC_R3_01-png`. Точно това се случи при първото пускане.
+
+      Правилото „ръчно преведена снимка има предимство" значи същото:
+      файлът на собственика не се измества от свален.
+    */
+    const налични = new Set<string>()
+    for (const entry of await fs.readdir(ROOT, { withFileTypes: true })) {
+      if (!entry.isDirectory()) continue
+      for (const name of await fs.readdir(path.join(ROOT, entry.name))) налични.add(bareStem(name))
+    }
+
+    /*
+      Папката с галерията е кръстена и „galeryia", и „galeriya". Ако вече
+      има такава, свалянето отива в НЕЯ — иначе продуктът ще има две
+      папки с една и съща роля.
+    */
+    const папкаЗа = async (dir: string): Promise<string> => {
+      const съществуващи = (await fs.readdir(ROOT, { withFileTypes: true }))
+        .filter((e) => e.isDirectory())
+        .map((e) => e.name)
+      const образец = dir === 'galeriya' ? /galer/i : /sekc/i
+      return съществуващи.find((d) => образец.test(d)) ?? dir
+    }
+
+    const задачи: (() => Promise<void>)[] = []
+    for (const file of neededFiles(content)) {
+      if (налични.has(bareStem(file))) continue
+      const адрес = адреси.get(file)
+      if (!адрес) continue
+
+      задачи.push(async () => {
+        const dest = path.join(ROOT, await папкаЗа(адрес.dir), file)
+        try {
+          if (dryRun) {
+            log(`  ↓ би се свалил: ${file}`)
+          } else {
+            await downloadFile(адрес.url, dest)
+            log(`  ↓ свален: ${file}`)
+          }
+          downloaded += 1
+        } catch (e) {
+          // Един неуспешен файл не спира продукта — секцията остава без снимка.
+          failedDownloads.push(`${file} (${(e as Error).message})`)
+          log(`  ⚠ не се свали: ${file} — ${(e as Error).message}`)
+        }
+      })
+    }
+
+    if (задачи.length) {
+      log(`Сваляне на ${задачи.length} липсващи снимки…`)
+      // По четири наведнъж: достатъчно бързо, без да залива CDN-а.
+      await поPartии(задачи, 4)
+    }
   }
 
   /* ─────────── изображения ─────────── */
@@ -651,6 +842,8 @@ export const importProduct = async (
     sections: sections.length,
     linkedProducts,
     unlinkedProducts,
+    downloaded,
+    failedDownloads,
     missingFiles,
     publishError,
     dryRun,
