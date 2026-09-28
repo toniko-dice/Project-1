@@ -11,18 +11,16 @@ import { ProductCard } from '../ProductCard'
 import { ScrollRow } from '../ScrollRow'
 import { BannerButton, BannerEyebrow, PageSection, SectionHeading } from './section'
 import { ImagePlaceholder } from '../ImagePlaceholder'
+import { resolvedRelations } from '@/lib/relations'
 
 type Layout = NonNullable<Page['layout']>
 type BlockOf<T extends string> = Extract<Layout[number], { blockType: T }>
 
 /** Връзките идват като ID или като пълен обект според дълбочината на заявката. */
-const resolved = <T,>(items: (number | T)[] | null | undefined): T[] =>
-  (items ?? []).filter((x): x is T => typeof x !== 'number')
-
 /* ─────────── Лента с категории ─────────── */
 
 export const CategoryStripBlock = ({ block }: { block: BlockOf<'categoryStrip'> }) => {
-  const categories = resolved<Category>(block.categories)
+  const categories = resolvedRelations<Category>(block.categories, 'categoryStrip.categories')
   if (!categories.length) return null
 
   return (
@@ -95,7 +93,7 @@ export const ProductCarouselBlock = ({
   block: BlockOf<'productCarousel'>
   showBgn: boolean
 }) => {
-  const products = resolved<Product>(block.products)
+  const products = resolvedRelations<Product>(block.products, 'productCarousel.products')
   if (!products.length) return null
 
   return (
@@ -184,7 +182,7 @@ export const BannerProductRowBlock = ({
   block: BlockOf<'bannerProductRow'>
   showBgn: boolean
 }) => {
-  const products = resolved<Product>(block.products)
+  const products = resolvedRelations<Product>(block.products, 'bannerProductRow.products')
   const banner = block.banner
   // Webp размерите, изрязани от CSS — виж `bannerImage`.
   const bannerImg = bannerImage(banner?.image)

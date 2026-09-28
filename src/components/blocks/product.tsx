@@ -9,13 +9,11 @@ import { ProductCard } from '../ProductCard'
 import { BoxTabs } from './BoxTabs'
 import { ProductTabs, type ShowcaseTab, type TabsLayout } from './ProductTabs'
 import { ImagePlaceholder } from '../ImagePlaceholder'
+import { resolvedRelations } from '@/lib/relations'
 
 type Sections = NonNullable<Product['sections']>
 type Section = Sections[number]
 type BlockOf<T extends string> = Extract<Section, { blockType: T }>
-
-const resolved = <T,>(items: (number | T)[] | null | undefined): T[] =>
-  (items ?? []).filter((x): x is T => typeof x !== 'number')
 
 /** Обвивка около всяка секция — носи котвата и отстъпа под залепеното меню. */
 const Section = ({
@@ -783,7 +781,10 @@ const RelatedProductsBlock = ({
     продукт или серията му. Списъкът се събира на страницата, за да е
     една заявка, а не по една на блок.
   */
-  const products = block.mode === 'manual' ? resolved<Product>(block.products) : accessories
+  const products =
+    block.mode === 'manual'
+      ? resolvedRelations<Product>(block.products, 'relatedProducts.products')
+      : accessories
   if (!products.length) return null
 
   return (

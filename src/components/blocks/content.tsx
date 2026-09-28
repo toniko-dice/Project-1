@@ -6,12 +6,10 @@ import type { Award, Page, Testimonial } from '@/payload-types'
 import { mediaAlt, mediaUrl } from '@/lib/media'
 import { Icon } from '../Icon'
 import { ImagePlaceholder } from '../ImagePlaceholder'
+import { resolvedRelations } from '@/lib/relations'
 
 type Layout = NonNullable<Page['layout']>
 type BlockOf<T extends string> = Extract<Layout[number], { blockType: T }>
-
-const resolved = <T,>(items: (number | T)[] | null | undefined): T[] =>
-  (items ?? []).filter((x): x is T => typeof x !== 'number')
 
 export const BenefitsGridBlock = ({ block }: { block: BlockOf<'benefitsGrid'> }) => {
   const items = block.items ?? []
@@ -39,7 +37,10 @@ export const BenefitsGridBlock = ({ block }: { block: BlockOf<'benefitsGrid'> })
 }
 
 export const TestimonialsBlockRenderer = ({ block }: { block: BlockOf<'testimonialsBlock'> }) => {
-  const testimonials = resolved<Testimonial>(block.testimonials)
+  const testimonials = resolvedRelations<Testimonial>(
+    block.testimonials,
+    'testimonialsBlock.testimonials',
+  )
   if (!testimonials.length) return null
 
   return (
@@ -112,7 +113,7 @@ export const TestimonialsBlockRenderer = ({ block }: { block: BlockOf<'testimoni
 }
 
 export const LogoWallBlock = ({ block }: { block: BlockOf<'logoWall'> }) => {
-  const awards = resolved<Award>(block.awards)
+  const awards = resolvedRelations<Award>(block.awards, 'logoWall.awards')
   if (!awards.length) return null
 
   return (
