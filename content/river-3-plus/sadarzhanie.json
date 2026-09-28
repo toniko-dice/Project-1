@@ -1,0 +1,600 @@
+{
+  "_bележка": "Съдържание за внасяне. Пуска се с: npm run import:product river-3-plus. Снимките се свалят по линковете в _svali_snimki в galeriya/ и sekcii/ със същите имена.",
+  "_iztochnik": "eu.ecoflow.com/products/river-3-plus-portable-power-station?variant=50144528204119 (вариант RIVER 3 Plus), прочетено от браузъра на 25.09.2026. Страницата е обща за RIVER 3 Plus / Max / Max Plus (без Wireless).",
+  "produkt": {
+    "title": "EcoFlow RIVER 3 Plus",
+    "slug": "river-3-plus",
+    "categorySlug": "river-3-seriya",
+    "productType": "hero",
+    "tagline": "286Wh капацитет / 600W изход",
+    "badge": "none",
+    "price": 259,
+    "compareAtPrice": 306.26,
+    "externalUrl": "https://dice.bg/ecoflow-river-3-plus-portable-power-station-286wh-portativna-elektrostantsia-za-zarezhdane-na-razlichna-tehnika-i-ustroystva-cheren-item70368",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "70368",
+    "ean": "4895251627917",
+    "description": "Портативна електроцентрала с 286Wh капацитет и 600W изход (1200W пик, до 1200W с X-Boost), разширяема до 858Wh с допълнителна батерия без кабели. Пълен заряд за 1 час, до 220W соларен вход, UPS под 10 ms, под 30 dB, до 2× по-дълга работа за уреди с малка мощност.",
+    "highlights": [
+      {
+        "title": "Разширяем до 858Wh",
+        "text": "С допълнителна батерия, без кабели."
+      },
+      {
+        "title": "600W изход, X-Boost до 1200W",
+        "text": ""
+      },
+      {
+        "title": "Бързо зареждане за 1 час",
+        "text": "Без увреждане на батерията."
+      },
+      {
+        "title": "До 220W бързо соларно зареждане",
+        "text": ""
+      },
+      {
+        "title": "До 2× по-дълга работа",
+        "text": "За уреди с малка мощност."
+      },
+      {
+        "title": "Компактна и лека",
+        "text": ""
+      },
+      {
+        "title": "UPS под 10 ms",
+        "text": "Професионална защита на чувствителна техника."
+      },
+      {
+        "title": "Под 30 dB — тих като шепот",
+        "text": "За употреба 24/7."
+      }
+    ],
+    "metaTitle": "EcoFlow RIVER 3 Plus 286Wh — портативна електроцентрала 600W, разширяема до 858Wh",
+    "metaDescription": "286Wh, 600W изход (1200W X-Boost), разширяване до 858Wh, пълен заряд за 1 час, 220W соларен вход, UPS под 10 ms, под 30 dB, LiFePO4 с 3000 цикъла. Официален дистрибутор за България."
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-river-3-plus-portable-power-station-1146556335.png",
+      "alt": "EcoFlow RIVER 3 Plus — изглед отпред"
+    },
+    {
+      "file": "ecoflow-river-3-plus-portable-power-station-1146556334.png",
+      "alt": "EcoFlow RIVER 3 Plus — отпред, изходи"
+    },
+    {
+      "file": "ecoflow-river-3-plus-portable-power-station-1146556333.png",
+      "alt": "EcoFlow RIVER 3 Plus — изглед отзад"
+    },
+    {
+      "file": "ecoflow-river-3-plus-portable-power-station-1146556332.png",
+      "alt": "EcoFlow RIVER 3 Plus — изглед отстрани"
+    },
+    {
+      "file": "ecoflow-river-3-plus-portable-power-station-1146556331.png",
+      "alt": "EcoFlow RIVER 3 Plus — изглед отгоре"
+    },
+    {
+      "file": "ecoflow-river-3-plus-portable-power-station-1146556336.png",
+      "alt": "EcoFlow RIVER 3 Plus в работилница"
+    },
+    {
+      "file": "ecoflow-river-3-plus-portable-power-station-1146556337.png",
+      "alt": "EcoFlow RIVER 3 Plus на бюро"
+    },
+    {
+      "file": "ecoflow-river-3-plus-portable-power-station-1146556338.png",
+      "alt": "EcoFlow RIVER 3 Plus в кухня"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "",
+      "body": "",
+      "image": "1_1_kv_d9588423-b500-4083-9171-99ac112bbe9d.jpg"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Надежден спътник при спиране на тока и на път",
+      "body": "",
+      "image": "1_2.jpg"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Капацитет",
+      "layout": "tabs-top",
+      "heading": "Капацитет според растящите нужди",
+      "intro": "Разширяем до 858Wh с безжична връзка. Вдигнете нивото с RIVER 3 Plus и допълнителна батерия. С EB300 (286Wh) или EB600 (572Wh) — просто ги стиковате и получавате до 858Wh чиста енергия.",
+      "tabs": [
+        {
+          "label": "286Wh",
+          "image": "2_1_IMG.jpg",
+          "imageAlt": "RIVER 3 Plus — 286Wh, време на работа на уреди",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "572Wh",
+          "image": "2_2_IMG.jpg",
+          "imageAlt": "RIVER 3 Max — 572Wh, време на работа на уреди",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "858Wh",
+          "image": "2_3_IMG.jpg",
+          "imageAlt": "RIVER 3 Max Plus — 858Wh, време на работа на уреди",
+          "caption": "",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-left",
+      "theme": "light",
+      "heading": "Свързване без усилие",
+      "body": "",
+      "image": "3_1_IMG.jpg"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-right",
+      "theme": "light",
+      "heading": "Още една възможност за зареждане и презареждане",
+      "body": "",
+      "image": "3_2_IMG.jpg"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Мощност",
+      "heading": "Захранва 90% от домакинските уреди",
+      "subheading": "До 600W изход",
+      "subheadingPosition": "below",
+      "body": "RIVER 3 Plus е звяр сред малките електроцентрали — до 600W номинална мощност. С технологията X-Boost захранва продължително нагревателни уреди до 1200W без усилие и поддържа 90% от домакинските уреди. А с вградената лампа никога няма да останете на тъмно.",
+      "image": "4_1_IMG.jpg"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Зареждане",
+      "layout": "image-top",
+      "heading": "4 начина за зареждане, безопасно от 0 до 100% за 1 час",
+      "intro": "Бърза подготовка за излет или спиране на тока.",
+      "tabs": [
+        {
+          "label": "От слънце",
+          "image": "5_1_IMG.jpg",
+          "imageAlt": "Зареждане на RIVER 3 Plus от соларен панел",
+          "caption": "Зареждане от слънце: RIVER 3 Plus се пълни за само 1,5 часа с 220W соларен вход. За още по-голяма портативност — 45W сгъваем соларен панел (Type-C), който зарежда устройствата ви директно.",
+          "rows": []
+        },
+        {
+          "label": "От контакт",
+          "image": "5_2_IMG.jpg",
+          "imageAlt": "Зареждане на RIVER 3 Plus от контакт",
+          "caption": "Зареждане от контакт: RIVER 3 Plus се зарежда за 1 час с X-Stream, без да уврежда батерията — благодарение на клетките от автомобилен клас и технологията за поддържащо зареждане.",
+          "rows": []
+        },
+        {
+          "label": "От автомобил",
+          "image": "5_3_IMG.jpg",
+          "imageAlt": "Зареждане на RIVER 3 Plus в автомобил",
+          "caption": "Зареждане от автомобил: зареждайте RIVER 3 Plus от акумулатора на колата, докато шофирате — идеално за път.",
+          "rows": []
+        },
+        {
+          "label": "От генератор",
+          "image": "5_4_IMG.jpg",
+          "imageAlt": "Зареждане на RIVER 3 Plus от генератор",
+          "caption": "Зареждане от генератор: презареждане за само 1 час с бензинов генератор — за цял ден тиха, безопасна и ефективна енергия.",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "UPS",
+      "heading": "Професионално автоматично превключване под 10 ms",
+      "subheading": "Безпроблемна работа от дома и игри",
+      "subheadingPosition": "below",
+      "body": "RIVER 3 Plus дава първокласна защита с превключване под 10 ms и пази чувствителната техника за домашен офис и игри при внезапно спиране на тока.",
+      "image": "6_1_IMG.jpg"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "layout": "tabs-top",
+      "heading": "Цялостно UPS решение",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Защита за работа и игри",
+          "image": "7_1_IMG.jpg",
+          "imageAlt": "RIVER 3 Plus захранва компютър при спиране на тока",
+          "caption": "С 286Wh капацитет и 600W изход RIVER 3 Plus захранва 3W Wi-Fi рутер до 35 часа. Може да поддържа почти всяка офис техника, включително компютър 600W, поне 21 минути — достатъчно за безопасно изключване и довършване на започнатото.",
+          "rows": []
+        },
+        {
+          "label": "Умно известяване при спиране на тока",
+          "image": "7_2_IMG.jpg",
+          "imageAlt": "RIVER 3 Plus — известия в приложението",
+          "caption": "Оставате информирани при спиране на тока — RIVER 3 Plus известява със светодиод, през приложението и софтуерно. Интерфейсът за данни, съвместим с компютър и NAS, заедно със софтуера на EcoFlow ви предупреждава и автоматично записва данните при ниска батерия.",
+          "rows": []
+        },
+        {
+          "label": "Дизайн, удобен за UPS",
+          "image": "7_3_IMG.jpg",
+          "imageAlt": "RIVER 3 Plus — задни контакти и дисплей",
+          "caption": "С двата задни контакта скривате кабелите на устройствата. Следите UPS-а в реално време на обновения дисплей.",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "До 2× по-дълга работа на осветление и мрежа",
+      "subheading": "Посрещнете спирането на тока и удължете престоя навън",
+      "subheadingPosition": "below",
+      "body": "С революционната технология X-GaN Power RIVER 3 Plus променя индустрията с компактни, тихи батерии за по-дълга работа на малката електроника. Благодарение на високата енергийна ефективност на GaN RIVER 3 Plus дава до два пъти по-дълга работа на уредите с малка мощност.",
+      "image": "8_1_IMG.jpg"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Изключително компактна и лека",
+      "subheading": "Удобна енергия за из път",
+      "subheadingPosition": "below",
+      "body": "RIVER 3 Plus губи по-малко топлина, изисква по-малко място за охлаждане и е с компактен дизайн. Побира се лесно в малки пространства — шкаф, миниван или чанта — за удобно съхранение.",
+      "image": "9_1_IMG.jpg"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Под 30 dB — тих като шепот за резервно захранване 24/7",
+      "subheading": "Тихо резервно захранване за спокойствие денем и нощем",
+      "subheadingPosition": "below",
+      "body": "С охлаждащата технология X-GanPower RIVER 3 Plus работи тихо като в библиотека — под 30 dB на разстояние 0,5 m. Спокойствие денем и нощем, дори когато работи без прекъсване.",
+      "image": "10_1_IMG.jpg"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Издръжливост",
+      "layout": "tabs-top",
+      "heading": "Издръжливост",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Водо-, огне- и удароустойчива",
+          "image": "11_1_IMG_a716dbe9-56b2-4244-a249-e49146865a31.jpg",
+          "imageAlt": "RIVER 3 Plus — защита IP54",
+          "caption": "С IP54 защита на батерията щетите от вода са сведени до минимум. Здравият огнеустойчив корпус издържа на тежки условия. Дори след падане от 1 метър RIVER 3 Plus не се поврежда.",
+          "rows": []
+        },
+        {
+          "label": "LiFePO4 клетки, 10 години живот",
+          "image": "11_2_IMG.jpg",
+          "imageAlt": "RIVER 3 Plus — LiFePO4 клетки",
+          "caption": "RIVER 3 Plus издържа 3000 цикъла на зареждане — около 10 години всекидневна употреба, преди капацитетът да падне до 80%.",
+          "rows": []
+        },
+        {
+          "label": "Защита на батерията X-Guard",
+          "image": "11_3_IMG.jpg",
+          "imageAlt": "RIVER 3 Plus — технология X-Guard",
+          "caption": "С усъвършенстван алгоритъм за облачно наблюдение на батерията и над 40 мерки за безопасност RIVER 3 Plus се пази от рискове по ток, напрежение, температура и вериги.",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Приложение",
+      "heading": "Подобрено умно управление",
+      "subheading": "Удобен, интелигентен, персонализиран контрол на енергията",
+      "subheadingPosition": "below",
+      "body": "",
+      "image": "12_1_IMG_d3a2093e-e72c-4e9f-901f-ceb38b87d7a8.jpg"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Детайли на продукта",
+      "body": "",
+      "image": "13_1_IMG.jpg"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "groups": [
+        {
+          "label": "RIVER 3 Plus",
+          "items": [
+            {
+              "name": "EcoFlow RIVER 3 Plus",
+              "qty": 1,
+              "image": "ecoflow-river-3-plus-portable-power-station-1146556335.png",
+              "imageAlt": "EcoFlow RIVER 3 Plus"
+            },
+            {
+              "name": "Захранващ кабел за контакт",
+              "qty": 1,
+              "image": "kutiya-kabel.webp",
+              "imageAlt": "Захранващ кабел за контакт"
+            },
+            {
+              "name": "Кабел EcoFlow USB-B към USB-A за UPS комуникация",
+              "qty": 1,
+              "image": "kutiya-kabel-ups.webp",
+              "imageAlt": "Кабел USB-B към USB-A за UPS комуникация"
+            },
+            {
+              "name": "Кратко ръководство и гаранционна карта",
+              "qty": 1,
+              "image": "kutiya-rakovodstvo.webp",
+              "imageAlt": "Кратко ръководство и гаранционна карта"
+            }
+          ]
+        },
+        {
+          "label": "RIVER 3 Max",
+          "items": [
+            {
+              "name": "EcoFlow RIVER 3 Max",
+              "qty": 1,
+              "image": "ecoflow-river-3-plus-portable-power-station-1146556327.png",
+              "imageAlt": "EcoFlow RIVER 3 Max"
+            },
+            {
+              "name": "Захранващ кабел за контакт",
+              "qty": 1,
+              "image": "kutiya-kabel.webp",
+              "imageAlt": "Захранващ кабел за контакт"
+            },
+            {
+              "name": "Кабел EcoFlow USB-B към USB-A за UPS комуникация",
+              "qty": 1,
+              "image": "kutiya-kabel-ups.webp",
+              "imageAlt": "Кабел USB-B към USB-A за UPS комуникация"
+            },
+            {
+              "name": "Кратко ръководство и гаранционна карта",
+              "qty": 1,
+              "image": "kutiya-rakovodstvo.webp",
+              "imageAlt": "Кратко ръководство и гаранционна карта"
+            }
+          ]
+        },
+        {
+          "label": "RIVER 3 Max Plus",
+          "items": [
+            {
+              "name": "EcoFlow RIVER 3 Max Plus",
+              "qty": 1,
+              "image": "ecoflow-river-3-plus-portable-power-station-1146556323.png",
+              "imageAlt": "EcoFlow RIVER 3 Max Plus"
+            },
+            {
+              "name": "Захранващ кабел за контакт",
+              "qty": 1,
+              "image": "kutiya-kabel.webp",
+              "imageAlt": "Захранващ кабел за контакт"
+            },
+            {
+              "name": "Кабел EcoFlow USB-B към USB-A за UPS комуникация",
+              "qty": 1,
+              "image": "kutiya-kabel-ups.webp",
+              "imageAlt": "Кабел USB-B към USB-A за UPS комуникация"
+            },
+            {
+              "name": "Кратко ръководство и гаранционна карта",
+              "qty": 1,
+              "image": "kutiya-rakovodstvo.webp",
+              "imageAlt": "Кратко ръководство и гаранционна карта"
+            }
+          ]
+        }
+      ],
+      "defaultGroup": 0,
+      "_iztochnik": "Трите раздела „What's in the box“ (14_1, 14_2, 14_3): съдържанието е едно и също, различава се само устройството. Разделът RIVER 3 Plus е активен. ДА СЕ ПРОВЕРИ по картинките 14_1/14_2/14_3 дали UPS кабелът е и в трите комплекта."
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "footnotes",
+      "items": [
+        {
+          "text": "Времето на работа е по лабораторни тестове с обичайни домакински уреди при стайна температура. Твърдението за „двойно време на работа“ се отнася за уреди с малка мощност, например 3W лампа или Wi-Fi рутер."
+        },
+        {
+          "text": "Данните за шума са по лабораторни тестове при стайна температура 32 °C. При реална употреба са възможни малки отклонения."
+        },
+        {
+          "text": "Защитата IP54 се отнася само за батерийния пакет, не за цялото устройство. Не предпазва от потапяне, но при пръски вода или дъжд предотвратява пожар или взрив при късо съединение."
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Общи",
+      "rows": [
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Капацитет",
+          "value": "286 Wh"
+        },
+        {
+          "label": "Размери",
+          "value": "234 × 232 × 146 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "4,7 кг"
+        },
+        {
+          "label": "Тип батерия",
+          "value": "LiFePO4, 3000 цикъла до 80% капацитет"
+        },
+        {
+          "label": "UPS",
+          "value": "<10 ms"
+        },
+        {
+          "label": "Шум",
+          "value": "<30 dB"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Изходи",
+      "rows": [
+        {
+          "label": "Контакти (AC)",
+          "value": "3, общо 600W (1200W пик, 1200W с X-Boost)"
+        },
+        {
+          "label": "USB-A",
+          "value": "2 × 5V 2,4A, макс. 12W на порт, общо 24W"
+        },
+        {
+          "label": "USB-C",
+          "value": "1 × 5/9/12/15V 3A, 20V 5A, макс. 100W"
+        },
+        {
+          "label": "Изход за запалка",
+          "value": "1 × 12,6V, 10A, макс. 126W"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Зареждане",
+      "rows": [
+        {
+          "label": "От контакт",
+          "value": "200–240V, 6A, 50/60 Hz, 360W — 0–100% за 60 мин"
+        },
+        {
+          "label": "От соларни панели",
+          "value": "11–55V, 13A, 220W — 0–100% за 1,5 ч"
+        },
+        {
+          "label": "От автомобил",
+          "value": "11–55V, 8A, 220W — 0–100% за 3,3 ч"
+        },
+        {
+          "label": "От генератор",
+          "value": "200–240V, 6A, 50/60 Hz, 360W — 0–100% за 60 мин"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Допълнителна батерия",
+      "rows": [
+        {
+          "label": "Съвместими батерии",
+          "value": "RIVER 3 Plus Extra Battery EB300 (286 Wh, 234 × 224 × 110 мм) → общо 572 Wh; EB600 (572 Wh, 234 × 224 × 158 мм) → общо 858 Wh"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Условия и гаранция",
+      "rows": [
+        {
+          "label": "Оптимална работна температура",
+          "value": "20–30 °C"
+        },
+        {
+          "label": "Температура при зареждане",
+          "value": "0–45 °C"
+        },
+        {
+          "label": "Температура при разреждане",
+          "value": "–10 до 45 °C"
+        },
+        {
+          "label": "Температура за съхранение",
+          "value": "–10 до 45 °C"
+        },
+        {
+          "label": "Гаранция",
+          "value": "5 години"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556335.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556334.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556333.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556332.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556331.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556336.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556337.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556338.png"
+    ],
+    "sekcii": [
+      "https://eu.ecoflow.com/cdn/shop/files/1_1_kv_d9588423-b500-4083-9171-99ac112bbe9d.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/1_2.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/2_1_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/2_2_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/2_3_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/3_1_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/3_2_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/4_1_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/5_1_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/5_2_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/5_3_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/5_4_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/6_1_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/7_1_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/7_2_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/7_3_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/8_1_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/9_1_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/10_1_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/11_1_IMG_a716dbe9-56b2-4244-a249-e49146865a31.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/11_2_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/11_3_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/12_1_IMG_d3a2093e-e72c-4e9f-901f-ceb38b87d7a8.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/13_1_IMG.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/14_1_IMG_0bb22cba-dd5b-445b-9bb2-b7ac72813a03.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/14_2_IMG_54a2a464-ba90-4eaa-9eca-d39c3abf6cf0.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/14_3_IMG_6818cdea-c49f-4244-a2b8-e18d4c0bff5b.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556327.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556323.png"
+    ],
+    "_bележка": "14_1/14_2/14_3 са картинките „What's in the box“ — само за справка. …1146556327.png и …1146556323.png са за разделите Max и Max Plus в кутията (в sekcii/). kutiya-*.webp са в Медия. 1_1_kv_… е същият главен банер като при RIVER 3 Max Plus (Wireless) — вече е в Медия."
+  },
+  "_prevod_nadpisi": "виж prevod-nadpisi.md",
+  "_neyasni": [
+    "Страницата е обща за RIVER 3 Plus / Max / Max Plus. Секцията „Капацитет“ е с трите раздела, както при EcoFlow; кутията — с три раздела, активен Plus.",
+    "Гаранция 5 години — по спецификациите на Wireless варианта; на тази страница EcoFlow не изписват гаранция. Да се провери в портала.",
+    "Секциите с 2–3 карти една до друга при EcoFlow („Свързване без усилие“/„Още една възможност…“, „Цялостно UPS решение“, „Издръжливост“) са като снимка вляво/вдясно или раздели над снимката.",
+    "Заглавието на секцията с трите карти за издръжливост при EcoFlow липсва (само картите) — сложено „Издръжливост“."
+  ]
+}
