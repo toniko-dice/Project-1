@@ -41,7 +41,8 @@ export const RenderBlocks = ({
           case 'heroBanner':
             return <HeroBannerBlock key={key} block={block} />
           case 'categoryStrip':
-            return <CategoryStripBlock key={key} block={block} />
+            /* Няма `block`: лентата чете категориите с отметката сама. */
+            return <CategoryStripBlock key={key} />
           case 'bannerCarousel':
             return <BannerCarouselBlock key={key} block={block} />
           case 'productCarousel':

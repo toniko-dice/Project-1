@@ -235,10 +235,6 @@ export interface Page {
              * Секцията остава тук, но не се показва на сайта.
              */
             hidden?: boolean | null;
-            /**
-             * Подредбата тук определя реда на екрана. Препоръчително 6–9 броя.
-             */
-            categories?: (number | Category)[] | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'categoryStrip';
@@ -549,352 +545,6 @@ export interface Media {
       filename?: string | null;
     };
   };
-}
-/**
- * Категориите са на три нива: главна категория („Портативни електроцентрали") → серия („DELTA серия") → подсерия („DELTA 3 серия"). Всяко ниво се закача към горното с полето „Подкатегория на". Продуктът се слага в най-долното ниво, което го описва.
- *
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "categories".
- */
-export interface Category {
-  id: number;
-  _order?: string | null;
-  title: string;
-  /**
-   * Само малки латински букви, цифри и тирета. Кирилицата се транслитерира, интервалите стават тирета, представки като „products/" се махат. Не е нужно да пишете пътя — само името.
-   */
-  slug: string;
-  /**
-   * Празно = главна категория. Изберете главна, за да стане серия; изберете серия, за да стане подсерия. Подсерията няма собствена страница — показва се като раздел на страницата на серията.
-   */
-  parent?: (number | null) | Category;
-  /**
-   * Отнася се за лентата с икони на началната страница.
-   */
-  showInStrip?: boolean | null;
-  /**
-   * По избор. Показва се в червено под името в лентата с категории. Напр. „Ново".
-   */
-  stripBadge?: string | null;
-  /**
-   * За лентата с категории. Препоръчително 160×160px.
-   */
-  icon?: (number | null) | Media;
-  /**
-   * Банерът най-отгоре на страницата. Препоръчително 2400×800px.
-   */
-  heroImage?: (number | null) | Media;
-  heroTagline?: string | null;
-  /**
-   * По избор. Показва се между описанието и продуктите. Препоръчително 2400×800px.
-   */
-  banner?: (number | null) | Media;
-  /**
-   * Кратък въвеждащ текст под името на категорията. Ползва се и като описание за търсачки, ако полето в раздел SEO е празно.
-   */
-  description?: string | null;
-  layout?:
-    | (
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            /**
-             * Нула спира автоматичната смяна. Важи само при повече от един слайд.
-             */
-            autoplaySeconds?: number | null;
-            slides?:
-              | {
-                  /**
-                   * По избор. Малка картинка — в оригинала това е „30 дни гаранция за цената". Показва се с истинската си височина, до 40px.
-                   */
-                  badgeImage?: (number | null) | Media;
-                  /**
-                   * Малкият текст над заглавието. Напр. „Серия EcoFlow STREAM".
-                   */
-                  eyebrow?: string | null;
-                  eyebrowColor?: ('white' | 'orange') | null;
-                  heading?: string | null;
-                  subheading?: string | null;
-                  /**
-                   * Напр. срок на промоцията: „5 – 31 август".
-                   */
-                  note?: string | null;
-                  /**
-                   * Препоръчително 2400×1000px. Текстът ляга върху него.
-                   */
-                  image?: (number | null) | Media;
-                  /**
-                   * По желание. Ако е празно, се ползва основното.
-                   */
-                  imageMobile?: (number | null) | Media;
-                  cta?: {
-                    label?: string | null;
-                    /**
-                     * Вътрешен път (/products) или пълен адрес към външния магазин.
-                     */
-                    url?: string | null;
-                    newTab?: boolean | null;
-                    /**
-                     * Зависи от снимката отдолу. В оригинала бутоните върху банери са бели.
-                     */
-                    style?: ('light' | 'dark') | null;
-                  };
-                  align?: ('left' | 'center' | 'right') | null;
-                  theme?: ('dark' | 'light') | null;
-                  /**
-                   * Увеличете, ако текстът не се чете добре върху снимката.
-                   */
-                  overlay?: ('none' | 'light' | 'medium' | 'strong') | null;
-                  id?: string | null;
-                }[]
-              | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'heroBanner';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            /**
-             * Подредбата тук определя реда на екрана. Препоръчително 6–9 броя.
-             */
-            categories?: (number | Category)[] | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'categoryStrip';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            sectionTitle?: string | null;
-            subtitle?: string | null;
-            products?: (number | Product)[] | null;
-            cardStyle?: ('image' | 'price') | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'productCarousel';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            heading?: string | null;
-            cards?:
-              | {
-                  /**
-                   * Запълва цялата карта. Препоръчително 800×1000px (портрет).
-                   */
-                  image?: (number | null) | Media;
-                  /**
-                   * Малкият оранжев текст най-отгоре. Напр. „Ново" или „Горещо 🔥".
-                   */
-                  tag?: string | null;
-                  heading?: string | null;
-                  subheading?: string | null;
-                  textTheme?: ('light' | 'dark') | null;
-                  /**
-                   * До два бутона на един ред под текста. Може и без нито един.
-                   */
-                  buttons?:
-                    | {
-                        label?: string | null;
-                        url?: string | null;
-                        style?: ('white' | 'outline' | 'black') | null;
-                        id?: string | null;
-                      }[]
-                    | null;
-                  id?: string | null;
-                }[]
-              | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'bannerCarousel';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            /**
-             * Напр. "Домашно резервно захранване".
-             */
-            sectionTitle?: string | null;
-            showBanner?: boolean | null;
-            banner?: {
-              eyebrow?: string | null;
-              eyebrowColor?: ('white' | 'orange') | null;
-              heading?: string | null;
-              subheading?: string | null;
-              /**
-               * Напр. "от 7 299 €" или "спестявате до 1 200 €".
-               */
-              priceNote?: string | null;
-              /**
-               * Препоръчително 2400×800px. Остава задължително и при видео — показва се, докато то се зареди.
-               */
-              image?: (number | null) | Media;
-              /**
-               * По избор. MP4 (H.264), 1920px широчина, без звук, до 20 MB. Върти се само, без бутони. При включена системна настройка за намалено движение се показва снимката.
-               */
-              video?: (number | null) | Media;
-              cta?: {
-                label?: string | null;
-                /**
-                 * Вътрешен път (/products) или пълен адрес към външния магазин.
-                 */
-                url?: string | null;
-                newTab?: boolean | null;
-                /**
-                 * Зависи от снимката отдолу. В оригинала бутоните върху банери са бели.
-                 */
-                style?: ('light' | 'dark') | null;
-              };
-              theme?: ('dark' | 'light') | null;
-            };
-            /**
-             * Подредбата тук определя реда на екрана. Препоръчително 4–5 броя — на широк екран се показват пет колони.
-             */
-            products?: (number | Product)[] | null;
-            showMoreTile?: boolean | null;
-            moreTile?: {
-              label?: string | null;
-              url?: string | null;
-              /**
-               * В оригинала това е групова снимка на продуктите от серията.
-               */
-              image?: (number | null) | Media;
-              description?: string | null;
-              secondaryLabel?: string | null;
-              secondaryUrl?: string | null;
-            };
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'bannerProductRow';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            sectionTitle?: string | null;
-            cards?:
-              | {
-                  heading?: string | null;
-                  description?: string | null;
-                  image?: (number | null) | Media;
-                  cta?: {
-                    label?: string | null;
-                    /**
-                     * Вътрешен път (/products) или пълен адрес към външния магазин.
-                     */
-                    url?: string | null;
-                    newTab?: boolean | null;
-                    /**
-                     * Зависи от снимката отдолу. В оригинала бутоните върху банери са бели.
-                     */
-                    style?: ('light' | 'dark') | null;
-                  };
-                  theme?: ('dark' | 'light') | null;
-                  id?: string | null;
-                }[]
-              | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'promoCards';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            /**
-             * По избор. В оригинала някои банери са без заглавие над тях.
-             */
-            sectionTitle?: string | null;
-            eyebrow?: string | null;
-            eyebrowColor?: ('white' | 'orange') | null;
-            heading?: string | null;
-            subheading?: string | null;
-            /**
-             * По избор. Напр. „от 1199 €". Празно поле не показва нищо.
-             */
-            priceNote?: string | null;
-            image?: (number | null) | Media;
-            cta?: {
-              label?: string | null;
-              /**
-               * Вътрешен път (/products) или пълен адрес към външния магазин.
-               */
-              url?: string | null;
-              newTab?: boolean | null;
-              /**
-               * Зависи от снимката отдолу. В оригинала бутоните върху банери са бели.
-               */
-              style?: ('light' | 'dark') | null;
-            };
-            align?: ('left' | 'center' | 'right') | null;
-            theme?: ('dark' | 'light') | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'wideBanner';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            sectionTitle?: string | null;
-            items?:
-              | {
-                  icon?: ('shield' | 'globe' | 'card' | 'support' | 'return' | 'truck' | 'bolt' | 'certificate') | null;
-                  title?: string | null;
-                  description?: string | null;
-                  id?: string | null;
-                }[]
-              | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'benefitsGrid';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            sectionTitle?: string | null;
-            testimonials?: (number | Testimonial)[] | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'testimonialsBlock';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            sectionTitle?: string | null;
-            awards?: (number | Award)[] | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'logoWall';
-          }
-      )[]
-    | null;
-  metaTitle?: string | null;
-  metaDescription?: string | null;
-  /**
-   * Включи за категории с под 3 продукта или без собствен текст — да не се индексират като празни страници. Страницата остава достъпна; само излиза от sitemap.xml и получава noindex.
-   */
-  noindex?: boolean | null;
-  updatedAt: string;
-  createdAt: string;
 }
 /**
  * Продуктовата страница се сглобява от секции, също като обикновените страници. Продукт без добавени секции показва галерия, цена, бутон и описание.
@@ -1402,6 +1052,348 @@ export interface Product {
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
+}
+/**
+ * Категориите са на три нива: главна категория („Портативни електроцентрали") → серия („DELTA серия") → подсерия („DELTA 3 серия"). Всяко ниво се закача към горното с полето „Подкатегория на". Продуктът се слага в най-долното ниво, което го описва.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "categories".
+ */
+export interface Category {
+  id: number;
+  _order?: string | null;
+  title: string;
+  /**
+   * Само малки латински букви, цифри и тирета. Кирилицата се транслитерира, интервалите стават тирета, представки като „products/" се махат. Не е нужно да пишете пътя — само името.
+   */
+  slug: string;
+  /**
+   * Празно = главна категория. Изберете главна, за да стане серия; изберете серия, за да стане подсерия. Подсерията няма собствена страница — показва се като раздел на страницата на серията.
+   */
+  parent?: (number | null) | Category;
+  /**
+   * Отнася се за лентата с икони на началната страница.
+   */
+  showInStrip?: boolean | null;
+  /**
+   * По избор. Показва се в червено под името в лентата с категории. Напр. „Ново".
+   */
+  stripBadge?: string | null;
+  /**
+   * За лентата с категории. Препоръчително 160×160px.
+   */
+  icon?: (number | null) | Media;
+  /**
+   * Банерът най-отгоре на страницата. Препоръчително 2400×800px.
+   */
+  heroImage?: (number | null) | Media;
+  heroTagline?: string | null;
+  /**
+   * По избор. Показва се между описанието и продуктите. Препоръчително 2400×800px.
+   */
+  banner?: (number | null) | Media;
+  /**
+   * Кратък въвеждащ текст под името на категорията. Ползва се и като описание за търсачки, ако полето в раздел SEO е празно.
+   */
+  description?: string | null;
+  layout?:
+    | (
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Нула спира автоматичната смяна. Важи само при повече от един слайд.
+             */
+            autoplaySeconds?: number | null;
+            slides?:
+              | {
+                  /**
+                   * По избор. Малка картинка — в оригинала това е „30 дни гаранция за цената". Показва се с истинската си височина, до 40px.
+                   */
+                  badgeImage?: (number | null) | Media;
+                  /**
+                   * Малкият текст над заглавието. Напр. „Серия EcoFlow STREAM".
+                   */
+                  eyebrow?: string | null;
+                  eyebrowColor?: ('white' | 'orange') | null;
+                  heading?: string | null;
+                  subheading?: string | null;
+                  /**
+                   * Напр. срок на промоцията: „5 – 31 август".
+                   */
+                  note?: string | null;
+                  /**
+                   * Препоръчително 2400×1000px. Текстът ляга върху него.
+                   */
+                  image?: (number | null) | Media;
+                  /**
+                   * По желание. Ако е празно, се ползва основното.
+                   */
+                  imageMobile?: (number | null) | Media;
+                  cta?: {
+                    label?: string | null;
+                    /**
+                     * Вътрешен път (/products) или пълен адрес към външния магазин.
+                     */
+                    url?: string | null;
+                    newTab?: boolean | null;
+                    /**
+                     * Зависи от снимката отдолу. В оригинала бутоните върху банери са бели.
+                     */
+                    style?: ('light' | 'dark') | null;
+                  };
+                  align?: ('left' | 'center' | 'right') | null;
+                  theme?: ('dark' | 'light') | null;
+                  /**
+                   * Увеличете, ако текстът не се чете добре върху снимката.
+                   */
+                  overlay?: ('none' | 'light' | 'medium' | 'strong') | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'heroBanner';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'categoryStrip';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            sectionTitle?: string | null;
+            subtitle?: string | null;
+            products?: (number | Product)[] | null;
+            cardStyle?: ('image' | 'price') | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'productCarousel';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            heading?: string | null;
+            cards?:
+              | {
+                  /**
+                   * Запълва цялата карта. Препоръчително 800×1000px (портрет).
+                   */
+                  image?: (number | null) | Media;
+                  /**
+                   * Малкият оранжев текст най-отгоре. Напр. „Ново" или „Горещо 🔥".
+                   */
+                  tag?: string | null;
+                  heading?: string | null;
+                  subheading?: string | null;
+                  textTheme?: ('light' | 'dark') | null;
+                  /**
+                   * До два бутона на един ред под текста. Може и без нито един.
+                   */
+                  buttons?:
+                    | {
+                        label?: string | null;
+                        url?: string | null;
+                        style?: ('white' | 'outline' | 'black') | null;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'bannerCarousel';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Напр. "Домашно резервно захранване".
+             */
+            sectionTitle?: string | null;
+            showBanner?: boolean | null;
+            banner?: {
+              eyebrow?: string | null;
+              eyebrowColor?: ('white' | 'orange') | null;
+              heading?: string | null;
+              subheading?: string | null;
+              /**
+               * Напр. "от 7 299 €" или "спестявате до 1 200 €".
+               */
+              priceNote?: string | null;
+              /**
+               * Препоръчително 2400×800px. Остава задължително и при видео — показва се, докато то се зареди.
+               */
+              image?: (number | null) | Media;
+              /**
+               * По избор. MP4 (H.264), 1920px широчина, без звук, до 20 MB. Върти се само, без бутони. При включена системна настройка за намалено движение се показва снимката.
+               */
+              video?: (number | null) | Media;
+              cta?: {
+                label?: string | null;
+                /**
+                 * Вътрешен път (/products) или пълен адрес към външния магазин.
+                 */
+                url?: string | null;
+                newTab?: boolean | null;
+                /**
+                 * Зависи от снимката отдолу. В оригинала бутоните върху банери са бели.
+                 */
+                style?: ('light' | 'dark') | null;
+              };
+              theme?: ('dark' | 'light') | null;
+            };
+            /**
+             * Подредбата тук определя реда на екрана. Препоръчително 4–5 броя — на широк екран се показват пет колони.
+             */
+            products?: (number | Product)[] | null;
+            showMoreTile?: boolean | null;
+            moreTile?: {
+              label?: string | null;
+              url?: string | null;
+              /**
+               * В оригинала това е групова снимка на продуктите от серията.
+               */
+              image?: (number | null) | Media;
+              description?: string | null;
+              secondaryLabel?: string | null;
+              secondaryUrl?: string | null;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'bannerProductRow';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            sectionTitle?: string | null;
+            cards?:
+              | {
+                  heading?: string | null;
+                  description?: string | null;
+                  image?: (number | null) | Media;
+                  cta?: {
+                    label?: string | null;
+                    /**
+                     * Вътрешен път (/products) или пълен адрес към външния магазин.
+                     */
+                    url?: string | null;
+                    newTab?: boolean | null;
+                    /**
+                     * Зависи от снимката отдолу. В оригинала бутоните върху банери са бели.
+                     */
+                    style?: ('light' | 'dark') | null;
+                  };
+                  theme?: ('dark' | 'light') | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'promoCards';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * По избор. В оригинала някои банери са без заглавие над тях.
+             */
+            sectionTitle?: string | null;
+            eyebrow?: string | null;
+            eyebrowColor?: ('white' | 'orange') | null;
+            heading?: string | null;
+            subheading?: string | null;
+            /**
+             * По избор. Напр. „от 1199 €". Празно поле не показва нищо.
+             */
+            priceNote?: string | null;
+            image?: (number | null) | Media;
+            cta?: {
+              label?: string | null;
+              /**
+               * Вътрешен път (/products) или пълен адрес към външния магазин.
+               */
+              url?: string | null;
+              newTab?: boolean | null;
+              /**
+               * Зависи от снимката отдолу. В оригинала бутоните върху банери са бели.
+               */
+              style?: ('light' | 'dark') | null;
+            };
+            align?: ('left' | 'center' | 'right') | null;
+            theme?: ('dark' | 'light') | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'wideBanner';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            sectionTitle?: string | null;
+            items?:
+              | {
+                  icon?: ('shield' | 'globe' | 'card' | 'support' | 'return' | 'truck' | 'bolt' | 'certificate') | null;
+                  title?: string | null;
+                  description?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'benefitsGrid';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            sectionTitle?: string | null;
+            testimonials?: (number | Testimonial)[] | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'testimonialsBlock';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            sectionTitle?: string | null;
+            awards?: (number | Award)[] | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'logoWall';
+          }
+      )[]
+    | null;
+  metaTitle?: string | null;
+  metaDescription?: string | null;
+  /**
+   * Включи за категории с под 3 продукта или без собствен текст — да не се индексират като празни страници. Страницата остава достъпна; само излиза от sitemap.xml и получава noindex.
+   */
+  noindex?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1914,7 +1906,6 @@ export interface PagesSelect<T extends boolean = true> {
           | T
           | {
               hidden?: T;
-              categories?: T;
               id?: T;
               blockName?: T;
             };
@@ -2422,7 +2413,6 @@ export interface CategoriesSelect<T extends boolean = true> {
           | T
           | {
               hidden?: T;
-              categories?: T;
               id?: T;
               blockName?: T;
             };

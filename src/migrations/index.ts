@@ -24,6 +24,7 @@ import * as migration_20260924_132054_product_ean2 from './20260924_132054_produ
 import * as migration_20260924_170000_home_page_urls from './20260924_170000_home_page_urls';
 import * as migration_20260925_103626_box_groups from './20260925_103626_box_groups';
 import * as migration_20260928_081820_product_search from './20260928_081820_product_search';
+import * as migration_20260928_092612_strip_from_checkbox from './20260928_092612_strip_from_checkbox';
 
 export const migrations = [
   {
@@ -155,5 +156,10 @@ export const migrations = [
     up: migration_20260928_081820_product_search.up,
     down: migration_20260928_081820_product_search.down,
     name: '20260928_081820_product_search',
+  },
+  {
+    up: migration_20260928_092612_strip_from_checkbox.up,
+    down: migration_20260928_092612_strip_from_checkbox.down,
+    name: '20260928_092612_strip_from_checkbox',
   },
 ];

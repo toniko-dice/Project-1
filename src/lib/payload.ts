@@ -181,6 +181,35 @@ export const getCategoryTree = cache(async (): Promise<Category[]> =>
   ),
 )
 
+/**
+ * Категориите за лентата с икони на началната страница.
+ *
+ * Изворът е отметката „Показване в лентата с икони" на самата категория,
+ * а редът — `_order`, тоест подредбата с влачене в списъка с категории.
+ * Няма друго условие: категория без икона излиза със заместител, а не
+ * изчезва.
+ *
+ * Преди блокът държеше собствен списък с връзки и отметката не се четеше
+ * никъде. Отметката се слагаше на шест категории, а на началната стояха
+ * три — списъкът в блока още сочеше старите и нищо не го казваше.
+ */
+export const getStripCategories = cache(async (): Promise<Category[]> =>
+  timed('getStripCategories', () =>
+    cached(['strip-categories'], ['category'], async () => {
+      const payload = await getPayloadClient()
+      const result = await payload.find({
+        collection: 'categories',
+        where: { showInStrip: { equals: true } },
+        sort: '_order',
+        pagination: false,
+        // Стига за иконата; адресът на лентата е само slug.
+        depth: 1,
+      })
+      return result.docs
+    }),
+  ),
+)
+
 /** Номерата на категорията и на всичко под нея, на произволна дълбочина. */
 export const categoryBranchIds = (tree: Category[], rootId: number): number[] => {
   const ids = [rootId]

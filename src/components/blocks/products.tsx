@@ -5,6 +5,7 @@ import Link from 'next/link'
 import type { Category, Page, Product } from '@/payload-types'
 import { formatEur } from '@/lib/format'
 import { bannerImage, mediaUrl, productImage } from '@/lib/media'
+import { getStripCategories } from '@/lib/payload'
 import { categoryPath, productPath } from '@/lib/urls'
 import { SectionImage } from '../SectionImage'
 import { ProductCard } from '../ProductCard'
@@ -19,8 +20,19 @@ type BlockOf<T extends string> = Extract<Layout[number], { blockType: T }>
 /** Връзките идват като ID или като пълен обект според дълбочината на заявката. */
 /* ─────────── Лента с категории ─────────── */
 
-export const CategoryStripBlock = ({ block }: { block: BlockOf<'categoryStrip'> }) => {
-  const categories = resolvedRelations<Category>(block.categories, 'categoryStrip.categories')
+/**
+ * Лентата с икони под главния банер.
+ *
+ * Списъкът НЕ идва от блока — идва от отметката „Показване в лентата с
+ * икони" на всяка категория, подредена с влачене (`_order`). Вижте
+ * `src/blocks/CategoryStrip.ts` защо: докато блокът държеше собствени
+ * връзки, отметката не се четеше никъде и двете се разминаваха мълчаливо.
+ *
+ * Няма филтър по брой продукти, по икона или по каквото и да било друго —
+ * собственикът решава от админа кое е в лентата.
+ */
+export const CategoryStripBlock = async () => {
+  const categories = await getStripCategories()
   if (!categories.length) return null
 
   return (

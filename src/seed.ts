@@ -127,7 +127,8 @@ for (const [i, [title, slug]] of CATEGORY_DEFS.entries()) {
   const icon = await upload(title.slice(0, 12), title, 160, 160, '#f1f3f5', '#0f172a')
   const doc = await payload.create({
     collection: 'categories',
-    data: { title, slug, icon, description: title },
+    // Отметката е това, което пълни лентата на началната — блокът няма списък.
+    data: { title, slug, icon, description: title, showInStrip: true },
   })
   categoryIds[slug] = doc.id
 }
@@ -259,8 +260,12 @@ await payload.create({
         ],
       },
       {
+        /*
+          Без списък: лентата чете категориите с отметката „Показване в
+          лентата с икони" (виж `src/blocks/CategoryStrip.ts`). Самите
+          категории я получават по-горе, при създаването им.
+        */
         blockType: 'categoryStrip',
-        categories: CATEGORY_DEFS.map(([, slug]) => categoryIds[slug]),
       },
       {
         blockType: 'productCarousel',
