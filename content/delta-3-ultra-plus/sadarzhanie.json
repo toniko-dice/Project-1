@@ -1,0 +1,316 @@
+{
+  "_bележка": "Съдържание за внасяне. Пуска се с: npm run import:product delta-3-ultra-plus. Снимките са от dice.bg (няма страница в eu.ecoflow.com) — свалят се по линковете в _svali_snimki.",
+  "_iztochnik": "dice.bg (описание и технически спецификации на продукта), прочетено на 28.09.2026. Няма страница в eu.ecoflow.com. Текстовете са преразказани на естествен български по фактите от dice; числата са само от dice.",
+  "produkt": {
+    "title": "EcoFlow DELTA 3 Ultra Plus",
+    "slug": "delta-3-ultra-plus",
+    "categorySlug": "delta-3-seriya",
+    "productType": "hero",
+    "tagline": "3072Wh капацитет / 3600W изход",
+    "badge": "none",
+    "price": 1999,
+    "compareAtPrice": 2399,
+    "externalUrl": "https://dice.bg/portativna-profesionalna-elektrocentrala-za-zarezhdane-na-ustrojstva-ecoflow-delta-3-ultra-plus-portable-power-station-3072wh-siv",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "76146",
+    "ean": "4895251650571",
+    "description": "Портативна домашна електроцентрала с 3072Wh капацитет, разширяема до 11 kWh, и 3600W изход (7200W пик, до 4600W с X-Boost). Зареждане от 0 до 80% за 89 минути от контакт, до 3400W от зарядна станция за електромобил, 1600W соларен вход. LFP батерия с 4000 цикъла, превключване за 10 ms със Smart Home Panel, вградени колела и сгъваема дръжка.",
+    "highlights": [
+      {
+        "title": "3072Wh, разширяем до 11 kWh",
+        "text": "С допълнителни батерии, умни генератори и Smart Home Panel."
+      },
+      {
+        "title": "3600W изход, 7200W пик",
+        "text": "До 4600W с X-Boost; две станции през Smart Home Panel — 8000W."
+      },
+      {
+        "title": "0–80% за 89 минути",
+        "text": "От контакт с X-Stream; комбинирано до 3960W — за 48 минути."
+      },
+      {
+        "title": "Зареждане от станция за електромобил",
+        "text": "До 3400W, в движение."
+      },
+      {
+        "title": "1600W соларен вход",
+        "text": "Пълен заряд за 101 минути; 11–150V, съвместим с 90% от панелите с MC4."
+      },
+      {
+        "title": "LFP батерия, 4000 цикъла",
+        "text": "До 80% от капацитета след 4000 цикъла."
+      },
+      {
+        "title": "Превключване за 10 ms",
+        "text": "Със Smart Home Panel — захранване на дома без прекъсване."
+      }
+    ],
+    "metaTitle": "EcoFlow DELTA 3 Ultra Plus 3072Wh — домашна електроцентрала 3600W, до 11 kWh",
+    "metaDescription": "3072Wh, 3600W изход (7200W пик), разширяване до 11 kWh, 0–80% за 89 минути, 1600W соларен вход, зареждане от EV станция, LFP с 4000 цикъла. Официален дистрибутор за България."
+  },
+  "galeriya": [
+    {
+      "file": "4895251650571-1_1.webp",
+      "alt": "EcoFlow DELTA 3 Ultra Plus — изглед отпред"
+    },
+    {
+      "file": "4895251650571-2_1.webp",
+      "alt": "EcoFlow DELTA 3 Ultra Plus — отпред, под ъгъл"
+    },
+    {
+      "file": "4895251650571-3_1.webp",
+      "alt": "EcoFlow DELTA 3 Ultra Plus — предна страна, контакти"
+    },
+    {
+      "file": "4895251650571-4_1.webp",
+      "alt": "EcoFlow DELTA 3 Ultra Plus — задна страна"
+    },
+    {
+      "file": "4895251650571-5_1.webp",
+      "alt": "EcoFlow DELTA 3 Ultra Plus — входове"
+    },
+    {
+      "file": "4895251650571-6_1.webp",
+      "alt": "EcoFlow DELTA 3 Ultra Plus — странично, колела"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "keySpecStrip",
+      "anchorLabel": "Преглед",
+      "items": [
+        {
+          "value": "3072Wh",
+          "label": "капацитет"
+        },
+        {
+          "value": "3600W",
+          "label": "номинален изход"
+        },
+        {
+          "value": "7200W",
+          "label": "пикова мощност"
+        },
+        {
+          "value": "4600W",
+          "label": "с X-Boost"
+        },
+        {
+          "value": "до 11 kWh",
+          "label": "с допълнителни батерии"
+        },
+        {
+          "value": "89 мин",
+          "label": "0–80% от контакта"
+        },
+        {
+          "value": "1600W",
+          "label": "соларен вход"
+        },
+        {
+          "value": "10 ms",
+          "label": "превключване със Smart Home Panel"
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "theme": "light",
+      "layout": "stacked",
+      "anchorLabel": "За дома",
+      "heading": "Домашна електроцентрала с 3 kWh, разширяема до 11 kWh",
+      "body": "DELTA 3 Ultra Plus е първата портативна домашна електроцентрала с резервно захранване на дома, интелигентно управление на енергията и по-ниски сметки за ток. Свързва се директно към домашната инсталация през Smart Home Panel (не е включен в комплекта). От захранване на отделен уред до спиране на тока за дни — с допълнителни батерии, умни генератори и Smart Home Panel капацитетът стига до 11 kWh.",
+      "image": "4895251650571-7_1.webp"
+    },
+    {
+      "blockType": "featureSection",
+      "theme": "light",
+      "layout": "image-right",
+      "anchorLabel": "Мощност",
+      "heading": "3600W — захранва 99,99% от уредите",
+      "body": "Водещ в класа си изход от 3600W (7200W пик) — сушилни, климатици и всяка техника с голяма мощност. С X-Boost захранва уреди до 4600W. Нужна ви е още мощност? Две станции през Smart Home Panel дават 8000W — у дома, на открито или на обекта.",
+      "image": "4895251650571-9_1.webp"
+    },
+    {
+      "blockType": "featureSection",
+      "theme": "light",
+      "layout": "image-left",
+      "anchorLabel": "Зареждане",
+      "heading": "6 начина за зареждане — от 0 до 80% за 89 минути",
+      "body": "Технологията X-Stream е бърза и безопасна: от контакт до 80% за 89 минути, а системата за управление на батерията пази клетките. За първи път портативна електроцентрала се зарежда и от хилядите станции за електромобили — до 3400W, в движение. Комбинирано зареждане до 3960W — за 48 минути. От слънце — 1600W вход, пълен заряд за 101 минути, широк диапазон 11–150V, съвместим с 90% от соларните панели с MC4 конектори, с интелигентно MPPT проследяване.",
+      "image": "4895251650571-8_1.webp"
+    },
+    {
+      "blockType": "featureSection",
+      "theme": "light",
+      "layout": "stacked",
+      "anchorLabel": "Умен дом",
+      "heading": "Smart Home Panel и превключване за 10 ms",
+      "body": "Smart Home Panel (не е включен в комплекта) е сърцето на екосистемата: свързва до две станции DELTA 3 Ultra Plus с до 10 домашни вериги. При спиране на тока превключва за 10 ms, а приложението EcoFlow ви държи в течение и ви оставя да избирате кои уреди са с предимство. Настройки за нива на зареждане и разреждане, скорост на зареждане от контакт, управление на умния генератор — всичко от телефона.",
+      "image": "4895251650571-10_1.webp"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow DELTA 3 Ultra Plus",
+          "qty": 1,
+          "image": "4895251650571-1_1.webp",
+          "imageAlt": "EcoFlow DELTA 3 Ultra Plus"
+        },
+        {
+          "name": "Захранващ кабел за контакт",
+          "qty": 1,
+          "image": "kutiya-kabel.webp",
+          "imageAlt": "Захранващ кабел за контакт"
+        },
+        {
+          "name": "Ръководство за употреба",
+          "qty": 1,
+          "image": "kutiya-rakovodstvo.webp",
+          "imageAlt": "Ръководство за употреба"
+        }
+      ],
+      "_iztochnik": "Списъкът „В комплекта“ от dice.bg."
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Общи",
+      "rows": [
+        {
+          "label": "Цвят",
+          "value": "сив"
+        },
+        {
+          "label": "Капацитет",
+          "value": "3072 Wh (51,2V, 60Ah)"
+        },
+        {
+          "label": "Разширяване",
+          "value": "до 11 kWh с допълнителни батерии"
+        },
+        {
+          "label": "Размери",
+          "value": "613,1 × 327,7 × 395 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "33,7 кг"
+        },
+        {
+          "label": "Тип батерия",
+          "value": "LFP"
+        },
+        {
+          "label": "Цикли на батерията",
+          "value": "4000 до 80% капацитет"
+        },
+        {
+          "label": "Свързаност",
+          "value": "Wi-Fi, Bluetooth"
+        },
+        {
+          "label": "Защити",
+          "value": "BMS, от свръхнапрежение, претоварване, прегряване, късо съединение, ниска температура, ниско напрежение"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Изходи",
+      "rows": [
+        {
+          "label": "Контакти (AC)",
+          "value": "4 × 230V/16A, общо 3600W (7200W пик)"
+        },
+        {
+          "label": "Мощност с X-Boost",
+          "value": "4600W"
+        },
+        {
+          "label": "USB-A",
+          "value": "1 × 5V/2,4A, 9V/2A, 12V/1,5A, макс. 18W"
+        },
+        {
+          "label": "USB-C",
+          "value": "1 × 5–20V 5A, макс. 140W (HID); 2 × 5–20V 2,25A, макс. 45W на порт"
+        },
+        {
+          "label": "Изход за запалка",
+          "value": "1 × 12,6V, 10A, макс. 126W"
+        },
+        {
+          "label": "Anderson",
+          "value": "1 × 12,6V, 30A"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Зареждане",
+      "rows": [
+        {
+          "label": "От контакт",
+          "value": "макс. 1800W — 0–80% за 89 мин"
+        },
+        {
+          "label": "Комбинирано (EV станция / Smart Home Panel / DELTA Pro 3)",
+          "value": "3960W — 48 мин"
+        },
+        {
+          "label": "От зарядна станция за електромобил",
+          "value": "до 3400W"
+        },
+        {
+          "label": "От соларни панели",
+          "value": "макс. 1600W; LPV 11–60V/20A — 101 мин"
+        },
+        {
+          "label": "От автомобил",
+          "value": "12,6V, 10A, общо 126W"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Условия и гаранция",
+      "rows": [
+        {
+          "label": "Гаранция",
+          "value": "5 години"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-1_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-2_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-3_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-4_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-5_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-6_1.webp"
+    ],
+    "sekcii": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-7_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-8_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-9_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-10_1.webp"
+    ],
+    "_bележка": "Снимките са от dice.bg, webp. kutiya-*.webp са в Медия."
+  },
+  "_prevod_nadpisi": "няма — снимките са без надписи",
+  "_neyasni": [
+    "НЯМА официална страница в eu.ecoflow.com — всичко е от dice.bg. Спецификациите да се сверят с партньорския портал преди публикуване; съмнителни данни от dice: „AC Charging Input: 100-120V~15A 1800W“ (американски стандарт — за ЕС вероятно 230V), соларният вход „1600W max. and LPV 11-60V/20A“ (непълно — липсва HPV диапазонът; в текста се споменава 11–150V), „1 x USB-A“.",
+    "Гаранция 5 години — по стандарта на EcoFlow за електроцентралите; dice не я посочват. Да се провери.",
+    "Страницата е по-кратка от останалите (5 секции + кутия + спецификации), защото има само 4 лайфстайл снимки от dice. Ако EcoFlow пуснат EU страница, ще се преработи по нея.",
+    "Категория: delta-3-seriya (DELTA 3 Ultra Plus е от DELTA 3 серията)."
+  ]
+}
