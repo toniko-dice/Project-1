@@ -40,6 +40,7 @@ import {
   productFolders,
   revalidateServer,
 } from './import-product-core'
+import { translationQueueSummary, updateTranslationQueue } from './import-prevod'
 
 /* ─────────── аргументи ─────────── */
 
@@ -248,6 +249,15 @@ if (dryRun) {
   console.log(await revalidateServer())
 } else {
   console.log('Нищо не е публикувано — черновите чакат преглед в админа.')
+}
+
+/*
+  Папката „за превод" — след свалянето, защото чакащите се копират от
+  свалените оригинали. Последният ред на обобщението: това е следващата
+  работа на собственика.
+*/
+for (const ред of translationQueueSummary(await updateTranslationQueue({ dryRun }), dryRun)) {
+  console.log(ред)
 }
 console.log('')
 

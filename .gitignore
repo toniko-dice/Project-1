@@ -67,3 +67,5 @@ content/snimki/*
 !content/snimki/.gitkeep
 content/_originali/*
 !content/_originali/.gitkeep
+# Чакащите превод и списъкът им — пресмятат се наново при всеки внос.
+content/za-prevod/

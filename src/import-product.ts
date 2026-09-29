@@ -25,6 +25,7 @@ import {
   productFolders,
   revalidateServer,
 } from './import-product-core'
+import { translationQueueSummary, updateTranslationQueue } from './import-prevod'
 
 const die = (message: string): never => {
   console.error(`\n✗ ${message}\n`)
@@ -114,6 +115,11 @@ if (result.published) {
 } else {
   console.log('Продуктът е ЧЕРНОВА и още не се вижда на сайта.')
   console.log('Отворете го в админа, прегледайте го и натиснете „Публикувай".')
+}
+
+// Пресмята се от ВСИЧКИ продукти — иначе списъкът би изгубил чакащите на другите.
+for (const ред of translationQueueSummary(await updateTranslationQueue(), false)) {
+  console.log(ред)
 }
 console.log('')
 

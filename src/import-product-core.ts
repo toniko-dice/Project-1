@@ -171,7 +171,7 @@ const MIME: Record<string, string> = {
  *
  * Затова основата се подравнява с това, което Payload реално записва.
  */
-const bareStem = (file: string): string =>
+export const bareStem = (file: string): string =>
   path.basename(file, path.extname(file)).replace(/\.+$/, '')
 
 /** Номерът, с който се пълнят полетата при проверка — нищо не се записва. */
