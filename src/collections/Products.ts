@@ -1,4 +1,5 @@
 import type { CollectionConfig } from 'payload'
+import { AVAILABILITY_OPTIONS } from '../lib/availability'
 import { cleanSlug } from '../lib/slug'
 import { productBlocks } from '../blocks/product'
 import { expireEverything, revalidateProduct, revalidateProductDelete } from '../lib/revalidate'
@@ -414,11 +415,11 @@ export const Products: CollectionConfig = {
               type: 'select',
               label: 'Наличност',
               defaultValue: 'in-stock',
-              options: [
-                { label: 'В наличност', value: 'in-stock' },
-                { label: 'По заявка', value: 'preorder' },
-                { label: 'Изчерпан', value: 'out-of-stock' },
-              ],
+              options: AVAILABILITY_OPTIONS,
+              admin: {
+                description:
+                  '„По заявка" — бутонът става „Заяви в dice.bg" (същият линк), под цената излиза ред, че може да се заяви. „Изчерпан" — бутонът е неактивен.',
+              },
             },
           ],
         },

@@ -6,13 +6,8 @@ import { RenderProductSections } from '@/components/blocks/product'
 import { ProductAnchorNav, type Anchor } from '@/components/ProductAnchorNav'
 import { ProductGallery, type GalleryImage } from '@/components/ProductGallery'
 import { uniqueAnchor } from '@/lib/anchors'
-import {
-  AVAILABILITY_LABELS,
-  BADGE_LABELS,
-  discountPercent,
-  formatBgn,
-  formatEur,
-} from '@/lib/format'
+import { availabilityOf } from '@/lib/availability'
+import { BADGE_LABELS, discountPercent, formatBgn, formatEur } from '@/lib/format'
 import { mediaAlt, mediaUrl } from '@/lib/media'
 import {
   getCategoryTree,
@@ -52,13 +47,6 @@ export const generateMetadata = async ({ params }: Args): Promise<Metadata> => {
     alternates: { canonical: new URL(productPath(product), SITE_URL).toString() },
     openGraph: image ? { images: [{ url: image }] } : undefined,
   }
-}
-
-/** Съответствие между полето „Наличност" и речника на Schema.org. */
-const SCHEMA_AVAILABILITY: Record<string, string> = {
-  'in-stock': 'https://schema.org/InStock',
-  preorder: 'https://schema.org/PreOrder',
-  'out-of-stock': 'https://schema.org/OutOfStock',
 }
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
@@ -160,7 +148,14 @@ export default async function ProductPage({ params }: Args) {
     .filter((img) => img.url)
 
   const discount = discountPercent(product.price, product.compareAtPrice)
+  const availability = availabilityOf(product.availability)
   const soldOut = product.availability === 'out-of-stock'
+  /*
+    „По заявка" води към СЪЩИЯ адрес в dice.bg, със същия бутон — само
+    надписът се сменя. „Купи сега" на продукт, който не е наличен, би
+    обещал нещо, което магазинът няма.
+  */
+  const onRequest = product.availability === 'on-request'
   const highlights = product.highlights ?? []
 
   /*
@@ -188,7 +183,7 @@ export default async function ProductPage({ params }: Args) {
       '@type': 'Offer',
       price: product.price,
       priceCurrency: 'EUR',
-      availability: SCHEMA_AVAILABILITY[product.availability ?? 'in-stock'],
+      availability: availability.schema,
       // Покупката се извършва във външния магазин — това е верният адрес.
       url: product.externalUrl,
     },
@@ -247,7 +242,7 @@ export default async function ProductPage({ params }: Args) {
           ) : null}
 
           <p className="text-sm text-ink-muted">
-            {AVAILABILITY_LABELS[product.availability ?? 'in-stock']}
+            {availability.line}
           </p>
 
           {/* Продукт без акценти не оставя празно място — блокът изчезва изцяло. */}
@@ -274,7 +269,7 @@ export default async function ProductPage({ params }: Args) {
               rel="noopener noreferrer"
               className="inline-flex min-h-12 w-full cursor-pointer items-center justify-center rounded-md bg-brand px-8 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand-dark sm:w-auto"
             >
-              {product.ctaLabel ?? 'Купи сега'}
+              {onRequest ? 'Заяви в dice.bg' : (product.ctaLabel ?? 'Купи сега')}
             </Link>
           )}
 

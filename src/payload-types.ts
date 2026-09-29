@@ -632,7 +632,10 @@ export interface Product {
    */
   externalUrl: string;
   ctaLabel?: string | null;
-  availability?: ('in-stock' | 'preorder' | 'out-of-stock') | null;
+  /**
+   * „По заявка" — бутонът става „Заяви в dice.bg" (същият линк), под цената излиза ред, че може да се заяви. „Изчерпан" — бутонът е неактивен.
+   */
+  availability?: ('in-stock' | 'on-request' | 'out-of-stock') | null;
   image: number | Media;
   gallery?:
     | {

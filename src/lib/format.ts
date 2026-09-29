@@ -29,9 +29,3 @@ export const BADGE_LABELS: Record<string, string> = {
   bestseller: 'БЕСТСЕЛЪР',
   limited: 'ОГРАНИЧЕНА НАЛИЧНОСТ',
 }
-
-export const AVAILABILITY_LABELS: Record<string, string> = {
-  'in-stock': 'В наличност',
-  preorder: 'По заявка',
-  'out-of-stock': 'Изчерпан',
-}

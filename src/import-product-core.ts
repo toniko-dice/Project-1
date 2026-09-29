@@ -36,6 +36,7 @@ import fs from 'fs/promises'
 import path from 'path'
 import type { Payload } from 'payload'
 import sharp from 'sharp'
+import { AVAILABILITY_VALUES, isAvailability } from './lib/availability'
 
 /* ─────────── видове ─────────── */
 
@@ -391,6 +392,23 @@ export const importProduct = async (
     throw new ImportError('В sadarzhanie.json липсва produkt.slug.')
   }
 
+  /*
+    Непозната наличност спира продукта, преди да е записано каквото и да е.
+
+    Payload не я спира сам: новият продукт се записва като ЧЕРНОВА, а
+    черновата минава без проверка на полетата. Стойността стига до базата,
+    сайтът не я познава и показва продукта като „в наличност" — точно
+    обратното на това, което JSON-ът казва. Затова и при `--dry-run`.
+  */
+  const availability = content.produkt.availability
+  if (availability !== undefined && !isAvailability(availability)) {
+    throw new ImportError(
+      `Непозната наличност „${String(availability)}" в produkt.availability.
+` +
+        `  Позволени: ${AVAILABILITY_VALUES.join(', ')}`,
+    )
+  }
+
   /* ─────────── изображения ─────────── */
 
   /*
@@ -502,6 +520,13 @@ export const importProduct = async (
 
   let downloaded = 0
   const failedDownloads: string[] = []
+  /*
+    При проверка нищо не се сваля, но файлът ЩЕ го има. Без този списък
+    качването не го намира никъде и продукт, чиито снимки всички тепърва се
+    свалят (всеки нов продукт), излиза с „нито една снимка от галерията" —
+    проверката казва „грешка" за внос, който би минал.
+  */
+  const щеСеСвалят = new Set<string>()
 
   if (адреси.size && !options.noDownload) {
     const задачи: (() => Promise<void>)[] = []
@@ -515,6 +540,7 @@ export const importProduct = async (
         const dest = path.join(ORIGINALI_DIR, file)
         try {
           if (dryRun) {
+            щеСеСвалят.add(file)
             log(`  ↓ би се свалил: ${file}`)
           } else {
             await downloadFile(url, dest)
@@ -810,6 +836,13 @@ export const importProduct = async (
         sources.set(file, 'Медия')
         uploadedCache.set(key, match.id)
         return match.id
+      }
+      // Само при проверка: истинският внос вече го е свалил и е намерен горе.
+      if (щеСеСвалят.has(file)) {
+        uploadedNew += 1
+        sources.set(file, 'ще се свали')
+        uploadedCache.set(key, DRY_ID)
+        return DRY_ID
       }
       // Една липсваща снимка не бива да спира целия внос.
       missingFiles.push(key)

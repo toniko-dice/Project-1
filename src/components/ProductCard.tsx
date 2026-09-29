@@ -3,7 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import type { Product } from '@/payload-types'
-import { AVAILABILITY_LABELS, formatBgn, formatEur } from '@/lib/format'
+import { availabilityOf } from '@/lib/availability'
+import { formatBgn, formatEur } from '@/lib/format'
 import { productCardData } from '@/lib/media'
 import { productPath } from '@/lib/urls'
 import { ImagePlaceholder } from './ImagePlaceholder'
@@ -56,7 +57,8 @@ export const ProductCard = ({
 }) => {
   // Всичко идва от продукта през общия помощник — същото като в менюто.
   const data = productCardData(product)
-  const soldOut = product.availability === 'out-of-stock'
+  // „Изчерпан" и „По заявка" се казват на картата; „в наличност" — не.
+  const availabilityNote = availabilityOf(product.availability).card
 
   const rating = typeof product.rating === 'number' ? product.rating : null
   const reviews = typeof product.reviewCount === 'number' ? product.reviewCount : null
@@ -111,10 +113,8 @@ export const ProductCard = ({
             </div>
           ) : null}
 
-          {soldOut ? (
-            <p className="mt-2 text-xs font-medium text-ink-muted">
-              {AVAILABILITY_LABELS[product.availability ?? 'in-stock']}
-            </p>
+          {availabilityNote ? (
+            <p className="mt-2 text-xs font-medium text-ink-muted">{availabilityNote}</p>
           ) : null}
         </div>
       </div>
