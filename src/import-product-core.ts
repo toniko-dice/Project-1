@@ -266,8 +266,10 @@ const neededFiles = (content: Content): Set<string> => {
     if (Array.isArray(node)) return node.forEach(обходи)
     if (!node || typeof node !== 'object') return
     for (const [key, value] of Object.entries(node as Card)) {
-      if ((key === 'image' || key === 'icon') && typeof value === 'string') files.add(value)
-      else обходи(value)
+      if (key === 'image' || key === 'icon') {
+        // Празно име е „без снимка" (секция само с текст), не липсващ файл.
+        if (typeof value === 'string' && value.trim()) files.add(value)
+      } else обходи(value)
     }
   }
   обходи(content.sekcii ?? [])
@@ -498,8 +500,20 @@ export const importProduct = async (
 
   /** Пътят до файла и откъде е, или `null`, ако го няма никъде локално. */
   const намериЛокално = (file: string): { path: string; source: FileSource } | null => {
+    const stem = bareStem(file)
+
+    /*
+      Преведеният печели ВИНАГИ — и по основа, не само по цяло име.
+
+      Преди търсенето минаваше първо по цяло име през трите папки и чак
+      после по основа. Превод, записан като `100_rigid_2.jpg`, губеше от
+      оригинала `100_rigid_2.png` в `_originali/` (точно име) и вносът го
+      подминаваше мълчаливо — 30 преведени снимки не стигнаха до сайта.
+    */
+    const преведен = преведени.поИме.get(file) ?? преведени.поОснова.get(stem)
+    if (преведен) return { path: преведен, source: 'snimki' }
+
     const редът: [Карти, FileSource][] = [
-      [преведени, 'snimki'],
       [вПапката, 'папка'],
       [оригинали, 'оригинали'],
     ]
@@ -507,7 +521,6 @@ export const importProduct = async (
       const точен = карти.поИме.get(file)
       if (точен) return { path: точен, source }
     }
-    const stem = bareStem(file)
     for (const [карти, source] of редът) {
       const близък = карти.поОснова.get(stem)
       if (близък) return { path: близък, source }
@@ -721,12 +734,16 @@ export const importProduct = async (
    * намираше записа по основа и качваше нов — подмяната се превръщаше в
    * дублиране. Проверено два пъти.
    *
-   * Така номерът, името и всички връзки към записа остават същите, а
+   * Така номерът и всички връзки към записа остават същите, а
    * съдържанието е новото.
    *
-   * Изисква новият файл да е в СЪЩИЯ формат като записания. Преведена
-   * снимка, записана в друг формат, би направила разширението лъжа —
-   * тогава подмяната се отказва и се изписва защо.
+   * Файлът се записва КАКТО Е — JPEG остава JPEG, без преобразуване.
+   * Ако преводът е в друг формат от записания (оригиналите от EcoFlow са
+   * WebP под име `.jpg` и в Медия стоят като `.webp`; преводът е истински
+   * JPEG), се сменя разширението: `PC_02.webp` → `PC_02.jpg`, същият
+   * запис, размерите се правят наново, а старите файлове се трият. Основата
+   * на името е същата, тъй че следващият внос намира записа по нея.
+   * Преди подмяната се отказваше и 14 преведени снимки не стигаха до сайта.
    */
   const подмениСъдържанието = async (
     doc: {
@@ -739,15 +756,29 @@ export const importProduct = async (
     file: string,
     alt: string,
   ): Promise<boolean> => {
-    const filename = doc.filename
-    if (!filename) return false
+    const стар = doc.filename
+    if (!стар) return false
 
-    if (path.extname(filename).toLowerCase() !== realExt) {
-      log(
-        `  ⚠ ${file}: преведената снимка е ${realExt.slice(1).toUpperCase()}, а в Медия стои ` +
-          `${filename} — запишете я в същия формат, за да я подменя`,
-      )
-      return false
+    // Основата остава; разширението следва съдържанието на новия файл.
+    const stemНаЗаписа = path.basename(стар, path.extname(стар))
+    const filename = `${stemНаЗаписа}${realExt}`
+
+    if (filename !== стар) {
+      // Новото име не бива да е на друг запис — иначе два записа биха делили файл.
+      const зает = await payload.find({
+        collection: 'media',
+        where: { filename: { equals: filename } },
+        limit: 1,
+        depth: 0,
+      })
+      if (зает.docs[0] && зает.docs[0].id !== doc.id) {
+        log(
+          `  ⚠ ${file}: преведената снимка е ${realExt.slice(1).toUpperCase()}, но името ` +
+            `${filename} е заето от запис № ${зает.docs[0].id} — не е подменена`,
+        )
+        return false
+      }
+      log(`  · ${file}: форматът се сменя — ${стар} → ${filename} (запис № ${doc.id})`)
     }
 
     const MEDIA_DIR = path.resolve(process.cwd(), 'media')
@@ -773,8 +804,7 @@ export const importProduct = async (
         if (format) pipeline = pipeline.toFormat(format, size.formatOptions?.options)
 
         const { data, info } = await pipeline.toBuffer({ resolveWithObject: true })
-        const stemНаФайла = path.basename(filename, path.extname(filename))
-        const име = `${stemНаФайла}-${info.width}x${info.height}.${info.format}`
+        const име = `${stemНаЗаписа}-${info.width}x${info.height}.${info.format}`
         await fs.writeFile(path.join(MEDIA_DIR, име), data)
         размери[size.name] = {
           filename: име,
@@ -797,6 +827,8 @@ export const importProduct = async (
       id: doc.id,
       data: {
         alt: alt || file,
+        filename,
+        mimeType: MIME[realExt],
         filesize: данни.length,
         width: мета.width,
         height: мета.height,
@@ -804,6 +836,21 @@ export const importProduct = async (
       } as never,
       depth: 0,
     })
+
+    /*
+      Старите файлове се трият чак СЛЕД записа: ако той падне, записът още
+      сочи тях и снимката на сайта не се чупи. Трие се само каквото вече
+      не е на записа — оригинал с друго разширение и размери с други
+      пропорции.
+    */
+    const пазени = new Set<string>([
+      filename,
+      ...Object.values(размери).map((р) => (р as { filename: string }).filename),
+    ])
+    const стари = [стар, ...Object.values(doc.sizes ?? {}).map((s) => s?.filename)]
+    for (const f of стари) {
+      if (f && !пазени.has(f)) await fs.rm(path.join(MEDIA_DIR, f), { force: true })
+    }
 
     return true
   }
@@ -1052,6 +1099,15 @@ export const importProduct = async (
       if (key === 'productSlug' && typeof value === 'string') {
         const id = await productIdFor(value)
         if (id !== null) out.product = id
+        continue
+      }
+
+      /*
+        Празно име — секцията е без снимка (секция само с текст). Не е
+        липсващ файл: полето просто остава празно. Ако блокът изисква снимка,
+        това ще го каже проверката при публикуване.
+      */
+      if ((key === 'image' || key === 'icon') && typeof value === 'string' && !value.trim()) {
         continue
       }
 

@@ -49,6 +49,8 @@ export type TranslationQueueResult = {
   changed: string[]
   /** Снимки, на които всички надписи остават както са — няма какво да се превежда. */
   nothingToTranslate: string[]
+  /** Преведени в `content/snimki/`, но вносът още не ги е качил в Медия. */
+  notApplied: string[]
 }
 
 /** Карта на папка по пълно име и по основа — като при вноса. */
@@ -107,6 +109,24 @@ const редове = (value: unknown): string[] => {
 */
 const остава = (line: string) => /→\s*остава(т)?\s*$/.test(line.trim())
 
+/**
+ * Файловете в `media/` по основа на името — за да се види дали преводът е
+ * ВЕЧЕ в Медия. Размерите (`…-1200x1200.webp`) имат друга основа и не пречат.
+ */
+const медияПоОснова = async (): Promise<Map<string, string[]>> => {
+  const map = new Map<string, string[]>()
+  const dir = path.resolve(process.cwd(), 'media')
+  try {
+    for (const name of await fs.readdir(dir)) {
+      const stem = bareStem(name)
+      map.set(stem, [...(map.get(stem) ?? []), path.join(dir, name)])
+    }
+  } catch {
+    // Няма Медия — нищо не е качено.
+  }
+  return map
+}
+
 const еднакви = async (a: string, b: string): Promise<boolean> => {
   const [x, y] = await Promise.all([fs.readFile(a), fs.readFile(b)])
   return x.equals(y)
@@ -124,6 +144,21 @@ export const updateTranslationQueue = async ({
   const чакащи = new Map<string, Надписи & { source: string; also: string[] }>()
   const notFound: string[] = []
   const nothingToTranslate: string[] = []
+  const notApplied: string[] = []
+  const вМедия = await медияПоОснова()
+
+  /*
+    Преводът се брои САМО ако вносът го е ползвал — тоест файлът в Медия е
+    същият байт по байт. Иначе превод, който вносът е подминал (друго
+    разширение, спрян продукт), изчезваше оттук като готов, а на сайта
+    стоеше английската снимка — 44 такива на 29 септември 2026.
+  */
+  const качен = async (превод: string): Promise<boolean> => {
+    for (const файл of вМедия.get(bareStem(превод)) ?? []) {
+      if (await еднакви(файл, превод)) return true
+    }
+    return false
+  }
 
   for (const folder of await productFolders()) {
     let content: { produkt?: { title?: string }; _prevod_nadpisi?: unknown }
@@ -145,13 +180,19 @@ export const updateTranslationQueue = async ({
       if (file.startsWith('_')) continue
 
       /*
-        Преведено е, ако го има в `content/snimki/` ИЛИ в папката на
-        продукта. Второто е за вече направените продукти: собственикът
-        превеждаше направо в техните `sekcii/` (03_05_Garage.jpg на DELTA 3
-        Max е на български там). Затова източник за превод е САМО
-        `_originali/` — сваленото, което никой още не е пипал.
+        Преведено е, ако преводът от `content/snimki/` вече е в Медия, ИЛИ
+        файлът е в папката на продукта. Второто е за вече направените
+        продукти: собственикът превеждаше направо в техните `sekcii/`
+        (03_05_Garage.jpg на DELTA 3 Max е на български там). Затова
+        източник за превод е САМО `_originali/` — сваленото, което никой
+        още не е пипал.
       */
-      if (преведени.намери(file) || свояПапка.намери(file)) continue
+      if (свояПапка.намери(file)) continue
+      const превод = преведени.намери(file)
+      if (превод) {
+        if (await качен(превод)) continue
+        notApplied.push(`${folder}: ${path.basename(превод)}`)
+      }
 
       const lines = редове(value)
       if (lines.length && lines.every(остава)) {
@@ -218,11 +259,19 @@ export const updateTranslationQueue = async ({
   if (!dryRun) {
     await fs.writeFile(
       path.join(ZA_PREVOD_DIR, SPISAK),
-      списък([...чакащи.values()], notFound, changed, nothingToTranslate),
+      списък([...чакащи.values()], notFound, changed, nothingToTranslate, notApplied),
     )
   }
 
-  return { pending: чакащи.size, copied, removed, notFound, changed, nothingToTranslate }
+  return {
+    pending: чакащи.size,
+    copied,
+    removed,
+    notFound,
+    changed,
+    nothingToTranslate,
+    notApplied,
+  }
 }
 
 const списък = (
@@ -230,6 +279,7 @@ const списък = (
   notFound: string[],
   changed: string[],
   nothingToTranslate: string[],
+  notApplied: string[],
 ): string => {
   const out: string[] = [
     '# Снимки за превод',
@@ -258,6 +308,18 @@ const списък = (
       out.push('')
       out.push(...(з.lines.length ? з.lines.map((l) => `- ${l}`) : ['- (няма описани надписи)']))
     }
+  }
+
+  if (notApplied.length) {
+    out.push(
+      '',
+      '## Преведени, но още не са в Медия',
+      '',
+      'Преводът е в `content/snimki/`, но вносът не го е качил — вижте',
+      'предупрежденията в обобщението му. Затова оригиналът стои и тук.',
+      '',
+      ...notApplied.map((n) => `- ${n}`),
+    )
   }
 
   if (changed.length) {
@@ -306,6 +368,11 @@ export const translationQueueSummary = (r: TranslationQueueResult, dryRun: boole
       ? `За превод: ${r.pending} снимки (биха били в content/za-prevod/; ${r.copied} нови, ${r.removed} за махане)`
       : `За превод: ${r.pending} снимки в content/za-prevod/`,
   ]
+  if (r.notApplied.length) {
+    lines.unshift(
+      `  ⚠ ${r.notApplied.length} преведени в content/snimki/ още не са в Медия — остават за превод (списъкът е в content/za-prevod/spisak.md)`,
+    )
+  }
   if (r.changed.length) {
     lines.unshift(
       `  ⚠ в content/za-prevod/ има ${r.changed.length} променени файла (не са пипнати) — ако са преведени, преместете ги в content/snimki/: ${r.changed.join(', ')}`,

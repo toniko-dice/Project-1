@@ -97,6 +97,8 @@ const FeatureSectionBlock = ({
 
   // Секция само със снимка — главният банер в оригинала е точно такъв.
   const hasText = Boolean(block.heading || block.subheading || block.body || stats.length)
+  // Ни снимка, ни текст — нищо за показване.
+  if (!img && !hasText) return null
 
   const text = (
     <div className={full ? 'max-w-2xl' : stacked ? 'text-center' : ''}>
@@ -196,19 +198,22 @@ const FeatureSectionBlock = ({
     )
   }
 
-  if (full) {
+  /*
+    Снимка на цяла ширина без снимка няма какво да покаже — голямото поле
+    със слой отгоре би било празно място. Секцията пада на подредбата само
+    с текст по-долу.
+  */
+  if (full && img) {
     return (
       <Section id={id} className="py-6">
         <div className="container-site">
           <div className="relative overflow-hidden rounded-xl">
             <div className="relative aspect-[4/5] w-full sm:aspect-[16/9]">
-              {img ? (
-                <SectionImage
-                  image={img}
-                  sizes="100vw"
-                  className="absolute inset-0 size-full object-cover"
-                />
-              ) : null}
+              <SectionImage
+                image={img}
+                sizes="100vw"
+                className="absolute inset-0 size-full object-cover"
+              />
               <div className={`absolute inset-0 ${dark ? 'bg-black/50' : 'bg-white/20'}`} />
               <div
                 className={`absolute inset-0 flex flex-col justify-center p-6 sm:p-12 ${
@@ -219,6 +224,21 @@ const FeatureSectionBlock = ({
               </div>
             </div>
           </div>
+        </div>
+      </Section>
+    )
+  }
+
+  /*
+    Само текст — без колона за снимка. Иначе половината ширина остава
+    празна. Текстът е с ширината на четим ред, както в стекираната
+    подредба.
+  */
+  if (!img) {
+    return (
+      <Section id={id} className={dark ? 'bg-night py-12 text-white' : 'py-12'}>
+        <div className="container-site">
+          <div className="max-w-[56rem]">{text}</div>
         </div>
       </Section>
     )
@@ -242,14 +262,12 @@ const FeatureSectionBlock = ({
             снимка 2,24 губеше по 40% отстрани. Височината вече следва
             съдържанието; двете колони са центрирани вертикално.
           */}
-          {img ? (
-            <SectionImage
-              image={img}
-              // На широк екран колоната е половин контейнер: 1408 / 2 = 704px.
-              sizes="(max-width: 1024px) 100vw, 704px"
-              className="h-auto w-full rounded-xl"
-            />
-          ) : null}
+          <SectionImage
+            image={img}
+            // На широк екран колоната е половин контейнер: 1408 / 2 = 704px.
+            sizes="(max-width: 1024px) 100vw, 704px"
+            className="h-auto w-full rounded-xl"
+          />
         </div>
       </div>
     </Section>
