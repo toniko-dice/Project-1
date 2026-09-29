@@ -97,7 +97,12 @@ export const ProductCard = ({
 
         <div className="mt-auto pt-3">
           <p className="flex flex-wrap items-baseline gap-2">
-            <span className="tabular font-semibold">от {formatEur(product.price)}</span>
+            {/*
+              Без „от": всеки продукт е с една цена. Ако някога дойде продукт
+              с варианти на различни цени, „от" се връща като изрично поле на
+              продукта — не автоматично за всички.
+            */}
+            <span className="tabular font-semibold">{formatEur(product.price)}</span>
             {data.comparePrice ? (
               <s className="tabular text-sm text-ink-muted">{formatEur(data.comparePrice)}</s>
             ) : null}

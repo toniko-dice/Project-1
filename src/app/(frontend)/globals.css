@@ -49,9 +49,6 @@
   */
   --color-canvas: #f5f5f5;
 
-  /* Фонът на заместителя за липсваща снимка (ImagePlaceholder). */
-  --color-blank: #eeeeee;
-
   /* Състояния на навигацията */
   --color-nav-hover: #f0f0f0;
   --color-nav-active: #ececec;

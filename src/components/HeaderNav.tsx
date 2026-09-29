@@ -57,7 +57,7 @@ const Card = ({ card, large = false }: { card: MenuCard; large?: boolean }) => {
             className="object-contain p-3"
           />
         ) : (
-          <ImagePlaceholder className="absolute inset-0" compact />
+          <ImagePlaceholder className="absolute inset-0" />
         )}
 
         {card.ribbon ? (

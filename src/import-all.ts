@@ -5,6 +5,7 @@
  *              npm run import:all -- --dry-run
  *              npm run import:all -- --only river-3-plus,river-3-ups
  *              npm run import:all -- --no-download
+ *              npm run import:all -- --draft      (новите стават чернова)
  *
  * Минава през всяка папка в `content/`, която съдържа `sadarzhanie.json`,
  * по азбучен ред, и вика същото ядро като `import:product`. Папките без
@@ -32,7 +33,9 @@ import { createBackup } from './lib/backup'
 import {
   ImportError,
   type ImportResult,
+  actionLabel,
   checkDownloadNameConflicts,
+  isPublishedAction,
   importProduct,
   productFolders,
   revalidateServer,
@@ -43,6 +46,8 @@ import {
 const args = process.argv.slice(2)
 const dryRun = args.includes('--dry-run')
 const noDownload = args.includes('--no-download')
+// Новите продукти стават чернова вместо публикувани — когато първо трябва преглед.
+const draft = args.includes('--draft')
 
 const onlyArg = args.find((a) => a.startsWith('--only'))
 const onlyValue = onlyArg?.includes('=')
@@ -134,11 +139,12 @@ for (const [i, folder] of папки.entries()) {
     const резултат = await importProduct(payload, folder, {
       dryRun,
       noDownload,
+      draft,
       // Отместено навътре, за да личи кой ред на кой продукт е.
       log: (m) => console.log(`    ${m}`),
     })
     редове.push({ folder, резултат })
-    console.log(`    → ${резултат.action}`)
+    console.log(`    → ${actionLabel(резултат.action, dryRun)}`)
   } catch (err) {
     /*
       Спънка при един продукт не бива да отменя останалите единайсет.
@@ -159,7 +165,9 @@ const колона = (текст: string, ширина: number) =>
 const ш1 = Math.max(6, ...редове.map((r) => r.folder.length))
 const ш2 = Math.max(
   9,
-  ...редове.map((r) => (r.резултат ? r.резултат.action.length : (r.грешка?.length ?? 0) + 8)),
+  ...редове.map((r) =>
+    r.резултат ? actionLabel(r.резултат.action, dryRun).length : (r.грешка?.length ?? 0) + 8,
+  ),
 )
 
 console.log('─'.repeat(ш1 + ш2 + 20))
@@ -167,7 +175,9 @@ console.log(`${колона('ПРОДУКТ', ш1)}  ${колона('РЕЗУЛ�
 console.log('─'.repeat(ш1 + ш2 + 20))
 
 for (const ред of редове) {
-  const резултат = ред.резултат ? ред.резултат.action : `ГРЕШКА: ${ред.грешка}`
+  const резултат = ред.резултат
+    ? actionLabel(ред.резултат.action, dryRun)
+    : `ГРЕШКА: ${ред.грешка}`
   const липсващи = ред.резултат?.missingFiles ?? []
   console.log(
     `${колона(ред.folder, ш1)}  ${колона(резултат, ш2)}  ${
@@ -178,8 +188,8 @@ for (const ред of редове) {
 console.log('─'.repeat(ш1 + ш2 + 20))
 
 const успешни = редове.filter((r) => r.резултат)
-const публикувани = успешни.filter((r) => r.резултат!.action === 'обновен и публикуван').length
-const чернови = успешни.filter((r) => r.резултат!.action !== 'обновен и публикуван').length
+const публикувани = успешни.filter((r) => isPublishedAction(r.резултат!.action)).length
+const чернови = успешни.length - публикувани
 const грешки = редове.length - успешни.length
 const свалени = успешни.reduce((n, r) => n + r.резултат!.downloaded, 0)
 const несвалени = успешни.reduce((n, r) => n + r.резултат!.failedDownloads.length, 0)

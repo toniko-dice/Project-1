@@ -49,10 +49,31 @@ export class ImportError extends Error {
 }
 
 export type ImportAction =
+  | 'създаден и публикуван'
   | 'създаден като чернова'
+  | 'създаден като чернова — публикуването не мина проверките'
   | 'обновен и публикуван'
   | 'обновен (остава чернова)'
   | 'обновен, но само като чернова — публикуването не мина проверките'
+
+/** Действия, след които продуктът е на сайта. */
+export const isPublishedAction = (action: ImportAction): boolean =>
+  action === 'създаден и публикуван' || action === 'обновен и публикуван'
+
+/**
+ * Как се чете действието при `--dry-run` — в бъдеще време, защото нищо
+ * не е станало. Иначе проверката казва „създаден" за продукт, който не
+ * съществува, и собственикът го търси в админа.
+ */
+export const actionLabel = (action: ImportAction, dryRun: boolean): string =>
+  !dryRun
+    ? action
+    : (({
+        'създаден и публикуван': 'ще създаде и публикува',
+        'създаден като чернова': 'ще създаде като чернова',
+        'обновен и публикуван': 'ще обнови и публикува',
+        'обновен (остава чернова)': 'ще обнови (остава чернова)',
+      }) as Partial<Record<ImportAction, string>>)[action] ?? action
 
 export type ImportResult = {
   slug: string
@@ -86,6 +107,8 @@ export type ImportOptions = {
   dryRun?: boolean
   /** Изключва свалянето: ползват се само файловете на диска и Медия. */
   noDownload?: boolean
+  /** Новият продукт става чернова, а не публикуван — `--draft`. */
+  draft?: boolean
   /** Къде отиват редовете за напредъка. Груповият внос ги отмества навътре. */
   log?: (message: string) => void
 }
@@ -1169,16 +1192,19 @@ export const importProduct = async (
   })
 
   /*
-    Статусът се пази.
+    Статусът.
 
-    Нов продукт става чернова — собственикът го преглежда, преди да излезе.
-    Вече публикуван продукт се обновява и публикува направо: при сто
-    продукта „Публикувай" след всеки внос не е работа за човек. Продукт,
-    който е чернова, остава чернова.
+    Нов продукт излиза ПУБЛИКУВАН. Собственикът внася по петнайсет продукта
+    на партида и „Публикувай" след всеки е стъпка, която никой не иска.
+    С `--draft` новият става чернова — когато първо трябва преглед.
+
+    Вече публикуван продукт се обновява и публикува направо. Продукт, който
+    е чернова, остава чернова: някой го е върнал в чернова нарочно и вносът
+    не бива да го извади на сайта зад гърба му.
 
     Публикуването минава през проверките на схемата (задължителни снимки,
-    лимити). Ако не мине, вносът записва чернова и изписва защо — старата
-    публикувана версия остава на сайта.
+    лимити). Ако не мине, вносът записва чернова и изписва защо — при
+    обновяване старата публикувана версия остава на сайта.
   */
   const existing = existingProduct.docs[0]
   const wasPublished = existing?._status === 'published'
@@ -1189,7 +1215,7 @@ export const importProduct = async (
     slug: content.produkt.slug as string,
     title: (content.produkt.title as string) ?? (content.produkt.slug as string),
     action,
-    published: action === 'обновен и публикуван' && !dryRun,
+    published: isPublishedAction(action) && !dryRun,
     uploadedNew,
     reusedExisting,
     gallery: galleryIds.length,
@@ -1221,7 +1247,9 @@ export const importProduct = async (
     for (const [file, source] of sources) log(`  ${source.padEnd(12)} ${file}`)
 
     action = !existing
-      ? 'създаден като чернова'
+      ? options.draft
+        ? 'създаден като чернова'
+        : 'създаден и публикуван'
       : wasPublished
         ? 'обновен и публикуван'
         : 'обновен (остава чернова)'
@@ -1270,13 +1298,36 @@ export const importProduct = async (
     })
     action = 'обновен (остава чернова)'
   } else {
-    const created = await payload.create({
-      collection: 'products',
-      data: { ...data, _status: 'draft' },
-      draft: true,
-      depth: 0,
-    })
-    action = 'създаден като чернова'
+    const createDraft = () =>
+      payload.create({
+        collection: 'products',
+        data: { ...data, _status: 'draft' },
+        draft: true,
+        depth: 0,
+      })
+
+    let created
+    if (options.draft) {
+      created = await createDraft()
+      action = 'създаден като чернова'
+    } else {
+      try {
+        created = await payload.create({
+          collection: 'products',
+          // `data` е сглобен от JSON-а — задължителните полета проверява схемата.
+          data: { ...data, _status: 'published' } as never,
+          draft: false,
+          depth: 0,
+        })
+        action = 'създаден и публикуван'
+      } catch (e) {
+        // Проверката пада преди запис — нищо не е създадено, остава чернова.
+        publishError = e instanceof Error ? e.message : String(e)
+        created = await createDraft()
+        action = 'създаден като чернова — публикуването не мина проверките'
+      }
+    }
+    const published = action === 'създаден и публикуван'
 
     /*
       Колоната „този модел" в сравнителната таблица сочи самия продукт, а
@@ -1289,11 +1340,16 @@ export const importProduct = async (
       productIdCache.delete(ownSlug)
       unlinkedProducts.splice(unlinkedProducts.indexOf(ownSlug), 1)
       const relinked = (await prepareBlock(content.sekcii ?? [])) as unknown[]
+      /*
+        Публикуваният се записва като публикуван. Запис с `draft: true`
+        върху него остава само във версиите — на сайта колоната не би била
+        вързана, а в админа продуктът би бил с „непубликувани промени".
+      */
       await payload.update({
         collection: 'products',
         id: created.id,
-        data: { sections: relinked } as never,
-        draft: true,
+        data: { sections: relinked, ...(published ? { _status: 'published' } : {}) } as never,
+        draft: !published,
         depth: 0,
       })
     }

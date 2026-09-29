@@ -5,7 +5,6 @@ import Link from 'next/link'
 import type { Award, Page, Testimonial } from '@/payload-types'
 import { mediaAlt, mediaUrl } from '@/lib/media'
 import { Icon } from '../Icon'
-import { ImagePlaceholder } from '../ImagePlaceholder'
 import { resolvedRelations } from '@/lib/relations'
 
 type Layout = NonNullable<Page['layout']>
@@ -55,6 +54,7 @@ export const TestimonialsBlockRenderer = ({ block }: { block: BlockOf<'testimoni
               key={t.id}
               className="w-[280px] overflow-hidden rounded-lg border border-line bg-surface lg:w-auto"
             >
+              {/* Отзив без снимка е само текст — без празно място отгоре. */}
               {img ? (
                 <div className="relative aspect-[4/3] w-full">
                   <Image
@@ -65,9 +65,7 @@ export const TestimonialsBlockRenderer = ({ block }: { block: BlockOf<'testimoni
                     className="object-cover"
                   />
                 </div>
-              ) : (
-                <ImagePlaceholder className="aspect-[4/3] w-full" />
-              )}
+              ) : null}
 
               <div className="p-4">
                 {t.rating ? (
@@ -126,9 +124,9 @@ export const LogoWallBlock = ({ block }: { block: BlockOf<'logoWall'> }) => {
         {awards.map((a) => {
           const logo = mediaUrl(a.logo, 'thumbnail')
           /*
-            Отличие без лого преди изчезваше от реда изцяло. Сега се вижда
-            със заместител — липсващото лого е нещо, което собственикът
-            трябва да забележи, а не да гадае защо реда е по-къс.
+            Отличие без лого не изчезва от реда — излиза името му като текст,
+            на височината на логата. Заместител („Няма снимка") посетителят
+            не вижда; липсващото лого личи в админа.
           */
           const img = logo ? (
             <Image
@@ -139,7 +137,9 @@ export const LogoWallBlock = ({ block }: { block: BlockOf<'logoWall'> }) => {
               className="h-10 w-auto object-contain opacity-70 transition-opacity duration-200 hover:opacity-100"
             />
           ) : (
-            <ImagePlaceholder className="h-10 w-28 rounded" compact />
+            <span className="flex h-10 items-center text-sm font-medium text-ink-muted">
+              {a.name}
+            </span>
           )
           return (
             <li key={a.id}>

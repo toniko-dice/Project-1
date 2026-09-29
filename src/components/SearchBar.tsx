@@ -163,7 +163,7 @@ export const SearchBar = ({ onClose }: { onClose: () => void }) => {
                               className="object-contain"
                             />
                           ) : (
-                            <ImagePlaceholder className="absolute inset-0 rounded" compact />
+                            <ImagePlaceholder className="absolute inset-0 rounded" />
                           )}
                         </span>
 

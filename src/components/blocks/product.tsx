@@ -8,7 +8,6 @@ import { SectionImage } from '../SectionImage'
 import { ProductCard } from '../ProductCard'
 import { BoxTabs } from './BoxTabs'
 import { ProductTabs, type ShowcaseTab, type TabsLayout } from './ProductTabs'
-import { ImagePlaceholder } from '../ImagePlaceholder'
 import { resolvedRelations } from '@/lib/relations'
 
 type Sections = NonNullable<Product['sections']>
@@ -445,6 +444,14 @@ const ComparisonTableBlock = ({
     }
   })
 
+  /*
+    Колона без снимка не показва нищо на мястото ѝ — заместителят е за
+    админа, не за посетителя. Мястото обаче се пази, ако ДРУГА колона има
+    снимка: иначе имената застават на различни нива. Ако никоя няма —
+    редът със снимки изобщо не се рендерира.
+  */
+  const anyImage = cols.some((c) => c.imageUrl)
+
   return (
     <Section id={id} className="py-12 lg:py-16">
       <div className="container-site">
@@ -483,21 +490,21 @@ const ComparisonTableBlock = ({
                       декодираната снимка и клетката се срутва, ако тя
                       закъснее.
                     */}
-                    <span className="mb-4 flex h-44 items-end justify-center">
-                      {c.imageUrl ? (
-                        <Image
-                          src={c.imageUrl}
-                          alt={c.imageAlt}
-                          width={360}
-                          height={360}
-                          sizes="240px"
-                          loading="lazy"
-                          className="h-44 w-auto max-w-full object-contain"
-                        />
-                      ) : (
-                        <ImagePlaceholder className="size-44 rounded-lg" />
-                      )}
-                    </span>
+                    {anyImage ? (
+                      <span className="mb-4 flex h-44 items-end justify-center">
+                        {c.imageUrl ? (
+                          <Image
+                            src={c.imageUrl}
+                            alt={c.imageAlt}
+                            width={360}
+                            height={360}
+                            sizes="240px"
+                            loading="lazy"
+                            className="h-44 w-auto max-w-full object-contain"
+                          />
+                        ) : null}
+                      </span>
+                    ) : null}
 
                     {/*
                       Текущият продукт се различава само по дебелината на
@@ -604,7 +611,10 @@ const BoxItems = ({ items }: { items: BoxItem[] }) => (
             {item.name} <span className="tabular">×{item.qty ?? 1}</span>
           </p>
 
-          {/* Картата без снимка показва само името и остава със същата височина. */}
+          {/*
+            Картата без снимка показва само името и остава със същата
+            височина (`min-h` на картата) — без заместител на мястото.
+          */}
           {img ? (
             <span className="flex flex-1 items-center justify-center pt-6">
               <SectionImage
@@ -620,11 +630,7 @@ const BoxItems = ({ items }: { items: BoxItem[] }) => (
                 className="h-auto max-h-80 w-full object-contain"
               />
             </span>
-          ) : (
-            <span className="flex flex-1 items-center justify-center pt-6">
-              <ImagePlaceholder className="h-48 w-full rounded-lg" />
-            </span>
-          )}
+          ) : null}
         </li>
       )
     })}

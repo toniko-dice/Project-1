@@ -12,8 +12,8 @@
  * код. Две реализации значеха, че групóвият внос един ден ще внася по друг
  * начин от единичния, а разликата ще се забележи чак в базата.
  *
- * Продуктът се създава като ЧЕРНОВА. Вече публикуван продукт се обновява и
- * публикува направо — виж ядрото.
+ * Новият продукт се създава ПУБЛИКУВАН; с `--draft` — като чернова. Вече
+ * публикуван продукт се обновява и публикува направо — виж ядрото.
  */
 import config from '@payload-config'
 import { getPayload } from 'payload'
@@ -43,6 +43,8 @@ if (!slug) {
 
 // Изключва свалянето: ползват се само файловете на диска и вече качените.
 const noDownload = process.argv.includes('--no-download')
+// Новият продукт става чернова вместо публикуван.
+const draft = process.argv.includes('--draft')
 
 const payload = await getPayload({ config })
 
@@ -60,7 +62,7 @@ try {
 
 let result
 try {
-  result = await importProduct(payload, slug!, { noDownload })
+  result = await importProduct(payload, slug!, { noDownload, draft })
 } catch (err) {
   if (err instanceof ImportError) die(err.message)
   throw err

@@ -78,7 +78,7 @@ export const CategoryStripBlock = async () => {
                       className="object-contain"
                     />
                   ) : (
-                    <ImagePlaceholder className="absolute inset-0 rounded-lg" compact />
+                    <ImagePlaceholder className="absolute inset-0 rounded-lg" />
                   )}
                 </span>
 
