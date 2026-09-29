@@ -44,7 +44,7 @@ const timed = async <T,>(label: string, work: () => Promise<T>): Promise<T> => {
  *
  * Таговете се изчистват от куките в `src/lib/revalidate.ts` при всяка
  * промяна в админа. Кешираните функции връщат само JSON-сериализуеми
- * стойности — затова `getMenuProducts` дава обект, не `Map`.
+ * стойности — затова `getProductsByIds` дава обект, не `Map`.
  */
 const cached = <T,>(keys: string[], tags: string[], work: () => Promise<T>) =>
   unstable_cache(work, keys, { tags })()
@@ -319,55 +319,9 @@ export const getCategorySlugs = cache(async (): Promise<string[]> => {
 })
 
 /**
- * Продуктите за автоматичните панели в менюто, групирани по категория.
+ * Продукти по номера — за секциите на панелите в менюто.
  *
- * ЕДНА заявка за всички категории наведнъж, не по една на панел — менюто е
- * на всяка страница и панелите са двайсетина. Взимат се само публикуваните,
- * подредени както в админа (`_order`), после по дата.
- *
- * Резултатът е обикновен обект с ключ номера на категорията — `Map` не
- * минава през кеша (не е JSON).
- */
-export const getMenuProducts = cache(
-  async (categoryIds: number[], perCategory = 7): Promise<Record<number, Product[]>> =>
-    timed(`getMenuProducts(${categoryIds.length})`, () =>
-      cached(
-        ['menu-products', categoryIds.join(','), String(perCategory)],
-        ['menu', 'product'],
-        async () => {
-          const grouped: Record<number, Product[]> = {}
-          if (!categoryIds.length) return grouped
-
-          const payload = await getPayloadClient()
-          const result = await payload.find({
-            collection: 'products',
-            where: {
-              and: [{ category: { in: categoryIds } }, { _status: { equals: 'published' } }],
-            },
-            sort: ['_order', '-createdAt'],
-            pagination: false,
-            depth: 1,
-          })
-
-          for (const product of result.docs) {
-            const id =
-              typeof product.category === 'number' ? product.category : product.category?.id
-            if (typeof id !== 'number') continue
-            const list = grouped[id] ?? []
-            if (list.length < perCategory) list.push(product)
-            grouped[id] = list
-          }
-
-          return grouped
-        },
-      ),
-    ),
-)
-
-/**
- * Продукти по номера — за ръчните карти в менюто, които сочат продукт.
- *
- * Хедърът се чете с `depth: 2`: панел → карта → продукт. Снимката на
+ * Хедърът се чете с `depth: 2`: панел → секция → продукт. Снимката на
  * продукта е на трето ниво и идва само като номер. Вместо да се вдига
  * дълбочината на целия глобал (38 панела, всичко в тях), продуктите се
  * дотеглят с една заявка на дълбочина 1 — точно колкото за снимката.

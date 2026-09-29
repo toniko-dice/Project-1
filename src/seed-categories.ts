@@ -260,12 +260,62 @@ const ПОКРИТА_ОТ_ОБРАЗЕЦА = 'portativni-elektrocentrali'
 const панели = await payload.find({ collection: 'menu-panels', pagination: false, depth: 0 })
 const заетиSlug = new Set(панели.docs.map((p) => p.slug))
 
-/** Автоматичният панел за дадена категория, ако вече съществува. */
+/**
+ * Панелът за дадена категория, ако вече съществува — този, чиято секция
+ * (не „Аксесоари по съвместимост") сочи категорията.
+ */
+const категорияНаПанела = (p: (typeof панели.docs)[number]): number | null => {
+  const секция = (p.sections ?? []).find((s) => !s.accessories)
+  const c = секция?.viewAllCategory
+  return typeof c === 'number' ? c : (c?.id ?? null)
+}
+
 const панелЗаКатегория = (categoryId: number) =>
-  панели.docs.find((p) => {
-    const c = p.category
-    const id = typeof c === 'number' ? c : c?.id
-    return p.mode !== 'manual' && id === categoryId
+  панели.docs.find((p) => категорияНаПанела(p) === categoryId)
+
+/**
+ * Публикуваните продукти на категорията и всичко под нея — за НОВ панел.
+ *
+ * Същият ред като на сайта: по разклонението, в него по `_order`, после
+ * по дата. После списъкът е на собственика; вносът само добавя нови.
+ */
+const продуктиНаРазклонение = async (categoryId: number): Promise<number[]> => {
+  const разклонение = [categoryId]
+  for (let i = 0; i < разклонение.length; i += 1) {
+    for (const c of всички.docs) {
+      const parent = typeof c.parent === 'number' ? c.parent : c.parent?.id
+      if (parent === разклонение[i]) разклонение.push(c.id)
+    }
+  }
+  const продукти = await payload.find({
+    collection: 'products',
+    where: { and: [{ category: { in: разклонение } }, { _status: { equals: 'published' } }] },
+    sort: ['_order', '-createdAt'],
+    pagination: false,
+    depth: 0,
+  })
+  const категорияНа = (d: (typeof продукти.docs)[number]) =>
+    typeof d.category === 'number' ? d.category : d.category?.id
+  return разклонение.flatMap((cid) =>
+    продукти.docs.filter((d) => категорияНа(d) === cid).map((d) => d.id),
+  )
+}
+
+/** Нов панел за подкатегория: една секция с категорията и продуктите ѝ. */
+const новПанел = async (заглавие: string, slug: string, категорияId: number) =>
+  payload.create({
+    collection: 'menu-panels',
+    data: {
+      title: заглавие,
+      slug,
+      sections: [
+        {
+          heading: заглавие,
+          viewAllCategory: категорияId,
+          products: await продуктиНаРазклонение(категорияId),
+        },
+      ],
+    } as never,
   })
 
 /** Свободен адрес: подкатегорията, а при заето — с наставка. */
@@ -277,32 +327,16 @@ const свободенSlug = (искан: string) => {
 }
 
 let панелиСъздадени = 0
-let панелиОбновени = 0
+/*
+  Надписите на панелите НЕ се синхронизират с дървото.
 
-/**
- * Надписът на АВТОМАТИЧЕН панел следва името на серията от дървото.
- *
- * Панелът в автоматичен режим е изцяло произведение на този скрипт —
- * съдържанието му се сглобява от категорията, а надписът е името ѝ.
- * Преименуване в `kategorii.md` иначе оставя стария надпис в менюто:
- * „Комплекти с електроцентрала" стоеше като таб, след като серията вече
- * се казваше „Комплекти". Ръчните панели не се пипат — техният надпис е
- * на собственика.
- */
-const синхронизирайНадпис = async (
-  панел: { id: number; title?: string | null; mode?: string | null },
-  заглавие: string,
-) => {
-  if (панел.mode === 'manual' || панел.title === заглавие) return
-  await payload.update({
-    collection: 'menu-panels',
-    id: панел.id,
-    data: { title: заглавие } as never,
-  })
-  промени.push(`  ~ панел „${панел.title}" → „${заглавие}"`)
-  панел.title = заглавие
-  панелиОбновени += 1
-}
+  Преди автоматичният панел беше изцяло на скрипта и надписът му следваше
+  името на серията. Панелите вече нямат режим — надписът, секциите и
+  продуктите са на собственика. Преименувана серия сменя само
+  категорията; надписът в менюто сменя той.
+*/
+const панелиОбновени = 0
+
 const панелиНаМейн = new Map<string, number[]>()
 const наставки: string[] = []
 
@@ -318,7 +352,6 @@ for (const главна of дърво) {
     const съществуващ = панелЗаКатегория(категорияId)
     if (съществуващ) {
       ids.push(съществуващ.id)
-      await синхронизирайНадпис(съществуващ, под.title)
       continue
     }
 
@@ -331,10 +364,7 @@ for (const главна of дърво) {
     const slug = свободенSlug(под.slug)
     if (slug !== под.slug) наставки.push(`${под.slug} → ${slug}`)
 
-    const doc = await payload.create({
-      collection: 'menu-panels',
-      data: { title: под.title, slug, mode: 'auto', category: категорияId } as never,
-    })
+    const doc = await новПанел(под.title, slug, категорияId)
     заетиSlug.add(slug)
     панели.docs.push(doc)
     ids.push(doc.id)
@@ -352,7 +382,7 @@ for (const главна of дърво) {
 */
 const еСтарМейнПанел = (panelId: number, главна: Главна) => {
   const p = панели.docs.find((x) => x.id === panelId)
-  if (!p || p.slug !== главна.slug || p.mode !== 'manual' || p.category) return false
+  if (!p || p.slug !== главна.slug) return false
   const секции = p.sections ?? []
   return секции.length === 1 && секции[0]?.heading === главна.title
 }
@@ -492,10 +522,12 @@ if (образецГлавна && образецИндекс >= 0) {
       if (id === null) return false
       const p = панели.docs.find((x) => x.id === id)
       if (!p) return false
-      const c = p.category
-      const cid = typeof c === 'number' ? c : (c as { id?: number } | null | undefined)?.id ?? null
-      // Ръчните панели на образеца нямат категория — разпознават се по slug.
-      return cid === категорияId || p.slug === под.slug || p.slug.startsWith(`${под.slug}-`)
+      // Панел без категория в секциите се разпознава по slug.
+      return (
+        категорияНаПанела(p) === категорияId ||
+        p.slug === под.slug ||
+        p.slug.startsWith(`${под.slug}-`)
+      )
     })
 
   for (const под of образецГлавна.subs) {
@@ -511,7 +543,6 @@ if (образецГлавна && образецИндекс >= 0) {
     */
     const съществуващ = панелЗаКатегория(категорияId)
     if (съществуващ) {
-      await синхронизирайНадпис(съществуващ, под.title)
       вписвания.push({ panel: съществуващ.id })
       образецДобавени += 1
       continue
@@ -520,10 +551,7 @@ if (образецГлавна && образецИндекс >= 0) {
     const slug = свободенSlug(под.slug)
     if (slug !== под.slug) наставки.push(`${под.slug} → ${slug}`)
 
-    const doc = await payload.create({
-      collection: 'menu-panels',
-      data: { title: под.title, slug, mode: 'auto', category: категорияId } as never,
-    })
+    const doc = await новПанел(под.title, slug, категорияId)
     заетиSlug.add(slug)
     панели.docs.push(doc)
     вписвания.push({ panel: doc.id })

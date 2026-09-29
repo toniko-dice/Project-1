@@ -25,6 +25,8 @@ import * as migration_20260924_170000_home_page_urls from './20260924_170000_hom
 import * as migration_20260925_103626_box_groups from './20260925_103626_box_groups';
 import * as migration_20260928_081820_product_search from './20260928_081820_product_search';
 import * as migration_20260928_092612_strip_from_checkbox from './20260928_092612_strip_from_checkbox';
+import * as migration_20260929_132138_menu_panel_products from './20260929_132138_menu_panel_products';
+import * as migration_20260929_132202_menu_panel_drop_modes from './20260929_132202_menu_panel_drop_modes';
 
 export const migrations = [
   {
@@ -161,5 +163,15 @@ export const migrations = [
     up: migration_20260928_092612_strip_from_checkbox.up,
     down: migration_20260928_092612_strip_from_checkbox.down,
     name: '20260928_092612_strip_from_checkbox',
+  },
+  {
+    up: migration_20260929_132138_menu_panel_products.up,
+    down: migration_20260929_132138_menu_panel_products.down,
+    name: '20260929_132138_menu_panel_products',
+  },
+  {
+    up: migration_20260929_132202_menu_panel_drop_modes.up,
+    down: migration_20260929_132202_menu_panel_drop_modes.down,
+    name: '20260929_132202_menu_panel_drop_modes'
   },
 ];

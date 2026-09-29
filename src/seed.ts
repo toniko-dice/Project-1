@@ -402,8 +402,8 @@ await payload.create({
 })
 
 console.log('Настройка на футъра…')
-// Менюто (хедърът) се попълва отделно с `npm run seed:menu`,
-// защото структурата му е по-обемна и се настройва самостоятелно.
+// Менюто (хедърът) се попълва отделно от дървото на категориите —
+// `payload run src/seed-categories.ts`.
 
 await payload.updateGlobal({
   slug: 'footer',
