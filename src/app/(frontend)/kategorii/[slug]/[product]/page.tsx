@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 import { notFound, redirect } from 'next/navigation'
 
 import { RenderProductSections } from '@/components/blocks/product'
+import { BuyButton } from '@/components/BuyButton'
 import { ProductAnchorNav, type Anchor } from '@/components/ProductAnchorNav'
 import { ProductGallery, type GalleryImage } from '@/components/ProductGallery'
 import { uniqueAnchor } from '@/lib/anchors'
@@ -149,13 +149,6 @@ export default async function ProductPage({ params }: Args) {
 
   const discount = discountPercent(product.price, product.compareAtPrice)
   const availability = availabilityOf(product.availability)
-  const soldOut = product.availability === 'out-of-stock'
-  /*
-    „По заявка" води към СЪЩИЯ адрес в dice.bg, със същия бутон — само
-    надписът се сменя. „Купи сега" на продукт, който не е наличен, би
-    обещал нещо, което магазинът няма.
-  */
-  const onRequest = product.availability === 'on-request'
   const highlights = product.highlights ?? []
 
   /*
@@ -258,20 +251,8 @@ export default async function ProductPage({ params }: Args) {
             </ul>
           ) : null}
 
-          {soldOut ? (
-            <span className="inline-flex min-h-12 w-full cursor-not-allowed items-center justify-center rounded-md bg-tile px-6 text-sm font-semibold text-ink-muted sm:w-auto">
-              Изчерпан
-            </span>
-          ) : (
-            <Link
-              href={product.externalUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex min-h-12 w-full cursor-pointer items-center justify-center rounded-md bg-brand px-8 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand-dark sm:w-auto"
-            >
-              {onRequest ? 'Заяви в dice.bg' : (product.ctaLabel ?? 'Купи сега')}
-            </Link>
-          )}
+          {/* Същият бутон като на картите — надписът следва наличността. */}
+          <BuyButton product={product} size="lg" />
 
           {product.description ? (
             <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-ink-muted">

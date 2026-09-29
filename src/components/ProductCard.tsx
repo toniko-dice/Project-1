@@ -3,10 +3,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import type { Product } from '@/payload-types'
-import { availabilityOf } from '@/lib/availability'
 import { formatBgn, formatEur } from '@/lib/format'
 import { productCardData } from '@/lib/media'
 import { productPath } from '@/lib/urls'
+import { BuyButton } from './BuyButton'
 import { ImagePlaceholder } from './ImagePlaceholder'
 
 /**
@@ -39,12 +39,23 @@ const Rating = ({ rating, count }: { rating: number; count: number }) => {
 }
 
 /**
- * Продуктова карта.
+ * Продуктова карта — единствената; ползват я категориите, разделите на
+ * серия, каруселите, редовете под банерите, търсенето, „Свързани" и
+ * „Аксесоари".
  *
  * Бяла карта без рамка върху сивия фон на страницата — както в оригинала.
- * Цялата карта е един линк към продуктовата страница; черният бутон
- * „Купи сега" беше махнат, защото в реда с пет карти пет черни бутона
- * дърпат погледа повече от самите продукти.
+ *
+ * Бутонът към магазина е същият `BuyButton` като на продуктовата
+ * страница, в размер `md`. Собственикът го върна (веднъж беше махнат, за
+ * да не дърпат пет черни бутона погледа от продуктите).
+ *
+ * Картата НЕ е един линк. Бутонът е отделен линк, а `<a>` в `<a>` е
+ * невалиден HTML: браузърът затваря външния линк преди вътрешния и
+ * картата се разпада. Затова обвивката е `article`, снимката и текстът са
+ * един линк към страницата, бутонът — втори, под тях.
+ *
+ * Бутоните в един ред са на една линия: картата е `h-full` + flex,
+ * линкът с текста се разтяга (`flex-1`), а бутонът стои в дъното.
  */
 export const ProductCard = ({
   product,
@@ -57,72 +68,69 @@ export const ProductCard = ({
 }) => {
   // Всичко идва от продукта през общия помощник — същото като в менюто.
   const data = productCardData(product)
-  // „Изчерпан" и „По заявка" се казват на картата; „в наличност" — не.
-  const availabilityNote = availabilityOf(product.availability).card
 
   const rating = typeof product.rating === 'number' ? product.rating : null
   const reviews = typeof product.reviewCount === 'number' ? product.reviewCount : null
 
   return (
-    <Link
-      href={productPath(product)}
-      className={`group flex cursor-pointer flex-col overflow-hidden rounded-xl bg-surface p-4 transition-shadow duration-200 hover:shadow-md ${className}`}
+    <article
+      className={`group flex flex-col overflow-hidden rounded-xl bg-surface p-4 transition-shadow duration-200 hover:shadow-md ${className}`}
     >
-      {/* Снимката стои на бял фон, центрирана, без изрязване. */}
-      <div className="relative h-48 w-full sm:h-60">
-        {data.imageUrl ? (
-          <Image
-            src={data.imageUrl}
-            alt={data.imageAlt}
-            fill
-            sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 18vw"
-            loading="lazy"
-            className="object-contain transition-transform duration-300 group-hover:scale-105"
-          />
-        ) : (
-          <ImagePlaceholder className="absolute inset-0 rounded-lg" />
-        )}
-      </div>
-
-      <div className="mt-4 flex flex-1 flex-col gap-1">
-        {/* Етикетът е НАД името, в оранжево — не в ъгъла върху снимката. */}
-        {/* Собствената карта на продукта показва неговия етикет. */}
-        {data.badge ? <p className="text-sm text-flame">{data.badge}</p> : null}
-
-        <h3 className="text-[17px] font-medium leading-snug">{data.title}</h3>
-
-        {data.tagline ? (
-          <p className="line-clamp-2 text-sm leading-snug text-ink-muted">{data.tagline}</p>
-        ) : null}
-
-        <div className="mt-auto pt-3">
-          <p className="flex flex-wrap items-baseline gap-2">
-            {/*
-              Без „от": всеки продукт е с една цена. Ако някога дойде продукт
-              с варианти на различни цени, „от" се връща като изрично поле на
-              продукта — не автоматично за всички.
-            */}
-            <span className="tabular font-semibold">{formatEur(product.price)}</span>
-            {data.comparePrice ? (
-              <s className="tabular text-sm text-ink-muted">{formatEur(data.comparePrice)}</s>
-            ) : null}
-          </p>
-
-          {showBgn ? (
-            <p className="tabular mt-0.5 text-xs text-ink-muted">{formatBgn(product.price)}</p>
-          ) : null}
-
-          {rating !== null && reviews !== null ? (
-            <div className="mt-1">
-              <Rating rating={rating} count={reviews} />
-            </div>
-          ) : null}
-
-          {availabilityNote ? (
-            <p className="mt-2 text-xs font-medium text-ink-muted">{availabilityNote}</p>
-          ) : null}
+      <Link href={productPath(product)} className="flex flex-1 cursor-pointer flex-col">
+        {/* Снимката стои на бял фон, центрирана, без изрязване. */}
+        <div className="relative h-48 w-full sm:h-60">
+          {data.imageUrl ? (
+            <Image
+              src={data.imageUrl}
+              alt={data.imageAlt}
+              fill
+              sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 18vw"
+              loading="lazy"
+              className="object-contain transition-transform duration-300 group-hover:scale-105"
+            />
+          ) : (
+            <ImagePlaceholder className="absolute inset-0 rounded-lg" />
+          )}
         </div>
-      </div>
-    </Link>
+
+        <div className="mt-4 flex flex-1 flex-col gap-1">
+          {/* Етикетът е НАД името, в оранжево — не в ъгъла върху снимката. */}
+          {/* Собствената карта на продукта показва неговия етикет. */}
+          {data.badge ? <p className="text-sm text-flame">{data.badge}</p> : null}
+
+          <h3 className="text-[17px] font-medium leading-snug">{data.title}</h3>
+
+          {data.tagline ? (
+            <p className="line-clamp-2 text-sm leading-snug text-ink-muted">{data.tagline}</p>
+          ) : null}
+
+          <div className="mt-auto pt-3">
+            <p className="flex flex-wrap items-baseline gap-2">
+              {/*
+                Без „от": всеки продукт е с една цена. Ако някога дойде продукт
+                с варианти на различни цени, „от" се връща като изрично поле на
+                продукта — не автоматично за всички.
+              */}
+              <span className="tabular font-semibold">{formatEur(product.price)}</span>
+              {data.comparePrice ? (
+                <s className="tabular text-sm text-ink-muted">{formatEur(data.comparePrice)}</s>
+              ) : null}
+            </p>
+
+            {showBgn ? (
+              <p className="tabular mt-0.5 text-xs text-ink-muted">{formatBgn(product.price)}</p>
+            ) : null}
+
+            {rating !== null && reviews !== null ? (
+              <div className="mt-1">
+                <Rating rating={rating} count={reviews} />
+              </div>
+            ) : null}
+          </div>
+        </div>
+      </Link>
+
+      <BuyButton product={product} size="md" className="mt-4" />
+    </article>
   )
 }
