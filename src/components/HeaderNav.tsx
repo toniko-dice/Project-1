@@ -262,8 +262,19 @@ const MegaMenu = ({ item, onClose }: { item: NavItem; onClose: () => void }) => 
           {active?.sections?.length ? (
             <PanelSections sections={active.sections} />
           ) : (
+            /*
+              Панел без показваем продукт — категория, която още няма
+              продукти, или списък само с чернови. Преди тук стоеше указание
+              за админа („Добавете ги от „Панели в менюто"") — пред
+              посетителя. Той вижда кратък ред и линк към категорията.
+            */
             <p className="text-sm text-ink-muted">
-              Този панел още няма секции. Добавете ги от „Панели в менюто“.
+              Продуктите в тази категория предстоят.{' '}
+              {active?.url ? (
+                <Link href={active.url} className="cursor-pointer text-ink underline underline-offset-2">
+                  Към категорията
+                </Link>
+              ) : null}
             </p>
           )}
         </div>
