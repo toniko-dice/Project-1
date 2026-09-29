@@ -1272,6 +1272,12 @@ export const importProduct = async (
   const compatibleCategoryIds = compatibleWith
     .filter((c) => c.relationTo === 'categories')
     .map((c) => c.value)
+  // Полетата на реда в менюто — от продукта; етикетът остава празен.
+  const карта = {
+    title: (content.produkt.title as string | undefined) ?? null,
+    specLine: (content.produkt.tagline as string | undefined) ?? null,
+    image: mainImage ?? null,
+  }
 
   const резултат = (): ImportResult => ({
     slug: content.produkt.slug as string,
@@ -1319,6 +1325,7 @@ export const importProduct = async (
     if (!existing) {
       menu = await addToMenuPanels(payload, {
         productId: DRY_ID,
+        card: карта,
         categoryId,
         compatibleCategoryIds,
         dryRun: true,
@@ -1408,6 +1415,7 @@ export const importProduct = async (
     */
     menu = await addToMenuPanels(payload, {
       productId: created.id,
+      card: карта,
       categoryId,
       compatibleCategoryIds,
       dryRun: false,
@@ -1446,8 +1454,8 @@ export const importProduct = async (
 /* ─────────── менюто ─────────── */
 
 /**
- * Добавя НОВ продукт в края на секциите в менюто. Връща редове за
- * обобщението.
+ * Добавя НОВ продукт в края на секциите в менюто — като ред с попълнени
+ * име, подзаглавие и снимка и празен етикет. Връща редове за обобщението.
  *
  * Панелите нямат автоматичен режим: сайтът показва точно списъка на всяка
  * секция. Вносът само ДОБАВЯ новите продукти; махане и подредба са на
@@ -1469,10 +1477,17 @@ export const addToMenuPanels = async (
   payload: Payload,
   {
     productId,
+    card,
     categoryId,
     compatibleCategoryIds,
     dryRun,
-  }: { productId: number; categoryId: number; compatibleCategoryIds: number[]; dryRun: boolean },
+  }: {
+    productId: number
+    card: { title: string | null; specLine: string | null; image: number | null }
+    categoryId: number
+    compatibleCategoryIds: number[]
+    dryRun: boolean
+  },
 ): Promise<string[]> => {
   const header = await payload.findGlobal({ slug: 'header', depth: 0 })
   const panelIds: number[] = []
@@ -1563,12 +1578,13 @@ export const addToMenuPanels = async (
   for (const { panelIndex, sectionIndex } of цели) {
     const panel = panels[panelIndex]!
     const section = panel.sections![sectionIndex]!
-    const ids = (section.products ?? []).map((p) => (typeof p === 'number' ? p : p.id))
+    const cards = section.cards ?? []
+    const ids = cards.map((c) => (typeof c.product === 'number' ? c.product : c.product?.id))
     if (ids.includes(productId)) continue
-    section.products = [...ids, productId]
+    section.cards = [...cards, { product: productId, ...card, label: null }]
     докоснати.add(panelIndex)
     редове.push(
-      `${dryRun ? 'би се добавил' : 'добавен'} в панел „${panel.title}" › „${section.heading}" (${ids.length + 1}-и)`,
+      `${dryRun ? 'би се добавил' : 'добавен'} в панел „${panel.title}" › „${section.heading}" (${cards.length + 1}-и)`,
     )
   }
 

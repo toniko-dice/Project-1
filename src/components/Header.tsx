@@ -8,25 +8,37 @@ import { categoryPath } from '@/lib/urls'
 import { HeaderNav, type MenuCard, type MenuSection, type NavItem } from './HeaderNav'
 
 type PanelSection = NonNullable<MenuPanel['sections']>[number]
+type PanelCard = NonNullable<PanelSection['cards']>[number]
 
-/** Номерата на продуктите в секцията, в реда от админа. */
-const sectionProductIds = (section: PanelSection): number[] =>
-  (section.products ?? [])
-    .map((p) => (typeof p === 'number' ? p : p?.id))
-    .filter((id): id is number => typeof id === 'number')
+/** Номерът на продукта в реда. */
+const cardProductId = (card: PanelCard): number | null => {
+  const p = card.product
+  return typeof p === 'number' ? p : (p?.id ?? null)
+}
 
-/** Продукт като карта в менюто. Всичко идва от продукта. */
-const productCard = (p: Product): MenuCard => {
-  const data = productCardData(p)
+/**
+ * Ред от секцията като карта в менюто.
+ *
+ * Името, подзаглавието и снимката са от реда — попълнени от продукта при
+ * избора му, и собственикът може да ги е променил. Празно поле пада на
+ * продукта. Цената и адресът са ВИНАГИ от продукта. „Етикет" излиза като
+ * малък надпис в ъгъла на снимката (`ribbon`); етикетът на самия продукт
+ * не се пренася.
+ */
+const productCard = (card: PanelCard, p: Product): MenuCard => {
+  const data = productCardData(p, {
+    title: card.title,
+    tagline: card.specLine,
+    image: card.image,
+  })
   return {
     imageUrl: data.imageUrl,
     imageAlt: data.imageAlt,
     title: data.title,
     specLine: data.tagline,
     url: data.url,
-    // Етикетът на продукта не се пренася в менюто.
     label: null,
-    ribbon: null,
+    ribbon: card.label?.trim() || null,
     price: data.price,
     comparePrice: data.comparePrice,
   }
@@ -50,19 +62,21 @@ const viewAllUrl = (section: PanelSection) => {
 }
 
 /**
- * Секциите на панела — точно списъкът от админа, в този ред.
+ * Секциите на панела — точно редовете от админа, в този ред.
  *
- * Първият продукт е голямата карта, останалите — малките. Чернова и
- * изтрит продукт просто липсват (`byId` съдържа само публикуваните).
- * Секция без нито един показваем продукт не се рендерира: заглавие и
- * „Виж всички" над празна мрежа са празно място.
+ * Първият ред е голямата карта, останалите — малките. Чернова и изтрит
+ * продукт просто липсват (`byId` съдържа само публикуваните). Секция без
+ * нито една показваема карта не се рендерира: заглавие и „Виж всички"
+ * над празна мрежа са празно място.
  */
 const panelSections = (panel: MenuPanel, byId: Record<number, Product>): MenuSection[] =>
   (panel.sections ?? []).flatMap((section) => {
-    const products = sectionProductIds(section)
-      .map((id) => byId[id])
-      .filter((p): p is Product => Boolean(p))
-    const [first, ...rest] = products
+    const cards = (section.cards ?? []).flatMap((card) => {
+      const id = cardProductId(card)
+      const product = id !== null ? byId[id] : undefined
+      return product ? [productCard(card, product)] : []
+    })
+    const [first, ...rest] = cards
     if (!first) return []
 
     return [
@@ -70,8 +84,8 @@ const panelSections = (panel: MenuPanel, byId: Record<number, Product>): MenuSec
         heading: section.heading,
         viewAllLabel: section.viewAllLabel,
         viewAllUrl: viewAllUrl(section),
-        featured: productCard(first),
-        cards: rest.map(productCard),
+        featured: first,
+        cards: rest,
         showViewAllTile: Boolean(section.showViewAllTile),
         viewAllTileUrl: section.viewAllTileUrl ?? viewAllUrl(section),
       },
@@ -101,7 +115,10 @@ export const Header = async () => {
   const ids = new Set<number>()
   for (const panel of panels) {
     for (const section of panel.sections ?? []) {
-      for (const id of sectionProductIds(section)) ids.add(id)
+      for (const card of section.cards ?? []) {
+        const id = cardProductId(card)
+        if (id !== null) ids.add(id)
+      }
     }
   }
   const byId = await getProductsByIds([...ids].sort((a, b) => a - b))

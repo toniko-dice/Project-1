@@ -1448,6 +1448,10 @@ export interface MenuPanel {
    */
   slug: string;
   /**
+   * Къде в менюто се показва панелът. „—" значи никъде.
+   */
+  menu?: string | null;
+  /**
    * Всяка секция е един ред със заглавие, линк „Виж всички" вдясно и мрежа с продукти.
    */
   sections?:
@@ -1463,9 +1467,24 @@ export interface MenuPanel {
          */
         viewAllUrl?: string | null;
         /**
-         * Сайтът показва точно тези, в този ред; първият е голямата карта. Влачете за подредба, „×" маха. Име, снимка, ред и цена идват от продукта. Чернова не се показва.
+         * Сайтът показва точно тези, в този ред; първият е голямата карта. При избор на продукт името, подзаглавието и снимката се попълват от него — може да ги промените. Цената винаги идва от продукта. Чернова не се показва.
          */
-        products?: (number | Product)[] | null;
+        cards?:
+          | {
+              product?: (number | null) | Product;
+              title?: string | null;
+              /**
+               * По избор, до 20 знака. Малък надпис в ъгъла на снимката: „Ново", „−20%", „Хит". Празно — нищо.
+               */
+              label?: string | null;
+              specLine?: string | null;
+              /**
+               * Главната снимка на продукта, освен ако не изберете друга.
+               */
+              image?: (number | null) | Media;
+              id?: string | null;
+            }[]
+          | null;
         /**
          * Вносът добавя тук нов аксесоар, чието „Съвместим с" сочи категорията на секцията или подкатегория под нея.
          */
@@ -2526,6 +2545,7 @@ export interface MenuPanelsSelect<T extends boolean = true> {
   _order?: T;
   title?: T;
   slug?: T;
+  menu?: T;
   sections?:
     | T
     | {
@@ -2533,7 +2553,16 @@ export interface MenuPanelsSelect<T extends boolean = true> {
         viewAllCategory?: T;
         viewAllLabel?: T;
         viewAllUrl?: T;
-        products?: T;
+        cards?:
+          | T
+          | {
+              product?: T;
+              title?: T;
+              label?: T;
+              specLine?: T;
+              image?: T;
+              id?: T;
+            };
         accessories?: T;
         showViewAllTile?: T;
         viewAllTileUrl?: T;

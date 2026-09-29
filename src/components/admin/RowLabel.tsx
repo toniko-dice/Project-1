@@ -7,6 +7,10 @@ type Props = {
   field?: string
   /** Дума за реда, когато полето е празно. Напр. „Точка" → „Точка 03". */
   fallback?: string
+  /** Поле, чиято стойност (ако има) излиза в скоби след името — напр. етикетът на картата. */
+  suffixField?: string
+  /** Масив в реда, чийто брой излиза след името — „· 9 продукта". */
+  countField?: string
 }
 
 /** Измъква четим надпис от стойност, която може да е текст или свързан документ. */
@@ -29,13 +33,20 @@ const readable = (value: unknown): string => {
  * Без него Payload изписва „Точка 01", „Точка 02" и трябва да отваряш всеки ред,
  * за да разбереш кой е. Тук показваме номера плюс истинското име.
  */
-export const RowLabel = ({ field, fallback = 'Ред' }: Props) => {
+export const RowLabel = ({ field, fallback = 'Ред', suffixField, countField }: Props) => {
   const { data, rowNumber } = useRowLabel<Record<string, unknown>>()
 
   const index = String((rowNumber ?? 0) + 1).padStart(2, '0')
   const text = field ? readable(data?.[field]) : ''
+  const suffix = suffixField ? readable(data?.[suffixField]) : ''
+  const list = countField ? data?.[countField] : undefined
+  const count = Array.isArray(list) ? list.length : null
 
-  return <span>{text ? `${index} · ${text}` : `${fallback} ${index}`}</span>
+  let label = text ? `${index} · ${text}` : `${fallback} ${index}`
+  if (suffix) label += ` (${suffix})`
+  if (count !== null) label += ` · ${count} ${count === 1 ? 'продукт' : 'продукта'}`
+
+  return <span>{label}</span>
 }
 
 export default RowLabel

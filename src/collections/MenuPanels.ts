@@ -1,4 +1,4 @@
-import type { CollectionConfig } from 'payload'
+import type { CollectionBeforeValidateHook, CollectionConfig } from 'payload'
 import { cleanSlug } from '../lib/slug'
 import { revalidateAll, revalidateAllOnDelete } from '../lib/revalidate'
 
@@ -6,19 +6,67 @@ import { revalidateAll, revalidateAllOnDelete } from '../lib/revalidate'
  * Панел в мега менюто — това, което се показва вдясно, когато потребителят
  * посочи точка от сайдбара.
  *
- * Панелът е списък от секции, а секцията — списък от продукти. Режими
- * няма. Сайтът показва ТОЧНО списъка, в този ред; първият продукт е
- * голямата карта. Името, редът, снимката и цената идват от продукта —
- * нищо не се преписва в панела.
+ * Панелът е списък от секции, секцията — списък от редове „продукт +
+ * полета под него". Режими няма. Сайтът показва ТОЧНО редовете, в този
+ * ред; първият е голямата карта.
  *
- * Преди имаше „автоматичен" режим (продуктите на категорията се сглобяваха
- * при всяко зареждане) и „ръчен" (карти с полета за замяна). В
- * автоматичния списъкът в админа стоеше празен и собственикът не виждаше
- * какво показва менюто, нито можеше да го подреди. Сега вносът само
- * ДОБАВЯ новите продукти в края на секцията за тяхната категория
- * (`addToMenuPanels` в `import-product-core.ts`); всичко останало —
- * махане, подредба — е на собственика.
+ * При избор на продукт името, подзаглавието и снимката на реда се
+ * попълват от продукта (в админа веднага — `CardProductSync`; на сървъра —
+ * `fillCardsFromProducts`, ако са празни) и собственикът може да ги
+ * промени. Цената НЕ се копира: показва се под реда само за четене и на
+ * сайта винаги идва от продукта. „Етикет" е свободен текст, не се
+ * попълва сам.
+ *
+ * Вносът само ДОБАВЯ новите продукти в края на секцията за тяхната
+ * категория (`addToMenuPanels` в `import-product-core.ts`) — с попълнени
+ * полета и празен етикет. Махане и подредба са на собственика.
  */
+type Ред = { product?: number | { id: number } | null; title?: string | null; specLine?: string | null; image?: unknown; label?: string | null }
+type Секция = { cards?: Ред[] | null; [k: string]: unknown }
+
+/**
+ * Редовете без продукт отпадат, празните полета се попълват от продукта.
+ *
+ * Без продукт редът няма какво да покаже — такъв остава, когато продуктът
+ * е изтрит (връзката става празна) или когато е добавен ред, но не е
+ * избран продукт. Попълването е резерва за записи, минали покрай админа
+ * (REST, скрипт): там `CardProductSync` не работи, а полетата не бива да
+ * стоят празни.
+ */
+const fillCardsFromProducts: CollectionBeforeValidateHook = async ({ data, req }) => {
+  const sections = (data?.sections ?? []) as Секция[]
+  const кеш = new Map<number, { title?: string | null; tagline?: string | null; image?: unknown } | null>()
+
+  for (const section of sections) {
+    if (!Array.isArray(section.cards)) continue
+    const редове: Ред[] = []
+    for (const ред of section.cards) {
+      const id = typeof ред.product === 'number' ? ред.product : ред.product?.id
+      if (typeof id !== 'number') continue
+
+      if (!ред.title || !ред.specLine || !ред.image) {
+        if (!кеш.has(id)) {
+          const продукт = await req.payload
+            .findByID({ collection: 'products', id, depth: 0, draft: true, req })
+            .catch(() => null)
+          кеш.set(id, продукт)
+        }
+        const продукт = кеш.get(id)
+        if (продукт) {
+          ред.title ||= продукт.title ?? null
+          ред.specLine ||= продукт.tagline ?? null
+          ред.image ||= (typeof продукт.image === 'object' && продукт.image
+            ? (продукт.image as { id: number }).id
+            : продукт.image) ?? null
+        }
+      }
+      редове.push(ред)
+    }
+    section.cards = редове
+  }
+  return data
+}
+
 export const MenuPanels: CollectionConfig = {
   slug: 'menu-panels',
   // Записите се подреждат с влачене в списъчния изглед.
@@ -28,13 +76,14 @@ export const MenuPanels: CollectionConfig = {
   labels: { singular: 'Панел в менюто', plural: 'Панели в менюто' },
   admin: {
     useAsTitle: 'title',
-    defaultColumns: ['title', 'slug', 'updatedAt'],
+    defaultColumns: ['title', 'menu', 'slug', 'updatedAt'],
     group: 'Меню',
     description:
       'Всеки панел е това, което се показва вдясно в мега менюто, когато потребителят посочи подточка от сайдбара. Секциите му са списъци с продукти — сайтът показва точно тях, в този ред.',
   },
   access: { read: () => true },
   hooks: {
+    beforeValidate: [fillCardsFromProducts],
     afterChange: [revalidateAll],
     afterDelete: [revalidateAllOnDelete],
   },
@@ -63,6 +112,44 @@ export const MenuPanels: CollectionConfig = {
       },
     },
     {
+      /*
+        Къде в менюто стои панелът — „Соларни панели › Сгъваеми панели".
+        Виртуално: пресмята се от хедъра при четене, в базата го няма.
+        Панел, към който хедърът не сочи, е „—" и на сайта не се вижда.
+      */
+      name: 'menu',
+      type: 'text',
+      virtual: true,
+      label: 'Меню',
+      admin: {
+        readOnly: true,
+        description: 'Къде в менюто се показва панелът. „—" значи никъде.',
+      },
+      hooks: {
+        afterRead: [
+          async ({ data, req }) => {
+            const ctx = req.context as { менюНаПанелите?: Map<number, string[]> }
+            if (!ctx.менюНаПанелите) {
+              const карта = new Map<number, string[]>()
+              const header = await req.payload.findGlobal({ slug: 'header', depth: 0, req })
+              for (const item of header.items ?? []) {
+                for (const group of item.groups ?? []) {
+                  for (const entry of group.entries ?? []) {
+                    const id = typeof entry.panel === 'number' ? entry.panel : entry.panel?.id
+                    if (typeof id !== 'number') continue
+                    карта.set(id, [...(карта.get(id) ?? []), `${item.label} › ${group.heading}`])
+                  }
+                }
+              }
+              ctx.менюНаПанелите = карта
+            }
+            const места = ctx.менюНаПанелите.get(data?.id as number)
+            return места?.length ? места.join('; ') : '—'
+          },
+        ],
+      },
+    },
+    {
       name: 'sections',
       type: 'array',
       label: 'Секции в панела',
@@ -74,7 +161,7 @@ export const MenuPanels: CollectionConfig = {
         components: {
           RowLabel: {
             path: '@/components/admin/RowLabel#RowLabel',
-            clientProps: { field: 'heading', fallback: 'Секция' },
+            clientProps: { field: 'heading', fallback: 'Секция', countField: 'cards' },
           },
         },
       },
@@ -122,18 +209,64 @@ export const MenuPanels: CollectionConfig = {
           ],
         },
         {
-          name: 'products',
-          type: 'relationship',
-          relationTo: 'products',
-          hasMany: true,
+          name: 'cards',
+          type: 'array',
           label: 'Продукти',
+          labels: { singular: 'Продукт', plural: 'Продукти' },
           admin: {
             description:
-              'Сайтът показва точно тези, в този ред; първият е голямата карта. Влачете за подредба, „×" маха. Име, снимка, ред и цена идват от продукта. Чернова не се показва.',
+              'Сайтът показва точно тези, в този ред; първият е голямата карта. При избор на продукт името, подзаглавието и снимката се попълват от него — може да ги промените. Цената винаги идва от продукта. Чернова не се показва.',
+            initCollapsed: true,
             components: {
-              afterInput: ['@/components/admin/PanelProductsPreview#PanelProductsPreview'],
+              RowLabel: {
+                path: '@/components/admin/RowLabel#RowLabel',
+                clientProps: { field: 'title', fallback: 'Продукт', suffixField: 'label' },
+              },
             },
           },
+          fields: [
+            {
+              // Не е `required`: изтрит продукт оставя празна връзка, а редът
+              // отпада при следващия запис (`fillCardsFromProducts`).
+              name: 'product',
+              type: 'relationship',
+              relationTo: 'products',
+              label: 'Продукт',
+            },
+            {
+              // Попълва полетата при избор на продукт и показва цената му.
+              name: 'productSync',
+              type: 'ui',
+              admin: {
+                components: { Field: '@/components/admin/CardProductSync#CardProductSync' },
+              },
+            },
+            {
+              type: 'row',
+              fields: [
+                { name: 'title', type: 'text', label: 'Име', admin: { width: '65%' } },
+                {
+                  name: 'label',
+                  type: 'text',
+                  label: 'Етикет',
+                  maxLength: 20,
+                  admin: {
+                    width: '35%',
+                    description:
+                      'По избор, до 20 знака. Малък надпис в ъгъла на снимката: „Ново", „−20%", „Хит". Празно — нищо.',
+                  },
+                },
+              ],
+            },
+            { name: 'specLine', type: 'text', label: 'Подзаглавие' },
+            {
+              name: 'image',
+              type: 'upload',
+              relationTo: 'media',
+              label: 'Снимка',
+              admin: { description: 'Главната снимка на продукта, освен ако не изберете друга.' },
+            },
+          ],
         },
         {
           name: 'accessories',

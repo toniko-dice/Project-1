@@ -279,7 +279,9 @@ const панелЗаКатегория = (categoryId: number) =>
  * Същият ред като на сайта: по разклонението, в него по `_order`, после
  * по дата. После списъкът е на собственика; вносът само добавя нови.
  */
-const продуктиНаРазклонение = async (categoryId: number): Promise<number[]> => {
+const продуктиНаРазклонение = async (
+  categoryId: number,
+): Promise<{ product: number; title: string; specLine: string | null; image: number | null }[]> => {
   const разклонение = [categoryId]
   for (let i = 0; i < разклонение.length; i += 1) {
     for (const c of всички.docs) {
@@ -296,8 +298,16 @@ const продуктиНаРазклонение = async (categoryId: number): P
   })
   const категорияНа = (d: (typeof продукти.docs)[number]) =>
     typeof d.category === 'number' ? d.category : d.category?.id
+  // Редове „продукт + полета": попълнени от продукта, етикетът празен.
   return разклонение.flatMap((cid) =>
-    продукти.docs.filter((d) => категорияНа(d) === cid).map((d) => d.id),
+    продукти.docs
+      .filter((d) => категорияНа(d) === cid)
+      .map((d) => ({
+        product: d.id,
+        title: d.title,
+        specLine: d.tagline ?? null,
+        image: typeof d.image === 'number' ? d.image : (d.image?.id ?? null),
+      })),
   )
 }
 
@@ -312,7 +322,7 @@ const новПанел = async (заглавие: string, slug: string, кате
         {
           heading: заглавие,
           viewAllCategory: категорияId,
-          products: await продуктиНаРазклонение(категорияId),
+          cards: await продуктиНаРазклонение(категорияId),
         },
       ],
     } as never,
