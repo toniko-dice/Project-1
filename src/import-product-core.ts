@@ -176,6 +176,101 @@ const MIME: Record<string, string> = {
 export const bareStem = (file: string): string =>
   path.basename(file, path.extname(file)).replace(/\.+$/, '')
 
+/**
+ * Основата на снимка, чието име се различава от вече качена САМО по
+ * регистъра: `3_1_img` до `3_1_IMG` става `3_1_img-5d1c0a`.
+ *
+ * Базата различава главни и малки букви, файловата система на Windows —
+ * не. Payload проверява дали името е заето в базата, вижда „свободно" и
+ * записва `3_1_img-400x400.webp` ВЪРХУ `3_1_IMG-400x400.webp` на друг
+ * запис. На 30 септември 2026 Wave 3 (`3_1_img.png`) така подмени
+ * снимките на RIVER 3 Plus/Max/Max Plus (`3_1_IMG.jpg`) — на страниците
+ * на RIVER излязоха снимки на климатика, а записите в базата изглеждаха
+ * цели.
+ *
+ * Наставката е от самата основа, не пореден номер: следващият внос я
+ * пресмята наново и намира записа, без да пита кой е бил пръв.
+ */
+export const caseSafeStem = (stem: string): string =>
+  `${stem}-${createHash('sha1').update(stem).digest('hex').slice(0, 6)}`
+
+/** Основата на име от Медия (без `bareStem`: Payload вече е махнал точките). */
+const mediaFileStem = (filename: string): string => path.basename(filename, path.extname(filename))
+
+type MediaNames = { filename?: string | null; sizes?: unknown }
+
+/** Всички файлове на запис — оригиналът и размерите. */
+export const mediaFileNames = (doc: MediaNames): string[] =>
+  [
+    doc.filename,
+    ...Object.values((doc.sizes ?? {}) as Record<string, { filename?: string | null } | null>).map(
+      (s) => s?.filename,
+    ),
+  ].filter((f): f is string => Boolean(f))
+
+/**
+ * Записите, чиято основа съвпада със `stem`, без да се гледа регистърът.
+ * `like` в SQLite не гледа регистъра на латиницата, а `_` в него е жокер —
+ * затова съвпадението се потвърждава в JavaScript.
+ */
+export const sameStemIgnoringCase = async (payload: Payload, stem: string) => {
+  const found = await payload.find({
+    collection: 'media',
+    where: { filename: { like: `${stem}.` } },
+    limit: 50,
+    depth: 0,
+  })
+  return found.docs.filter(
+    (doc) => doc.filename && mediaFileStem(doc.filename).toLowerCase() === stem.toLowerCase(),
+  )
+}
+
+/**
+ * Прави размерите на снимка със Sharp под основата `stem` — както
+ * `media:regenerate` — и връща картата за полето `sizes`. Размер, който не
+ * може да се направи (по-тясна снимка), просто липсва.
+ */
+export const writeImageSizes = async (
+  payload: Payload,
+  stem: string,
+  данни: Buffer,
+): Promise<Record<string, unknown>> => {
+  const MEDIA_DIR = path.resolve(process.cwd(), 'media')
+  const размери: Record<string, unknown> = {}
+
+  for (const size of payload.collections.media!.config.upload.imageSizes ?? []) {
+    const targetW = size.width ?? null
+    const targetH = size.height ?? null
+    try {
+      let pipeline = sharp(данни)
+        .rotate()
+        .resize({
+          width: targetW ?? undefined,
+          height: targetH ?? undefined,
+          position: size.position,
+          fit: size.fit,
+          withoutEnlargement: size.withoutEnlargement,
+        })
+      const format = size.formatOptions?.format
+      if (format) pipeline = pipeline.toFormat(format, size.formatOptions?.options)
+
+      const { data, info } = await pipeline.toBuffer({ resolveWithObject: true })
+      const име = `${stem}-${info.width}x${info.height}.${info.format}`
+      await fs.writeFile(path.join(MEDIA_DIR, име), data)
+      размери[size.name] = {
+        filename: име,
+        width: info.width,
+        height: info.height,
+        mimeType: `image/${info.format}`,
+        filesize: data.length,
+      }
+    } catch {
+      // Размер, който не може да се направи (по-тясна снимка), просто липсва.
+    }
+  }
+  return размери
+}
+
 /** Номерът, с който се пълнят полетата при проверка — нищо не се записва. */
 const DRY_ID = -1
 
@@ -761,64 +856,50 @@ export const importProduct = async (
     const стар = doc.filename
     if (!стар) return false
 
-    // Основата остава; разширението следва съдържанието на новия файл.
-    const stemНаЗаписа = path.basename(стар, path.extname(стар))
-    const filename = `${stemНаЗаписа}${realExt}`
+    /*
+      Основата остава; разширението следва съдържанието на новия файл.
+
+      Освен ако друг запис има същата основа в друг регистър (`3_1_IMG`
+      до `3_1_img`): на Windows файловете им са едни и същи, затова
+      записът се мести под `caseSafeStem` — иначе подмяната пише върху
+      чуждата снимка.
+    */
+    const stemНаЗаписа = mediaFileStem(стар)
+    const другите = (await sameStemIgnoringCase(payload, stemНаЗаписа)).filter(
+      (d) => d.id !== doc.id,
+    )
+    const stem = другите.length ? caseSafeStem(stemНаЗаписа) : stemНаЗаписа
+    const filename = `${stem}${realExt}`
+    /** Файловете на другите записи — не се трият, в какъвто и регистър да са. */
+    const чужди = new Set(другите.flatMap(mediaFileNames).map((f) => f.toLowerCase()))
 
     if (filename !== стар) {
       // Новото име не бива да е на друг запис — иначе два записа биха делили файл.
-      const зает = await payload.find({
-        collection: 'media',
-        where: { filename: { equals: filename } },
-        limit: 1,
-        depth: 0,
-      })
-      if (зает.docs[0] && зает.docs[0].id !== doc.id) {
+      const зает = (await sameStemIgnoringCase(payload, stem)).find(
+        (d) => d.id !== doc.id && d.filename?.toLowerCase() === filename.toLowerCase(),
+      )
+      if (зает) {
         log(
           `  ⚠ ${file}: преведената снимка е ${realExt.slice(1).toUpperCase()}, но името ` +
-            `${filename} е заето от запис № ${зает.docs[0].id} — не е подменена`,
+            `${filename} е заето от запис № ${зает.id} — не е подменена`,
         )
         return false
       }
-      log(`  · ${file}: форматът се сменя — ${стар} → ${filename} (запис № ${doc.id})`)
+      if (stem !== stemНаЗаписа) {
+        log(
+          `  · ${file}: името се различава само по регистъра от запис № ${другите[0]!.id} ` +
+            `(${другите[0]!.filename}) — записът № ${doc.id} става ${filename}`,
+        )
+      } else {
+        log(`  · ${file}: форматът се сменя — ${стар} → ${filename} (запис № ${doc.id})`)
+      }
     }
 
     const MEDIA_DIR = path.resolve(process.cwd(), 'media')
     await fs.writeFile(path.join(MEDIA_DIR, filename), данни)
 
     const мета = await sharp(данни).metadata()
-    const размери: Record<string, unknown> = {}
-
-    for (const size of payload.collections.media!.config.upload.imageSizes ?? []) {
-      const targetW = size.width ?? null
-      const targetH = size.height ?? null
-      try {
-        let pipeline = sharp(данни)
-          .rotate()
-          .resize({
-            width: targetW ?? undefined,
-            height: targetH ?? undefined,
-            position: size.position,
-            fit: size.fit,
-            withoutEnlargement: size.withoutEnlargement,
-          })
-        const format = size.formatOptions?.format
-        if (format) pipeline = pipeline.toFormat(format, size.formatOptions?.options)
-
-        const { data, info } = await pipeline.toBuffer({ resolveWithObject: true })
-        const име = `${stemНаЗаписа}-${info.width}x${info.height}.${info.format}`
-        await fs.writeFile(path.join(MEDIA_DIR, име), data)
-        размери[size.name] = {
-          filename: име,
-          width: info.width,
-          height: info.height,
-          mimeType: `image/${info.format}`,
-          filesize: data.length,
-        }
-      } catch {
-        // Размер, който не може да се направи (по-тясна снимка), просто липсва.
-      }
-    }
+    const размери = await writeImageSizes(payload, stem, данни)
 
     /*
       Записва се САМО описанието. Файлът не се подава — иначе Payload би
@@ -843,15 +924,16 @@ export const importProduct = async (
       Старите файлове се трият чак СЛЕД записа: ако той падне, записът още
       сочи тях и снимката на сайта не се чупи. Трие се само каквото вече
       не е на записа — оригинал с друго разширение и размери с други
-      пропорции.
+      пропорции — и никога файл, чието име (без регистъра) е на друг запис.
     */
     const пазени = new Set<string>([
       filename,
       ...Object.values(размери).map((р) => (р as { filename: string }).filename),
     ])
-    const стари = [стар, ...Object.values(doc.sizes ?? {}).map((s) => s?.filename)]
-    for (const f of стари) {
-      if (f && !пазени.has(f)) await fs.rm(path.join(MEDIA_DIR, f), { force: true })
+    for (const f of mediaFileNames(doc)) {
+      if (!пазени.has(f) && !чужди.has(f.toLowerCase())) {
+        await fs.rm(path.join(MEDIA_DIR, f), { force: true })
+      }
     }
 
     return true
@@ -887,17 +969,25 @@ export const importProduct = async (
     */
     const stem = mediaStem(file)
 
-    const candidates = await payload.find({
-      collection: 'media',
-      where: { filename: { like: `${stem}.` } },
-      limit: 20,
-      depth: 0,
-    })
+    /*
+      Две основи: самата и тази с наставка за регистъра. Втората е на снимка,
+      качена до друга, чието име се различава само по регистъра
+      (`3_1_img` до `3_1_IMG` на RIVER) — виж `caseSafeStem`.
+    */
+    const безопасна = caseSafeStem(stem)
+    const candidates = [
+      ...(await sameStemIgnoringCase(payload, stem)),
+      ...(await sameStemIgnoringCase(payload, безопасна)),
+    ]
 
-    // `like` хваща и съседни имена, затова съвпадението се потвърждава точно.
-    const match = candidates.docs.find(
-      (doc) => doc.filename && path.basename(doc.filename, path.extname(doc.filename)) === stem,
-    )
+    // Съвпадението е ТОЧНО, с регистъра: `3_1_IMG.jpg` не е `3_1_img.png`.
+    const match =
+      candidates.find((doc) => doc.filename && mediaFileStem(doc.filename) === stem) ??
+      candidates.find((doc) => doc.filename && mediaFileStem(doc.filename) === безопасна)
+    // Друга снимка със същото име в друг регистър — новата се качва с наставка.
+    const регистър = match
+      ? undefined
+      : candidates.find((doc) => doc.filename && mediaFileStem(doc.filename) !== безопасна)
 
     const локален = намериЛокално(file)
 
@@ -1021,10 +1111,17 @@ export const importProduct = async (
       байт по байт. WebP Payload прекарва през Sharp така или иначе.
     */
     const data = await fs.readFile(локален.path)
+    const uploadStem = регистър ? безопасна : stem
+    if (регистър) {
+      log(
+        `  · ${file}: името се различава само по регистъра от ${регистър.filename} ` +
+          `(запис № ${регистър.id}) — качва се като ${uploadStem}${realExt}`,
+      )
+    }
     const doc = await payload.create({
       collection: 'media',
       data: { alt: alt || file },
-      file: { data, name: `${stem}${realExt}`, mimetype: MIME[realExt]!, size: data.length },
+      file: { data, name: `${uploadStem}${realExt}`, mimetype: MIME[realExt]!, size: data.length },
     })
 
     await върниОригинала(doc.filename, data, realExt, file)

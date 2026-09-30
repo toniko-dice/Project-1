@@ -29,6 +29,7 @@ import {
   ORIGINALI_DIR,
   SNIMKI_DIR,
   bareStem,
+  caseSafeStem,
   exists,
   productFolders,
 } from './import-product-core'
@@ -154,7 +155,12 @@ export const updateTranslationQueue = async ({
     стоеше английската снимка — 44 такива на 29 септември 2026.
   */
   const качен = async (превод: string): Promise<boolean> => {
-    for (const файл of вМедия.get(bareStem(превод)) ?? []) {
+    // И под наставката за регистъра — виж `caseSafeStem`.
+    const основа = bareStem(превод)
+    for (const файл of [
+      ...(вМедия.get(основа) ?? []),
+      ...(вМедия.get(caseSafeStem(основа)) ?? []),
+    ]) {
       if (await еднакви(файл, превод)) return true
     }
     return false
