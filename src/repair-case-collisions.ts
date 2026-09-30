@@ -112,6 +112,12 @@ for (const id of new Set(двойки.values())) {
   for (const f of размери) await fs.rm(path.join(MEDIA_DIR, f), { force: true })
   if (RESTORE_DIR && наличие.every(Boolean)) {
     for (const f of размери) await fs.copyFile(path.join(RESTORE_DIR, f), path.join(MEDIA_DIR, f))
+    /*
+      Празен запис — само за ново `updatedAt`. Адресът на снимката носи
+      `?v=<updatedAt>`; без него браузър, заредил страницата със
+      сгрешената снимка, продължава да я показва от кеша.
+    */
+    await payload.update({ collection: 'media', id, data: {}, depth: 0 })
     върнати.push(`${размери.length} размера от архива`)
   } else {
     const данни = await fs.readFile(path.join(MEDIA_DIR, main))
