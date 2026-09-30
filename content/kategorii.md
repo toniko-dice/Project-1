@@ -30,6 +30,7 @@
 
 - STREAM серия | stream-seriya | панелът „Серия EcoFlow STREAM“; Ultra, Ultra X, AC Pro, батерии STREAM
 - Микроинвертори и монтаж за балкон | mikroinvertori-i-montazh | PowerStream, крепежи за балкон
+- Свързване към ел. таблото | svarzvane-kam-el-tabloto |
 - PowerOcean | powerocean | само ако dice.bg го продава
 
 ## 3. Соларни панели | solarni-paneli | в лентата

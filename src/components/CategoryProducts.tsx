@@ -78,10 +78,13 @@ export const CategoryProducts = ({
       const ids = new Set(раздел.ids)
       карта.set(
         раздел.slug,
-        products.filter((p) => {
-          const id = typeof p.category === 'number' ? p.category : p.category?.id
-          return typeof id === 'number' && ids.has(id)
-        }),
+        // Основната категория или някоя от „Покажи и в".
+        products.filter((p) =>
+          [p.category, ...(p.alsoInCategories ?? [])].some((c) => {
+            const id = typeof c === 'number' ? c : c?.id
+            return typeof id === 'number' && ids.has(id)
+          }),
+        ),
       )
     }
     if (accessories.length) карта.set(АКСЕСОАРИ, accessories)

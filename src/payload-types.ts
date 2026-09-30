@@ -582,6 +582,10 @@ export interface Product {
   barcodeInternal?: string | null;
   category: number | Category;
   /**
+   * По избор. Продуктът излиза и в списъците на тези категории. Адресът и трохите остават по основната.
+   */
+  alsoInCategories?: (number | Category)[] | null;
+  /**
    * Попълва се само — взима се от избраната по-горе категория.
    */
   categoryName?: string | null;
@@ -2045,6 +2049,7 @@ export interface ProductsSelect<T extends boolean = true> {
   ean2?: T;
   barcodeInternal?: T;
   category?: T;
+  alsoInCategories?: T;
   categoryName?: T;
   categorySlug?: T;
   categoryParentSlug?: T;

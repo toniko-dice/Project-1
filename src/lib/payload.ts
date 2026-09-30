@@ -228,6 +228,10 @@ export const categoryBranchIds = (tree: Category[], rootId: number): number[] =>
  * Страницата на серия показва продуктите от подсериите си, а главната —
  * от всички серии. Събира се с ЕДНА заявка по списък с номера, не с по
  * една заявка на ниво.
+ *
+ * Влизат и продуктите, които имат категорията в „Покажи и в"
+ * (`alsoInCategories`). Една заявка с `or` — продукт, който отговаря и на
+ * двете, излиза веднъж.
  */
 export const getCategoryProducts = cache(async (slug: string, ids: number[]) =>
   timed(`getCategoryProducts(${slug})`, () =>
@@ -240,7 +244,10 @@ export const getCategoryProducts = cache(async (slug: string, ids: number[]) =>
         const result = await payload.find({
           collection: 'products',
           where: {
-            and: [{ category: { in: ids } }, { _status: { equals: 'published' } }],
+            and: [
+              { or: [{ category: { in: ids } }, { alsoInCategories: { in: ids } }] },
+              { _status: { equals: 'published' } },
+            ],
           },
           sort: ['_order', 'title'],
           pagination: false,
@@ -304,6 +311,45 @@ export const getCompatibleAccessories = cache(
           )
         },
       ),
+    ),
+)
+
+export type CompatibilityLinks = {
+  id: number
+  categories: number[]
+  products: number[]
+}
+
+/**
+ * Кой публикуван продукт с какво е съвместим — за раздела „Аксесоари" в
+ * менюто.
+ *
+ * Само номерата: една лека заявка за целия каталог, не по една на панел.
+ * Хедърът решава кои аксесоари са за кой панел и дотегля картите им с
+ * `getProductsByIds`.
+ */
+export const getCompatibilityLinks = cache(
+  async (): Promise<CompatibilityLinks[]> =>
+    timed('getCompatibilityLinks', () =>
+      cached(['compatibility-links'], ['menu', 'product'], async () => {
+        const payload = await getPayloadClient()
+        const result = await payload.find({
+          collection: 'products',
+          where: { _status: { equals: 'published' } },
+          select: { compatibleWith: true },
+          pagination: false,
+          depth: 0,
+        })
+        return result.docs.flatMap((doc) => {
+          const links: CompatibilityLinks = { id: doc.id, categories: [], products: [] }
+          for (const rel of doc.compatibleWith ?? []) {
+            const id = typeof rel.value === 'number' ? rel.value : rel.value?.id
+            if (typeof id !== 'number') continue
+            ;(rel.relationTo === 'categories' ? links.categories : links.products).push(id)
+          }
+          return links.categories.length || links.products.length ? [links] : []
+        })
+      }),
     ),
 )
 

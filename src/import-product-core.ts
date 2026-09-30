@@ -1285,8 +1285,14 @@ export const importProduct = async (
   const {
     categorySlug: _drop,
     compatibleWithSlugs,
+    compatibleWith: compatibleWithList,
+    alsoInCategories: alsoInSlugs,
     ...productFields
   } = content.produkt as Record<string, unknown>
+
+  /** Списък от слъгове; всичко друго — празен. */
+  const слъгове = (v: unknown): string[] =>
+    Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : []
 
   /* ─────────── съвместимост ─────────── */
 
@@ -1295,12 +1301,15 @@ export const importProduct = async (
    *
    * Аксесоарът не се слага в подкатегория „за DELTA" — казва с кои серии и
    * модели работи и се появява сам на страницата на серията, в „Свързани
-   * продукти" на модела и в панела на менюто.
+   * продукти" на модела и в раздела „Аксесоари" в менюто.
+   *
+   * Ключът е `compatibleWith` (или по-старото `compatibleWithSlugs`).
+   * Слъг, който още го няма, се прескача с предупреждение: продуктът може
+   * да се внесе по-късно, а следващият внос дописва връзката.
    */
   const compatibleWith: { relationTo: 'categories' | 'products'; value: number }[] = []
 
-  for (const other of Array.isArray(compatibleWithSlugs) ? compatibleWithSlugs : []) {
-    if (typeof other !== 'string') continue
+  for (const other of [...слъгове(compatibleWithSlugs), ...слъгове(compatibleWithList)]) {
 
     const кат = await payload.find({
       collection: 'categories',
@@ -1326,7 +1335,33 @@ export const importProduct = async (
     }
 
     missingFiles.push(`съвместимост: няма категория или продукт „${other}"`)
-    log(`  ⚠ „Съвместим с": няма категория или продукт „${other}"`)
+    log(`  ⚠ „Съвместим с": няма категория или продукт „${other}" — прескочен`)
+  }
+
+  /* ─────────── „Покажи и в" ─────────── */
+
+  /*
+    Допълнителни категории — само за списъците; адресът остава по
+    `categorySlug`. Липсва ли ключът, полето не се пипа (собственикът може
+    да го е попълнил в админа). Празен списък го изчиства.
+  */
+  let alsoInCategories: number[] | undefined
+  if (alsoInSlugs !== undefined) {
+    alsoInCategories = []
+    for (const slug of слъгове(alsoInSlugs)) {
+      const кат = await payload.find({
+        collection: 'categories',
+        where: { slug: { equals: slug } },
+        limit: 1,
+        depth: 0,
+      })
+      if (кат.docs[0]) {
+        alsoInCategories.push(кат.docs[0].id)
+      } else {
+        missingFiles.push(`„Покажи и в": няма категория „${slug}"`)
+        log(`  ⚠ „Покажи и в": няма категория „${slug}" — прескочена`)
+      }
+    }
   }
 
   const data = {
@@ -1337,6 +1372,7 @@ export const importProduct = async (
     specGroups: content.specGroups ?? [],
     sections,
     ...(compatibleWith.length ? { compatibleWith } : {}),
+    ...(alsoInCategories ? { alsoInCategories } : {}),
   } as Record<string, unknown>
 
   const existingProduct = await payload.find({
@@ -1366,9 +1402,6 @@ export const importProduct = async (
   let action: ImportAction
   let publishError: string | null = null
   let menu: string[] = []
-  const compatibleCategoryIds = compatibleWith
-    .filter((c) => c.relationTo === 'categories')
-    .map((c) => c.value)
   // Полетата на реда в менюто — от продукта; етикетът остава празен.
   const карта = {
     title: (content.produkt.title as string | undefined) ?? null,
@@ -1424,7 +1457,6 @@ export const importProduct = async (
         productId: DRY_ID,
         card: карта,
         categoryId,
-        compatibleCategoryIds,
         dryRun: true,
       })
       for (const ред of menu) log(`  ${ред}`)
@@ -1514,7 +1546,6 @@ export const importProduct = async (
       productId: created.id,
       card: карта,
       categoryId,
-      compatibleCategoryIds,
       dryRun: false,
     })
     for (const ред of menu) log(`  ${ред}`)
@@ -1564,8 +1595,9 @@ export const importProduct = async (
  *   родителската серия, после главната. Най-близката, не първата срещната:
  *   „Аксесоари" (главна) и „Кабели" (под нея) и двете съдържат кабела,
  *   а мястото му е в „Кабели". При равенство — първата по реда в менюто;
- * - плюс във всяка секция „Аксесоари по съвместимост", чиято категория
- *   (или подкатегория под нея) е в „Съвместим с" на продукта;
+ * - никога в раздел „Аксесоари" (отметката `accessories`): празният се
+ *   пълни сам от „Съвместим с" (`Header.tsx`), а ред от вноса би го
+ *   направил ръчен и би спрял попълването;
  * - САМО в панели, които са в менюто. Стари панели извън него имат секции
  *   със същите категории и иначе новият продукт отиваше там, където никой
  *   не го вижда.
@@ -1576,13 +1608,11 @@ export const addToMenuPanels = async (
     productId,
     card,
     categoryId,
-    compatibleCategoryIds,
     dryRun,
   }: {
     productId: number
     card: { title: string | null; specLine: string | null; image: number | null }
     categoryId: number
-    compatibleCategoryIds: number[]
     dryRun: boolean
   },
 ): Promise<string[]> => {
@@ -1647,22 +1677,6 @@ export const addToMenuPanels = async (
     })
   })
   if (най) цели.push(най)
-
-  // Секциите „Аксесоари по съвместимост".
-  if (compatibleCategoryIds.length) {
-    const съвместими = compatibleCategoryIds.map(нагоре)
-    panels.forEach((panel, panelIndex) => {
-      ;(panel.sections ?? []).forEach((section, sectionIndex) => {
-        if (!section.accessories) return
-        const c = section.viewAllCategory
-        const id = typeof c === 'number' ? c : c?.id
-        if (typeof id !== 'number') return
-        if (съвместими.some((верига) => верига.includes(id))) {
-          цели.push({ panelIndex, sectionIndex })
-        }
-      })
-    })
-  }
 
   if (!цели.length) {
     return [
