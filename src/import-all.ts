@@ -152,8 +152,18 @@ for (const [i, folder] of папки.entries()) {
       Отбелязва се и се продължава; таблицата накрая я показва.
     */
     const текст = err instanceof ImportError ? err.message : ((err as Error)?.message ?? String(err))
-    редове.push({ folder, грешка: текст.split('\n')[0] })
-    console.log(`    ✗ ${текст.split('\n')[0]}`)
+    /*
+      Причината отдолу. Drizzle казва само „Failed query: <заявката>", а
+      истинското („SQLITE_BUSY: database is locked") е в `cause`. На
+      1 октомври 2026 43 продукта паднаха с „delete from
+      payload_locked_documents where false" — заявка, която не може да
+      сгреши сама; базата беше заета от dev сървъра (т. 17).
+    */
+    const причина = (err as { cause?: { message?: string; code?: string } })?.cause
+    const отдолу = причина?.message ?? причина?.code
+    const ред = текст.split('\n')[0] + (отдолу ? ` — ${отдолу.split('\n')[0]}` : '')
+    редове.push({ folder, грешка: ред })
+    console.log(`    ✗ ${ред}`)
   }
   console.log('')
 }
