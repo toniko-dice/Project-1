@@ -1,0 +1,400 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "https://eu.ecoflow.com/products/rapid-pro-desktop-charger-320w",
+  "produkt": {
+    "title": "EcoFlow RAPID Pro Desktop Charger (320W, 5 Ports, GaN)",
+    "slug": "rapid-pro-desktop-charger-320w",
+    "categorySlug": "zaryadni-ustroystva",
+    "productType": "accessory",
+    "tagline": "Настолно зарядно 320W, 6 в 1, с GaN технология",
+    "badge": "none",
+    "price": 139,
+    "compareAtPrice": 163.1,
+    "externalUrl": "https://dice.bg/zahranvane-za-el-mrezha-za-laptopi-smartfoni-i-tableti-s-1xusb-a-i-4xusb-c-izhodi-ecoflow-rapid-pro-gan-desktop-charger-320w-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "73055",
+    "ean": "4895251646376",
+    "description": "Настолно зарядно 320W с GaN технология: 4 × USB-C, 1 × USB-A и Pogo Pin за външните батерии RAPID Pro — до 6 устройства наведнъж, до 140W на порт, 3,02-инчов дисплей и управление от приложението.",
+    "highlights": [
+      {
+        "text": "140W (макс.) на един порт"
+      },
+      {
+        "text": "6 в 1 — до 6 устройства наведнъж"
+      },
+      {
+        "text": "Управление на мощността от приложението"
+      },
+      {
+        "text": "Защита с 10 милиона температурни проверки на ден"
+      },
+      {
+        "text": "Компактен дизайн с GaN технология"
+      },
+      {
+        "text": "До 320W за ултрабързо зареждане"
+      }
+    ],
+    "metaTitle": "EcoFlow RAPID Pro Desktop Charger 320W | EcoFlow България",
+    "metaDescription": "Настолно зарядно EcoFlow RAPID Pro 320W — 5 порта + Pogo Pin, до 140W на порт, зарежда RAPID Pro до 80% за 20 мин.",
+    "compatibleWith": [
+      "rapid-pro-x-power-bank",
+      "rapid-pro-power-bank-27650",
+      "rapid-pro-power-bank-20000"
+    ],
+    "alsoInCategories": [
+      "vanshni-baterii-rapid"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-rapid-pro-desktop-charger-320w-5-ports-gan-1170604004.png",
+      "alt": "EcoFlow RAPID Pro Desktop Charger (320W, 5 Ports, GaN) — настолно зарядно"
+    },
+    {
+      "file": "ecoflow-rapid-pro-desktop-charger-320w-5-ports-gan-1170604003.png",
+      "alt": "EcoFlow RAPID Pro Desktop Charger (320W, 5 Ports, GaN) — настолно зарядно"
+    },
+    {
+      "file": "ecoflow-rapid-pro-desktop-charger-320w-5-ports-gan-1170604002.png",
+      "alt": "EcoFlow RAPID Pro Desktop Charger (320W, 5 Ports, GaN) — настолно зарядно"
+    },
+    {
+      "file": "ecoflow-rapid-pro-desktop-charger-320w-5-ports-gan-1170604001.png",
+      "alt": "EcoFlow RAPID Pro Desktop Charger (320W, 5 Ports, GaN) — настолно зарядно"
+    },
+    {
+      "file": "ecoflow-rapid-pro-desktop-charger-320w-5-ports-gan-1170604000.png",
+      "alt": "EcoFlow RAPID Pro Desktop Charger (320W, 5 Ports, GaN) — настолно зарядно"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Системата за зареждане EcoFlow RAPID Pro",
+      "body": "",
+      "image": "pc_ksp_eu_e711811c-1843-4734-8c19-4854abbb6e12.jpg",
+      "imageAlt": "Основните предимства на настолното зарядно"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "layout": "tabs-top",
+      "heading": "Ключови предимства",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "GaN технология",
+          "image": "pc_GaN_Technology_eu.jpg",
+          "imageAlt": "GaN технология",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "6 в 1, компактен дизайн",
+          "image": "pc_6-in-1_Compact_Design_eu.jpg",
+          "imageAlt": "6 в 1, компактен дизайн",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Висока безопасност",
+          "image": "pc_Superior_Safety_eu_20debb50-e35f-4b6a-829d-a2eeccb94a67.jpg",
+          "imageAlt": "Висока безопасност",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Умен дисплей",
+          "image": "pc_Smart_Display_eu_c13cf79a-8809-4426-abac-a38d3212328e.jpg",
+          "imageAlt": "Умен дисплей",
+          "caption": "",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "layout": "tabs-top",
+      "heading": "Управление и персонализация от приложението",
+      "intro": "* Функцията предстои.",
+      "tabs": [
+        {
+          "label": "Управление на мощността",
+          "image": "pc_app_eu_9b06dc52-1bc5-4caf-8d8c-74fd07df844a.jpg",
+          "imageAlt": "Управление на мощността",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Екран",
+          "image": "pc_screen.jpg",
+          "imageAlt": "Екран",
+          "caption": "",
+          "rows": []
+        }
+      ],
+      "anchorLabel": "Приложение"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "layout": "tabs-top",
+      "heading": "6 в 1 — умно, мощно настолно зарядно за много устройства",
+      "intro": "По-ефективна работа и подреден работен плот.",
+      "tabs": [
+        {
+          "label": "Забавления",
+          "image": "pc__02_09df7b0e-d34e-451c-b842-77c48138b87a.jpg",
+          "imageAlt": "Забавления",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "В офиса",
+          "image": "pc__01_4be8fba1-70d6-422d-8326-58043efe1a01.jpg",
+          "imageAlt": "В офиса",
+          "caption": "",
+          "rows": []
+        }
+      ],
+      "anchorLabel": "Приложения"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "layout": "tabs-top",
+      "heading": "Режими на разпределение на мощността",
+      "intro": "Съвместимо с 99% от ежедневните електронни устройства.\n* Конкретните съвместими модели вижте във въпросите по-долу.",
+      "tabs": [
+        {
+          "label": "Един порт",
+          "image": "pc_320W-ports_01.jpg",
+          "imageAlt": "Един порт",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Няколко порта",
+          "image": "pc_320W-ports_02.jpg",
+          "imageAlt": "Няколко порта",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Умна мощност*",
+          "image": "pc_320W-ports_03.jpg",
+          "imageAlt": "Умна мощност*",
+          "caption": "Включете режима „Умна мощност“ в приложението. Когато се зареждат няколко устройства наведнъж, всеки порт сам разпознава нуждата на уреда и му дава мощност, без да надвишава своя максимум и общия лимит от 320W.",
+          "rows": []
+        },
+        {
+          "label": "Персонална мощност*",
+          "image": "pc_320W-ports_04.jpg",
+          "imageAlt": "Персонална мощност*",
+          "caption": "Настройте ръчно изходната мощност на всеки порт от приложението според уреда и нуждите си.\n* Функцията предстои.",
+          "rows": []
+        }
+      ],
+      "anchorLabel": "Портове"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Енергия за нов свят",
+      "body": "",
+      "image": "pc_About_EcoFlow_eu_13a918d0-cf23-48b3-9ee3-8af9b730a4f9.jpg",
+      "imageAlt": "За EcoFlow"
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "faqBlock",
+      "anchorLabel": "Въпроси",
+      "heading": "Често задавани въпроси",
+      "items": [
+        {
+          "question": "Нормално ли е зарядното да се загрява?",
+          "answer": "Да — при голяма мощност повърхността се затопля. Устройството има няколко вградени защити и може да се ползва спокойно."
+        },
+        {
+          "question": "Кои устройства са съвместими?",
+          "answer": "Лаптопи, телефони, таблети, слушалки, смарт часовници, конзоли и други устройства с USB-C или USB-A — например MacBook Pro/Air, iPhone, iPad, Dell XPS и Samsung Galaxy."
+        },
+        {
+          "question": "Какво е зареждането през Pogo Pin? Безопасно ли е?",
+          "answer": "Pogo Pin е магнитна контактна връзка, която често се ползва при модулни устройства — ефективно, безопасно и стабилно зареждане."
+        },
+        {
+          "question": "Защо мощността, напрежението и токът на екрана се различават от тези в приложението?",
+          "answer": "Данните в приложението се изпращат към облака през определени интервали, затова може да има разлика заради момента на отчитане."
+        },
+        {
+          "question": "Може ли да се ползва веднага след разопаковане?",
+          "answer": "Да, включвате и работи. Тъй като функциите постоянно се подобряват, препоръчваме да го свържете с приложението и да обновите фърмуера."
+        },
+        {
+          "question": "Защо не получавам 140W от един порт?",
+          "answer": "Проверете дали ползвате правилния порт (само C1 и C2 дават до 140W), дали протоколът съвпада, дали устройството не е прегряло и дали батерията му не е почти пълна."
+        },
+        {
+          "question": "Как да свържа зарядното с приложението EcoFlow през Wi-Fi/Bluetooth?",
+          "answer": "На екрана на зарядното изберете „Settings“ > „Wi-Fi & BLE“ и включете превключвателя. На телефона включете Bluetooth. После добавете зарядното в приложението и следвайте указанията."
+        }
+      ]
+    },
+    {
+      "blockType": "footnotes",
+      "items": [
+        {
+          "text": "* Функцията предстои."
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Размери",
+          "value": "121 × 111,8 × 50 мм"
+        },
+        {
+          "label": "Нето тегло",
+          "value": "885 г"
+        },
+        {
+          "label": "Цвят",
+          "value": "сребрист"
+        },
+        {
+          "label": "Изходи",
+          "value": "4 × USB-C, 1 × USB-A, Pogo Pin — общо 320W"
+        },
+        {
+          "label": "USB-A изход",
+          "value": "30W"
+        },
+        {
+          "label": "USB-C изходи",
+          "value": "C1/C2: 140W; C3: 65W; C4: 30W"
+        },
+        {
+          "label": "Приложение",
+          "value": "да"
+        },
+        {
+          "label": "Дисплей",
+          "value": "LCD"
+        },
+        {
+          "label": "Устойчивост на падане",
+          "value": "76 см"
+        },
+        {
+          "label": "Негорим корпус",
+          "value": "V0"
+        },
+        {
+          "label": "Гаранция",
+          "value": "2 години"
+        },
+        {
+          "label": "Температура при зареждане",
+          "value": "20 °C – 30 °C"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EF-STATION320W-EU"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-desktop-charger-320w-5-ports-gan-1170604004.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-desktop-charger-320w-5-ports-gan-1170604003.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-desktop-charger-320w-5-ports-gan-1170604002.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-desktop-charger-320w-5-ports-gan-1170604001.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-desktop-charger-320w-5-ports-gan-1170604000.png"
+    ],
+    "sekcii": [
+      "https://eu.ecoflow.com/cdn/shop/files/pc_320W-ports_01.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_320W-ports_02.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_320W-ports_03.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_320W-ports_04.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_6-in-1_Compact_Design_eu.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_About_EcoFlow_eu_13a918d0-cf23-48b3-9ee3-8af9b730a4f9.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_GaN_Technology_eu.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Smart_Display_eu_c13cf79a-8809-4426-abac-a38d3212328e.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Superior_Safety_eu_20debb50-e35f-4b6a-829d-a2eeccb94a67.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc__01_4be8fba1-70d6-422d-8326-58043efe1a01.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc__02_09df7b0e-d34e-451c-b842-77c48138b87a.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_app_eu_9b06dc52-1bc5-4caf-8d8c-74fd07df844a.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_ksp_eu_e711811c-1843-4734-8c19-4854abbb6e12.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_screen.jpg"
+    ]
+  },
+  "_prevod_nadpisi": {
+    "pc_ksp_eu_e711811c-1843-4734-8c19-4854abbb6e12.jpg": {
+      "320W Max Output": "320W макс. изходна мощност",
+      "140W Max USB-C Power": "140W макс. от USB-C",
+      "6-in-1 Multi-Device Ultra-Powerful Desktop Charger": "6 в 1 — мощно настолно зарядно за много устройства",
+      "Smart Power Control via the EcoFlow App": "Умно управление на мощността от приложението EcoFlow",
+      "Superior and Safe Performance with EcoFlow X-CORE 3.0": "Висока и безопасна производителност с EcoFlow X-CORE 3.0",
+      "Powerful and Compact Design with GaN Technology": "Мощен и компактен дизайн с GaN технология",
+      "Smart LCD Screen Display": "Умен LCD екран"
+    },
+    "pc_GaN_Technology_eu.jpg": {
+      "Powerful and Compact Design with GaN Technology EcoFlow RAPID Pro Multi-device Fast Charging Desktop Station": "Мощен и компактен дизайн с GaN технология — настолна станция EcoFlow RAPID Pro за бързо зареждане на много устройства",
+      "Same Power, Smaller Size": "Същата мощност, по-малък размер"
+    },
+    "pc_6-in-1_Compact_Design_eu.jpg": {
+      "Power up to 6 devices (including EcoFlow RAPID Pro Power Banks) simultaneously.": "Зарежда до 6 устройства наведнъж (включително външните батерии EcoFlow RAPID Pro).",
+      "Recharge EcoFlow RAPID Pro 27k Power Bank to 80% in 20 minutes.": "Зарежда EcoFlow RAPID Pro 27k до 80% за 20 минути.",
+      "Charge multiple devices with the same fast charging for all.": "Бързо зареждане за всички устройства едновременно.",
+      "5 ports (4C/1A)": "5 порта (4C/1A)",
+      "140W single-port output": "140W от един порт",
+      "320W pogo-pin port¹": "320W през Pogo Pin¹"
+    },
+    "pc_Superior_Safety_eu_20debb50-e35f-4b6a-829d-a2eeccb94a67.jpg": {
+      "Advanced protection for maximum performance": "Модерна защита за максимална производителност",
+      "Protected by EcoFlow's X-GUARD": "Защитено от EcoFlow X-GUARD",
+      "EcoFlow RAPID Pro maintains its fast charging levels with around-the-clock safety checks. Its temperature sensor tests and adjusts for overheating up to 10 million times every day while intelligent BMS and EMS systems keep the rest running smoothly.": "EcoFlow RAPID Pro запазва бързото зареждане с денонощни проверки за безопасност. Температурният сензор проверява и коригира прегряване до 10 милиона пъти на ден, а интелигентните системи BMS и EMS се грижат за всичко останало."
+    },
+    "pc_Smart_Display_eu_c13cf79a-8809-4426-abac-a38d3212328e.jpg": {
+      "Smart, High-definition 3.02-inch LCD Screen": "Умен LCD екран 3,02 инча с висока резолюция",
+      "Power data visualization": "Данни за мощността",
+      "Standby clock theme settings": "Часовник в режим на готовност",
+      "Power status animation": "Анимация на състоянието"
+    },
+    "pc_app_eu_9b06dc52-1bc5-4caf-8d8c-74fd07df844a.jpg": {
+      "Monitor": "Наблюдение",
+      "Discharging power/voltage/current, historical usage data (weekly, monthly, yearly), and output.": "Мощност, напрежение и ток, история на използването (седмица, месец, година) и изход.",
+      "Control": "Управление",
+      "Enable Healthy Charging Mode and adjust strategy.": "Включете режима за щадящо зареждане и настройте стратегията.",
+      "Battery Optimization Mode*": "Оптимизация на батерията*",
+      "Enable while charging to extend the battery life of charging devices.": "Включете при зареждане, за да удължите живота на батериите на устройствата."
+    },
+    "pc_screen.jpg": {
+      "Updating firmware": "Обновяване на фърмуера",
+      "Restoring...": "Възстановяване…",
+      "C1 PORT": "ПОРТ C1",
+      "Fast Discharging": "Бързо разреждане"
+    }
+  },
+  "_neyasni": [
+    "Направено като eu.ecoflow.com (по твое решение). Спецификациите са на EcoFlow (dice.bg няма таблица).",
+    "Дисплеят е 3,02 инча (EcoFlow), dice.bg пише 3 инча.",
+    "Блокът „За EcoFlow“ ползва вече преведената обща снимка от RAPID Pro.",
+    "„Съвместим с“ = трите външни батерии RAPID Pro (EcoFlow: Pogo Pin само за тях) → излиза като аксесоар при тях. Показва се и в „Външни батерии Rapid“.",
+    "В dice.bg: Налично на склад (проверено 01.10.2026)."
+  ]
+}

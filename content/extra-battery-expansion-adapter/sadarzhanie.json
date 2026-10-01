@@ -1,0 +1,114 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Extra Battery Expansion Adapter",
+    "slug": "extra-battery-expansion-adapter",
+    "categorySlug": "adapteri",
+    "productType": "accessory",
+    "tagline": "Адаптер за две допълнителни батерии към DELTA 3 Max Plus / Ultra Plus",
+    "badge": "none",
+    "price": 249,
+    "externalUrl": "https://dice.bg/adapter-za-sv-rzvane-na-dve-ecoflow-delta-3-smart-extra-baterii-k-m-ecoflow-delta-3-max-plus-ilidelta-3-ultra-plus-ecoflow-extra-battery-expansion-adapter-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "78454",
+    "ean": "4895251665834",
+    "description": "Оригинален адаптер, който свързва EcoFlow DELTA 3 Max Plus или DELTA 3 Ultra Plus с две допълнителни батерии през порта за допълнителна батерия отзад.",
+    "highlights": [
+      {
+        "text": "Две допълнителни батерии към един порт"
+      },
+      {
+        "text": "За DELTA 3 Max Plus и DELTA 3 Ultra Plus"
+      },
+      {
+        "text": "Оригинален адаптер EcoFlow"
+      }
+    ],
+    "metaTitle": "EcoFlow Extra Battery Expansion Adapter | EcoFlow България",
+    "metaDescription": "Оригинален адаптер, който свързва EcoFlow DELTA 3 Max Plus или DELTA 3 Ultra Plus с две допълнителни батерии през порта за допълнителна батерия отзад.",
+    "compatibleWith": [
+      "delta-3-max-plus",
+      "delta-3-ultra-plus"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "4895251665834-1.webp",
+      "alt": "EcoFlow Extra Battery Expansion Adapter — адаптер"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Две батерии вместо една",
+      "body": "Оригиналният адаптер свързва EcoFlow DELTA 3 Max Plus или DELTA 3 Ultra Plus с две допълнителни батерии през порта за допълнителна батерия отзад — повече общ капацитет за електроцентралата.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Extra Battery Expansion Adapter",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Extra Battery Expansion Adapter"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFD3MP-EB-1T2"
+        },
+        {
+          "label": "Електроцентрали",
+          "value": "EcoFlow DELTA 3 Max Plus, DELTA 3 Ultra Plus"
+        },
+        {
+          "label": "Допълнителни батерии",
+          "value": "DELTA 3 Max Plus Smart Extra Battery, DELTA Pro 3 Smart Extra Battery, DELTA 3 Smart Extra Battery"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/4/8/4895251665834-1.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Продуктът го няма в eu.ecoflow.com — по dice.bg.",
+    "В dice.bg заглавието казва „две DELTA 3 Smart Extra батерии“, а съвместимостта изброява и DELTA 3 Max Plus и DELTA Pro 3 Smart Extra Battery — записано е както е.",
+    "В dice.bg: Налично на склад (проверено 01.10.2026)."
+  ]
+}

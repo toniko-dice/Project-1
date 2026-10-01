@@ -1,0 +1,307 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "https://eu.ecoflow.com/products/rapid-pro-100w-multi-functional-charger-3-ports-usb-c-power-delivery",
+  "produkt": {
+    "title": "EcoFlow RAPID Pro Charger (100W, 3 Ports, GaN)",
+    "slug": "rapid-pro-charger-100w",
+    "categorySlug": "zaryadni-ustroystva",
+    "productType": "accessory",
+    "tagline": "Зарядно за контакт 100W, 3 порта, GaN",
+    "badge": "none",
+    "price": 39,
+    "compareAtPrice": 60.84,
+    "externalUrl": "https://dice.bg/zahranvane-za-el-mrezha-za-laptopi-smartfoni-i-tableti-s-2xusb-c-i-1xusb-a-izhodi-ecoflow-rapid-pro-gan-wall-charger-100w-t-mnosiv",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "73053",
+    "ean": "4895251641449",
+    "description": "Компактно зарядно за контакт 100W с GaN технология — 2 × USB-C и 1 × USB-A, зарежда 3 устройства наведнъж, сгъваем щепсел, защита X-GUARD.",
+    "highlights": [
+      {
+        "text": "Зарежда 3 устройства наведнъж"
+      },
+      {
+        "text": "Сигурно стои в контакта — не пада по време на зареждане"
+      },
+      {
+        "text": "Компактно и удобно за път — 55,5 × 46,6 × 40,6 мм"
+      },
+      {
+        "text": "До 100W от един USB-C"
+      }
+    ],
+    "metaTitle": "EcoFlow RAPID Pro Charger 100W GaN | EcoFlow България",
+    "metaDescription": "Зарядно EcoFlow RAPID Pro 100W с GaN — 3 порта, до 100W от един USB-C, компактно и със сгъваем щепсел.",
+    "compatibleWith": [
+      "vanshni-baterii-rapid"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-rapid-pro-charger-100w-3-ports-gan-1171105538.png",
+      "alt": "EcoFlow RAPID Pro Charger (100W, 3 Ports, GaN) — зарядно 100W"
+    },
+    {
+      "file": "ecoflow-rapid-pro-charger-100w-3-ports-gan-1171105537.png",
+      "alt": "EcoFlow RAPID Pro Charger (100W, 3 Ports, GaN) — зарядно 100W"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "tabbedShowcase",
+      "layout": "tabs-top",
+      "heading": "Ключови предимства",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Портативно с GaN технология",
+          "image": "pc_GaN_Technology_eu_ac2291f5-b5ba-4fa8-b9e9-ccff2aa6da00.jpg",
+          "imageAlt": "Портативно с GaN технология",
+          "caption": "Компактният дизайн се вписва навсякъде, без да заема място и без да пречи на други устройства — около 44% по-малко от захранването Apple 96W USB-C.",
+          "rows": []
+        },
+        {
+          "label": "3 в 1 — зарядно с много портове",
+          "image": "pc_Multi-plug_Charger_eu_8488ab5f-9617-4069-a809-71d0590b2599.jpg",
+          "imageAlt": "3 в 1 — зарядно с много портове",
+          "caption": "Когато зарежда няколко устройства, разпределя мощността според нуждите на всяко — ефективно, стабилно и безопасно.",
+          "rows": []
+        },
+        {
+          "label": "Висока стабилност",
+          "image": "pc_Advanced_Stability_6324e13c-6f7c-4c9a-af88-116881986a9c.jpg",
+          "imageAlt": "Висока стабилност",
+          "caption": "Включено в контакта, издържа товар до 0,6 кг, без да падне, и 10 употреби на ден без деформация. Щепселът издържа 25 000 включвания и изключвания без износване.",
+          "rows": []
+        },
+        {
+          "label": "Висока безопасност",
+          "image": "pc_ksp_eu-1.jpg",
+          "imageAlt": "Висока безопасност",
+          "caption": "",
+          "rows": []
+        }
+      ],
+      "anchorLabel": "Преглед"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "layout": "tabs-top",
+      "heading": "Енергия за живота — винаги и навсякъде",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Работа от разстояние",
+          "image": "pc__01_1a22ee01-93aa-4a8a-83ba-5ffd5bcdbe0a.jpg",
+          "imageAlt": "Работа от разстояние",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "В офиса",
+          "image": "pc__02_c38023cc-4e1d-4f6c-a040-aee970d8df47.jpg",
+          "imageAlt": "В офиса",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Пътуване",
+          "image": "pc__04_4682b1e6-6bc1-4543-9f30-768ca2cf52de.jpg",
+          "imageAlt": "Пътуване",
+          "caption": "",
+          "rows": []
+        }
+      ],
+      "anchorLabel": "Приложения"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "layout": "tabs-top",
+      "heading": "Зарежда 3 устройства наведнъж",
+      "intro": "Съвместимо с 99% от ежедневните електронни устройства.\n* Конкретните съвместими модели вижте във въпросите по-долу.",
+      "tabs": [
+        {
+          "label": "Един порт",
+          "image": "pc_100W_Charger_port_01.jpg",
+          "imageAlt": "Един порт",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Два порта",
+          "image": "pc_100W_Charger_port_02.jpg",
+          "imageAlt": "Два порта",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Три порта",
+          "image": "pc_100W_Charger_port_03.jpg",
+          "imageAlt": "Три порта",
+          "caption": "",
+          "rows": []
+        }
+      ],
+      "anchorLabel": "Портове"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Енергия за нов свят",
+      "body": "",
+      "image": "pc_About_EcoFlow_eu_13a918d0-cf23-48b3-9ee3-8af9b730a4f9.jpg",
+      "imageAlt": "За EcoFlow"
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "faqBlock",
+      "anchorLabel": "Въпроси",
+      "heading": "Често задавани въпроси",
+      "items": [
+        {
+          "question": "Нормално ли е зарядното да се загрява?",
+          "answer": "Да — при голяма мощност повърхността се затопля. Устройството има няколко вградени защити и може да се ползва спокойно."
+        },
+        {
+          "question": "Кои устройства са съвместими?",
+          "answer": "Лаптопи, смартфони, таблети, слушалки, смарт часовници, конзоли и други устройства с USB-C или USB-A — например MacBook Pro/Air, iPhone, iPad, Dell XPS и Samsung Galaxy."
+        },
+        {
+          "question": "Кои протоколи за бързо зареждане поддържа?",
+          "answer": "USB-C: PPS / PD3.0 / QC3.0 / QC2.0 / SCP / FCP / Apple 2.4A / Samsung 2.0A / BC1.2. USB-A: SCP 22.5W / QC3.0 / QC2.0 / Apple 2.4A / Samsung 2.0A / BC1.2."
+        },
+        {
+          "question": "Какъв е размерът? Удобно ли е за носене и може ли в самолет?",
+          "answer": "Моделът 100W е 55,5 × 40,6 × 46,6 мм, а моделът 140W — 67 × 63 × 31 мм. И двата са със сгъваем щепсел — удобни за ежедневно пътуване и командировки."
+        },
+        {
+          "question": "Има ли кабел в кутията? Какъв кабел препоръчвате?",
+          "answer": "В кутията няма кабел. За да използвате пълната мощност на зарядното (до 100W / 140W), ползвайте USB-C към USB-C кабел с протокол PD3.1 и E-Marker чип, за ток 5A и напрежение 20V (напр. с надпис 100W или 240W)."
+        },
+        {
+          "question": "Колко пъти може да се сгъва щепселът? Разклаща ли се?",
+          "answer": "Изработен е от здрав метал с подсилена панта и е минал многократни тестове на сгъване. При нормална употреба честото сгъване не го разклаща и не го чупи. За по-дълъг живот не го сгъвайте със сила или под ъгъл."
+        },
+        {
+          "question": "Защо някои устройства не се зареждат с максималната мощност?",
+          "answer": "Зарядното разпознава устройството и избира подходящия протокол, като настройва напрежението и тока за безопасно и бързо зареждане. Ако протоколът не е съвместим, мощността е по-ниска от максималната."
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Размери",
+          "value": "46,6 × 40,6 × 55,5 мм (±0,5)"
+        },
+        {
+          "label": "Нето тегло",
+          "value": "185 г (±3)"
+        },
+        {
+          "label": "Цвят",
+          "value": "сребрист"
+        },
+        {
+          "label": "Изходи",
+          "value": "2 × USB-C, 1 × USB-A"
+        },
+        {
+          "label": "USB-C1",
+          "value": "макс. 100W (PPS/PD3.0/QC3.0/QC2.0/SCP/FCP/Apple 2.4A/Samsung 2.0A/BC1.2)"
+        },
+        {
+          "label": "USB-C2",
+          "value": "макс. 100W (PPS/PD3.0/QC3.0/QC2.0/SCP/FCP/Apple 2.4A/Samsung 2.0A/BC1.2)"
+        },
+        {
+          "label": "USB-A",
+          "value": "макс. 22,5W (SCP 22.5W/QC3.0/QC2.0/Apple 2.4A/Samsung 2.0A/BC1.2)"
+        },
+        {
+          "label": "C1 + C2",
+          "value": "70W + 30W"
+        },
+        {
+          "label": "C1 + USB-A",
+          "value": "70W + 22,5W"
+        },
+        {
+          "label": "C2 + USB-A",
+          "value": "5V 2,4A + 5V 2,4A"
+        },
+        {
+          "label": "Три порта",
+          "value": "умно разпределение на мощността"
+        },
+        {
+          "label": "Устойчивост на падане",
+          "value": "1 м"
+        },
+        {
+          "label": "Корпус",
+          "value": "PCR материал"
+        },
+        {
+          "label": "Гаранция",
+          "value": "2 години"
+        },
+        {
+          "label": "Температура при зареждане",
+          "value": "0 °C – 25 °C"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFA-100W-GAN-CHARGER-EU"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-charger-100w-3-ports-gan-1171105538.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-charger-100w-3-ports-gan-1171105537.png"
+    ],
+    "sekcii": [
+      "https://eu.ecoflow.com/cdn/shop/files/pc_100W_Charger_port_01.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_100W_Charger_port_02.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_100W_Charger_port_03.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_About_EcoFlow_eu_13a918d0-cf23-48b3-9ee3-8af9b730a4f9.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Advanced_Stability_6324e13c-6f7c-4c9a-af88-116881986a9c.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_GaN_Technology_eu_ac2291f5-b5ba-4fa8-b9e9-ccff2aa6da00.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Multi-plug_Charger_eu_8488ab5f-9617-4069-a809-71d0590b2599.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc__01_1a22ee01-93aa-4a8a-83ba-5ffd5bcdbe0a.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc__02_c38023cc-4e1d-4f6c-a040-aee970d8df47.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc__04_4682b1e6-6bc1-4543-9f30-768ca2cf52de.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_ksp_eu-1.jpg"
+    ]
+  },
+  "_prevod_nadpisi": {
+    "pc_Multi-plug_Charger_eu_8488ab5f-9617-4069-a809-71d0590b2599.jpg": {
+      "100W EcoFlow X-Stream Charging:": "100W зареждане EcoFlow X-Stream:",
+      "MacBook Pro 13\" M4 100% charged in 1 hr 58 min.": "MacBook Pro 13\" M4 — 100% за 1 ч 58 мин."
+    },
+    "pc_ksp_eu-1.jpg": {
+      "Advanced protection for maximum performance": "Модерна защита за максимална производителност",
+      "Protected by EcoFlow's X-GUARD": "Защитено от EcoFlow X-GUARD",
+      "EcoFlow RAPID Pro maintains its fast charging levels 24/7 with around-the-clock safety checks. Its temperature sensor tests and adjusts for overheating, while the VO-level fireproof shell protects externally.": "EcoFlow RAPID Pro запазва бързото зареждане 24/7 с денонощни проверки за безопасност. Температурният сензор проверява и коригира прегряване, а негорим корпус клас V0 пази отвън."
+    }
+  },
+  "_neyasni": [
+    "Направено като eu.ecoflow.com (по твое решение). Спецификациите са на EcoFlow (dice.bg няма таблица).",
+    "Грешки в EcoFlow: в описанието пише „4 в 1, 4 устройства“ — зарядното е с 3 порта (поправено на 3); щепселът — „3000 включвания“ в описанието и „25 000“ в секцията — сложено 25 000 (от секцията).",
+    "Снимката „Портативно с GaN технология“ е същата като при 140W (вече в списъка за превод).",
+    "Отговорът за протоколите в EcoFlow е празен — взет от таблицата със спецификации.",
+    "„Съвместим с“ = Външни батерии Rapid.",
+    "В dice.bg: Налично на склад (проверено 01.10.2026)."
+  ]
+}

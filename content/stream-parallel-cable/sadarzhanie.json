@@ -1,0 +1,108 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg + eu.ecoflow.com",
+  "produkt": {
+    "title": "EcoFlow STREAM Parallel Cable (0.55m)",
+    "slug": "stream-parallel-cable",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "Кабел 55 см за паралелно свързване на батерии STREAM",
+    "badge": "none",
+    "price": 25.05,
+    "externalUrl": "https://dice.bg/kabel-za-paralelno-sv-rzvane-na-njakolko-ecoflow-stream-battery-v-nshni-baterii-zaedno-ecoflow-stream-parallel-cable-55-cm",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "72919",
+    "ean": "4895251644709",
+    "description": "Кабел 55 см за паралелно свързване на две батерии от серията EcoFlow STREAM (напр. STREAM Ultra, STREAM Pro, STREAM AC Pro) за повече капацитет.",
+    "highlights": [
+      {
+        "text": "Дължина 55 см"
+      },
+      {
+        "text": "Две батерии STREAM в паралел"
+      },
+      {
+        "text": "Повече капацитет за съхранение"
+      }
+    ],
+    "metaTitle": "EcoFlow STREAM Parallel Cable (0.55m) | EcoFlow България",
+    "metaDescription": "Кабел 55 см за паралелно свързване на две батерии от серията EcoFlow STREAM (напр. STREAM Ultra, STREAM Pro, STREAM AC Pro) за повече капацитет.",
+    "compatibleWith": [
+      "stream-seriya"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "72919.webp",
+      "alt": "EcoFlow STREAM Parallel Cable (0.55m) — паралелен кабел STREAM"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Повече капацитет за STREAM",
+      "body": "За да разширите съхранението на енергия, свържете две батерии от серията EcoFlow STREAM (напр. STREAM Ultra, STREAM Pro или STREAM AC Pro) в паралел с този кабел.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow STREAM Parallel Cable 55 см",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "STREAM Parallel Cable 55 cm"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFL-STREAM-PARALLELAC-H"
+        },
+        {
+          "label": "Дължина",
+          "value": "55 см"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "батерии от серията EcoFlow STREAM"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72919.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "По dice.bg и eu.ecoflow.com/products/stream-parallel-cable — разминавания няма.",
+    "В dice.bg: Налично на склад (проверено 01.10.2026)."
+  ]
+}

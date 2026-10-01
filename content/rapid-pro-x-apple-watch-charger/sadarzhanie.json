@@ -1,0 +1,175 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow RAPID Pro X Magnetic Block MFi Apple Watch Charger",
+    "slug": "rapid-pro-x-apple-watch-charger",
+    "categorySlug": "zaryadni-ustroystva",
+    "productType": "accessory",
+    "tagline": "Магнитен модул за зареждане на Apple Watch към RAPID Pro X",
+    "badge": "none",
+    "price": 79,
+    "externalUrl": "https://dice.bg/4smarts-voltbeam-magnetic-charger-with-usb-c-for-apple-watch-dok-za-zarezhdane-na-apple-watch-byal-item728555312",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "77614",
+    "ean": "4895251651165",
+    "description": "Магнитен модул за зареждане на Apple Watch, който се закача с Pogo Pin към външната батерия EcoFlow RAPID Pro X. MFi сертифициран, 5W.",
+    "highlights": [
+      {
+        "text": "За EcoFlow RAPID Pro X"
+      },
+      {
+        "text": "Магнитно закрепване с Pogo Pin"
+      },
+      {
+        "text": "MFi — „Made for Apple Watch“"
+      },
+      {
+        "text": "Всички модели Apple Watch"
+      }
+    ],
+    "metaTitle": "EcoFlow RAPID Pro X Magnetic Block MFi Apple Watch Charger | EcoFlow България",
+    "metaDescription": "Магнитен модул за зареждане на Apple Watch, който се закача с Pogo Pin към външната батерия EcoFlow RAPID Pro X. MFi сертифициран, 5W.",
+    "compatibleWith": [
+      "rapid-pro-x-power-bank"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "4895251651165-1_1.webp",
+      "alt": "EcoFlow RAPID Pro X Magnetic Block MFi Apple Watch Charger — зарядно за Apple Watch"
+    },
+    {
+      "file": "4895251651165-2_1.webp",
+      "alt": "EcoFlow RAPID Pro X Magnetic Block MFi Apple Watch Charger — зарядно за Apple Watch"
+    },
+    {
+      "file": "ddsds.webp",
+      "alt": "EcoFlow RAPID Pro X Magnetic Block MFi Apple Watch Charger — зарядно за Apple Watch"
+    },
+    {
+      "file": "_ed_6.webp",
+      "alt": "EcoFlow RAPID Pro X Magnetic Block MFi Apple Watch Charger — зарядно за Apple Watch"
+    },
+    {
+      "file": "4895251651165-4.webp",
+      "alt": "EcoFlow RAPID Pro X Magnetic Block MFi Apple Watch Charger — зарядно за Apple Watch"
+    },
+    {
+      "file": "4895251651165-5.webp",
+      "alt": "EcoFlow RAPID Pro X Magnetic Block MFi Apple Watch Charger — зарядно за Apple Watch"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Зарежда Apple Watch от RAPID Pro X",
+      "body": "Модулът е създаден специално за външната батерия EcoFlow RAPID Pro X 27 650 mAh, 300W (не е включена) и се свързва с нея чрез магнитния Pogo Pin конектор отдолу. Малко и портативно зарядно за вашия Apple Watch.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Поставяте и зарежда",
+      "body": "Магнитно позициониране — Apple Watch започва да се зарежда веднага щом го поставите. Лек и компактен, лесен за съхранение.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Здрав и защитен",
+      "body": "Солиден поликарбонат с алуминиев корпус. Вградени защити от свръхток, късо съединение, презареждане и прегряване. Сертифициран от Apple — „Made for Apple Watch“.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow RAPID Pro X Magnetic Block Apple Watch Charger",
+          "qty": 1
+        },
+        {
+          "name": "Ръководство за употреба",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "RAPID Pro X Magnetic Block MFI Apple Watch Charger"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFA-RPGEEKWATCH"
+        },
+        {
+          "label": "Вход",
+          "value": "7,5W"
+        },
+        {
+          "label": "Изход",
+          "value": "5W"
+        },
+        {
+          "label": "Интерфейс",
+          "value": "магнитен Pogo Pin конектор"
+        },
+        {
+          "label": "Материал",
+          "value": "поликарбонат, алуминиев корпус"
+        },
+        {
+          "label": "Сертификат",
+          "value": "MFi (Made for Apple Watch)"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "само EcoFlow RAPID Pro X; всички модели Apple Watch"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/4/8/4895251651165-1_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/4/8/4895251651165-2_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/d/d/ddsds.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/_/e/_ed_6.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/4/8/4895251651165-4.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/4/8/4895251651165-5.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Продуктът го няма като отделна страница в eu.ecoflow.com — по dice.bg.",
+    "Адресът в dice.bg е от друг продукт („4smarts Voltbeam“) — по правилото не се съди по адреса; заглавие, EAN и описание са на EcoFlow.",
+    "В dice.bg: Налично на склад (проверено 01.10.2026)."
+  ]
+}

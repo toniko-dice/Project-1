@@ -1,0 +1,113 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow STREAM DIY Cable (1.5 m)",
+    "slug": "stream-diy-cable-1-5m",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "Кабел 1,5 м за свързване на батерия STREAM към ел. таблото",
+    "badge": "none",
+    "price": 25.05,
+    "externalUrl": "https://dice.bg/sv-rzvasch-kabel-za-ecoflow-stream-battery-v-nshna-baterija-k-m-el-tablo-ecoflow-stream-diy-cable-1-5m-cheren-150-sm",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "72960",
+    "ean": "4895251644648",
+    "description": "Кабел 1,5 м за директно свързване на батерия от серията EcoFlow STREAM към ел. таблото на дома. Монтажът се прави от електротехник.",
+    "highlights": [
+      {
+        "text": "Дължина 1,5 м"
+      },
+      {
+        "text": "Батерия STREAM → ел. табло"
+      },
+      {
+        "text": "Монтаж от електротехник"
+      }
+    ],
+    "metaTitle": "EcoFlow STREAM DIY Cable (1.5 m) | EcoFlow България",
+    "metaDescription": "Кабел 1,5 м за директно свързване на батерия от серията EcoFlow STREAM към ел. таблото на дома. Монтажът се прави от електротехник.",
+    "compatibleWith": [
+      "stream-seriya"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "72960.webp",
+      "alt": "EcoFlow STREAM DIY Cable (1.5 m) — кабел STREAM"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Батерията STREAM — директно към таблото",
+      "body": "Кабелът свързва батерия от серията EcoFlow STREAM директно към ел. таблото на дома. Когато комбинирате микроинвертора EcoFlow STREAM с батерия STREAM, съхранявате енергията от деня и я ползвате вечер. Дължина 1,5 м.\n\nВнимание: монтажът към таблото се извършва от квалифициран електротехник.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow STREAM DIY Cable 1,5 м",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "STREAM DIY Cable 1.5m"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFL-STREAM-DIY-1.5M-UK-H"
+        },
+        {
+          "label": "Дължина",
+          "value": "1,5 м"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "всички батерии от серията EcoFlow STREAM"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72960.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Продуктът го няма в eu.ecoflow.com — по dice.bg.",
+    "Фабричният номер в dice.bg завършва на „-UK-H“ — възможно е да е британски вариант. Провери с доставчика.",
+    "В dice.bg: Налично на склад (проверено 01.10.2026)."
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg + eu.ecoflow.com",
+  "produkt": {
+    "title": "EcoFlow STREAM Solar Panel Extension Cable (2.95m)",
+    "slug": "stream-solar-extension-cable",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "Удължителен соларен кабел 2,95 м за STREAM",
+    "badge": "none",
+    "price": 35.28,
+    "externalUrl": "https://dice.bg/ecoflow-stream-solar-extension-cable-295m-udalzhitelen-kabel-svarzvasht-ecoflow-solaren-panel-kam-ecoflow-stream-microinverter-2025-800w-cheren-item72544",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "72544",
+    "ean": "4895251640473",
+    "description": "Удължителен кабел 2,95 м за свързване на соларен панел към микроинвертора EcoFlow STREAM или към STREAM Ultra X, Ultra, Pro и Max.",
+    "highlights": [
+      {
+        "text": "Дължина 2,95 м"
+      },
+      {
+        "text": "Соларен панел → STREAM"
+      },
+      {
+        "text": "Монтирате микроинвертора където ви е удобно"
+      }
+    ],
+    "metaTitle": "EcoFlow STREAM Solar Panel Extension Cable (2.95m) | EcoFlow България",
+    "metaDescription": "Удължителен кабел 2,95 м за свързване на соларен панел към микроинвертора EcoFlow STREAM или към STREAM Ultra X, Ultra, Pro и Max.",
+    "compatibleWith": [
+      "stream-microinverter",
+      "stream-seriya"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-stream-solar-extension_-cable_1.webp",
+      "alt": "EcoFlow STREAM Solar Panel Extension Cable (2.95m) — удължителен кабел"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Повече свобода при монтажа",
+      "body": "Удължителният кабел дава допълнителна дължина — монтирате микроинвертора EcoFlow STREAM където ви е удобно, а соларните панели остават на пряко слънце. Работи при свързване на соларен панел към STREAM Microinverter, STREAM Ultra X, STREAM Ultra, STREAM Pro или STREAM Max.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow STREAM Solar удължителен кабел",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "STREAM Solar Extension Cable"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFL-StreamMI-PV-3M"
+        },
+        {
+          "label": "Дължина",
+          "value": "2,95 м"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "STREAM Microinverter, STREAM Ultra X, Ultra, Pro, Max"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-stream-solar-extension_-cable_1.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "По dice.bg и eu.ecoflow.com/products/ecoflow-stream-solar-panel-extension-cable. dice.bg пише „Solar към XT60“ — EcoFlow не го споменава; не е сложено.",
+    "В dice.bg: Налично на склад (проверено 01.10.2026)."
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "https://eu.ecoflow.com/products/rapid-pro-c-c-cable-240w-power-output",
+  "produkt": {
+    "title": "EcoFlow RAPID Pro USB-C to USB-C Cable (240W, Nylon)",
+    "slug": "rapid-pro-usb-c-cable-240w",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "USB-C към USB-C кабел 240W, найлонова оплетка, 180 см",
+    "badge": "none",
+    "price": 14.83,
+    "compareAtPrice": 19.94,
+    "externalUrl": "https://dice.bg/kabel-s-b-rzo-zarezhdane-za-ustrojstva-s-usb-c-port-ecoflow-rapid-pro-usb-c-to-usb-c-data-cable-240w-180-sm-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "73047",
+    "ean": "4895251645447",
+    "description": "USB-C към USB-C кабел с найлонова оплетка, до 240W и E-Marker чип — за лаптопи, телефони, външни батерии, камери и конзоли. Дължина 180 см.",
+    "highlights": [
+      {
+        "text": "240W ултрабързо зареждане с умна защита"
+      },
+      {
+        "text": "Гъвкав при употреба, компактен за съхранение"
+      },
+      {
+        "text": "Издръжлив — подсилени краища"
+      },
+      {
+        "text": "Работи от −12 °C до 37 °C"
+      }
+    ],
+    "metaTitle": "EcoFlow RAPID Pro USB-C кабел 240W | EcoFlow България",
+    "metaDescription": "USB-C към USB-C кабел EcoFlow RAPID Pro 240W с найлонова оплетка и E-Marker чип, 180 см.",
+    "compatibleWith": [
+      "vanshni-baterii-rapid"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-rapid-pro-usb-c-to-usb-c-cable-240w-nylon-1171422039.png",
+      "alt": "EcoFlow RAPID Pro USB-C to USB-C Cable (240W, Nylon) — USB-C кабел 240W"
+    },
+    {
+      "file": "ecoflow_rapid_pro_usb-c_to_usb-c_data_cable_240w-1.webp",
+      "alt": "EcoFlow RAPID Pro USB-C to USB-C Cable (240W, Nylon) — USB-C кабел 240W"
+    },
+    {
+      "file": "ecoflow_rapid_pro_usb-c_to_usb-c_data_cable_240w-2.webp",
+      "alt": "EcoFlow RAPID Pro USB-C to USB-C Cable (240W, Nylon) — USB-C кабел 240W"
+    },
+    {
+      "file": "ecoflow_rapid_pro_usb-c_to_usb-c_data_cable_240w-3.webp",
+      "alt": "EcoFlow RAPID Pro USB-C to USB-C Cable (240W, Nylon) — USB-C кабел 240W"
+    },
+    {
+      "file": "ecoflow_rapid_pro_usb-c_to_usb-c_data_cable_240w-4.webp",
+      "alt": "EcoFlow RAPID Pro USB-C to USB-C Cable (240W, Nylon) — USB-C кабел 240W"
+    },
+    {
+      "file": "ecoflow_rapid_pro_usb-c_to_usb-c_data_cable_240w-5.webp",
+      "alt": "EcoFlow RAPID Pro USB-C to USB-C Cable (240W, Nylon) — USB-C кабел 240W"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "tabbedShowcase",
+      "layout": "tabs-top",
+      "heading": "Ключови предимства",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Максимална издръжливост",
+          "image": "pc_Ultimate_Durability.jpg",
+          "imageAlt": "Максимална издръжливост",
+          "caption": "Създаден за тежки условия — работи безупречно дори след 24 часа при температури от −12 °C до 37 °C.\n* Проверете дали устройствата ви са подходящи за екстремни условия.",
+          "rows": []
+        },
+        {
+          "label": "240W, двойно USB-C, бърза скорост",
+          "image": "pc_240W_Dual_USB-C_Rapid-Speed_Performance.jpg",
+          "imageAlt": "240W, двойно USB-C, бърза скорост",
+          "caption": "240W ултрабързо зареждане за всички USB-C устройства: лаптопи, телефони, външни батерии, камери и преносими конзоли. Двойно USB-C за бързо зареждане и ефективен пренос на данни.",
+          "rows": []
+        },
+        {
+          "label": "Висока безопасност",
+          "image": "pc_USB-IF_Certified_eu.jpg",
+          "imageAlt": "Висока безопасност",
+          "caption": "Модерна защита за максимална производителност.",
+          "rows": []
+        },
+        {
+          "label": "Лесно сгъване",
+          "image": "pc_Easy-Fold_Design.jpg",
+          "imageAlt": "Лесно сгъване",
+          "caption": "Гъвкав и не се заплита — свободно движение при зареждане и лесно сгъване за подредено съхранение.",
+          "rows": []
+        }
+      ],
+      "anchorLabel": "Преглед"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "layout": "tabs-top",
+      "heading": "Подходяща дължина за всяка ситуация",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Работа от разстояние",
+          "image": "pc__03_b9eb64f0-fb33-4922-93bc-132d25e9708e.jpg",
+          "imageAlt": "Работа от разстояние",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "В офиса",
+          "image": "pc__02_0521ea12-963c-491e-8d67-e2d2b3520b69.jpg",
+          "imageAlt": "В офиса",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Пътуване",
+          "image": "pc__04_a68f9029-8c2e-464a-be7b-a46b761712fe.jpg",
+          "imageAlt": "Пътуване",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Забавления",
+          "image": "pc__01_c501a4f4-eafa-4c3d-a829-3f997b789a81.jpg",
+          "imageAlt": "Забавления",
+          "caption": "",
+          "rows": []
+        }
+      ],
+      "anchorLabel": "Приложения"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Съвместимост",
+      "heading": "Универсална съвместимост",
+      "body": "Съвместим с 99% от обичайните USB-C устройства.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Дължина",
+          "value": "182,88 см (6 ft)"
+        },
+        {
+          "label": "Нето тегло",
+          "value": "70 г (±2)"
+        },
+        {
+          "label": "Цвят",
+          "value": "сребристо и черно"
+        },
+        {
+          "label": "Конектори",
+          "value": "USB-C към USB-C, 240W"
+        },
+        {
+          "label": "Материал",
+          "value": "найлонова оплетка"
+        },
+        {
+          "label": "Стандарт",
+          "value": "Power Delivery 3.1, USB 3.2 Gen 2 (20 Gbps), сертификат USB-IF"
+        },
+        {
+          "label": "Устойчивост на огъване",
+          "value": "30 000 огъвания (по dice.bg)"
+        },
+        {
+          "label": "Устойчивост на падане",
+          "value": "1 м"
+        },
+        {
+          "label": "Гаранция",
+          "value": "2 години"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFA-240W-C-C-CABLE-EU"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-usb-c-to-usb-c-cable-240w-nylon-1171422039.png",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_rapid_pro_usb-c_to_usb-c_data_cable_240w-1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_rapid_pro_usb-c_to_usb-c_data_cable_240w-2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_rapid_pro_usb-c_to_usb-c_data_cable_240w-3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_rapid_pro_usb-c_to_usb-c_data_cable_240w-4.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_rapid_pro_usb-c_to_usb-c_data_cable_240w-5.webp"
+    ],
+    "sekcii": [
+      "https://eu.ecoflow.com/cdn/shop/files/pc_240W_Dual_USB-C_Rapid-Speed_Performance.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Easy-Fold_Design.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_USB-IF_Certified_eu.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Ultimate_Durability.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc__01_c501a4f4-eafa-4c3d-a829-3f997b789a81.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc__02_0521ea12-963c-491e-8d67-e2d2b3520b69.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc__03_b9eb64f0-fb33-4922-93bc-132d25e9708e.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc__04_a68f9029-8c2e-464a-be7b-a46b761712fe.jpg"
+    ]
+  },
+  "_prevod_nadpisi": {
+    "pc_USB-IF_Certified_eu.jpg": {
+      "USB-IF Certified": "Сертифициран от USB-IF",
+      "Its advanced technology delivers superior performance while protecting your electronic devices from power surges and voltage fluctuations.": "Модерната технология дава висока производителност и пази устройствата ви от пренапрежения и колебания на напрежението."
+    }
+  },
+  "_neyasni": [
+    "Направено като eu.ecoflow.com. Към спецификациите са добавени от dice.bg: USB 3.2 Gen 2 (20 Gbps), PD 3.1, USB-IF, 30 000 огъвания.",
+    "Дължина: EcoFlow 182,88 см, dice.bg — 180 см.",
+    "„Съвместим с“ = Външни батерии Rapid.",
+    "В dice.bg: по заявка (проверено 01.10.2026)."
+  ]
+}

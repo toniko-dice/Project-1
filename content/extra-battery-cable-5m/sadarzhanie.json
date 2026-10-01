@@ -1,0 +1,116 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "eu.ecoflow.com + dice.bg",
+  "produkt": {
+    "title": "EcoFlow Extra Battery Cable (5m)",
+    "slug": "extra-battery-cable-5m",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "Кабел 5 м за допълнителна батерия или Smart Generator",
+    "badge": "none",
+    "price": 168.22,
+    "externalUrl": "https://dice.bg/kabel-za-sv-rzvane-na-ecoflow-delta-k-m-delta-max-smart-extra-baterija-ili-dual-generator-ecoflow-delta-max-extra-battery-cable-5m",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "60826",
+    "ean": "4895251600712-1",
+    "description": "Кабел 5 м, който свързва DELTA Max с допълнителната батерия DELTA Max или Smart Generator, DELTA Pro със Smart Generator и DELTA 2 с допълнителна батерия или Smart Generator.",
+    "highlights": [
+      {
+        "text": "Дължина 5 м"
+      },
+      {
+        "text": "DELTA Max, DELTA Pro, DELTA 2"
+      },
+      {
+        "text": "Към допълнителна батерия или Smart Generator"
+      }
+    ],
+    "metaTitle": "EcoFlow Extra Battery Cable (5m) | EcoFlow България",
+    "metaDescription": "Кабел 5 м, който свързва DELTA Max с допълнителната батерия DELTA Max или Smart Generator, DELTA Pro със Smart Generator и DELTA 2 с допълнителна батерия и",
+    "ean2": "4895251600712"
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-delta-max-extra-battery-cable-5m--0.webp",
+      "alt": "EcoFlow Extra Battery Cable (5m) — кабел за допълнителна батерия"
+    },
+    {
+      "file": "ecoflow-delta-max-extra-battery-cable-5m-5.webp",
+      "alt": "EcoFlow Extra Battery Cable (5m) — кабел за допълнителна батерия"
+    },
+    {
+      "file": "ecoflow-delta-max-extra-battery-cable-5m-4.webp",
+      "alt": "EcoFlow Extra Battery Cable (5m) — кабел за допълнителна батерия"
+    },
+    {
+      "file": "ecoflow-delta-max-extra-battery-cable-5m-3.webp",
+      "alt": "EcoFlow Extra Battery Cable (5m) — кабел за допълнителна батерия"
+    },
+    {
+      "file": "ecoflow-delta-max-extra-battery-cable-5m-2.webp",
+      "alt": "EcoFlow Extra Battery Cable (5m) — кабел за допълнителна батерия"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Свързване на 5 м",
+      "body": "Свързва:\n- DELTA Max с допълнителната батерия DELTA Max или Smart Generator;\n- DELTA Pro със Smart Generator;\n- DELTA 2 с допълнителната батерия DELTA 2, допълнителната батерия DELTA Max или Smart Generator.\n\nЗа DELTA Pro към Smart Generator е нужен адаптерът EcoFlow DELTA Pro to Smart Generator Adapter (продава се отделно).",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Extra Battery Cable (5 м)",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Дължина",
+          "value": "5 м"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "DELTA Max, DELTA Pro (с адаптер), DELTA 2; допълнителни батерии DELTA Max / DELTA 2, Smart Generator"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-delta-max-extra-battery-cable-5m--0.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-delta-max-extra-battery-cable-5m-5.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-delta-max-extra-battery-cable-5m-4.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-delta-max-extra-battery-cable-5m-3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-delta-max-extra-battery-cable-5m-2.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "В dice.bg няма описание — текстът е от eu.ecoflow.com/products/ecoflow-extra-battery-cable-5m.",
+    "Баркодът е записан както е даден (4895251600712-1, вътрешният на dice.bg); 4895251600712 е записан като втори.",
+    "DELTA Max, DELTA Pro и DELTA 2 ги няма в сайта → „Съвместим с“ е празно.",
+    "В dice.bg: Налично на склад (проверено 01.10.2026)."
+  ]
+}

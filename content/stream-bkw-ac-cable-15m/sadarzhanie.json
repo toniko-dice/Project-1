@@ -1,0 +1,110 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg + eu.ecoflow.com",
+  "produkt": {
+    "title": "EcoFlow STREAM BKW-AC Cable (15m)",
+    "slug": "stream-bkw-ac-cable-15m",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "AC кабел 15 м за микроинвертора STREAM към контакта",
+    "badge": "none",
+    "price": 40.39,
+    "externalUrl": "https://dice.bg/ecoflow-stream-bkw-to-ac-cable-15m-svarzvasht-kabel-za-ecoflow-stream-microinverter-2025-kam-el-mrezhata-cheren-item72543",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "72543",
+    "ean": "4895251640459",
+    "description": "BKW-AC кабел 15 м, който свързва микроинвертора EcoFlow STREAM към контакта.",
+    "highlights": [
+      {
+        "text": "Дължина 15 м"
+      },
+      {
+        "text": "Микроинвертор STREAM → контакт"
+      }
+    ],
+    "metaTitle": "EcoFlow STREAM BKW-AC Cable (15m) | EcoFlow България",
+    "metaDescription": "BKW-AC кабел 15 м, който свързва микроинвертора EcoFlow STREAM към контакта.",
+    "compatibleWith": [
+      "stream-microinverter"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-stream-bkw-to-ac-cable-5m-kabel-za-ecoflow-stream-microinverter-2025.webp",
+      "alt": "EcoFlow STREAM BKW-AC Cable (15m) — AC кабел"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Микроинверторът — към контакта",
+      "body": "Кабелът свързва микроинвертора EcoFlow STREAM към контакта. С батерия от серията STREAM съхранявате енергията от деня и я ползвате вечер. Дължина 15 м.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow STREAM BKW-AC Cable 15 м",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "STREAM BKW-AC Cable 15m"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFL-StreamMI-AC-15M"
+        },
+        {
+          "label": "Дължина",
+          "value": "15 м"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow STREAM Microinverter"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-stream-bkw-to-ac-cable-5m-kabel-za-ecoflow-stream-microinverter-2025.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "По dice.bg и eu.ecoflow.com/products/stream-mi-ac-cable (вариант 15 м).",
+    "В dice.bg моделът е записан „5m“ — грешка, кабелът е 15 м (по заглавието и фабричния номер).",
+    "В dice.bg: Налично на склад (проверено 01.10.2026)."
+  ]
+}

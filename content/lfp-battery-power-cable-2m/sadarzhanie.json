@@ -1,0 +1,128 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow LFP Battery Power Cable (2 m)",
+    "slug": "lfp-battery-power-cable-2m",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "Кабел 2 м за свързване на батерия EcoFlow LFP към Power Hub",
+    "badge": "none",
+    "price": 135.0,
+    "externalUrl": "https://dice.bg/kabel-za-sv-rzvane-na-ecoflow-lfp-battery-k-m-ecoflow-power-kit-power-hub-ecoflow-lfp-battery-power-cable-2m-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "78577",
+    "ean": "4895251602754",
+    "description": "Оригинален кабел 2 м за свързване на батерия EcoFlow LFP към захранващия хъб EcoFlow Power Kit Power Hub.",
+    "highlights": [
+      {
+        "text": "Дължина 2 м"
+      },
+      {
+        "text": "Батерия EcoFlow LFP → Power Hub"
+      },
+      {
+        "text": "Оригинален кабел EcoFlow"
+      }
+    ],
+    "metaTitle": "EcoFlow LFP Battery Power Cable (2 m) | EcoFlow България",
+    "metaDescription": "Оригинален кабел 2 м за свързване на батерия EcoFlow LFP към захранващия хъб EcoFlow Power Kit Power Hub.",
+    "compatibleWith": [
+      "power-kits"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "61569_1_1.webp",
+      "alt": "EcoFlow LFP Battery Power Cable (2 m) — кабел за батерия"
+    },
+    {
+      "file": "61569_2_2.webp",
+      "alt": "EcoFlow LFP Battery Power Cable (2 m) — кабел за батерия"
+    },
+    {
+      "file": "61569_3_2.webp",
+      "alt": "EcoFlow LFP Battery Power Cable (2 m) — кабел за батерия"
+    },
+    {
+      "file": "61569_4_2.webp",
+      "alt": "EcoFlow LFP Battery Power Cable (2 m) — кабел за батерия"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Свързва батерията с Power Hub",
+      "body": "Оригинален кабел за свързване на батерия EcoFlow LFP към захранващия хъб EcoFlow Power Kit Power Hub. Дължина 2 м.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "Кабел EcoFlow (DELTA Max Extra Battery Cable)",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "DELTA Max Extra Battery Cable"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "LD4+8-2m"
+        },
+        {
+          "label": "Дължина",
+          "value": "2 м"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "батерия EcoFlow LFP към EcoFlow Power Kit Power Hub"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61569_1_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61569_2_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61569_3_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61569_4_2.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Продуктът го няма в eu.ecoflow.com — по dice.bg.",
+    "В dice.bg моделът е записан като „DELTA Max Extra Battery Cable“ (LD4+8) — заглавието е по dice.bg.",
+    "В dice.bg: Налично на склад (проверено 01.10.2026)."
+  ]
+}

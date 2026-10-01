@@ -1,0 +1,112 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg + eu.ecoflow.com",
+  "produkt": {
+    "title": "EcoFlow Extra Battery Flat Link Cable (0.85m)",
+    "slug": "delta-pro-3-flat-link-cable-0-85m",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "Кабел 0,85 м за допълнителна батерия към DELTA Pro 3",
+    "badge": "none",
+    "price": 81.3,
+    "externalUrl": "https://dice.bg/ecoflow-delta-pro-3-extra-battery-flat-link-cable-0-85m-kabel-za-svarzvane-na-ecoflow-delta-pro-3-kam-ecoflow-delta-pro-3-smart-extra-ili-delta-pro-smart-extra-bateria-85-sm-cheren-item72447",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "72447",
+    "ean": "4895251625005",
+    "description": "Оригинален плосък кабел 0,85 м, който свързва EcoFlow DELTA Pro 3 с допълнителната батерия DELTA Pro 3 Smart Extra Battery или DELTA Pro Extra Battery.",
+    "highlights": [
+      {
+        "text": "Дължина 0,85 м"
+      },
+      {
+        "text": "DELTA Pro 3 → допълнителна батерия"
+      },
+      {
+        "text": "Плосък кабел"
+      }
+    ],
+    "metaTitle": "EcoFlow Extra Battery Flat Link Cable (0.85m) | EcoFlow България",
+    "metaDescription": "Оригинален плосък кабел 0,85 м, който свързва EcoFlow DELTA Pro 3 с допълнителната батерия DELTA Pro 3 Smart Extra Battery или DELTA Pro Extra Battery.",
+    "compatibleWith": [
+      "delta-pro-3"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "72447_1.webp",
+      "alt": "EcoFlow Extra Battery Flat Link Cable (0.85m) — кабел за допълнителна батерия"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Допълнителна батерия към DELTA Pro 3",
+      "body": "Свързва EcoFlow DELTA Pro 3 с допълнителната батерия DELTA Pro 3 Smart Extra Battery или DELTA Pro Extra Battery през порта за допълнителна батерия отзад.\n\n*Този кабел е различен от DELTA Pro Extra Battery Cable.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow DELTA Pro 3 Extra Battery Flat Link Cable",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "DELTA Pro 3 Extra Battery Flat Link Cable"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFL-DELTAPRO348DH-0.85m"
+        },
+        {
+          "label": "Дължина",
+          "value": "0,85 м"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow DELTA Pro 3 → DELTA Pro 3 Smart Extra Battery / DELTA Pro Extra Battery"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72447_1.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "По dice.bg и eu.ecoflow.com/products/extra-battery-flat-link-cable (вариант 0,85 м).",
+    "В dice.bg: Налично на склад (проверено 01.10.2026)."
+  ]
+}
