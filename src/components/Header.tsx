@@ -70,8 +70,16 @@ const viewAllUrl = (section: PanelSection) => {
 const isAutoAccessories = (section: PanelSection) =>
   Boolean(section.accessories) && !(section.cards ?? []).length
 
-/** Най-много толкова автоматични аксесоара; после — плочката „Виж всички". */
-const MAX_AUTO_ACCESSORIES = 6
+/**
+ * Най-много толкова карти в секция; после — плочката „Виж всички".
+ *
+ * Колкото събира мрежата на панела: голямата карта заема две реда, до нея
+ * три колони по два реда — пет малки и плочката. Повече карти пренасяха
+ * мрежата на нов ред: „Кабели" с 11 реда беше два пъти по-висок от
+ * панелите на сериите. Важи и за ръчните редове (първите шест в реда от
+ * админа), и за автоматичния раздел „Аксесоари".
+ */
+const MAX_SECTION_CARDS = 6
 
 /**
  * Аксесоарите за устройствата в панела — за празния раздел „Аксесоари".
@@ -132,7 +140,8 @@ const byAvailabilityThenOrder = (a: Product, b: Product) => {
 /**
  * Секциите на панела — точно редовете от админа, в този ред.
  *
- * Първият ред е голямата карта, останалите — малките. Чернова и изтрит
+ * Първият ред е голямата карта, останалите — малките, общо до шест
+ * (`MAX_SECTION_CARDS`); останалите са зад „Виж всички". Чернова и изтрит
  * продукт просто липсват (`byId` съдържа само публикуваните). Секция без
  * нито една показваема карта не се рендерира: заглавие и „Виж всички"
  * над празна мрежа са празно място.
@@ -160,16 +169,19 @@ const panelSections = (
         .map((id) => byId[id])
         .filter((p): p is Product => Boolean(p))
         .sort(byAvailabilityThenOrder)
-        .slice(0, MAX_AUTO_ACCESSORIES)
+        .slice(0, MAX_SECTION_CARDS)
         .map((p) => productCard(null, p))
       return cards.length ? [{ ...общи, featured: null, cards }] : []
     }
 
-    const cards = (section.cards ?? []).flatMap((card) => {
-      const id = cardProductId(card)
-      const product = id !== null ? byId[id] : undefined
-      return product ? [productCard(card, product)] : []
-    })
+    // Първите шест ПОКАЗВАЕМИ — чернова или изтрит продукт не заема място.
+    const cards = (section.cards ?? [])
+      .flatMap((card) => {
+        const id = cardProductId(card)
+        const product = id !== null ? byId[id] : undefined
+        return product ? [productCard(card, product)] : []
+      })
+      .slice(0, MAX_SECTION_CARDS)
     const [first, ...rest] = cards
     if (!first) return []
 
