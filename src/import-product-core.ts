@@ -1234,9 +1234,16 @@ export const importProduct = async (
 
   /* ─────────── категория ─────────── */
 
-  const categorySlug = content.produkt.categorySlug as string | undefined
+  /*
+    Основната категория — по нея е адресът. Първата от `"categories"`, ако
+    го има; иначе `categorySlug`, както досега.
+  */
+  const списъкКатегории = Array.isArray(content.produkt.categories)
+    ? (content.produkt.categories as unknown[]).filter((x): x is string => typeof x === 'string')
+    : []
+  const categorySlug = списъкКатегории[0] ?? (content.produkt.categorySlug as string | undefined)
   if (!categorySlug) {
-    throw new ImportError('В produkt липсва categorySlug.')
+    throw new ImportError('В produkt липсва categorySlug (или categories).')
   }
 
   const categories = await payload.find({
@@ -1284,6 +1291,7 @@ export const importProduct = async (
 
   const {
     categorySlug: _drop,
+    categories: _categories,
     compatibleWithSlugs,
     compatibleWith: compatibleWithList,
     alsoInCategories: alsoInSlugs,
@@ -1354,17 +1362,26 @@ export const importProduct = async (
     log(`  ⚠ „Съвместим с": няма категория или продукт „${other}" — прескочен`)
   }
 
-  /* ─────────── „Покажи и в" ─────────── */
+  /* ─────────── „Категории" ─────────── */
 
   /*
-    Допълнителни категории — само за списъците; адресът остава по
-    `categorySlug`. Липсва ли ключът, полето не се пипа (собственикът може
-    да го е попълнил в админа). Празен списък го изчиства.
+    Първата е основната (`categoryId` по-горе). Останалите идват от:
+    - `"categories": [...]` — ако го има, той решава всичко;
+    - иначе `"alsoInCategories"` (старото „Покажи и в");
+    - иначе — каквито продуктът вече има след основната. Собственикът може
+      да е добавил категории от админа, а JSON-ът не ги знае; внос, който ги
+      трие, би ги губил при всяко пускане.
+    Ненамерена категория се прескача с предупреждение.
   */
-  let alsoInCategories: number[] | undefined
-  if (alsoInSlugs !== undefined) {
-    alsoInCategories = []
-    for (const slug of слъгове(alsoInSlugs)) {
+  let допълнителни: number[] | undefined
+  const другиСлъгове = списъкКатегории.length
+    ? списъкКатегории.slice(1)
+    : alsoInSlugs !== undefined
+      ? слъгове(alsoInSlugs)
+      : undefined
+  if (другиСлъгове) {
+    допълнителни = []
+    for (const slug of другиСлъгове) {
       const кат = await payload.find({
         collection: 'categories',
         where: { slug: { equals: slug } },
@@ -1372,24 +1389,13 @@ export const importProduct = async (
         depth: 0,
       })
       if (кат.docs[0]) {
-        alsoInCategories.push(кат.docs[0].id)
+        допълнителни.push(кат.docs[0].id)
       } else {
-        missingFiles.push(`„Покажи и в": няма категория „${slug}"`)
-        log(`  ⚠ „Покажи и в": няма категория „${slug}" — прескочена`)
+        missingFiles.push(`„Категории": няма категория „${slug}"`)
+        log(`  ⚠ „Категории": няма категория „${slug}" — прескочена`)
       }
     }
   }
-
-  const data = {
-    ...productFields,
-    category: categoryId,
-    image: mainImage,
-    gallery: restGallery.map((image) => ({ image })),
-    specGroups: content.specGroups ?? [],
-    sections,
-    ...(compatibleWith.length ? { compatibleWith } : {}),
-    ...(alsoInCategories ? { alsoInCategories } : {}),
-  } as Record<string, unknown>
 
   const existingProduct = await payload.find({
     collection: 'products',
@@ -1397,6 +1403,23 @@ export const importProduct = async (
     limit: 1,
     depth: 0,
   })
+
+  const досегашни = (existingProduct.docs[0]?.categories ?? [])
+    .map((c) => (typeof c === 'number' ? c : c?.id))
+    .filter((id): id is number => typeof id === 'number')
+  // Основната първа, без повторения.
+  const всичкиКатегории = [...new Set([categoryId, ...(допълнителни ?? досегашни)])]
+
+  const data = {
+    ...productFields,
+    categories: всичкиКатегории,
+    category: categoryId,
+    image: mainImage,
+    gallery: restGallery.map((image) => ({ image })),
+    specGroups: content.specGroups ?? [],
+    sections,
+    ...(compatibleWith.length ? { compatibleWith } : {}),
+  } as Record<string, unknown>
 
   /*
     Статусът.

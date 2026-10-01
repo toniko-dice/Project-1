@@ -1,9 +1,24 @@
-import type { CollectionConfig } from 'payload'
+import type { CollectionBeforeValidateHook, CollectionConfig } from 'payload'
 import { AVAILABILITY_OPTIONS } from '../lib/availability'
 import { cleanSlug } from '../lib/slug'
 import { productBlocks } from '../blocks/product'
 import { expireEverything, revalidateProduct, revalidateProductDelete } from '../lib/revalidate'
 import { fillSearchText } from '../lib/search'
+
+/**
+ * Основната категория = първата от „Категории".
+ *
+ * `beforeValidate`, не `beforeChange`: `category` е задължително и
+ * проверката минава ПРЕДИ `beforeChange` — иначе запис само с
+ * „Категории" би паднал на празно скрито поле. Запис без „Категории"
+ * (частичен, през API-то) не пипа основната.
+ */
+const syncPrimaryCategory: CollectionBeforeValidateHook = ({ data }) => {
+  const първа = Array.isArray(data?.categories) ? data.categories[0] : undefined
+  const id = typeof първа === 'object' && първа !== null ? (първа as { id?: number }).id : първа
+  if (data && typeof id === 'number') data.category = id
+  return data
+}
 
 export const Products: CollectionConfig = {
   slug: 'products',
@@ -78,6 +93,7 @@ export const Products: CollectionConfig = {
   versions: { drafts: true },
   hooks: {
     /* Слепва полетата за търсене в `searchText` преди всеки запис. */
+    beforeValidate: [syncPrimaryCategory],
     beforeChange: [fillSearchText],
     afterChange: [revalidateProduct],
     afterDelete: [revalidateProductDelete],
@@ -196,30 +212,49 @@ export const Products: CollectionConfig = {
               ],
             },
             {
+              /*
+                Всички категории на продукта — едно поле, без лимит. Продуктът
+                се вижда в списъка на всяка от тях и на родителите им.
+
+                ПЪРВАТА е основната: по нея е адресът и трохите (т. 19).
+                Кодът я чете от скритото `category` по-долу, което
+                `syncPrimaryCategory` пълни от първата при всеки запис.
+
+                Само избор от съществуващите — категория не се създава и не
+                се редактира оттук, само от колекцията „Категории". Пътят в
+                менюто („Портативни електроцентрали › Комплекти") идва от
+                `fullTitle`, който е `useAsTitle` на категориите.
+              */
+              name: 'categories',
+              type: 'relationship',
+              relationTo: 'categories',
+              hasMany: true,
+              required: true,
+              label: 'Категории',
+              admin: {
+                isSortable: true,
+                allowCreate: false,
+                allowEdit: false,
+                disableListColumn: true,
+                description:
+                  'Първата е основната — по нея е адресът на продукта. Подредбата се сменя с влачене.',
+              },
+            },
+            {
+              /*
+                Основната категория — копие на първата от „Категории".
+
+                Скрито, но остава в базата: адресът, трохите, виртуалните
+                `categorySlug`/`categoryParentSlug`/`categoryGrandparentSlug`,
+                картата на сайта, пренасочванията и `defaultPopulate`
+                (т. 22) четат него. Пише се САМО от `syncPrimaryCategory`.
+              */
               name: 'category',
               type: 'relationship',
               relationTo: 'categories',
               required: true,
-              label: 'Категория',
-              admin: { disableListColumn: true },
-            },
-            {
-              /*
-                Допълнителни категории — САМО за списъците. Адресът и трохите
-                следват основната `category` (т. 19 в CLAUDE.md); оттук
-                продуктът просто се вижда и в списъка на още категории —
-                и на родителите им, както при основната.
-              */
-              name: 'alsoInCategories',
-              type: 'relationship',
-              relationTo: 'categories',
-              hasMany: true,
-              label: 'Покажи и в',
-              admin: {
-                disableListColumn: true,
-                description:
-                  'По избор. Продуктът излиза и в списъците на тези категории. Адресът и трохите остават по основната.',
-              },
+              label: 'Основна категория',
+              admin: { disableListColumn: true, hidden: true },
             },
             {
               /*
@@ -234,7 +269,7 @@ export const Products: CollectionConfig = {
               label: 'Категория',
               admin: {
                 readOnly: true,
-                description: 'Попълва се само — взима се от избраната по-горе категория.',
+                description: 'Попълва се само — първата от „Категории".',
               },
             },
             /*

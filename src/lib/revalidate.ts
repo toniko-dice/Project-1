@@ -1,9 +1,10 @@
 import { revalidatePath, revalidateTag } from 'next/cache'
-import { CATEGORY_BASE, categoryPath, productPath, seriesSlug } from './urls'
+import { CATEGORY_BASE, categoryPath, productPath } from './urls'
 import type {
   CollectionAfterChangeHook,
   CollectionAfterDeleteHook,
   GlobalAfterChangeHook,
+  Payload,
 } from 'payload'
 
 /**
@@ -97,43 +98,72 @@ export const revalidatePageDelete: CollectionAfterDeleteHook = ({ doc }) => {
  * (Google, dice.bg, споделено в социална мрежа) не бива да умират, а
  * собственикът не трябва да поддържа списък на ръка.
  *
- * Дубликат не се създава: полето `from` е уникално и грешката се преглъща.
+ * Три правила, за да няма цикъл и верига:
+ * - НОВИЯТ адрес е жив — пренасочване ОТ него се трие. Иначе смяна напред
+ *   и обратно (DELTA → Комплекти → DELTA) оставя A → B и B → A и
+ *   страницата се върти в кръг (открито на 1 октомври 2026);
+ * - пренасочванията КЪМ стария адрес вече сочат новия — без верига
+ *   X → стар → нов;
+ * - `from` е уникално: има ли вече ред за стария адрес, той сочи новия.
  */
 const записПренасочване = async (
-  req: { payload: { create: (args: unknown) => Promise<unknown> } },
+  req: { payload: Payload },
   from: string,
   to: string,
   reason: string,
 ) => {
   if (!from || from === to) return
+  const { payload } = req
   try {
-    await req.payload.create({
+    await payload.delete({ collection: 'redirects', where: { from: { equals: to } }, req: req as never })
+    await payload.update({
       collection: 'redirects',
-      data: { from, to, reason },
+      where: { to: { equals: from } },
+      data: { to },
+      req: req as never,
     })
-  } catch {
-    /*
-      Най-честата причина е „вече съществува" — старият адрес е бил сменян
-      и преди. Тогава първият запис е по-верният: той сочи най-стария
-      адрес към текущия, а този щеше да сочи същото.
-    */
+    const има = await payload.find({
+      collection: 'redirects',
+      where: { from: { equals: from } },
+      limit: 1,
+      depth: 0,
+      req: req as never,
+    })
+    if (има.docs[0]) {
+      await payload.update({
+        collection: 'redirects',
+        id: има.docs[0].id,
+        data: { to, reason },
+        req: req as never,
+      })
+    } else {
+      await payload.create({ collection: 'redirects', data: { from, to, reason }, req: req as never })
+    }
+  } catch (e) {
+    // Пренасочването не бива да проваля записа на продукта — само се изписва.
+    payload.logger.error(`Пренасочване ${from} → ${to} не се записа: ${(e as Error).message}`)
   }
 }
 
 export const revalidateProduct: CollectionAfterChangeHook = async ({ doc, previousDoc, req }) => {
-  /* Адресът зависи от slug-а И от серията — и двете могат да се сменят. */
+  /*
+    Адресът зависи от slug-а И от серията — и двете могат да се сменят.
+    Сравняват се двата адреса, сглобени от виртуалните `categorySlug` &
+    сие (`productPath`). Те се попълват при всяко четене; самото
+    `category` при запис е само номер (админът и скриптовете пишат с
+    `depth: 0`). Преди серията се търсеше в него и смяна на категорията
+    НЕ записваше пренасочване — открито на 1 октомври 2026, когато
+    основната категория стана „първата от Категории".
+  */
   const старСлъг = previousDoc?.slug
-  const стараСерия = seriesSlug(previousDoc?.category)
-  const новаСерия = seriesSlug(doc?.category)
+  const стар = старСлъг ? productPath(previousDoc as never) : null
+  const нов = productPath(doc as never)
 
-  if (старСлъг && (старСлъг !== doc?.slug || стараСерия !== новаСерия)) {
-    const от = стараСерия
-      ? `${CATEGORY_BASE}/${стараСерия}/${старСлъг}`
-      : `${CATEGORY_BASE}/produkt/${старСлъг}`
+  if (стар && стар !== нов) {
     await записПренасочване(
       req as never,
-      от,
-      productPath(doc as never),
+      стар,
+      нов,
       старСлъг !== doc?.slug ? 'Сменен адрес на продукта' : 'Продуктът смени категорията си',
     )
   }

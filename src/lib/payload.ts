@@ -3,8 +3,9 @@ import { unstable_cache } from 'next/cache'
 import { getPayload } from 'payload'
 import { cache } from 'react'
 
-import type { Category, Product } from '@/payload-types'
+import type { Category, Product, ProductsSelect } from '@/payload-types'
 import type { Where } from 'payload'
+import { Products } from '@/collections/Products'
 import { rankSearchResults, searchWhere, searchWords } from './search'
 
 export const getPayloadClient = cache(async () => getPayload({ config }))
@@ -210,6 +211,28 @@ export const getStripCategories = cache(async (): Promise<Category[]> =>
   ),
 )
 
+/**
+ * Полетата на една карта — за списъците: категория, аксесоари, менюто.
+ *
+ * Пълният продукт носи всички секции и блокове. На 1 октомври 2026
+ * продуктите на менюто (63, дълбочина 1) бяха 2,7 MB — над тавана на
+ * `unstable_cache` от 2 MB („items over 2MB can not be cached"), тоест
+ * хедърът, а с него ВСЯКА страница, ги четеше наново при всяко зареждане.
+ * Списъкът на категория (дълбочина 2) — до 1,1 MB и 0,5–1,2 s. Картата
+ * чете само тези полета: 0,05 MB и под 0,1 s.
+ *
+ * Основата е `defaultPopulate` — същите полета, които носи продукт, свързан
+ * в друг документ. Нов обект при всяко извикване: `sanitizeSelect`
+ * дописва в подадения обект (т. 22).
+ */
+const cardSelect = (extra: Record<string, true> = {}) =>
+  ({
+    ...(Products.defaultPopulate as Record<string, true>),
+    _order: true,
+    categories: true,
+    ...extra,
+  }) as ProductsSelect<true>
+
 /** Номерата на категорията и на всичко под нея, на произволна дълбочина. */
 export const categoryBranchIds = (tree: Category[], rootId: number): number[] => {
   const ids = [rootId]
@@ -229,14 +252,14 @@ export const categoryBranchIds = (tree: Category[], rootId: number): number[] =>
  * от всички серии. Събира се с ЕДНА заявка по списък с номера, не с по
  * една заявка на ниво.
  *
- * Влизат и продуктите, които имат категорията в „Покажи и в"
- * (`alsoInCategories`). Една заявка с `or` — продукт, който отговаря и на
- * двете, излиза веднъж.
+ * Продуктът се вижда във ВСЯКА от „Категории" (не само в основната).
+ * `in` върху връзката „много" — продукт с две категории от разклонението
+ * излиза веднъж.
  */
 export const getCategoryProducts = cache(async (slug: string, ids: number[]) =>
   timed(`getCategoryProducts(${slug})`, () =>
     cached(
-      ['category-products', slug, ids.join(',')],
+      ['category-products-cards', slug, ids.join(',')],
       ['product', 'category', `category:${slug}`],
       async () => {
         if (!ids.length) return []
@@ -244,14 +267,12 @@ export const getCategoryProducts = cache(async (slug: string, ids: number[]) =>
         const result = await payload.find({
           collection: 'products',
           where: {
-            and: [
-              { or: [{ category: { in: ids } }, { alsoInCategories: { in: ids } }] },
-              { _status: { equals: 'published' } },
-            ],
+            and: [{ categories: { in: ids } }, { _status: { equals: 'published' } }],
           },
           sort: ['_order', 'title'],
           pagination: false,
-          depth: 2,
+          depth: 1,
+          select: cardSelect(),
         })
         return result.docs
       },
@@ -271,7 +292,7 @@ export const getCompatibleAccessories = cache(
   async (categoryIds: number[], productIds: number[] = []) =>
     timed(`getCompatibleAccessories(${categoryIds.length}/${productIds.length})`, () =>
       cached(
-        ['accessories', categoryIds.join(','), productIds.join(',')],
+        ['accessories-cards', categoryIds.join(','), productIds.join(',')],
         ['product', 'category'],
         async () => {
           if (!categoryIds.length && !productIds.length) return []
@@ -291,7 +312,8 @@ export const getCompatibleAccessories = cache(
             where: { and: [{ _status: { equals: 'published' } }, { or }] },
             sort: ['_order', 'title'],
             pagination: false,
-            depth: 2,
+            depth: 1,
+            select: cardSelect({ compatibleWith: true }),
           })
 
           /*
@@ -376,7 +398,7 @@ export const getCategorySlugs = cache(async (): Promise<string[]> => {
 export const getProductsByIds = cache(
   async (ids: number[]): Promise<Record<number, Product>> =>
     timed(`getProductsByIds(${ids.length})`, () =>
-      cached(['products-by-ids', ids.join(',')], ['menu', 'product'], async () => {
+      cached(['products-by-ids-cards', ids.join(',')], ['menu', 'product'], async () => {
         const byId: Record<number, Product> = {}
         if (!ids.length) return byId
 
@@ -386,6 +408,8 @@ export const getProductsByIds = cache(
           where: { and: [{ id: { in: ids } }, { _status: { equals: 'published' } }] },
           pagination: false,
           depth: 1,
+          // Само картата: с всички секции 63 продукта бяха 2,7 MB и не се кешираха.
+          select: cardSelect(),
         })
         for (const product of result.docs) byId[product.id] = product
         return byId

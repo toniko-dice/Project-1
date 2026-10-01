@@ -77,8 +77,8 @@ const MAX_AUTO_ACCESSORIES = 6
  * Аксесоарите за устройствата в панела — за празния раздел „Аксесоари".
  *
  * Устройствата са продуктите от ОСТАНАЛИТЕ секции на панела. Аксесоар
- * влиза, ако „Съвместим с" сочи някое от тях, категорията му или
- * категория над нея: кабел, отбелязан за „DELTA серия", важи за всеки
+ * влиза, ако „Съвместим с" сочи някое от тях, някоя от категориите му или
+ * категория над тях: кабел, отбелязан за „DELTA серия", важи за всеки
  * модел в нея — същото правило като при „Свързани продукти" на модела.
  */
 const autoAccessoryIds = (
@@ -96,11 +96,13 @@ const autoAccessoryIds = (
       const p = id !== null ? byId[id] : undefined
       if (!p) continue
       устройства.add(p.id)
-      let c: number | null | undefined =
-        typeof p.category === 'number' ? p.category : p.category?.id
-      while (c != null && !категории.has(c)) {
-        категории.add(c)
-        c = parentOf.get(c)
+      // Всички категории на устройството и всичко над тях.
+      for (const cat of p.categories?.length ? p.categories : [p.category]) {
+        let c: number | null | undefined = typeof cat === 'number' ? cat : cat?.id
+        while (c != null && !категории.has(c)) {
+          категории.add(c)
+          c = parentOf.get(c)
+        }
       }
     }
   }

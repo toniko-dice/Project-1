@@ -172,6 +172,7 @@ for (const p of PRODUCTS) {
     data: {
       title: p.title,
       slug: p.slug,
+      categories: [categoryIds[p.cat]],
       category: categoryIds[p.cat],
       tagline: p.tagline,
       badge: p.badge ?? 'none',

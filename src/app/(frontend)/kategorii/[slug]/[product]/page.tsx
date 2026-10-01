@@ -90,12 +90,19 @@ export default async function ProductPage({ params }: Args) {
 
     Търси се НАГОРЕ по дървото, не надолу: кабел, отбелязан като съвместим
     с „DELTA серия", важи за всеки модел в нея. Затова се подават
-    категорията на продукта и всички над нея, плюс самия продукт — за
-    аксесоарите, вързани към конкретния модел.
+    категориите на продукта и всички над тях, плюс самия продукт — за
+    аксесоарите, вързани към конкретния модел. Всички „Категории", не само
+    основната: продукт, сложен и в „Комплекти", носи и аксесоарите им.
   */
-  const accessories = категория
+  const всичките = (product.categories ?? []).flatMap((c) => {
+    const id = typeof c === 'number' ? c : c?.id
+    const cat = tree.find((t) => t.id === id)
+    return cat ? ancestry(tree, cat).map((a) => a.id) : []
+  })
+  const нагоре = [...new Set(категория ? [...ancestry(tree, категория).map((c) => c.id), ...всичките] : всичките)]
+  const accessories = нагоре.length
     ? await getCompatibleAccessories(
-        ancestry(tree, категория).map((c) => c.id),
+        нагоре.sort((a, b) => a - b),
         [product.id],
       )
     : []

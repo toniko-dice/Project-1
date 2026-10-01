@@ -580,13 +580,13 @@ export interface Product {
    * Складов или доставчиков номер. Служи за сверяване при внос и не се показва никъде на сайта.
    */
   barcodeInternal?: string | null;
+  /**
+   * Първата е основната — по нея е адресът на продукта. Подредбата се сменя с влачене.
+   */
+  categories: (number | Category)[];
   category: number | Category;
   /**
-   * По избор. Продуктът излиза и в списъците на тези категории. Адресът и трохите остават по основната.
-   */
-  alsoInCategories?: (number | Category)[] | null;
-  /**
-   * Попълва се само — взима се от избраната по-горе категория.
+   * Попълва се само — първата от „Категории".
    */
   categoryName?: string | null;
   categorySlug?: string | null;
@@ -1069,6 +1069,10 @@ export interface Product {
 export interface Category {
   id: number;
   _order?: string | null;
+  /**
+   * Попълва се само — името с категориите над него. Така се показва при избор на категория.
+   */
+  fullTitle?: string | null;
   title: string;
   /**
    * Само малки латински букви, цифри и тирета. Кирилицата се транслитерира, интервалите стават тирета, представки като „products/" се махат. Не е нужно да пишете пътя — само името.
@@ -1490,7 +1494,7 @@ export interface MenuPanel {
             }[]
           | null;
         /**
-         * Вносът добавя тук нов аксесоар, чието „Съвместим с" сочи категорията на секцията или подкатегория под нея.
+         * Остави празно — аксесоарите се попълват автоматично от полето „Съвместим с" на аксесоарите.
          */
         accessories?: boolean | null;
         showViewAllTile?: boolean | null;
@@ -2048,8 +2052,8 @@ export interface ProductsSelect<T extends boolean = true> {
   ean?: T;
   ean2?: T;
   barcodeInternal?: T;
+  categories?: T;
   category?: T;
-  alsoInCategories?: T;
   categoryName?: T;
   categorySlug?: T;
   categoryParentSlug?: T;
@@ -2322,6 +2326,7 @@ export interface ProductsSelect<T extends boolean = true> {
  */
 export interface CategoriesSelect<T extends boolean = true> {
   _order?: T;
+  fullTitle?: T;
   title?: T;
   slug?: T;
   parent?: T;

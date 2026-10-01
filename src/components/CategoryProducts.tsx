@@ -78,9 +78,9 @@ export const CategoryProducts = ({
       const ids = new Set(раздел.ids)
       карта.set(
         раздел.slug,
-        // Основната категория или някоя от „Покажи и в".
+        // Във всяка от „Категории", не само в основната.
         products.filter((p) =>
-          [p.category, ...(p.alsoInCategories ?? [])].some((c) => {
+          (p.categories ?? []).some((c) => {
             const id = typeof c === 'number' ? c : c?.id
             return typeof id === 'number' && ids.has(id)
           }),

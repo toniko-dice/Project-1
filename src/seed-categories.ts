@@ -291,13 +291,16 @@ const продуктиНаРазклонение = async (
   }
   const продукти = await payload.find({
     collection: 'products',
-    where: { and: [{ category: { in: разклонение } }, { _status: { equals: 'published' } }] },
+    where: { and: [{ categories: { in: разклонение } }, { _status: { equals: 'published' } }] },
     sort: ['_order', '-createdAt'],
     pagination: false,
     depth: 0,
   })
+  /* Първата от „Категории" на продукта, която е в разклонението. */
   const категорияНа = (d: (typeof продукти.docs)[number]) =>
-    typeof d.category === 'number' ? d.category : d.category?.id
+    (d.categories ?? [])
+      .map((c) => (typeof c === 'number' ? c : c?.id))
+      .find((id) => typeof id === 'number' && разклонение.includes(id))
   // Редове „продукт + полета": попълнени от продукта, етикетът празен.
   return разклонение.flatMap((cid) =>
     продукти.docs
@@ -645,7 +648,7 @@ if (чужди.length) {
   for (const c of чужди) {
     const брой = await payload.count({
       collection: 'products',
-      where: { category: { equals: c.id } },
+      where: { categories: { equals: c.id } },
     })
     const бележка = брой.totalDocs
       ? `${брой.totalDocs} продукта — преместете ги, преди да триете`
