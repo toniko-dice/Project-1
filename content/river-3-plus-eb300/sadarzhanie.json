@@ -1,0 +1,208 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg + eu.ecoflow.com/products/river-3-plus-smart-extra-battery",
+  "produkt": {
+    "title": "EcoFlow RIVER 3 Plus Smart Extra Battery (EB300)",
+    "slug": "river-3-plus-eb300",
+    "categorySlug": "dopalnitelni-baterii",
+    "productType": "accessory",
+    "tagline": "Допълнителна батерия 286Wh за RIVER 3 Plus",
+    "badge": "none",
+    "price": 255.13,
+    "externalUrl": "https://dice.bg/ecoflow-eb300-river-3-plus-smart-extra-battery-286wh-dopalnitelna-zaryadna-bateria-za-elektrotsentrala-ecoflow-river-3-plus-cheren-item70392",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "70392",
+    "ean": "4895251628341",
+    "description": "Допълнителна батерия 286Wh за EcoFlow RIVER 3 Plus — удвоява капацитета до 572Wh, свързва се без кабели (Pogo Pin) и има собствен USB-C изход 140W.",
+    "highlights": [
+      {
+        "text": "286Wh — RIVER 3 Plus до 572Wh"
+      },
+      {
+        "text": "Свързване без кабели (Pogo Pin)"
+      },
+      {
+        "text": "USB-C изход 140W"
+      },
+      {
+        "text": "LFP, 3000 цикъла"
+      }
+    ],
+    "metaTitle": "EcoFlow RIVER 3 Plus Smart Extra Battery EB300 | EcoFlow България",
+    "metaDescription": "Допълнителна батерия EB300 (286Wh) за EcoFlow RIVER 3 Plus — до 572Wh, свързване без кабели, USB-C 140W.",
+    "compatibleWith": [
+      "river-3-plus"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "70392_1_1.webp",
+      "alt": "EcoFlow RIVER 3 Plus Smart Extra Battery (EB300) — допълнителна батерия"
+    },
+    {
+      "file": "70392_2_1.webp",
+      "alt": "EcoFlow RIVER 3 Plus Smart Extra Battery (EB300) — допълнителна батерия"
+    },
+    {
+      "file": "70392_3_1.webp",
+      "alt": "EcoFlow RIVER 3 Plus Smart Extra Battery (EB300) — допълнителна батерия"
+    },
+    {
+      "file": "70392_4_1.webp",
+      "alt": "EcoFlow RIVER 3 Plus Smart Extra Battery (EB300) — допълнителна батерия"
+    },
+    {
+      "file": "70392_5_1.webp",
+      "alt": "EcoFlow RIVER 3 Plus Smart Extra Battery (EB300) — допълнителна батерия"
+    },
+    {
+      "file": "70392_6_1.webp",
+      "alt": "EcoFlow RIVER 3 Plus Smart Extra Battery (EB300) — допълнителна батерия"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Двоен капацитет за RIVER 3 Plus",
+      "body": "Удвоете капацитета на RIVER 3 Plus до 572Wh — по-дълго време за работа на основните ви уреди.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Без кабели и винтове",
+      "body": "С технологията Pogo Pin батерията се свързва без кабели — просто се закрепва с щипки.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Зарежда се заедно с RIVER 3 Plus",
+      "body": "Зареждате по всяко време и навсякъде. Умната допълнителна батерия се зарежда и разрежда синхронно с електроцентралата и поддържа еднакъв процент и в двете устройства.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "USB-C",
+      "heading": "Собствен USB-C изход 140W",
+      "body": "Батерията има един USB-C изход до 140W — ползвате я и самостоятелно.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "LFP за години",
+      "body": "С над 3000 цикъла до 80% капацитет можете да ползвате RIVER 3 Plus почти всеки ден почти десет години. LFP химията е по-надеждна, ефективна и безопасна дори при високи температури.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow RIVER 3 Plus Smart Extra Battery 286Wh",
+          "qty": 1
+        },
+        {
+          "name": "Ръководство за употреба",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "RIVER 3 Plus Smart Extra Battery 286Wh"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFEB300"
+        },
+        {
+          "label": "Капацитет",
+          "value": "286Wh / 89 600 mAh"
+        },
+        {
+          "label": "Батерия",
+          "value": "LFP"
+        },
+        {
+          "label": "Живот",
+          "value": "3000 цикъла до >80% капацитет"
+        },
+        {
+          "label": "Вход",
+          "value": "17,5–25,5V, макс. 14A"
+        },
+        {
+          "label": "Изход",
+          "value": "51,2V, макс. 3200W"
+        },
+        {
+          "label": "USB-C изход",
+          "value": "5V/3A, 9V/3A, 12V/3A, 15V/3A, 20V/5A, 28V/5A (макс. 140W)"
+        },
+        {
+          "label": "Размери",
+          "value": "234 × 224 × 110 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "3,3 кг"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "само EcoFlow RIVER 3 Plus"
+        },
+        {
+          "label": "Гаранция",
+          "value": "60 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70392_1_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70392_2_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70392_3_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70392_4_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70392_5_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70392_6_1.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "По dice.bg. EcoFlow EU пише същото (EB300, 286Wh, Pogo Pin, USB-C 140W) — разминавания няма.",
+    "dice.bg пише „DELTA River 3 Plus“ — грешка, продуктът е за RIVER 3 Plus.",
+    "Общият текст на dice.bg за LFP батериите не е сложен — повтаря се при всички батерии и не е за конкретния продукт.",
+    "„Съвместим с“ = RIVER 3 Plus. dice.bg казва „само с RIVER 3 Plus“ — RIVER 3 Plus Wireless не е свързан; ако е съвместим, кажи и го добавям.",
+    "В dice.bg: Налично на склад (проверено 01.10.2026)."
+  ]
+}

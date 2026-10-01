@@ -1,0 +1,194 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg + eu.ecoflow.com/products/delta-3-series-smart-extra-battery",
+  "produkt": {
+    "title": "EcoFlow DELTA 3 Smart Extra Battery",
+    "slug": "delta-3-smart-extra-battery",
+    "categorySlug": "dopalnitelni-baterii",
+    "productType": "accessory",
+    "tagline": "Допълнителна батерия 1024Wh за DELTA 3 и DELTA 3 Plus",
+    "badge": "none",
+    "price": 510.78,
+    "compareAtPrice": 613.04,
+    "externalUrl": "https://dice.bg/ecoflow-delta-3-smart-extra-battery-1024wh-dopalnitelna-zaryadna-bateria-za-elektrotsentrala-ecoflow-pro-3-tamnosiv-item70514",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "70514",
+    "ean": "4895251626408",
+    "description": "Допълнителна батерия 1024Wh за EcoFlow DELTA 3 и DELTA 3 Plus — удвоява капацитета до 2048Wh (DELTA 3) или 2560Wh (DELTA 3 Plus). LFP, 4000+ цикъла.",
+    "highlights": [
+      {
+        "text": "1024Wh"
+      },
+      {
+        "text": "DELTA 3 до 2048Wh, DELTA 3 Plus до 2560Wh"
+      },
+      {
+        "text": "Зарежда се синхронно"
+      },
+      {
+        "text": "LFP, 4000+ цикъла"
+      }
+    ],
+    "metaTitle": "EcoFlow DELTA 3 Smart Extra Battery 1024Wh | EcoFlow България",
+    "metaDescription": "Допълнителна батерия EcoFlow DELTA 3 Smart Extra Battery 1024Wh за DELTA 3 и DELTA 3 Plus.",
+    "compatibleWith": [
+      "delta-3",
+      "delta-3-plus"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "70514_1_1.webp",
+      "alt": "EcoFlow DELTA 3 Smart Extra Battery — допълнителна батерия"
+    },
+    {
+      "file": "70514_2_1.webp",
+      "alt": "EcoFlow DELTA 3 Smart Extra Battery — допълнителна батерия"
+    },
+    {
+      "file": "70514_3_1.webp",
+      "alt": "EcoFlow DELTA 3 Smart Extra Battery — допълнителна батерия"
+    },
+    {
+      "file": "70514_4_1.webp",
+      "alt": "EcoFlow DELTA 3 Smart Extra Battery — допълнителна батерия"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Повече капацитет за DELTA 3",
+      "body": "Удвоете капацитета на DELTA 3 до 2048Wh или на DELTA 3 Plus до 2560Wh — по-дълго време за работа на основните ви уреди.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Зарежда се заедно с електроцентралата",
+      "body": "Зареждате по всяко време и навсякъде. Умната допълнителна батерия се зарежда и разрежда синхронно и поддържа еднакъв процент и в двете устройства.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "10 години всеки ден",
+      "body": "Над 4000 цикъла благодарение на LFP химията — около 10 години всекидневна употреба, докато батерията стигне 80% от първоначалния капацитет. LFP е по-надеждна, ефективна и безопасна дори при високи температури. Включи и работи — батерията се следи и управлява от приложението EcoFlow. Една от най-пълните 5-годишни гаранции.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "DELTA 3 Max Plus",
+      "heading": "Работи и с DELTA 3 Max Plus",
+      "body": "Батерията е съвместима и с EcoFlow DELTA 3 Max Plus:\n1. Хардуерната версия на DELTA 3 Max Plus трябва да съответства на фърмуера на DELTA 3 Smart Extra Battery.\n2. Използвайте кабела за батерията заедно с адаптера EcoFlow DELTA Pro Adapter.\n3. Не включвайте и не изключвайте кабела, докато устройствата работят.\n\nОбновяване на фърмуера:\n1. Включете DELTA 3 Max Plus самостоятелно.\n2. Отворете приложението EcoFlow, проверете за обновления и инсталирайте най-новия фърмуер.\n3. Свържете устройството с батерията.\n4. Ако приложението предложи обновяване и за батерията — обновете я.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow DELTA 3 Smart Extra Battery 1024Wh",
+          "qty": 1
+        },
+        {
+          "name": "Кабел EcoFlow Extra Battery Flat Link Cable (0,85 м)",
+          "qty": 1
+        },
+        {
+          "name": "Ръководство за употреба",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "DELTA 3 Smart Extra Battery 1024Wh"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFDELTA3P-EB"
+        },
+        {
+          "label": "Капацитет",
+          "value": "1024Wh"
+        },
+        {
+          "label": "Батерия",
+          "value": "LFP, 4000+ цикъла до 80% капацитет"
+        },
+        {
+          "label": "Температура на зареждане",
+          "value": "0 °C до 45 °C"
+        },
+        {
+          "label": "Температура на разреждане",
+          "value": "−10 °C до 45 °C"
+        },
+        {
+          "label": "Температура на съхранение",
+          "value": "−10 °C до 45 °C"
+        },
+        {
+          "label": "Размери",
+          "value": "398 × 200 × 198 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "9,6 кг"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow DELTA 3, DELTA 3 Plus; DELTA 3 Max Plus (с адаптер)"
+        },
+        {
+          "label": "Цвят",
+          "value": "тъмносив"
+        },
+        {
+          "label": "Гаранция",
+          "value": "60 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70514_1_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70514_2_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70514_3_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70514_4_1.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "По твое решение за този продукт данните са по EcoFlow: 4000+ цикъла (dice.bg пише 3000), размери и тегло от EcoFlow.",
+    "Общият текст на dice.bg за LFP батериите не е сложен — повтаря се при всички батерии и не е за конкретния продукт.",
+    "„Съвместим с“ = DELTA 3 и DELTA 3 Plus. DELTA 3 Max Plus не е свързан, защото иска адаптер — описано е в отделна секция.",
+    "В dice.bg: Налично на склад (проверено 01.10.2026)."
+  ]
+}

@@ -1,0 +1,439 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "https://eu.ecoflow.com/products/rapid-pro-x-power-bank",
+  "produkt": {
+    "title": "EcoFlow RAPID Pro X Power Bank (27,650mAh, 300W)",
+    "slug": "rapid-pro-x-power-bank",
+    "categorySlug": "vanshni-baterii-rapid",
+    "productType": "hero",
+    "tagline": "Външна батерия 27 650 mAh, 300W, с модулен дизайн",
+    "badge": "none",
+    "price": 199,
+    "compareAtPrice": 244.91,
+    "externalUrl": "https://dice.bg/prenosima-v-nshna-baterija-s-3xusb-c-izhodi-i-tehnologija-za-b-rzo-zarezhdane-ecoflow-rapid-pro-x-power-bank-27650-mah-300w-siv",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "72896",
+    "ean": "4895251646673",
+    "description": "Външна батерия 27 650 mAh (99,54Wh), разрешена в самолет. 300W общо от 3 USB-C порта (140W + 2 × 65W), 0–80% за 20 мин с настолното зарядно RAPID Pro, сменяеми магнитни модули, LCD дисплей и приложение.",
+    "highlights": [
+      {
+        "text": "27 650 mAh (99,54Wh) — разрешена в самолет¹"
+      },
+      {
+        "text": "0–80% за 20 мин с настолното зарядно RAPID Pro 320W²"
+      },
+      {
+        "text": "300W общо: 1 × 140W и 2 × 65W USB-C"
+      },
+      {
+        "text": "Сменяеми магнитни модули"
+      },
+      {
+        "text": "Умен LCD дисплей"
+      },
+      {
+        "text": "Управление от приложението EcoFlow"
+      }
+    ],
+    "metaTitle": "EcoFlow RAPID Pro X Power Bank 27650 mAh 300W | EcoFlow България",
+    "metaDescription": "Външна батерия EcoFlow RAPID Pro X — 27 650 mAh, 300W, 140W USB-C, сменяеми магнитни модули, разрешена в самолет."
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1171461725.png",
+      "alt": "EcoFlow RAPID Pro X Power Bank (27,650mAh, 300W) — външна батерия"
+    },
+    {
+      "file": "ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1171461722.png",
+      "alt": "EcoFlow RAPID Pro X Power Bank (27,650mAh, 300W) — външна батерия"
+    },
+    {
+      "file": "ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1171461721.png",
+      "alt": "EcoFlow RAPID Pro X Power Bank (27,650mAh, 300W) — външна батерия"
+    },
+    {
+      "file": "ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1174090706.jpg",
+      "alt": "EcoFlow RAPID Pro X Power Bank (27,650mAh, 300W) — външна батерия"
+    },
+    {
+      "file": "ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1174090705.jpg",
+      "alt": "EcoFlow RAPID Pro X Power Bank (27,650mAh, 300W) — външна батерия"
+    },
+    {
+      "file": "ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1174090702.jpg",
+      "alt": "EcoFlow RAPID Pro X Power Bank (27,650mAh, 300W) — външна батерия"
+    },
+    {
+      "file": "ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1174090701.jpg",
+      "alt": "EcoFlow RAPID Pro X Power Bank (27,650mAh, 300W) — външна батерия"
+    },
+    {
+      "file": "ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1174090704.jpg",
+      "alt": "EcoFlow RAPID Pro X Power Bank (27,650mAh, 300W) — външна батерия"
+    },
+    {
+      "file": "ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1174090703.jpg",
+      "alt": "EcoFlow RAPID Pro X Power Bank (27,650mAh, 300W) — външна батерия"
+    },
+    {
+      "file": "ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1174090700.jpg",
+      "alt": "EcoFlow RAPID Pro X Power Bank (27,650mAh, 300W) — външна батерия"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Приложения",
+      "layout": "tabs-top",
+      "heading": "Едно решение за всяка ситуация",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Забавления",
+          "image": "pc__02.jpg",
+          "imageAlt": "Забавления",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Работа от разстояние",
+          "image": "pc__06.jpg",
+          "imageAlt": "Работа от разстояние",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Пътуване",
+          "image": "pc__04.jpg",
+          "imageAlt": "Пътуване",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "В офиса",
+          "image": "pc__05.jpg",
+          "imageAlt": "В офиса",
+          "caption": "",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Портове",
+      "layout": "tabs-top",
+      "heading": "Зарежда 4 устройства наведнъж",
+      "intro": "Съвместима с 99% от ежедневните електронни устройства.\n*Конкретните съвместими модели вижте във въпросите по-долу.",
+      "tabs": [
+        {
+          "label": "Един порт",
+          "image": "pc_geek-ports_01.jpg",
+          "imageAlt": "Един порт",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Два порта",
+          "image": "pc_geek-ports_02.jpg",
+          "imageAlt": "Два порта",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Три порта",
+          "image": "pc_geek-ports_03.jpg",
+          "imageAlt": "Три порта",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Четири порта",
+          "image": "pc_geek-ports_04.jpg",
+          "imageAlt": "Четири порта",
+          "caption": "",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Енергия за нов свят",
+      "body": "",
+      "image": "pc_About_EcoFlow_eu_13a918d0-cf23-48b3-9ee3-8af9b730a4f9.jpg",
+      "imageAlt": "За EcoFlow"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow RAPID Pro X Power Bank (27 650 mAh, 300W)",
+          "qty": 1
+        },
+        {
+          "name": "Чанта от фланела",
+          "qty": 1,
+          "image": "Flannel_Bag.png",
+          "imageAlt": "Чанта от фланела"
+        },
+        {
+          "name": "Модул с прибиращ се кабел",
+          "qty": 1,
+          "image": "in_the_box_03.png",
+          "imageAlt": "Модул с прибиращ се кабел"
+        }
+      ]
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "faqBlock",
+      "anchorLabel": "Въпроси",
+      "heading": "Често задавани въпроси",
+      "items": [
+        {
+          "question": "Кои устройства са съвместими?",
+          "answer": "Лаптопи, телефони, таблети, слушалки, смарт часовници, конзоли и други устройства с USB-C — например MacBook Pro/Air, iPhone, iPad, Dell XPS и Samsung Galaxy."
+        },
+        {
+          "question": "Какви протоколи поддържа, как се разпределя мощността и може ли да се зарежда и разрежда едновременно?",
+          "answer": "Поддържа преминаващо зареждане (pass-through); мощността на всеки порт зависи от нуждите на свързаното устройство. Вход: PD3.1, съвместим с PD3.0 PPS, QC3.0, AFC, BC1.2. Изход: PD3.1, съвместим с PD3.0 PPS, QC3.0, AFC, Apple 2.4A, BC1.2, SCP, FCP, UFCS."
+        },
+        {
+          "question": "Защо батерията дава по-малко енергия от очакваното?",
+          "answer": "Обикновено има разлика спрямо очакваното — капацитетът намалява главно заради загубите в батерията и в преобразуващата схема."
+        },
+        {
+          "question": "Как да запазя бързото зареждане и разреждане?",
+          "answer": "1. Изберете подходящо зарядно — с протоколи за бързо зареждане и висока мощност (напр. PD 65W или 100W). Избягвайте слаби зарядни (напр. 5V/1A).\n2. Ползвайте добър кабел — оригинален или качествен кабел за бързо зареждане (напр. 5A, 240W). Пазете конекторите чисти и стегнати и избягвайте прекалено дълги кабели.\n3. Съвместимост — свързаните устройства трябва да поддържат бързо зареждане, иначе то няма да се постигне."
+        },
+        {
+          "question": "Защо мощността, напрежението и токът на екрана се различават от тези в приложението?",
+          "answer": "Данните в приложението се изпращат към облака през определени интервали, затова може да има разлика заради момента на отчитане."
+        },
+        {
+          "question": "Живот на батерията и температура",
+          "answer": "Батерията запазва над 80% от капацитета си след 300 цикъла. Зарежда и разрежда на надморска височина под 3000 м и при температура от 0 °C до 40 °C. Ако няма да я ползвате дълго, съхранявайте я между −20 °C и 40 °C и я зареждайте поне веднъж на три месеца."
+        },
+        {
+          "question": "Може ли да се качи в самолет?",
+          "answer": "Да. По правилата на Международната организация за гражданска авиация (ICAO) и повечето авиокомпании външни батерии под 100Wh са разрешени. RAPID Pro с капацитет 27 650 mAh (99,54Wh) отговаря на изискването.¹"
+        },
+        {
+          "question": "Може ли да се ползва веднага след разопаковане?",
+          "answer": "Да, включвате и работи. Тъй като функциите постоянно се подобряват, препоръчваме да я свържете с приложението и да обновите фърмуера."
+        },
+        {
+          "question": "За какво е приложението? Задължително ли е?",
+          "answer": "Приложението дава наблюдение на мощността, обновяване на фърмуера, управление на устройството, смяна на темата и настройки на зареждането. Без приложението батерията зарежда и разрежда нормално."
+        },
+        {
+          "question": "Как да свържа RAPID Pro с приложението EcoFlow през Wi-Fi/Bluetooth?",
+          "answer": "На екрана на батерията отворете „Settings“ > „Wi-Fi & BLE“ и включете превключвателя. На телефона включете Bluetooth.\nWi-Fi: в началото на приложението натиснете „+“ горе вдясно. От страницата за сдвояване изберете Wi-Fi мрежата, въведете паролата и натиснете „Next“. След успешно свързване горе на екрана се появява иконка за Wi-Fi. (Поддържа се само 2,4 GHz Wi-Fi.)\nBluetooth: на страницата за сдвояване натиснете „Set up later“ — ще се отвори страницата на устройството с иконка за Bluetooth. Оттам с иконката за облак горе вдясно можете да настроите и Wi-Fi."
+        },
+        {
+          "question": "Поддържа ли преминаващо зареждане? Защо понякога не работи?",
+          "answer": "Да. Нужно е зарядно с мощност поне 20W, а входът трябва да е по-голям от изхода, за да работи устройството на пълна мощност."
+        }
+      ]
+    },
+    {
+      "blockType": "footnotes",
+      "items": [
+        {
+          "text": "¹ Правилата на авиокомпаниите се различават по региони и превозвачи. Проверете ограниченията за батерии с авиокомпанията преди пътуване."
+        },
+        {
+          "text": "² Зависи от модела на телефона."
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Общ капацитет на клетките",
+          "value": "27 650 mAh (99,54Wh)"
+        },
+        {
+          "label": "Капацитет на батерията",
+          "value": "16 658 mAh (25,2V)"
+        },
+        {
+          "label": "Размери",
+          "value": "батерия: 56,51 × 63,95 × 151,98 мм; модул с прибиращ се кабел: 23,5 × 55,72 × 64,03 мм; модул за безжично зареждане: 20 × 55,23 × 64,08 мм"
+        },
+        {
+          "label": "Нето тегло",
+          "value": "батерия: 700 г; модул с прибиращ се кабел: 92,2 г; модул за безжично зареждане: 85,4 г"
+        },
+        {
+          "label": "Цвят",
+          "value": "сребрист"
+        },
+        {
+          "label": "Дължина на кабела",
+          "value": "60 см"
+        },
+        {
+          "label": "Химия на батерията",
+          "value": "тройна литиева (NCM)"
+        },
+        {
+          "label": "Живот",
+          "value": "300 цикъла до 80% капацитет"
+        },
+        {
+          "label": "Изходи общо",
+          "value": "3 × USB-C + кабел, общо 300W"
+        },
+        {
+          "label": "Вграден кабел",
+          "value": "USB-C, двупосочно бързо зареждане 140W"
+        },
+        {
+          "label": "USB-A изход",
+          "value": "няма"
+        },
+        {
+          "label": "USB-C изходи",
+          "value": "модул с прибиращ се кабел / C1: 140W; C2/C3: 65W"
+        },
+        {
+          "label": "Зареждане",
+          "value": "Pogo Pin: 320W; общо през USB: 280W; Pogo Pin + USB: 320W — 0–80% за 20 мин"
+        },
+        {
+          "label": "Приложение",
+          "value": "да"
+        },
+        {
+          "label": "Дисплей",
+          "value": "LCD"
+        },
+        {
+          "label": "Устойчивост на падане",
+          "value": "1 м"
+        },
+        {
+          "label": "Негорим корпус",
+          "value": "V0"
+        },
+        {
+          "label": "Гаранция",
+          "value": "2 години"
+        },
+        {
+          "label": "Температура на зареждане",
+          "value": "20 °C – 30 °C"
+        },
+        {
+          "label": "Температура на разреждане",
+          "value": "0 °C – 45 °C"
+        },
+        {
+          "label": "Температура на съхранение",
+          "value": "−10 °C – 45 °C"
+        },
+        {
+          "label": "Модел в dice.bg",
+          "value": "EF-RP27KGEEK-EU"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1171461725.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1171461722.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1171461721.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1174090706.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1174090705.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1174090702.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1174090701.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1174090704.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1174090703.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1174090700.jpg"
+    ],
+    "sekcii": [
+      "https://eu.ecoflow.com/cdn/shop/files/pc__02.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc__06.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc__04.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc__05.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_geek-ports_01.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_geek-ports_02.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_geek-ports_03.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_geek-ports_04.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_About_EcoFlow_eu_13a918d0-cf23-48b3-9ee3-8af9b730a4f9.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/Flannel_Bag.png",
+      "https://eu.ecoflow.com/cdn/shop/files/in_the_box_03.png"
+    ]
+  },
+  "_prevod_nadpisi": {
+    "ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1174090706.jpg": {
+      "Fast Charge 4 Devices at Once*": "Бързо зареждане на 4 устройства наведнъж*",
+      "Up to 320W output": "До 320W изходна мощност",
+      "1 × 140W USB-C · 2 × 65W USB-C · 1 × 140W add-on EcoFlow RAPID Pro X Magnetic Block (60 cm Retractable Cable)": "1 × 140W USB-C · 2 × 65W USB-C · 1 × 140W с магнитния модул EcoFlow RAPID Pro X (прибиращ се кабел 60 см)",
+      "Charge 50% MacBook Pro 16'' = 30 min": "50% заряд на MacBook Pro 16'' = 30 мин",
+      "* With the EcoFlow RAPID Pro X Magnetic Block (60 cm Retractable Cable)": "* С магнитния модул EcoFlow RAPID Pro X (прибиращ се кабел 60 см)"
+    },
+    "ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1174090705.jpg": {
+      "Ultra-Fast Recharging": "Ултрабързо презареждане",
+      "EcoFlow RAPID Pro Desktop Charger*": "Настолно зарядно EcoFlow RAPID Pro*",
+      "Single-port input": "Вход през един порт",
+      "Multi-port input": "Вход през няколко порта",
+      "min": "мин",
+      "* EcoFlow RAPID Pro Desktop Charger sold separately": "* Настолното зарядно EcoFlow RAPID Pro се продава отделно"
+    },
+    "ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1174090702.jpg": {
+      "Big Power, Compact Size": "Голяма мощност, компактен размер",
+      "Air-travel-friendly": "Разрешена в самолет",
+      "times / time": "пъти / път"
+    },
+    "ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1174090701.jpg": {
+      "Advanced protection for maximum performance": "Модерна защита за максимална производителност",
+      "24/7 safety checks": "Проверки за безопасност 24/7",
+      "10 million daily temperature tests": "10 милиона температурни проверки на ден",
+      "VO-level fireproof shell": "Негорим корпус клас V0",
+      "Intelligent BMS and EMS systems": "Интелигентни системи BMS и EMS"
+    },
+    "ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1174090704.jpg": {
+      "In-App Power Management and Customisation": "Управление и персонализация от приложението",
+      "Monitor": "Наблюдение",
+      "Control": "Управление",
+      "Battery optimisation setup": "Оптимизация на батерията",
+      "Personalised screen display settings": "Персонален екран"
+    },
+    "ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1174090703.jpg": {
+      "TFT Smart Display": "Умен TFT дисплей",
+      "Equipped with a 3.9-inch LCD screen so you can view power status and standby graphics at a glance": "3,9-инчов LCD екран — състоянието и графиките в покой с един поглед"
+    },
+    "ecoflow-rapid-pro-x-power-bank-27-650mah-300w-1174090700.jpg": {
+      "Universal Compatibility": "Универсална съвместимост",
+      "Compatible with 99% of everyday electronic devices": "Съвместима с 99% от ежедневните електронни устройства",
+      "iPhone Series": "Серия iPhone",
+      "Sony Devices": "Устройства Sony",
+      "(марките и моделите остават)": "—"
+    },
+    "pc_About_EcoFlow_eu_13a918d0-cf23-48b3-9ee3-8af9b730a4f9.jpg": {
+      "Power a New World": "Енергия за нов свят",
+      "EcoFlow is a leading provider of eco-friendly energy solutions committed to powering a new world. Since its founding in 2017, EcoFlow has worked towards being the FIRST in power solutions, Flexible, Innovative, Reliable, Simple, and Thorough - for individuals and families, whether at home, outdoors, or on the go. With a smart manufacturing center in China and headquarters in the USA, Germany, and Japan, EcoFlow has empowered over 5 million users in 140 markets worldwide.": "EcoFlow е водещ доставчик на екологични енергийни решения, посветен на енергията за нов свят. От основаването си през 2017 г. EcoFlow се стреми да бъде ПЪРВИ в енергийните решения — гъвкави, иновативни, надеждни, прости и задълбочени — за хора и семейства у дома, на открито и в движение. С умен производствен център в Китай и централи в САЩ, Германия и Япония, EcoFlow дава енергия на над 5 милиона потребители в 140 пазара по света."
+    }
+  },
+  "_neyasni": [
+    "Направено като eu.ecoflow.com (по твое решение). Спецификациите са на EcoFlow; разлики с dice.bg: тегло 700 г (dice: 650 г), химия тройна литиева (dice: литиево-полимерна), в кутията модул с прибиращ се кабел (dice: USB-C кабел 60 см).",
+    "Разделите „Едно решение за всяка ситуация“: при EcoFlow някои раздели имат по 2–3 снимки — сложена е първата.",
+    "Снимките в галерията са с надписи — в списъка за превод. Снимките на портовете са само с ватове (без превод).",
+    "В dice.bg: Налично на склад (проверено 01.10.2026)."
+  ]
+}

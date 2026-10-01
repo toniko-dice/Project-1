@@ -1,0 +1,144 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg + eu.ecoflow.com/products/glacier-plug-in-battery",
+  "produkt": {
+    "title": "EcoFlow GLACIER Plug-in Battery",
+    "slug": "glacier-plug-in-battery",
+    "categorySlug": "dopalnitelni-baterii",
+    "productType": "accessory",
+    "tagline": "Батерия 298Wh за преносимия хладилник EcoFlow GLACIER",
+    "badge": "none",
+    "price": 229,
+    "externalUrl": "https://dice.bg/baterija-za-ecoflow-glacier-portable-fridge-ecoflow-glacier-plug-in-battery-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "62275",
+    "ean": "4895251604802",
+    "description": "Батерия 298Wh за преносимите хладилници EcoFlow GLACIER и GLACIER Classic — до 40 часа охлаждане без кабели.",
+    "highlights": [
+      {
+        "text": "298Wh"
+      },
+      {
+        "text": "До 40 ч охлаждане без кабели"
+      },
+      {
+        "text": "Зарежда се през USB-C"
+      },
+      {
+        "text": "800 цикъла до 80%"
+      }
+    ],
+    "metaTitle": "EcoFlow GLACIER Plug-in Battery 298Wh | EcoFlow България",
+    "metaDescription": "Батерия EcoFlow GLACIER Plug-in Battery 298Wh — до 40 часа охлаждане без кабели за хладилника GLACIER.",
+    "compatibleWith": [
+      "glacier-classic-35l",
+      "glacier-classic-45l",
+      "glacier-classic-55l"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "62275_1_2.webp",
+      "alt": "EcoFlow GLACIER Plug-in Battery — батерия за GLACIER"
+    },
+    {
+      "file": "62275_2_2.webp",
+      "alt": "EcoFlow GLACIER Plug-in Battery — батерия за GLACIER"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "До 40 часа без кабели",
+      "body": "Създаден за пълна мобилност — хладилникът EcoFlow GLACIER (продава се отделно) се захранва от батерията, без разхвърляни кабели. С капацитет 298Wh имате до 40 часа замразени ястия, пресни плодове и ледени напитки.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Зарежда се през USB-C",
+      "body": "Батерията има USB-C вход за зареждане.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow GLACIER Plug-in Battery",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "GLACIER Plug-in Battery"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "ZYDBX100EB"
+        },
+        {
+          "label": "Капацитет",
+          "value": "298Wh"
+        },
+        {
+          "label": "Живот",
+          "value": "800 цикъла до 80%"
+        },
+        {
+          "label": "Размери",
+          "value": "245,5 × 92 × 68 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "1,8 кг"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow GLACIER (с ледогенератор), GLACIER Classic 35L, 45L, 55L"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62275_1_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62275_2_2.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "По dice.bg; третият размер (68 мм) е от EcoFlow EU — в dice.bg липсва.",
+    "Съвместима е и с GLACIER Classic (по твое потвърждение) → „Съвместим с“ = GLACIER Classic 35L, 45L и 55L. Първия GLACIER (с ледогенератор) го няма в сайта.",
+    "В dice.bg: Налично на склад (проверено 01.10.2026)."
+  ]
+}

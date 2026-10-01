@@ -1,0 +1,187 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg + eu.ecoflow.com/products/rapid-magnetic-power-bank",
+  "produkt": {
+    "title": "EcoFlow RAPID Magnetic Power Bank 5000mAh (сребрист)",
+    "slug": "rapid-magnetic-5000-srebrist",
+    "categorySlug": "vanshni-baterii-rapid",
+    "productType": "hero",
+    "tagline": "Магнитна външна батерия 5000 mAh, 30W, Qi2 — сребрист",
+    "badge": "none",
+    "price": 40.39,
+    "compareAtPrice": 71.07,
+    "externalUrl": "https://dice.bg/ecoflow-rapid-magnetic-wireless-charging-power-bank-5000-mah-30w-prenosima-vanshna-bateria-vgraden-usb-c-kabel-usb-c-port-i-bezzhichno-zarezhdane-s-magsafe-srebrist-item70350",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "70350",
+    "ean": "4895251627405",
+    "description": "Магнитна външна батерия 5000 mAh с безжично зареждане Qi2 до 15W, вграден USB-C кабел и бързо жично зареждане 30W. Със стойка за телефона.",
+    "highlights": [
+      {
+        "text": "Безжично Qi2 до 15W"
+      },
+      {
+        "text": "Вграден USB-C кабел, 30W"
+      },
+      {
+        "text": "Магнитно закрепване (MagSafe)"
+      },
+      {
+        "text": "Вградена стойка"
+      }
+    ],
+    "metaTitle": "EcoFlow RAPID Magnetic Power Bank 5000mAh (сребрист) | EcoFlow България",
+    "metaDescription": "Магнитна външна батерия EcoFlow RAPID 5000 mAh — Qi2 15W безжично, 30W с вградения USB-C кабел, стойка."
+  },
+  "galeriya": [
+    {
+      "file": "70350_1.webp",
+      "alt": "EcoFlow RAPID Magnetic Power Bank 5000mAh (сребрист) — магнитна външна батерия"
+    },
+    {
+      "file": "70350_2.webp",
+      "alt": "EcoFlow RAPID Magnetic Power Bank 5000mAh (сребрист) — магнитна външна батерия"
+    },
+    {
+      "file": "70350_3.webp",
+      "alt": "EcoFlow RAPID Magnetic Power Bank 5000mAh (сребрист) — магнитна външна батерия"
+    },
+    {
+      "file": "70350_4.webp",
+      "alt": "EcoFlow RAPID Magnetic Power Bank 5000mAh (сребрист) — магнитна външна батерия"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Жично и безжично зареждане",
+      "body": "Бързо жично зареждане с 30W PD и безжично зареждане до 15W, сертифицирано по Qi2.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "MagSafe",
+      "heading": "Щраква се магнитно",
+      "body": "За iPhone с MagSafe — вградените силни магнити държат здраво. Просто поставете телефона върху батерията. За стабилно безжично зареждане го поставете в центъра; метални калъфи, магнити, карти и ключодържатели пречат.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Вграден кабел и стойка",
+      "body": "Прибиращ се USB-C кабел за зареждане на батерията или на други устройства. Вградената стойка държи iPhone изправен под удобен ъгъл. LED индикация за нивото.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Защита",
+      "heading": "Охлаждане и дълго съхранение",
+      "body": "Технологията X-Stream дава висока енергийна плътност и бързо зареждане. Двойна охлаждаща защита мери температурата 50 пъти в секунда, за да забави стареенето на батерията. Пази над 95% от енергията за един месец.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow RAPID Magnetic Power Bank 5000 mAh (сребрист)",
+          "qty": 1
+        },
+        {
+          "name": "Ръководство за употреба",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Rapid Magnetic Wireless Charging Power Bank 5000 mAh 30W"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EF-RAPID5000-EU"
+        },
+        {
+          "label": "Капацитет",
+          "value": "5000 mAh"
+        },
+        {
+          "label": "Ефективност на преобразуване",
+          "value": ">75%"
+        },
+        {
+          "label": "Вход (USB-C / вграден кабел)",
+          "value": "5V/3A, 9V/3A, 15V/2A, 20V/1,5A (макс. 30W)"
+        },
+        {
+          "label": "Изход (USB-C / вграден кабел)",
+          "value": "5V/3A, 9V/3A, 15V/2A, 20V/1,5A (макс. 30W)"
+        },
+        {
+          "label": "Безжично (Qi2)",
+          "value": "5 / 7,5 / 10 / 15W"
+        },
+        {
+          "label": "Размери",
+          "value": "108 × 70 × 14,4 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "180 г"
+        },
+        {
+          "label": "Безжична съвместимост",
+          "value": "iPhone 16, 15, 14 и всеки iPhone с MagSafe"
+        },
+        {
+          "label": "Цвят",
+          "value": "сребрист"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70350_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70350_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70350_3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70350_4.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "По dice.bg. EcoFlow EU продава 5000 и 10000 mAh на една страница (EF-RAPID5000-EU / -B-EU) — описанието съвпада.",
+    "В dice.bg изходът е написан „55V/3A“ — очевидна грешка за 5V/3A; поправено на 5V (входът е със същите стойности).",
+    "В базата има стар seed продукт „RAPID Magnetic 5000“ (rapid-magnetic-5000) — скрий го, за да няма дубликат.",
+    "В dice.bg: Налично на склад (проверено 01.10.2026)."
+  ]
+}
