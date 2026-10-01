@@ -1,0 +1,211 @@
+{
+  "_bележка": "Съдържание за внасяне. Пуска се с: npm run import:product solaren-panel-250w-rigid-4br. Снимките се свалят по линковете в _svali_snimki (галерия и секции); преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "eu.ecoflow.com/products/250w-rigid-solar-panel, прочетено на 28.09.2026. Цена, SKU и EAN — dice.bg. Спецификациите са 1:1 от „Specs“ на EcoFlow.",
+  "produkt": {
+    "title": "EcoFlow 250W Rigid Solar Panel (4 pieces)",
+    "slug": "solaren-panel-250w-rigid-4br",
+    "categorySlug": "stacionarni-paneli",
+    "productType": "hero",
+    "tagline": "Комплект 4 × 250W двулицеви стационарни панела · N-тип, 24,7%, IP68",
+    "badge": "none",
+    "price": 817.56,
+    "externalUrl": "https://dice.bg/ecoflow-2x520w-rigid-solar-panel-komplekt-ot-2-broya-solarni-paneli-520w-cheren-item72720-1",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "74925",
+    "ean": "4895251642002",
+    "description": "Комплект от четири двулицеви твърди соларни панела по 250W с N-тип клетки и 24,7% ефективност, IP68, 10 кг и 1157 × 1165 × 20 мм всеки. Компактният квадратен формат е подходящ за балкон, плосък покрив, керемиден покрив и градина; plug & play монтаж без електротехник; управление през приложението EcoFlow.",
+    "highlights": [
+      {
+        "title": "250W и над 24,7% ефективност",
+        "text": "N-тип двулицеви клетки — улавят светлина и от двете страни."
+      },
+      {
+        "title": "IP68",
+        "text": "Работи при дъжд и в прашна среда."
+      },
+      {
+        "title": "Управление от приложението",
+        "text": "Наблюдение и настройки отвсякъде, по всяко време."
+      },
+      {
+        "title": "Лесен монтаж „направи си сам“",
+        "text": "Plug & play, без електротехник."
+      },
+      {
+        "title": "Балкон, плосък или керемиден покрив, градина",
+        "text": "Компактни 1157 × 1165 × 20 мм, 10 кг на панел."
+      }
+    ],
+    "metaTitle": "EcoFlow 4 × 250W Rigid — двулицеви стационарни соларни панели 250W",
+    "metaDescription": "Четири двулицеви твърди соларни панела 250W с N-тип клетки, 24,7% ефективност, IP68, за балкон, покрив и градина. Официален дистрибутор за България."
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-250w-rigid-solar-panel-4-pieces-1183981796.png",
+      "alt": "EcoFlow 250W Rigid Solar Panel (4 pieces) — четири панела"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "EcoFlow 250W соларен панел",
+      "body": "",
+      "image": "1_1_f10a0f2c-a3eb-445a-8477-ef3de10c060e.jpg",
+      "imageAlt": "EcoFlow 250W Rigid Solar Panel (4 pieces) — основни предимства"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Двулицев",
+      "heading": "Двулицев фотоволтаичен панел",
+      "body": "С модулна ефективност 24,7% EcoFlow 250W соларният панел е сред най-ефективните в класа си. Благодарение на двулицевия дизайн улавя светлина и от двете страни и максимизира производството на енергия.",
+      "image": "2_1_IMG_8d6e0ea9-08d6-4911-863d-bb5b603507d1.jpg",
+      "imageAlt": "24,7% ефективност"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "N-тип",
+      "heading": "Повече енергия благодарение на N-тип клетките",
+      "body": "Енергията се произвежда постоянно, независимо от сезонните температурни колебания.",
+      "image": "3_1_IMG_ec998e24-75db-4be6-91c3-ca33a8f3093a.jpg",
+      "imageAlt": "Панел на балкон под дъжд и слънце — 25 години линейна гаранция за производителност"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Приложение",
+      "heading": "Едно приложение — всичко пред очите ви",
+      "body": "Умни спестявания с едно докосване в приложението.",
+      "image": "4_1_IMG_085dfeb4-448e-46e7-aa70-d5ef6efca764.jpg",
+      "imageAlt": "Приложението EcoFlow на телефон"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "IP68",
+      "heading": "IP68 защита от прах и вода",
+      "body": "Соларните панели на EcoFlow работят добре и при дъжд, и в прашна среда.",
+      "image": "5_1_IMG_0dd21f76-98db-4323-9a52-15437cb136b8.jpg",
+      "imageAlt": "Панели на покрив под дъжд, IP68"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Монтаж",
+      "heading": "Лесен монтаж",
+      "body": "Благодарение на нашите plug & play соларни системи вече не зависите от електротехници, майстори или монтажници.",
+      "image": "6_1_IMG_40a89695-0bdf-4d7a-a891-7f07b34cab51.jpg",
+      "imageAlt": "Семейство монтира панел в градината"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Разнообразни начини за монтаж",
+      "body": "С вградените монтажни аксесоари EcoFlow 250W соларният панел е подходящ за почти всяко място — балкони, плоски покриви и градини.",
+      "image": "7_1_IMG_5be5177c-704b-491d-b894-be44e5c39872.jpg",
+      "imageAlt": "Балкон, фасада, градина, покрив"
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Общи (за един панел)",
+      "rows": [
+        {
+          "label": "Номинална мощност",
+          "value": "250W"
+        },
+        {
+          "label": "Тип клетки",
+          "value": "N-тип"
+        },
+        {
+          "label": "Ефективност",
+          "value": "24,7%"
+        },
+        {
+          "label": "Размери",
+          "value": "1157 × 1165 × 20 мм"
+        },
+        {
+          "label": "Нето тегло",
+          "value": "10 кг"
+        },
+        {
+          "label": "Клас на защита",
+          "value": "IP68"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-250w-rigid-solar-panel-4-pieces-1183981796.png"
+    ],
+    "sekcii": [
+      "https://eu.ecoflow.com/cdn/shop/files/1_1_f10a0f2c-a3eb-445a-8477-ef3de10c060e.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/2_1_IMG_8d6e0ea9-08d6-4911-863d-bb5b603507d1.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/3_1_IMG_ec998e24-75db-4be6-91c3-ca33a8f3093a.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/4_1_IMG_085dfeb4-448e-46e7-aa70-d5ef6efca764.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/5_1_IMG_0dd21f76-98db-4323-9a52-15437cb136b8.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/6_1_IMG_40a89695-0bdf-4d7a-a891-7f07b34cab51.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/7_1_IMG_5be5177c-704b-491d-b894-be44e5c39872.jpg"
+    ]
+  },
+  "_prevod_nadpisi": {
+    "1_1_f10a0f2c-a3eb-445a-8477-ef3de10c060e.jpg": {
+      "≥24.7% efficiency / TOPCon solar cells perform well even in low light conditions": "≥24,7% ефективност / TOPCon клетките работят добре и при слаба светлина",
+      "Energy in your own hands / Dimensions 1137 × 1165 × 20 mm": "Енергията във вашите ръце / Размери 1137 × 1165 × 20 мм (внимание: таблицата на EcoFlow казва 1157)",
+      "10 kg weigh per unit": "10 кг на панел",
+      "250W power": "250W мощност",
+      "IP68 dust and waterproof rated": "IP68 защита от прах и вода",
+      "Easy DIY mounting": "Лесен монтаж „направи си сам“",
+      "App control management anywhere and anytime": "Управление от приложението отвсякъде и по всяко време",
+      "Multi-mounting options / Including on balconies, flat roofs, tiled roofs, etc.": "Разнообразен монтаж / балкони, плоски покриви, керемидени покриви и др."
+    },
+    "2_1_IMG_8d6e0ea9-08d6-4911-863d-bb5b603507d1.jpg": {
+      "24.7%": "24,7%"
+    },
+    "3_1_IMG_ec998e24-75db-4be6-91c3-ca33a8f3093a.jpg": {
+      "25 years linear performance guarantee": "25 години линейна гаранция за производителност"
+    },
+    "4_1_IMG_085dfeb4-448e-46e7-aa70-d5ef6efca764.jpg": {
+      "Real-time control anywhere, anytime": "Контрол в реално време отвсякъде, по всяко време",
+      "Seamless device networking on one platform": "Всички устройства в една платформа",
+      "Energy price forecast*": "Прогноза на цената на тока*",
+      "* This function is only available on certain models": "* Функцията е налична само при някои модели"
+    },
+    "5_1_IMG_0dd21f76-98db-4323-9a52-15437cb136b8.jpg": {
+      "IP68": "остава"
+    },
+    "7_1_IMG_5be5177c-704b-491d-b894-be44e5c39872.jpg": {
+      "Balcony": "Балкон",
+      "Facade": "Фасада",
+      "Garden": "Градина",
+      "Roof": "Покрив"
+    }
+  },
+  "_neyasni": [
+    "Адресът в dice.bg е „2x520w-rigid-solar-panel…item72720-1“, а страницата отваря „EcoFlow 4x250W Rigid Solar Panel Bifacial“ (SKU 74925, EAN 4895251642002) — по правилото не се съди по адреса; баркодът съвпада и с EcoFlow (variant barcode 4895251642002).",
+    "Заглавието в dice.bg е „4x250W Rigid Solar Panel Bifacial“; официалното име в EcoFlow е „250W Rigid Solar Panel (4 pieces)“ — взето е официалното.",
+    "Размерите в картинката на EcoFlow са 1137 × 1165 × 20 мм, а в таблицата — 1157 × 1165 × 20 мм; в спецификациите е таблицата.",
+    "Страницата на EcoFlow няма секция „Какво има в кутията“ и не споменава гаранция в таблицата — при нас също няма.",
+    "В dice.bg няма стара цена — 817,56 €."
+  ]
+}

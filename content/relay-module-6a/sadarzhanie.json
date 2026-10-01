@@ -1,0 +1,159 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg (няма страница в eu.ecoflow.com)",
+  "produkt": {
+    "title": "EcoFlow Relay Module 6A",
+    "slug": "relay-module-6a",
+    "categorySlug": "svarzvane-kam-el-tabloto",
+    "productType": "accessory",
+    "tagline": "Резервен релеен модул 6A за EcoFlow Smart Home Panel",
+    "badge": "none",
+    "price": 40.39,
+    "externalUrl": "https://dice.bg/ecoflow-relay-module-6a-rezerven-releen-modul-za-ecoflow-smart-home-panel-cheren-item70278",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "70278",
+    "ean": "4897082668589",
+    "description": "Резервен релеен модул 6A за EcoFlow Smart Home Panel. Управлява един кръг от ел. таблото; изберете го според номиналния ток на предпазителя пред кръга.",
+    "highlights": [
+      {
+        "text": "Номинален ток 6A"
+      },
+      {
+        "text": "За EcoFlow Smart Home Panel"
+      },
+      {
+        "text": "Един модул — един кръг"
+      },
+      {
+        "text": "Гаранция 24 месеца"
+      }
+    ],
+    "metaTitle": "EcoFlow Relay Module 6A за Smart Home Panel | EcoFlow България",
+    "metaDescription": "Резервен релеен модул 6A за EcoFlow Smart Home Panel — управлява един кръг от ел. таблото.",
+    "compatibleWith": [
+      "smart-home-panel"
+    ],
+    "alsoInCategories": [
+      "drugi-aksesoari"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "70278_1.webp",
+      "alt": "EcoFlow Relay Module 6A — релеен модул 6A"
+    },
+    {
+      "file": "70278_2.webp",
+      "alt": "EcoFlow Relay Module 6A — релеен модул 6A"
+    },
+    {
+      "file": "70278_3.webp",
+      "alt": "EcoFlow Relay Module 6A — релеен модул 6A"
+    },
+    {
+      "file": "70278_4_1.webp",
+      "alt": "EcoFlow Relay Module 6A — релеен модул 6A"
+    },
+    {
+      "file": "70278_5.webp",
+      "alt": "EcoFlow Relay Module 6A — релеен модул 6A"
+    },
+    {
+      "file": "70278_6.webp",
+      "alt": "EcoFlow Relay Module 6A — релеен модул 6A"
+    },
+    {
+      "file": "70278_7.webp",
+      "alt": "EcoFlow Relay Module 6A — релеен модул 6A"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Релеен модул 6A за Smart Home Panel",
+      "body": "Резервен релеен модул 6A за интелигентния домашен панел EcoFlow Smart Home Panel. Всеки модул управлява един кръг от таблото — изберете модула според номиналния ток на предпазителя пред този кръг.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Планиране",
+      "heading": "Планиране на натоварването",
+      "body": "Със Smart Home Panel избрани кръгове се захранват там, където са най-полезни — при спиране на тока или за пестене на енергия.\n\n1. Помислете кои кръгове влияят най-много на комфорта — например хладилник и осветление — и изберете до 10 кръга от таблото.\n2. Определете броя и номиналния ток на кръговете, които ще свържете. Ако имате нужда от помощ, консултирайте се с електротехник.\n3. За всеки кръг изберете релеен модул, който отговаря на номиналния ток на предпазителя пред него. Препоръчителните модули за ЕС са 13A и 16A.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Relay Module 6A",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Общи",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Relay Module 6A"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "DELTAProBC-RM6A"
+        },
+        {
+          "label": "Номинален ток",
+          "value": "6A"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow Smart Home Panel"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70278_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70278_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70278_3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70278_4_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70278_5.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70278_6.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70278_7.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Продуктът го няма в сайтовете на EcoFlow за Европа — текстът е 1:1 по dice.bg.",
+    "„Съвместим с“ = EcoFlow Smart Home Panel (smart-home-panel). Ако панелът се внася в същия импорт, пусни импорта втори път, за да се запише връзката.",
+    "В dice.bg: по заявка (проверено 01.10.2026)."
+  ]
+}

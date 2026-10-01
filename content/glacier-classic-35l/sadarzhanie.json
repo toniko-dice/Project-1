@@ -1,0 +1,711 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "eu.ecoflow.com/products/glacier-classic-portable-fridge-freezer (вариант 35L), прочетено на 30.09.2026. Цена, SKU, EAN и наличност — dice.bg.",
+  "produkt": {
+    "title": "EcoFlow GLACIER Classic 35L",
+    "slug": "glacier-classic-35l",
+    "categorySlug": "glacier-hladilnici",
+    "productType": "hero",
+    "tagline": "Преносим хладилник-фризер · 35 л, една зона, до 58 кенчета",
+    "badge": "none",
+    "price": 715.3,
+    "externalUrl": "https://dice.bg/inovativen-portativen-hladilnik-s-frizer-ecoflow-glacier-classic-35l-portable-fridge-and-freezer-2025-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "72550",
+    "ean": "4895251641623",
+    "description": "Преносим компресорен хладилник-фризер 35 л (една зона, превключваща между хладилник и фризер), от −20 до 20 °C. Побира 58 кенчета 330 мл, 53 мм изолация, ефективен компресор, под 38,5 dB, IPX4. Захранване от контакт, кола, соларен панел и сменяема батерия 298Wh (до 43 ч, продава се отделно); USB-C 100W за телефони и лаптопи; управление от приложението EcoFlow.",
+    "highlights": [
+      {
+        "title": "Една зона, два режима",
+        "text": "Превключва между хладилник и фризер."
+      },
+      {
+        "title": "35 л, 58 кенчета",
+        "text": "С 40% по-компактен от средното за бранша."
+      },
+      {
+        "title": "До 43 ч без мрежа",
+        "text": "С батерията GLACIER Plug-in Battery 298Wh (продава се отделно)."
+      },
+      {
+        "title": "53 мм изолация, ефективен компресор",
+        "text": "40% по-ниска консумация от стандартните хладилници."
+      },
+      {
+        "title": "Много начини на захранване",
+        "text": "Контакт, кола 12/24V, соларен панел, алтернаторно зарядно; USB-C 100W изход."
+      },
+      {
+        "title": "Управление от приложението",
+        "text": "Режими Max/Eco, аларма и 7-дневна история на температурата."
+      }
+    ],
+    "metaTitle": "EcoFlow GLACIER Classic 35L — преносим хладилник-фризер",
+    "metaDescription": "Преносим компресорен хладилник-фризер EcoFlow GLACIER Classic 35 л, −20 до 20 °C, 58 кенчета, батерия до 43 ч, приложение. Официален дистрибутор за България."
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-glacier-classic-portable-fridge-freezer-1167932170.png",
+      "alt": "EcoFlow GLACIER Classic 35L — под ъгъл"
+    },
+    {
+      "file": "ecoflow-glacier-classic-portable-fridge-freezer-1167932173.png",
+      "alt": "EcoFlow GLACIER Classic 35L — отстрани"
+    },
+    {
+      "file": "ecoflow-glacier-classic-portable-fridge-freezer-1167932172.png",
+      "alt": "EcoFlow GLACIER Classic 35L — отгоре"
+    },
+    {
+      "file": "ecoflow-glacier-classic-portable-fridge-freezer-1167932171.png",
+      "alt": "EcoFlow GLACIER Classic 35L — отзад"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Защо EcoFlow GLACIER Classic се отличава",
+      "body": "",
+      "image": "1_1_363d9420-944b-4b30-8c53-bc6d5077b12a.jpg",
+      "imageAlt": "EcoFlow GLACIER Classic 35L — основни предимства"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Зони",
+      "heading": "Свежо тук, замразено там",
+      "subheading": "Една зона, два режима",
+      "subheadingPosition": "below",
+      "body": "При 35L хладилникът е с една зона, която превключвате между режим хладилник и фризер. По-големите 45L и 55L са с две независими зони — пресни и замразени храни едновременно.",
+      "image": "2_1_img_f26b2c3e-d998-4427-8d23-109e57cbdea0.jpg",
+      "imageAlt": "Двете зони — хладилник и фризер"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Капацитет",
+      "heading": "Малък отвън, голям отвътре",
+      "subheading": "До 58 кенчета в компактен дизайн",
+      "subheadingPosition": "below",
+      "body": "С 40%* по-компактен дизайн — повече място в колата, истински дом на колела. EcoFlow GLACIER Classic използва пространството максимално: побира 58 (35L), 72 (45L) или 90 (55L) кенчета по 330 мл, като остава стегнат и пести място. Моделът 35L побира 58 кенчета.",
+      "image": "3_1_img_b7c97797-455e-4d4d-ad37-d30e396c0ddc.jpg",
+      "imageAlt": "Компактни размери и кенчета вътре"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Приложения",
+      "layout": "tabs-top",
+      "heading": "Създаден за всеки сценарий",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Къмпинг с кола",
+          "image": "4_1_img_1b7eb4c5-3323-49c9-a383-f9e8169d62d6.jpg",
+          "imageAlt": "Къмпинг с кола",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Кемпер",
+          "image": "4_2_img.jpg",
+          "imageAlt": "Кемпер",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Къмпинг с палатка",
+          "image": "4_3_img.jpg",
+          "imageAlt": "Къмпинг с палатка",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Пикник до колата",
+          "image": "4_4_img.jpg",
+          "imageAlt": "Пикник до колата",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Пазаруване",
+          "image": "4_5_img.jpg",
+          "imageAlt": "Пазаруване",
+          "caption": "",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Батерия",
+      "heading": "До 43 часа свежест",
+      "subheading": "Батерия 298Wh*",
+      "subheadingPosition": "below",
+      "body": "С батерията EcoFlow GLACIER Plug-in Battery (298Wh)* EcoFlow GLACIER Classic държи храната на 4 °C до 43 часа (35L) или 39 часа (45L и 55L).** Моделът 35L — до 43 часа.\n\n*Батерията се продава отделно. **Изпитано при 25 °C околна температура с напълно заредена батерия.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Без разтопен лед и мокра храна",
+      "body": "",
+      "image": "6_1_img_ad425b91-3744-4964-8884-8ce9ebbab1ee.jpg",
+      "imageAlt": "Хладилна чанта срещу GLACIER Classic"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-left",
+      "theme": "light",
+      "anchorLabel": "Охлаждане",
+      "heading": "60% по-дебела изолация за по-добро охлаждане*",
+      "subheading": "Енергоспестяваща система за охлаждане",
+      "subheadingPosition": "above",
+      "body": "53 мм изолационна пяна и отлично уплътнение пазят храната студена по-дълго, като намаляват температурните колебания и течовете.\n\n*По лабораторни данни изолацията е с 60% по-дебела от тази на стандартните хладилници.",
+      "image": "7_1_img_cd6b8176-29e9-4871-b03b-5398b3b1e42e.jpg",
+      "imageAlt": "Изолацията на хладилника"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-right",
+      "theme": "light",
+      "heading": "Ефективен компресор за по-дълга работа",
+      "body": "Високоефективният компресор с медна намотка охлажда мощно с 40% по-ниска консумация от стандартните хладилници — батерията стига за по-дълго извън мрежата.",
+      "image": "7_2_img_670ff47c-e331-4681-b688-340e90e7416d.jpg",
+      "imageAlt": "Компресорът"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Дизайн",
+      "layout": "tabs-top",
+      "heading": "Създаден за всяко пътуване",
+      "intro": "Практични функции за всяко приключение.",
+      "tabs": [
+        {
+          "label": "Капак от двете страни",
+          "image": "6dca49d7a614f40dd25bd4ee9f812ccc_73b19d54-3b05-41f4-b0d2-d819cf191980.gif",
+          "imageAlt": "Капакът се отваря от двете страни",
+          "caption": "Достигате храната от която и да е страна, както и да е поставен хладилникът в колата. Двустранният капак дава гъвкав и удобен достъп при всяко разположение.",
+          "rows": []
+        },
+        {
+          "label": "Готов за път",
+          "image": "8_2_img.jpg",
+          "imageAlt": "Хладилникът в багажника",
+          "caption": "Предлага се в 35L, 45L и 55L; EcoFlow GLACIER Classic 35L е колкото стандартен 24-инчов куфар. Идеален за SUV, кемпери клас B, офроуд автомобили и други — пести ценно място и дава достатъчно обем за приключенията ви.",
+          "rows": []
+        },
+        {
+          "label": "Лесно плъзгане*",
+          "image": "8_3_img_4a1a5fa0-440f-41f6-8adc-a0d3b05b932a.jpg",
+          "imageAlt": "Хладилникът на плъзгаща се шина",
+          "caption": "Изваждате GLACIER Classic от колата лесно, дори на тясно. Идеално при тесен паркинг или на къмпинг — по-малко усилие при товарене и разтоварване.\n\n*Плъзгащата шина EcoFlow GLACIER Classic Slide with Straps се продава отделно.",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-left",
+      "theme": "light",
+      "anchorLabel": "Аксесоари",
+      "heading": "Табло за закачане (свалящо се)",
+      "subheading": "Аксесоари за приключения",
+      "subheadingPosition": "above",
+      "body": "Вертикално място за инструменти, подправки и други необходими неща — повече удобство навън.",
+      "image": "9_1_img_1ac8b9f1-43af-42fb-a56f-3105c507627b.jpg",
+      "imageAlt": "Табло за закачане"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-right",
+      "theme": "light",
+      "heading": "Чанта за съхранение",
+      "body": "Малките неща — кенчета, прибори, подправки — стоят подредени и подръка.",
+      "image": "9_3_img.jpg",
+      "imageAlt": "Чанта за съхранение"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Скрити широки дръжки от двете страни",
+      "body": "Скритите широки дръжки от двете страни позволяват стабилно и удобно носене от двама души.",
+      "image": "10_1_img_6504c8eb-017c-49c9-bd72-2ed6688ab835.jpg",
+      "imageAlt": "Скритите дръжки"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Приложение",
+      "heading": "Всичко е в приложението",
+      "subheading": "С EcoFlow OASIS",
+      "subheadingPosition": "below",
+      "body": "Наблюдавайте, управлявайте и настройвайте GLACIER отдалечено през приложението EcoFlow. От състоянието на батерията в реално време до предупреждения за теч, смяна на режими и изключване по график — всичко е на едно докосване от телефона.",
+      "image": "11_1_img_4ec56237-e8ad-46aa-b42b-580969ca01ae.jpg",
+      "imageAlt": "Приложението EcoFlow"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "layout": "tabs-top",
+      "heading": "Умни режими за максимално удобство",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Режим Max",
+          "image": "12_1_img_00d79fff-50e4-4445-a9a0-e7d17fb19224.jpg",
+          "imageAlt": "Режим Max",
+          "caption": "Максимално охлаждане за неща като сладолед или замразено месо, които изискват строг температурен контрол.",
+          "rows": []
+        },
+        {
+          "label": "Режим Eco",
+          "image": "12_2_img.jpg",
+          "imageAlt": "Режим Eco",
+          "caption": "По-ниска консумация — батерията стига за по-дълго при дълги пътувания.",
+          "rows": []
+        },
+        {
+          "label": "Температурна аларма",
+          "image": "12_3_img.jpg",
+          "imageAlt": "Температурна аларма",
+          "caption": "Получавате известие, ако температурата вътре се отклони с над 5 °C за повече от 10 минути — месото и млечните продукти остават безопасни.",
+          "rows": []
+        },
+        {
+          "label": "История на температурата",
+          "image": "12_4_img.jpg",
+          "imageAlt": "История на температурата",
+          "caption": "Крива на температурата за 7 дни — виждате отклоненията и сте сигурни, че храната е постоянно свежа.",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Захранване",
+      "heading": "Студът не спира",
+      "body": "Няколко начина на захранване.\n\n*За оптимална работа ползвайте батерията — слънцето е непостоянно. Батерията EcoFlow GLACIER Plug-in Battery се продава отделно.\n*Съвместим с алтернаторните зарядни EcoFlow 500W и 800W.",
+      "image": "13_1_img_e20c7b63-2b59-4441-aff3-aff485740f2b.jpg",
+      "imageAlt": "Начини на захранване"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Служи и за външна батерия",
+      "body": "USB-C портът от 100W зарежда телефони и лаптопи — оставате на линия с това, което има значение.",
+      "image": "14_1_img_9fd88522-7c5a-4cb5-9430-9edf9ce4fa8b.jpg",
+      "imageAlt": "Зареждане на лаптоп от хладилника"
+    },
+    {
+      "blockType": "comparisonTable",
+      "anchorLabel": "Сравнение",
+      "heading": "Разгледайте серията GLACIER Classic",
+      "intro": "",
+      "columns": [
+        {
+          "label": "EcoFlow GLACIER Classic 35L",
+          "tagline": "35L",
+          "highlight": true,
+          "productSlug": "glacier-classic-35l"
+        },
+        {
+          "label": "EcoFlow GLACIER Classic 45L",
+          "tagline": "45L",
+          "highlight": false,
+          "productSlug": "glacier-classic-45l"
+        },
+        {
+          "label": "EcoFlow GLACIER Classic 55L",
+          "tagline": "55L",
+          "highlight": false,
+          "productSlug": "glacier-classic-55l"
+        }
+      ],
+      "rows": [
+        {
+          "label": "Полезен обем",
+          "values": [
+            "35 л",
+            "45 л",
+            "55 л"
+          ]
+        },
+        {
+          "label": "Кенчета 330 мл",
+          "values": [
+            "58",
+            "72",
+            "90"
+          ]
+        },
+        {
+          "label": "Температурни зони",
+          "values": [
+            "една зона (превключва хладилник/фризер)",
+            "две зони",
+            "две зони"
+          ]
+        },
+        {
+          "label": "Външни размери",
+          "values": [
+            "706 × 400 × 405 мм",
+            "706 × 400 × 480 мм",
+            "706 × 466 × 480 мм"
+          ]
+        },
+        {
+          "label": "Вътрешни размери",
+          "values": [
+            "487 × 284 × 298,5 мм",
+            "487 × 284 × 373,5 мм",
+            "487 × 350 × 373,5 мм"
+          ]
+        },
+        {
+          "label": "Нето тегло",
+          "values": [
+            "20,5 кг",
+            "23,2 кг",
+            "25,2 кг"
+          ]
+        },
+        {
+          "label": "Работа с батерията (4 °C, Eco)",
+          "values": [
+            "до 43 ч",
+            "до 39 ч",
+            "до 39 ч"
+          ]
+        }
+      ],
+      "_iztochnik": "„Explore the GLACIER Classic Series“ и „Specs“ на трите обема."
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow GLACIER Classic 35L",
+          "qty": 1,
+          "image": "16_1_1_img.png",
+          "imageAlt": "EcoFlow GLACIER Classic 35L"
+        },
+        {
+          "name": "Захранващ адаптер EcoFlow AC",
+          "qty": 1,
+          "image": "16_1_2_img.png",
+          "imageAlt": "AC адаптер"
+        },
+        {
+          "name": "Кошница",
+          "qty": 1,
+          "image": "16_1_3_img.png",
+          "imageAlt": "Кошница"
+        },
+        {
+          "name": "Кабел за зареждане от кола EcoFlow",
+          "qty": 1,
+          "image": "16_1_4_img.png",
+          "imageAlt": "Кабел за кола"
+        },
+        {
+          "name": "Инструкции за безопасност, кратко ръководство, гаранционна карта",
+          "qty": 1,
+          "image": "16_1_6_img.png",
+          "imageAlt": "Документи"
+        }
+      ]
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "faqBlock",
+      "anchorLabel": "Въпроси",
+      "heading": "Често задавани въпроси",
+      "items": [
+        {
+          "question": "Какво да направя, след като получа GLACIER Classic?",
+          "answer": "Проверете опаковката за повреди, отворете кутията и се уверете, че всички части са налице. Включете хладилника в контакт, включете го, свържете го с Wi-Fi през приложението EcoFlow и обновете фърмуера. ⚠️ Дръжте го включен по време на обновяването!"
+        },
+        {
+          "question": "Съвети за употреба",
+          "answer": "1. Избягвайте пряко слънце — отслабва охлаждането. 2. Затваряйте капака правилно — обърнат наопаки не уплътнява и включва аларма. 3. При 45L и 55L: вътрешната преграда трябва да е с правилната страна, за да работят двете зони."
+        },
+        {
+          "question": "Как се захранва GLACIER Classic?",
+          "answer": "1. От контакт (през порт XT60). 2. От соларен панел. 3. От батерия (поддържа директно зареждане през Type-C)."
+        },
+        {
+          "question": "Как се зарежда батерията?",
+          "answer": "1. През порта на хладилника. 2. С Type-C кабел (директно зареждане)."
+        },
+        {
+          "question": "GLACIER Classic не се включва — какво да направя?",
+          "answer": "1. Проверете захранването: включете го в контакт. Ако тръгне, батерията е била изтощена. 2. Долна граница на разреждане: ако батерията е под нея, включете за зареждане. По желание задайте долната граница на 0% в настройките — това дава 1 минута повече работа преди изключване. 3. Предстоящо обновяване на фърмуера ще подобри поведението при ниска батерия. Ако проблемът остане — свържете се с поддръжката."
+        },
+        {
+          "question": "Съвети преди първа употреба",
+          "answer": "1. Избършете вътрешността с чиста вода (маха праха от транспорта). 2. Оставете го 2 часа изправен, преди да го включите."
+        },
+        {
+          "question": "Какви са размерите на GLACIER Classic?",
+          "answer": "35L: 706 × 400 × 405 мм; 45L: 706 × 400 × 480 мм; 55L: 706 × 466 × 480 мм."
+        },
+        {
+          "question": "Какъв е температурният диапазон?",
+          "answer": "От −20 °C до 20 °C."
+        },
+        {
+          "question": "Колко шумен е?",
+          "answer": "По-тих от библиотека — под 38,5 dB."
+        },
+        {
+          "question": "Какви са входовете за захранване?",
+          "answer": "AC вход: 100–240V~ 50/60 Hz, макс. 95W. Соларен вход: 11–30V, 8A, макс. 110W. Зарядно за кола: 12/24V, 8A, макс. 100W."
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Съвместимост",
+      "heading": "Съвместимост на EcoFlow GLACIER Classic",
+      "body": "С кои електроцентрали, батерии, зарядни и соларни панели на EcoFlow работи GLACIER Classic и през кой порт.",
+      "image": "17_1_img_62f48112-73be-4fa7-8ff0-eaabe9d962bf.jpg",
+      "imageAlt": "Таблица за съвместимост"
+    },
+    {
+      "blockType": "footnotes",
+      "items": [
+        {
+          "text": "Двузонният дизайн е само при 45L и 55L. 35L е с една зона, която превключва между хладилник и фризер."
+        },
+        {
+          "text": "По данни от лабораторни тестове външните размери са с 40% по-малки от стандартните електрически хладилни кутии."
+        },
+        {
+          "text": "Батерията EcoFlow GLACIER Plug-in Battery се продава отделно. Времената на работа са изпитани при 25 °C околна температура с напълно заредена батерия."
+        },
+        {
+          "text": "По данни от лабораторни тестове изолацията е с 60% по-дебела от тази на стандартните хладилници."
+        },
+        {
+          "text": "Съвместим с алтернаторните зарядни EcoFlow 500W и 800W."
+        },
+        {
+          "text": "За оптимална работа при соларно захранване ползвайте батерията — слънцето е непостоянно."
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Размери и обем",
+      "rows": [
+        {
+          "label": "Външни размери",
+          "value": "706 × 400 × 405 мм"
+        },
+        {
+          "label": "Вътрешни размери",
+          "value": "487 × 284 × 298,5 мм"
+        },
+        {
+          "label": "Нето тегло",
+          "value": "20,5 кг"
+        },
+        {
+          "label": "Полезен обем",
+          "value": "35 л"
+        },
+        {
+          "label": "Кенчета 330 мл",
+          "value": "58"
+        },
+        {
+          "label": "Температурни зони",
+          "value": "една зона (превключва хладилник/фризер)"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Охлаждане",
+      "rows": [
+        {
+          "label": "Температурен диапазон",
+          "value": "−20 до 20 °C"
+        },
+        {
+          "label": "Точност",
+          "value": "Eco: ±2–3 °C; Max: ±1 °C"
+        },
+        {
+          "label": "Консумация — охлаждане (4 °C)",
+          "value": "165 Wh/24 ч; 0,57 Ah/ч"
+        },
+        {
+          "label": "Консумация — замразяване (−18 °C)",
+          "value": "520 Wh/24 ч; 1,8 Ah/ч"
+        },
+        {
+          "label": "Номинална мощност",
+          "value": "55W"
+        },
+        {
+          "label": "Хладилен агент",
+          "value": "R600a"
+        },
+        {
+          "label": "Шум",
+          "value": "<38,5 dB"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Захранване",
+      "rows": [
+        {
+          "label": "AC вход",
+          "value": "адаптер 95W макс., 14,5V; 100–240V 50/60 Hz"
+        },
+        {
+          "label": "Соларен вход",
+          "value": "11–30V, 8A / макс. 110W"
+        },
+        {
+          "label": "Зареждане от кола",
+          "value": "12V/24V, 8A / макс. 100W"
+        },
+        {
+          "label": "Работа с батерия",
+          "value": "43 ч (25 °C, режим Eco)"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Общи",
+      "rows": [
+        {
+          "label": "Клас на защита",
+          "value": "IPX4"
+        },
+        {
+          "label": "Работна температура на околната среда",
+          "value": "−10 до 50 °C"
+        },
+        {
+          "label": "Температура на съхранение",
+          "value": "−20 до 60 °C"
+        },
+        {
+          "label": "Приложение",
+          "value": "да"
+        },
+        {
+          "label": "Гаранция",
+          "value": "2 години"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-glacier-classic-portable-fridge-freezer-1167932170.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-glacier-classic-portable-fridge-freezer-1167932173.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-glacier-classic-portable-fridge-freezer-1167932172.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-glacier-classic-portable-fridge-freezer-1167932171.png"
+    ],
+    "sekcii": [
+      "https://eu.ecoflow.com/cdn/shop/files/10_1_img_6504c8eb-017c-49c9-bd72-2ed6688ab835.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/11_1_img_4ec56237-e8ad-46aa-b42b-580969ca01ae.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/12_1_img_00d79fff-50e4-4445-a9a0-e7d17fb19224.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/12_2_img.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/12_3_img.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/12_4_img.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/13_1_img_e20c7b63-2b59-4441-aff3-aff485740f2b.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/14_1_img_9fd88522-7c5a-4cb5-9430-9edf9ce4fa8b.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/16_1_1_img.png",
+      "https://eu.ecoflow.com/cdn/shop/files/16_1_2_img.png",
+      "https://eu.ecoflow.com/cdn/shop/files/16_1_3_img.png",
+      "https://eu.ecoflow.com/cdn/shop/files/16_1_4_img.png",
+      "https://eu.ecoflow.com/cdn/shop/files/16_1_6_img.png",
+      "https://eu.ecoflow.com/cdn/shop/files/17_1_img_62f48112-73be-4fa7-8ff0-eaabe9d962bf.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/1_1_363d9420-944b-4b30-8c53-bc6d5077b12a.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/2_1_img_f26b2c3e-d998-4427-8d23-109e57cbdea0.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/3_1_img_b7c97797-455e-4d4d-ad37-d30e396c0ddc.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/4_1_img_1b7eb4c5-3323-49c9-a383-f9e8169d62d6.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/4_2_img.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/4_3_img.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/4_4_img.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/4_5_img.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/6_1_img_ad425b91-3744-4964-8884-8ce9ebbab1ee.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/6dca49d7a614f40dd25bd4ee9f812ccc_73b19d54-3b05-41f4-b0d2-d819cf191980.gif",
+      "https://eu.ecoflow.com/cdn/shop/files/7_1_img_cd6b8176-29e9-4871-b03b-5398b3b1e42e.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/7_2_img_670ff47c-e331-4681-b688-340e90e7416d.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/8_2_img.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/8_3_img_4a1a5fa0-440f-41f6-8adc-a0d3b05b932a.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/9_1_img_1ac8b9f1-43af-42fb-a56f-3105c507627b.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/9_3_img.jpg"
+    ]
+  },
+  "_prevod_nadpisi": {
+    "1_1_363d9420-944b-4b30-8c53-bc6d5077b12a.jpg": {
+      "Dual-zone flexibility* / Store fresh and frozen foods simultaneously / *45L & 55L only": "Гъвкавост с две зони* / Съхранявайте пресни и замразени храни едновременно / *само 45L и 55L",
+      "Up to 43 hr* off-grid use / *The Plug-in Battery is sold separately": "До 43 ч* без мрежа / *Батерията се продава отделно",
+      "3 size options for every ride / 35L 45L 55L": "3 размера за всяко пътуване / 35L 45L 55L",
+      "Up to 90 cans capacity in a compact design": "До 90 кенчета в компактен дизайн",
+      "53mm/2-inch foam layer to keep freshness intact": "53 мм изолационна пяна — запазва свежестта",
+      "App control": "Управление от приложението"
+    },
+    "2_1_img_f26b2c3e-d998-4427-8d23-109e57cbdea0.jpg": {
+      "Freezer+Freezer / Freezer+Fridge / Freezer / Fridge": "Фризер+Фризер / Фризер+Хладилник / Фризер / Хладилник"
+    },
+    "3_1_img_b7c97797-455e-4d4d-ad37-d30e396c0ddc.jpg": {
+      "40% more compact than the industry average.": "40% по-компактен от средното за бранша."
+    },
+    "6_1_img_ad425b91-3744-4964-8884-8ce9ebbab1ee.jpg": {
+      "Insulated Cooler": "Хладилна чанта",
+      "GLACIER Classic": "остава"
+    },
+    "13_1_img_e20c7b63-2b59-4441-aff3-aff485740f2b.jpg": {
+      "AC Charging (95W)": "Зареждане от контакт (95W)",
+      "Car Power Outlet Charging (12V/24V, 100W)": "От гнездото в колата (12V/24V, 100W)",
+      "Solar Charging (11-30V, compatible with panels ≤110W)*": "Соларно зареждане (11–30V, панели до 110W)*",
+      "EcoFlow Alternator Charger (110W)*": "Алтернаторно зарядно EcoFlow (110W)*",
+      "USB-C Charging (100W bidirectional)": "Зареждане през USB-C (100W, двупосочно)"
+    },
+    "17_1_img_62f48112-73be-4fa7-8ff0-eaabe9d962bf.jpg": {
+      "Таблица за съвместимост (много малък текст)": "по желание — може да остане на английски; ключовото е в текста на секцията"
+    }
+  },
+  "_neyasni": [
+    "Страницата на EcoFlow е обща за 35/45/55L. Общите текстове са от нея; числата за обема (размери, тегло, кенчета, консумация, часове) — от таблицата „Specs — GLACIER Classic 35L“.",
+    "Противоречия в EcoFlow: (1) разлика между зоните — 20 °C в булетите, 22 °C в текста и спецификациите → взето 22 °C; (2) кенчета за 55L — 72 в таблицата, 90 в текста и в сравнението на серията → взето 90; (3) 35L — „Variable Dual Temperature“ в таблицата, а в текста „single-zone“ → записано „една зона“; (4) тегло — нето 20,5/23,2/25,2 кг в таблицата, 19,6/22,3/24,3 кг „празен“ в картинката на серията → в спецификациите е таблицата.",
+    "Секцията „До 43 часа“ при EcoFlow е видео → при нас текст без снимка.",
+    "Снимките на сценариите (5 раздела) са по реда на страницата — провери, че съответстват на етикетите (Car / RV / Tent / Tailgating / Grocery).",
+    "Галерията е без снимката с промо етикета „FREE“ (…1248307145/147/148).",
+    "В dice.bg: Налично на склад (проверено 30.09.2026).",
+    "Мета заглавието на страницата в dice.bg за 35L е „EcoFlow Glacier … With Ice Maker … (refurbished)“ — грешно в магазина (h1, SKU и EAN са на 35L). Сигнализирай на dice."
+  ]
+}

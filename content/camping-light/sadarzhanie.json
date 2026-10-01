@@ -1,0 +1,213 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Multifunctional Camping Light",
+    "slug": "camping-light",
+    "categorySlug": "drugi-aksesoari",
+    "productType": "accessory",
+    "tagline": "LED лампа и външна батерия за къмпинг, море или планина",
+    "badge": "none",
+    "price": 50.62,
+    "externalUrl": "https://dice.bg/ecoflow-multifunctional-camping-light-led-lampa-i-vanshna-bateria-za-kamping-more-ili-planina-cheren-item62856",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "62856",
+    "ean": "4895251600545",
+    "description": "LED лампа за къмпинг с няколко режима на светене и SOS, магнити N52 и щипка. Вградената батерия 7200 mAh зарежда и телефона през USB-A. Защита IP65.",
+    "highlights": [
+      {
+        "text": "Няколко режима на светене и SOS"
+      },
+      {
+        "text": "Външна батерия 7200 mAh с USB-A изход"
+      },
+      {
+        "text": "Магнити N52 и щипка"
+      },
+      {
+        "text": "Защита IP65"
+      }
+    ],
+    "metaTitle": "EcoFlow Multifunctional Camping Light — лампа и външна батерия | EcoFlow България",
+    "metaDescription": "EcoFlow Multifunctional Camping Light — LED лампа за къмпинг и външна батерия 7200 mAh, магнити и щипка, защита IP65."
+  },
+  "galeriya": [
+    {
+      "file": "62856_1.webp",
+      "alt": "EcoFlow Multifunctional Camping Light — лампа за къмпинг"
+    },
+    {
+      "file": "62856_2.webp",
+      "alt": "EcoFlow Multifunctional Camping Light — лампа за къмпинг"
+    },
+    {
+      "file": "62856_3.webp",
+      "alt": "EcoFlow Multifunctional Camping Light — лампа за къмпинг"
+    },
+    {
+      "file": "62856_4.webp",
+      "alt": "EcoFlow Multifunctional Camping Light — лампа за къмпинг"
+    },
+    {
+      "file": "62856_5.webp",
+      "alt": "EcoFlow Multifunctional Camping Light — лампа за къмпинг"
+    },
+    {
+      "file": "62856_6.webp",
+      "alt": "EcoFlow Multifunctional Camping Light — лампа за къмпинг"
+    },
+    {
+      "file": "62856_7.webp",
+      "alt": "EcoFlow Multifunctional Camping Light — лампа за къмпинг"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Светлина навсякъде",
+      "body": "Практична LED лампа за къмпинг, планина, море — и на практика навсякъде, където ви трябва светлина.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Режими",
+      "heading": "Няколко режима на светене",
+      "body": "Лампата свети в няколко режима според нуждата:\n- бяла светлина като фенер — идеална за намиране на предмети вечер;\n- бяла светлина като лампа, която не заслепява;\n- топла жълта светлина — подходяща за четене вечер;\n- натурална светлина.\n\nИма продължителна светлина и SOS режим.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Закачете я или я прикрепете",
+      "body": "Удобна щипка за закачане или подпиране. Вградените мощни неодимови магнити N52 позволяват да я монтирате на различни метални повърхности.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Батерия",
+      "heading": "Служи и за външна батерия",
+      "body": "Вградената батерия от 7200 mAh зарежда смартфона или друго мобилно устройство през USB-A изхода, когато имате нужда.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Готова за всяко време",
+      "body": "Защита IP65 — лампата издържа на всякакви метеорологични условия.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Multifunctional Camping Light",
+          "qty": 1
+        },
+        {
+          "name": "Кабел USB-A към USB-C за зареждане",
+          "qty": 1
+        },
+        {
+          "name": "Калъф за съхранение",
+          "qty": 1
+        },
+        {
+          "name": "Инструкции за употреба",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Multifunctional Camping Light"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "SCLI-B"
+        },
+        {
+          "label": "Мощност",
+          "value": "5W"
+        },
+        {
+          "label": "Батерия",
+          "value": "7200 mAh"
+        },
+        {
+          "label": "Изход",
+          "value": "USB-A"
+        },
+        {
+          "label": "Режими",
+          "value": "продължителна светлина, SOS, няколко цветни температури"
+        },
+        {
+          "label": "Магнити",
+          "value": "неодимови N52"
+        },
+        {
+          "label": "Защита",
+          "value": "IP65"
+        },
+        {
+          "label": "Тегло",
+          "value": "268 г"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62856_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62856_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62856_3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62856_4.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62856_5.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62856_6.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62856_7.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "По твое решение всичко е по dice.bg — име, текст, спецификации и снимки. EcoFlow EU пише за същия продукт (SCLI-B) 3600 mAh и IP54 и не споменава USB изход.",
+    "В eu.ecoflow.com има и „Multifunctional Outdoor Camping Light“ — друг, по-скъп продукт; не ги бъркай.",
+    "В dice.bg: Налично на склад (проверено 30.09.2026)."
+  ]
+}

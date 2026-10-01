@@ -1,0 +1,407 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "https://eu.ecoflow.com/products/smart-meter",
+  "produkt": {
+    "title": "EcoFlow Smart Meter",
+    "slug": "smart-meter",
+    "categorySlug": "umen-dom",
+    "productType": "accessory",
+    "tagline": "Умен електромер за следене на енергията в целия дом",
+    "badge": "none",
+    "price": 127.31,
+    "externalUrl": "https://dice.bg/ustrojstvo-za-prosledjavane-na-potreblenieto-na-elektroenergija-v-celija-dom-ecoflow-smart-meter-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "72565",
+    "ean": "4895251646956",
+    "description": "Умен трифазен/монофазен електромер за DIN шина. Следи консумацията на целия дом в реално време и позволява на системата EcoFlow STREAM да използва соларната енергия без подаване към мрежата.",
+    "highlights": [
+      {
+        "text": "Следи енергията в целия дом"
+      },
+      {
+        "text": "Трифазен и монофазен, до 120A на фаза"
+      },
+      {
+        "text": "Wi-Fi и Bluetooth"
+      },
+      {
+        "text": "Монтаж на DIN шина"
+      }
+    ],
+    "metaTitle": "EcoFlow Smart Meter — умен електромер | EcoFlow България",
+    "metaDescription": "EcoFlow Smart Meter следи енергията в целия дом и работи със системата STREAM — соларна енергия без подаване към мрежата.",
+    "compatibleWith": [
+      "stream-seriya"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-smart-meter-1.webp",
+      "alt": "EcoFlow Smart Meter — умен електромер"
+    },
+    {
+      "file": "ecoflow-smart-meter-2.webp",
+      "alt": "EcoFlow Smart Meter — умен електромер"
+    },
+    {
+      "file": "ecoflow-smart-meter-3.webp",
+      "alt": "EcoFlow Smart Meter — умен електромер"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Smart Meter — умно следене на енергията",
+      "body": "Защо ви е нужен? Следене на енергията в целия дом в реално време · Автоматично откриване на излишната енергия · Соларна енергия без подаване към мрежата (zero feed-in) · Оптимизиран с алгоритъма EcoFlow OASIS",
+      "image": "PC_KV-Bills_to_0_eu.jpg",
+      "imageAlt": "Сметки до нула — управление на енергията в дома"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Цял дом",
+      "heading": "Следене на енергията в целия дом за системата STREAM",
+      "body": "Осветлението и вградените кухненски уреди не могат да се следят с умни контакти. За тях е нужен умен електромер, който измерва консумацията на цялата къща — така системата сама планира кога и откъде да захранва.",
+      "image": "pc_Whole-Home_Intelligent.jpg",
+      "imageAlt": "Схема — Smart Meter следи консумацията на целия дом"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-left",
+      "theme": "light",
+      "anchorLabel": "STREAM",
+      "heading": "С STREAM AC Pro за съхранение на соларна енергия",
+      "body": "Благодарение на AC свързването STREAM AC Pro лесно се добавя към съществуваща соларна система като батерия „включи и работи“. Достатъчно е да добавите умен електромер — системата сама решава кога да зарежда и кога да захранва дома от AC Pro, за да използвате максимално слънчевата енергия.",
+      "image": "pc_Pair_with_STREAM_AC_Pro_en.jpg",
+      "imageAlt": "Схема — STREAM AC Pro и Smart Meter в дома"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-right",
+      "theme": "light",
+      "heading": "Лесен монтаж",
+      "body": "Нужни са само прост монтаж и свързване — без скъпа инсталация и без промени по електрическите кръгове. Монтира се на DIN шина в таблото.",
+      "image": "pc_Easy_to_Install.jpg",
+      "imageAlt": "Smart Meter на DIN шина"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "OASIS",
+      "heading": "Цялата сила на OASIS",
+      "body": "EcoFlow OASIS разкрива пълните си възможности с умния електромер — връзката, която превръща данните в действия. Данни в реално време, прецизно разпределение на натоварването и адаптивни прогнози с изкуствен интелект работят, когато Smart Meter е свързан с OASIS.",
+      "image": "PC_OASIS_EU.jpg",
+      "imageAlt": "Приложението EcoFlow с OASIS"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Smart Meter × Smart Plug: без подаване към мрежата. Цялата соларна енергия е ваша¹",
+      "body": "Smart Meter следи енергията в дома в реално време и засича всеки излишен ват. Умният контакт Smart Plug автоматично включва уредите, за да се използва всеки излишен ват. Приложението планира излишната енергия и само решава кога и къде да я използва.",
+      "image": "pc_Smart_Meter_x_Smart_Plug_eu.jpg",
+      "imageAlt": "Smart Meter, Smart Plug и приложението"
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Smart Meter",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "blockType": "footnotes",
+      "items": [
+        {
+          "text": "След инсталиране на батерия от серията STREAM и съвместим Smart Meter уредите се включват в контактите през съвместими умни контакти Smart Plug — така се включват и изключват отдалечено и по график от приложението EcoFlow и соларната енергия не се губи."
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Основни",
+      "rows": [
+        {
+          "label": "Монтаж",
+          "value": "DIN шина"
+        },
+        {
+          "label": "Фази",
+          "value": "трифазен / монофазен"
+        },
+        {
+          "label": "Комуникация",
+          "value": "Wi-Fi / Bluetooth (всяка може да се изключи); RS-485 (за производствени тестове и наблюдение)"
+        },
+        {
+          "label": "Токови трансформатори",
+          "value": "външни разглобяеми CT, 3 входа"
+        },
+        {
+          "label": "Вход за напрежение",
+          "value": "4 линейни входа: 3 L и 1 N или 1 L и 1 N"
+        },
+        {
+          "label": "Калибриране",
+          "value": "само на място"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Точност",
+      "rows": [
+        {
+          "label": "Напрежение, ток",
+          "value": "±0,5%"
+        },
+        {
+          "label": "Активна мощност",
+          "value": "±1%"
+        },
+        {
+          "label": "Честота",
+          "value": "±0,02 Hz"
+        },
+        {
+          "label": "Основна фаза (напрежение/ток)",
+          "value": "±1°"
+        },
+        {
+          "label": "Хармоници",
+          "value": "клас S (GB/T 19862-2016, IEC 61000-4-30, IEC 61000-4-7)"
+        },
+        {
+          "label": "Активна енергия",
+          "value": "клас B (GB/T 17215.321-2021, EN 50470-3-2022)"
+        },
+        {
+          "label": "Основна реактивна енергия",
+          "value": "клас 1 (GB/T 17215.324-2022, IEC 62053-24:2020)"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Измерване на напрежение",
+      "rows": [
+        {
+          "label": "Номинално напрежение (Un)",
+          "value": "~230V L-N / 400V L-L"
+        },
+        {
+          "label": "Обхват (L-N)",
+          "value": "100V – 1,2 Un (100–276V)"
+        },
+        {
+          "label": "Стартово напрежение (L-N)",
+          "value": "100V"
+        },
+        {
+          "label": "Честота",
+          "value": "45–65 Hz"
+        },
+        {
+          "label": "Консумация",
+          "value": "<0,02 VA на фаза"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Физически",
+      "rows": [
+        {
+          "label": "Размери (В × Ш × Д)",
+          "value": "90 × 66 × 36 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "115 г"
+        },
+        {
+          "label": "Защита",
+          "value": "IP30"
+        },
+        {
+          "label": "Сечение на проводника",
+          "value": "0,5–2,5 мм² / 20–14 AWG"
+        },
+        {
+          "label": "Дължина на оголване",
+          "value": "6–7 мм"
+        },
+        {
+          "label": "Корпус",
+          "value": "пластмаса"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Работна среда",
+      "rows": [
+        {
+          "label": "Работна температура",
+          "value": "−25 °C до 70 °C"
+        },
+        {
+          "label": "Температура на съхранение",
+          "value": "−40 °C до 85 °C"
+        },
+        {
+          "label": "Влажност",
+          "value": "5% до 95% RH"
+        },
+        {
+          "label": "Макс. надморска височина",
+          "value": "3000 м"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Електрически",
+      "rows": [
+        {
+          "label": "Захранване (AC)",
+          "value": "100–276V, 50/60 Hz"
+        },
+        {
+          "label": "Макс. консумация",
+          "value": "<3W"
+        },
+        {
+          "label": "Обхват на тока",
+          "value": "0–120A (през CT на всяка фаза и нулата)"
+        },
+        {
+          "label": "Токов трансформатор",
+          "value": "CT 120A"
+        },
+        {
+          "label": "Кабел на CT",
+          "value": "50 см"
+        },
+        {
+          "label": "Удължител за антена",
+          "value": "1,5 м"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Връзка",
+      "rows": [
+        {
+          "label": "Wi-Fi",
+          "value": "802.11 b/g/n, 2,4 GHz"
+        },
+        {
+          "label": "Обхват Wi-Fi",
+          "value": "до 30 м на закрито и 50 м на открито (зависи от условията)"
+        },
+        {
+          "label": "Bluetooth",
+          "value": "4.2"
+        },
+        {
+          "label": "Обхват Bluetooth",
+          "value": "до 10 м на закрито и 30 м на открито"
+        },
+        {
+          "label": "Антена",
+          "value": "вградена или външна (ръчен превключвател)"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Данни и фърмуер",
+      "rows": [
+        {
+          "label": "Обновяване на активната мощност",
+          "value": "<50 ms през RS485, <100 ms през Wi-Fi"
+        },
+        {
+          "label": "Обновяване на фърмуера",
+          "value": "локално през RS485; дистанционно (OTA) през Wi-Fi"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Надеждност",
+      "rows": [
+        {
+          "label": "Гаранция",
+          "value": "2 години"
+        },
+        {
+          "label": "Проектен живот",
+          "value": "10 години"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-smart-meter-1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-smart-meter-2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-smart-meter-3.webp"
+    ],
+    "sekcii": [
+      "https://eu.ecoflow.com/cdn/shop/files/PC_KV-Bills_to_0_eu.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Whole-Home_Intelligent.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Pair_with_STREAM_AC_Pro_en.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Easy_to_Install.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_OASIS_EU.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Smart_Meter_x_Smart_Plug_eu.jpg"
+    ]
+  },
+  "_prevod_nadpisi": {
+    "PC_KV-Bills_to_0_eu.jpg": {
+      "Bills to 0": "Сметки до 0",
+      "Smart Home Power Management": "Умно управление на енергията в дома"
+    },
+    "pc_Pair_with_STREAM_AC_Pro_en.jpg": {
+      "STREAM Microinverter + AC Pro": "STREAM микроинвертор + AC Pro",
+      "Home socket": "Контакт",
+      "Household appliances": "Домакински уреди",
+      "Main panel": "Ел. табло",
+      "Smart meter": "Умен електромер",
+      "Solar panels": "Соларни панели",
+      "Grid": "Мрежа",
+      "Electricity Meter": "Електромер"
+    },
+    "PC_OASIS_EU.jpg": {
+      "Empower Your Home From Your Fingertips": "Управлявайте дома с едно докосване",
+      "AI-Driven Energy, Always Optimized": "Енергия с изкуствен интелект — винаги оптимизирана",
+      "Proactive Protection to Stay Ahead of the Risk": "Превантивна защита — преди риска",
+      "Cut Costs, Not Comfort": "По-ниски разходи без компромис с комфорта"
+    },
+    "pc_Smart_Meter_x_Smart_Plug_eu.jpg": {
+      "Smart Meter · Monitor": "Smart Meter · Следи",
+      "Monitors household power flow in real time, precisely detects every surplus watt.": "Следи енергията в дома в реално време и засича всеки излишен ват.",
+      "Smart Plug · Switch": "Smart Plug · Включва",
+      "Automatically switches each device, efficiently uses every surplus watt.": "Включва уредите автоматично и използва всеки излишен ват.",
+      "Smart App · Schedule": "Приложение · Планира",
+      "Intelligently schedules surplus power, automatically decides when and where to use it for savings.": "Планира излишната енергия и само решава кога и къде да я използва."
+    }
+  },
+  "_neyasni": [
+    "Галерията в eu.ecoflow.com е само една промо снимка („For Free“) — в галерията са снимките от dice.bg.",
+    "Секцията „Pair with STREAM AC Pro“ споменава STREAM AC Pro, който още го няма в сайта.",
+    "„Съвместим с“ е цялата категория „STREAM серия“ — излиза в раздела „Аксесоари“ в менюто при STREAM. Не е сложен в „Покажи и в: STREAM серия“, за да не стои сред самите системи в списъка на категорията; ако го искаш и там — кажи.",
+    "В dice.bg: Налично на склад (проверено 30.09.2026)."
+  ]
+}

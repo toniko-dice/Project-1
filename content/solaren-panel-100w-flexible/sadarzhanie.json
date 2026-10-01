@@ -1,0 +1,278 @@
+{
+  "_bележка": "Съдържание за внасяне. Пуска се с: npm run import:product solaren-panel-100w-flexible. Снимките се свалят по линковете в _svali_snimki (галерия и секции); преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "eu.ecoflow.com/products/100w-flexible-solar-panel, прочетено на 28.09.2026. Цена, SKU и EAN — dice.bg. Спецификациите са 1:1 от „Specs“ на EcoFlow.",
+  "produkt": {
+    "title": "EcoFlow 100W Flexible Solar Panel",
+    "slug": "solaren-panel-100w-flexible",
+    "categorySlug": "sgavaemi-paneli",
+    "productType": "hero",
+    "tagline": "Гъвкав соларен панел · 100W, 2,3 кг, огъва се до 258°, IP68",
+    "badge": "none",
+    "price": 122.2,
+    "compareAtPrice": 142.65,
+    "externalUrl": "https://dice.bg/g-vkav-solaren-panel-zarezhdasch-direktno-vasheto-ustrojstvo-ot-sl-nceto-ecoflow-100w-flexible-solar-panel-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "61490",
+    "ean": "4897082668619",
+    "description": "Гъвкав соларен панел 100W за покриви на кемпери и вани: около 2,3 кг (70% по-лек от традиционните панели), огъва се до 258°, 23% ефективност с монокристални клетки и байпас диоди, ETFE филм и IP68. Готови отвори за окачване или залепване, универсален соларен конектор и 1 м кабел.",
+    "highlights": [
+      {
+        "title": "Само 2,3 кг",
+        "text": "Със 70% по-лек от традиционните панели — лесен за пренасяне и монтаж."
+      },
+      {
+        "title": "Огъва се до 258°",
+        "text": "Приляга по покрива на ван или кемпер, без загуба на соларен вход."
+      },
+      {
+        "title": "23% ефективност",
+        "text": "Монокристални клетки с байпас диоди — работи и на частична сянка."
+      },
+      {
+        "title": "IP68 и ETFE филм",
+        "text": "Улавя енергия и при силен дъжд."
+      },
+      {
+        "title": "Универсален конектор",
+        "text": "Работи със съществуващи 48V системи и портативни електроцентрали; 1 м кабел."
+      }
+    ],
+    "metaTitle": "EcoFlow 100W Flexible — гъвкав соларен панел 100W за кемпер и ван",
+    "metaDescription": "Гъвкав соларен панел 100W, 2,3 кг, огъване до 258°, 23% ефективност, IP68, ETFE филм, готови отвори за монтаж. Официален дистрибутор за България."
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-100w-flexible-solar-panel-42493545709732.png",
+      "alt": "EcoFlow 100W Flexible Solar Panel — отпред"
+    },
+    {
+      "file": "ecoflow-100w-flexible-solar-panel-42462949703844.png",
+      "alt": "EcoFlow 100W Flexible Solar Panel — огънат"
+    },
+    {
+      "file": "ecoflow-100w-flexible-solar-panel-42462949736612.png",
+      "alt": "EcoFlow 100W Flexible Solar Panel — отзад"
+    },
+    {
+      "file": "ecoflow-100w-flexible-solar-panel-42462951112868.jpg",
+      "alt": "EcoFlow 100W Flexible Solar Panel — на покрив"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "",
+      "body": "",
+      "image": "100w_flexible_1.png",
+      "imageAlt": "EcoFlow 100W Flexible Solar Panel — основни предимства"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "100W гъвкави соларни панели",
+      "body": "Лекият ни гъвкав соларен панел е създаден да приляга точно по извивката на покрива на ван или кемпер. Монтирайте го и зареждайте бързо системата си Power Kits или портативната електроцентрала.",
+      "image": "100w_flexible_2.jpg",
+      "imageAlt": "Гъвкав панел на покрива на кемпер"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-left",
+      "theme": "light",
+      "anchorLabel": "Гъвкавост",
+      "heading": "Лек и гъвкав както никога",
+      "subheading": "Този панел тежи само 2,3 кг и приляга по различни извивки",
+      "subheadingPosition": "above",
+      "body": "Гъвкавият ни соларен панел е изключително лек — със 70% по-лек от традиционните соларни панели — и се мести и монтира лесно. Огъва се до 258° и приляга по уникалната форма на вашия кемпер или ван, без това да влияе на соларния вход.",
+      "image": "100w_flexible_3.png",
+      "imageAlt": "Панелът, огънат на 258°"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-right",
+      "theme": "light",
+      "anchorLabel": "Издръжливост",
+      "heading": "Издръжлив за вашата соларна енергия",
+      "subheading": "Покрит с модерно фибростъкло",
+      "subheadingPosition": "above",
+      "body": "Всяка от 182-те монокристални силициеви клетки е изработена с модерно фибростъкло и процес на ламиниране, който пази панела и повишава производителността.",
+      "image": "100w_flexible_4.png",
+      "imageAlt": "Слоевете на панела"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Ефективност",
+      "heading": "По-бързо зареждане с висока соларна ефективност",
+      "subheading": "Изработен от високоефективни монокристални клетки",
+      "subheadingPosition": "above",
+      "body": "Нашият 100W гъвкав соларен панел е с отлична ефективност от 23% — зареждате още по-бързо. Вградените байпас диоди предпазват от прегряване и запазват производителността на клетките дори на сянка. Комбинирайте го с Power Kits или с портативна електроцентрала на EcoFlow — вграденият MPPT алгоритъм оптимизира соларния вход.",
+      "image": "100w_flexible_5_PC.jpg",
+      "imageAlt": "23% ефективност"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-left",
+      "theme": "light",
+      "anchorLabel": "IP68",
+      "heading": "Създаден да издържи на бурята",
+      "subheading": "Клас на водоустойчивост IP68*",
+      "subheadingPosition": "above",
+      "body": "Нашият 100W гъвкав соларен панел улавя слънчева енергия дори при най-силния дъжд. Със защитния ETFE филм соларните клетки издържат на всякаква среда — от влажна до суха.\n\n*Водо- и прахоустойчивостта са изпитани в контролирани лабораторни условия — клас IP68 по стандарт IEC 60529 (максимална дълбочина 1 м за до 72 часа).",
+      "image": "100w_flexible_6.png",
+      "imageAlt": "IP68 — панелът под дъжд"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Монтаж",
+      "heading": "Изберете сами как да го монтирате",
+      "subheading": "Ползвайте готовите отвори, за да поставите панела както искате",
+      "subheadingPosition": "above",
+      "body": "Благодарение на готовите отвори гъвкавият соларен панел може да се окачи с куки или да се закрепи здраво към повърхност с лепило.",
+      "image": "100w_flexible_7.jpg",
+      "imageAlt": "Отвори за окачване и залепване"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Съвместимост",
+      "heading": "Добавете го към вашата соларна и енергийна система",
+      "subheading": "Соларен кабел за универсална съвместимост",
+      "subheadingPosition": "above",
+      "body": "С универсалния соларен конектор нашият 100W гъвкав соларен панел може да се ползва дори с вашата съществуваща 48V система или портативна електроцентрала. Панелът има соларен кабел с дължина 1 м — достатъчно място за монтаж на няколко панела и максимален соларен вход.",
+      "image": "100w_flexible_8.png",
+      "imageAlt": "Соларен конектор"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "body": "1. 100W гъвкав соларен панел\n2. Ръководство за употреба и гаранционна карта\n\nКабелът от соларен конектор към XT60i не е включен в комплекта — продава се отделно.",
+      "image": "100W_Flexible.jpg",
+      "imageAlt": "Панел отпред и отзад, ръководство"
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Общи",
+      "rows": [
+        {
+          "label": "Номинална мощност",
+          "value": "100W (±5W)"
+        },
+        {
+          "label": "Тегло (панел)",
+          "value": "около 2,3 кг"
+        },
+        {
+          "label": "Размери",
+          "value": "1055 × 612 × 25 мм"
+        },
+        {
+          "label": "Водоустойчивост",
+          "value": "IP68"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Електрически параметри",
+      "rows": [
+        {
+          "label": "Напрежение на празен ход",
+          "value": "20,3V"
+        },
+        {
+          "label": "Ток на късо съединение",
+          "value": "6,3A"
+        },
+        {
+          "label": "Максимално работно напрежение",
+          "value": "17,1V"
+        },
+        {
+          "label": "Максимален работен ток",
+          "value": "5,9A"
+        },
+        {
+          "label": "Температурен коефициент на номиналната мощност",
+          "value": "−0,39%/°C"
+        },
+        {
+          "label": "Температурен коефициент на напрежението на празен ход",
+          "value": "0,33%/°C"
+        },
+        {
+          "label": "Температурен коефициент на тока на късо съединение",
+          "value": "0,06%/°C"
+        },
+        {
+          "label": "Максимално напрежение на системата",
+          "value": "600 VDC (UL)"
+        },
+        {
+          "label": "Максимален ток на предпазителя",
+          "value": "15A"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://eu.ecoflow.com/cdn/shop/products/ecoflow-100w-flexible-solar-panel-42493545709732.png",
+      "https://eu.ecoflow.com/cdn/shop/products/ecoflow-100w-flexible-solar-panel-42462949703844.png",
+      "https://eu.ecoflow.com/cdn/shop/products/ecoflow-100w-flexible-solar-panel-42462949736612.png",
+      "https://eu.ecoflow.com/cdn/shop/products/ecoflow-100w-flexible-solar-panel-42462951112868.jpg"
+    ],
+    "sekcii": [
+      "https://eu.ecoflow.com/cdn/shop/files/100w_flexible_1.png",
+      "https://eu.ecoflow.com/cdn/shop/files/100w_flexible_2.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/100w_flexible_3.png",
+      "https://eu.ecoflow.com/cdn/shop/files/100w_flexible_4.png",
+      "https://eu.ecoflow.com/cdn/shop/files/100w_flexible_5_PC.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/100w_flexible_6.png",
+      "https://eu.ecoflow.com/cdn/shop/files/100w_flexible_7.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/100w_flexible_8.png",
+      "https://eu.ecoflow.com/cdn/shop/files/100W_Flexible.jpg"
+    ]
+  },
+  "_prevod_nadpisi": {
+    "100w_flexible_1.png": {
+      "Lightweight": "Лек",
+      "Flexible for Curved Surfaces": "Гъвкав за извити повърхности",
+      "258° Curve": "258° огъване",
+      "IP68 Weatherproof": "IP68 устойчив на атмосферни условия",
+      "Universally Compatible": "Универсално съвместим"
+    },
+    "100w_flexible_3.png": {
+      "70% Lighter": "70% по-лек",
+      "258° Curve": "258° огъване"
+    },
+    "100w_flexible_5_PC.jpg": {
+      "23%": "остава"
+    },
+    "100w_flexible_6.png": {
+      "IP68": "остава"
+    }
+  },
+  "_neyasni": [
+    "Секциите на EcoFlow са с малко заглавие (H4) над голямото (H2) — при нас малкото е подзаглавие над заглавието (subheadingPosition: above).",
+    "Квадратните снимки (100w_flexible_3/4/6) са сложени вляво/вдясно от текста; широките — над него.",
+    "„Какво има в кутията“ е една снимка с два елемента — секция със снимка и текст, не блок с отделни елементи."
+  ]
+}

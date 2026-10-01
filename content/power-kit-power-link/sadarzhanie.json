@@ -1,0 +1,199 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Power Kit Power Link",
+    "slug": "power-kit-power-link",
+    "categorySlug": "power-kits",
+    "productType": "accessory",
+    "tagline": "Модул за сензори и релета към Power Hub",
+    "badge": "none",
+    "price": 408.52,
+    "externalUrl": "https://dice.bg/senzor-za-integrirane-na-danni-ot-ecoflow-power-kit-power-hub-3-6kw-i-power-hub-5kva-ecoflow-power-kit-power-link-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "72639",
+    "ean": "4895251622677",
+    "description": "Power Link събира данните от Power Hub, разпределителните панели, сензорите и релетата в кемпера и ги показва на PowerInsight, конзолата или в приложението.",
+    "highlights": [
+      {
+        "text": "Сензори за напрежение, съпротивление и RTD"
+      },
+      {
+        "text": "2 релейни изхода"
+      },
+      {
+        "text": "Лесно калибриране"
+      },
+      {
+        "text": "До 2 броя към един Power Hub"
+      }
+    ],
+    "metaTitle": "EcoFlow Power Kit Power Link | EcoFlow България",
+    "metaDescription": "EcoFlow Power Kit Power Link — сензори, релета и данни от кемпера на едно място в PowerInsight, конзолата или приложението.",
+    "compatibleWith": [
+      "power-kits"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow_power_kit_power_link-1.webp",
+      "alt": "EcoFlow Power Kit Power Link — модул"
+    },
+    {
+      "file": "ecoflow_power_kit_power_link-2.webp",
+      "alt": "EcoFlow Power Kit Power Link — модул"
+    },
+    {
+      "file": "ecoflow_power_kit_power_link-3.webp",
+      "alt": "EcoFlow Power Kit Power Link — модул"
+    },
+    {
+      "file": "ecoflow_power_kit_power_link-4.webp",
+      "alt": "EcoFlow Power Kit Power Link — модул"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Всички данни на едно място",
+      "body": "EcoFlow Power Link събира данните от EcoFlow Power Hub, разпределителните панели EcoFlow Smart Distribution Panel, сензорите и вашите релета в кемпера и ги показва на централен монитор — EcoFlow PowerInsight, конзолата Power Kit Console или приложението EcoFlow.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Без сложно калибриране",
+      "body": "Други системи изискват сложни компоненти и инструменти само за калибрирането и комуникацията. Power Link просто се свързва с PowerInsight или конзолата и разпределителните панели. След това следите сензори за ниво с напрежение, съпротивление и 4-проводни RTD сензори в целия кемпер, каравана или дом.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Съвместимост",
+      "heading": "Лесен монтаж",
+      "body": "Скрит клемен блок и лесно свързване. Към един Power Hub могат да се свържат два Power Link. Работи с Power Hub 5kVA (Gen 2) и Power Hub 3.6kW (Gen 1).",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Power Kit Power Link",
+          "qty": 1
+        },
+        {
+          "name": "Ръководство за употреба",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Power Kit Power Link"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFMM305PowerLink"
+        },
+        {
+          "label": "Защита",
+          "value": "IP20"
+        },
+        {
+          "label": "Сензори за напрежение — входове",
+          "value": "3"
+        },
+        {
+          "label": "Сензори за напрежение — обхват",
+          "value": "0–35V DC"
+        },
+        {
+          "label": "Сензори за съпротивление — входове",
+          "value": "3"
+        },
+        {
+          "label": "Сензори за съпротивление — обхват",
+          "value": "10 Ω – 100 kΩ"
+        },
+        {
+          "label": "Цифров вход",
+          "value": "1"
+        },
+        {
+          "label": "Релейни изходи",
+          "value": "2"
+        },
+        {
+          "label": "Реле — макс. напрежение",
+          "value": "42,4V DC"
+        },
+        {
+          "label": "Реле — макс. ток",
+          "value": "1,75A"
+        },
+        {
+          "label": "Работна температура",
+          "value": "−25 °C до 50 °C"
+        },
+        {
+          "label": "Температура на съхранение",
+          "value": "−25 °C до 70 °C"
+        },
+        {
+          "label": "Размери",
+          "value": "74 × 137 × 31 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "120 г"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow Power Kit Power Hub 3.6kW и 5kVA"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_link-1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_link-2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_link-3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_link-4.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Продуктът го няма в eu.ecoflow.com — съдържанието е по dice.bg.",
+    "В dice.bg броят входове за сензорите за напрежение е отрязан („3“ стои на мястото на работната температура) — записан е като 3.",
+    "Изисква Power Hub (продава се отделно).",
+    "В dice.bg: по заявка (проверено 01.10.2026)."
+  ]
+}

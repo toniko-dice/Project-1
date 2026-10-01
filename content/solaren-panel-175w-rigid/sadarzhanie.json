@@ -1,0 +1,376 @@
+{
+  "_bележка": "Съдържание за внасяне. Пуска се с: npm run import:product solaren-panel-175w-rigid. Снимките се свалят по линковете в _svali_snimki (галерия и секции); преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "eu.ecoflow.com/products/175w-rigid-solar-panel, прочетено на 28.09.2026. Цена, SKU и EAN — dice.bg. Спецификациите и въпросите са 1:1 от EcoFlow.",
+  "produkt": {
+    "title": "EcoFlow 175W Rigid Solar Panel",
+    "slug": "solaren-panel-175w-rigid",
+    "categorySlug": "stacionarni-paneli",
+    "productType": "hero",
+    "tagline": "Стационарен соларен панел · 175W, TOPCon 25%, за ван и дом",
+    "badge": "none",
+    "price": 152.88,
+    "externalUrl": "https://dice.bg/ecoflow-175w-rigid-solar-panel-solaren-panel-zarezhdasht-direktno-vasheto-ustroystvo-ot-slantseto-cheren-item70503",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "70503",
+    "ean": "4895251627719",
+    "description": "Твърд соларен панел 175W с N-тип TOPCon клетки и ефективност до 25%, закалено стъкло и антикорозионна алуминиева рамка, IP68. Проектиран за покрив на ван клас B (117,6 × 76,2 см) и за дома — живот до 30 години, 5 години гаранция. Готови отвори за монтаж; монтажните крачета са в комплекта.",
+    "highlights": [
+      {
+        "title": "До 25% ефективност",
+        "text": "N-тип TOPCon клетки — повече мощност при слаба светлина и високи температури."
+      },
+      {
+        "title": "IP68 и закалено стъкло",
+        "text": "Антикорозионна алуминиева рамка, защитно ламиниране."
+      },
+      {
+        "title": "За ванове клас B и за дома",
+        "text": "117,6 см дължина — използва целия покрив, без да пречи на тентата."
+      },
+      {
+        "title": "Лесен и бърз монтаж",
+        "text": "Готови отвори; монтажните крачета са включени."
+      },
+      {
+        "title": "5 години гаранция, до 30 години живот",
+        "text": "*Животът зависи от реалната употреба."
+      }
+    ],
+    "metaTitle": "EcoFlow 175W Rigid — стационарен соларен панел 175W TOPCon за ван и дом",
+    "metaDescription": "Твърд соларен панел 175W с TOPCon клетки, до 25% ефективност, IP68, закалено стъкло, за ван клас B и дом, 5 години гаранция. Официален дистрибутор за България."
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-175w-rigid-solar-panel-59490609561943.png",
+      "alt": "EcoFlow 175W Rigid Solar Panel — отпред"
+    },
+    {
+      "file": "ecoflow-175w-rigid-solar-panel-59490609594711.png",
+      "alt": "EcoFlow 175W Rigid Solar Panel — под ъгъл"
+    },
+    {
+      "file": "ecoflow-175w-rigid-solar-panel-59490609627479.png",
+      "alt": "EcoFlow 175W Rigid Solar Panel — отзад"
+    },
+    {
+      "file": "ecoflow-175w-rigid-solar-panel-59490609660247.png",
+      "alt": "EcoFlow 175W Rigid Solar Panel — детайл"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "",
+      "body": "",
+      "image": "PC_ksp_3c146680-7bba-4bff-bb79-cac58387de3c.png",
+      "imageAlt": "EcoFlow 175W Rigid Solar Panel — основни предимства"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "TOPCon",
+      "heading": "Още повече енергия",
+      "subheading": "Революционни N-тип TOPCon соларни клетки",
+      "subheadingPosition": "above",
+      "body": "С технологията на N-тип TOPCon соларни клетки вдигнахме летвата за ефективност на преобразуване на 25%. Така събираме и съхраняваме повече слънце от всякога.\n\n*Когато повърхността на панела достигне 55 °C, температурният коефициент на TOPCon клетките е с 23% по-нисък от този на обикновените монокристални силициеви клетки.\n*Експлоатационният живот зависи от реалната употреба.",
+      "image": "PC_ksp_a921113c-9eb9-4fd8-a263-e68fdb948b5b.jpg",
+      "imageAlt": "25% ефективност пред кемпер край морето"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Защо N-тип TOPCon клетките са по-добри?",
+      "body": "",
+      "image": "PC_ksp_34845a82-23df-4bdc-850e-3d0a563e5d0f.png",
+      "imageAlt": "Сравнение TOPCon срещу монокристални клетки"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Издръжливост",
+      "heading": "Създаден да издържи на всяка буря",
+      "subheading": "Покрит със силно защитно ламиниране и закалено стъкло",
+      "subheadingPosition": "above",
+      "body": "Със здрава антикорозионна алуминиева рамка е проектиран за години събиране на слънчева енергия. TOPCon клетките са покрити със силно защитно ламиниране и закалено стъкло, а класът на водоустойчивост IP68 повишава производителността и осигурява дълготрайна издръжливост.",
+      "image": "PC_ksp_79dafa1d-2a73-4a37-af48-7a50c9f5b49c.png",
+      "imageAlt": "Защитно покритие, антикорозионна рамка, IP68"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "За ван",
+      "heading": "Точните размери, за да използвате максимално покрива",
+      "subheading": "Първи в бранша дизайн специално за ванове клас B (кемпер ванове)",
+      "subheadingPosition": "above",
+      "body": "Със специално проектираните панели за ванове клас B зареждате бързо акумулаторите на кемпера и захранвате вана с дни.\n\nСъс скъсената дължина от 117,6 см използва всеки сантиметър от покрива на вана, без да пречи на тентата.",
+      "image": "PC_ksp_c771113a-efc3-4ab3-8a10-201f75b86488.png",
+      "imageAlt": "Панелът на покрива на ван — сравнение на дължините"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-right",
+      "theme": "light",
+      "heading": "Идеален и за покрив на SUV",
+      "body": "С точния размер за монтаж на покрив на SUV 149,9–160 см × 99 см — оптимално събиране на слънчева енергия.",
+      "image": "PC_ksp_dfdbb760-98e9-4fcb-ba1d-206fc4f2b7b0.png",
+      "imageAlt": "Панелът на покрива на SUV"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "За дома",
+      "heading": "Дълготрайно соларно решение за дома",
+      "subheading": "Идеално пригоден за домашна употреба",
+      "subheadingPosition": "above",
+      "body": "С 30-годишен живот е издръжливо соларно решение с ниска поддръжка, идеално за дома.\n\nКомбинирайте го със стойка с наклон 71,1 см и събирайте слънце направо от градината. Пълен заряд на EcoFlow DELTA 2 за само 3,7 ч с два панела. Дори в облачен ден се зарежда напълно в рамките на деня.",
+      "image": "PC_ksp.jpg",
+      "imageAlt": "Два панела в градината и панели на покрив"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-left",
+      "theme": "light",
+      "anchorLabel": "Монтаж",
+      "heading": "Готов за монтаж на всякаква повърхност",
+      "subheading": "Готови отвори за сигурен монтаж",
+      "subheadingPosition": "above",
+      "body": "С готовите отвори по периметъра 175W твърдият панел е готов за монтаж на вана или на автономната ви система. Комбинирайте го с монтажните крачета за твърди соларни панели за сигурно закрепване към всяка повърхност.",
+      "image": "PC_ksp_c1af46e6-6a97-4288-a053-69f02eef5536.jpg",
+      "imageAlt": "Монтажно краче"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Съвместимост",
+      "heading": "Просто включвате към енергийната си система",
+      "subheading": "Универсално съвместим соларен кабел",
+      "subheadingPosition": "above",
+      "body": "С универсалния соларен конектор се свързва с всяка съществуваща соларна система на трети производител. Зареждайте 48V системи и портативни електроцентрали с един или няколко панела.",
+      "image": "PC_ksp_e78edb67-6ce3-431d-9543-974d2c826e0b.jpg",
+      "imageAlt": "Универсален соларен конектор"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Време за зареждане",
+      "heading": "Време за зареждане с EcoFlow 175W Rigid TOPCon соларен панел",
+      "body": "*Изчислено при 80% от мощността на панела; интервалът отчита различни атмосферни условия.\n**Данните включват фактори като дъжд през годината.",
+      "image": "PC_ksp_4d8970d1-a210-42cb-b6cf-e65d4cf1b33e.png",
+      "imageAlt": "Таблица с времена за зареждане на RIVER 2 и DELTA"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Как да изберете соларен панел",
+      "body": "",
+      "image": "PC_ksp_a1765443-5d68-4867-bd3c-942117e14d93.png",
+      "imageAlt": "Твърд срещу сгъваем соларен панел"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "body": "Кабелът от соларен конектор към XT60i не е включен в комплекта — продава се отделно.",
+      "image": "PC_ksp_c7b022fb-825a-46f9-a64e-c73260d996d7.png",
+      "imageAlt": "Панел, монтажни крачета, ръководство"
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "faqBlock",
+      "anchorLabel": "Въпроси",
+      "heading": "Често задавани въпроси",
+      "items": [
+        {
+          "question": "Мога ли да комбинирам соларни панели с различни характеристики?",
+          "answer": "Да, но не се препоръчва. Различните контролери на системите за съхранение имат изисквания и ограничения към изхода на соларните панели. Когато панели с различен ток се свържат последователно, те се ограничават — изходната мощност не може да се отдаде и се получава ефектът „1 + 1 < 2“."
+        },
+        {
+          "question": "Какви предимства има EcoFlow TOPCon соларният панел пред другите соларни панели?",
+          "answer": "EcoFlow TOPCon соларният панел е с ефективност на преобразуване от ново ниво — 25%, значително над 18–20% при много традиционни панели. Запазва висока мощност при слаба светлина и високи температури, така че работи по-добре при различни атмосферни условия. Има клас на водоустойчивост IP68 за по-голяма издръжливост и надеждност и живот до 30 години."
+        },
+        {
+          "question": "Каква мощност обикновено достига 175W соларен панел?",
+          "answer": "В слънчев ден без облаци и при пряко слънце мощността на 175W панел е между 130 и 145W (данните са при облъчване 800–900 W/m² и температура на повърхността 60 °C). Номиналните данни се получават при изпитване в условия AM1.5, 1000 W/m² и температура на повърхността 25 °C. Мощност, близка до номиналната, обикновено се достига по обед в слънчев зимен ден."
+        },
+        {
+          "question": "Трябва ли редовно да почиствам 175W соларния панел?",
+          "answer": "Да. След дълга употреба на открито върху панела може да се натрупат прах и чужди тела, които частично закриват светлината и намаляват мощността. Редовното почистване пази повърхността чиста и осигурява по-висок добив. Бършете внимателно с меки материали, за да не надраскате повърхността."
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Общи",
+      "rows": [
+        {
+          "label": "Номинална мощност",
+          "value": "175W (±3W)"
+        },
+        {
+          "label": "Тип клетки",
+          "value": "N-тип TOPCon монокристален силиций"
+        },
+        {
+          "label": "Ефективност",
+          "value": "до 25%"
+        },
+        {
+          "label": "Тегло (панел)",
+          "value": "9,3 кг"
+        },
+        {
+          "label": "Размери",
+          "value": "117,6 × 76,2 × 3 см"
+        },
+        {
+          "label": "Конектор",
+          "value": "фотоволтаични конектори (съвместими с MC4)"
+        },
+        {
+          "label": "Водо- и прахоустойчивост",
+          "value": "IP68"
+        },
+        {
+          "label": "Гаранция",
+          "value": "5 години"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Електрически параметри",
+      "rows": [
+        {
+          "label": "Напрежение на празен ход",
+          "value": "25,5V"
+        },
+        {
+          "label": "Ток на късо съединение",
+          "value": "8,3A"
+        },
+        {
+          "label": "Максимално работно напрежение",
+          "value": "22,3V"
+        },
+        {
+          "label": "Максимален работен ток",
+          "value": "7,85A"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-175w-rigid-solar-panel-59490609561943.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-175w-rigid-solar-panel-59490609594711.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-175w-rigid-solar-panel-59490609627479.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-175w-rigid-solar-panel-59490609660247.png"
+    ],
+    "sekcii": [
+      "https://eu.ecoflow.com/cdn/shop/files/PC_ksp_3c146680-7bba-4bff-bb79-cac58387de3c.png",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_ksp_a921113c-9eb9-4fd8-a263-e68fdb948b5b.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_ksp_34845a82-23df-4bdc-850e-3d0a563e5d0f.png",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_ksp_79dafa1d-2a73-4a37-af48-7a50c9f5b49c.png",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_ksp_c771113a-efc3-4ab3-8a10-201f75b86488.png",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_ksp_dfdbb760-98e9-4fcb-ba1d-206fc4f2b7b0.png",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_ksp.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_ksp_c1af46e6-6a97-4288-a053-69f02eef5536.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_ksp_e78edb67-6ce3-431d-9543-974d2c826e0b.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_ksp_4d8970d1-a210-42cb-b6cf-e65d4cf1b33e.png",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_ksp_a1765443-5d68-4867-bd3c-942117e14d93.png",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_ksp_c7b022fb-825a-46f9-a64e-c73260d996d7.png"
+    ]
+  },
+  "_prevod_nadpisi": {
+    "PC_ksp_3c146680-7bba-4bff-bb79-cac58387de3c.png": {
+      "TOPCon solar cells": "TOPCon соларни клетки",
+      "Up to 25% / Solar conversion efficiency rate": "До 25% / ефективност на преобразуване",
+      "Durable structure": "Здрава конструкция",
+      "Up to 30-year lifespan*": "Живот до 30 години*",
+      "30 YEAR": "30 ГОДИНИ",
+      "Use in various scenarios": "За различни приложения",
+      "IP68 Waterproof rating": "IP68 водоустойчивост",
+      "Easy installation": "Лесен монтаж"
+    },
+    "PC_ksp_a921113c-9eb9-4fd8-a263-e68fdb948b5b.jpg": {
+      "25%": "остава"
+    },
+    "PC_ksp_34845a82-23df-4bdc-850e-3d0a563e5d0f.png": {
+      "Why N-Type TOPCon solar cells are better ?": "Защо N-тип TOPCon клетките са по-добри?",
+      "Up to 25% conversion efficiency": "До 25% ефективност на преобразуване",
+      "Monocrystalline Silicon Solar Cells: 21%-23%": "Монокристални силициеви клетки: 21–23%",
+      "TOPCon Solar Cells: Up to 25%": "TOPCon клетки: до 25%",
+      "Performs well in low-light / 0.5-1.0% higher power generation rate than P-PERC": "Работи добре при слаба светлина / с 0,5–1,0% по-висок добив от P-PERC",
+      "Adapts to dull lighting conditions, maintaining a high power generation rate even on overcast days.": "Приспособява се към слаба светлина и запазва висок добив дори в облачни дни.",
+      "High energy conversion in scorching temperatures*": "Висока ефективност при горещини*",
+      "Monocrystalline Silicon Solar Cell: 11.7% / TOPCon Solar Cell: 9%": "Монокристална клетка: 11,7% / TOPCon клетка: 9%",
+      "Up to 30-year lifespan**": "Живот до 30 години**",
+      "Monocrystalline Silicon Solar Cell: 25-year / TOPCon Solar Cell: up to 30-year": "Монокристална клетка: 25 години / TOPCon клетка: до 30 години"
+    },
+    "PC_ksp_79dafa1d-2a73-4a37-af48-7a50c9f5b49c.png": {
+      "Highly Protective": "Силна защита",
+      "Anti-Corrosive": "Антикорозионна",
+      "IP68": "остава"
+    },
+    "PC_ksp_c771113a-efc3-4ab3-8a10-201f75b86488.png": {
+      "EcoFlow 76.2 cm / 117.6 cm": "EcoFlow 76,2 см / 117,6 см",
+      "Others 71.1 cm / 147.3 cm": "Други 71,1 см / 147,3 см",
+      "Ideal Van Length": "Идеална дължина за ван",
+      "Too Long for Class B Van (camper vans)": "Твърде дълъг за ван клас B (кемпер)"
+    },
+    "PC_ksp_dfdbb760-98e9-4fcb-ba1d-206fc4f2b7b0.png": {
+      "149.9-160 cm / 99 cm / 117.6 cm / 76.2 cm": "149,9–160 см / 99 см / 117,6 см / 76,2 см"
+    },
+    "PC_ksp_c1af46e6-6a97-4288-a053-69f02eef5536.jpg": {
+      "—": "без надписи"
+    },
+    "PC_ksp_4d8970d1-a210-42cb-b6cf-e65d4cf1b33e.png": {
+      "Model / Capacity / 0-100% Charging Time* / Average Daily Power Generation**": "Модел / Капацитет / Време за зареждане 0–100%* / Среден дневен добив**",
+      "RIVER 2 256Wh 1.8-3.6 hr 700Wh": "RIVER 2 256Wh 1,8–3,6 ч 700Wh",
+      "RIVER 2 Max 512Wh 3.6-7.2 hr 700Wh": "RIVER 2 Max 512Wh 3,6–7,2 ч 700Wh",
+      "RIVER 2 Pro 768Wh 5.5-11 hr 700Wh": "RIVER 2 Pro 768Wh 5,5–11 ч 700Wh",
+      "DELTA 2 1024Wh 3.7-7.3 hr (175W Solar Panel × 2) 1400Wh (175W Solar Panel × 2)": "DELTA 2 1024Wh 3,7–7,3 ч (175W панел × 2) 1400Wh (175W панел × 2)",
+      "DELTA 2 Max 2048Wh 3.7-7.3 hr (× 4) 2800Wh (× 4)": "DELTA 2 Max 2048Wh 3,7–7,3 ч (× 4) 2800Wh (× 4)",
+      "DELTA Pro 3600Wh 5.5-11 hr (× 5) 3500Wh (× 5)": "DELTA Pro 3600Wh 5,5–11 ч (× 5) 3500Wh (× 5)"
+    },
+    "PC_ksp_a1765443-5d68-4867-bd3c-942117e14d93.png": {
+      "NEW": "НОВО",
+      "Rigid Solar Panel / Portable Solar Panel": "Твърд соларен панел / Сгъваем соларен панел",
+      "Solar conversion efficiency: Up to 25% / Up to 25%": "Ефективност на преобразуване: до 25% / до 25%",
+      "Size: Larger design for Class B RVs and home use / Smaller design for on-the-road": "Размер: по-голям — за кемпери клас B и дом / по-малък — за из път",
+      "Scenarios: Fixed use: RV Rooftop & Home / Portable Use: Outdoor & Home": "Приложение: фиксиран — покрив на кемпер и дом / преносим — на открито и у дома",
+      "Cost: 175W €149 / 160W €349": "Цена: 175W 152,88 € / 160W 209 € (цените от dice.bg: 175W Rigid и 160W Lightweight)"
+    },
+    "PC_ksp_c7b022fb-825a-46f9-a64e-c73260d996d7.png": {
+      "EcoFlow 175W Rigid Solar Panel": "EcoFlow 175W Rigid Solar Panel",
+      "EcoFlow Rigid Solar Panel Mounting Feet": "Монтажни крачета за твърд соларен панел EcoFlow",
+      "Quick Start Guide, Safety Instructions & Warranty Card": "Кратко ръководство, инструкции за безопасност и гаранционна карта"
+    }
+  },
+  "_neyasni": [
+    "Секцията „With just the right specs to maximize roof space“ при EcoFlow е с две снимки (ван и SUV) — направена е като две секции: ван (широка) и SUV (снимка вдясно).",
+    "Картинката „How to choose your solar panel“ съдържа европейските цени — при превода се слагат цените от dice.bg: 175W Rigid 152,88 €, 160W Lightweight 209 €.",
+    "Таблицата с времена за зареждане е картинка — оставена е като секция със снимка; числата са в списъка за превод.",
+    "В кутията са и монтажните крачета (по картинката на EcoFlow); кабелът соларен конектор → XT60i не е включен.",
+    "В dice.bg няма стара цена — 152,88 €."
+  ]
+}

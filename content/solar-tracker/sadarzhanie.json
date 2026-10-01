@@ -1,0 +1,210 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "https://uk.ecoflow.com/products/solar-tracker",
+  "produkt": {
+    "title": "EcoFlow Solar Tracker",
+    "slug": "solar-tracker",
+    "categorySlug": "montazh-i-kabeli-za-paneli",
+    "productType": "accessory",
+    "tagline": "Автоматична стойка, която следи слънцето по две оси",
+    "badge": "none",
+    "price": 1533.36,
+    "externalUrl": "https://dice.bg/avtomatichna-solarna-postavka-prosledjavascha-naj-dobrijat-g-l-k-m-sl-nceto-ecoflow-solar-tracker-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "60687",
+    "ean": "4897082665311",
+    "description": "Соларен тракер, който върти соларния панел по две оси и го държи под най-добрия ъгъл към слънцето — до 30% повече енергия. Работи с почти всеки панел с MC4 до 2,4 × 1,1 м и 25 кг.",
+    "highlights": [
+      {
+        "text": "До 30% повече соларна енергия"
+      },
+      {
+        "text": "Следи слънцето по две оси"
+      },
+      {
+        "text": "Панели до 2,4 × 1,1 м и 25 кг"
+      },
+      {
+        "text": "Управление от приложението"
+      }
+    ],
+    "metaTitle": "EcoFlow Solar Tracker — соларен тракер | EcoFlow България",
+    "metaDescription": "EcoFlow Solar Tracker следи слънцето по две оси и дава до 30% повече соларна енергия. За панели до 2,4 × 1,1 м.",
+    "compatibleWith": [
+      "sgavaemi-paneli",
+      "stacionarni-paneli"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-solar-tracker-52476897952083.png",
+      "alt": "EcoFlow Solar Tracker — соларен тракер"
+    },
+    {
+      "file": "ecoflow-solar-tracker-35846458998976.png",
+      "alt": "EcoFlow Solar Tracker — соларен тракер"
+    },
+    {
+      "file": "ecoflow-solar-tracker-35846459031744.png",
+      "alt": "EcoFlow Solar Tracker — соларен тракер"
+    },
+    {
+      "file": "ecoflow-solar-tracker-52476898017619.png",
+      "alt": "EcoFlow Solar Tracker — соларен тракер"
+    },
+    {
+      "file": "ecoflow-solar-tracker-52476898050387.png",
+      "alt": "EcoFlow Solar Tracker — соларен тракер"
+    },
+    {
+      "file": "ecoflow-solar-tracker-52476897984851.png",
+      "alt": "EcoFlow Solar Tracker — соларен тракер"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Първият соларен тракер за домашна употреба",
+      "body": "Поставете соларен панел върху Solar Tracker и той се върти по две оси, за да намира постоянно най-добрия ъгъл към слънцето. Най-добрата соларна конфигурация за вашата портативна електроцентрала.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Следи слънцето автоматично",
+      "body": "Оставете тракера навън през нощта — той сам започва да следи слънцето с първите лъчи на деня.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Ефективност",
+      "heading": "До 30% повече соларна енергия",
+      "body": "Със Solar Tracker получавате до 30% повече ватове в сравнение с панели, поставени легнали. Повече слънце върху панелите през деня — повече чиста енергия извън мрежата.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Здрав и стабилен",
+      "body": "Четирите крака се разтварят и се фиксират на място — конструкцията остава сигурна. Горната рамка се удължава според размера на панела.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Съвместимост",
+      "heading": "Работи с почти всеки панел",
+      "body": "Сгъваем или твърд, EcoFlow или друга марка — няма значение. Стига да се свързва с MC4 и да не е твърде голям или тежък.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Solar Tracker (не е сглобен)",
+          "qty": 1
+        },
+        {
+          "name": "Ръководство за употреба",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Размери",
+          "value": "2,5 × 1,5 × 1,5 м"
+        },
+        {
+          "label": "Сгънат",
+          "value": "2,5 × 1,1 × 1,1 м"
+        },
+        {
+          "label": "Тегло",
+          "value": "25 кг"
+        },
+        {
+          "label": "Макс. соларен панел",
+          "value": "2,4 × 1,1 м, до 25 кг"
+        },
+        {
+          "label": "Наклон (ос на наклона)",
+          "value": "0°–85°"
+        },
+        {
+          "label": "Завъртане (ос Y)",
+          "value": "0°–345°"
+        },
+        {
+          "label": "Вградена батерия",
+          "value": "NCM, 5000 mAh; 500 цикъла до 80% капацитет"
+        },
+        {
+          "label": "Устойчивост на вятър",
+          "value": "до 50 км/ч"
+        },
+        {
+          "label": "Защита",
+          "value": "IP54"
+        },
+        {
+          "label": "Приложение",
+          "value": "iOS, Android"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "5006901001"
+        },
+        {
+          "label": "Гаранция",
+          "value": "60 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.shopify.com/s/files/1/0592/6004/3456/files/ecoflow-solar-tracker-52476897952083.png",
+      "https://cdn.shopify.com/s/files/1/0592/6004/3456/products/ecoflow-solar-tracker-35846458998976.png",
+      "https://cdn.shopify.com/s/files/1/0592/6004/3456/products/ecoflow-solar-tracker-35846459031744.png",
+      "https://cdn.shopify.com/s/files/1/0592/6004/3456/files/ecoflow-solar-tracker-52476898017619.png",
+      "https://cdn.shopify.com/s/files/1/0592/6004/3456/files/ecoflow-solar-tracker-52476898050387.png",
+      "https://cdn.shopify.com/s/files/1/0592/6004/3456/files/ecoflow-solar-tracker-52476897984851.png"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Самостоятелен Solar Tracker в eu.ecoflow.com няма (има само комплект с 400W панел) — текстът и спецификациите са от uk.ecoflow.com/products/solar-tracker (SolarTS-GM), снимките също.",
+    "Сравнено с dice.bg: текстовете съвпадат, разлики в числата няма. От dice.bg са добавени гаранцията (60 месеца) и фабричният номер (5006901001); размерите, теглото и т.н. ги има само при EcoFlow.",
+    "Снимката „What's in the box“ от UK страницата не е ползвана — „Какво има в кутията“ е без снимки.",
+    "„Съвместим с“ = категориите „Сгъваеми панели“ и „Стационарни панели“ → излиза в раздела „Аксесоари“ в менюто при панелите.",
+    "В dice.bg: по заявка (проверено 30.09.2026)."
+  ]
+}

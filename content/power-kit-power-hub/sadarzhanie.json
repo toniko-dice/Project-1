@@ -1,0 +1,206 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Power Kits Power Hub",
+    "slug": "power-kit-power-hub",
+    "categorySlug": "power-kits",
+    "productType": "hero",
+    "tagline": "Захранващ хъб за кемпери, каравани и малки домове — до 15 kWh",
+    "badge": "none",
+    "price": 2249.17,
+    "externalUrl": "https://dice.bg/inovativen-h-b-za-zahranvane-na-malki-domove-ili-karavani-ecoflow-power-kit-power-hub-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "61557",
+    "ean": "4895251601429",
+    "description": "Захранващият хъб на EcoFlow Power Kits обединява пет компонента в едно — инвертор, зарядни от мрежа, соларни панели и алтернатор и DC разпределение. До 3 батерии LFP и до 15 kWh, 48V система.",
+    "highlights": [
+      {
+        "text": "До 3 батерии и 15 kWh"
+      },
+      {
+        "text": "AC изход 3600W, чиста синусоида"
+      },
+      {
+        "text": "Соларен вход до 1600W"
+      },
+      {
+        "text": "Безопасна 48V система"
+      }
+    ],
+    "metaTitle": "EcoFlow Power Kits Power Hub | EcoFlow България",
+    "metaDescription": "EcoFlow Power Kits Power Hub — интегрирано захранване за кемпери, каравани и малки домове, до 15 kWh, 48V система."
+  },
+  "galeriya": [
+    {
+      "file": "61557_1.webp",
+      "alt": "EcoFlow Power Kits Power Hub — захранващ хъб"
+    },
+    {
+      "file": "61557_2.webp",
+      "alt": "EcoFlow Power Kits Power Hub — захранващ хъб"
+    },
+    {
+      "file": "61557_3.webp",
+      "alt": "EcoFlow Power Kits Power Hub — захранващ хъб"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Интегрирано захранване за кемпер и малък дом",
+      "body": "EcoFlow Power Kits са първите в света интегрирани решения „включи и работи“ за захранване на малки домове и каравани. Power Hub обединява пет компонента в едно устройство и покрива всичките ви нужди от захранване — пести място, пари и усилия по монтажа.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Капацитет",
+      "heading": "До 15 kWh с три батерии",
+      "body": "Свържете до 3 батерии (продават се отделно) една върху друга — до 15 kWh, с които спокойно захранвате множество уреди в дома или караваната. Съвместим е с батериите EcoFlow LFP 2 kWh и 5 kWh.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Пасва на всеки ван и малък дом",
+      "body": "Независимо дали подменяте електрическата система на вана или я изграждате от нулата, Power Hub ви позволява лесно да я пригодите към вашия ван и нужди от енергия. От малък дом до средна вила извън мрежата — комплектът се настройва за всякакъв размер.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Захранва всички основни уреди",
+      "body": "Микровълнова, бойлер, лаптоп, индукционен котлон, осветление, климатик, телевизор, хладилник и други.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "48V",
+      "heading": "Безопасна 48V система",
+      "body": "48V система произвежда същата енергия като 12V, но през по-тънките проводници минава само една четвърт от тока — значително по-малко загуби на топлина и енергия.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Всичко под контрол",
+      "body": "Следете енергията у дома и в движение — настройки и данни в реално време от приложението и конзолата Power Kit Console.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Power Kits Power Hub",
+          "qty": 1
+        },
+        {
+          "name": "Кабели за свързване",
+          "qty": 1
+        },
+        {
+          "name": "Ръководство за употреба",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Power Kit Power Hub"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "ZMM100-Combo1-EU"
+        },
+        {
+          "label": "AC изход",
+          "value": "чиста синусоида, 3600W, 120V, 50/60 Hz"
+        },
+        {
+          "label": "DC изход",
+          "value": "13,6V / 70A (макс. 1000W); 26,4V / 60A (макс. 1600W)"
+        },
+        {
+          "label": "AC вход (X-Stream)",
+          "value": "макс. 3000W (макс. 15A), 220–240V, 50/60 Hz"
+        },
+        {
+          "label": "Соларен вход",
+          "value": "15–150V, 30A (макс. 1600W)"
+        },
+        {
+          "label": "Вход от алтернатор",
+          "value": "13–60V, 60A (макс. 1600W)"
+        },
+        {
+          "label": "Работна температура",
+          "value": "−25 °C до 60 °C"
+        },
+        {
+          "label": "Температура на съхранение",
+          "value": "−25 °C до 60 °C"
+        },
+        {
+          "label": "Размери",
+          "value": "48 × 14 × 30 см"
+        },
+        {
+          "label": "Тегло",
+          "value": "14 кг"
+        },
+        {
+          "label": "Съвместими батерии",
+          "value": "EcoFlow LFP 2 kWh и 5 kWh, до 3 броя"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61557_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61557_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61557_3.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Страницата в eu.ecoflow.com е само с цена — съдържанието е по dice.bg.",
+    "Внимание: в dice.bg част от параметрите са в американския вариант (120V, 60 Hz). Сложени са както са в dice.bg (по правилото „dice е с приоритет“) — провери ги с EcoFlow, преди да пуснем сайта.",
+    "В dice.bg: по заявка (проверено 01.10.2026)."
+  ]
+}

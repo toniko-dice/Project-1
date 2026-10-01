@@ -1,0 +1,337 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "https://eu.ecoflow.com/products/ecoflow-shelly-smart-meter + dice.bg",
+  "produkt": {
+    "title": "EcoFlow × Shelly Smart Meter - Shelly Pro 3EM",
+    "slug": "shelly-pro-3em-smart-meter",
+    "categorySlug": "umen-dom",
+    "productType": "accessory",
+    "tagline": "Трифазен умен електромер Shelly Pro 3EM за системата STREAM",
+    "badge": "none",
+    "price": 179,
+    "externalUrl": "https://dice.bg/ecoflow-smart-meter-ustroystvo-za-prosledyavane-na-potreblenieto-na-elektroenergiya-v-tseliya-dom-cheren-item72565-1",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "75838",
+    "ean": "4895251644747",
+    "description": "Трифазен умен електромер Shelly Pro 3EM за DIN шина. Следи консумацията на целия дом в реално време с точност 1% и работи с EcoFlow STREAM Ultra, Pro и AC Pro за соларна енергия без подаване към мрежата.",
+    "highlights": [
+      {
+        "text": "Трифазен, до 120A на фаза"
+      },
+      {
+        "text": "Точност ±1%"
+      },
+      {
+        "text": "Wi-Fi и Bluetooth"
+      },
+      {
+        "text": "Данни за поне 60 дни"
+      }
+    ],
+    "metaTitle": "EcoFlow × Shelly Pro 3EM Smart Meter | EcoFlow България",
+    "metaDescription": "Умен трифазен електромер EcoFlow × Shelly Pro 3EM — следи енергията в целия дом и работи със системата STREAM.",
+    "compatibleWith": [
+      "stream-seriya"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-x-shelly-smart-meter-shelly-pro-3em-1183338869.png",
+      "alt": "EcoFlow × Shelly Smart Meter - Shelly Pro 3EM — умен електромер Shelly Pro 3EM"
+    },
+    {
+      "file": "efsmartmeter-eu-120a-1.webp",
+      "alt": "EcoFlow × Shelly Smart Meter - Shelly Pro 3EM — умен електромер Shelly Pro 3EM"
+    },
+    {
+      "file": "efsmartmeter-eu-120a-2.webp",
+      "alt": "EcoFlow × Shelly Smart Meter - Shelly Pro 3EM — умен електромер Shelly Pro 3EM"
+    },
+    {
+      "file": "efsmartmeter-eu-120a-3.webp",
+      "alt": "EcoFlow × Shelly Smart Meter - Shelly Pro 3EM — умен електромер Shelly Pro 3EM"
+    },
+    {
+      "file": "efsmartmeter-eu-120a-4.webp",
+      "alt": "EcoFlow × Shelly Smart Meter - Shelly Pro 3EM — умен електромер Shelly Pro 3EM"
+    },
+    {
+      "file": "efsmartmeter-eu-120a-5.webp",
+      "alt": "EcoFlow × Shelly Smart Meter - Shelly Pro 3EM — умен електромер Shelly Pro 3EM"
+    },
+    {
+      "file": "efsmartmeter-eu-120a-6.webp",
+      "alt": "EcoFlow × Shelly Smart Meter - Shelly Pro 3EM — умен електромер Shelly Pro 3EM"
+    },
+    {
+      "file": "efsmartmeter-eu-120a-7.webp",
+      "alt": "EcoFlow × Shelly Smart Meter - Shelly Pro 3EM — умен електромер Shelly Pro 3EM"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Smart Meter — умно следене на енергията",
+      "body": "Защо ви е нужен? Следене на енергията в целия дом в реално време · Автоматично откриване на излишната енергия · Соларна енергия без подаване към мрежата (zero feed-in) · Оптимизиран с алгоритъма EcoFlow OASIS",
+      "image": "PC_KV-Bills_to_0_eu.jpg",
+      "imageAlt": "Сметки до нула — управление на енергията в дома"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Цял дом",
+      "heading": "Следене на енергията в целия дом за системата STREAM",
+      "body": "Осветлението и вградените кухненски уреди не могат да се следят с умни контакти. За тях е нужен умен електромер, който измерва консумацията на цялата къща — така системата сама планира кога и откъде да захранва. С точност на активната енергия 1% Shelly Pro 3EM следи потреблението на целия дом в реално време и работи с EcoFlow STREAM Ultra, Pro и AC Pro.",
+      "image": "pc_Whole-Home_Intelligent.jpg",
+      "imageAlt": "Схема — Smart Meter следи консумацията на целия дом"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-left",
+      "theme": "light",
+      "anchorLabel": "STREAM",
+      "heading": "С STREAM AC Pro за съхранение на соларна енергия",
+      "body": "Благодарение на AC свързването STREAM AC Pro лесно се добавя към съществуваща соларна система. Достатъчно е да добавите умен електромер — системата сама решава кога да зарежда и кога да захранва дома от AC Pro, за да използвате максимално слънчевата енергия.",
+      "image": "pc_Pair_with_STREAM_AC_Pro_en.jpg",
+      "imageAlt": "Схема — STREAM AC Pro и Smart Meter в дома"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-right",
+      "theme": "light",
+      "heading": "Лесен монтаж",
+      "body": "Монтира се на DIN шина — просто свързване, без скъпа инсталация и без промени по електрическите кръгове.",
+      "image": "pc_Easy_to_Install.jpg",
+      "imageAlt": "Smart Meter на DIN шина"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "OASIS",
+      "heading": "Цялата сила на OASIS",
+      "body": "Данни за енергията в реално време, прецизно разпределение на натоварването и адаптивни прогнози с изкуствен интелект се включват, когато умният електромер е свързан с платформата EcoFlow OASIS.",
+      "image": "PC_OASIS_EU.jpg",
+      "imageAlt": "Приложението EcoFlow с OASIS"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Smart Meter × Smart Plug: без подаване към мрежата. Цялата соларна енергия е ваша¹",
+      "body": "Smart Meter следи енергията в дома в реално време и засича всеки излишен ват. Умният контакт Smart Plug автоматично включва уредите, за да се използва всеки излишен ват. Приложението планира излишната енергия и само решава кога и къде да я използва.",
+      "image": "pc_Smart_Meter_x_Smart_Plug_eu.jpg",
+      "imageAlt": "Smart Meter, Smart Plug и приложението"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Данни за поне 60 дни",
+      "body": "С резолюция от 1 минута електромерът пази всички основни стойности на потреблението поне 60 дни — идеално за подробен анализ. Консумацията може да се пренасочи към часовете с по-ниска тарифа.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow × Shelly Pro 3EM Smart Meter",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "blockType": "footnotes",
+      "items": [
+        {
+          "text": "След инсталиране на батерия от серията STREAM и съвместим Smart Meter уредите се включват в контактите през съвместими умни контакти Smart Plug — така се включват и изключват отдалечено и по график от приложението EcoFlow и соларната енергия не се губи."
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Физически",
+      "rows": [
+        {
+          "label": "Размери (В × Ш × Д)",
+          "value": "94 × 19 × 69 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "62 г"
+        },
+        {
+          "label": "Монтаж",
+          "value": "DIN шина"
+        },
+        {
+          "label": "Макс. момент на клемите",
+          "value": "0,4 Nm"
+        },
+        {
+          "label": "Сечение на проводника",
+          "value": "0,5–2,5 мм² / 20–14 AWG"
+        },
+        {
+          "label": "Дължина на оголване",
+          "value": "6–7 мм"
+        },
+        {
+          "label": "Корпус",
+          "value": "пластмаса"
+        },
+        {
+          "label": "Цвят",
+          "value": "бял"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Работна среда",
+      "rows": [
+        {
+          "label": "Температура",
+          "value": "−20 °C до 40 °C"
+        },
+        {
+          "label": "Влажност",
+          "value": "30% до 70% RH"
+        },
+        {
+          "label": "Макс. надморска височина",
+          "value": "2000 м"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Електрически",
+      "rows": [
+        {
+          "label": "Захранване AC",
+          "value": "100–260V, 50/60 Hz"
+        },
+        {
+          "label": "Консумация",
+          "value": "<3W"
+        },
+        {
+          "label": "Външна защита",
+          "value": "характеристика B или C, макс. 16A, мин. 6 kA, клас 3"
+        },
+        {
+          "label": "Вграден температурен сензор",
+          "value": "да"
+        },
+        {
+          "label": "Волтметри (RMS на всяка фаза)",
+          "value": "100–260V, точност ±1%"
+        },
+        {
+          "label": "Амперметри (RMS през CT на всяка фаза и нулата)",
+          "value": "0–120A"
+        },
+        {
+          "label": "Токов трансформатор",
+          "value": "CT 120A"
+        },
+        {
+          "label": "Точност на амперметрите",
+          "value": "±1% (2–120A), ±2% (1–2A), ±5% (0–1A)"
+        },
+        {
+          "label": "Мин. натоварване за калибриране",
+          "value": "500W на канал"
+        },
+        {
+          "label": "Праг без товар",
+          "value": "30 VA на канал"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Данни и връзка",
+      "rows": [
+        {
+          "label": "Съхранение на измерванията",
+          "value": "поне 60 дни с резолюция 1 минута"
+        },
+        {
+          "label": "Wi-Fi",
+          "value": "802.11 b/g/n, до 30 м на закрито и 50 м на открито"
+        },
+        {
+          "label": "Bluetooth",
+          "value": "4.2, до 10 м на закрито и 30 м на открито"
+        },
+        {
+          "label": "CPU",
+          "value": "ESP32-D0WDQ6"
+        },
+        {
+          "label": "Flash",
+          "value": "16 MB"
+        },
+        {
+          "label": "MQTT / скриптове",
+          "value": "да"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Общи",
+      "rows": [
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow STREAM Ultra, STREAM Pro, STREAM AC Pro"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-x-shelly-smart-meter-shelly-pro-3em-1183338869.png",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/f/efsmartmeter-eu-120a-1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/f/efsmartmeter-eu-120a-2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/f/efsmartmeter-eu-120a-3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/f/efsmartmeter-eu-120a-4.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/f/efsmartmeter-eu-120a-5.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/f/efsmartmeter-eu-120a-6.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/f/efsmartmeter-eu-120a-7.webp"
+    ],
+    "sekcii": [
+      "https://eu.ecoflow.com/cdn/shop/files/PC_KV-Bills_to_0_eu.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Whole-Home_Intelligent.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Pair_with_STREAM_AC_Pro_en.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Easy_to_Install.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_OASIS_EU.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Smart_Meter_x_Smart_Plug_eu.jpg"
+    ]
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Това е различен продукт от вече качения EcoFlow Smart Meter (бял Shelly Pro 3EM, 179 €).",
+    "В dice.bg описанието е копирано от Smart Meter: фабричният номер е EFSMARTMETER-EU-120A (на другия продукт), а адресът завършва на item72565-1. Истинският SKU в dice.bg е 75838; кодът при EcoFlow е EF-OS-SM003-SMSHEL. Фабричният номер не е сложен в спецификациите.",
+    "Секциите са като на eu.ecoflow.com/products/ecoflow-shelly-smart-meter — там са със същите снимки като при Smart Meter, затова ползвам вече качените (без нов превод).",
+    "Спецификациите са по EcoFlow и dice.bg — числата съвпадат (dice.bg има по-малко). Галерията: 1 снимка от EcoFlow + 7 от dice.bg.",
+    "В dice.bg: по заявка (проверено 01.10.2026)."
+  ]
+}

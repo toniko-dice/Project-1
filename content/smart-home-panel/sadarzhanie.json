@@ -1,0 +1,270 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Smart Home Panel Combo",
+    "slug": "smart-home-panel",
+    "categorySlug": "svarzvane-kam-el-tabloto",
+    "productType": "hero",
+    "tagline": "Умен домашен панел за DELTA Pro с 13 релейни модула",
+    "badge": "none",
+    "price": 1533.36,
+    "externalUrl": "https://dice.bg/smart-panel-za-zahranvane-na-domashna-el-mrezha-ot-ecoflow-delta-propower-station-ecoflow-smart-home-panel-combo-smart-home-panel-13-relay-modules-bjal",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "61550",
+    "ean": "4897082668572",
+    "description": "Умен домашен панел, който свързва EcoFlow DELTA Pro с ел. таблото: резервно захранване за до 10 кръга с превключване за 20 ms, управление от приложението и до 7200 W с две DELTA Pro. В комплекта има 8 релейни модула 13A и 5 × 16A.",
+    "highlights": [
+      {
+        "text": "Резервно захранване за до 10 кръга"
+      },
+      {
+        "text": "Превключване за 20 ms"
+      },
+      {
+        "text": "До 7200 W с две DELTA Pro"
+      },
+      {
+        "text": "13 релейни модула в комплекта"
+      }
+    ],
+    "metaTitle": "EcoFlow Smart Home Panel Combo за DELTA Pro | EcoFlow България",
+    "metaDescription": "EcoFlow Smart Home Panel Combo — умен домашен панел за DELTA Pro с 13 релейни модула: резервно захранване за до 10 кръга, превключване за 20 ms."
+  },
+  "galeriya": [
+    {
+      "file": "61550_1.webp",
+      "alt": "EcoFlow Smart Home Panel Combo — умен домашен панел"
+    },
+    {
+      "file": "61550_2.webp",
+      "alt": "EcoFlow Smart Home Panel Combo — умен домашен панел"
+    },
+    {
+      "file": "61550_3.webp",
+      "alt": "EcoFlow Smart Home Panel Combo — умен домашен панел"
+    },
+    {
+      "file": "61550_4.webp",
+      "alt": "EcoFlow Smart Home Panel Combo — умен домашен панел"
+    },
+    {
+      "file": "61550_5.webp",
+      "alt": "EcoFlow Smart Home Panel Combo — умен домашен панел"
+    },
+    {
+      "file": "61550_6.webp",
+      "alt": "EcoFlow Smart Home Panel Combo — умен домашен панел"
+    },
+    {
+      "file": "61550_7.webp",
+      "alt": "EcoFlow Smart Home Panel Combo — умен домашен панел"
+    },
+    {
+      "file": "61550_8.webp",
+      "alt": "EcoFlow Smart Home Panel Combo — умен домашен панел"
+    },
+    {
+      "file": "61550_9.webp",
+      "alt": "EcoFlow Smart Home Panel Combo — умен домашен панел"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Домашна батерия с DELTA Pro",
+      "body": "Интелигентният домашен панел EcoFlow интегрира EcoFlow DELTA Pro с дома ви — гъвкаво, разширяемо решение за домашна батерия, която съхранява енергия за по-късно.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Резервно захранване",
+      "heading": "Резервно захранване до 10 кръга",
+      "body": "Свържете до 10 кръга от дома за непрекъснато захранване при спиране на тока, умно управление на енергията и още — и спестявате пари.\n\nКогато спре токът, Smart Home Panel незабавно превключва вашите 10 свързани кръга към DELTA Pro (продава се отделно). Едва ще забележите прекъсването — избраните кръгове остават захранени, превключването е само 20 ms.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "По-ниски сметки в пиковите часове",
+      "body": "Захранвайте дома от DELTA Pro в часовете с най-висока консумация — по-ниски сметки и по-малко натоварване на мрежата. В непиковите часове зареждайте DELTA Pro с евтина или възобновяема енергия.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Мощност",
+      "heading": "До 7200 W и 25 kWh",
+      "body": "Smart Home Panel зарежда бързо до две DELTA Pro наведнъж от мрежата, заедно с техните допълнителни батерии и умни генератори. Това дава до 7200 W изходна мощност и 25 kWh капацитет под ваш контрол — достатъчно за почти всичко в дома, с енергия за дни при прекъсване.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Приложение",
+      "heading": "Управление от приложението",
+      "body": "Управлявайте всеки свързан кръг от приложението EcoFlow и вижте навиците си на потребление. Настройте използването на енергията — за резервно захранване, за пестене или по собствен график. Можете дори да избирате от кой източник се захранва домът — всичко от телефона.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Монтаж от електротехник",
+      "body": "Панелът се монтира на стена от правоспособен електротехник.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Smart Home Panel",
+          "qty": 1
+        },
+        {
+          "name": "Релейни модули 13A",
+          "qty": 8
+        },
+        {
+          "name": "Релейни модули 16A",
+          "qty": 5
+        },
+        {
+          "name": "Кабел Infinity",
+          "qty": 1
+        },
+        {
+          "name": "Комплект пластини за стена",
+          "qty": 1
+        },
+        {
+          "name": "Съединители за кабели",
+          "qty": 1
+        },
+        {
+          "name": "Ръководство за употреба",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Smart Home Panel Combo (Smart Home Panel + 13 Relay Modules)"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "DELTAProBC-EU-RM"
+        },
+        {
+          "label": "Изходно напрежение",
+          "value": "240V"
+        },
+        {
+          "label": "Честота",
+          "value": "50 Hz"
+        },
+        {
+          "label": "Брой управлявани кръгове",
+          "value": "10"
+        },
+        {
+          "label": "Релейни модули",
+          "value": "8 × 13A, 5 × 16A"
+        },
+        {
+          "label": "Номинален ток",
+          "value": "13A, 16A"
+        },
+        {
+          "label": "Макс. резервна мощност",
+          "value": "3600W / 7200W"
+        },
+        {
+          "label": "Макс. свързана батерия",
+          "value": "21,6 kWh"
+        },
+        {
+          "label": "Вход за зареждане (DELTA Pro)",
+          "value": "макс. 3400W"
+        },
+        {
+          "label": "Защита",
+          "value": "IP20"
+        },
+        {
+          "label": "Монтаж",
+          "value": "на стена, от правоспособен електротехник"
+        },
+        {
+          "label": "Размери",
+          "value": "460 × 330 × 120 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "9 кг"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow DELTA Pro"
+        },
+        {
+          "label": "Цвят",
+          "value": "бял"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_4.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_5.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_6.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_7.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_8.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_9.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Страницата в eu.ecoflow.com (smart-home-panel) е само с цена и няколко реда — съдържанието е по dice.bg.",
+    "Работи с първия EcoFlow DELTA Pro, който го няма в сайта → „Съвместим с“ е празно.",
+    "dice.bg пише и „до 25 kWh“ в текста, и „21,6 kWh“ в спецификациите — оставено както е в dice.bg.",
+    "В dice.bg: по заявка (проверено 01.10.2026)."
+  ]
+}

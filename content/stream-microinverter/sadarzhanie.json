@@ -1,0 +1,398 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "https://eu.ecoflow.com/products/ecoflow-stream-microinverter-wn",
+  "produkt": {
+    "title": "EcoFlow STREAM Microinverter",
+    "slug": "stream-microinverter",
+    "categorySlug": "mikroinvertori-i-montazh",
+    "productType": "hero",
+    "tagline": "Микроинвертор 800W за балкон с AC кабел и 4 PV кабела",
+    "badge": "none",
+    "price": 199,
+    "externalUrl": "https://dice.bg/komplekt-mikroinvertor-za-preobrazuvane-na-generiranata-sl-ncheva-energija-v-promenliv-tok-i-kabeli-ecoflow-stream-microinverter-2025-800w-with-pv-and-ac-cable-srebrist",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "72609",
+    "ean": "4895251640404",
+    "description": "Микроинвертор 800W, който превръща енергията от соларните панели в ток за дома. Два MPPT входа по 600W, защита IP67, работи и при слаба светлина. Комплект с AC кабел 5 м и 4 PV кабела.",
+    "highlights": [
+      {
+        "text": "800W към мрежата, 2 × 600W соларен вход"
+      },
+      {
+        "text": "Работи от 3W соларна мощност"
+      },
+      {
+        "text": "Защита IP67"
+      },
+      {
+        "text": "10 години гаранция"
+      }
+    ],
+    "metaTitle": "EcoFlow STREAM Microinverter 800W | EcoFlow България",
+    "metaDescription": "EcoFlow STREAM Microinverter — микроинвертор 800W за балкон, 2 MPPT входа, IP67, 10 години гаранция. С AC и PV кабели.",
+    "compatibleWith": [
+      "stream-seriya"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-stream-microinverter-1156661596.png",
+      "alt": "EcoFlow STREAM Microinverter — микроинвертор"
+    },
+    {
+      "file": "ecoflow-stream-microinverter-1159442632.png",
+      "alt": "EcoFlow STREAM Microinverter — микроинвертор"
+    },
+    {
+      "file": "ecoflow-stream-microinverter-1159442631.png",
+      "alt": "EcoFlow STREAM Microinverter — микроинвертор"
+    },
+    {
+      "file": "ecoflow-stream-microinverter-1159442630.png",
+      "alt": "EcoFlow STREAM Microinverter — микроинвертор"
+    },
+    {
+      "file": "ecoflow-stream-microinverter-1159442629.png",
+      "alt": "EcoFlow STREAM Microinverter — микроинвертор"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Сметки по-ниски с до 137 €*",
+      "body": "Соларната система EcoFlow STREAM свързва соларните панели с микроинвертора и превръща слънчевата светлина в готово за ползване електричество за дома. През деня захранва рутера, хладилника, телевизора и радиото. Системата произвежда до 858 kWh годишно и може да спести до 137 € на година от сметките за ток.*",
+      "image": "PC_01_EU.png",
+      "imageAlt": "Предимствата на STREAM Microinverter"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Слаба светлина",
+      "heading": "Работи дори при слаба светлина",
+      "subheading": "От зори до здрач",
+      "subheadingPosition": "below",
+      "body": "От зори до здрач, в дъжд и слънце. Микроинверторът се включва само с 3W соларна мощност — домът получава енергия дори рано сутрин и привечер.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Приложение",
+      "heading": "Умно управление на енергията с Eco-AI",
+      "subheading": "Приложението EcoFlow — вече по-умно с Eco-AI",
+      "subheadingPosition": "below",
+      "body": "С Eco-AI приложението EcoFlow управлява енергията по-умно от всякога, когато е свързана соларна система от серията STREAM. Режимът AI-TOU спестява максимално, като анализира данните за мрежата и слънцето, а AI асистентът ви дава контрол 24/7 с едно докосване. Настройвайте режимите и управлявайте уредите отдалечено — у дома или навън.**",
+      "image": "PC_04_EU.png",
+      "imageAlt": "Функциите с изкуствен интелект в приложението"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Свързва се с умния дом",
+      "body": "Свързва се с умни електромери и енергийни платформи на трети страни — следите консумацията на дома в реално време в приложението EcoFlow.",
+      "image": "kele.png",
+      "imageAlt": "Съвместими платформи и марки"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Вашият AI енергиен асистент 24/7",
+      "body": "Всичко на едно място: състояние в реално време, календар на спестяванията и дистанционно управление на устройствата.",
+      "image": "PC_06_EU.png",
+      "imageAlt": "Приложението EcoFlow"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Монтаж",
+      "heading": "Включвате и работи",
+      "body": "Започвате да произвеждате ток за 30 минути. Без пробиване — поставяте го където ви е удобно и го местите лесно, идеално и за наематели. Монтирате го сами, без електротехник.",
+      "image": "PC_07_EU_33498bfd-f591-4304-977a-23654acab1cb.png",
+      "imageAlt": "Монтаж на балкон и в градината"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow STREAM Microinverter 800W",
+          "qty": 1,
+          "image": "01_Microiverter.png",
+          "imageAlt": "EcoFlow STREAM Microinverter 800W"
+        },
+        {
+          "name": "AC кабел STREAM BKW (5 м)",
+          "qty": 1,
+          "image": "02_01_EcoFlow_STREAM_BKW-AC_Cable_5m.png",
+          "imageAlt": "AC кабел STREAM BKW (5 м)"
+        },
+        {
+          "name": "PV кабели за соларни панели (3 м)",
+          "qty": 4
+        },
+        {
+          "name": "Дюбели с винтове (комплект)",
+          "qty": 1,
+          "image": "06_Expansion_screws_with_pipes.png",
+          "imageAlt": "Дюбели с винтове (комплект)"
+        },
+        {
+          "name": "Инструкции за безопасност",
+          "qty": 1,
+          "image": "11_Safety_Instructions_2505dcb9-5d6a-4567-b4ad-65fdd9baa52c.png",
+          "imageAlt": "Инструкции за безопасност"
+        },
+        {
+          "name": "Ръководство за монтаж",
+          "qty": 1,
+          "image": "12_Installation_Guide_ac28aa98-34b4-483a-b0a8-aa3ca8a69857.png",
+          "imageAlt": "Ръководство за монтаж"
+        },
+        {
+          "name": "Гаранционна карта",
+          "qty": 1,
+          "image": "10_Warranty_Card_2f6c83cb-9471-4bb0-aff5-c88266c1c9b7.png",
+          "imageAlt": "Гаранционна карта"
+        }
+      ]
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "faqBlock",
+      "anchorLabel": "Въпроси",
+      "heading": "Често задавани въпроси",
+      "items": [
+        {
+          "question": "Нормално ли е да се загрява по време на работа?",
+          "answer": "Умерено повишаване на температурата е нормално и не влияе на живота на продукта. Системата е минала строги тестове и има многостепенно управление на топлината. За безопасност и добра работа го монтирайте на проветриво място, далеч от пряко слънце, деца и животни."
+        },
+        {
+          "question": "Как да следя произведената енергия в реално време?",
+          "answer": "В приложението EcoFlow виждате статистиката на производството в реално време."
+        },
+        {
+          "question": "Мога ли да ползвам соларни панели на други марки?",
+          "answer": "Да, ако отговарят на изискванията за PV вход и са с конектори MC4. На всеки PV вход: работно напрежение 16–60V, работен ток ≤16A."
+        },
+        {
+          "question": "Как да свържа няколко соларни панела?",
+          "answer": "При серийно или паралелно свързване максималното работно напрежение и ток на всяка група не трябва да надвишават лимита на един PV вход: 60V и 16A. Всяка група трябва да е с еднакви максимално напрежение и ток. Типично на един PV вход: панели от 200W до 600W. Удължители и паралелни кабели се продават отделно."
+        },
+        {
+          "question": "Работи ли с портативните електроцентрали на EcoFlow?",
+          "answer": "Не — STREAM Microinverter е съвместим само с продуктите от серията STREAM."
+        },
+        {
+          "question": "Подава ли излишната енергия към мрежата?",
+          "answer": "Ако системата е само от микроинвертора — да, излишъкът отива в мрежата."
+        },
+        {
+          "question": "Нужно ли е отделно заземяване?",
+          "answer": "AC кабелът е със заземителен проводник и щепсел. Ако контактът е правилно инсталиран и заземен, устройството е заземено. Ако не сте сигурни или местните изисквания налагат друго — обърнете се към електротехник за заземяване през клемата на продукта."
+        },
+        {
+          "question": "Мога ли да го монтирам сам?",
+          "answer": "Да, системата може да се монтира и поддържа от потребителя."
+        },
+        {
+          "question": "Мога ли да го монтирам на соларния панел вместо на стената?",
+          "answer": "Да — с държача PV Clamp Holder (продава се отделно) се монтира на твърди панели с дебелина 30–35 мм."
+        },
+        {
+          "question": "Работи ли при спиране на тока?",
+          "answer": "Не — от съображения за безопасност микроинверторът засича проблема в мрежата и спира да подава енергия."
+        },
+        {
+          "question": "Мога ли да включа AC кабела в разклонител?",
+          "answer": "Не се препоръчва от съображения за безопасност."
+        },
+        {
+          "question": "Водоустойчив ли е?",
+          "answer": "Да — защита IP67, може да се ползва на закрито и открито. Препоръчваме проветриво, сенчесто и хладно място."
+        },
+        {
+          "question": "Свързва ли се с 5 GHz Wi-Fi?",
+          "answer": "Не — поддържа само 2,4 GHz Wi-Fi."
+        },
+        {
+          "question": "Може ли да се ограничи изходната мощност?",
+          "answer": "Да, в приложението EcoFlow: Space > Settings > Maximum Output Power."
+        },
+        {
+          "question": "Защо няма изход, след като свързах панелите и AC кабела?",
+          "answer": "Трябва да активирате и свържете устройството в приложението EcoFlow — сканирайте QR кода от краткото ръководство."
+        }
+      ]
+    },
+    {
+      "blockType": "footnotes",
+      "items": [
+        {
+          "text": "Гаранцията на STREAM Microinverter е 10 години."
+        },
+        {
+          "text": "*Соларната система EcoFlow STREAM произвежда 858 kWh годишно. При средна консумация на домакинство в Германия (3113 kWh/год.) и цена на тока 0,40 €/kWh спестяването е 137 € годишно. Реалното спестяване зависи от консумацията и местните цени. Източник: pvwatts.nrel.gov."
+        },
+        {
+          "text": "**Някои функции с изкуствен интелект в приложението изискват платен абонамент. AI-TOU и AI прогнозата за мощността изискват свързана соларна система от серията STREAM."
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Вход",
+      "rows": [
+        {
+          "label": "MPPT канали",
+          "value": "2"
+        },
+        {
+          "label": "Макс. входна мощност на канал",
+          "value": "600W"
+        },
+        {
+          "label": "Макс. входно напрежение",
+          "value": "65V DC"
+        },
+        {
+          "label": "Стартово напрежение",
+          "value": "20V"
+        },
+        {
+          "label": "MPPT диапазон",
+          "value": "16–60V DC"
+        },
+        {
+          "label": "Макс. ток на MPPT",
+          "value": "16A"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Изход",
+      "rows": [
+        {
+          "label": "Номинална изходна мощност към мрежата",
+          "value": "800VA"
+        },
+        {
+          "label": "Макс. изходен ток",
+          "value": "3,48A"
+        },
+        {
+          "label": "Номинално напрежение",
+          "value": "230V AC"
+        },
+        {
+          "label": "Диапазон на напрежението",
+          "value": "183–276V AC"
+        },
+        {
+          "label": "Честота",
+          "value": "45–55 Hz / 55–65 Hz"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Общи",
+      "rows": [
+        {
+          "label": "Работна температура",
+          "value": "−40 °C до 65 °C"
+        },
+        {
+          "label": "Тегло",
+          "value": "3,2 кг"
+        },
+        {
+          "label": "Размери",
+          "value": "252 × 180 × 35 мм"
+        },
+        {
+          "label": "Защита",
+          "value": "IP67"
+        },
+        {
+          "label": "Връзка",
+          "value": "Wi-Fi 2,4 GHz / Bluetooth"
+        },
+        {
+          "label": "Гаранция",
+          "value": "10 години"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-microinverter-1156661596.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-microinverter-1159442632.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-microinverter-1159442631.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-microinverter-1159442630.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-microinverter-1159442629.png"
+    ],
+    "sekcii": [
+      "https://eu.ecoflow.com/cdn/shop/files/PC_01_EU.png",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_04_EU.png",
+      "https://eu.ecoflow.com/cdn/shop/files/kele.png",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_06_EU.png",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_07_EU_33498bfd-f591-4304-977a-23654acab1cb.png",
+      "https://eu.ecoflow.com/cdn/shop/files/01_Microiverter.png",
+      "https://eu.ecoflow.com/cdn/shop/files/02_01_EcoFlow_STREAM_BKW-AC_Cable_5m.png",
+      "https://eu.ecoflow.com/cdn/shop/files/06_Expansion_screws_with_pipes.png",
+      "https://eu.ecoflow.com/cdn/shop/files/11_Safety_Instructions_2505dcb9-5d6a-4567-b4ad-65fdd9baa52c.png",
+      "https://eu.ecoflow.com/cdn/shop/files/12_Installation_Guide_ac28aa98-34b4-483a-b0a8-aa3ca8a69857.png",
+      "https://eu.ecoflow.com/cdn/shop/files/10_Warranty_Card_2f6c83cb-9471-4bb0-aff5-c88266c1c9b7.png"
+    ]
+  },
+  "_prevod_nadpisi": {
+    "PC_01_EU.png": {
+      "Saves you up to €137 on electricity bills": "Спестява до 137 € от сметките за ток",
+      "AI-powered energy management for maximum efficiency": "Управление на енергията с изкуствен интелект за максимална ефективност",
+      "10-year warranty for long-term reliability*": "10 години гаранция за дългосрочна надеждност*",
+      "High efficiency with a 23% conversion rate": "Висока ефективност — 23% преобразуване",
+      "IP67 microinverter / IP68 solar panel": "Микроинвертор IP67 / Соларен панел IP68",
+      "Easy DIY installation": "Лесен монтаж сами"
+    },
+    "PC_04_EU.png": {
+      "AI-TOU (Dynamic Electricity Tariff)": "AI-TOU (динамична тарифа)",
+      "AI Power Prediction": "AI прогноза за производството",
+      "24/7 AI Assitant": "AI асистент 24/7"
+    },
+    "PC_06_EU.png": {
+      "Status Overview — Monitor all energy data in real-time.": "Преглед на състоянието — всички данни за енергията в реално време.",
+      "Savings Calendar — See your daily and weekly savings.": "Календар на спестяванията — дневни и седмични спестявания.",
+      "Remote Control — Manage connected devices anytime, anywhere.": "Дистанционно управление — устройствата по всяко време и отвсякъде."
+    },
+    "PC_07_EU_33498bfd-f591-4304-977a-23654acab1cb.png": {
+      "No Drilling Required — The drill-free design allows flexible placement and easy movement—perfect for renters.": "Без пробиване — поставяте го където искате и го местите лесно, идеално за наематели.",
+      "Easy DIY Setup — With a plug-and-play design, set it up yourself in no time—no need for an electrician.": "Лесен монтаж — включвате и работи, монтирате го сами, без електротехник."
+    }
+  },
+  "_neyasni": [
+    "Комплектът в dice.bg (EFStreamMI800W+AC5M+PV3M*4) е микроинвертор + AC кабел 5 м + 4 PV кабела по 3 м. Страницата в eu.ecoflow.com е за микроинвертор + AC кабел — в „Какво има в кутията“ PV кабелите са добавени по dice.bg (без снимка).",
+    "Секциите „Работи при слаба светлина“ и „Как се монтира“ при EcoFlow са видео — първата е текст без снимка, втората е пропусната. „Flexible DIY Solar Panels“ е само картинка, която не се зареди — пропусната.",
+    "Снимката с предимствата споменава „IP68 соларен панел“ и „23% ефективност“ — това е за панелите от системата, не за микроинвертора. Оставена, както е при EcoFlow.",
+    "Снимката със съвместимите платформи (kele.png) е само с логата — не се превежда.",
+    "Стойността „Short-Circuit Current per MPPT“ в eu.ecoflow.com е празна — не е добавена.",
+    "dice.bg посочва съвместимост със STREAM AC, AC Pro, Max, Pro и Ultra; EcoFlow казва само „серията STREAM“ → „Съвместим с: STREAM серия“.",
+    "В dice.bg: Налично на склад (проверено 30.09.2026)."
+  ]
+}

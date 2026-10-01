@@ -1,0 +1,151 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Power Kits Console",
+    "slug": "power-kit-console",
+    "categorySlug": "power-kits",
+    "productType": "accessory",
+    "tagline": "Конзола със 7-инчов тъч дисплей за Power Kits",
+    "badge": "none",
+    "price": 357.39,
+    "externalUrl": "https://dice.bg/konzola-s-t-ch-displej-za-ecoflow-power-kit-power-hub-ecoflow-power-kit-console-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "61565",
+    "ean": "4897082669463",
+    "description": "Конзола със 7-инчов сензорен дисплей за EcoFlow Power Kits — следите потреблението и управлявате цялата система от караваната или малкия дом.",
+    "highlights": [
+      {
+        "text": "7-инчов сензорен дисплей"
+      },
+      {
+        "text": "Цялата система на един екран"
+      },
+      {
+        "text": "Захранване 12V DC"
+      },
+      {
+        "text": "За Power Kits Power Hub"
+      }
+    ],
+    "metaTitle": "EcoFlow Power Kits Console | EcoFlow България",
+    "metaDescription": "Конзола EcoFlow Power Kits Console със 7-инчов сензорен дисплей — управление на цялата система Power Kits.",
+    "compatibleWith": [
+      "power-kits"
+    ],
+    "ean2": "4895251600613"
+  },
+  "galeriya": [
+    {
+      "file": "61565_1.webp",
+      "alt": "EcoFlow Power Kits Console — конзола със 7-инчов тъч дисплей"
+    },
+    {
+      "file": "61565_2.webp",
+      "alt": "EcoFlow Power Kits Console — конзола със 7-инчов тъч дисплей"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Цялата система на един екран",
+      "body": "Следете потреблението на енергия, променяйте настройките и вижте най-важното на удобния екран — управлявате цялата енергийна система от комфорта на караваната или малкия дом.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Голям 7-инчов сензорен дисплей",
+      "body": "Управлявате и следите най-важната информация за вашата система EcoFlow Power Kits.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Power Kit Console",
+          "qty": 1
+        },
+        {
+          "name": "Ръководство за употреба",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Power Kit Console"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "ZMM100MT"
+        },
+        {
+          "label": "Дисплей",
+          "value": "7 инча, сензорен"
+        },
+        {
+          "label": "Захранване",
+          "value": "12V DC"
+        },
+        {
+          "label": "Работна температура",
+          "value": "−20 °C до 60 °C"
+        },
+        {
+          "label": "Сертификати",
+          "value": "UL, FCC, ICES, CE, UKCA, E-Mark, RCM, TELEC, KCC"
+        },
+        {
+          "label": "Размери",
+          "value": "113,3 × 204,5 × 22,35 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "450 г"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow Power Kit Power Hub"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61565_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61565_2.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Страницата в eu.ecoflow.com е само с цена — съдържанието е по dice.bg.",
+    "В описанието в dice.bg EAN е 4895251600613, а ти даде 4897082669463 (по него търсенето в dice.bg намира продукта). Твоят е основен, другият е записан като втори баркод.",
+    "В dice.bg: по заявка (проверено 01.10.2026)."
+  ]
+}

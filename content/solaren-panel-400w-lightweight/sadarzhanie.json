@@ -1,0 +1,340 @@
+{
+  "_bележка": "Съдържание за внасяне. Пуска се с: npm run import:product solaren-panel-400w-lightweight. Снимките се свалят по линковете в _svali_snimki (галерия и секции); преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "eu.ecoflow.com/products/400w-lightweight-portable-solar-panel, прочетено на 28.09.2026. Цена, SKU и EAN — dice.bg. Спецификациите са 1:1 от „Specs“ на EcoFlow.",
+  "produkt": {
+    "title": "EcoFlow 400W Lightweight Portable Solar Panel",
+    "slug": "solaren-panel-400w-lightweight",
+    "categorySlug": "sgavaemi-paneli",
+    "productType": "hero",
+    "tagline": "Сгъваем соларен панел · 400W, двулицев, 10,2 кг, IP68",
+    "badge": "none",
+    "price": 649,
+    "externalUrl": "https://dice.bg/sg-vaem-solaren-panel-zarezhdasch-direktno-vasheto-ustrojstvo-ot-sl-nceto-ecoflow-nextgen-400w-lightweight-bifacial-portable-solar-panel-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "75953",
+    "ean": "4895251649872",
+    "description": "Лек сгъваем двулицев соларен панел 400W (до 445W при BNPI) с ефективност до 25% (N-тип TOPCon клетки), вградена стойка с три положения 30°/45°/60°, водач за ъгъла към слънцето, вграден XT60 кабел и защита IP68. Около 10,2 кг, 5 години гаранция.",
+    "highlights": [
+      {
+        "title": "Лек и компактен",
+        "text": "Около 10,2 кг — с 5,8 кг по-лек от предишните модели."
+      },
+      {
+        "title": "До 25% ефективност",
+        "text": "Двулицев дизайн с N-тип TOPCon клетки; до 445W при BNPI."
+      },
+      {
+        "title": "Стойка 30°/45°/60° и водач за ъгъла",
+        "text": "Вградена стойка с три положения и водач към слънцето."
+      },
+      {
+        "title": "IP68",
+        "text": "Защита от вода и прах."
+      },
+      {
+        "title": "Вграден XT60 кабел",
+        "text": "Лесно прибиране и връзка с електроцентралата."
+      },
+      {
+        "title": "5 години гаранция",
+        "text": ""
+      }
+    ],
+    "metaTitle": "EcoFlow 400W Lightweight — лек сгъваем соларен панел 400W",
+    "metaDescription": "Сгъваем двулицев соларен панел 400W, до 25% ефективност, 10,2 кг, стойка 30°/45°/60°, IP68, вграден XT60. Официален дистрибутор за България."
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-400w-portable-solar-panel-1186050766.png",
+      "alt": "EcoFlow 400W Lightweight Portable Solar Panel — разгънат"
+    },
+    {
+      "file": "ecoflow-400w-portable-solar-panel-1186050765.png",
+      "alt": "EcoFlow 400W Lightweight Portable Solar Panel — сгънат, с дръжка"
+    },
+    {
+      "file": "ecoflow-400w-portable-solar-panel-1186050764.png",
+      "alt": "EcoFlow 400W Lightweight Portable Solar Panel — под ъгъл"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "",
+      "body": "",
+      "image": "1_1_453689ca-90b8-4d8f-ba2e-174986fecde8.png",
+      "imageAlt": "EcoFlow 400W Lightweight Portable Solar Panel — основни предимства"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Двулицев",
+      "heading": "Повече енергия с двулицев дизайн",
+      "body": "Основната и задната страна улавят и разсеяната светлина — изходната мощност стига до 445W при условия на изпитване BNPI, т.е. повече енергия от същото слънце в сравнение с обикновените еднолицеви панели. С водещата в бранша технология TOPCon панелът достига първокласна ефективност на преобразуване до 25% и зарежда електроцентралата ви още по-бързо.",
+      "image": "2_1_img_9c9c5052-2f33-441f-9bed-f90eda22f179.png",
+      "imageAlt": "Двулицев соларен панел на открито"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Портативност",
+      "heading": "Свръхпортативен дизайн",
+      "body": "Създаден от модерни леки материали, този панел от новото поколение е с 5,8 кг по-лек от предишните модели — пренася се без усилие и се прибира компактно.",
+      "image": "3_1_img_bbb77589-02c2-44c6-90e9-6ee9326f3c79.png",
+      "imageAlt": "Панелът се носи като куфарче"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Стойка",
+      "heading": "Подходящ за всякакви условия",
+      "body": "Сгъваемата вградена стойка е удобна и компактна. Регулира се на 30°, 45° и 60° — идеално за повечето райони на високи географски ширини.\n\nАко панелът ще стои окачен продължително, използвайте твърд (стационарен) соларен панел — леките сгъваеми панели не се препоръчват за такъв сценарий.",
+      "image": "4_1_img_e5d98993-50d8-46d5-8eef-34b64a7842b3.png",
+      "imageAlt": "Стойка с три положения — 30°, 45° и 60°"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Водач",
+      "heading": "Вграден водач за ъгъла към слънцето",
+      "body": "Дръжте слънчевите лъчи под ъгъл 90° и ги насочвайте към повърхността на панела — така получавате максимум слънце по всяко време.",
+      "image": "5_1_IMG_9365500e-0f06-4946-9e03-4f9cd9f99db5.png",
+      "imageAlt": "Водач за ъгъла към слънцето — как се ползва"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Издръжливост",
+      "heading": "Издръжлив и водоустойчив",
+      "subheading": "Създаден да издържи на бурята",
+      "subheadingPosition": "below",
+      "body": "С клас на защита IP68 нашият 400W лек сгъваем соларен панел запазва високата си производителност дори в контакт с вода. Спокойно може да зареждате край морето или да го вземете на лодката.",
+      "image": "6_1_IMG_dba0cb1a-07ee-4d35-9fd0-e15ef3d78f1d.png",
+      "imageAlt": "Панелът под водни пръски"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-right",
+      "theme": "light",
+      "heading": "Без прегряване",
+      "body": "Проектиран да издържа на високи температури, като запазва високото ниво на соларен добив.",
+      "image": "6_2_IMG.png",
+      "imageAlt": "Слоевете на панела"
+    },
+    {
+      "blockType": "comparisonTable",
+      "anchorLabel": "Сравнение",
+      "heading": "Сравнение на соларните панели на EcoFlow",
+      "intro": "Оригиналният срещу Lightweight",
+      "columns": [
+        {
+          "label": "EcoFlow Lightweight сгъваеми соларни панели",
+          "tagline": "Нови",
+          "highlight": true,
+          "image": "7_1_IMG_ac91c421-e139-4ea6-a729-6ae856fbb454.png",
+          "imageAlt": "EcoFlow Lightweight сгъваеми соларни панели"
+        },
+        {
+          "label": "EcoFlow соларен панел",
+          "tagline": "Предишно поколение",
+          "image": "7_1_2_IMG_37965ea6-c28a-4165-b6e1-375c1f41c940.png",
+          "imageAlt": "EcoFlow соларен панел"
+        }
+      ],
+      "rows": [
+        {
+          "label": "Тип клетки",
+          "values": [
+            "N-тип TOPCon монокристален силиций",
+            "P-тип PERC монокристален силиций"
+          ]
+        },
+        {
+          "label": "Ефективност на преобразуване",
+          "values": [
+            "до 25%",
+            "до 23%"
+          ]
+        },
+        {
+          "label": "Тегло",
+          "values": [
+            "10,2 кг ± 0,3 кг",
+            "16 кг"
+          ]
+        },
+        {
+          "label": "Стойка",
+          "values": [
+            "вградена с три положения — 30°/45°/60°",
+            "отделен калъф-стойка"
+          ]
+        },
+        {
+          "label": "Водач за ъгъла към слънцето",
+          "values": [
+            "вграден",
+            "няма"
+          ]
+        },
+        {
+          "label": "Кабел XT60",
+          "values": [
+            "вграден",
+            "отделен"
+          ]
+        },
+        {
+          "label": "Гаранция",
+          "values": [
+            "5 години",
+            "1 година"
+          ]
+        }
+      ],
+      "_iztochnik": "Таблицата „EcoFlow Solar Panel Comparison — Original vs. Lightweight“; ефективността и теглото са от картинките в таблицата (7_3_x, 7_4_x)."
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow 400W Lightweight Portable Solar Panel",
+          "qty": 1,
+          "image": "ecoflow-400w-portable-solar-panel-1186050766.png",
+          "imageAlt": "EcoFlow 400W Lightweight Portable Solar Panel"
+        },
+        {
+          "name": "Кратко ръководство, инструкции за безопасност и гаранционна карта",
+          "qty": 1,
+          "image": "kutiya-rakovodstvo.webp",
+          "imageAlt": "Кратко ръководство, инструкции за безопасност и гаранционна карта"
+        }
+      ],
+      "_iztochnik": "Секцията „What's in the box“ на eu.ecoflow.com: панел + кратко ръководство/безопасност/гаранционна карта. Снимката на панела е първата от галерията; ръководството е общата kutiya-rakovodstvo.webp от Медия."
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "footnotes",
+      "items": [
+        {
+          "text": "Този лек сгъваем соларен панел не се препоръчва за някои сценарии, например продължително окачване на открито или върху превозни средства."
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Общи",
+      "rows": [
+        {
+          "label": "Номинална мощност",
+          "value": "400W (±5W)"
+        },
+        {
+          "label": "Тип клетки",
+          "value": "N-тип TOPCon монокристален силиций"
+        },
+        {
+          "label": "Ефективност",
+          "value": "25%"
+        },
+        {
+          "label": "Тегло (панел)",
+          "value": "около 10,2 кг"
+        },
+        {
+          "label": "Размери разгънат",
+          "value": "2509 × 967 × 26 мм"
+        },
+        {
+          "label": "Размери сгънат",
+          "value": "659 × 967 × 36 мм"
+        },
+        {
+          "label": "Конектор",
+          "value": "XT60"
+        },
+        {
+          "label": "Водо- и прахоустойчивост",
+          "value": "IP68"
+        },
+        {
+          "label": "Гаранция",
+          "value": "5 години"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Електрически параметри",
+      "rows": [
+        {
+          "label": "Напрежение на празен ход",
+          "value": "39,3V (Vpm 34,5V)"
+        },
+        {
+          "label": "Ток на късо съединение",
+          "value": "12,2A (Ipm 11,7A)"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-400w-portable-solar-panel-1186050766.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-400w-portable-solar-panel-1186050765.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-400w-portable-solar-panel-1186050764.png"
+    ],
+    "sekcii": [
+      "https://eu.ecoflow.com/cdn/shop/files/1_1_453689ca-90b8-4d8f-ba2e-174986fecde8.png",
+      "https://eu.ecoflow.com/cdn/shop/files/2_1_img_9c9c5052-2f33-441f-9bed-f90eda22f179.png",
+      "https://eu.ecoflow.com/cdn/shop/files/3_1_img_bbb77589-02c2-44c6-90e9-6ee9326f3c79.png",
+      "https://eu.ecoflow.com/cdn/shop/files/4_1_img_e5d98993-50d8-46d5-8eef-34b64a7842b3.png",
+      "https://eu.ecoflow.com/cdn/shop/files/5_1_IMG_9365500e-0f06-4946-9e03-4f9cd9f99db5.png",
+      "https://eu.ecoflow.com/cdn/shop/files/6_1_IMG_dba0cb1a-07ee-4d35-9fd0-e15ef3d78f1d.png",
+      "https://eu.ecoflow.com/cdn/shop/files/6_2_IMG.png",
+      "https://eu.ecoflow.com/cdn/shop/files/8_1_IMG_a9bab071-4b52-4b6a-ae10-9e5427ebed24.png",
+      "https://eu.ecoflow.com/cdn/shop/files/7_1_IMG_ac91c421-e139-4ea6-a729-6ae856fbb454.png",
+      "https://eu.ecoflow.com/cdn/shop/files/7_1_2_IMG_37965ea6-c28a-4165-b6e1-375c1f41c940.png"
+    ]
+  },
+  "_prevod_nadpisi": {
+    "1_1_453689ca-90b8-4d8f-ba2e-174986fecde8.png": {
+      "Lightweight and portable": "Лек и портативен",
+      "30°/45°/60° / 3-angle adjustable support stand": "30°/45°/60° / стойка с три положения",
+      "Integrated solar angle guide": "Вграден водач за ъгъла към слънцето",
+      "Up to 25% / solar conversion efficiency rate": "До 25% / ефективност на преобразуване",
+      "IP68 / water and dust-resistant": "IP68 / защита от вода и прах"
+    },
+    "4_1_img_e5d98993-50d8-46d5-8eef-34b64a7842b3.png": {
+      "Adjustable stand with 30°, 45°, and 60° positions": "Регулируема стойка с положения 30°, 45° и 60°",
+      "60° / 45° / 30°": "остават"
+    },
+    "5_1_IMG_9365500e-0f06-4946-9e03-4f9cd9f99db5.png": {
+      "How-To …": "същият текст като при 110W (5_1_IMG) — Как се ползва / Стъпка 01–03"
+    },
+    "8_1_IMG_a9bab071-4b52-4b6a-ae10-9e5427ebed24.png": {
+      "Quiet Start Guide, Safety Instructions & Warranty Card": "Кратко ръководство, инструкции за безопасност и гаранционна карта"
+    }
+  },
+  "_neyasni": [
+    "В dice.bg е 649 € без стара цена (в EU има промоция 461 €, която не ползваме).",
+    "Снимките от сравнителната таблица на EcoFlow (7_x, само малки картинки с текст) не се свалят — таблицата при нас е текстова.",
+    "Секцията „Durable and Water-Resistant“ е с две карти — две поредни секции, както при 110W."
+  ]
+}

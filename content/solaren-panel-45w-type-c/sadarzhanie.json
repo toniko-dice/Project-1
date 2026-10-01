@@ -1,0 +1,317 @@
+{
+  "_bележка": "Съдържание за внасяне. Пуска се с: npm run import:product solaren-panel-45w-type-c. Снимките се свалят по линковете в _svali_snimki (галерия и секции); преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "eu.ecoflow.com/products/45w-portable-solar-panel (вариант Type-C), прочетено на 28.09.2026. Цена, SKU и EAN — dice.bg. Спецификациите са 1:1 от втората таблица „Specs“ (Type-C) на EcoFlow.",
+  "produkt": {
+    "title": "EcoFlow 45W Portable Solar Panel (Type-C)",
+    "slug": "solaren-panel-45w-type-c",
+    "categorySlug": "sgavaemi-paneli",
+    "productType": "hero",
+    "tagline": "Сгъваем соларен панел · 45W с USB-C изход, 1,4 кг, IP68",
+    "badge": "none",
+    "price": 79,
+    "externalUrl": "https://dice.bg/ecoflow-portable-solar-panel-45w-sgavaem-solaren-panel-zarezhdasht-direktno-vasheto-ustroystvo-ot-slantseto-s-dc-port-i-edin-usb-c-port-cheren-item70500",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "70500",
+    "ean": "4895251628679",
+    "description": "Най-компактният сгъваем соларен панел на EcoFlow: 45W с TOPCon клетки (до 25% ефективност), DC5521 изход за електроцентрали RIVER и Type-C изход (15W) за директно зареждане на телефон и малки устройства. 1,4 кг, сгънат 222 × 309 × 45 мм, IP68, отвори и куки за окачване.",
+    "highlights": [
+      {
+        "title": "Type-C изход",
+        "text": "Зарежда телефон, фотоапарат или външна батерия директно, без електроцентрала."
+      },
+      {
+        "title": "До 25% ефективност",
+        "text": "TOPCon клетки — RIVER 3 се зарежда за 6,3 ч при силно слънце."
+      },
+      {
+        "title": "Изключително компактен",
+        "text": "Сгъва се на 222 × 309 × 45 мм, само 1,4 кг."
+      },
+      {
+        "title": "IP68",
+        "text": "PCB фибростъкло и ETFE покритие — издържа на дъжд и удари."
+      },
+      {
+        "title": "За окачване",
+        "text": "Четири отвора и куки в комплекта — на кола или раница."
+      }
+    ],
+    "metaTitle": "EcoFlow 45W Portable Solar Panel (Type-C) — сгъваем соларен панел 45W с USB-C",
+    "metaDescription": "Сгъваем соларен панел 45W с TOPCon клетки, до 25% ефективност, Type-C изход 15W, DC5521 за RIVER, 1,4 кг, IP68. Официален дистрибутор за България."
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-45w-portable-solar-panel-59582276665687.png",
+      "alt": "EcoFlow 45W Portable Solar Panel (Type-C) — сгънат"
+    },
+    {
+      "file": "ecoflow-45w-portable-solar-panel-59582276632919.png",
+      "alt": "EcoFlow 45W Portable Solar Panel (Type-C) — изглед 2"
+    },
+    {
+      "file": "ecoflow-45w-portable-solar-panel-59582276731223.png",
+      "alt": "EcoFlow 45W Portable Solar Panel (Type-C) — изглед 3"
+    },
+    {
+      "file": "ecoflow-45w-portable-solar-panel-59582276600151.png",
+      "alt": "EcoFlow 45W Portable Solar Panel (Type-C) — изглед 4"
+    },
+    {
+      "file": "ecoflow-45w-portable-solar-panel-59582276567383.png",
+      "alt": "EcoFlow 45W Portable Solar Panel (Type-C) — изглед 5"
+    },
+    {
+      "file": "ecoflow-45w-portable-solar-panel-59582283448663.png",
+      "alt": "EcoFlow 45W Portable Solar Panel (Type-C) — изглед 6"
+    },
+    {
+      "file": "ecoflow-45w-portable-solar-panel-59582283481431.png",
+      "alt": "EcoFlow 45W Portable Solar Panel (Type-C) — изглед 7"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Идеалният соларен източник за сериите RIVER 3 и RIVER 2",
+      "body": "С компактния си дизайн и малкото тегло 45W сгъваемият соларен панел е идеалният спътник на електроцентралите от серията RIVER — просто и удобно зареждане.",
+      "image": "PC_01.jpg",
+      "imageAlt": "Панелът зарежда RIVER на къмпинг"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Type-C",
+      "heading": "Създаден за зареждане през Type-C",
+      "subheading": "Зареждайте устройствата си директно",
+      "subheadingPosition": "below",
+      "body": "45W сгъваемият соларен панел (Type-C) има Type-C изход за директно зареждане на телефони, лаптопи и въздушни помпи. Максимално удобство с нашия 45W сгъваем соларен панел (Type-C).",
+      "image": "PC_02.jpg",
+      "imageAlt": "Зареждане на телефон директно от панела"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Ефективност",
+      "heading": "До 25% ефективност на преобразуване",
+      "subheading": "По-бързо зареждане с още по-малък панел",
+      "subheadingPosition": "below",
+      "body": "С технологията TOPCon — за първи път при малките сгъваеми соларни панели — поставяме нов стандарт за ефективност на преобразуване: 25%. Това означава по-бързо зареждане при по-компактна форма. Пълен заряд на RIVER 3 за 6,3 часа при силно слънце — и по-дълго приключение за електрониката и най-нужните уреди за къмпинг.",
+      "image": "PC_03.jpg",
+      "imageAlt": "25% ефективност"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Още предимства на TOPCon",
+      "subheading": "EcoFlow 45W соларен панел с TOPCon срещу традиционен панел с PERC клетки",
+      "subheadingPosition": "above",
+      "body": "",
+      "image": "PC_03_1.jpg",
+      "imageAlt": "TOPCon срещу PERC — четири предимства"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Компактност",
+      "heading": "Изключително компактен",
+      "subheading": "Побира се във всяко тясно място",
+      "subheadingPosition": "below",
+      "body": "Благодарение на сгъваемата структура от четири панела панелът става значително по-малък, когато е сгънат, и се побира лесно в раница, SUV или миниван.",
+      "image": "PC_04.jpg",
+      "imageAlt": "Сгънатият панел в багажа"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Издръжливост",
+      "heading": "IP68 водоустойчив, създаден да издържа",
+      "subheading": "Винаги готов за неочаквано време",
+      "subheadingPosition": "below",
+      "body": "Със здрава основа от PCB фибростъкло и издръжливо ETFE покритие панелите ни са проектирани за трудни атмосферни условия. Внезапен удар, дърпане от вятъра, дори солени морски пръски и водни капки — остават здрави и невредими, надежден спътник на открито.*",
+      "image": "PC_05.jpg",
+      "imageAlt": "Слоевете на панела и водни пръски"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Окачване",
+      "heading": "Създаден за окачване",
+      "subheading": "Зареждане в движение",
+      "subheadingPosition": "below",
+      "body": "Освен положен на земята или наклонен на стойка, 45W сгъваемият соларен панел може да се окачи през четирите готови отвора с включените куки. На колата или на раницата — печелите време, като зареждате по пътя към следващата дестинация.",
+      "image": "PC_06.jpg",
+      "imageAlt": "Панелът, окачен на раница или кола"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Детайли на продукта",
+      "body": "",
+      "image": "PC_07.jpg",
+      "imageAlt": "Размери разгънат и сгънат"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "body": "",
+      "image": "PC_08.jpg",
+      "imageAlt": "Панел, кабел DC5521 към XT60i, 4 куки, ръководство"
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "footnotes",
+      "items": [
+        {
+          "text": "За да запазите оптималната производителност, избягвайте продължително излагане на влага. Пазете съединителната кутия и конекторите на кабела от течности. Работете внимателно с панела — не го удряйте, притискайте и огъвайте често. Препоръчително е при транспорт и съхранение продуктът да стои изправен."
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Общи",
+      "rows": [
+        {
+          "label": "Номинална мощност",
+          "value": "45W (±5W)"
+        },
+        {
+          "label": "Тип клетки",
+          "value": "TOPCon монокристален силиций"
+        },
+        {
+          "label": "Ефективност",
+          "value": "до 25%"
+        },
+        {
+          "label": "Тегло (панел)",
+          "value": "1,4 кг"
+        },
+        {
+          "label": "Размери разгънат",
+          "value": "980 × 309 × 25 мм"
+        },
+        {
+          "label": "Размери сгънат",
+          "value": "222 × 309 × 45 мм"
+        },
+        {
+          "label": "Конектори",
+          "value": "DC5521 / Type-C"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Електрически параметри",
+      "rows": [
+        {
+          "label": "Напрежение на празен ход",
+          "value": "25,6V"
+        },
+        {
+          "label": "Ток на късо съединение",
+          "value": "2,06A"
+        },
+        {
+          "label": "Напрежение при максимална мощност (Vmp)",
+          "value": "22V"
+        },
+        {
+          "label": "Ток при максимална мощност (Imp)",
+          "value": "1,98A"
+        },
+        {
+          "label": "Оптимално работно напрежение",
+          "value": "21,9V"
+        },
+        {
+          "label": "Оптимален работен ток",
+          "value": "2,0A"
+        },
+        {
+          "label": "Изход DC5521",
+          "value": "45W (±5W), 22V/1,98A"
+        },
+        {
+          "label": "Изход Type-C",
+          "value": "макс. 15W (5V/3A)"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-45w-portable-solar-panel-59582276665687.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-45w-portable-solar-panel-59582276632919.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-45w-portable-solar-panel-59582276731223.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-45w-portable-solar-panel-59582276600151.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-45w-portable-solar-panel-59582276567383.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-45w-portable-solar-panel-59582283448663.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-45w-portable-solar-panel-59582283481431.png"
+    ],
+    "sekcii": [
+      "https://eu.ecoflow.com/cdn/shop/files/PC_01.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_02.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_03.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_03_1.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_04.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_05.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_06.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_07.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_08.jpg"
+    ]
+  },
+  "_prevod_nadpisi": {
+    "PC_02.jpg": {
+      "Phone (4500mAh) 2.4 hr": "Телефон (4500mAh) 2,4 ч",
+      "Camera (1120mAh) 18 min": "Фотоапарат (1120mAh) 18 мин",
+      "Laptop (4380mAh) 1.2 hr": "Лаптоп (4380mAh) 1,2 ч",
+      "*Charge 0-80%": "*Зареждане 0–80%"
+    },
+    "PC_03.jpg": {
+      "25%": "остава (провери — не е гледана)"
+    },
+    "PC_03_1.jpg": {
+      "…": "същите четири надписа като при 60W (ICON.jpg)"
+    },
+    "PC_05.jpg": {
+      "…": "вероятно същите етикети на слоевете като при 60W (Built_to_last.jpg) — не е гледана"
+    },
+    "PC_07.jpg": {
+      "Unfolded: 980x309x16 mm": "Разгънат: 980 × 309 × 16 мм",
+      "Folded: 222x309x40 mm": "Сгънат: 222 × 309 × 40 мм",
+      "309 mm / 980 mm / 222 mm": "мм"
+    },
+    "PC_08.jpg": {
+      "EcoFlow 45W Portable Solar Panel (USB-C) × 1": "EcoFlow 45W Portable Solar Panel (USB-C) × 1",
+      "DC5521 To XT60i Charging Cable × 1": "Кабел DC5521 към XT60i × 1",
+      "Hooks × 4": "Куки × 4",
+      "User Manual": "Ръководство за употреба"
+    }
+  },
+  "_neyasni": [
+    "Страницата на EcoFlow има две таблици „Specs“ (обикновена и Type-C версия); взета е втората (Type-C: DC5521/Type-C конектори, Type-C изход 15W). Картинката с размерите показва 980 × 309 × 16 / 222 × 309 × 40 мм, а таблицата — 980 × 309 × 25 / 222 × 309 × 45 мм; в спецификациите са числата от таблицата на EcoFlow.",
+    "PC_01, PC_03, PC_04, PC_05, PC_06 не са гледани отблизо — очаква се да са като при 60W (само 25% в PC_03 и етикети на слоевете в PC_05).",
+    "„Какво има в кутията“ е една обща картинка с 4 елемента — секция със снимка, не блок с отделни елементи.",
+    "В dice.bg няма стара цена — 79 €."
+  ]
+}

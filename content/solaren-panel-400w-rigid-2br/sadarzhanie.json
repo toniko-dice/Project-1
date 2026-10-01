@@ -1,0 +1,234 @@
+{
+  "_bележка": "Съдържание за внасяне. Пуска се с: npm run import:product solaren-panel-400w-rigid-2br. Снимките се свалят по линковете в _svali_snimki (галерия и секции); преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "eu.ecoflow.com/products/400w-rigid-solar-panel, прочетено на 28.09.2026. Цена, SKU и EAN — dice.bg. Спецификациите са 1:1 от „Specs“ на EcoFlow.",
+  "produkt": {
+    "title": "EcoFlow 400W Rigid Solar Panel (2 pieces)",
+    "slug": "solaren-panel-400w-rigid-2br",
+    "categorySlug": "stacionarni-paneli",
+    "productType": "hero",
+    "tagline": "Комплект 2 × 400W стационарни соларни панела · 23%, IP68, за покрив",
+    "badge": "none",
+    "price": 336.94,
+    "compareAtPrice": 408.52,
+    "externalUrl": "https://dice.bg/komplekt-ot-2-broja-solarni-paneli-zarezhdaschi-direktno-vasheto-ustrojstvo-ot-sl-nceto-ecoflow-2x400w-rigid-solar-panel-combo-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "61493",
+    "ean": "4895251602716",
+    "description": "Комплект от два твърди соларни панела по 400W с монокристални клетки (23% ефективност), изцяло черен дизайн, антикорозионна алуминиева рамка, IP68 — издържа на вятър до 210 км/ч и снежно натоварване. За мрежови и автономни системи, Power Kits и портативни електроцентрали; универсален соларен конектор с 300 мм кабел. Монтажните крачета и кабелът към XT60i не са включени.",
+    "highlights": [
+      {
+        "title": "23% ефективност",
+        "text": "Монокристални клетки; по-бързо зареждане от панели с подобен размер."
+      },
+      {
+        "title": "Изцяло черен дизайн",
+        "text": "Подхожда на всеки стил къща."
+      },
+      {
+        "title": "IP68 и здрава рамка",
+        "text": "Вятър до 210 км/ч, снежно натоварване 5400 Pa."
+      },
+      {
+        "title": "За мрежа и извън мрежа",
+        "text": "Резерв при спиране на тока, по-ниски сметки, автономен дом."
+      },
+      {
+        "title": "Универсален конектор",
+        "text": "Работи и със съществуващи 48V системи; 300 мм кабел."
+      },
+      {
+        "title": "Гаранция до 10 години",
+        "text": ""
+      }
+    ],
+    "metaTitle": "EcoFlow 2 × 400W Rigid — комплект стационарни соларни панели 400W",
+    "metaDescription": "Два твърди соларни панела 400W, 23% ефективност, IP68, антикорозионна рамка, за покрив и автономни системи. Официален дистрибутор за България."
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-400w-rigid-solar-panel-42663959003300.png",
+      "alt": "EcoFlow 400W Rigid Solar Panel (2 pieces) — отпред"
+    },
+    {
+      "file": "ecoflow-400w-rigid-solar-panel-42466327986340.png",
+      "alt": "EcoFlow 400W Rigid Solar Panel (2 pieces) — под ъгъл"
+    },
+    {
+      "file": "ecoflow-400w-rigid-solar-panel-42466328051876.png",
+      "alt": "EcoFlow 400W Rigid Solar Panel (2 pieces) — отзад"
+    },
+    {
+      "file": "ecoflow-400w-rigid-solar-panel-42466329133220.jpg",
+      "alt": "EcoFlow 400W Rigid Solar Panel (2 pieces) — на покрив"
+    },
+    {
+      "file": "ecoflow-400w-rigid-solar-panel-42466329231524.jpg",
+      "alt": "EcoFlow 400W Rigid Solar Panel (2 pieces) — на кемпер"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "",
+      "body": "",
+      "image": "400_rigid_1.png",
+      "imageAlt": "EcoFlow 400W Rigid Solar Panel (2 pieces) — основни предимства"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "400W твърд соларен панел",
+      "body": "",
+      "image": "400_rigid_2.png",
+      "imageAlt": "Два панела на покрив на къща"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Ефективност",
+      "heading": "Висока соларна ефективност",
+      "body": "Изработен от високоефективни монокристални клетки, 400W твърдият соларен панел е с отлична ефективност от 23% — зареждате по-бързо, отколкото с панели с подобен размер. Включете го към съществуващата си фотоволтаична система или към Power Kits и оставете вградения MPPT алгоритъм да оптимизира соларния вход.",
+      "image": "400_rigid_3.png",
+      "imageAlt": "23% ефективност"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Издръжливост",
+      "heading": "Водоустойчив и издръжлив",
+      "body": "400W твърдият соларен панел е създаден за навън. С клас IP68* и здрава антикорозионна алуминиева рамка издържа на вятър до 210 км/ч* и значително снежно натоварване* и събира слънчева енергия с години.\n\n*Водо- и прахоустойчивостта са изпитани в контролирани лабораторни условия — клас IP68 по стандарт IEC 60529 (максимална дълбочина 1 м за до 72 часа).\n*Правилно монтираните панели издържат на динамично натоварване от вятър 2400 Pa (скорост 210 км/ч) и статично снежно натоварване 5400 Pa.",
+      "image": "400_rigid_4.png",
+      "imageAlt": "IP68 и защитно покритие, TÜV сертификат"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Приложение",
+      "heading": "Решение за автономни и мрежови системи",
+      "body": "Този панел с висока мощност работи както в мрежови, така и в автономни соларни системи — съхранявате енергия за спиране на тока, намалявате сметките или захранвате дом извън мрежата.",
+      "image": "400_rigid_5.png",
+      "imageAlt": "Кемпер с панел на покрива в планината"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Съвместимост",
+      "heading": "Универсално съвместим",
+      "body": "Соларните панели на EcoFlow използват универсален соларен конектор, така че може да ги ползвате дори със съществуващата си 48V система. 400W панелът има 300 мм кабел за зареждане — достатъчно място за монтаж на няколко панела и максимален соларен вход.",
+      "image": "100_rigid_7.png",
+      "imageAlt": "Универсален соларен конектор"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "body": "1. 2 × 400W твърд соларен панел\n2. Ръководство за употреба и гаранционна карта\n\nКабелът от соларен конектор към XT60i не е включен в комплекта — продава се отделно. Монтажните крачета не са включени.",
+      "image": "400_rigid_what_s_in_the_box.png",
+      "imageAlt": "Панел отпред и отзад, ръководство"
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Общи (за един панел)",
+      "rows": [
+        {
+          "label": "Номинална мощност",
+          "value": "400W"
+        },
+        {
+          "label": "Тип клетки",
+          "value": "монокристални"
+        },
+        {
+          "label": "Ефективност",
+          "value": "23%"
+        },
+        {
+          "label": "Размери",
+          "value": "172,2 × 113,4 × 3,5 см"
+        },
+        {
+          "label": "Нето тегло",
+          "value": "21,8 кг"
+        },
+        {
+          "label": "Конектор",
+          "value": "соларен конектор"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Електрически параметри",
+      "rows": [
+        {
+          "label": "Напрежение на празен ход",
+          "value": "37,10V"
+        },
+        {
+          "label": "Ток на късо съединение",
+          "value": "13,79A"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://eu.ecoflow.com/cdn/shop/products/ecoflow-400w-rigid-solar-panel-42663959003300.png",
+      "https://eu.ecoflow.com/cdn/shop/products/ecoflow-400w-rigid-solar-panel-42466327986340.png",
+      "https://eu.ecoflow.com/cdn/shop/products/ecoflow-400w-rigid-solar-panel-42466328051876.png",
+      "https://eu.ecoflow.com/cdn/shop/products/ecoflow-400w-rigid-solar-panel-42466329133220.jpg",
+      "https://eu.ecoflow.com/cdn/shop/products/ecoflow-400w-rigid-solar-panel-42466329231524.jpg"
+    ],
+    "sekcii": [
+      "https://eu.ecoflow.com/cdn/shop/files/400_rigid_1.png",
+      "https://eu.ecoflow.com/cdn/shop/files/400_rigid_2.png",
+      "https://eu.ecoflow.com/cdn/shop/files/400_rigid_3.png",
+      "https://eu.ecoflow.com/cdn/shop/files/400_rigid_4.png",
+      "https://eu.ecoflow.com/cdn/shop/files/400_rigid_5.png",
+      "https://eu.ecoflow.com/cdn/shop/files/100_rigid_7.png",
+      "https://eu.ecoflow.com/cdn/shop/files/400_rigid_what_s_in_the_box.png"
+    ]
+  },
+  "_prevod_nadpisi": {
+    "400_rigid_1.png": {
+      "Conversion Rate 23%": "Ефективност 23%",
+      "IP68 Waterproof": "IP68 водоустойчив",
+      "Universally Compatible": "Универсално съвместим",
+      "Off-grid Solution": "Извън мрежата",
+      "On-grid Solution": "В мрежата"
+    },
+    "400_rigid_2.png": {
+      "400W Rigid Solar Panel": "400W твърд соларен панел",
+      "This 400W rigid solar panel is ideal for both off-grid and on-grid homeowners looking to store and utilize the power of solar energy to run their homes.": "Този 400W твърд соларен панел е идеален за домакинства в мрежата и извън нея, които искат да съхраняват и ползват слънчева енергия за дома си."
+    },
+    "400_rigid_3.png": {
+      "23%": "остава"
+    },
+    "400_rigid_4.png": {
+      "IP68": "остава",
+      "TÜV certified / Highly Protective": "TÜV сертифициран / силна защита"
+    }
+  },
+  "_neyasni": [
+    "„Up to a 10-year warranty“ е в булетите на EcoFlow, не в таблицата „Specs“ — сложено е в акцентите, не в спецификациите.",
+    "Снимката с конектора (100_rigid_7.png) е същият файл като при 2 × 100W — един запис в Медия.",
+    "Бележката на EcoFlow за различните електрически норми в Европа (консултация с електротехник преди покупка) не е включена — може да се добави като footnote, ако искаш."
+  ]
+}

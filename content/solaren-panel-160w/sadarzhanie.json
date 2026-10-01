@@ -1,0 +1,251 @@
+{
+  "_bележка": "Съдържание за внасяне. Пуска се с: npm run import:product solaren-panel-160w. Снимките се свалят по линковете в _svali_snimki (галерия и секции); преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg (описание и спецификации), прочетено на 29.09.2026. Няма страница в eu.ecoflow.com. Текстовете са преразказани на естествен български по фактите от dice; числата са само от dice.",
+  "produkt": {
+    "title": "EcoFlow 160W Solar Panel",
+    "slug": "solaren-panel-160w",
+    "categorySlug": "sgavaemi-paneli",
+    "productType": "hero",
+    "tagline": "Сгъваем соларен панел · 160W, 7 кг, калъф-стойка 0–180° (предишно поколение)",
+    "badge": "none",
+    "price": 255.13,
+    "externalUrl": "https://dice.bg/ecoflow-160w-solar-panel-black-item56916",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "56916",
+    "ean": "4897082663089",
+    "description": "Сгъваем соларен панел EcoFlow 160W с монокристални клетки (21–22% ефективност), MC4 конектор за електроцентралите DELTA и RIVER, калъф за пренасяне, който служи и за стойка с ъгъл 0–180°, устойчив на прах и вода (потопяем до 1 м за 30 минути), ETFE филм. 7 кг, 157 × 68 × 2,4 см разгънат.",
+    "highlights": [
+      {
+        "title": "160W, 21–22% ефективност",
+        "text": "Монокристални силициеви клетки."
+      },
+      {
+        "title": "MC4 конектор",
+        "text": "За сериите DELTA и RIVER; паралелно свързване на няколко панела."
+      },
+      {
+        "title": "Калъф-стойка 0–180°",
+        "text": "Чантата от комплекта е и стойка с гъвкава конзола."
+      },
+      {
+        "title": "Устойчив на прах и вода",
+        "text": "Потопяем до 1 м за 30 минути; ETFE филм срещу UV."
+      },
+      {
+        "title": "7 кг",
+        "text": "Сгънат: 42 × 68 × 2,4 см."
+      }
+    ],
+    "metaTitle": "EcoFlow 160W Solar Panel — сгъваем соларен панел 160W",
+    "metaDescription": "Сгъваем соларен панел EcoFlow 160W, монокристални клетки 21–22%, MC4, калъф-стойка 0–180°, водоустойчив, 7 кг. Официален дистрибутор за България."
+  },
+  "galeriya": [
+    {
+      "file": "56916_1.webp",
+      "alt": "EcoFlow 160W Solar Panel — изглед 1"
+    },
+    {
+      "file": "56916_2.webp",
+      "alt": "EcoFlow 160W Solar Panel — изглед 2"
+    },
+    {
+      "file": "56916_3.webp",
+      "alt": "EcoFlow 160W Solar Panel — изглед 3"
+    },
+    {
+      "file": "56916_4.webp",
+      "alt": "EcoFlow 160W Solar Panel — изглед 4"
+    },
+    {
+      "file": "56916_5.webp",
+      "alt": "EcoFlow 160W Solar Panel — изглед 5"
+    },
+    {
+      "file": "56916_6.webp",
+      "alt": "EcoFlow 160W Solar Panel — изглед 6"
+    },
+    {
+      "file": "56916_7.webp",
+      "alt": "EcoFlow 160W Solar Panel — изглед 7"
+    },
+    {
+      "file": "56916_8.webp",
+      "alt": "EcoFlow 160W Solar Panel — изглед 8"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "keySpecStrip",
+      "anchorLabel": "Преглед",
+      "items": [
+        {
+          "value": "160W",
+          "label": "мощност"
+        },
+        {
+          "value": "21–22%",
+          "label": "ефективност на преобразуване"
+        },
+        {
+          "value": "0–180°",
+          "label": "регулируема стойка-калъф"
+        },
+        {
+          "value": "7 кг",
+          "label": "тегло"
+        },
+        {
+          "value": "MC4",
+          "label": "конектор"
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Панелът",
+      "heading": "Сгъваем соларен панел 160W за електроцентралите EcoFlow",
+      "body": "Изработен от ефективни монокристални силициеви клетки с 21–22% ефективност на преобразуване, панелът зарежда портативните електроцентрали EcoFlow от сериите DELTA и RIVER през MC4 кабела. С паралелния кабел се свързват няколко панела за още по-бързо зареждане.",
+      "image": "56916_1.webp",
+      "imageAlt": "Панелът, разгънат"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-left",
+      "theme": "light",
+      "anchorLabel": "Стойка",
+      "heading": "Калъф, който е и стойка",
+      "body": "Панелът тежи 7 кг и се пренася в калъфа от комплекта, който служи и за стойка — с гумената дръжка и гъвкавата конзола ъгълът се нагласява от 0° до 180°, за най-добър ъгъл към слънцето.",
+      "image": "56916_2.webp",
+      "imageAlt": "Панелът на стойката-калъф"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-right",
+      "theme": "light",
+      "anchorLabel": "Издръжливост",
+      "heading": "Издържа на всякакво време",
+      "body": "Безшевният панел е устойчив на прах и вода — потопяем до един метър за 30 минути, а ETFE филмът предпазва от ултравиолетови лъчи. Идеален за дейности на открито.",
+      "image": "56916_3.webp",
+      "imageAlt": "Панелът отблизо"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow 160W соларен панел",
+          "qty": 1,
+          "image": "56916_1.webp",
+          "imageAlt": "EcoFlow 160W Solar Panel"
+        },
+        {
+          "name": "Оригинална чанта за пренасяне, която става стойка",
+          "qty": 1,
+          "image": "56916_2.webp",
+          "imageAlt": "Чанта-стойка"
+        },
+        {
+          "name": "Ръководство за употреба",
+          "qty": 1,
+          "image": "kutiya-rakovodstvo.webp",
+          "imageAlt": "Ръководство за употреба"
+        }
+      ],
+      "_iztochnik": "Списъкът „В комплекта“ от dice.bg."
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "footnotes",
+      "items": [
+        {
+          "text": "Соларният панел не е батерия и не може да задържа заряд. За използване само при пряка слънчева светлина."
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Общи",
+      "rows": [
+        {
+          "label": "Номинална мощност",
+          "value": "160W (±5W)"
+        },
+        {
+          "label": "Тип клетки",
+          "value": "монокристален силиций"
+        },
+        {
+          "label": "Ефективност",
+          "value": "21–22%"
+        },
+        {
+          "label": "Конектор",
+          "value": "MC4"
+        },
+        {
+          "label": "Тегло",
+          "value": "7 кг"
+        },
+        {
+          "label": "Размери разгънат",
+          "value": "157 × 68 × 2,4 см"
+        },
+        {
+          "label": "Размери сгънат",
+          "value": "42 × 68 × 2,4 см"
+        },
+        {
+          "label": "Работна температура",
+          "value": "−20 до 85 °C"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Електрически параметри",
+      "rows": [
+        {
+          "label": "Напрежение на празен ход",
+          "value": "21,4V (Vmp 18,2V)"
+        },
+        {
+          "label": "Ток на късо съединение",
+          "value": "9,6A (Imp 8,8A)"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/6/56916_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/6/56916_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/6/56916_3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/6/56916_4.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/6/56916_5.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/6/56916_6.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/6/56916_7.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/6/56916_8.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Баркодът в dice е записан с водеща нула (04897082663089); в продукта е без нея (4897082663089, както е в описанието на dice). Търсенето в dice го намира само с нулата.",
+    "Няма жива страница в eu.ecoflow.com за този (стар) модел — съдържанието е по dice.bg.",
+    "В dice е „изчерпан, по заявка“ — availability: on-request (вж. task-availability.md).",
+    "Снимките са от dice (8 от 12)."
+  ]
+}

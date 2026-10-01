@@ -1,0 +1,697 @@
+{
+  "_bележка": "Съдържание за внасяне. Пуска се с: npm run import:product stream-ultra-x. Снимките се свалят по линковете в _svali_snimki (галерия и секции); преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "eu.ecoflow.com/products/stream-ultra-x, прочетено на 29.09.2026. Цена, SKU и EAN — dice.bg. Спецификациите са 1:1 от „Specs — EcoFlow STREAM Ultra X“; сравнителната таблица — от „Specs“ на четирите модела.",
+  "produkt": {
+    "title": "EcoFlow STREAM Ultra X",
+    "slug": "stream-ultra-x",
+    "categorySlug": "stream-seriya",
+    "productType": "hero",
+    "tagline": "Балконска соларна батерия · 3,84 kWh, 4 MPPT / 2000W PV, до 23 kWh",
+    "badge": "none",
+    "price": 1533.36,
+    "compareAtPrice": 1840.14,
+    "externalUrl": "https://dice.bg/v-nshna-baterija-za-domashna-sistema-s-vgraden-mikroinvertor-ecoflow-stream-ultra-x-battery-3-84kwh-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "73424",
+    "ean": "4895251652933",
+    "description": "Соларна батерия с вграден микроинвертор за балкон и дом с двоен капацитет: 3,84 kWh LFP (6000 цикъла, 10 години гаранция), 4 MPPT с до 2000W соларен вход, 1200W AC изход (2300W в паралел, в мрежа), разширяема до 23 kWh с шест устройства. Plug & play без електротехник, IP65, под 30 dB, самозатопляне до −20 °C, AI режим за динамични цени, сменяеми предни панели.",
+    "highlights": [
+      {
+        "title": "3,84 kWh, разширяем до 23 kWh",
+        "text": "Двоен капацитет спрямо STREAM Ultra; до 6 устройства."
+      },
+      {
+        "title": "4 MPPT, 2000W соларен вход",
+        "text": "Клетки за слаба светлина — до 1 час повече добив на ден."
+      },
+      {
+        "title": "До 2300W AC изход",
+        "text": "В паралел с второ устройство — мощни уреди 100% от слънце."
+      },
+      {
+        "title": "Plug & play",
+        "text": "Без електротехник; съвместим с Tibber, Matter и Shelly."
+      },
+      {
+        "title": "LFP, 15 години живот, 10 години гаранция",
+        "text": "IP65, под 30 dB, работа до −20 °C."
+      },
+      {
+        "title": "Сменяеми предни панели",
+        "text": "Натурално дърво или матово черно."
+      }
+    ],
+    "metaTitle": "EcoFlow STREAM Ultra X — соларна батерия с микроинвертор 3,84 kWh",
+    "metaDescription": "Балконска соларна батерия STREAM Ultra X: 3,84 kWh LFP, 4 MPPT / 2000W PV, до 2300W AC изход, разширяема до 23 kWh, plug & play, IP65, 10 години гаранция. Официален дистрибутор за България."
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-stream-ultra-x-1183190545.png",
+      "alt": "EcoFlow STREAM Ultra X — под ъгъл"
+    },
+    {
+      "file": "ecoflow-stream-ultra-x-1183190541.png",
+      "alt": "EcoFlow STREAM Ultra X — отпред"
+    },
+    {
+      "file": "ecoflow-stream-ultra-x-1183190546.png",
+      "alt": "EcoFlow STREAM Ultra X — изглед 3"
+    },
+    {
+      "file": "ecoflow-stream-ultra-x-1183190544.png",
+      "alt": "EcoFlow STREAM Ultra X — изглед 4"
+    },
+    {
+      "file": "ecoflow-stream-ultra-x-1183190543.png",
+      "alt": "EcoFlow STREAM Ultra X — изглед 5"
+    },
+    {
+      "file": "ecoflow-stream-ultra-x-1183190542.png",
+      "alt": "EcoFlow STREAM Ultra X — изглед 6"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Максимално използване на слънцето, максимални спестявания",
+      "body": "",
+      "image": "PC_8247c93b-2dce-4443-9ac5-49cb25aa29c9.png",
+      "imageAlt": "EcoFlow STREAM Ultra X — основни предимства"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "2300W",
+      "layout": "tabs-top",
+      "heading": "2300W изход за пиковите моменти",
+      "intro": "Когато свържете две устройства паралелно, изходът стига до 2300W (в мрежа) — мощните уреди работят 100% от слънчева енергия.",
+      "tabs": [
+        {
+          "label": "Две устройства",
+          "image": "tab_02_PC.png",
+          "imageAlt": "Две устройства STREAM — 2300W изцяло от слънце",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Едно устройство",
+          "image": "tab_01_PC.png",
+          "imageAlt": "Едно устройство STREAM — 1200W от слънце + 1100W от мрежата",
+          "caption": "",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Капацитет",
+      "heading": "Енергия от залез до изгрев: от 3,84 kWh до 23 kWh",
+      "body": "EcoFlow STREAM Ultra X надхвърля стандартите в бранша — улавя излишната слънчева енергия през деня, за да ви захранва през нощта, и лесно се мащабира според нуждите ви.",
+      "image": "PC_7eeb71b5-642f-4000-83e1-c02bafcf4d85.jpg",
+      "imageAlt": "3,84 kWh с едно устройство / 23 kWh с шест"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Разширяване",
+      "layout": "tabs-top",
+      "heading": "Два начина за разширяване според нуждите",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Две устройства в паралел",
+          "image": "tab_01_PC.jpg",
+          "imageAlt": "Две устройства STREAM в паралел до пералня",
+          "caption": "Свържете две устройства STREAM или STREAM Ultra X с допълнителна батерия STREAM чрез паралелен кабел. Така захранвате мощни уреди до 2300W (в мрежа) — изцяло от слънце.",
+          "rows": []
+        },
+        {
+          "label": "Plug-and-play децентрализирана соларна мрежа",
+          "image": "tab_02_PC.jpg",
+          "imageAlt": "Устройства STREAM в различни стаи",
+          "caption": "",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Соларен вход",
+      "heading": "Уловете всеки лъч, максимум слънце",
+      "body": "Съберете слънчевата енергия по-бързо от всякога. С четири модерни MPPT и цели 2000W соларен вход батерията STREAM улавя и съхранява повече слънчева енергия, по-ефективно.",
+      "image": "PC_63cf3747-aca5-4ee6-a9c1-5a7c60fa5fa1.jpg",
+      "imageAlt": "Четири MPPT входа с кабели"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Облаците и здрачът не спират слънцето ви",
+      "body": "Батерията STREAM ползва технология за слаба светлина и улавя енергия дори при мътно небе — до един час повече соларен добив на ден в сравнение със средното за бранша.",
+      "image": "PC_76859d43-817b-49cc-a7a0-7881f7e78833.jpg",
+      "imageAlt": "Изгрев, здрач, облаци — работи и при слаба светлина"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Безопасност",
+      "heading": "Безопасност, на която може да разчитате",
+      "subheading": "Вградена в хардуера и софтуера",
+      "subheadingPosition": "below",
+      "body": "",
+      "image": "PC_10e5515b-3dd8-4174-ab5f-0b30ee86f38c.jpg",
+      "imageAlt": "Шест защити и сертификати за сигурност на данните"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Време",
+      "heading": "Готов за всякакво време",
+      "body": "",
+      "image": "PC_6eeba3dc-c5bb-418e-88ad-5541a78878d7.png",
+      "imageAlt": "6000 цикъла, 15 години, 10 години гаранция, LFP; plug & play; 30 dB; −20 °C; IP65"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "AI",
+      "heading": "Енергия с AI — винаги оптимизирана",
+      "body": "EcoFlow OASIS не само отговаря бързо на въпросите ви за управлението на енергията — дава и умен анализ и персонални съвети за оптимизация, за да извлечете максимума от системата си.",
+      "image": "PC_f638d317-c4e8-4067-b7b2-d9553e21ab3e.jpg",
+      "imageAlt": "Функциите на приложението EcoFlow"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "AI режим: по-умна енергия при динамични цени²",
+      "body": "AI режимът на EcoFlow анализира огромни обеми данни — динамични тарифи, соларни прогнози, прогнозна консумация и състояние на батерията — и може да повиши годишните ви спестявания с до 29%.\n\nАко системата предвиди облачно време, автоматично зарежда батерията в евтините часове, за да имате достатъчно енергия за пиковите вечерни часове — максимални спестявания, без да правите нищо.\n\n* За най-добри резултати комбинирайте AI режима с умен електромер.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Умен дом",
+      "heading": "Хармония в екосистемата на EcoFlow",
+      "subheading": "Съвместим с умния електромер и умния щепсел на EcoFlow",
+      "subheadingPosition": "below",
+      "body": "Пълен контрол с умните електромери и щепсели на EcoFlow — нищо не се губи. Свързан с умен електромер EcoFlow, STREAM комуникира с него директно, дори офлайн, и автоматично нагласява изхода към домашната мрежа в реално време, с минимално закъснение.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Хармония между марките",
+      "body": "EcoFlow OASIS събира устройства на трети производители с протоколи Tibber, Matter и Shelly в една обща платформа. По-просто и интуитивно, без прескачане между няколко платформи и приложения.",
+      "image": "02_PC_a7f4f4d2-fef0-42ab-956a-046055d6ea14.jpg",
+      "imageAlt": "Лога на съвместими марки и платформи"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Дизайн",
+      "heading": "Шедьовър на индустриалния дизайн",
+      "body": "Изработен от еко-текстурирани материали без боя за по-малък въглероден отпечатък. Устойчивата на надраскване монолитна конструкция е дълготрайна, а сменяемите предни панели — топло натурално дърво и матово черно — се вписват във всеки интериор.\n\nСтил „топло дърво“, ефектно и елегантно: с реалистичната си дървесна текстура този панел носи уютна топлина във всяка стая.",
+      "image": "PC_01_b5367db9-914e-4388-87dc-3c30ac0bc802.jpg",
+      "imageAlt": "STREAM Ultra X с дървен преден панел"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Детайли",
+      "heading": "Разгледайте детайлите на STREAM Ultra X",
+      "body": "",
+      "image": "PC_7f7c3f03-53eb-4765-bc4d-a52ff4905c8e.jpg",
+      "imageAlt": "AC контакти, паралелен и мрежов терминал, 4 MPPT; 420 × 294 × 460 мм"
+    },
+    {
+      "blockType": "comparisonTable",
+      "anchorLabel": "Сравнение",
+      "heading": "Разгледайте моделите STREAM",
+      "intro": "",
+      "columns": [
+        {
+          "label": "EcoFlow STREAM Ultra X",
+          "tagline": "3,84 kWh",
+          "highlight": true,
+          "productSlug": "stream-ultra-x"
+        },
+        {
+          "label": "EcoFlow STREAM Ultra",
+          "tagline": "1,92 kWh",
+          "productSlug": "stream-ultra"
+        },
+        {
+          "label": "EcoFlow STREAM Pro",
+          "tagline": "1,92 kWh",
+          "productSlug": "stream-pro"
+        },
+        {
+          "label": "EcoFlow STREAM Max",
+          "tagline": "1,92 kWh"
+        }
+      ],
+      "rows": [
+        {
+          "label": "Капацитет",
+          "values": [
+            "3,84 kWh",
+            "1,92 kWh",
+            "1,92 kWh",
+            "1,92 kWh"
+          ]
+        },
+        {
+          "label": "MPPT",
+          "values": [
+            "4",
+            "4",
+            "3",
+            "2"
+          ]
+        },
+        {
+          "label": "Соларен (PV) вход",
+          "values": [
+            "2000W (500W × 4)",
+            "2000W (500W × 4)",
+            "1500W (500W × 3)",
+            "1000W (500W × 2)"
+          ]
+        },
+        {
+          "label": "AC зареждане",
+          "values": [
+            "1200W",
+            "1050W",
+            "1050W",
+            "1050W"
+          ]
+        },
+        {
+          "label": "AC изход",
+          "values": [
+            "1200W",
+            "1200W",
+            "1200W",
+            "1200W"
+          ]
+        },
+        {
+          "label": "Максимална мощност на уредите",
+          "values": [
+            "2300W (10A)",
+            "2300W (10A)",
+            "2300W (10A)",
+            "2300W (10A)"
+          ]
+        },
+        {
+          "label": "Тегло",
+          "values": [
+            "38,8 кг",
+            "23,1 кг",
+            "22,8 кг",
+            "22,0 кг"
+          ]
+        },
+        {
+          "label": "Размери",
+          "values": [
+            "420 × 294 × 460 мм",
+            "284 × 255 × 458 мм",
+            "284 × 255 × 458 мм",
+            "284 × 255 × 458 мм"
+          ]
+        },
+        {
+          "label": "Гаранция",
+          "values": [
+            "10 години",
+            "10 години",
+            "10 години",
+            "10 години"
+          ]
+        }
+      ],
+      "_iztochnik": "Таблицата „Explore STREAM Ultra X Details“ показва първите 3 реда; останалите са от таблиците „Specs“ на четирите модела."
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията — STREAM Ultra X",
+      "items": [
+        {
+          "name": "STREAM Ultra X × 800W",
+          "qty": 1,
+          "image": "Ultra_X.png",
+          "imageAlt": "EcoFlow STREAM Ultra X"
+        },
+        {
+          "name": "Удължителен кабел STREAM за соларен панел (2,95 м)",
+          "qty": 8,
+          "image": "03_EcoFlow_STREAM_Solar_Panel_Extension_Cable_2.95m_d36041d1-3ff4-4b8b-aea3-342bb12864a4.png",
+          "imageAlt": "Удължителен кабел за соларен панел"
+        },
+        {
+          "name": "Кабел STREAM AC (1,5 м)",
+          "qty": 1,
+          "image": "04_01_EU__Stream_AC_Cable_1.5m_b4a7d5e0-db66-467a-beb3-cc497101a0c4.png",
+          "imageAlt": "Кабел STREAM AC (1,5 м)"
+        },
+        {
+          "name": "Ключ за PV конектори",
+          "qty": 1,
+          "image": "05_PV_Wrench_2157d0a5-766c-4ab0-a9f0-2ef1faabe06c.png",
+          "imageAlt": "Ключ за PV конектори"
+        },
+        {
+          "name": "Монтажна скоба",
+          "qty": 1,
+          "image": "08_mounting_bracket.png",
+          "imageAlt": "Монтажна скоба"
+        },
+        {
+          "name": "Заключваща скоба",
+          "qty": 1,
+          "image": "07_locking_bracket.png",
+          "imageAlt": "Заключваща скоба"
+        },
+        {
+          "name": "Инструкции за безопасност",
+          "qty": 1,
+          "image": "11_Safety_Instructions_bf0d7fb5-0d22-4393-8ba1-32f67aefd0bd.png",
+          "imageAlt": "Инструкции за безопасност"
+        },
+        {
+          "name": "Ръководство за монтаж",
+          "qty": 1,
+          "image": "12_Installation_Guide_b8e2163f-ffb1-40f4-8c9c-2bbc97ec92d0.png",
+          "imageAlt": "Ръководство за монтаж"
+        },
+        {
+          "name": "Гаранционна карта",
+          "qty": 1,
+          "image": "10_Warranty_Card_2f6c83cb-9471-4bb0-aff5-c88266c1c9b7.png",
+          "imageAlt": "Гаранционна карта"
+        }
+      ],
+      "_iztochnik": "Секцията „What's in the box - STREAM Ultra X“ на EcoFlow."
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "faqBlock",
+      "anchorLabel": "Въпроси",
+      "heading": "Често задавани въпроси",
+      "items": [
+        {
+          "question": "Каква е разликата между STREAM Ultra X и STREAM Ultra?",
+          "answer": "1. Капацитетът на STREAM Ultra X е 3,84 kWh — два пъти повече от STREAM Ultra. 2. Батерията на Ultra X се зарежда с по-голяма мощност: до 1500W от PV, 1200W от мрежата и 1500W от двете заедно. 3. Смяната на предния панел (DIY Front Case) при Ultra X е различна — вижте ръководството на STREAM Ultra X."
+        },
+        {
+          "question": "Съвместима ли е соларната батерия STREAM с други продукти (включително на други производители)?",
+          "answer": "Преди покупка и употреба с други продукти прочетете списъка за съвместимост в ръководството за употреба."
+        },
+        {
+          "question": "Каква е разликата между STREAM AC и STREAM AC Pro?",
+          "answer": "1. STREAM AC не поддържа разреждане извън мрежата — работи само в мрежа. 2. Максималната мощност на зареждане/разреждане на STREAM AC е 800W. 3. При паралелно свързване STREAM AC и STREAM Max трябва да се свържат към AC контакта на STREAM Max с AC кабел (вж. главата „Разширяване на системата“ в ръководството на STREAM AC). След монтажа настройте окабеляването на системата в приложението. 4. Когато STREAM Max е в паралел с STREAM Ultra/Pro/AC Pro/Ultra X, само едно устройство може да е в края на веригата."
+        },
+        {
+          "question": "Каква е разликата между STREAM Max и STREAM Ultra/Pro?",
+          "answer": "1. Извън мрежата STREAM Max не поддържа разреждане през AC контакта, но може да се зарежда през PV порта. 2. При паралелно свързване STREAM Max и STREAM Max/AC трябва да се свържат към AC контакта на STREAM Max с AC кабел (вж. ръководството на STREAM Max). След монтажа настройте окабеляването в приложението. 3. Когато STREAM Max е в паралел с STREAM Ultra/Pro/AC Pro/Ultra X, само едно устройство може да е в края на веригата."
+        },
+        {
+          "question": "Как работи системата STREAM?",
+          "answer": "Системата дава приоритет на слънчевата енергия. Когда соларният добив не стига за консумацията, батерията автоматично покрива разликата. Ако и това не стига, остатъкът идва от мрежата. Когато соларният добив надвишава консумацията, излишъкът първо се съхранява в батерията, а всичко над това може да се подаде към мрежата — според настройките ви и местните разпоредби."
+        },
+        {
+          "question": "Какво е нужно за балансиране на енергията между няколко устройства STREAM?",
+          "answer": "Всички устройства трябва да са в една и съща мрежа и добавени в едно и също „Пространство“ (Space) в приложението EcoFlow."
+        },
+        {
+          "question": "Трябва ли STREAM да е свързан с Wi-Fi и приложението EcoFlow?",
+          "answer": "За пълната функционалност е нужна връзка с Wi-Fi и приложението EcoFlow. Само Bluetooth или само LAN не поддържат дистанционно управление и история на данните."
+        },
+        {
+          "question": "Нормално ли е устройството да се затопля при работа?",
+          "answer": "Да, повишаването на температурата при работа е нормално и не влияе на живота на продукта. Устройството е минало строги изпитания и има защита от прегряване. За най-добра работа го монтирайте далеч от пряко слънце, с поне 3 см разстояние от стени и предмети и далеч от запалими материали."
+        },
+        {
+          "question": "Мога ли да монтирам STREAM сам?",
+          "answer": "Да — системата може да се монтира и поддържа самостоятелно. (Във Великобритания местните разпоредби изискват кабелът EcoFlow STREAM DIY да се свърже към разпределителното табло от сертифициран електротехник.)"
+        },
+        {
+          "question": "Излишната енергия ще се подава ли към мрежата?",
+          "answer": "Ако изключите защитата срещу подаване към мрежата (feed-in protection) в приложението EcoFlow, излишната соларна енергия ще се подава към мрежата."
+        },
+        {
+          "question": "Как системата продължава да захранва при спиране на тока?",
+          "answer": "От съображения за безопасност и съответствие STREAM автоматично засича аномалия в мрежата и спира да подава ток към нея при прекъсване. Тогава може да включите уредите директно в AC контактите на устройството и да ползвате батерията или слънцето."
+        },
+        {
+          "question": "Мога ли да получа компенсация за подадената към мрежата енергия?",
+          "answer": "Политиките са различни по региони. Обърнете се към местния мрежов оператор по данните за контакт от сметката ви за ток."
+        },
+        {
+          "question": "Може ли да се ползват соларни панели на други производители?",
+          "answer": "Да, стига да отговарят на входния диапазон на PV порта и да са със същия тип конектор. Диапазон на всеки PV порт: работно напрежение 15–60V, работен ток ≤14A."
+        },
+        {
+          "question": "Колко микроинвертора поддържа STREAM? Може ли на други производители?",
+          "answer": "Поради регулаторни ограничения се препоръчва да се свързва не повече от един микроинвертор."
+        },
+        {
+          "question": "При няколко устройства в системата — изчерпва ли се едното, преди да започне другото?",
+          "answer": "Не задължително. Системата може да ползва едното или да разрежда няколко едновременно — по интелигентна стратегия за зареждане и разреждане според заряда на устройствата, консумацията на уредите, реалната схема на свързване и настройките ви в приложението."
+        },
+        {
+          "question": "Какво е функцията AI TOU на STREAM?",
+          "answer": "Приложението EcoFlow ползва динамичните цени на тока от местния доставчик и прилага умна стратегия за зареждане и разреждане според пиковите и извънпиковите цени, за да спести максимално от сметката. Функцията изисква абонамент. Стратегия се генерира само когато разликата между пикова и извънпикова цена е достатъчно голяма — зареждането и разреждането имат загуби, и ако ползата е по-малка от износването на батерията, не се извършват."
+        },
+        {
+          "question": "Мога ли да свържа STREAM към изхода на портативна електроцентрала, или обратното — електроцентрала към контактите на STREAM като допълнителна батерия?",
+          "answer": "Не и не. Портативната електроцентрала може само да се зарежда от STREAM, не да го захранва. За повече капацитет или мощност добавете още устройства STREAM в системата (до 6 в система)."
+        }
+      ]
+    },
+    {
+      "blockType": "footnotes",
+      "items": [
+        {
+          "text": "Оценка на спестяванията (за Германия): годишни спестявания = спестявания от собствена консумация на произведеното + спестявания от използване на излишъка. Производство: PVWatts Calculator; дял на собствена консумация: калкулатор за независимост на HTW Berlin; цена на тока 0,40 €/kWh; използване на излишъка (AI режим, соларна прогноза): 35%. Пример: Ultra X × 6 + 10 × 500W панели (5000W): (5328 kWh × 90% × 0,40 €) + (5328 kWh × 10% × 35% × 0,40 €) = 1993 €. Спестяванията зависят от местоположението, ориентацията на панелите, дневните цени на тока и други фактори."
+        },
+        {
+          "text": "Някои AI функции в приложението EcoFlow изискват платен абонамент. Вижте приложението за плановете и наличността."
+        },
+        {
+          "text": "Приложението EcoFlow ползва метеорологични данни от Solcast — над 100 милиона операции на час, прогнози с точност до 94% и хоризонт три дни."
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Батерия и мощност",
+      "rows": [
+        {
+          "label": "Капацитет",
+          "value": "3,84 kWh"
+        },
+        {
+          "label": "Живот",
+          "value": "6000 цикъла до 70% капацитет"
+        },
+        {
+          "label": "AC зареждане",
+          "value": "1200W, 10A"
+        },
+        {
+          "label": "AC изход",
+          "value": "1200W"
+        },
+        {
+          "label": "AC изход към мрежата",
+          "value": "800W"
+        },
+        {
+          "label": "Максимална мощност на уредите",
+          "value": "2300W (10A)"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Соларен вход",
+      "rows": [
+        {
+          "label": "MPPT",
+          "value": "4"
+        },
+        {
+          "label": "PV вход",
+          "value": "2000W (500W × 4)"
+        },
+        {
+          "label": "PV входно напрежение",
+          "value": "максимум 60V DC"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Общи",
+      "rows": [
+        {
+          "label": "Работна температура",
+          "value": "−20 до 55 °C"
+        },
+        {
+          "label": "Самозатопляне на батерията",
+          "value": "активиране на зареждането при ниска температура (≤5 °C)"
+        },
+        {
+          "label": "Свързаност",
+          "value": "Wi-Fi / Bluetooth"
+        },
+        {
+          "label": "Клас на защита",
+          "value": "IP65"
+        },
+        {
+          "label": "Нето тегло",
+          "value": "38,8 кг"
+        },
+        {
+          "label": "Размери",
+          "value": "420 × 294 × 460 мм"
+        },
+        {
+          "label": "Шум",
+          "value": "<30 dB"
+        },
+        {
+          "label": "Гаранция",
+          "value": "10 години"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-x-1183190545.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-x-1183190541.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-x-1183190546.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-x-1183190544.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-x-1183190543.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-x-1183190542.png"
+    ],
+    "sekcii": [
+      "https://eu.ecoflow.com/cdn/shop/files/02_PC_a7f4f4d2-fef0-42ab-956a-046055d6ea14.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/03_EcoFlow_STREAM_Solar_Panel_Extension_Cable_2.95m_d36041d1-3ff4-4b8b-aea3-342bb12864a4.png",
+      "https://eu.ecoflow.com/cdn/shop/files/04_01_EU__Stream_AC_Cable_1.5m_b4a7d5e0-db66-467a-beb3-cc497101a0c4.png",
+      "https://eu.ecoflow.com/cdn/shop/files/05_PV_Wrench_2157d0a5-766c-4ab0-a9f0-2ef1faabe06c.png",
+      "https://eu.ecoflow.com/cdn/shop/files/07_locking_bracket.png",
+      "https://eu.ecoflow.com/cdn/shop/files/08_mounting_bracket.png",
+      "https://eu.ecoflow.com/cdn/shop/files/10_Warranty_Card_2f6c83cb-9471-4bb0-aff5-c88266c1c9b7.png",
+      "https://eu.ecoflow.com/cdn/shop/files/11_Safety_Instructions_bf0d7fb5-0d22-4393-8ba1-32f67aefd0bd.png",
+      "https://eu.ecoflow.com/cdn/shop/files/12_Installation_Guide_b8e2163f-ffb1-40f4-8c9c-2bbc97ec92d0.png",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_01_b5367db9-914e-4388-87dc-3c30ac0bc802.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_10e5515b-3dd8-4174-ab5f-0b30ee86f38c.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_63cf3747-aca5-4ee6-a9c1-5a7c60fa5fa1.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_6eeba3dc-c5bb-418e-88ad-5541a78878d7.png",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_76859d43-817b-49cc-a7a0-7881f7e78833.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_7eeb71b5-642f-4000-83e1-c02bafcf4d85.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_7f7c3f03-53eb-4765-bc4d-a52ff4905c8e.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_8247c93b-2dce-4443-9ac5-49cb25aa29c9.png",
+      "https://eu.ecoflow.com/cdn/shop/files/PC_f638d317-c4e8-4067-b7b2-d9553e21ab3e.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/Ultra_X.png",
+      "https://eu.ecoflow.com/cdn/shop/files/tab_01_PC.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/tab_01_PC.png",
+      "https://eu.ecoflow.com/cdn/shop/files/tab_02_PC.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/tab_02_PC.png"
+    ]
+  },
+  "_prevod_nadpisi": {
+    "PC_8247c93b-2dce-4443-9ac5-49cb25aa29c9.png": {
+      "Break 800W Limits / Up to 2300W Solar Output / Innovation, Certified": "Отвъд лимита от 800W / до 2300W соларен изход / Иновация, сертифицирана",
+      "4MPPT / 2000W Solar Input": "4 MPPT / 2000W соларен вход",
+      "3.84kWh / Scalable up to 23kWh": "3,84 kWh / разширяем до 23 kWh",
+      "AI-Based Home Energy Management System / Self Consumption Mode / AI Mode": "Домашно управление на енергията с AI / режим собствена консумация / AI режим",
+      "Seamless Smart Home Integration / Smart Plug / Smart Meter / EcoFlow Ecosystem": "Интеграция с умния дом / умен щепсел / умен електромер / екосистема EcoFlow",
+      "Low-Light Solar Technology": "Технология за слаба светлина",
+      "2 Scalable Options for Different Needs / Parallel / Distribution": "2 варианта за разширяване / паралелно / разпределено",
+      "15-Year Lifespan / Safe & Durable": "15 години живот / безопасен и издръжлив"
+    },
+    "tab_02_PC.png": {
+      "EcoFlow STREAM Series / Powers appliances up to 2300W using 100% solar energy. / 2300W": "Серия EcoFlow STREAM / захранва уреди до 2300W изцяло от слънце / 2300W",
+      "Traditional Solar Plant System / Powers appliances up to 2300W by combining 800W from solar and 1500W from the grid simultaneously. / 800W 1500W": "Традиционна соларна система / до 2300W, като комбинира 800W от слънце и 1500W от мрежата / 800W 1500W",
+      "Input 2000W / Input 900W / Output 1100W / Output 1200W / Total output 2300W / Grid Input 1500W / Output 800W": "Вход 2000W / Вход 900W / Изход 1100W / Изход 1200W / Общ изход 2300W / Вход от мрежата 1500W / Изход 800W"
+    },
+    "tab_01_PC.png": {
+      "EcoFlow STREAM Series / Powers appliances up to 2300W by combining 1200W from solar and 1100W from the grid simultaneously. / 1200W 1100W": "Серия EcoFlow STREAM / до 2300W, като комбинира 1200W от слънце и 1100W от мрежата / 1200W 1100W",
+      "Traditional Solar Plant System …": "като при „Две устройства“",
+      "Grid Input 1100W / Input 2000W / Output 1200W / Input 800W / Total output 2300W": "Вход от мрежата 1100W / Вход 2000W / Изход 1200W / Вход 800W / Общ изход 2300W"
+    },
+    "PC_7eeb71b5-642f-4000-83e1-c02bafcf4d85.jpg": {
+      "3.84kWh / With a single unit": "3,84 kWh / с едно устройство",
+      "23kWh / With 6 units": "23 kWh / с 6 устройства"
+    },
+    "PC_76859d43-817b-49cc-a7a0-7881f7e78833.jpg": {
+      "…": "като при STREAM Ultra (PC_280903bc…): Изгрев | Здрач | Облаци …"
+    },
+    "PC_10e5515b-3dd8-4174-ab5f-0b30ee86f38c.jpg": {
+      "Flame-Retardant Casing … Smart Battery Management": "като при STREAM Ultra (PC_44c91e89…) — шестте защити",
+      "Privacy & Data Protection / Certified to global standards for security and compliance.": "Защита на данните / Сертифицирано по световни стандарти за сигурност",
+      "TRUSTe / PSTI / NISTIR 8425 / NISTIR 8259 / ISO 9001 / ISO 13849 / SRRC / FCC SDOC": "остават"
+    },
+    "PC_6eeba3dc-c5bb-418e-88ad-5541a78878d7.png": {
+      "6,000 Cycles / 15-Year Lifespan / 10-Year Warranty / LFP Technology": "6000 цикъла / 15 години живот / 10 години гаранция / LFP технология",
+      "Plug & Play, Power Anywhere": "Plug & Play, енергия навсякъде",
+      "Silent Operation 30 dB": "Тиха работа 30 dB",
+      "-20°C Operation / Reliable winter performance with self-heating technology": "Работа при −20 °C / надеждна зима със самозатопляне",
+      "IP65 Water and Dust Resistance": "IP65 защита от вода и прах"
+    },
+    "PC_f638d317-c4e8-4067-b7b2-d9553e21ab3e.jpg": {
+      "FREE features": "БЕЗПЛАТНИ функции",
+      "Activate the EcoFlow App and Pair with Smart Meter to Save More - up to €228/year ADDITIONAL savings on electricity bills / up to 29%/year HIGHER Saving / up to 108% GREATER winter savings": "Активирайте приложението EcoFlow и го сдвоете с умен електромер, за да спестите повече — до 228 €/год. ДОПЪЛНИТЕЛНИ спестявания / до 29%/год. ПО-ВИСОКИ спестявания / до 108% ПОВЕЧЕ през зимата",
+      "Remote Control": "Дистанционно управление",
+      "Automatic Backup / for potential outages": "Автоматичен резерв / при спиране на тока",
+      "AI Mode / Combines weather forecasts, TOU, real consumption patterns to deliver smarter solutions": "AI режим / комбинира метеопрогнози, TOU и реалната консумация за по-умни решения",
+      "Automation / Set up rules that enable your EcoFlow system to respond automatically.": "Автоматизация / правила, по които системата реагира сама",
+      "24/7 Energy Monitor": "24/7 наблюдение на енергията",
+      "Self-Consumption Mode / maximizes solar generation to power your home": "Режим собствена консумация / максимум слънце за дома",
+      "AI Assistant / get real-time answers to your energy questions": "AI асистент / отговори в реално време на въпросите ви за енергията",
+      "Energy Usage Prioritization": "Приоритизиране на консумацията",
+      "Eco Energy Program / Turn every kilowatt-hour into rewards, savings, and bragging rights. (coming soon in September)": "Програма Eco Energy / всеки киловатчас — награди и спестявания (скоро)"
+    },
+    "PC_7f7c3f03-53eb-4765-bc4d-a52ff4905c8e.jpg": {
+      "AC Outlets / Parallel Terminal / Grid Terminal / 4MPPT": "AC контакти / Паралелен терминал / Мрежов терминал / 4 MPPT",
+      "420mm / 294mm / 460mm": "420 мм / 294 мм / 460 мм"
+    }
+  },
+  "_neyasni": [
+    "Пет секции при EcoFlow са само видео (2300W — обзор; AI режим; Self-Powered; Ecosystem Harmony; How to Install) — направени са без снимка (image: \"\") с текста си, или пропуснати, когато нямат текст (How to Install).",
+    "Секцията „2 Ways to Scale“: втората карта („Plug-and-Play Decentralised Solar Network“) при EcoFlow е без текст — оставена е без caption.",
+    "Разделът „Explore STREAM Ultra X Details“ на EcoFlow има картинки на четирите модела (Ultra_X_medium, 01_STREAM_Ultra_medium…) — в нашата сравнителна таблица колоните Ultra X / Ultra / Pro се вързват към продуктите (productSlug), Max е без снимка.",
+    "Снимките в кутията за Ultra X ползват версиите с нови имена на инструкциите (11_Safety_Instructions_bf0d7fb5…, 12_Installation_Guide_b8e2163f…) — както на страницата на Ultra X.",
+    "В dice.bg е „изчерпан, по заявка“ → availability: on-request."
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "_bележка": "Съдържание за внасяне. Пуска се с: npm run import:product solaren-panel-nextgen-220w-bifacial. Снимките се свалят по линковете в _svali_snimki (галерия и секции); преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg (описание и спецификации), прочетено на 29.09.2026. Няма страница в eu.ecoflow.com. Текстовете са преразказани на естествен български по фактите от dice; числата са само от dice.",
+  "produkt": {
+    "title": "EcoFlow NextGen 220W Bifacial Portable Solar Panel",
+    "slug": "solaren-panel-nextgen-220w-bifacial",
+    "categorySlug": "sgavaemi-paneli",
+    "productType": "hero",
+    "tagline": "Сгъваем двулицев соларен панел · 220W, TOPCon, 7 кг, IP68 (предишно поколение)",
+    "badge": "none",
+    "price": 399,
+    "compareAtPrice": 510.78,
+    "externalUrl": "https://dice.bg/sg-vaem-solaren-panel-zarezhdasch-direktno-ot-sl-nceto-ecoflow-nextgen-220w-bifacial-portable-solar-panel-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "72901",
+    "ean": "4895251614962",
+    "description": "Сгъваем двулицев соларен панел EcoFlow NextGen 220W: 220W отпред плюс задна страна за разсеяната светлина, N-тип TOPCon клетки с до 25% ефективност, вградена стойка 30/60/90°, соларен водач, IP68 и ETFE филм, 7 кг. С XT60i кабел и чанта за пренасяне в комплекта; MC4 конектор за всякакви електроцентрали със соларен вход.",
+    "highlights": [
+      {
+        "title": "Двулицев дизайн",
+        "text": "220W отпред; задната страна улавя разсеяната светлина."
+      },
+      {
+        "title": "До 25% ефективност",
+        "text": "N-тип TOPCon монокристални клетки."
+      },
+      {
+        "title": "Стойка 30/60/90° и соларен водач",
+        "text": "Вградени; точен ъгъл към слънцето."
+      },
+      {
+        "title": "IP68 и ETFE филм",
+        "text": "Потопяем до 1 м за 30 минути; защита от UV."
+      },
+      {
+        "title": "XT60i кабел и чанта в комплекта",
+        "text": "MC4 конектор — работи с всички електроцентрали със соларен вход."
+      }
+    ],
+    "metaTitle": "EcoFlow NextGen 220W Bifacial — сгъваем двулицев соларен панел 220W",
+    "metaDescription": "Двулицев сгъваем соларен панел 220W с TOPCon клетки, до 25% ефективност, стойка 30/60/90°, IP68, XT60i кабел и чанта. Официален дистрибутор за България."
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-nextgen-220w-bifacial-portable-solar-panel7_1.webp",
+      "alt": "EcoFlow NextGen 220W Bifacial Portable Solar Panel — разгънат със стойка"
+    },
+    {
+      "file": "ecoflow-nextgen-220w-bifacial-portable-solar-panel0_1.webp",
+      "alt": "EcoFlow NextGen 220W Bifacial Portable Solar Panel — под ъгъл"
+    },
+    {
+      "file": "ecoflow-nextgen-220w-bifacial-portable-solar-panel12_1.webp",
+      "alt": "EcoFlow NextGen 220W Bifacial Portable Solar Panel — отпред"
+    },
+    {
+      "file": "ecoflow-nextgen-220w-bifacial-portable-solar-panel5_1.webp",
+      "alt": "EcoFlow NextGen 220W Bifacial Portable Solar Panel — отзад"
+    },
+    {
+      "file": "ecoflow-nextgen-220w-bifacial-portable-solar-panel6_1.webp",
+      "alt": "EcoFlow NextGen 220W Bifacial Portable Solar Panel — детайл"
+    },
+    {
+      "file": "ecoflow-nextgen-220w-bifacial-portable-solar-panel2_1.webp",
+      "alt": "EcoFlow NextGen 220W Bifacial Portable Solar Panel — изглед 6"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "keySpecStrip",
+      "anchorLabel": "Преглед",
+      "items": [
+        {
+          "value": "220W",
+          "label": "предна страна"
+        },
+        {
+          "value": "до 25%",
+          "label": "ефективност на преобразуване"
+        },
+        {
+          "value": "IP68",
+          "label": "водоустойчивост"
+        },
+        {
+          "value": "7,0 кг",
+          "label": "тегло"
+        },
+        {
+          "value": "MC4",
+          "label": "универсален конектор"
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Двулицев",
+      "heading": "Двулицев соларен панел от следващо поколение",
+      "body": "Двулицевият сгъваем соларен панел EcoFlow 220W максимизира добива благодарение на двустранния си дизайн: 220W основна мощност отпред и задна страна, която улавя разсеяната околна светлина. Така събира повече светлина от традиционните еднолицеви панели. N-тип TOPCon монокристалните клетки дават до 25% ефективност на преобразуване.",
+      "image": "ecoflow-nextgen-220w-bifacial-portable-solar-panel7_1.webp",
+      "imageAlt": "Панелът, разгънат на стойката"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-left",
+      "theme": "light",
+      "anchorLabel": "Стойка",
+      "heading": "Вградена стойка и соларен водач",
+      "body": "Вградената стойка се нагласява лесно на 30°, 60° или 90°. Вграденият водач за ъгъла към слънцето ви показва кога сянката е в центъра — тогава панелът е перпендикулярен на най-силните лъчи. С включения XT60i кабел зарежда електроцентралите на EcoFlow с до 220W; MC4 конекторът го прави съвместим и с други електроцентрали със соларен вход.",
+      "image": "ecoflow-nextgen-220w-bifacial-portable-solar-panel0_1.webp",
+      "imageAlt": "Панелът под ъгъл"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-right",
+      "theme": "light",
+      "anchorLabel": "Издръжливост",
+      "heading": "Създаден за приключения",
+      "body": "Безшевният панел е потопяем до един метър за 30 минути (IP68), а ETFE филмът предпазва от ултравиолетови лъчи. Свързвайте няколко панела последователно или паралелно за още по-бързо зареждане. В комплекта има оригинална чанта за пренасяне.",
+      "image": "ecoflow-nextgen-220w-bifacial-portable-solar-panel5_1.webp",
+      "imageAlt": "Задната страна на панела"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow NextGen 220W Bifacial соларен панел",
+          "qty": 1,
+          "image": "ecoflow-nextgen-220w-bifacial-portable-solar-panel7_1.webp",
+          "imageAlt": "EcoFlow NextGen 220W Bifacial Portable Solar Panel"
+        },
+        {
+          "name": "Кабел EcoFlow XT60i",
+          "qty": 1,
+          "image": "kutiya-kabel.webp",
+          "imageAlt": "Кабел EcoFlow XT60i"
+        },
+        {
+          "name": "Оригинална чанта за пренасяне",
+          "qty": 1,
+          "image": "ecoflow-nextgen-220w-bifacial-portable-solar-panel12_1.webp",
+          "imageAlt": "Чанта за пренасяне"
+        },
+        {
+          "name": "Ръководство за употреба",
+          "qty": 1,
+          "image": "kutiya-rakovodstvo.webp",
+          "imageAlt": "Ръководство за употреба"
+        }
+      ],
+      "_iztochnik": "Списъкът „В комплекта“ от dice.bg. Снимката на чантата липсва — засега е сложена снимка на панела (names[2]); смени я в админа, ако намериш снимка на чантата."
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "footnotes",
+      "items": [
+        {
+          "text": "Соларният панел не е батерия и не може да задържа заряд. За използване само при пряка слънчева светлина."
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Общи",
+      "rows": [
+        {
+          "label": "Номинална мощност",
+          "value": "220W (±5W) предна страна"
+        },
+        {
+          "label": "Тип клетки",
+          "value": "N-тип TOPCon монокристален силиций"
+        },
+        {
+          "label": "Ефективност",
+          "value": "25%"
+        },
+        {
+          "label": "Конектор",
+          "value": "MC4 универсален фотоволтаичен"
+        },
+        {
+          "label": "Водоустойчивост",
+          "value": "IP68"
+        },
+        {
+          "label": "Тегло",
+          "value": "7,0 кг"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Електрически параметри",
+      "rows": [
+        {
+          "label": "Напрежение на празен ход",
+          "value": "21,5V (Vmp 18,4V)"
+        },
+        {
+          "label": "Ток на късо съединение",
+          "value": "12,4A (Imp 11,9A) предна страна / 9,9A (Imp 9,5A) задна страна"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel7_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel0_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel12_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel5_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel6_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel2_1.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Няма жива страница в eu.ecoflow.com (само „refurbished“, която показва снимките и спецификациите на новия 220W Lightweight) — съдържанието е по описанието в dice.bg, преразказано; числата са само от dice.",
+    "Описанието в dice си противоречи за задната страна: „155W на гърба“ в текста и „175W за задната част“ в спецификациите — нито едното не е сложено; записана е само предната мощност 220W и токът на задната страна (9,9A), както е в спецификациите на dice.",
+    "Размерите в dice са объркани (сгънат 615 × 2155 × 25 мм, разгънат 615 × 590 × 32 мм — разменени) — не са включени.",
+    "В dice е „изчерпан, по заявка“ — availability: on-request (вж. task-availability.md).",
+    "Снимките са от dice (6 от 13, само продуктови)."
+  ]
+}

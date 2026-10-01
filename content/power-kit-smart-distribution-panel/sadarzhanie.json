@@ -1,0 +1,172 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow AC/DC Smart Distribution Panel",
+    "slug": "power-kit-smart-distribution-panel",
+    "categorySlug": "power-kits",
+    "productType": "accessory",
+    "tagline": "Умен разпределителен панел за Power Kits",
+    "badge": "none",
+    "price": 613.04,
+    "externalUrl": "https://dice.bg/razpredelitelen-panel-za-ecoflow-power-hub-ecoflow-power-kit-ac-dc-smart-distribution-panel-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "61563",
+    "ean": "4897082669210",
+    "description": "Умен разпределителен панел за EcoFlow Power Kits — 6 AC и 12 DC позиции, сменяеми предпазители и управление на 6 DC кръга от конзолата или приложението.",
+    "highlights": [
+      {
+        "text": "6 AC и 12 DC позиции"
+      },
+      {
+        "text": "6 DC кръга се управляват от приложението"
+      },
+      {
+        "text": "Маркирани кабели — лесен монтаж"
+      },
+      {
+        "text": "AC вход до 3600W"
+      }
+    ],
+    "metaTitle": "EcoFlow AC/DC Smart Distribution Panel за Power Kits | EcoFlow България",
+    "metaDescription": "Умен разпределителен панел EcoFlow AC/DC за Power Kits — 6 AC и 12 DC позиции, управление от приложението.",
+    "compatibleWith": [
+      "power-kits"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "61563_1.webp",
+      "alt": "EcoFlow AC/DC Smart Distribution Panel — умен разпределителен панел"
+    },
+    {
+      "file": "61563_2.webp",
+      "alt": "EcoFlow AC/DC Smart Distribution Panel — умен разпределителен панел"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Безопасно разпределение на енергията",
+      "body": "Умният разпределителен панел управлява мощността на системата EcoFlow Power Kits и я споделя безопасно между всичките ви уреди.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Лесен монтаж",
+      "body": "Всички кабели в комплекта са маркирани — настройката е бърза и без усилие.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Управление",
+      "heading": "Вие решавате как да разпределите енергията",
+      "body": "Със сменяемите предпазители решавате как да споделите захранването. 6 от DC предпазителите се настройват и управляват от конзолата или приложението EcoFlow, където следите и цялото си потребление.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Power Kit AC/DC Smart Distribution Panel",
+          "qty": 1
+        },
+        {
+          "name": "Ръководство за употреба",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Power Kit AC/DC Smart Distribution Panel"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "ZMM100LD-EU"
+        },
+        {
+          "label": "AC вход",
+          "value": "макс. 16A, 230V, 3600W"
+        },
+        {
+          "label": "DC вход",
+          "value": "макс. 70A"
+        },
+        {
+          "label": "AC изход",
+          "value": "6 AC позиции, макс. 10A всяка"
+        },
+        {
+          "label": "DC изход",
+          "value": "12 DC позиции (6 се управляват от Power Kit Console и приложението)"
+        },
+        {
+          "label": "Защита",
+          "value": "IP21"
+        },
+        {
+          "label": "Сертификати",
+          "value": "UL, FCC, PSE"
+        },
+        {
+          "label": "Работна температура",
+          "value": "−25 °C до 60 °C"
+        },
+        {
+          "label": "Размери",
+          "value": "21 × 35 × 9,9 см"
+        },
+        {
+          "label": "Тегло",
+          "value": "2,6 кг"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow Power Kit Power Hub"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61563_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61563_2.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Официалното име в eu.ecoflow.com е „EcoFlow AC/DC Smart Distribution Panel“ (ZMM100LD-EU); страницата там е само с цена — съдържанието е по dice.bg.",
+    "Изисква Power Hub (продава се отделно).",
+    "В dice.bg: по заявка (проверено 01.10.2026)."
+  ]
+}

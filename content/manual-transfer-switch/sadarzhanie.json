@@ -1,0 +1,138 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg (няма страница в eu.ecoflow.com)",
+  "produkt": {
+    "title": "EcoFlow Manual Transfer Switch",
+    "slug": "manual-transfer-switch",
+    "categorySlug": "svarzvane-kam-el-tabloto",
+    "productType": "accessory",
+    "tagline": "Ръчен превключвател за свързване на DELTA Pro 3 към ел. таблото",
+    "badge": "none",
+    "price": 255.13,
+    "externalUrl": "https://dice.bg/r-chen-prevkljuchvatel-k-m-el-tablo-za-ecoflow-delta-pro-3-power-station-ecoflow-manual-trasfer-switch-bjal",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "73023",
+    "ean": "4895251629645",
+    "description": "Ръчен превключвател, с който EcoFlow DELTA Pro 3 захранва избрани кръгове от дома при спиране на тока. Монтира се към ел. таблото и предотвратява обратното захранване към мрежата.",
+    "highlights": [
+      {
+        "text": "Свързва DELTA Pro 3 с ел. таблото"
+      },
+      {
+        "text": "Вие избирате кои кръгове да работят"
+      },
+      {
+        "text": "Без обратно захранване към мрежата"
+      },
+      {
+        "text": "Гаранция 24 месеца"
+      }
+    ],
+    "metaTitle": "EcoFlow Manual Transfer Switch за DELTA Pro 3 | EcoFlow България",
+    "metaDescription": "Ръчен превключвател EcoFlow за свързване на DELTA Pro 3 към ел. таблото на дома — резервно захранване за избрани кръгове при спиране на тока.",
+    "compatibleWith": [
+      "delta-pro-3"
+    ],
+    "alsoInCategories": [
+      "drugi-aksesoari"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow_manual_trasfer_switch_for_ecoflow_deltra_pro_3-1.webp",
+      "alt": "EcoFlow Manual Transfer Switch — ръчен превключвател"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Резервно захранване за дома от DELTA Pro 3",
+      "body": "Ръчният превключвател свързва безопасно електроцентралата EcoFlow DELTA Pro 3 с електрическото табло на дома. При спиране на тока превключвате ръчно захранването от мрежата към DELTA Pro 3 и избраните кръгове в къщата продължават да работят.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Вие избирате какво да работи",
+      "body": "Превключвателят е мостът между DELTA Pro 3 и електрическата инсталация на дома. Избирате конкретни кръгове — хладилник, осветление, няколко контакта — и ги захранвате от DELTA Pro 3, докато няма ток.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Без обратно захранване към мрежата",
+      "body": "Превключвателят е проектиран така, че токът от електроцентралата да не се връща обратно в електрическата мрежа. Монтажът в таблото се извършва от квалифициран електротехник.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Manual Transfer Switch",
+          "qty": 1
+        },
+        {
+          "name": "Ръководство за употреба",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Общи",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Manual Transfer Switch"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFA-DELTAPRO3MTS"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow DELTA Pro 3"
+        },
+        {
+          "label": "Цвят",
+          "value": "бял"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_manual_trasfer_switch_for_ecoflow_deltra_pro_3-1.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Продуктът го няма в сайтовете на EcoFlow за Европа — текстът и данните са от dice.bg (правилото „само dice“). Техническите параметри (ток, брой кръгове, размери) не са публикувани — не са добавени.",
+    "В dice.bg името е „Manual Trasfer Switch“ (печатна грешка) — тук е „Transfer“.",
+    "Снимката в dice.bg е само една.",
+    "В dice.bg: Налично на склад (проверено 30.09.2026)."
+  ]
+}

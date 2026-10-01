@@ -1,0 +1,334 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Power Kit Power Hub 5kVA",
+    "slug": "power-kit-power-hub-5kva",
+    "categorySlug": "power-kits",
+    "productType": "hero",
+    "tagline": "Захранващ хъб 5kVA за кемпери, каравани и малки домове — до 45 kWh",
+    "badge": "none",
+    "price": 2964.98,
+    "externalUrl": "https://dice.bg/inovativen-h-b-za-zahranvane-na-malki-domove-ili-karavani-ecoflow-power-kit-power-hub-5kva-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "72634",
+    "ean": "4895251622660",
+    "description": "Захранващ хъб 5000 VA за системи извън мрежата в кемпери, каравани и малки домове: изход до 4000 W (пиково 8000 W), соларен вход до 4800 W, до 9 батерии и 45 kWh, само 48 dB.",
+    "highlights": [
+      {
+        "text": "5000 VA, пиково 8000 W"
+      },
+      {
+        "text": "До 9 батерии и 45 kWh"
+      },
+      {
+        "text": "Соларен вход до 4800 W"
+      },
+      {
+        "text": "Само 48 dB"
+      }
+    ],
+    "metaTitle": "EcoFlow Power Kit Power Hub 5kVA | EcoFlow България",
+    "metaDescription": "EcoFlow Power Kit Power Hub 5kVA — 5000 VA за кемпери и малки домове, до 45 kWh батерии, соларен вход до 4800 W."
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow_power_kit_power_hub_5kva-1.webp",
+      "alt": "EcoFlow Power Kit Power Hub 5kVA — захранващ хъб 5kVA"
+    },
+    {
+      "file": "ecoflow_power_kit_power_hub_5kva-2.webp",
+      "alt": "EcoFlow Power Kit Power Hub 5kVA — захранващ хъб 5kVA"
+    },
+    {
+      "file": "ecoflow_power_kit_power_hub_5kva-3.webp",
+      "alt": "EcoFlow Power Kit Power Hub 5kVA — захранващ хъб 5kVA"
+    },
+    {
+      "file": "ecoflow_power_kit_power_hub_5kva-4.webp",
+      "alt": "EcoFlow Power Kit Power Hub 5kVA — захранващ хъб 5kVA"
+    },
+    {
+      "file": "ecoflow_power_kit_power_hub_5kva-5.webp",
+      "alt": "EcoFlow Power Kit Power Hub 5kVA — захранващ хъб 5kVA"
+    },
+    {
+      "file": "ecoflow_power_kit_power_hub_5kva-6.webp",
+      "alt": "EcoFlow Power Kit Power Hub 5kVA — захранващ хъб 5kVA"
+    },
+    {
+      "file": "ecoflow_power_kit_power_hub_5kva-7.webp",
+      "alt": "EcoFlow Power Kit Power Hub 5kVA — захранващ хъб 5kVA"
+    },
+    {
+      "file": "ecoflow_power_kit_power_hub_5kva-8.webp",
+      "alt": "EcoFlow Power Kit Power Hub 5kVA — захранващ хъб 5kVA"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "5000 VA за живот извън мрежата",
+      "body": "Новият EcoFlow Power Kit 5kVA дава огромните 5000 VA за всяка соларна система извън мрежата в кемпери, каравани и малки домове — и до 45 kWh батерии (продават се отделно) за всичките ви уреди.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Капацитет",
+      "heading": "До 9 батерии и 45 kWh",
+      "body": "Свържете до 9 батерии (продават се отделно) една върху друга — до 45 kWh. За повече от три батерии е нужен EcoFlow Power Dock (продава се отделно). Съвместим е с батериите EcoFlow LFP 2 kWh и 5 kWh.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Мощност",
+      "heading": "Два климатика наведнъж",
+      "body": "С изходна мощност до 4000 W и пикова до 8000 W системата захранва едновременно два климатика за кемпер по 13 500 BTU и други мощни уреди — фритюрници, отоплителни уреди — без плавен стартер.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Тих — само 48 dB",
+      "body": "Само 48 dB при 60% натоварване на инвертора — ползвате го денем и нощем на всеки къмпинг, без да безпокоите съседите.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Зареждане",
+      "heading": "Бързо зареждане отвсякъде",
+      "body": "В дъжд или слънце, у дома или на път — винаги има начин за зареждане. Соларен вход до 4800 W зарежда батерия от 5 kWh почти за 1 час.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Модулна система „включи и работи“",
+      "body": "Подредете още батерии за повече капацитет или включете соларен панел за по-бързо зареждане. Power Hub обединява пет компонента в едно устройство — пести място, пари и усилия по монтажа.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "48V",
+      "heading": "Безопасна 48V система",
+      "body": "48V система произвежда същата енергия като 12V, но през по-тънките проводници минава само една четвърт от тока — значително по-малко загуби на топлина и енергия. Следете всичко в реално време от приложението и конзолата Power Kit Console (продава се отделно).",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Power Kit Power Hub 5kVA",
+          "qty": 1
+        },
+        {
+          "name": "AC кабел за зареждане (4,5 м)",
+          "qty": 1
+        },
+        {
+          "name": "Кабел за зареждане от алтернатор (6 м)",
+          "qty": 1
+        },
+        {
+          "name": "Основен DC изходен кабел 3AWG (4,5 м)",
+          "qty": 2
+        },
+        {
+          "name": "Соларен кабел за зареждане (6 м)",
+          "qty": 2
+        },
+        {
+          "name": "Комплект за монтаж",
+          "qty": 1
+        },
+        {
+          "name": "Ръководство за употреба",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Общи",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Power Kit Power Hub 5kVA"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFMM305PowerHub-HV"
+        },
+        {
+          "label": "Комуникация",
+          "value": "Wi-Fi (2,4 и 5 GHz), Bluetooth"
+        },
+        {
+          "label": "GPS",
+          "value": "да"
+        },
+        {
+          "label": "Защита",
+          "value": "IP20"
+        },
+        {
+          "label": "Размери",
+          "value": "300 × 480 × 151 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "15,7 кг"
+        },
+        {
+          "label": "Гаранция",
+          "value": "60 месеца"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Входове",
+      "rows": [
+        {
+          "label": "AC вход (байпас)",
+          "value": "100–120V, макс. 50A"
+        },
+        {
+          "label": "Батерия 3 / Smart Generator",
+          "value": "40–57,6V, макс. 100A"
+        },
+        {
+          "label": "Алтернатор / соларен вход 1",
+          "value": "13–60V, макс. 100A, макс. 4000W"
+        },
+        {
+          "label": "48V DC изход / Smart Generator (48V)",
+          "value": "40–57,6V, макс. 70A"
+        },
+        {
+          "label": "Алтернатор / соларен вход 2/3",
+          "value": "13–60V, макс. 30A, макс. 1600W"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Изходи",
+      "rows": [
+        {
+          "label": "AC изход (само разреждане)",
+          "value": "120V, 4000W, 5000VA, 60 Hz (пиково 10 kVA)"
+        },
+        {
+          "label": "AC изход (байпас)",
+          "value": "100–120V, макс. 50A, 50/60 Hz"
+        },
+        {
+          "label": "X-Fusion (Power Assist)",
+          "value": "макс. 33,3A, макс. 5000VA"
+        },
+        {
+          "label": "DC изход 12V/24V",
+          "value": "13,6V, макс. 100A, 1360W; 26,4V, макс. 60A, 1584W"
+        },
+        {
+          "label": "48V DC изход / Smart Generator (48V)",
+          "value": "51,2V, макс. 55A"
+        },
+        {
+          "label": "USB-A",
+          "value": "5V, макс. 2,4A"
+        },
+        {
+          "label": "EF BUS (× 2)",
+          "value": "12V, общо макс. 1,2A"
+        },
+        {
+          "label": "Макс. общ изход",
+          "value": "8752W"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Порт за батерия",
+      "rows": [
+        {
+          "label": "Зареждане",
+          "value": "40–57,6V, макс. 100A на порт, общо макс. 270A"
+        },
+        {
+          "label": "Разреждане",
+          "value": "40–57,6V, макс. 100A на порт, общо макс. 181A"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Работна среда",
+      "rows": [
+        {
+          "label": "Работна температура",
+          "value": "−25 °C до 60 °C (намалена мощност над 40 °C)"
+        },
+        {
+          "label": "Влажност",
+          "value": "0–95% RH, без кондензация"
+        },
+        {
+          "label": "Температура на съхранение",
+          "value": "−25 °C до 70 °C"
+        },
+        {
+          "label": "Макс. надморска височина",
+          "value": "<2000 м"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_hub_5kva-1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_hub_5kva-2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_hub_5kva-3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_hub_5kva-4.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_hub_5kva-5.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_hub_5kva-6.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_hub_5kva-7.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_hub_5kva-8.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Продуктът го няма в eu.ecoflow.com — съдържанието е по dice.bg.",
+    "Внимание: в dice.bg част от параметрите са в американския вариант (120V, 60 Hz). Сложени са както са в dice.bg (по правилото „dice е с приоритет“) — провери ги с EcoFlow, преди да пуснем сайта.",
+    "В dice.bg: по заявка (проверено 01.10.2026)."
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Power Kit Power Dock",
+    "slug": "power-kit-power-dock",
+    "categorySlug": "power-kits",
+    "productType": "accessory",
+    "tagline": "Разширителна станция за до 9 батерии към Power Hub",
+    "badge": "none",
+    "price": 449.43,
+    "externalUrl": "https://dice.bg/inovativna-zahranvaschata-stancija-za-ecoflow-power-kit-power-hub-3-6kw-i-power-hub-5kva-ecoflow-power-kit-power-dock-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "72638",
+    "ean": "4895251622653",
+    "description": "Power Dock свързва до 9 батерии EcoFlow LFP към системата Power Kits с един Power Hub — до 45 kWh — и два 48V DC уреда.",
+    "highlights": [
+      {
+        "text": "До 9 батерии и 45 kWh"
+      },
+      {
+        "text": "Два 48V DC изхода"
+      },
+      {
+        "text": "Включи и работи"
+      },
+      {
+        "text": "За Power Hub 3.6kW и 5kVA"
+      }
+    ],
+    "metaTitle": "EcoFlow Power Kit Power Dock | EcoFlow България",
+    "metaDescription": "EcoFlow Power Kit Power Dock — до 9 батерии и 45 kWh към Power Kits, два 48V DC изхода.",
+    "compatibleWith": [
+      "power-kits"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow_power_kit_power_dock-1.webp",
+      "alt": "EcoFlow Power Kit Power Dock — разширителна станция"
+    },
+    {
+      "file": "ecoflow_power_kit_power_dock-2.webp",
+      "alt": "EcoFlow Power Kit Power Dock — разширителна станция"
+    },
+    {
+      "file": "ecoflow_power_kit_power_dock-3.webp",
+      "alt": "EcoFlow Power Kit Power Dock — разширителна станция"
+    },
+    {
+      "file": "ecoflow_power_kit_power_dock-4.webp",
+      "alt": "EcoFlow Power Kit Power Dock — разширителна станция"
+    },
+    {
+      "file": "ecoflow_power_kit_power_dock-5.webp",
+      "alt": "EcoFlow Power Kit Power Dock — разширителна станция"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "До 45 kWh вместо 15 kWh",
+      "body": "Power Dock позволява да добавите до 9 батерии EcoFlow LFP към системата Power Kits с един Power Hub. Самият Power Hub има 3 порта за батерии — до 15 kWh, когато мястото в шкафа е малко. Когато мястото не е проблем, Power Dock разширява капацитета до 45 kWh.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Директно към 48V уреди",
+      "body": "Освен че увеличава капацитета, Power Dock свързва лесно и бързо 48V DC захранване към два уреда. Конекторите EcoFlow са със същия дизайн „включи и работи“ — монтажът на Power Kits е лесен и бърз.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Съвместимост",
+      "heading": "Съвместимост",
+      "body": "Работи с Power Hub 5kVA (Gen 2) и Power Hub 3.6kW (Gen 1). Поддържа батериите EcoFlow LFP 2 kWh и 5 kWh и допълнителните батерии на EcoFlow DELTA 2, DELTA 2 Max и DELTA Pro. Следите го от EcoFlow PowerInsight, конзолата или приложението.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Power Kit Power Dock",
+          "qty": 1
+        },
+        {
+          "name": "Ръководство за употреба",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Power Kit Power Dock"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFMM305PowerDock"
+        },
+        {
+          "label": "Защита",
+          "value": "IP20"
+        },
+        {
+          "label": "Порт за Power Hub",
+          "value": "40–60V, макс. 100A"
+        },
+        {
+          "label": "Вход за батерия 1 и 2",
+          "value": "40–60V, макс. 100A"
+        },
+        {
+          "label": "Вход за батерия 3 / MULTICONNECTION",
+          "value": "40–60V, макс. 100A"
+        },
+        {
+          "label": "48V DC изход 1/2",
+          "value": "40–60V, макс. 55A"
+        },
+        {
+          "label": "Ръчен превключвател за външна батерия",
+          "value": "поддържа се"
+        },
+        {
+          "label": "Работна температура",
+          "value": "−25 °C до 45 °C"
+        },
+        {
+          "label": "Температура на съхранение",
+          "value": "−25 °C до 70 °C"
+        },
+        {
+          "label": "Размери",
+          "value": "143 × 316 × 70 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "1,8 кг"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow Power Kit Power Hub 3.6kW и 5kVA"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_dock-1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_dock-2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_dock-3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_dock-4.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_dock-5.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Продуктът го няма в eu.ecoflow.com — съдържанието е по dice.bg.",
+    "Изисква Power Hub (продава се отделно).",
+    "В dice.bg: по заявка (проверено 01.10.2026)."
+  ]
+}

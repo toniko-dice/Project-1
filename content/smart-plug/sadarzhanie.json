@@ -1,0 +1,225 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "https://eu.ecoflow.com/products/shelly-smart-plug",
+  "produkt": {
+    "title": "EcoFlow × Shelly Smart Plug",
+    "slug": "smart-plug",
+    "categorySlug": "umen-dom",
+    "productType": "accessory",
+    "tagline": "Умен Wi-Fi контакт с измерване на консумацията",
+    "badge": "none",
+    "price": 30.17,
+    "externalUrl": "https://dice.bg/wi-fi-kontakt-za-bezzhichno-upravlenie-ecoflow-smart-plug-2-x-shelly-bjal",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "72656",
+    "ean": "842783168269",
+    "description": "Умен Wi-Fi контакт, който следи консумацията на уреда и го включва автоматично, когато има излишна соларна енергия. Работи със соларната система EcoFlow STREAM и приложението EcoFlow.",
+    "highlights": [
+      {
+        "text": "Автоматично включване при излишна соларна енергия"
+      },
+      {
+        "text": "Следене на консумацията в реално време"
+      },
+      {
+        "text": "Графици, таймери и режим „Отсъствие“"
+      },
+      {
+        "text": "Wi-Fi и Bluetooth, до 12A"
+      }
+    ],
+    "metaTitle": "EcoFlow × Shelly Smart Plug — умен контакт | EcoFlow България",
+    "metaDescription": "Умен контакт EcoFlow × Shelly — следи консумацията и включва уредите, когато има излишна соларна енергия от системата STREAM.",
+    "compatibleWith": [
+      "stream-seriya"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-x-shelly-smart-plug-1183338868.png",
+      "alt": "EcoFlow × Shelly Smart Plug — умен контакт"
+    },
+    {
+      "file": "ecoflow-x-shelly-smart-plug-1170934934.png",
+      "alt": "EcoFlow × Shelly Smart Plug — умен контакт"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Smart Plug — умно включване на уредите",
+      "body": "Защо ви е нужен? Включвате и работи · Следене на мощността на важните уреди в реално време · Автоматично включване според излишната енергия · Умно управление на натоварването със соларната система EcoFlow STREAM",
+      "image": "pc_ksp_eu.png",
+      "imageAlt": "Функциите на Smart Plug"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-left",
+      "theme": "light",
+      "anchorLabel": "Енергия",
+      "heading": "Автоматично разпределение на енергията",
+      "body": "Когато умните контакти са част от балконската соларна система, те следят консумацията на уредите и помагат на микроинвертора да им подаде точно толкова енергия, колкото им трябва. Излишъкът се съхранява в батерията — нищо не се губи.",
+      "image": "pc_Energy_Auto-Allocation_d5c6c448-4ff4-48eb-a382-899c8dedb75d.jpg",
+      "imageAlt": "Разпределение на енергията през деня"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-right",
+      "theme": "light",
+      "anchorLabel": "Приложение",
+      "heading": "Дистанционно управление, графици и таймери",
+      "body": "Когато системата е свързана с интернет, я управлявате от телефона. Включете настолната лампа или вентилатора, преди да се приберете.\n\nЗадайте графици или таймери — уредите се включват и изключват сами, когато поискате, дори без интернет.",
+      "image": "pc_App_Remote_Control.jpg",
+      "imageAlt": "Управление на контакта от приложението"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-left",
+      "theme": "light",
+      "heading": "Следене на енергията в реално време",
+      "body": "Следете консумацията на уредите в реално време и във времето, с подробни отчети в приложението EcoFlow. Така опознавате навиците си и пестите енергия.",
+      "image": "pc_Real-time_Energy_Tracking.jpg",
+      "imageAlt": "Следене на консумацията в приложението"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-right",
+      "theme": "light",
+      "heading": "Режим „Отсъствие“",
+      "body": "Избрани уреди, например лампи, се включват периодично и нередовно — сякаш има някой вкъщи. Подходящо, когато отсъствате за по-дълго — допълнителна сигурност за дома.",
+      "image": "pc_Away_Mode.jpg",
+      "imageAlt": "Режим „Отсъствие“"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Smart Meter × Smart Plug: без подаване към мрежата. Цялата соларна енергия е ваша¹",
+      "body": "Smart Meter следи енергията в дома в реално време и засича всеки излишен ват. Smart Plug автоматично включва уредите, за да се използва всеки излишен ват. Приложението планира излишната енергия и само решава кога и къде да я използва.",
+      "image": "pc_Smart_Meter_x_Smart_Plug_eu.jpg",
+      "imageAlt": "Smart Meter, Smart Plug и приложението"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Още предимства",
+      "body": "",
+      "image": "smart_plug_pc_8.png",
+      "imageAlt": "Предимствата на Smart Plug"
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow × Shelly Smart Plug",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "blockType": "footnotes",
+      "items": [
+        {
+          "text": "След инсталиране на батерия от серията STREAM и съвместим Smart Meter уредите се включват в контактите през съвместими умни контакти Smart Plug — така се включват и изключват отдалечено и по график от приложението EcoFlow и соларната енергия не се губи."
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Тегло",
+          "value": "около 60 г"
+        },
+        {
+          "label": "Размери",
+          "value": "44 × 44 × 70 мм"
+        },
+        {
+          "label": "Напрежение",
+          "value": "220–230V"
+        },
+        {
+          "label": "Ток",
+          "value": "12A"
+        },
+        {
+          "label": "Честота",
+          "value": "50/60 Hz"
+        },
+        {
+          "label": "Работна температура",
+          "value": "−20 °C до 40 °C"
+        },
+        {
+          "label": "Wi-Fi",
+          "value": "2401–2473 MHz, макс. ≤10 dBm"
+        },
+        {
+          "label": "Bluetooth",
+          "value": "2400–2483,5 MHz, макс. ≤4 dBm"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-x-shelly-smart-plug-1183338868.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-x-shelly-smart-plug-1170934934.png"
+    ],
+    "sekcii": [
+      "https://eu.ecoflow.com/cdn/shop/files/pc_ksp_eu.png",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Energy_Auto-Allocation_d5c6c448-4ff4-48eb-a382-899c8dedb75d.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_App_Remote_Control.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Real-time_Energy_Tracking.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Away_Mode.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/pc_Smart_Meter_x_Smart_Plug_eu.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/smart_plug_pc_8.png"
+    ]
+  },
+  "_prevod_nadpisi": {
+    "pc_ksp_eu.png": {
+      "Energy Auto-Allocation": "Автоматично разпределение на енергията",
+      "App Remote Control": "Управление от приложението",
+      "Real-Time Energy Tracking": "Следене на енергията в реално време",
+      "Away Mode": "Режим „Отсъствие“"
+    },
+    "pc_Energy_Auto-Allocation_d5c6c448-4ff4-48eb-a382-899c8dedb75d.jpg": {
+      "Peak Rates": "Върхова тарифа",
+      "Home Usage": "Консумация",
+      "Solar Production": "Соларно производство",
+      "12 AM / 6 AM / 12 PM / 6 PM": "00:00 / 06:00 / 12:00 / 18:00"
+    },
+    "smart_plug_pc_8.png": {
+      "WIFI&Blutooth operated": "Работи с Wi-Fi и Bluetooth",
+      "2 years wrranty": "2 години гаранция",
+      "Over-temperature protection": "Защита от прегряване",
+      "Overload protection": "Защита от претоварване",
+      "Custom power limit": "Задаване на лимит на мощността",
+      "Flame-retardant material": "Негорим материал",
+      "Overcurrent protection": "Защита от свръхток",
+      "Independent safety door": "Независима защитна клапа"
+    }
+  },
+  "_neyasni": [
+    "Официалното име в eu.ecoflow.com е „EcoFlow × Shelly Smart Plug“; в dice.bg е „Smart Plug 2 x Shelly“ (SKU EF-OS-SM002-SMP2SHEL — същият продукт).",
+    "Баркодът 842783168269 е 12-цифрен (UPC) — записан както е даден.",
+    "Снимката „Smart Meter × Smart Plug“ е една и съща при Smart Meter и Smart Plug — преведи я веднъж.",
+    "В dice.bg: по заявка (проверено 30.09.2026)."
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "https://eu.ecoflow.com/products/delta-pro-remote-control + dice.bg",
+  "produkt": {
+    "title": "EcoFlow DELTA Pro Remote Control",
+    "slug": "delta-pro-remote-control",
+    "categorySlug": "drugi-aksesoari",
+    "productType": "accessory",
+    "tagline": "Дистанционно управление с дисплей за EcoFlow DELTA Pro",
+    "badge": "none",
+    "price": 111.97,
+    "externalUrl": "https://dice.bg/distancionno-upravlenie-za-ecoflow-delta-pro-elektrostancija-ecoflow-delta-pro-remote-control-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "60910",
+    "ean": "4897082665793",
+    "description": "Дистанционно управление с дисплей за EcoFlow DELTA Pro — показва всичко от екрана на електроцентралата и включва/изключва изходите. Свързва се през Bluetooth или Ethernet кабел.",
+    "highlights": [
+      {
+        "text": "Втори екран за DELTA Pro"
+      },
+      {
+        "text": "Bluetooth или Ethernet кабел"
+      },
+      {
+        "text": "Включва и изключва изходите"
+      },
+      {
+        "text": "Само за EcoFlow DELTA Pro"
+      }
+    ],
+    "metaTitle": "EcoFlow DELTA Pro Remote Control | EcoFlow България",
+    "metaDescription": "Дистанционно управление с дисплей за EcoFlow DELTA Pro — Bluetooth или Ethernet, управление на изходите отдалеч."
+  },
+  "galeriya": [
+    {
+      "file": "60910_1.webp",
+      "alt": "EcoFlow DELTA Pro Remote Control — дистанционно управление"
+    },
+    {
+      "file": "60910_2.webp",
+      "alt": "EcoFlow DELTA Pro Remote Control — дистанционно управление"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Първото по рода си",
+      "body": "Първото дистанционно управление за портативна електроцентрала, създадено за DELTA Pro. Идеално, когато DELTA Pro стои в гаража, склада или под палубата. Свържете го през Bluetooth или Ethernet кабел и получавате втори екран точно там, където ви трябва.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Следете енергията",
+      "body": "Дисплеят показва колко енергия използвате, оставащото време на батерията и всичко останало от екрана на DELTA Pro. От него удобно включвате и изключвате AC изходите, DC изходите или цялото устройство.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Два начина на свързване",
+      "body": "Местите екрана свободно, когато е свързан през Bluetooth, или го монтирате веднъж с кабел, който работи и на по-голямо разстояние.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Управление от разстояние",
+      "body": "След като го настроите, следите и управлявате електроцентралата отдалеч — идеално, когато DELTA Pro е свързан със соларни панели или със зарядно.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow DELTA Pro Remote Control",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Общи",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "DELTA Pro Remote Control"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "DELTAProRC"
+        },
+        {
+          "label": "Свързване",
+          "value": "Bluetooth или Ethernet кабел"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "само EcoFlow DELTA Pro"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60910_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60910_2.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Текстът е от eu.ecoflow.com (там е по-подробен) — няма разминавания с dice.bg. dice.bg няма технически параметри (полето е празно).",
+    "Работи само с първия DELTA Pro, който го няма в сайта → „Съвместим с“ е празно, за да не излиза като аксесоар за DELTA Pro 3.",
+    "В dice.bg: по заявка (проверено 01.10.2026)."
+  ]
+}

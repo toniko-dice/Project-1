@@ -1,0 +1,349 @@
+{
+  "_bележка": "Съдържание за внасяне. Пуска се с: npm run import:product solaren-panel-130w-rvmax-2br. Снимките се свалят по линковете в _svali_snimki (галерия и секции); преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "eu.ecoflow.com/products/2-130w-rvmax-rigid-solar-panel-combo, прочетено на 28.09.2026. Цена, SKU и EAN — dice.bg. Спецификациите са 1:1 от „Specs“ на EcoFlow.",
+  "produkt": {
+    "title": "EcoFlow 130W RVMax Rigid Solar Panel (2 pieces)",
+    "slug": "solaren-panel-130w-rvmax-2br",
+    "categorySlug": "stacionarni-paneli",
+    "productType": "hero",
+    "tagline": "Комплект 2 × 130W RVMax стационарни панела за кемпер · 12 мм, TOPCon 25%, LFB-40",
+    "badge": "none",
+    "price": 408.52,
+    "externalUrl": "https://dice.bg/komplekt-ot-dva-broja-solarni-paneli-zarezhdaschi-ot-sl-nceto-za-karana-ili-kemper-ecoflow-2x130w-rvmax-rigid-solar-panel-combo-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "72714",
+    "ean": "4895251642033",
+    "description": "Комплект от два твърди соларни панела RVMax по 130W, създадени за покрив на кемпер: само 12 мм дебелина (60% по-малко въздушно съпротивление), N-тип TOPCon клетки с до 25% ефективност, 50V дизайн за паралелно свързване на до 10 панела (1300W), нов водоустойчив конектор LFB-40, закалено стъкло 2 мм, IP68. В комплекта — монтажни крачета и кабели.",
+    "highlights": [
+      {
+        "title": "Създаден за кемпери",
+        "text": "Тясна правоъгълна форма за покрива на всеки ван, каравана или кемпер."
+      },
+      {
+        "title": "12 мм ултратънък",
+        "text": "Намалява въздушното съпротивление с 60% при движение."
+      },
+      {
+        "title": "До 10 панела паралелно (1300W)",
+        "text": "50V модулен дизайн, plug-and-play без сложно окабеляване."
+      },
+      {
+        "title": "Нов конектор LFB-40",
+        "text": "Стабилна връзка дори в движение; водоустойчив, 40A."
+      },
+      {
+        "title": "TOPCon до 25%",
+        "text": "Добра работа при слаба светлина и високи температури."
+      },
+      {
+        "title": "IP68, 5 години гаранция, до 30 години живот",
+        "text": ""
+      }
+    ],
+    "metaTitle": "EcoFlow 2 × 130W RVMax Rigid — соларни панели за кемпер",
+    "metaDescription": "Два твърди соларни панела RVMax 130W за покрив на кемпер: 12 мм, TOPCon до 25%, 50V паралелно свързване до 10 панела, LFB-40, IP68. Официален дистрибутор за България."
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-130w-rvmax-rigid-solar-panel-1170443859.webp",
+      "alt": "EcoFlow 130W RVMax Rigid Solar Panel (2 pieces) — два панела"
+    },
+    {
+      "file": "ecoflow-130w-rvmax-rigid-solar-panel-1167844143.png",
+      "alt": "EcoFlow 130W RVMax Rigid Solar Panel (2 pieces) — отпред"
+    },
+    {
+      "file": "ecoflow-130w-rvmax-rigid-solar-panel-1167844162.png",
+      "alt": "EcoFlow 130W RVMax Rigid Solar Panel (2 pieces) — под ъгъл"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Идеално пригоден за кемпери",
+      "subheading": "Аеродинамично соларно решение за всеки покрив на кемпер",
+      "subheadingPosition": "below",
+      "body": "С 30-годишен живот този издръжлив соларен панел с ниска поддръжка е идеален за кемпери.",
+      "image": "1_1_aa048f29-cb7e-42d7-9956-0ffdfe1f44b9.jpg",
+      "imageAlt": "EcoFlow 130W RVMax Rigid Solar Panel (2 pieces) — основни предимства"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-left",
+      "theme": "light",
+      "heading": "Размер за всякакви кемпери",
+      "body": "Тясната правоъгълна форма използва изцяло покрива на почти всеки ван — от клас B до клас A, от каравани до „пети колела“.",
+      "image": "2_1_img_5461ae55-3552-49dc-a6cd-8515c971258b.jpg",
+      "imageAlt": "Различни типове кемпери с панели на покрива"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "image-right",
+      "theme": "light",
+      "heading": "Ултратънък дизайн за ниско въздушно съпротивление",
+      "body": "Само 12 мм — този тънък панел намалява съпротивлението на вятъра с над 60%, докато пътувате, което подобрява разхода и пести гориво. Нашият RVMax панел е с почти 23 мм по-тънък от традиционните модели.",
+      "image": "2_2_img_1a290a20-e3e6-49de-9d1c-f8eed9e0d5ef.jpg",
+      "imageAlt": "Ултратънкият панел"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Модулен",
+      "heading": "Свързвате няколко панела с простотата на plug-and-play",
+      "subheading": "Модулен дизайн",
+      "subheadingPosition": "above",
+      "body": "EcoFlow 130W RVMax твърдият соларен панел е с иновативен модулен дизайн — до 130W мощност, 50V и 3A изходен ток, и свързва до 10 панела в безопасни граници. Работи безпроблемно с различни електроцентрали.",
+      "image": "3_1_img_6d075ebd-4ab5-48a0-97c0-5c74c7534f5d.jpg",
+      "imageAlt": "50V високоволтов дизайн — кемпер с панели"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Безопасна и опростена връзка LFB-40",
+      "body": "",
+      "image": "3_2_img_948c51fa-e4bd-4b0d-a3fe-debcc51ccb3d.jpg",
+      "imageAlt": "Конектор LFB-40"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "TOPCon",
+      "heading": "Максимална мощност, по-дълъг живот",
+      "subheading": "Най-съвременни N-тип TOPCon соларни клетки",
+      "subheadingPosition": "above",
+      "body": "С технологията N-тип TOPCon постигате до 25% ефективност на преобразуване.",
+      "image": "4_1_img_db375512-6661-41f1-b41a-de7bb19f1606.jpg",
+      "imageAlt": "25% ефективност на покрива на ван"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Обновени N-тип TOPCon соларни клетки",
+      "body": "",
+      "image": "4_2_img_11bf20ec-1225-4e1f-a8be-7cabe057bbd9.jpg",
+      "imageAlt": "Сравнение TOPCon срещу монокристални клетки"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Издръжливост",
+      "heading": "Проектиран да издържа на стихиите",
+      "subheading": "Покрит със защитно ламиниране и закалено стъкло",
+      "subheadingPosition": "above",
+      "body": "Създаден за пътя напред: TOPCon клетки с ултратънко закалено стъкло от 2 мм максимизират пропускането на светлина и пазят от отломки, бури и градушка по време на пътуването. Подсилените ъгли на RVMax предпазват от удари и скрити пукнатини, характерни за обикновените панели. С клас IP68 и водоустойчивия конектор LFB-40 панелът дава надеждна енергия при дъжд, прах и трудни условия.",
+      "image": "5_1_img_36fd6c58-6a72-4a73-bc86-cd4d7c230c8f.jpg",
+      "imageAlt": "Издръжлив; 3M Dual Lock; водоустойчив LFB-40"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Съвместимост",
+      "heading": "Просто включвате към енергийната си система",
+      "subheading": "Универсално съвместим соларен кабел",
+      "subheadingPosition": "above",
+      "body": "Свързвате се лесно към соларни системи на трети производители с включения фотоволтаичен конектор (съвместим с MC4). Зареждайте безопасно енергийните си системи и портативни електроцентрали с XT60 конектори — водоустойчива технология без течове, безопасна при докосване и надеждна.",
+      "image": "6_1_img_5e630f50-83b2-4294-bb28-a09de49b7529.jpg",
+      "imageAlt": "Схема на свързване на 10 панела"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Съвместимост",
+      "layout": "image-top",
+      "heading": "Приспособява се към различни енергийни системи за кемпер",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Power Kits",
+          "image": "7_1_img.png",
+          "imageAlt": "EcoFlow Power Kits",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "EcoFlow DELTA и RIVER серии",
+          "image": "7_2_img.png",
+          "imageAlt": "EcoFlow DELTA и RIVER",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Портативни електроцентрали на трети производители",
+          "image": "7_3_img.png",
+          "imageAlt": "Портативни електроцентрали на други марки",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Енергийна система на кемпер",
+          "image": "7_4_img.png",
+          "imageAlt": "Енергийна система на кемпер",
+          "caption": "",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "body": "",
+      "image": "8_1_img_2e5e5e4d-3078-4f5a-a15b-24cf3c3a4ebd.jpg",
+      "imageAlt": "2 панела, монтажни крачета, кабел LFB-40, кабел към XT60, ръководство"
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Общи (за един панел)",
+      "rows": [
+        {
+          "label": "Номинална мощност",
+          "value": "130W (±3W)"
+        },
+        {
+          "label": "Тип клетки и ефективност",
+          "value": "TOPCon, 25%"
+        },
+        {
+          "label": "Размери",
+          "value": "1345 × 524 мм, дебелина 12 мм"
+        },
+        {
+          "label": "Нето тегло",
+          "value": "5,82 кг"
+        },
+        {
+          "label": "Водо- и прахоустойчивост",
+          "value": "IP68"
+        },
+        {
+          "label": "Гаранция",
+          "value": "5 години"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Електрически параметри",
+      "rows": [
+        {
+          "label": "Напрежение на празен ход",
+          "value": "50V"
+        },
+        {
+          "label": "Оптимално работно напрежение",
+          "value": "43V"
+        },
+        {
+          "label": "Оптимален работен ток",
+          "value": "3A"
+        },
+        {
+          "label": "Ток на късо съединение",
+          "value": "3,2A"
+        },
+        {
+          "label": "Температурен коефициент на напрежението на празен ход",
+          "value": "−0,3%/°C"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-130w-rvmax-rigid-solar-panel-1170443859.webp",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-130w-rvmax-rigid-solar-panel-1167844143.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-130w-rvmax-rigid-solar-panel-1167844162.png"
+    ],
+    "sekcii": [
+      "https://eu.ecoflow.com/cdn/shop/files/1_1_aa048f29-cb7e-42d7-9956-0ffdfe1f44b9.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/2_1_img_5461ae55-3552-49dc-a6cd-8515c971258b.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/2_2_img_1a290a20-e3e6-49de-9d1c-f8eed9e0d5ef.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/3_1_img_6d075ebd-4ab5-48a0-97c0-5c74c7534f5d.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/3_2_img_948c51fa-e4bd-4b0d-a3fe-debcc51ccb3d.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/4_1_img_db375512-6661-41f1-b41a-de7bb19f1606.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/4_2_img_11bf20ec-1225-4e1f-a8be-7cabe057bbd9.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/5_1_img_36fd6c58-6a72-4a73-bc86-cd4d7c230c8f.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/6_1_img_5e630f50-83b2-4294-bb28-a09de49b7529.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/7_1_img.png",
+      "https://eu.ecoflow.com/cdn/shop/files/7_2_img.png",
+      "https://eu.ecoflow.com/cdn/shop/files/7_3_img.png",
+      "https://eu.ecoflow.com/cdn/shop/files/7_4_img.png",
+      "https://eu.ecoflow.com/cdn/shop/files/8_1_img_2e5e5e4d-3078-4f5a-a15b-24cf3c3a4ebd.jpg"
+    ]
+  },
+  "_prevod_nadpisi": {
+    "1_1_aa048f29-cb7e-42d7-9956-0ffdfe1f44b9.jpg": {
+      "12 mm ultra thin panel effectively reduces 60% of driving wind resistance": "12 мм ултратънък панел — намалява въздушното съпротивление при движение с 60%",
+      "Designed for RVs / suitable for various RV types": "Създаден за кемпери / подходящ за различни типове кемпери",
+      "TOPCon solar cells offer highly efficient energy conversion": "TOPCon соларни клетки с високоефективно преобразуване",
+      "25%": "остава",
+      "Up to 30-year lifespan* / *Dependent on usage": "Живот до 30 години* / *Зависи от употребата",
+      "30 Year": "30 години",
+      "Connect up to 10 panels in parallel (1300W)": "До 10 панела паралелно (1300W)",
+      "NEW LFB 40 port with enhanced stability / stays firmly connected even during movement": "НОВ порт LFB-40 с повишена стабилност / остава здраво свързан дори в движение",
+      "Durable, IP68 waterproof rating, ideal for all weather": "Издръжлив, IP68 водоустойчив, за всякакво време"
+    },
+    "3_1_img_6d075ebd-4ab5-48a0-97c0-5c74c7534f5d.jpg": {
+      "50V high voltage design": "50V високоволтов дизайн",
+      "50V high-voltage, low-current output: Optimized for 60V RV power systems, enabling flexible compatibility and easy parallel connection. Unlike traditional systems that increase power when connected in series, the 50V parallel setup achieves high power output. By using thinner wires, RVMax panels also achieve higher energy transmission efficiency.": "50V изход с висок волтаж и нисък ток: оптимизиран за 60V системи на кемпери — гъвкава съвместимост и лесно паралелно свързване. За разлика от традиционните системи, които вдигат мощността при последователно свързване, 50V паралелната схема дава висока мощност. С по-тънки проводници RVMax панелите постигат и по-висока ефективност на преноса.",
+      "Plug-and-Play connections: Traditional series setups require extensive wiring for multiple panels, making installation complex. The 130W panel's innovative design enables easy parallel or simple series connections, achieving true plug-and-play functionality.": "Plug-and-play връзки: традиционните последователни схеми изискват много окабеляване при няколко панела и усложняват монтажа. Иновативният дизайн на 130W панела позволява лесно паралелно или просто последователно свързване — истински plug-and-play.",
+      "Enhanced expandability: Supports simultaneous connection of up to 10 solar panels, each with a power output of up to 130W and a maximum solar output of 1300W. Compatible with almost all EcoFlow portable power stations, this solar panel can easily scale power levels by adjusting the number of panels. Mixing old and new panels won't impact overall output, maximizing efficiency.": "Лесно разширяване: едновременно свързване на до 10 панела, всеки до 130W, общо до 1300W. Съвместим с почти всички портативни електроцентрали на EcoFlow — мощността се мащабира с броя панели. Смесването на стари и нови панели не влияе на общия изход."
+    },
+    "3_2_img_948c51fa-e4bd-4b0d-a3fe-debcc51ccb3d.jpg": {
+      "Safe and Simplified LFB-40 Connection": "Безопасна и опростена връзка LFB-40",
+      "Simplified connection: The LFB-40 port integrates both positive and negative terminals, simplifying connections, preventing miswiring, and supporting direct panel connections.": "Опростена връзка: портът LFB-40 обединява плюс и минус — по-прости връзки, без грешно окабеляване, с директно свързване на панелите.",
+      "Superior 40A current limit: Its 40A current limit covers EcoFlow power stations' maximum 25A current input.": "Ограничение 40A: покрива максималния входен ток от 25A на електроцентралите на EcoFlow.",
+      "Shockproof, waterproof, and detachable: Ideal for outdoor use.": "Удароустойчив, водоустойчив и разглобяем: идеален за навън."
+    },
+    "4_1_img_db375512-6661-41f1-b41a-de7bb19f1606.jpg": {
+      "25%": "остава"
+    },
+    "4_2_img_11bf20ec-1225-4e1f-a8be-7cabe057bbd9.jpg": {
+      "Upgraded N-Type TOPCon Solar Cells": "Обновени N-тип TOPCon соларни клетки",
+      "Up to 25% conversion efficiency": "До 25% ефективност на преобразуване",
+      "Monocrystalline Silicon Solar Cells: 21%-23% / TOPCon Solar Cells: Up to 25%": "Монокристални клетки: 21–23% / TOPCon клетки: до 25%",
+      "Performs well in overcast conditions. Generates 3-6% more energy in low light than P-PERC.": "Работи добре при облачно време. Дава с 3–6% повече енергия при слаба светлина от P-PERC.",
+      "Adapts to dull lighting conditions, maintaining a high power generation rate even on overcast days.": "Приспособява се към слаба светлина и запазва висок добив дори в облачни дни.",
+      "High energy conversion at hot temperatures": "Висока ефективност при горещини",
+      "Monocrystalline Silicon Solar Cell: 11.7% / TOPCon Solar Cell: 9%": "Монокристална клетка: 11,7% / TOPCon клетка: 9%",
+      "Up to 30-year lifespan* 90% Output": "Живот до 30 години* при 90% мощност",
+      "Monocrystalline Silicon Solar Cell: 25-year / TOPCon Solar Cell: up to 30-year": "Монокристална клетка: 25 години / TOPCon клетка: до 30 години",
+      "* Lifespan depends on actual use": "* Животът зависи от реалната употреба"
+    },
+    "5_1_img_36fd6c58-6a72-4a73-bc86-cd4d7c230c8f.jpg": {
+      "Durable": "Издръжлив",
+      "3M™ Dual Lock™ Reclosable Fasteners": "3M™ Dual Lock™ закопчалки за многократно закрепване",
+      "Waterproof LFB-40 to Solar Connector": "Водоустойчив LFB-40 към соларен конектор"
+    },
+    "8_1_img_2e5e5e4d-3078-4f5a-a15b-24cf3c3a4ebd.jpg": {
+      "EcoFlow 130W RVMax Rigid Solar Panel x 2": "EcoFlow 130W RVMax Rigid Solar Panel × 2",
+      "EcoFlow Rigid Solar Panel Mounting Feet": "Монтажни крачета за твърд соларен панел EcoFlow",
+      "EcoFlow LFB-40 to Solar Connector Cable (MC4 Compatible)": "Кабел EcoFlow LFB-40 към соларен конектор (съвместим с MC4)",
+      "EcoFlow Solar Connector to XT60 Charging Cable (MC4 Compatible)": "Кабел EcoFlow соларен конектор към XT60 (съвместим с MC4)",
+      "Quick Start Guide, Safety Instructions & Warranty Card": "Кратко ръководство, инструкции за безопасност и гаранционна карта"
+    }
+  },
+  "_neyasni": [
+    "На страницата на EcoFlow всяка снимка е в двойка (настолна + мобилна версия с различни имена) — взети са само настолните.",
+    "Текстът в EcoFlow за защитата казва „IP268“ — очевидна грешка; при нас е IP68 (както в спецификациите).",
+    "„Adapts to various RV power systems“ са четири карти (Power Kits / DELTA и RIVER / трети производители / система на кемпер) — направени са като раздели над снимката.",
+    "В dice.bg няма стара цена — 408,52 €."
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow WAVE 2 Add-On Battery",
+    "slug": "wave-2-add-on-battery",
+    "categorySlug": "wave-klimatici",
+    "productType": "accessory",
+    "tagline": "Допълнителна батерия 1159Wh за климатика WAVE 2",
+    "badge": "none",
+    "price": 399,
+    "externalUrl": "https://dice.bg/v-nshna-baterija-za-ecoflow-wave-2-portable-air-conditioner-ecoflow-wave-2-add-on-battery-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "62272",
+    "ean": "4895251604758",
+    "description": "Допълнителна батерия 1159Wh за преносимия климатик EcoFlow WAVE 2 — до 8 часа повече работа, с USB-A и USB-C изходи и управление от приложението.",
+    "highlights": [
+      {
+        "text": "Капацитет 1159Wh"
+      },
+      {
+        "text": "До 8 ч повече работа на WAVE 2"
+      },
+      {
+        "text": "Изходи USB-A и USB-C"
+      },
+      {
+        "text": "Управление от приложението"
+      }
+    ],
+    "metaTitle": "EcoFlow WAVE 2 Add-On Battery — батерия за WAVE 2 | EcoFlow България",
+    "metaDescription": "Допълнителна батерия EcoFlow WAVE 2 Add-On Battery — 1159Wh, до 8 часа повече работа на климатика WAVE 2.",
+    "compatibleWith": [
+      "wave-klimatici"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "62272_1_1.webp",
+      "alt": "EcoFlow WAVE 2 Add-On Battery — допълнителна батерия"
+    },
+    {
+      "file": "62272_2_1.webp",
+      "alt": "EcoFlow WAVE 2 Add-On Battery — допълнителна батерия"
+    },
+    {
+      "file": "62272_3_1.webp",
+      "alt": "EcoFlow WAVE 2 Add-On Battery — допълнителна батерия"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Още 8 часа хлад",
+      "body": "Допълнителна батерия 1159Wh за преносимия климатик EcoFlow WAVE 2 (продава се отделно). Компактна е и добавя до осем часа работа на климатика.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Зарежда и телефона",
+      "body": "Има два изхода — USB-A и USB-C — за зареждане на мобилните устройства освен WAVE 2.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Управление от приложението",
+      "body": "Когато батерията е свързана към WAVE 2, двете се управляват от приложението EcoFlow.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow WAVE 2 Add-On Battery",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "WAVE 2 Add-On Battery"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "ZYDKT210-EB"
+        },
+        {
+          "label": "Тип батерия",
+          "value": "NCM литиева"
+        },
+        {
+          "label": "Капацитет",
+          "value": "1159Wh"
+        },
+        {
+          "label": "Изходи",
+          "value": "USB-A, USB-C"
+        },
+        {
+          "label": "Размери",
+          "value": "515 × 272 × 92 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "7,5 кг"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow WAVE 2"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62272_1_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62272_2_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62272_3_1.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Страницата в eu.ecoflow.com е само с цена — съдържанието е по dice.bg.",
+    "В dice.bg след спецификациите има общ текст за LFP батериите, а самата батерия е NCM (пак по dice.bg) — общият текст не е сложен, за да не се противоречи.",
+    "Самия WAVE 2 го няма в сайта; „Съвместим с“ е категорията „Wave климатици“ → излиза в раздела „Аксесоари“ в менюто там. Ако не искаш да стои до WAVE 3 — кажи.",
+    "В dice.bg: Налично на склад (проверено 01.10.2026)."
+  ]
+}
