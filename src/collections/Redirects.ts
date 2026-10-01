@@ -1,4 +1,5 @@
 import type { CollectionConfig } from 'payload'
+import { expireEverything } from '../lib/revalidate'
 
 /**
  * Постоянни пренасочвания (308).
@@ -23,6 +24,11 @@ export const Redirects: CollectionConfig = {
       'Стари адреси, които водят към новите. Попълва се само — при смяна на категория или на адрес на продукт. Ред се трие само ако старият адрес вече не трябва да работи.',
   },
   access: { read: () => true },
+  // Ред, добавен или изтрит от админа, важи веднага — не след 5 минути кеш.
+  hooks: {
+    afterChange: [({ doc }) => (expireEverything(), doc)],
+    afterDelete: [({ doc }) => (expireEverything(), doc)],
+  },
   fields: [
     {
       name: 'from',

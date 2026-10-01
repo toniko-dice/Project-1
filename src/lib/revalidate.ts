@@ -34,7 +34,12 @@ import type {
  */
 
 /** Всички тагове на четенията. */
-export const TAGS = ['product', 'page', 'category', 'menu', 'global'] as const
+/*
+  `redirects` — кешът на middleware-а (по един отговор на адрес, 5 минути).
+  Без него нов или изтрит ред се виждаше със закъснение, а опресняването
+  след внос изобщо не го пипаше.
+*/
+export const TAGS = ['product', 'page', 'category', 'menu', 'global', 'redirects'] as const
 
 const pathFor = (slug?: string | null) => (!slug || slug === 'home' ? '/' : `/${slug}`)
 
@@ -145,6 +150,28 @@ const записПренасочване = async (
   }
 }
 
+/**
+ * Живият адрес не може да е източник на пренасочване.
+ *
+ * Пренасочванията се пазят завинаги, а адрес може да се освободи и после
+ * да се зае наново. Точно така на 1 октомври 2026 новата категория
+ * „Външни батерии" (`vanshni-baterii`) получи адрес, от който от 24
+ * септември имаше пренасочване към „Външни батерии Rapid" — middleware-ът
+ * го прилагаше преди страницата и тя никога не се показваше. Затова при
+ * ВСЕКИ запис (и при създаване) пренасочване ОТ текущия адрес се трие.
+ */
+const освободиАдреса = async (req: { payload: Payload }, адрес: string) => {
+  try {
+    await req.payload.delete({
+      collection: 'redirects',
+      where: { from: { equals: адрес } },
+      req: req as never,
+    })
+  } catch (e) {
+    req.payload.logger.error(`Пренасочването от ${адрес} не се изтри: ${(e as Error).message}`)
+  }
+}
+
 export const revalidateProduct: CollectionAfterChangeHook = async ({ doc, previousDoc, req }) => {
   /*
     Адресът зависи от slug-а И от серията — и двете могат да се сменят.
@@ -167,6 +194,7 @@ export const revalidateProduct: CollectionAfterChangeHook = async ({ doc, previo
       старСлъг !== doc?.slug ? 'Сменен адрес на продукта' : 'Продуктът смени категорията си',
     )
   }
+  await освободиАдреса(req as never, нов)
 
   expireEverything()
   /*
@@ -208,6 +236,7 @@ export const revalidateCategory: CollectionAfterChangeHook = async ({ doc, previ
       'Сменен адрес на категорията',
     )
   }
+  if (doc?.slug) await освободиАдреса(req as never, categoryPath(doc.slug))
 
   return doc
 }
