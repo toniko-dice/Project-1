@@ -1290,6 +1290,22 @@ export const importProduct = async (
     ...productFields
   } = content.produkt as Record<string, unknown>
 
+  /*
+    Акцент само с `text` — кратка точка без пояснение („Защита IP65").
+    В схемата заглавието е задължително, а пояснението е по избор: акцент
+    само със заглавие е точно „един ред". Аксесоарите идват така и на
+    1 октомври 2026 и деветте излязоха чернови — публикуването падаше на
+    „Акценти под цената > Заглавие".
+  */
+  if (Array.isArray(productFields.highlights)) {
+    productFields.highlights = productFields.highlights.map((h: unknown) => {
+      const акцент = h as { title?: unknown; text?: unknown } | null
+      return акцент && !акцент.title && акцент.text
+        ? { ...акцент, title: акцент.text, text: null }
+        : h
+    })
+  }
+
   /** Списък от слъгове; всичко друго — празен. */
   const слъгове = (v: unknown): string[] =>
     Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : []
