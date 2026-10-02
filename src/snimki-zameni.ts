@@ -2,6 +2,7 @@
  * Подмяна на снимки в Медия с файловете от `content/snimki/`.
  *
  * Пуска се с:  npm run snimki:zameni
+ *              npm run snimki:zameni -- --dry-run   (само казва какво би заменил)
  *
  * За всеки файл в `content/snimki/` търси запис в Медия със СЪЩАТА основа
  * на името (без разширението): `61566_1.png` → записът `61566_1.webp`.
@@ -32,6 +33,7 @@ import {
 } from './import-product-core'
 
 const MEDIA_DIR = path.join(process.cwd(), 'media')
+const dryRun = process.argv.includes('--dry-run')
 const ФОРМАТИ = new Set(['.png', '.jpg', '.jpeg', '.webp', '.avif', '.gif'])
 
 const payload = await getPayload({ config })
@@ -74,6 +76,10 @@ for (const [stem, name] of поОснова) {
     същите.push(name)
     continue
   }
+  if (dryRun) {
+    заменени.push(`${name} → № ${запис.id} (${запис.filename})`)
+    continue
+  }
   const ext = path.extname(name).toLowerCase()
   const realExt = ext === '.jpeg' ? '.jpg' : ext
   const успя = await replaceMediaContent(
@@ -89,8 +95,8 @@ for (const [stem, name] of поОснова) {
   else неуспешни.push(name)
 }
 
-console.log(`\nЗАМЯНА НА СНИМКИ — content/snimki/ (${поОснова.size} файла)`)
-console.log(`Заменени: ${заменени.length}`)
+console.log(`\nЗАМЯНА НА СНИМКИ — content/snimki/ (${поОснова.size} файла)${dryRun ? ' — ПРОВЕРКА, нищо не е записано' : ''}`)
+console.log(`${dryRun ? 'Биха се заменили' : 'Заменени'}: ${заменени.length}`)
 for (const z of заменени) console.log(`  ✓ ${z}`)
 console.log(`Вече същите в Медия: ${същите.length}`)
 console.log(`Без съвпадение в Медия: ${безСъвпадение.length}`)
@@ -99,5 +105,5 @@ if (неуспешни.length) {
   console.log(`Неуспешни: ${неуспешни.length}`)
   for (const n of неуспешни) console.log(`  ✗ ${n}`)
 }
-if (заменени.length) console.log(await revalidateServer())
+if (заменени.length && !dryRun) console.log(await revalidateServer())
 process.exit(неуспешни.length ? 1 : 0)
