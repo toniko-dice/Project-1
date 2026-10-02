@@ -1,0 +1,145 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Solar MC4 to XT60 Charging Cable (3.5m)",
+    "slug": "solar-mc4-xt60-cable-3-5m",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "Соларен кабел MC4 → XT60, 3,5 м",
+    "badge": "none",
+    "price": 30.17,
+    "externalUrl": "https://dice.bg/zarezhdasch-kabel-sv-rzvasch-ecoflow-solarni-paneli-i-ecoflow-elektrocentrali-ecoflow-solar-to-xt60-charging-cable-3-5m-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "60692",
+    "ean": "4897082660958",
+    "description": "Кабел 3,5 м за зареждане на електроцентрала EcoFlow от соларен панел — MC4 към XT60 (за по-старите модели с XT60).",
+    "highlights": [
+      {
+        "text": "Дължина 3,5 м"
+      },
+      {
+        "text": "MC4 → XT60"
+      },
+      {
+        "text": "За по-старите електроцентрали с XT60"
+      }
+    ],
+    "metaTitle": "EcoFlow Solar MC4 to XT60 Charging Cable (3.5m) | EcoFlow България",
+    "metaDescription": "Кабел 3,5 м за зареждане на електроцентрала EcoFlow от соларен панел — MC4 към XT60 (за по-старите модели с XT60).",
+    "compatibleWith": [
+      "sgavaemi-paneli",
+      "stacionarni-paneli"
+    ],
+    "alsoInCategories": [
+      "montazh-i-kabeli-za-paneli"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "60692_1.webp",
+      "alt": "EcoFlow Solar MC4 to XT60 Charging Cable (3.5m) — кабел"
+    },
+    {
+      "file": "60692_2.webp",
+      "alt": "EcoFlow Solar MC4 to XT60 Charging Cable (3.5m) — кабел"
+    },
+    {
+      "file": "60692_3.webp",
+      "alt": "EcoFlow Solar MC4 to XT60 Charging Cable (3.5m) — кабел"
+    },
+    {
+      "file": "60692_4.webp",
+      "alt": "EcoFlow Solar MC4 to XT60 Charging Cable (3.5m) — кабел"
+    },
+    {
+      "file": "60692_5.webp",
+      "alt": "EcoFlow Solar MC4 to XT60 Charging Cable (3.5m) — кабел"
+    },
+    {
+      "file": "60692_6.webp",
+      "alt": "EcoFlow Solar MC4 to XT60 Charging Cable (3.5m) — кабел"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Соларният панел — към електроцентралата",
+      "body": "Свържете соларен панел към електроцентрала EcoFlow за чиста, ефективна и надеждна енергия, където и да сте. Кабелът MC4 към XT60 (3,5 м) свързва преносимата електроцентрала EcoFlow със соларен панел EcoFlow.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Solar MC4 to XT60 кабел (3,5 м)",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Solar to XT60"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFMC4-XT60CBL3.5M"
+        },
+        {
+          "label": "Дължина",
+          "value": "3,5 м"
+        },
+        {
+          "label": "Конектори",
+          "value": "MC4 → XT60"
+        },
+        {
+          "label": "Работи най-добре с",
+          "value": "EcoFlow RIVER mini, RIVER, RIVER Max, RIVER Pro, DELTA mini, DELTA, DELTA Max (1600)"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60692_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60692_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60692_3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60692_4.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60692_5.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60692_6.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "По dice.bg. За по-старите електроцентрали с вход XT60 (не XT60i).",
+    "В dice.bg: по заявка (проверено 02.10.2026)."
+  ]
+}

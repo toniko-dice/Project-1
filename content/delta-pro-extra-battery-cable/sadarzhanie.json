@@ -1,0 +1,119 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow DELTA Pro Extra Battery Cable (0.75m)",
+    "slug": "delta-pro-extra-battery-cable",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "Кабел 0,75 м за допълнителна батерия или Smart Generator към DELTA Pro",
+    "badge": "none",
+    "price": 106.86,
+    "externalUrl": "https://dice.bg/kabel-za-sv-rzvane-na-ecoflow-delta-pro-k-m-ecoflow-delta-pro-smart-extra-baterija-ili-smart-generator-ecoflow-pro-extra-battery-cable-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "60828",
+    "ean": "4895251600712",
+    "description": "Оригинален кабел 0,75 м, който свързва EcoFlow DELTA Pro с допълнителната батерия DELTA Pro Smart Extra Battery или Smart Generator.",
+    "highlights": [
+      {
+        "text": "Дължина 0,75 м"
+      },
+      {
+        "text": "DELTA Pro → допълнителна батерия / Smart Generator"
+      }
+    ],
+    "metaTitle": "EcoFlow DELTA Pro Extra Battery Cable (0.75m) | EcoFlow България",
+    "metaDescription": "Оригинален кабел 0,75 м, който свързва EcoFlow DELTA Pro с допълнителната батерия DELTA Pro Smart Extra Battery или Smart Generator.",
+    "ean2": "4897082666516"
+  },
+  "galeriya": [
+    {
+      "file": "60828_1.webp",
+      "alt": "EcoFlow DELTA Pro Extra Battery Cable (0.75m) — кабел"
+    },
+    {
+      "file": "60828_2.webp",
+      "alt": "EcoFlow DELTA Pro Extra Battery Cable (0.75m) — кабел"
+    },
+    {
+      "file": "60828_3.webp",
+      "alt": "EcoFlow DELTA Pro Extra Battery Cable (0.75m) — кабел"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Допълнителна батерия към DELTA Pro",
+      "body": "Оригиналният кабел свързва EcoFlow DELTA Pro с допълнителната батерия DELTA Pro Smart Extra Battery през порта отзад, или със Smart Generator (адаптерът се продава отделно). Дължина 0,75 м.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow DELTA Pro Extra Battery Cable",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "DELTA Pro Extra Battery Cable"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "L48DH-0.75m"
+        },
+        {
+          "label": "Дължина",
+          "value": "0,75 м"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow DELTA Pro → DELTA Pro Smart Extra Battery или Smart Generator (с адаптер)"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60828_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60828_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60828_3.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "По dice.bg и eu.ecoflow.com/products/delta-pro-extra-battery-cable.",
+    "В описанието в dice.bg EAN е 4897082666516 — записан като втори баркод.",
+    "DELTA Pro го няма в сайта → „Съвместим с“ е празно.",
+    "В dice.bg: по заявка (проверено 02.10.2026)."
+  ]
+}

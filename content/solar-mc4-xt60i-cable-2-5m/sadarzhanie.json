@@ -1,0 +1,157 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Solar MC4 to XT60i Charging Cable (2.5m)",
+    "slug": "solar-mc4-xt60i-cable-2-5m",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "Соларен кабел MC4 → XT60i, 2,5 м",
+    "badge": "none",
+    "price": 25.05,
+    "compareAtPrice": 30.17,
+    "externalUrl": "https://dice.bg/zarezhdasch-kabel-sv-rzvasch-ecoflow-solarni-paneli-i-ecoflow-elektrocentrali-ecoflow-solar-to-xt60i-charging-cable-2-5m-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "60694",
+    "ean": "4895251603072",
+    "description": "Кабел 2,5 м за зареждане на електроцентрала EcoFlow от соларен панел EcoFlow — MC4 към XT60i.",
+    "highlights": [
+      {
+        "text": "Дължина 2,5 м"
+      },
+      {
+        "text": "MC4 → XT60i"
+      },
+      {
+        "text": "Соларен панел → електроцентрала"
+      }
+    ],
+    "metaTitle": "EcoFlow Solar MC4 to XT60i Charging Cable (2.5m) | EcoFlow България",
+    "metaDescription": "Кабел 2,5 м за зареждане на електроцентрала EcoFlow от соларен панел EcoFlow — MC4 към XT60i.",
+    "compatibleWith": [
+      "sgavaemi-paneli",
+      "stacionarni-paneli"
+    ],
+    "alsoInCategories": [
+      "montazh-i-kabeli-za-paneli"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "60694_6.webp",
+      "alt": "EcoFlow Solar MC4 to XT60i Charging Cable (2.5m) — кабел"
+    },
+    {
+      "file": "xt60iiiiiid.webp",
+      "alt": "EcoFlow Solar MC4 to XT60i Charging Cable (2.5m) — кабел"
+    },
+    {
+      "file": "xt60iiiiid.webp",
+      "alt": "EcoFlow Solar MC4 to XT60i Charging Cable (2.5m) — кабел"
+    },
+    {
+      "file": "xt60iiiid.webp",
+      "alt": "EcoFlow Solar MC4 to XT60i Charging Cable (2.5m) — кабел"
+    },
+    {
+      "file": "xt60iiid.webp",
+      "alt": "EcoFlow Solar MC4 to XT60i Charging Cable (2.5m) — кабел"
+    },
+    {
+      "file": "xt60iid.webp",
+      "alt": "EcoFlow Solar MC4 to XT60i Charging Cable (2.5m) — кабел"
+    },
+    {
+      "file": "xt60id.webp",
+      "alt": "EcoFlow Solar MC4 to XT60i Charging Cable (2.5m) — кабел"
+    },
+    {
+      "file": "xt60iiiiiiiid.webp",
+      "alt": "EcoFlow Solar MC4 to XT60i Charging Cable (2.5m) — кабел"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Соларният панел — към електроцентралата",
+      "body": "Свържете соларен панел към електроцентрала EcoFlow за чиста, ефективна и надеждна енергия, където и да сте. Кабелът MC4 към XT60i (2,5 м) свързва преносимата електроцентрала EcoFlow със соларен панел EcoFlow.\n\nMC4 и XT60/XT60i са индустриални стандарти за безопасно и надеждно свързване в соларни системи — устойчиви на атмосферни влияния и съвместими с практически всички електроцентрали и панели с такива входове и изходи.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Solar MC4 to XT60i кабел (2,5 м)",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Solar to XT60i"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "LMC4-XT60i-2.5m"
+        },
+        {
+          "label": "Дължина",
+          "value": "2,5 м"
+        },
+        {
+          "label": "Конектори",
+          "value": "MC4 → XT60i"
+        },
+        {
+          "label": "Работи най-добре с",
+          "value": "EcoFlow RIVER 2, RIVER 2 Max, RIVER 2 Pro, DELTA 2, DELTA Max (2000), DELTA Pro, DELTA Pro 3, DELTA 3 Max, DELTA 3 Max Plus"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60694_6.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/x/t/xt60iiiiiid.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/x/t/xt60iiiiid.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/x/t/xt60iiiid.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/x/t/xt60iiid.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/x/t/xt60iid.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/x/t/xt60id.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/x/t/xt60iiiiiiiid.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "По dice.bg и eu.ecoflow.com/products/solar-charging-cable.",
+    "dice.bg пише „Delta Max 3 / Delta Max 3 Plus“ — става дума за DELTA 3 Max / DELTA 3 Max Plus (поправено).",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

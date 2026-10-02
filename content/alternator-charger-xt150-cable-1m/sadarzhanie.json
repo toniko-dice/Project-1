@@ -1,0 +1,110 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Alternator Charger XT150 Output Cable (1m)",
+    "slug": "alternator-charger-xt150-cable-1m",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "XT150 кабел 1 м от алтернаторното зарядно към електроцентралата",
+    "badge": "none",
+    "price": 39,
+    "externalUrl": "https://dice.bg/sv-rzvasch-kabel-za-ecoflow-alternator-charger-plus-600-ili-alternator-charger-plus-1000-k-m-ecoflow-elektrocentrali-ecoflow-alternator-charger-xt150-output-cable-for-quick-connection-100-sm",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "78000",
+    "ean": "4895251666008",
+    "description": "XT150 кабел 1 м за свързване на EcoFlow Alternator Charger Plus 600 / 1000 към електроцентрала EcoFlow с XT150 порт — бързо зареждане, обратно зареждане и поддръжка на акумулатора.",
+    "highlights": [
+      {
+        "text": "Дължина 1 м"
+      },
+      {
+        "text": "Alternator Charger Plus → електроцентрала"
+      },
+      {
+        "text": "Бързо и обратно зареждане, поддръжка на акумулатора"
+      }
+    ],
+    "metaTitle": "EcoFlow Alternator Charger XT150 Output Cable (1m) | EcoFlow България",
+    "metaDescription": "XT150 кабел 1 м за свързване на EcoFlow Alternator Charger Plus 600 / 1000 към електроцентрала EcoFlow с XT150 порт — бързо зареждане, обратно зареждане и ",
+    "compatibleWith": [
+      "delta-3",
+      "delta-3-plus"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "4895251666008-1.webp",
+      "alt": "EcoFlow Alternator Charger XT150 Output Cable (1m) — кабел"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Алтернаторът — директно към електроцентралата",
+      "body": "XT150 кабелът свързва алтернаторното зарядно EcoFlow Alternator Charger Plus 1000 или Plus 600 с електроцентрала EcoFlow с XT150 порт или с нейната допълнителна батерия. Отключва три режима:\n- бързо зареждане на електроцентралата от алтернатора на колата;\n- обратно зареждане — енергията тече от електроцентралата към акумулатора на колата, за да го стартира, допълни или поддържа;\n- поддръжка на акумулатора — като умно зарядно пази акумулатора здрав при дълъг престой.\n\nДължина 1 м.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Alternator Charger XT150 Output Cable (1 м)",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Alternator Charger XT150 Output Cable"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFLAltXT150OutputDC013-1m"
+        },
+        {
+          "label": "Дължина",
+          "value": "1 м"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow Alternator Charger Plus 600 / 1000 → DELTA 2, DELTA 2 Max, DELTA 3, DELTA 3 Plus и техните допълнителни батерии"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/4/8/4895251666008-1.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "По dice.bg и eu.ecoflow.com/products/alternator-charger-xt150-output-cable.",
+    "Alternator Charger Plus го няма в сайта; „Съвместим с“ = DELTA 3 и DELTA 3 Plus (DELTA 2 / 2 Max ги няма).",
+    "В dice.bg: по заявка (проверено 02.10.2026)."
+  ]
+}

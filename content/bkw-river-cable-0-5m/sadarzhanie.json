@@ -1,0 +1,120 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow BKW-RIVER Cable (0.5m)",
+    "slug": "bkw-river-cable-0-5m",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "Кабел 0,5 м от микроинвертора към гнездото за кола на електроцентралата",
+    "badge": "none",
+    "price": 30.17,
+    "externalUrl": "https://dice.bg/ecoflow-microinverter-to-power-station-car-charger-connection-cable-svazvasht-kabel-za-ecoflow-microinverter-kam-ecoflow-elektrotsentrali-50-sm-cheren-item62864",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "62864",
+    "ean": "4895251606547",
+    "description": "Кабел 0,5 м за свързване на микроинвертора EcoFlow PowerStream към 12V гнездото за кола на електроцентрали RIVER 2, RIVER 2 Max, RIVER 2 Pro, DELTA mini и DELTA (до 100W).",
+    "highlights": [
+      {
+        "text": "Дължина 0,5 м"
+      },
+      {
+        "text": "Микроинвертор → 12V гнездо за кола"
+      },
+      {
+        "text": "До 100W"
+      }
+    ],
+    "metaTitle": "EcoFlow BKW-RIVER Cable (0.5m) | EcoFlow България",
+    "metaDescription": "Кабел 0,5 м за свързване на микроинвертора EcoFlow PowerStream към 12V гнездото за кола на електроцентрали RIVER 2, RIVER 2 Max, RIVER 2 Pro, DELTA mini и "
+  },
+  "galeriya": [
+    {
+      "file": "62864_1.webp",
+      "alt": "EcoFlow BKW-RIVER Cable (0.5m) — кабел"
+    },
+    {
+      "file": "62864_2.webp",
+      "alt": "EcoFlow BKW-RIVER Cable (0.5m) — кабел"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Микроинверторът — към електроцентралата",
+      "body": "Конекторът за кола свързва микроинвертора EcoFlow PowerStream с електроцентрала EcoFlow през 12V изхода за кола — до 100W. Така разширявате соларната система с батерия.\n\nВнимание: първо свържете соларните панели към микроинвертора и чак след това микроинвертора към кабела на електроцентралата.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow BKW-RIVER Cable 0,5 м",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Microinverter to Power Station Car Charger Connection Cable"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFL-BKWRIVERCable-0.5m"
+        },
+        {
+          "label": "Дължина",
+          "value": "0,5 м"
+        },
+        {
+          "label": "Макс. мощност",
+          "value": "100W"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow PowerStream Microinverter → RIVER 2, RIVER 2 Max, RIVER 2 Pro, DELTA mini, DELTA"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62864_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62864_2.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "За микроинвертора EcoFlow PowerStream (предишното поколение), който го няма в сайта → „Съвместим с“ е празно. Не е за STREAM Microinverter. RIVER 2 / DELTA mini също ги няма.",
+    "dice.bg пише „XT150 кабел“ — конекторът е за гнездо за кола; не е сложено XT150.",
+    "По dice.bg и eu.ecoflow.com/products/bkw-battery-cable-river.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

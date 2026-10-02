@@ -1,0 +1,132 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Super Flat MC4 Cable (0.5m)",
+    "slug": "super-flat-mc4-cable",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "Плосък MC4 кабел 0,5 м — минава през прозорец или врата",
+    "badge": "none",
+    "price": 19.94,
+    "externalUrl": "https://dice.bg/ecoflow-super-flat-mc4-cable-plosak-udalzhitelen-kabel-za-svarzvane-na-ecoflow-microinverter-kam-ecoflow-solarni-paneli-50-sm-cheren-item62871",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "62871",
+    "ean": "4895251606530",
+    "description": "Плосък удължителен MC4 кабел 0,5 м (1,5 мм дебелина) — свързва соларните панели с микроинвертора в дома през процепа на прозорец или врата, без пробиване.",
+    "highlights": [
+      {
+        "text": "Дебелина само 1,5 мм"
+      },
+      {
+        "text": "Минава под прозорец или врата"
+      },
+      {
+        "text": "Без пробиване на стена"
+      }
+    ],
+    "metaTitle": "EcoFlow Super Flat MC4 Cable (0.5m) | EcoFlow България",
+    "metaDescription": "Плосък удължителен MC4 кабел 0,5 м (1,5 мм дебелина) — свързва соларните панели с микроинвертора в дома през процепа на прозорец или врата, без пробиване.",
+    "alsoInCategories": [
+      "montazh-i-kabeli-za-paneli"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "62871_1.webp",
+      "alt": "EcoFlow Super Flat MC4 Cable (0.5m) — кабел"
+    },
+    {
+      "file": "62871_2.webp",
+      "alt": "EcoFlow Super Flat MC4 Cable (0.5m) — кабел"
+    },
+    {
+      "file": "62871_3.webp",
+      "alt": "EcoFlow Super Flat MC4 Cable (0.5m) — кабел"
+    },
+    {
+      "file": "62871_4.webp",
+      "alt": "EcoFlow Super Flat MC4 Cable (0.5m) — кабел"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Без пробиване на стената",
+      "body": "Единият край се свързва към кабела EcoFlow BKW-Solar Cable на микроинвертора PowerStream, а другият — към соларните панели или към удължителен соларен кабел EcoFlow. Плоският кабел минава през процепите под прозорци и врати — не е нужно да пробивате стена.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Super Flat MC4 Cable",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Super Flat MC4 Cable"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFL-SuperFlatMC4Cable"
+        },
+        {
+          "label": "Дебелина",
+          "value": "1,5 мм"
+        },
+        {
+          "label": "Дължина",
+          "value": "0,5 м"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow PowerStream Microinverter, соларни панели EcoFlow"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62871_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62871_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62871_3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62871_4.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "За микроинвертора EcoFlow PowerStream (предишното поколение), който го няма в сайта → „Съвместим с“ е празно. Не е за STREAM Microinverter.",
+    "Няма страница в eu.ecoflow.com — по dice.bg.",
+    "В dice.bg: по заявка (проверено 02.10.2026)."
+  ]
+}

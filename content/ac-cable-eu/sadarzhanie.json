@@ -1,0 +1,125 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow AC Cable EU (1.5m)",
+    "slug": "ac-cable-eu",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "Захранващ кабел за DELTA и RIVER (без DELTA Pro)",
+    "badge": "none",
+    "price": 30.17,
+    "externalUrl": "https://dice.bg/zahranvasch-kabel-za-ecoflow-delta-river-600-river-max-150-sm-ecoflow-ac-cable-eu-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "60909",
+    "ean": "4897082662051",
+    "description": "Захранващ AC кабел 1,5 м за електроцентралите EcoFlow DELTA и RIVER (без DELTA Pro и DELTA Pro 3).",
+    "highlights": [
+      {
+        "text": "Дължина 1,5 м"
+      },
+      {
+        "text": "DELTA и RIVER"
+      },
+      {
+        "text": "Не е за DELTA Pro / DELTA Pro 3"
+      }
+    ],
+    "metaTitle": "EcoFlow AC Cable EU (1.5m) | EcoFlow България",
+    "metaDescription": "Захранващ AC кабел 1,5 м за електроцентралите EcoFlow DELTA и RIVER (без DELTA Pro и DELTA Pro 3)."
+  },
+  "galeriya": [
+    {
+      "file": "60909_1.webp",
+      "alt": "EcoFlow AC Cable EU (1.5m) — кабел"
+    },
+    {
+      "file": "60909_2.webp",
+      "alt": "EcoFlow AC Cable EU (1.5m) — кабел"
+    },
+    {
+      "file": "60909_3.webp",
+      "alt": "EcoFlow AC Cable EU (1.5m) — кабел"
+    },
+    {
+      "file": "60909_4.webp",
+      "alt": "EcoFlow AC Cable EU (1.5m) — кабел"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Захранващ кабел за DELTA и RIVER",
+      "body": "Захранващ кабел за EcoFlow DELTA, RIVER 600, RIVER Max и останалите от сериите DELTA и RIVER — без DELTA Pro и DELTA Pro 3. Дължина 1,5 м.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow AC Cable EU",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "AC Cable EU"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFDELTA-AC-CABLE-1.5m-EU"
+        },
+        {
+          "label": "Дължина",
+          "value": "1,5 м"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow DELTA и RIVER (без DELTA Pro и DELTA Pro 3)"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60909_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60909_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60909_3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60909_4.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "По dice.bg и eu.ecoflow.com/products/ac-charging-cable.",
+    "dice.bg не уточнява кои модели DELTA 3 / RIVER 3 — затова „Съвместим с“ е празно, за да не се покаже грешно при сериите. Ако знаеш с кои от нашите е съвместим — кажи.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

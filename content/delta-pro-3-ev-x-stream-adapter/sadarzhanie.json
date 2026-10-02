@@ -1,0 +1,125 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow EV X-Stream Adapter (DELTA Pro 3)",
+    "slug": "delta-pro-3-ev-x-stream-adapter",
+    "categorySlug": "adapteri",
+    "productType": "accessory",
+    "tagline": "Адаптер за зареждане на DELTA Pro 3 от станции за електромобили (Type 2)",
+    "badge": "none",
+    "price": 101.75,
+    "externalUrl": "https://dice.bg/ecoflow-delta-pro-3-ev-x-stream-adapter-adapter-za-svarzvane-na-ecoflow-delta-pro-3-kam-elektricheska-zaryadna-stantsia-ot-tip-2-cheren-item72297",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "72297",
+    "ean": "4895251609142",
+    "description": "Оригинален адаптер EV X-Stream — зареждате EcoFlow DELTA Pro 3 до 7200W от хиляди AC станции за електромобили с конектор Type 2.",
+    "highlights": [
+      {
+        "text": "До 7200W зареждане"
+      },
+      {
+        "text": "Станции за електромобили, Type 2"
+      },
+      {
+        "text": "За EcoFlow DELTA Pro 3"
+      }
+    ],
+    "metaTitle": "EcoFlow EV X-Stream Adapter (DELTA Pro 3) | EcoFlow България",
+    "metaDescription": "Оригинален адаптер EV X-Stream — зареждате EcoFlow DELTA Pro 3 до 7200W от хиляди AC станции за електромобили с конектор Type 2.",
+    "compatibleWith": [
+      "delta-pro-3"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "72297_1.webp",
+      "alt": "EcoFlow EV X-Stream Adapter (DELTA Pro 3) — адаптер EV X-Stream"
+    },
+    {
+      "file": "72297_2.webp",
+      "alt": "EcoFlow EV X-Stream Adapter (DELTA Pro 3) — адаптер EV X-Stream"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Зареждане от станция за електромобили",
+      "body": "Оригиналният адаптер EV X-Stream ви позволява да зареждате EcoFlow DELTA Pro 3 на хиляди AC станции за зареждане на електромобили (ниво 2) по целия свят.\n\n- Бързо зареждане — до 7200W от станции у дома или на път.\n- Широка съвместимост — поддържа конектори Type 2.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow DELTA Pro 3 EV X-Stream адаптер",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Delta Pro 3 EV X-Stream Adapter"
+        },
+        {
+          "label": "Фабричен номер (dice.bg)",
+          "value": "5009604002"
+        },
+        {
+          "label": "Код при EcoFlow",
+          "value": "EFL-EVX-StreamAdapter-EU"
+        },
+        {
+          "label": "Мощност",
+          "value": "до 7200W"
+        },
+        {
+          "label": "Конектор",
+          "value": "Type 2"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow DELTA Pro 3"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72297_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72297_2.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "По dice.bg и eu.ecoflow.com/products/ev-x-stream-adapter-delta-pro-3.",
+    "В dice.bg: по заявка (проверено 02.10.2026)."
+  ]
+}

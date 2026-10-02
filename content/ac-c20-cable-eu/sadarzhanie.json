@@ -1,0 +1,138 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow AC C20 Cable EU (1.5m)",
+    "slug": "ac-c20-cable-eu",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "Захранващ кабел C20 за DELTA Pro, DELTA Pro 3 и DELTA Pro Ultra",
+    "badge": "none",
+    "price": 30.17,
+    "externalUrl": "https://dice.bg/ecoflow-ac-c20-cable-eu-zahranvasht-kabel-za-ecoflow-delta-pro-150-sm-cheren-item67362",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "67362",
+    "ean": "4895251612081",
+    "description": "Захранващ AC кабел C20, 1,5 м, за EcoFlow DELTA Pro, DELTA Pro 3 и DELTA Pro Ultra.",
+    "highlights": [
+      {
+        "text": "Дължина 1,5 м"
+      },
+      {
+        "text": "Конектор C20"
+      },
+      {
+        "text": "DELTA Pro, DELTA Pro 3, DELTA Pro Ultra"
+      }
+    ],
+    "metaTitle": "EcoFlow AC C20 Cable EU (1.5m) | EcoFlow България",
+    "metaDescription": "Захранващ AC кабел C20, 1,5 м, за EcoFlow DELTA Pro, DELTA Pro 3 и DELTA Pro Ultra.",
+    "compatibleWith": [
+      "delta-pro-3",
+      "delta-pro-ultra"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "67362_1.webp",
+      "alt": "EcoFlow AC C20 Cable EU (1.5m) — кабел"
+    },
+    {
+      "file": "67362_2.webp",
+      "alt": "EcoFlow AC C20 Cable EU (1.5m) — кабел"
+    },
+    {
+      "file": "67362_3.webp",
+      "alt": "EcoFlow AC C20 Cable EU (1.5m) — кабел"
+    },
+    {
+      "file": "67362_4.webp",
+      "alt": "EcoFlow AC C20 Cable EU (1.5m) — кабел"
+    },
+    {
+      "file": "67362_5.webp",
+      "alt": "EcoFlow AC C20 Cable EU (1.5m) — кабел"
+    },
+    {
+      "file": "67362_6.webp",
+      "alt": "EcoFlow AC C20 Cable EU (1.5m) — кабел"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Захранващ кабел за DELTA Pro серията",
+      "body": "Захранващ кабел за зареждане от контакта на EcoFlow DELTA Pro, DELTA Pro 3 и DELTA Pro Ultra. Дължина 1,5 м.\n\nВнимание: проверете дали вашият DELTA Pro е с този кабел или със старата версия.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow AC C20 Cable EU",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "AC C20 Cable EU"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFL-DELTAPROC20-AC1.5m-EU"
+        },
+        {
+          "label": "Дължина",
+          "value": "1,5 м"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow DELTA Pro, DELTA Pro 3, DELTA Pro Ultra"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/7/67362_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/7/67362_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/7/67362_3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/7/67362_4.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/7/67362_5.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/7/67362_6.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "По dice.bg и eu.ecoflow.com/products/ac-charging-cable (вариант C20).",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

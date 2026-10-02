@@ -1,0 +1,116 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Solar Extension Cable (3m, 2 pcs)",
+    "slug": "solar-extension-cable-3m",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "2 удължителни соларни кабела по 3 м",
+    "badge": "none",
+    "price": 50.62,
+    "externalUrl": "https://dice.bg/2-broja-ud-lzhitelni-kabeli-sv-rzvaschi-ecoflow-solaren-panel-k-m-elektrocentrala-ecoflow-ecoflow-solar-extension-cable-3m-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "60691",
+    "ean": "4897082661832",
+    "description": "Комплект от 2 удължителни соларни кабела по 3 м — електроцентралата EcoFlow остава на сянка, а соларните панели — на пряко слънце.",
+    "highlights": [
+      {
+        "text": "2 кабела по 3 м"
+      },
+      {
+        "text": "Соларен панел → електроцентрала"
+      },
+      {
+        "text": "Електроцентралата остава на сянка"
+      }
+    ],
+    "metaTitle": "EcoFlow Solar Extension Cable (3m, 2 pcs) | EcoFlow България",
+    "metaDescription": "Комплект от 2 удължителни соларни кабела по 3 м — електроцентралата EcoFlow остава на сянка, а соларните панели — на пряко слънце.",
+    "compatibleWith": [
+      "sgavaemi-paneli",
+      "stacionarni-paneli"
+    ],
+    "alsoInCategories": [
+      "montazh-i-kabeli-za-paneli"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "60691_1.webp",
+      "alt": "EcoFlow Solar Extension Cable (3m, 2 pcs) — кабел"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Повече дължина за соларния кабел",
+      "body": "Удължителният кабел EcoFlow удължава соларния кабел към XT60 за свързване на соларен панел EcoFlow към електроцентрала EcoFlow. Държите електроцентралата на сянка, докато панелите са на пряко слънце.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Solar Extension Cable 3 м (2 бр.)",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Solar Extension Cable"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFMC4-3m"
+        },
+        {
+          "label": "Дължина",
+          "value": "3 м"
+        },
+        {
+          "label": "Брой в комплекта",
+          "value": "2"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60691_1.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "По dice.bg и eu.ecoflow.com/products/solar-extension-cable.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

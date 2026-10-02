@@ -1,0 +1,127 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Solar Parallel Connection Cable",
+    "slug": "solar-parallel-connection-cable",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "Кабел за паралелно свързване на соларни панели",
+    "badge": "none",
+    "price": 30.17,
+    "externalUrl": "https://dice.bg/kabel-za-paralelno-sv-rzvane-na-njakolko-ecoflow-solarni-panela-k-m-ecoflow-elektrocentrali-ecoflow-solar-parallel-connection-cable-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "60696",
+    "ean": "4897082661290",
+    "description": "Оригинален кабел за паралелно свързване на соларни панели EcoFlow към електроцентралите EcoFlow DELTA и RIVER — по-бързо зареждане.",
+    "highlights": [
+      {
+        "text": "Паралелно свързване на панели"
+      },
+      {
+        "text": "По-бързо соларно зареждане"
+      },
+      {
+        "text": "DELTA и RIVER"
+      }
+    ],
+    "metaTitle": "EcoFlow Solar Parallel Connection Cable | EcoFlow България",
+    "metaDescription": "Оригинален кабел за паралелно свързване на соларни панели EcoFlow към електроцентралите EcoFlow DELTA и RIVER — по-бързо зареждане.",
+    "compatibleWith": [
+      "sgavaemi-paneli",
+      "stacionarni-paneli"
+    ],
+    "alsoInCategories": [
+      "montazh-i-kabeli-za-paneli"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "60696_1.webp",
+      "alt": "EcoFlow Solar Parallel Connection Cable — кабел"
+    },
+    {
+      "file": "60696_2.webp",
+      "alt": "EcoFlow Solar Parallel Connection Cable — кабел"
+    },
+    {
+      "file": "60696_3.webp",
+      "alt": "EcoFlow Solar Parallel Connection Cable — кабел"
+    },
+    {
+      "file": "60696_4.webp",
+      "alt": "EcoFlow Solar Parallel Connection Cable — кабел"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Панели в паралел",
+      "body": "Свързва соларните панели EcoFlow паралелно за по-бързо зареждане на електроцентралите EcoFlow.\n\n- Нужен е при 4 соларни панела в паралел към EcoFlow DELTA.\n- Нужен е при 2 соларни панела в паралел към сериите EcoFlow RIVER.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Solar Parallel Connection Cable",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Solar Parallel Connection Cable"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFPV-LTY2CBL0.3M"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "електроцентрали EcoFlow DELTA и RIVER"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60696_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60696_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60696_3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60696_4.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "По dice.bg и eu.ecoflow.com/products/solar-parallel-connection-cable.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Infinity Cable (2m)",
+    "slug": "infinity-cable-2m",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "Кабел 2 м за DELTA Pro към Smart Home Panel",
+    "badge": "none",
+    "price": 117.09,
+    "externalUrl": "https://dice.bg/kabel-za-sv-rzvane-na-ecoflow-delta-pro-k-m-ecoflow-smart-home-panel-cheren-ecoflow-infinity-cable-200-sm",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "61553",
+    "ean": "4897082668091",
+    "description": "Оригинален кабел 2 м за свързване на EcoFlow DELTA Pro към EcoFlow Smart Home Panel. Не е съвместим с DELTA Pro 3.",
+    "highlights": [
+      {
+        "text": "Дължина 2 м"
+      },
+      {
+        "text": "DELTA Pro → Smart Home Panel"
+      },
+      {
+        "text": "Не е за DELTA Pro 3"
+      }
+    ],
+    "metaTitle": "EcoFlow Infinity Cable (2m) | EcoFlow България",
+    "metaDescription": "Оригинален кабел 2 м за свързване на EcoFlow DELTA Pro към EcoFlow Smart Home Panel. Не е съвместим с DELTA Pro 3.",
+    "compatibleWith": [
+      "smart-home-panel"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "61553_1.webp",
+      "alt": "EcoFlow Infinity Cable (2m) — кабел"
+    },
+    {
+      "file": "61553_2.webp",
+      "alt": "EcoFlow Infinity Cable (2m) — кабел"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "DELTA Pro към Smart Home Panel",
+      "body": "Оригинален кабел за свързване на EcoFlow DELTA Pro към EcoFlow Smart Home Panel — ползвате заряда на DELTA Pro в дома или я зареждате от мрежата. За разлика от други домашни батерии, кабелът Infinity позволява бързо да изключите захранването от мрежата. Дължина 2 м.\n\nВнимание: кабелът не е съвместим с DELTA Pro 3.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Infinity Cable",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Infinity Cable"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "L38DH-2m-HV"
+        },
+        {
+          "label": "Дължина",
+          "value": "2 м"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow DELTA Pro → Smart Home Panel (не е за DELTA Pro 3)"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61553_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61553_2.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "По dice.bg и eu.ecoflow.com/products/infinity-cable.",
+    "dice.bg има и ред за DELTA Max и Smart Generator — очевидно копиран от друг кабел; не е сложен.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}
