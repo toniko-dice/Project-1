@@ -1,0 +1,133 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow STREAM BKW DIY Cable (5m)",
+    "slug": "stream-bkw-diy-cable-5m",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "Кабел 5 м от микроинвертора STREAM към ел. таблото",
+    "badge": "none",
+    "price": 25.05,
+    "externalUrl": "https://dice.bg/sv-rzvasch-kabel-za-ecoflow-stream-microinverter-k-m-el-tablo-ecoflow-stream-bkw-diy-cable-cheren-5-metra",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "72752",
+    "ean": "4895251640466",
+    "description": "Кабел 5 м за директно свързване на микроинвертора EcoFlow STREAM към ел. таблото на дома.",
+    "highlights": [
+      {
+        "text": "Дължина 5 м"
+      },
+      {
+        "text": "Микроинвертор STREAM → ел. табло"
+      }
+    ],
+    "metaTitle": "EcoFlow STREAM BKW DIY Cable (5m) | EcoFlow България",
+    "metaDescription": "Кабел 5 м за директно свързване на микроинвертора EcoFlow STREAM към ел. таблото на дома.",
+    "compatibleWith": [
+      "stream-microinverter"
+    ],
+    "alsoInCategories": [
+      "svarzvane-kam-el-tabloto"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-stream-bkw-diy-cable-5m-svyrzvasht-kabel-za-ecoflow-stream.webp",
+      "alt": "EcoFlow STREAM BKW DIY Cable (5m) — кабел"
+    },
+    {
+      "file": "ecoflow-stream-bkw-diy-cable-5m-svyrzvasht-kabel-za-ecoflow-stream-2.webp",
+      "alt": "EcoFlow STREAM BKW DIY Cable (5m) — кабел"
+    },
+    {
+      "file": "ecoflow-stream-bkw-diy-cable-5m-svyrzvasht-kabel-za-ecoflow-stream-3.webp",
+      "alt": "EcoFlow STREAM BKW DIY Cable (5m) — кабел"
+    },
+    {
+      "file": "ecoflow-stream-bkw-diy-cable-5m-svyrzvasht-kabel-za-ecoflow-stream-4.webp",
+      "alt": "EcoFlow STREAM BKW DIY Cable (5m) — кабел"
+    },
+    {
+      "file": "ecoflow-stream-bkw-diy-cable-5m-svyrzvasht-kabel-za-ecoflow-stream-5.webp",
+      "alt": "EcoFlow STREAM BKW DIY Cable (5m) — кабел"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Микроинверторът — директно към таблото",
+      "body": "Кабелът свързва микроинвертора EcoFlow STREAM директно към ел. таблото на дома. С батерия от серията STREAM съхранявате енергията от деня и я ползвате вечер. Дължина 5 м.\n\n*Свързването към таблото трябва да се извърши от квалифициран електротехник.\n*Микроинверторът не е включен.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow STREAM BKW DIY Cable 5 м",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "STREAM BKW DIY Cable 5m"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFL-streamMI-DIY-5M"
+        },
+        {
+          "label": "Дължина",
+          "value": "5 м"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow STREAM Microinverter"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-stream-bkw-diy-cable-5m-svyrzvasht-kabel-za-ecoflow-stream.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-stream-bkw-diy-cable-5m-svyrzvasht-kabel-za-ecoflow-stream-2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-stream-bkw-diy-cable-5m-svyrzvasht-kabel-za-ecoflow-stream-3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-stream-bkw-diy-cable-5m-svyrzvasht-kabel-za-ecoflow-stream-4.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-stream-bkw-diy-cable-5m-svyrzvasht-kabel-za-ecoflow-stream-5.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Няма страница в eu.ecoflow.com — по dice.bg.",
+    "Различен е от „STREAM DIY Cable (5 m)“ (EAN 4895251644679), който вече е в сайта.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

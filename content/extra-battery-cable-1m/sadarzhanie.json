@@ -1,0 +1,117 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Extra Battery Cable (1m)",
+    "slug": "extra-battery-cable-1m",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "Кабел 1 м от DELTA Max към допълнителна батерия",
+    "badge": "none",
+    "price": 71.07,
+    "externalUrl": "https://dice.bg/kabel-za-sv-rzvane-na-ecoflow-delta-k-m-ecoflow-delta-max-smart-extra-baterija-1m-ecoflow-delta-max-extra-battery-cable-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "60698",
+    "ean": "4897082666523",
+    "description": "Оригинален кабел 1 м, който свързва EcoFlow DELTA Max с допълнителната батерия DELTA Max Smart Extra Battery или със Smart Generator.",
+    "highlights": [
+      {
+        "text": "Дължина 1 м"
+      },
+      {
+        "text": "DELTA Max → допълнителна батерия / Smart Generator"
+      }
+    ],
+    "metaTitle": "EcoFlow Extra Battery Cable (1m) | EcoFlow България",
+    "metaDescription": "Оригинален кабел 1 м, който свързва EcoFlow DELTA Max с допълнителната батерия DELTA Max Smart Extra Battery или със Smart Generator."
+  },
+  "galeriya": [
+    {
+      "file": "60698_1.webp",
+      "alt": "EcoFlow Extra Battery Cable (1m) — кабел"
+    },
+    {
+      "file": "60698_2.webp",
+      "alt": "EcoFlow Extra Battery Cable (1m) — кабел"
+    },
+    {
+      "file": "60698_3.webp",
+      "alt": "EcoFlow Extra Battery Cable (1m) — кабел"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "DELTA Max — с допълнителна батерия",
+      "body": "Кабелът свързва EcoFlow DELTA Max с допълнителната батерия DELTA Max Smart Extra Battery или със Smart Generator през порта за допълнителна батерия отстрани. Дължина 1 м.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow DELTA Max Extra Battery Cable",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "DELTA Max Extra Battery Cable"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "LXT150-1m-US"
+        },
+        {
+          "label": "Дължина",
+          "value": "1 м"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow DELTA Max → DELTA Max Smart Extra Battery / Smart Generator"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60698_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60698_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60698_3.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",
+    "DELTA Max я няма в сайта → „Съвместим с“ е празно.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

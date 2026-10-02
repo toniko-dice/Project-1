@@ -1,0 +1,274 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "eu.ecoflow.com + dice.bg",
+  "produkt": {
+    "title": "EcoFlow Single Axis Solar Tracker",
+    "slug": "single-axis-solar-tracker",
+    "categorySlug": "montazh-i-kabeli-za-paneli",
+    "productType": "accessory",
+    "tagline": "Автоматична стойка, която следи слънцето — до 60% повече енергия",
+    "badge": "none",
+    "price": 408.52,
+    "externalUrl": "https://dice.bg/ecoflow-single-axis-solar-tracker-avtomatichna-solarna-postavka-prosledyavashta-nay-dobriyat-agal-kam-slantseto-cheren-item67155",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "67155",
+    "ean": "4895251605205",
+    "description": "Едноосен соларен тракер за балкона: автоматично следи слънцето от 10° до 85° със сензор за дъжд и светлина и дава до 60% повече енергия. Работи с повечето твърди панели, управлява се от приложението.",
+    "highlights": [
+      {
+        "text": "До 60% повече енергия"
+      },
+      {
+        "text": "Автоматичен ъгъл 10°–85°"
+      },
+      {
+        "text": "Сензор за дъжд и светлина"
+      },
+      {
+        "text": "За повечето твърди панели"
+      },
+      {
+        "text": "IP68, приложение EcoFlow"
+      }
+    ],
+    "metaTitle": "EcoFlow Single Axis Solar Tracker | EcoFlow България",
+    "metaDescription": "Едноосен соларен тракер EcoFlow за балкона — следи слънцето от 10° до 85° и дава до 60% повече енергия. Сензор за дъжд и светлина, IP68, приложение.",
+    "compatibleWith": [
+      "stacionarni-paneli"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-single-axis-solar-tracker-1175973237.png",
+      "alt": "EcoFlow Single Axis Solar Tracker — соларен тракер"
+    },
+    {
+      "file": "ecoflow-single-axis-solar-tracker-1175973239.png",
+      "alt": "EcoFlow Single Axis Solar Tracker — соларен тракер"
+    },
+    {
+      "file": "ecoflow-single-axis-solar-tracker-1175973238.png",
+      "alt": "EcoFlow Single Axis Solar Tracker — соларен тракер"
+    },
+    {
+      "file": "ecoflow-single-axis-solar-tracker-1175973236.png",
+      "alt": "EcoFlow Single Axis Solar Tracker — соларен тракер"
+    },
+    {
+      "file": "ecoflow-single-axis-solar-tracker-51173854773591.png",
+      "alt": "EcoFlow Single Axis Solar Tracker — соларен тракер"
+    },
+    {
+      "file": "ecoflow-single-axis-solar-tracker-51055940763991.png",
+      "alt": "EcoFlow Single Axis Solar Tracker — соларен тракер"
+    },
+    {
+      "file": "ecoflow-single-axis-solar-tracker-51055916122455.png",
+      "alt": "EcoFlow Single Axis Solar Tracker — соларен тракер"
+    },
+    {
+      "file": "ecoflow-single-axis-solar-tracker-51055916548439.png",
+      "alt": "EcoFlow Single Axis Solar Tracker — соларен тракер"
+    },
+    {
+      "file": "ecoflow-single-axis-solar-tracker-51055955476823.png",
+      "alt": "EcoFlow Single Axis Solar Tracker — соларен тракер"
+    },
+    {
+      "file": "ecoflow-single-axis-solar-tracker-51055916155223.png",
+      "alt": "EcoFlow Single Axis Solar Tracker — соларен тракер"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "До 60% повече енергия",
+      "body": "Едноосният соларен тракер EcoFlow дава енергийна независимост на всеки апартамент и балкон, като заема минимално място. Той автоматично следи ъгъла на преките слънчеви лъчи от 10° до 85° по една ос и използва максимално възобновяемата енергия.",
+      "image": "single_axis_solar_tracker_pc_1.jpg",
+      "imageAlt": "соларен тракер"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Повече енергия от по-малко място",
+      "body": "* В средни до високи географски ширини (30°–60°) едноосното проследяване дава значително повече енергия от вертикален или оптимално фиксиран монтаж. При идеални условия:\n- поне 20% повече от най-добрия фиксиран монтаж за мястото, независимо от посоката в диапазона югоизток–югозапад;\n- от 60% до 146% повече от вертикален монтаж, независимо от посоката в диапазона югоизток–югозапад.",
+      "image": "single_axis_solar_tracker_pc_2.jpg",
+      "imageAlt": "до 60% повече енергия"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Сензори",
+      "heading": "Най-безгрижното използване",
+      "body": "Новият сензор за дъжд и светлина улавя промените във времето и околната среда — за оптимално производство и безопасна работа на панелите.\n\nСлънчево: при съществена промяна на слънчевата светлина тракерът сам нагласява ъгъла за максимално производство. Адаптира се и към сенки от близки дървета и сгради.\n\nДъжд: при силен дъжд тракерът нагласява ъгъла за оптимално производство и самозащита.\n\nВятър: при вятър над степен 6 тракерът автоматично се връща на 10°. Издържа вятър до степен 8; при по-силен вятър го свалете временно и го приберете.\n\n* Сензорът задейства автоматични режими: следене на слънцето (>50 000 lux, на всеки 30 минути), търсене на слънцето (>30 000 lux), автоматичен сън (≤30 000 lux) и автоматично изключване при дъжд или предупреждение за тайфун (степен 6).",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "По-добро енергоспестяващо решение",
+      "body": "С разтегателната рамка тракерът работи с повечето твърди соларни панели на пазара: дължина 1000–2500 мм, ширина 600–1200 мм и дебелина 30–40 мм.",
+      "image": "single_axis_solar_tracker_4.jpg",
+      "imageAlt": "тракер с панел"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Максимална ефективност",
+      "body": "Към мрежата: с микроинвертор става най-удобното енергоспестяващо решение за дома.\n\nИзвън мрежата: с преносима електроцентрала е най-силният и стабилен източник на енергия за приключенията ви.",
+      "image": "single_axis_solar_tracker_5.jpg",
+      "imageAlt": "тракер на балкон с електроцентрала"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Умно управление",
+      "body": "Тракерът се включва сам и работи през целия ден, а се изключва, когато слънцето залезе или не се вижда. Следите работата му в приложението EcoFlow, а при нужда нагласяте ъгъла и ръчно. Ефективен, интелигентен и безопасен.",
+      "image": "single_axis_solar_tracker_6.jpg",
+      "imageAlt": "приложение EcoFlow"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Надеждна работа и сигурност",
+      "body": "Тракерът е от силно устойчива на корозия поцинкована стомана с отлична водоустойчивост — за надежден и дълготраен монтаж навън при всякакво време. Балконската соларна система EcoFlow е дългосрочна инвестиция в енергийната независимост на дома.\n\n* Контролната кутия не е водоустойчива при силни бури.",
+      "image": "single_axis_solar_tracker_pc_7.jpg",
+      "imageAlt": "IP68 и 3 години"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Монтаж",
+      "heading": "Монтаж сами",
+      "body": "1. Сглобете петте профила в крайната форма на стойката.\n2. Монтирайте контролната кутия и кутията на сензора и нагласете ъгъла.\n3. Монтирайте соларния панел.\n4. Монтирайте куките.\n5. Закачете на парапета на балкона.\n\n* Парапетът трябва да е решетъчен, с ширина на горната част под 80 мм и носимоспособност поне 50 кг.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "body": "",
+      "image": "single_axis_solar_tracker_9.png",
+      "imageAlt": "съдържание на кутията"
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Single Axis Solar Tracker"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFSAST"
+        },
+        {
+          "label": "Нетно тегло",
+          "value": "11 кг"
+        },
+        {
+          "label": "Размери",
+          "value": "1340 × 223 × 88 мм"
+        },
+        {
+          "label": "Устойчивост на вятър",
+          "value": "степен 6 (автоматично на 10°); издържа до степен 8"
+        },
+        {
+          "label": "Регулируем ъгъл",
+          "value": "10°–85°"
+        },
+        {
+          "label": "Водоустойчивост",
+          "value": "IP68"
+        },
+        {
+          "label": "Максимален соларен панел",
+          "value": "25 кг; 1000–2500 × 600–1200 × 30–40 мм"
+        },
+        {
+          "label": "Приложение",
+          "value": "iOS, Android"
+        },
+        {
+          "label": "Вградена батерия",
+          "value": "NCM, 36Wh, 500 цикъла до 80%+ капацитет"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-1175973237.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-1175973239.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-1175973238.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-1175973236.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-51173854773591.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-51055940763991.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-51055916122455.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-51055916548439.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-51055955476823.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-51055916155223.png"
+    ],
+    "sekcii": [
+      "https://eu.ecoflow.com/cdn/shop/files/single_axis_solar_tracker_4.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/single_axis_solar_tracker_5.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/single_axis_solar_tracker_6.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/single_axis_solar_tracker_9.png",
+      "https://eu.ecoflow.com/cdn/shop/files/single_axis_solar_tracker_pc_1.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/single_axis_solar_tracker_pc_2.jpg",
+      "https://eu.ecoflow.com/cdn/shop/files/single_axis_solar_tracker_pc_7.jpg"
+    ]
+  },
+  "_prevod_nadpisi": {
+    "single_axis_solar_tracker_pc_1.jpg": {
+      "60% more power is produced": "60% повече произведена енергия",
+      "10°-85° automatic adjustable angle": "10°–85° автоматично регулиране на ъгъла",
+      "Smart sensors (light and rain)": "Умни сензори (светлина и дъжд)",
+      "APP remote control": "Управление от приложението",
+      "Highly waterproof and wind-resistant": "Водоустойчив и устойчив на вятър",
+      "Plug-and-play": "Включвате и работи",
+      "3-year warranty": "3 години гаранция"
+    },
+    "single_axis_solar_tracker_pc_2.jpg": {
+      "Maximize power w/ 60% Boost": "До 60% повече енергия",
+      "Utilize only 0.45 m² of minimal space": "Заема само 0,45 m²",
+      "Reduce 20% electricity bills*": "До 20% по-ниски сметки за ток*"
+    },
+    "single_axis_solar_tracker_pc_7.jpg": {
+      "IP68 Waterproof* and Dust Resistant": "IP68 — водоустойчив* и прахоустойчив",
+      "3-Year performance guarantee": "3 години гаранция за работа"
+    }
+  },
+  "_neyasni": [
+    "Като eu.ecoflow.com/products/single-axis-solar-tracker (по желание).",
+    "Сензорите „Слънчево / Дъжд / Вятър“ в EU са видеа — тук са текст.",
+    "Стъпките за монтаж в EU са само иконки — тук са списък.",
+    "Различен продукт от „EcoFlow Solar Tracker“ (двуосния), който вече е в сайта.",
+    "Цена и наличност от dice.bg.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

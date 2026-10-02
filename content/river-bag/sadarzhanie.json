@@ -1,0 +1,134 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow RIVER Bag",
+    "slug": "river-bag",
+    "categorySlug": "chanti-i-kalafi",
+    "productType": "accessory",
+    "tagline": "Чанта за RIVER, RIVER Max и RIVER Pro",
+    "badge": "none",
+    "price": 81.3,
+    "externalUrl": "https://dice.bg/vodonepromukaema-i-ustojchiva-chanta-za-prenasjane-na-ecoflow-river-river-max-i-river-pro-ecoflow-river-bag-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "60758",
+    "ean": "4897082664499",
+    "description": "Здрава чанта IP54 за EcoFlow RIVER, RIVER Max и RIVER Pro — с дръжка, регулируема презрамка и мрежест джоб за кабели.",
+    "highlights": [
+      {
+        "text": "IP54 срещу вода и прах"
+      },
+      {
+        "text": "600D PU Oxford"
+      },
+      {
+        "text": "Регулируема презрамка"
+      }
+    ],
+    "metaTitle": "EcoFlow RIVER Bag | EcoFlow България",
+    "metaDescription": "Здрава чанта IP54 за EcoFlow RIVER, RIVER Max и RIVER Pro — с дръжка, регулируема презрамка и мрежест джоб за кабели."
+  },
+  "galeriya": [
+    {
+      "file": "60758_1.webp",
+      "alt": "EcoFlow RIVER Bag — чанта"
+    },
+    {
+      "file": "60758_2.webp",
+      "alt": "EcoFlow RIVER Bag — чанта"
+    },
+    {
+      "file": "60758_3.webp",
+      "alt": "EcoFlow RIVER Bag — чанта"
+    },
+    {
+      "file": "60758_4.webp",
+      "alt": "EcoFlow RIVER Bag — чанта"
+    },
+    {
+      "file": "60758_5.webp",
+      "alt": "EcoFlow RIVER Bag — чанта"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Повече защита, по-дълъг живот",
+      "body": "Оригиналната чанта за серията EcoFlow RIVER пази електроцентралата и удължава живота ѝ. Изработена е от 600D PU Oxford — по-здрав и неплъзгащ се материал от EVA, с устойчивост IP54 на вода и прах.\n\nИма дръжка и регулируема, сваляща се презрамка, а мрежестият джоб с цип в капака пази кабелите от заплитане.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow чанта",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "RIVER Bag"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "BRIVER-B"
+        },
+        {
+          "label": "Материал",
+          "value": "600D PU Oxford"
+        },
+        {
+          "label": "Защита",
+          "value": "IP54"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow RIVER, RIVER Max, RIVER Pro"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60758_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60758_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60758_3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60758_4.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60758_5.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",
+    "RIVER (1-во поколение) го няма в сайта → „Съвместим с“ е празно.",
+    "В dice.bg: по заявка (проверено 02.10.2026)."
+  ]
+}

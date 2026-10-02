@@ -1,0 +1,140 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Shower Kit",
+    "slug": "shower-kit",
+    "categorySlug": "drugi-aksesoari",
+    "productType": "accessory",
+    "tagline": "Душ помпа и сгъваема кофа за WAVE",
+    "badge": "none",
+    "price": 40.39,
+    "compareAtPrice": 81.3,
+    "externalUrl": "https://dice.bg/komplekt-dush-pompa-i-sg-vaema-kofa-za-ecoflow-wave-prenosim-portativen-klimatik-ecoflow-shower-kit-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "72557",
+    "ean": "4895251643023",
+    "description": "Комплект душ помпа с вградена батерия и сгъваема кофа — лек и удобен за използване на открито.",
+    "highlights": [
+      {
+        "text": "Помпа с вградена батерия 18,5Wh"
+      },
+      {
+        "text": "IPX7"
+      },
+      {
+        "text": "Сгъваема кофа"
+      }
+    ],
+    "metaTitle": "EcoFlow Shower Kit | EcoFlow България",
+    "metaDescription": "Комплект душ помпа с вградена батерия и сгъваема кофа — лек и удобен за използване на открито.",
+    "compatibleWith": [
+      "wave-3",
+      "wave-3-s-bateriya"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-shower-kit-komplekt-dush-pompa-i-sgyvaema-kofa-za-ecoflow-wave1.webp",
+      "alt": "EcoFlow Shower Kit — душ комплект"
+    },
+    {
+      "file": "ecoflow-shower-kit-komplekt-dush-pompa-i-sgyvaema-kofa-za-ecoflow-wave.webp",
+      "alt": "EcoFlow Shower Kit — душ комплект"
+    },
+    {
+      "file": "ecoflow-shower-kit-komplekt-dush-pompa-i-sgyvaema-kofa-za-ecoflow-wave3.webp",
+      "alt": "EcoFlow Shower Kit — душ комплект"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Душ навсякъде",
+      "body": "Комплект душ помпа и сгъваема кофа — леки, преносими и удобни за използване на открито. Помпата е с вградена батерия и сертификат IPX7.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "Помпа за вода EcoFlow",
+          "qty": 1
+        },
+        {
+          "name": "Душ глава",
+          "qty": 1
+        },
+        {
+          "name": "Сгъваема кофа за вода",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Shower Kit"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFA-SHOWERKIT"
+        },
+        {
+          "label": "Вход",
+          "value": "5V, 2A"
+        },
+        {
+          "label": "Мощност",
+          "value": "16W"
+        },
+        {
+          "label": "Капацитет на батерията",
+          "value": "18,5Wh (7,4V, 2500mAh)"
+        },
+        {
+          "label": "Защита",
+          "value": "IPX7"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow WAVE"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-shower-kit-komplekt-dush-pompa-i-sgyvaema-kofa-za-ecoflow-wave1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-shower-kit-komplekt-dush-pompa-i-sgyvaema-kofa-za-ecoflow-wave.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-shower-kit-komplekt-dush-pompa-i-sgyvaema-kofa-za-ecoflow-wave3.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",
+    "В dice.bg: по заявка (проверено 02.10.2026)."
+  ]
+}

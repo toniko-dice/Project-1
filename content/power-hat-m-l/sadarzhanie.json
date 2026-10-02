@@ -1,0 +1,300 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "eu.ecoflow.com + dice.bg",
+  "produkt": {
+    "title": "EcoFlow Power Hat (M-L)",
+    "slug": "power-hat-m-l",
+    "categorySlug": "drugi-aksesoari",
+    "productType": "accessory",
+    "tagline": "Соларна шапка, която зарежда телефона ви — размер M–L",
+    "badge": "none",
+    "price": 39.0,
+    "compareAtPrice": 101.75,
+    "externalUrl": "https://dice.bg/ecoflow-power-hat-m-l-inovativna-solarna-shapka-zarezhdashta-direktno-vasheto-ustroystvo-ot-slantseto-cheren-item70379",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "70379",
+    "ean": "4895251628808",
+    "description": "Соларна шапка EcoFlow с панели по цялата периферия: зарежда две устройства наведнъж през USB-A и USB-C, пази с UPF50+ и е IP65. Размер M–L (56–58 см).",
+    "highlights": [
+      {
+        "text": "Соларни панели на 360°"
+      },
+      {
+        "text": "USB-A + USB-C, 5V 2,4A"
+      },
+      {
+        "text": "UPF50+"
+      },
+      {
+        "text": "IP65"
+      },
+      {
+        "text": "Размер M–L (56–58 см)"
+      }
+    ],
+    "metaTitle": "EcoFlow Power Hat (M-L) | EcoFlow България",
+    "metaDescription": "Соларна шапка EcoFlow Power Hat M–L: зарежда телефона от слънцето, два порта USB-A и USB-C, UPF50+, IP65, сгъваема."
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-power-hat-59432080277847.png",
+      "alt": "EcoFlow Power Hat (M-L) — соларна шапка"
+    },
+    {
+      "file": "ecoflow-power-hat-59432080212311.png",
+      "alt": "EcoFlow Power Hat (M-L) — соларна шапка"
+    },
+    {
+      "file": "ecoflow-power-hat-59432080343383.png",
+      "alt": "EcoFlow Power Hat (M-L) — соларна шапка"
+    },
+    {
+      "file": "ecoflow-power-hat-59432080408919.png",
+      "alt": "EcoFlow Power Hat (M-L) — соларна шапка"
+    },
+    {
+      "file": "ecoflow-power-hat-59432080474455.png",
+      "alt": "EcoFlow Power Hat (M-L) — соларна шапка"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Соларно зареждане в движение",
+      "body": "",
+      "image": "1_1_1c59be88-acb7-4aa2-953a-def71da1c7d5.png",
+      "imageAlt": "EcoFlow Power Hat"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Размери",
+      "heading": "Регулируем размер от M до XL",
+      "body": "Отвътре има регулиране с велкро — шапката стои плътно и не пречи на видимостта.",
+      "image": "pt_pc_2_1.png",
+      "imageAlt": "таблица с размерите"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Покритие на 360°",
+      "body": "Соларно зареждане в движение — панелите са по цялата периферия.",
+      "image": "111.png",
+      "imageAlt": "семейство с шапки на брега"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Два порта — две устройства наведнъж",
+      "body": "Зарежда две устройства едновременно — например вентилатор за врат, Bluetooth слушалки и телефон.",
+      "image": "222.png",
+      "imageAlt": "два порта"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "UPF50+, защита от слънце и UV",
+      "body": "EcoFlow Power Hat има лабораторно измерена UV пропускливост 0% и фактор на защита UPF50+. Стоите на слънце без страх от изгаряне и прегряване.",
+      "image": "pt_pc_3_1.png",
+      "imageAlt": "UPF 50+"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Повече енергия, по-малко топлина",
+      "body": "Докато зарежда, соларните панели по периферията превръщат 24% от погълнатата слънчева енергия в електричество, а превърнатата в топлина енергия пада до 66%. В сравнение с обикновена черна шапка повърхността е по-хладна — и на вас ви е по-прохладно.",
+      "image": "pt_pc_4_1.png",
+      "imageAlt": "сравнение с черна шапка"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Сгъваема, лесна за носене",
+      "body": "Лека и удобна за дълго носене. Сгъва се лесно и се побира в раницата — идеална за преходи.",
+      "image": "444.png",
+      "imageAlt": "сгъната шапка"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "IP65 — водо- и прахоустойчива",
+      "body": "Справя се добре край морето или езерото и при лек дъжд. Устойчива е на пясък и прах, на пръски и на напукване — подходяща за навън без нужда от специални грижи.",
+      "image": "333.png",
+      "imageAlt": "капки вода по шапката"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "За всякакви приключения",
+      "body": "Идеална за преходи, катерене, риболов, плаж, работа навън и още — зарежда от слънцето, докато сте навън, и ви пази от него.",
+      "image": "pt_pc_5_1.png",
+      "imageAlt": "приложения"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "body": "",
+      "image": "pt_pc_6_1.png",
+      "imageAlt": "съдържание на кутията"
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Power Hat M-L"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFPowerHat-M-L"
+        },
+        {
+          "label": "Размер",
+          "value": "M–L — обиколка на главата 56–58 см"
+        },
+        {
+          "label": "Номинална мощност",
+          "value": "12W (STC, ±1W)"
+        },
+        {
+          "label": "Нетно тегло",
+          "value": "370 г"
+        },
+        {
+          "label": "Изходи",
+          "value": "USB-A / USB-C"
+        },
+        {
+          "label": "Изход",
+          "value": "5V 2,4A макс."
+        },
+        {
+          "label": "Водо- и прахоустойчивост",
+          "value": "IP65"
+        },
+        {
+          "label": "Клетки и ефективност",
+          "value": "PERC монокристален силиций, 23–24%"
+        },
+        {
+          "label": "Напрежение на празен ход",
+          "value": "7,8V"
+        },
+        {
+          "label": "Максимално работно напрежение",
+          "value": "6V"
+        },
+        {
+          "label": "Максимален работен ток",
+          "value": "2A"
+        },
+        {
+          "label": "Ток на късо съединение",
+          "value": "2,2A"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-power-hat-59432080277847.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-power-hat-59432080212311.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-power-hat-59432080343383.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-power-hat-59432080408919.png",
+      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-power-hat-59432080474455.png"
+    ],
+    "sekcii": [
+      "https://eu.ecoflow.com/cdn/shop/files/111.png",
+      "https://eu.ecoflow.com/cdn/shop/files/1_1_1c59be88-acb7-4aa2-953a-def71da1c7d5.png",
+      "https://eu.ecoflow.com/cdn/shop/files/222.png",
+      "https://eu.ecoflow.com/cdn/shop/files/333.png",
+      "https://eu.ecoflow.com/cdn/shop/files/444.png",
+      "https://eu.ecoflow.com/cdn/shop/files/pt_pc_2_1.png",
+      "https://eu.ecoflow.com/cdn/shop/files/pt_pc_3_1.png",
+      "https://eu.ecoflow.com/cdn/shop/files/pt_pc_4_1.png",
+      "https://eu.ecoflow.com/cdn/shop/files/pt_pc_5_1.png",
+      "https://eu.ecoflow.com/cdn/shop/files/pt_pc_6_1.png"
+    ]
+  },
+  "_prevod_nadpisi": {
+    "1_1_1c59be88-acb7-4aa2-953a-def71da1c7d5.png": {
+      "Solar Charging On-The-GO": "Соларно зареждане в движение",
+      "360 Degree Solar Paneled Brim": "Периферия със соларни панели на 360°",
+      "UPF 50+": "UPF 50+ (остава)",
+      "IP65 Waterproof-Rated & Durable": "IP65 — водоустойчива и издръжлива",
+      "Foldable design, easy to carry": "Сгъваема, лесна за носене",
+      "Cool & Comfortable": "Прохладна и удобна",
+      "Dual USB-A & USB-C Ports": "Два порта: USB-A и USB-C"
+    },
+    "pt_pc_2_1.png": {
+      "How to measure your head circumference": "Как да измерите обиколката на главата",
+      "The forehead hair root": "Корените на косата на челото",
+      "The uplift of the back": "Най-изпъкналата точка отзад",
+      "EcoFlow Power Hat size chart": "Таблица с размерите на EcoFlow Power Hat",
+      "Brand Size": "Размер",
+      "Head Circumference (cm)": "Обиколка на главата (см)",
+      "Head Circumference (in)": "Обиколка на главата (in)",
+      "Medium-Large": "M–L",
+      "Large-X-Large": "L–XL",
+      "General size comparison table": "Обща таблица за сравнение",
+      "10-16-year-olds": "10–16 години",
+      "Adult women": "Възрастни жени",
+      "Adult men": "Възрастни мъже"
+    },
+    "pt_pc_4_1.png": {
+      "EcoFlow Power Hat": "EcoFlow Power Hat",
+      "Standard Black Hat": "Обикновена черна шапка",
+      "Solar Energy": "Слънчева енергия",
+      "Reflection": "Отражение",
+      "Thermal Energy": "Топлинна енергия",
+      "Electric Energy": "Електрическа енергия"
+    },
+    "pt_pc_5_1.png": {
+      "Hiking": "Преходи",
+      "Mountain Climbing": "Катерене",
+      "Fishing": "Риболов",
+      "Beach Outings": "На плажа",
+      "Outdoor Tasks": "Работа навън"
+    },
+    "pt_pc_6_1.png": {
+      "EcoFlow Power Hat": "EcoFlow Power Hat",
+      "Hat Strap": "Връзка за шапката",
+      "Protective Bag": "Защитен калъф",
+      "Quick Start Guide": "Кратко ръководство"
+    }
+  },
+  "_neyasni": [
+    "Като eu.ecoflow.com/products/solar-power-hat (по желание).",
+    "Двата размера са отделни продукти (различни EAN и цени в dice); съдържанието е общо.",
+    "Снимките в секциите са общи за двата размера — превеждат се веднъж.",
+    "Цена и наличност от dice.bg.",
+    "В dice.bg: по заявка (проверено 02.10.2026)."
+  ]
+}

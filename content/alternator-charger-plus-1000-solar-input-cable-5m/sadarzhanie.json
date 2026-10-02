@@ -1,0 +1,119 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Alternator Charger Plus 1000 Solar Input Cable 12AWG (5m)",
+    "slug": "alternator-charger-plus-1000-solar-input-cable-5m",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "Соларен кабел 5 м (MC4) към Alternator Charger Plus 1000",
+    "badge": "none",
+    "price": 59,
+    "externalUrl": "https://dice.bg/kabel-za-sv-rzvane-na-ecoflow-zarjadni-stancii-k-m-ecoflow-alternator-ecoflow-xt60-output-cable-alternator-charger4306",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "77998",
+    "ean": "4895251665988",
+    "description": "Кабел 5 м, 12AWG, с MC4 конектори, който свързва соларен панел към EcoFlow Alternator Charger Plus 1000 — така XT60 соларният вход на електроцентралата остава свободен за втори панел.",
+    "highlights": [
+      {
+        "text": "Дължина 5 м, 12AWG"
+      },
+      {
+        "text": "Конектори MC4"
+      },
+      {
+        "text": "11–60V, 15A, до 300W"
+      }
+    ],
+    "metaTitle": "EcoFlow Alternator Charger Plus 1000 Solar Input Cable 12AWG (5m) | EcoFlow България",
+    "metaDescription": "Кабел 5 м, 12AWG, с MC4 конектори, който свързва соларен панел към EcoFlow Alternator Charger Plus 1000 — така XT60 соларният вход на електроцентралата ост"
+  },
+  "galeriya": [
+    {
+      "file": "4895251665988-1.webp",
+      "alt": "EcoFlow Alternator Charger Plus 1000 Solar Input Cable 12AWG (5m) — соларен кабел"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Още един соларен вход",
+      "body": "Кабелът е за Alternator Charger Plus 1000 и позволява соларно зареждане, като свързвате съвместими соларни панели директно към него. Така вграденият XT60 соларен порт на електроцентралата EcoFlow остава свободен за втори, отделен соларен панел.\n\nОкабеляването 12AWG пренася енергията ефективно и с по-малко загуби, а дължината 5 м дава гъвкавост при монтаж на превозното средство.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Alternator Charger Plus 1000 Solar Input Cable 12AWG",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Alternator Charger Plus 1000 Solar Input Cable 12AWG"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFLAltrSolarinputDC013-5m"
+        },
+        {
+          "label": "Дължина",
+          "value": "5 м"
+        },
+        {
+          "label": "Сечение",
+          "value": "12AWG"
+        },
+        {
+          "label": "Конектор",
+          "value": "MC4"
+        },
+        {
+          "label": "Соларен вход",
+          "value": "11–60V, 15A макс. (до 300W)"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow Alternator Charger Plus 1000"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/4/8/4895251665988-1.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Няма страница в eu.ecoflow.com — по dice.bg.",
+    "EAN: в dice.bg на страницата пише 4895251628990, но той е на XT60 Output Cable (SKU 75245). Търсачката на dice намира този продукт по 4895251665988 (така е кръстена и снимката) — сложен е той. Проверете при възможност.",
+    "Alternator Charger Plus 1000 го няма в сайта → „Съвместим с“ е празно.",
+    "В dice.bg: по заявка (проверено 02.10.2026)."
+  ]
+}

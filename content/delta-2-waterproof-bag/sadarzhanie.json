@@ -1,0 +1,121 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow DELTA 2 Waterproof Bag",
+    "slug": "delta-2-waterproof-bag",
+    "categorySlug": "chanti-i-kalafi",
+    "productType": "accessory",
+    "tagline": "Водоустойчива чанта за DELTA 2",
+    "badge": "none",
+    "price": 71.07,
+    "externalUrl": "https://dice.bg/vodonepromokaema-i-ustojchiva-chanta-za-prenasjane-na-ecoflow-delta-2-ecoflow-delta-2-waterproof-bag-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "60759",
+    "ean": "4895251601931",
+    "description": "Водоустойчива чанта за EcoFlow DELTA 2 — пази от вода, мръсотия и удари, с прозрачен капак за екрана.",
+    "highlights": [
+      {
+        "text": "Водоустойчива"
+      },
+      {
+        "text": "Прозрачен капак за екрана"
+      },
+      {
+        "text": "Достъп до всички портове"
+      }
+    ],
+    "metaTitle": "EcoFlow DELTA 2 Waterproof Bag | EcoFlow България",
+    "metaDescription": "Водоустойчива чанта за EcoFlow DELTA 2 — пази от вода, мръсотия и удари, с прозрачен капак за екрана."
+  },
+  "galeriya": [
+    {
+      "file": "60759_1.webp",
+      "alt": "EcoFlow DELTA 2 Waterproof Bag — чанта"
+    },
+    {
+      "file": "60759_2.webp",
+      "alt": "EcoFlow DELTA 2 Waterproof Bag — чанта"
+    },
+    {
+      "file": "60759_3.webp",
+      "alt": "EcoFlow DELTA 2 Waterproof Bag — чанта"
+    },
+    {
+      "file": "60759_4.webp",
+      "alt": "EcoFlow DELTA 2 Waterproof Bag — чанта"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Защита по време на път",
+      "body": "Чантата запазва лекотата на използване на DELTA 2 и я пази от вода, мръсотия и повреди по време на път. Лекият, водоустойчив и износоустойчив материал предпазва от атмосферни влияния, удари и драскотини.\n\nОсигурява достъп до всички контакти и дръжката, а прозрачният капак пази екрана, без да пречи да го следите.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow водоустойчива чанта",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Waterproof Bag"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "BMR330"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow DELTA 2"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60759_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60759_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60759_3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60759_4.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",
+    "DELTA 2 я няма в сайта → „Съвместим с“ е празно.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

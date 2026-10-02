@@ -1,0 +1,145 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Mobile Gear Dolly",
+    "slug": "mobile-gear-dolly",
+    "categorySlug": "drugi-aksesoari",
+    "productType": "accessory",
+    "tagline": "Сгъваема количка за електроцентрали RIVER и DELTA",
+    "badge": "none",
+    "price": 119,
+    "externalUrl": "https://dice.bg/praktichna-kolichka-za-elektrocentrali-ecoflow-river-i-delta-serii-ecoflow-mobile-gear-dolly-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "78014",
+    "ean": "4895251615303",
+    "description": "Сгъваема количка EcoFlow за електроцентрали от сериите RIVER и DELTA — издържа до 75 кг и се маневрира лесно.",
+    "highlights": [
+      {
+        "text": "До 75 кг товар"
+      },
+      {
+        "text": "За RIVER 2/3, DELTA 2/3, DELTA 2/3 Max"
+      },
+      {
+        "text": "Сгъваема"
+      }
+    ],
+    "metaTitle": "EcoFlow Mobile Gear Dolly | EcoFlow България",
+    "metaDescription": "Сгъваема количка EcoFlow за електроцентрали от сериите RIVER и DELTA — издържа до 75 кг и се маневрира лесно.",
+    "compatibleWith": [
+      "river-3-seriya",
+      "delta-3-seriya"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-handtruck-59419228504407_2000x.webp",
+      "alt": "EcoFlow Mobile Gear Dolly — количка"
+    },
+    {
+      "file": "ecoflow-handtruck-59419228733783_1066x.webp",
+      "alt": "EcoFlow Mobile Gear Dolly — количка"
+    },
+    {
+      "file": "61pu3rkebsl._ac_sx679_.webp",
+      "alt": "EcoFlow Mobile Gear Dolly — количка"
+    },
+    {
+      "file": "51rtud77ihl._ac_sx679_.webp",
+      "alt": "EcoFlow Mobile Gear Dolly — количка"
+    },
+    {
+      "file": "untitldsdsed.webp",
+      "alt": "EcoFlow Mobile Gear Dolly — количка"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Електроцентралата — навсякъде с вас",
+      "body": "Удобна сгъваема количка, с която изнасяте електроцентралата си EcoFlow от сериите RIVER и DELTA навън. Издържа до 75 кг и се маневрира плавно и лесно.\n\n*Количката е само за конфигурации с една батерия. Конфигурациите с няколко батерии са за стационарна употреба.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Mobile Gear Dolly",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Mobile Gear Dolly"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFS-Handtruck"
+        },
+        {
+          "label": "Максимален товар",
+          "value": "75 кг"
+        },
+        {
+          "label": "Материал",
+          "value": "стомана + PA"
+        },
+        {
+          "label": "Размери (разгъната)",
+          "value": "425 × 240 × 1020 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "12,1 кг"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow RIVER 2/3, DELTA 2/3, DELTA 2/3 Max"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-handtruck-59419228504407_2000x.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-handtruck-59419228733783_1066x.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61pu3rkebsl._ac_sx679_.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/1/51rtud77ihl._ac_sx679_.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/u/n/untitldsdsed.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Няма страница в eu.ecoflow.com — по dice.bg.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Alternator Charger Custom Fit Output Cable (2m)",
+    "slug": "alternator-charger-custom-fit-output-cable-2m",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "Кабел 2 м от Alternator Charger към DELTA Pro / DELTA Pro 3",
+    "badge": "none",
+    "price": 71.07,
+    "externalUrl": "https://dice.bg/kabel-za-sv-rzvane-na-ecoflow-delta-3-k-m-ecoflow-delta-3-smart-extra-baterija-ecoflow-delta-3-extra-battery-cable-40-cm-40-sm-cheren-1",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "75195",
+    "ean": "4895251637305",
+    "description": "Оригинален кабел 2 м, който свързва EcoFlow Alternator Charger с DELTA Pro, DELTA Pro 3 и техните допълнителни батерии през порта за допълнителна батерия.",
+    "highlights": [
+      {
+        "text": "Дължина 2 м"
+      },
+      {
+        "text": "Зареждане, поддръжка и обратно зареждане"
+      }
+    ],
+    "metaTitle": "EcoFlow Alternator Charger Custom Fit Output Cable (2m) | EcoFlow България",
+    "metaDescription": "Оригинален кабел 2 м, който свързва EcoFlow Alternator Charger с DELTA Pro, DELTA Pro 3 и техните допълнителни батерии през порта за допълнителна батерия.",
+    "compatibleWith": [
+      "delta-pro-3",
+      "dop-bateriya-delta-pro-3"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-alternator-charger-custom-fit-output-cable-2m_1_.webp",
+      "alt": "EcoFlow Alternator Charger Custom Fit Output Cable (2m) — кабел"
+    },
+    {
+      "file": "ecoflow-alternator-charger-custom-fit-output-cable-2m-2_1_.webp",
+      "alt": "EcoFlow Alternator Charger Custom Fit Output Cable (2m) — кабел"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Алтернаторът — директно към електроцентралата",
+      "body": "Кабелът свързва EcoFlow Alternator Charger директно с порта за допълнителна батерия на DELTA Pro, DELTA Pro 3 или техните Smart Extra Battery.\n\nПоддържа режим на зареждане, режим на поддръжка и обратно зареждане. Режимът се избира през приложението EcoFlow (според модела).",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Alternator Charger Custom Fit Output Cable",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Alternator Charger Custom Fit Output Cable"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFL-AltCharger4-8Output-2m"
+        },
+        {
+          "label": "Дължина",
+          "value": "2 м"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow Alternator Charger → DELTA Pro, DELTA Pro 3, DELTA Pro 3 Smart Extra Battery, DELTA Pro Smart Extra Battery"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-alternator-charger-custom-fit-output-cable-2m_1_.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-alternator-charger-custom-fit-output-cable-2m-2_1_.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",
+    "Адресът в dice.bg е от друг продукт („DELTA 3 Extra Battery Cable“) — по правилото не се съди по адреса.",
+    "В dice.bg: по заявка (проверено 02.10.2026)."
+  ]
+}

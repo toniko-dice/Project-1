@@ -1,0 +1,140 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Adjustable Ground & Suspended Solar Bracket",
+    "slug": "adjustable-ground-suspended-solar-bracket",
+    "categorySlug": "montazh-i-kabeli-za-paneli",
+    "productType": "accessory",
+    "tagline": "Регулируема стойка 20°–75° за панели 400W, 450W и 520W Rigid",
+    "badge": "none",
+    "price": 127.31,
+    "externalUrl": "https://dice.bg/ecoflow-adjustable-ground-suspended-solar-bracket-solarna-postavka-za-ecoflow-400w-rigid-solar-panel-cheren-item65178",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "65178",
+    "ean": "4895251608442",
+    "description": "Регулируема стойка за соларни панели EcoFlow 400W, 450W и 520W Rigid — монтаж на земя, стена, балкон или друга плоска повърхност, ъгъл 20°–75°.",
+    "highlights": [
+      {
+        "text": "Регулируем ъгъл 20°–75°"
+      },
+      {
+        "text": "Земя, стена, балкон"
+      },
+      {
+        "text": "Предварително пробити отвори"
+      }
+    ],
+    "metaTitle": "EcoFlow Adjustable Ground & Suspended Solar Bracket | EcoFlow България",
+    "metaDescription": "Регулируема стойка за соларни панели EcoFlow 400W, 450W и 520W Rigid — монтаж на земя, стена, балкон или друга плоска повърхност, ъгъл 20°–75°.",
+    "compatibleWith": [
+      "solaren-panel-400w-rigid-2br",
+      "solaren-panel-450w-rigid-2br"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "65178_1.webp",
+      "alt": "EcoFlow Adjustable Ground & Suspended Solar Bracket — соларна стойка"
+    },
+    {
+      "file": "65178_2.webp",
+      "alt": "EcoFlow Adjustable Ground & Suspended Solar Bracket — соларна стойка"
+    },
+    {
+      "file": "65178_3.webp",
+      "alt": "EcoFlow Adjustable Ground & Suspended Solar Bracket — соларна стойка"
+    },
+    {
+      "file": "65178_4.webp",
+      "alt": "EcoFlow Adjustable Ground & Suspended Solar Bracket — соларна стойка"
+    },
+    {
+      "file": "65178_5.webp",
+      "alt": "EcoFlow Adjustable Ground & Suspended Solar Bracket — соларна стойка"
+    },
+    {
+      "file": "65178_6.webp",
+      "alt": "EcoFlow Adjustable Ground & Suspended Solar Bracket — соларна стойка"
+    },
+    {
+      "file": "65178_7.webp",
+      "alt": "EcoFlow Adjustable Ground & Suspended Solar Bracket — соларна стойка"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Панелът — под точния ъгъл",
+      "body": "Регулируемата стойка е за монтаж на соларни панели EcoFlow 400W, 450W и 520W Rigid на земята, на стена или на друга плоска повърхност, включително балкон. Ъгълът се регулира от 20° до 75° за повече слънчева енергия.\n\nМонтажът е лесен благодарение на предварително пробитите отвори. Може да се монтира и на колелца (продават се отделно), за да местите панела бързо към слънцето.\n\n*Монтажът трябва да се извърши от поне двама души, с предпазни ръкавици и очила.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Adjustable Ground & Suspended Solar Bracket",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Adjustable Ground & Suspended Solar Bracket"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFA-DJUST"
+        },
+        {
+          "label": "Регулируем ъгъл",
+          "value": "20°–75°"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow 400W, 450W, 520W Rigid"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/5/65178_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/5/65178_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/5/65178_3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/5/65178_4.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/5/65178_5.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/5/65178_6.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/5/65178_7.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",
+    "Соларният панел и колелцата не са включени.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

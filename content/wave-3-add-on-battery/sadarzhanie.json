@@ -1,0 +1,199 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow WAVE 3 Add-On Battery",
+    "slug": "wave-3-add-on-battery",
+    "categorySlug": "dopalnitelni-baterii",
+    "productType": "accessory",
+    "tagline": "Допълнителна батерия 1024Wh за климатика WAVE 3",
+    "badge": "none",
+    "price": 549,
+    "compareAtPrice": 613.04,
+    "externalUrl": "https://dice.bg/v-nshna-baterija-za-ecoflow-wave-3-portable-air-conditioner-ecoflow-wave-3-add-on-battery-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "72546",
+    "ean": "4895251631020",
+    "description": "LFP батерия 1024Wh за климатика EcoFlow WAVE 3 — добавя до осем часа работа и зарежда телефони и лаптопи през USB-A и USB-C.",
+    "highlights": [
+      {
+        "text": "1024Wh, LFP"
+      },
+      {
+        "text": "До 8 часа повече работа на WAVE 3"
+      },
+      {
+        "text": "Изходи USB-A и USB-C"
+      },
+      {
+        "text": "Управление през приложението"
+      }
+    ],
+    "metaTitle": "EcoFlow WAVE 3 Add-On Battery | EcoFlow България",
+    "metaDescription": "LFP батерия 1024Wh за климатика EcoFlow WAVE 3 — добавя до осем часа работа и зарежда телефони и лаптопи през USB-A и USB-C.",
+    "compatibleWith": [
+      "wave-3"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "72546_ecoflow-wave-3-add-on-battery-1.webp",
+      "alt": "EcoFlow WAVE 3 Add-On Battery — допълнителна батерия"
+    },
+    {
+      "file": "72546_ecoflow-wave-3-add-on-battery-2.webp",
+      "alt": "EcoFlow WAVE 3 Add-On Battery — допълнителна батерия"
+    },
+    {
+      "file": "72546_ecoflow-wave-3-add-on-battery-3.webp",
+      "alt": "EcoFlow WAVE 3 Add-On Battery — допълнителна батерия"
+    },
+    {
+      "file": "72546_ecoflow-wave-3-add-on-battery-4.webp",
+      "alt": "EcoFlow WAVE 3 Add-On Battery — допълнителна батерия"
+    },
+    {
+      "file": "wave31111_1.webp",
+      "alt": "EcoFlow WAVE 3 Add-On Battery — допълнителна батерия"
+    },
+    {
+      "file": "wave3111_2.webp",
+      "alt": "EcoFlow WAVE 3 Add-On Battery — допълнителна батерия"
+    },
+    {
+      "file": "wave311_1.webp",
+      "alt": "EcoFlow WAVE 3 Add-On Battery — допълнителна батерия"
+    },
+    {
+      "file": "wave31_1.webp",
+      "alt": "EcoFlow WAVE 3 Add-On Battery — допълнителна батерия"
+    },
+    {
+      "file": "wave3_1.webp",
+      "alt": "EcoFlow WAVE 3 Add-On Battery — допълнителна батерия"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Още осем часа прохлада",
+      "body": "Компактна LFP батерия с капацитет 1024Wh за климатика EcoFlow WAVE 3 — добавя до осем часа работа.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Зарежда и вашите устройства",
+      "body": "Два изхода — USB-A и USB-C — за мобилните ви устройства, докато захранва и WAVE 3.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Управление от телефона",
+      "body": "Свързана към WAVE 3, батерията се управлява заедно с климатика през приложението EcoFlow.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow WAVE 3 Add-On Battery",
+          "qty": 1
+        },
+        {
+          "name": "Кабел EcoFlow Add-On",
+          "qty": 1
+        },
+        {
+          "name": "Кабел за зареждане от запалката на колата",
+          "qty": 1
+        },
+        {
+          "name": "Ръководство за употреба",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "WAVE 3 Add-On Battery"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFWAVE3-EB"
+        },
+        {
+          "label": "Тип на батерията",
+          "value": "LFP"
+        },
+        {
+          "label": "Капацитет",
+          "value": "1024Wh"
+        },
+        {
+          "label": "Изходи",
+          "value": "USB-A, USB-C"
+        },
+        {
+          "label": "Размери",
+          "value": "515 × 272 × 92 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "7,5 кг"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow WAVE 3"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72546_ecoflow-wave-3-add-on-battery-1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72546_ecoflow-wave-3-add-on-battery-2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72546_ecoflow-wave-3-add-on-battery-3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72546_ecoflow-wave-3-add-on-battery-4.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/w/a/wave31111_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/w/a/wave3111_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/w/a/wave311_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/w/a/wave31_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/w/a/wave3_1.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "В eu.ecoflow.com няма отделна страница — батерията се продава само в комплект с WAVE 3. По dice.bg.",
+    "Моделът в dice е изписан „Wave 3 Portable Air Conditioner“ — заменен с „WAVE 3 Add-On Battery“.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

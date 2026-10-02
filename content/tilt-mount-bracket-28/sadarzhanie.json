@@ -1,0 +1,165 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow 28” Tilt Mount Bracket",
+    "slug": "tilt-mount-bracket-28",
+    "categorySlug": "montazh-i-kabeli-za-paneli",
+    "productType": "accessory",
+    "tagline": "Регулируема стойка 0°–90° за панели 100W и 175W Rigid",
+    "badge": "none",
+    "price": 55.73,
+    "externalUrl": "https://dice.bg/solarna-postavka-za-ecoflow-100w-rigid-solar-panel-ecoflow-adjustable-tilt-mount-bracket-28-inches-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "61576",
+    "ean": "4895251601412",
+    "description": "Регулируема стойка 28 инча за соларни панели EcoFlow 100W и 175W Rigid — ъгъл от 0° до 90°, монтаж на плоска повърхност и покрив на каравана.",
+    "highlights": [
+      {
+        "text": "Регулируем ъгъл 0°–90°"
+      },
+      {
+        "text": "За 100W и 175W Rigid"
+      },
+      {
+        "text": "Предварително пробити отвори"
+      }
+    ],
+    "metaTitle": "EcoFlow 28” Tilt Mount Bracket | EcoFlow България",
+    "metaDescription": "Регулируема стойка 28 инча за соларни панели EcoFlow 100W и 175W Rigid — ъгъл от 0° до 90°, монтаж на плоска повърхност и покрив на каравана.",
+    "compatibleWith": [
+      "solaren-panel-100w-rigid-2br",
+      "solaren-panel-175w-rigid"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "61576_1.webp",
+      "alt": "EcoFlow 28” Tilt Mount Bracket — соларна стойка"
+    },
+    {
+      "file": "61576_.webp",
+      "alt": "EcoFlow 28” Tilt Mount Bracket — соларна стойка"
+    },
+    {
+      "file": "61576_3.webp",
+      "alt": "EcoFlow 28” Tilt Mount Bracket — соларна стойка"
+    },
+    {
+      "file": "61576_4.webp",
+      "alt": "EcoFlow 28” Tilt Mount Bracket — соларна стойка"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Панелът — под точния ъгъл",
+      "body": "Стойката се регулира от 0° до 90° за повече слънчева енергия. Монтира се лесно благодарение на предварително пробитите отвори — на всяка плоска повърхност, особено на покрива на каравана.\n\n*Монтажът, регулирането и ремонтът трябва да се извършват от квалифициран персонал, запознат със соларните панели.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "Болт с шестостенна глава",
+          "qty": 6
+        },
+        {
+          "name": "Пружинна шайба",
+          "qty": 6
+        },
+        {
+          "name": "Плоска шайба",
+          "qty": 6
+        },
+        {
+          "name": "Гайка с фланец",
+          "qty": 6
+        },
+        {
+          "name": "Torx винт",
+          "qty": 6
+        },
+        {
+          "name": "Крилчата гайка",
+          "qty": 6
+        },
+        {
+          "name": "Самопробивен винт",
+          "qty": 6
+        },
+        {
+          "name": "Пластмасов задържащ пръстен",
+          "qty": 6
+        },
+        {
+          "name": "Фиксираща скоба",
+          "qty": 4
+        },
+        {
+          "name": "Регулируема скоба",
+          "qty": 2
+        },
+        {
+          "name": "Ръководство за употреба",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Adjustable Tilt Mount Bracket 28 inches"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "AA-FRAME-28IN"
+        },
+        {
+          "label": "Регулируем ъгъл",
+          "value": "0°–90°"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow 100W Rigid, 175W Rigid"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61576_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61576_.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61576_3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61576_4.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",
+    "Соларният панел не е включен.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

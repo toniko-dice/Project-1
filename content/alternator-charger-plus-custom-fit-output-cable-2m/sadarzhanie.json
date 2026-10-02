@@ -1,0 +1,109 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Alternator Charger Plus Custom Fit Output Cable (2m)",
+    "slug": "alternator-charger-plus-custom-fit-output-cable-2m",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "Кабел 2 м от Alternator Charger Plus към DELTA Pro / DELTA Pro 3",
+    "badge": "none",
+    "price": 69,
+    "externalUrl": "https://dice.bg/kabel-za-sv-rzvane-na-ecoflow-delta-pro-i-max-k-m-ecoflow-alternator-ecoflow-alternator-charger-custom-fit-output-cable3939",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "78002",
+    "ean": "4895251666022",
+    "description": "Оригинален кабел 2 м, който свързва EcoFlow Alternator Charger Plus 1000 или 600 с DELTA Pro, DELTA Pro 3 и техните допълнителни батерии през порта за допълнителна батерия.",
+    "highlights": [
+      {
+        "text": "Дължина 2 м"
+      },
+      {
+        "text": "За Alternator Charger Plus 1000 / 600"
+      },
+      {
+        "text": "Зареждане, поддръжка и обратно зареждане"
+      }
+    ],
+    "metaTitle": "EcoFlow Alternator Charger Plus Custom Fit Output Cable (2m) | EcoFlow България",
+    "metaDescription": "Оригинален кабел 2 м, който свързва EcoFlow Alternator Charger Plus 1000 или 600 с DELTA Pro, DELTA Pro 3 и техните допълнителни батерии през порта за допъ",
+    "compatibleWith": [
+      "delta-pro-3",
+      "dop-bateriya-delta-pro-3"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "4895251666022-1.webp",
+      "alt": "EcoFlow Alternator Charger Plus Custom Fit Output Cable (2m) — кабел"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Алтернаторът — директно към електроцентралата",
+      "body": "Кабелът свързва EcoFlow Alternator Charger Plus 1000 или Alternator Charger Plus 600 директно с порта за допълнителна батерия на DELTA Pro, DELTA Pro 3 или техните Smart Extra Battery.\n\nПоддържа стандартен режим на зареждане (захранване на станцията по време на шофиране), режим на поддръжка на акумулатора и обратно зареждане (енергия обратно към превозното средство). Режимът се избира през приложението EcoFlow (според модела).",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Alternator Charger Plus Custom Fit Output Cable",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Alternator Charger Plus Custom Fit Output Cable"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFLAlt4-8OutputDC013-2m"
+        },
+        {
+          "label": "Дължина",
+          "value": "2 м"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "Alternator Charger Plus 1000 / 600 → DELTA Pro, DELTA Pro 3, DELTA Pro 3 Smart Extra Battery, DELTA Pro Smart Extra Battery"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/4/8/4895251666022-1.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Няма страница в eu.ecoflow.com — по dice.bg.",
+    "В dice.bg: по заявка (проверено 02.10.2026)."
+  ]
+}

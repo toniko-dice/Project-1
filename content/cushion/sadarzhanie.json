@@ -1,0 +1,135 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Cushion",
+    "slug": "cushion",
+    "categorySlug": "drugi-aksesoari",
+    "productType": "accessory",
+    "tagline": "Възглавница-одеяло 2 в 1 за къмпинг и път",
+    "badge": "none",
+    "price": 39,
+    "externalUrl": "https://dice.bg/multifunkcionalna-v-zglavnica-odejalo-2-v-1-za-k-mping-i-p-t-ecoflow-cushion",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "78015",
+    "ean": "4897082668244",
+    "description": "EcoFlow Cushion — възглавница 2 в 1, която се разгъва в голямо одеяло. За къмпинг, пътуване, колата и дома.",
+    "highlights": [
+      {
+        "text": "Възглавница и одеяло 2 в 1"
+      },
+      {
+        "text": "40 × 40 см сгъната"
+      },
+      {
+        "text": "≈115 × 145 см като одеяло"
+      }
+    ],
+    "metaTitle": "EcoFlow Cushion | EcoFlow България",
+    "metaDescription": "EcoFlow Cushion — възглавница 2 в 1, която се разгъва в голямо одеяло. За къмпинг, пътуване, колата и дома."
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow-cushion-42630390349988_2000x.webp",
+      "alt": "EcoFlow Cushion — възглавница"
+    },
+    {
+      "file": "image_1_.webp",
+      "alt": "EcoFlow Cushion — възглавница"
+    },
+    {
+      "file": "image_2_.webp",
+      "alt": "EcoFlow Cushion — възглавница"
+    },
+    {
+      "file": "image_3_.webp",
+      "alt": "EcoFlow Cushion — възглавница"
+    },
+    {
+      "file": "image_4_.webp",
+      "alt": "EcoFlow Cushion — възглавница"
+    },
+    {
+      "file": "image.webp",
+      "alt": "EcoFlow Cushion — възглавница"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Възглавница и одеяло в едно",
+      "body": "Практично решение 2 в 1 за повече удобство на къмпинг, по време на път, в колата и у дома. Сгъната е мека опорна възглавница, а когато я разкопчаете, се превръща в голямо одеяло.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Cushion",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Cushion"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "STP-H"
+        },
+        {
+          "label": "Материал на калъфката",
+          "value": "холандско кадифе (Dutch velvet)"
+        },
+        {
+          "label": "Материал на одеялото",
+          "value": "кристално кадифе (Crystal velvet)"
+        },
+        {
+          "label": "Размер (възглавница)",
+          "value": "40 × 40 см"
+        },
+        {
+          "label": "Размер (одеяло)",
+          "value": "≈115 × 145 см"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-cushion-42630390349988_2000x.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/i/m/image_1_.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/i/m/image_2_.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/i/m/image_3_.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/i/m/image_4_.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/i/m/image.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "По dice.bg; eu.ecoflow.com/products/ecoflow-cushion е само с кратко описание.",
+    "dice.bg не посочва гаранция — не е добавена.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Foldable Camping Chair",
+    "slug": "foldable-camping-chair",
+    "categorySlug": "drugi-aksesoari",
+    "productType": "accessory",
+    "tagline": "Сгъваем къмпинг стол",
+    "badge": "none",
+    "price": 49,
+    "compareAtPrice": 76.18,
+    "externalUrl": "https://dice.bg/ecoflow-foldable-camping-chair-kachestven-sgavaem-kamping-stol-cheren-item71876",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "71876",
+    "ean": "4895251606158",
+    "description": "Сгъваем къмпинг стол EcoFlow с алуминиева рамка и двуслойна PVC седалка.",
+    "highlights": [
+      {
+        "text": "Алуминиева рамка"
+      },
+      {
+        "text": "Двуслойна PVC седалка"
+      },
+      {
+        "text": "Сгъваем"
+      }
+    ],
+    "metaTitle": "EcoFlow Foldable Camping Chair | EcoFlow България",
+    "metaDescription": "Сгъваем къмпинг стол EcoFlow с алуминиева рамка и двуслойна PVC седалка."
+  },
+  "galeriya": [
+    {
+      "file": "71876_1.webp",
+      "alt": "EcoFlow Foldable Camping Chair — къмпинг стол"
+    },
+    {
+      "file": "71876_2.webp",
+      "alt": "EcoFlow Foldable Camping Chair — къмпинг стол"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Удобно място навсякъде",
+      "body": "Сгъваем къмпинг стол с олекотена алуминиева рамка и здрава двуслойна седалка от PVC — за къмпинг, плаж и излети.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Foldable Camping Chair",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Foldable Camping Chair"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "SSC-B-IN"
+        },
+        {
+          "label": "Размер",
+          "value": "64 × 54 / 47 × 36 / 83 см"
+        },
+        {
+          "label": "Тръби",
+          "value": "24 × 15 / 20 × 15 мм, алуминий с прахово покритие"
+        },
+        {
+          "label": "Седалка",
+          "value": "PVC 600 × 300 D, изцяло двуслойна"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/1/71876_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/1/71876_2.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "В dice.bg няма описание — размерите и материалите са от eu.ecoflow.com/products/ecoflow-foldable-camping-chair.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow DELTA 3 Extra Battery Cable (0.4m)",
+    "slug": "delta-3-extra-battery-cable",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "Кабел 40 см за допълнителна батерия към DELTA 3",
+    "badge": "none",
+    "price": 71.07,
+    "externalUrl": "https://dice.bg/kabel-za-sv-rzvane-na-ecoflow-delta-3-k-m-ecoflow-delta-3-smart-extra-baterija-ecoflow-delta-3-extra-battery-cable-40-cm-40-sm-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "73158",
+    "ean": "4895251632515",
+    "description": "Оригинален кабел 40 см, който свързва EcoFlow DELTA 3 / DELTA 3 Plus с допълнителна батерия през порта за допълнителна батерия отзад.",
+    "highlights": [
+      {
+        "text": "Дължина 40 см"
+      },
+      {
+        "text": "DELTA 3 → допълнителна батерия"
+      }
+    ],
+    "metaTitle": "EcoFlow DELTA 3 Extra Battery Cable (0.4m) | EcoFlow България",
+    "metaDescription": "Оригинален кабел 40 см, който свързва EcoFlow DELTA 3 / DELTA 3 Plus с допълнителна батерия през порта за допълнителна батерия отзад.",
+    "compatibleWith": [
+      "delta-3",
+      "delta-3-plus",
+      "delta-3-smart-extra-battery"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "72940-1.webp",
+      "alt": "EcoFlow DELTA 3 Extra Battery Cable (0.4m) — кабел"
+    },
+    {
+      "file": "72940-2.webp",
+      "alt": "EcoFlow DELTA 3 Extra Battery Cable (0.4m) — кабел"
+    },
+    {
+      "file": "72940-3.webp",
+      "alt": "EcoFlow DELTA 3 Extra Battery Cable (0.4m) — кабел"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Допълнителна батерия към DELTA 3",
+      "body": "Свързва EcoFlow DELTA 3, DELTA 3 Plus или DELTA 3 1500 с допълнителната батерия DELTA 3 Smart Extra Battery, DELTA 2 Smart Extra Battery, DELTA 2 Max Smart Extra Battery или DELTA Pro 3 Smart Extra Battery през порта за допълнителна батерия отзад. Дължина 40 см.\n\n*При свързване на DELTA 3 към DELTA Pro 3 Smart Extra Battery е нужен адаптерът EcoFlow Smart Generator Adapter (продава се отделно).",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow DELTA 3 Extra Battery Cable 40 см",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "DELTA 3 Extra Battery Cable 40 cm"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFDELTA3-Cable"
+        },
+        {
+          "label": "Дължина",
+          "value": "40 см"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow DELTA 3, DELTA 3 Plus, DELTA 3 1500 → DELTA 3 / DELTA 2 / DELTA 2 Max / DELTA Pro 3 Smart Extra Battery"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72940-1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72940-2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72940-3.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

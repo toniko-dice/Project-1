@@ -1,0 +1,133 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Balcony Hook Kit",
+    "slug": "balcony-hook-kit",
+    "categorySlug": "montazh-i-kabeli-za-paneli",
+    "productType": "accessory",
+    "tagline": "Комплект куки за монтаж на соларни панели на парапет",
+    "badge": "none",
+    "price": 101.75,
+    "externalUrl": "https://dice.bg/ecoflow-balcony-hook-kit-komplekt-instrumenti-komponenti-i-postavka-za-solarni-paneli-rigid-solar-panel-cheren-item62870",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "62870",
+    "ean": "4895251606653",
+    "description": "Комплект за монтаж и закрепване на соларни панели EcoFlow Rigid към парапет на балкон — до 30 кг, устойчив на вятър до степен 10.",
+    "highlights": [
+      {
+        "text": "До 30 кг"
+      },
+      {
+        "text": "Устойчив на вятър до степен 10"
+      },
+      {
+        "text": "За панели 100W и 400W Rigid"
+      }
+    ],
+    "metaTitle": "EcoFlow Balcony Hook Kit | EcoFlow България",
+    "metaDescription": "Комплект за монтаж и закрепване на соларни панели EcoFlow Rigid към парапет на балкон — до 30 кг, устойчив на вятър до степен 10.",
+    "compatibleWith": [
+      "solaren-panel-400w-rigid-2br",
+      "solaren-panel-100w-rigid-2br"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "62870_1.webp",
+      "alt": "EcoFlow Balcony Hook Kit — комплект за балкон"
+    },
+    {
+      "file": "62870_2.webp",
+      "alt": "EcoFlow Balcony Hook Kit — комплект за балкон"
+    },
+    {
+      "file": "62870_3.webp",
+      "alt": "EcoFlow Balcony Hook Kit — комплект за балкон"
+    },
+    {
+      "file": "62870_4.webp",
+      "alt": "EcoFlow Balcony Hook Kit — комплект за балкон"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Соларен панел на балкона",
+      "body": "Комплектът съдържа компонентите за монтаж и закрепване на соларни панели EcoFlow към парапета на балкона. Закачате куките на парапета, нагласяте скобите и закрепвате панела.\n\nИздържа до 30 кг и вятър до степен 10 — панелите ви са защитени и при силен вятър.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Balcony Hook Kit",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Balcony Hook Kit"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFA-PTSP300Hook"
+        },
+        {
+          "label": "Максимален товар",
+          "value": "30 кг"
+        },
+        {
+          "label": "Устойчивост на вятър",
+          "value": "степен 10"
+        },
+        {
+          "label": "Тегло",
+          "value": "3,2 кг (±280 г)"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow 400W Rigid, 100W Rigid"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62870_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62870_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62870_3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62870_4.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",
+    "Соларният панел не е включен.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

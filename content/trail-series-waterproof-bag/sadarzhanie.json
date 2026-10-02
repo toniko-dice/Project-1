@@ -1,0 +1,137 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow TRAIL Series Waterproof Bag",
+    "slug": "trail-series-waterproof-bag",
+    "categorySlug": "chanti-i-kalafi",
+    "productType": "accessory",
+    "tagline": "Водоустойчива чанта за TRAIL 200 и TRAIL 300",
+    "badge": "none",
+    "price": 60.84,
+    "externalUrl": "https://dice.bg/vodonepromokaema-i-ustojchiva-chanta-za-prenasjane-na-ecoflow-trail-200-trail-300-ecoflow-trail-series-waterproof-bag-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "74843",
+    "ean": "4895251665056",
+    "description": "Водоустойчива чанта за EcoFlow TRAIL 200 и TRAIL 300 — пази от вода, мръсотия и удари, с достъп до контактите и регулируема презрамка.",
+    "highlights": [
+      {
+        "text": "Водоустойчива"
+      },
+      {
+        "text": "Достъп до всички портове"
+      },
+      {
+        "text": "Регулируема презрамка"
+      }
+    ],
+    "metaTitle": "EcoFlow TRAIL Series Waterproof Bag | EcoFlow България",
+    "metaDescription": "Водоустойчива чанта за EcoFlow TRAIL 200 и TRAIL 300 — пази от вода, мръсотия и удари, с достъп до контактите и регулируема презрамка.",
+    "compatibleWith": [
+      "trail-seriya"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "efb-trail200-300-bag-1.webp",
+      "alt": "EcoFlow TRAIL Series Waterproof Bag — чанта"
+    },
+    {
+      "file": "efb-trail200-300-bag-2.webp",
+      "alt": "EcoFlow TRAIL Series Waterproof Bag — чанта"
+    },
+    {
+      "file": "efb-trail200-300-bag-3.webp",
+      "alt": "EcoFlow TRAIL Series Waterproof Bag — чанта"
+    },
+    {
+      "file": "efb-trail200-300-bag-4.webp",
+      "alt": "EcoFlow TRAIL Series Waterproof Bag — чанта"
+    },
+    {
+      "file": "efb-trail200-300-bag-5.webp",
+      "alt": "EcoFlow TRAIL Series Waterproof Bag — чанта"
+    },
+    {
+      "file": "efb-trail200-300-bag-6.webp",
+      "alt": "EcoFlow TRAIL Series Waterproof Bag — чанта"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Защита по време на път",
+      "body": "Чантата запазва лекотата на използване на EcoFlow TRAIL и я пази от вода, мръсотия и повреди по време на път. Лекият, водоустойчив и износоустойчив материал предпазва от атмосферни влияния, удари и драскотини.\n\nОсигурява достъп до всички контакти и дръжката. Има допълнителен джоб за кабели и дребни аксесоари и подвижна регулируема презрамка за рамо или врат.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow TRAIL Series Waterproof Bag",
+          "qty": 1
+        },
+        {
+          "name": "Презрамка",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "TRAIL Series Waterproof Bag"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFB-TRAIL200/300-BAG"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow TRAIL 200, TRAIL 300"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/f/efb-trail200-300-bag-1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/f/efb-trail200-300-bag-2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/f/efb-trail200-300-bag-3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/f/efb-trail200-300-bag-4.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/f/efb-trail200-300-bag-5.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/f/efb-trail200-300-bag-6.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "В eu.ecoflow.com е „Waterproof Carrying Case“ с кратко описание — по dice.bg.",
+    "В dice.bg: по заявка (проверено 02.10.2026)."
+  ]
+}

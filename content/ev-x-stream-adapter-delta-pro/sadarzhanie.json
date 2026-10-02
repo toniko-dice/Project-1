@@ -1,0 +1,156 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow EV X-Stream Adapter (DELTA Pro)",
+    "slug": "ev-x-stream-adapter-delta-pro",
+    "categorySlug": "adapteri",
+    "productType": "accessory",
+    "tagline": "Адаптер за зареждане на DELTA Pro от зарядна станция Type 2",
+    "badge": "none",
+    "price": 101.75,
+    "externalUrl": "https://dice.bg/adapter-za-sv-rzvane-na-ecoflow-delta-pro-k-m-elektricheska-zarjadna-stancija-ot-tip-2-ecoflow-ev-x-stream-adapter-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "60711",
+    "ean": "4897082665571",
+    "description": "С адаптера EV X-Stream зареждате EcoFlow DELTA Pro от хиляди AC станции за електромобили с конектор Type 2 — до 3400W.",
+    "highlights": [
+      {
+        "text": "До 3400W"
+      },
+      {
+        "text": "Конектор Type 2"
+      },
+      {
+        "text": "DELTA Pro до 100% за 1,7 ч"
+      }
+    ],
+    "metaTitle": "EcoFlow EV X-Stream Adapter (DELTA Pro) | EcoFlow България",
+    "metaDescription": "С адаптера EV X-Stream зареждате EcoFlow DELTA Pro от хиляди AC станции за електромобили с конектор Type 2 — до 3400W."
+  },
+  "galeriya": [
+    {
+      "file": "60711_1.webp",
+      "alt": "EcoFlow EV X-Stream Adapter (DELTA Pro) — адаптер"
+    },
+    {
+      "file": "60711_2.webp",
+      "alt": "EcoFlow EV X-Stream Adapter (DELTA Pro) — адаптер"
+    },
+    {
+      "file": "60711_3.webp",
+      "alt": "EcoFlow EV X-Stream Adapter (DELTA Pro) — адаптер"
+    },
+    {
+      "file": "60711_4.webp",
+      "alt": "EcoFlow EV X-Stream Adapter (DELTA Pro) — адаптер"
+    },
+    {
+      "file": "60711_5.webp",
+      "alt": "EcoFlow EV X-Stream Adapter (DELTA Pro) — адаптер"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Зареждане от станция за електромобили",
+      "body": "Адаптерът EV X-Stream ви позволява да зареждате EcoFlow DELTA Pro от хиляди AC станции за зареждане на електромобили по света.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Супербързо зареждане",
+      "body": "До 3400W от станции за електромобили у дома или на път — DELTA Pro се зарежда напълно за 1,7 часа.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Широка съвместимост",
+      "body": "Поддържа конектори Type 2 — електроцентралата ви може да се зарежда на хиляди станции.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow EV X-Stream адаптер",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "EV X-Stream Adapter"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "DELTAProCC-EU"
+        },
+        {
+          "label": "Вход/изход — напрежение",
+          "value": "100–240V~ 50/60Hz"
+        },
+        {
+          "label": "Вход/изход — мощност",
+          "value": "3400W макс."
+        },
+        {
+          "label": "Конектор",
+          "value": "Type 2"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow DELTA Pro"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60711_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60711_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60711_3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60711_4.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60711_5.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",
+    "Това е адаптерът за DELTA Pro (1-во поколение); за DELTA Pro 3 в сайта вече има отделен „EV X-Stream Adapter“.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

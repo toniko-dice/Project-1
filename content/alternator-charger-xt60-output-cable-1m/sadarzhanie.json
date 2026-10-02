@@ -1,0 +1,122 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Alternator Charger XT60 Output Cable (1m)",
+    "slug": "alternator-charger-xt60-output-cable-1m",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "XT60 кабел 1 м от Alternator Charger към електроцентрала",
+    "badge": "none",
+    "price": 35.28,
+    "externalUrl": "https://dice.bg/kabel-za-sv-rzvane-na-ecoflow-delta-pro-i-max-k-m-ecoflow-alternator-ecoflow-alternator-charger-custom-fit-output-cable-1",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "75245",
+    "ean": "4895251628990",
+    "description": "XT60 кабел 1 м, който свързва EcoFlow Alternator Charger с електроцентрала с XT60 вход — до 500W, само режим на зареждане.",
+    "highlights": [
+      {
+        "text": "Дължина 1 м"
+      },
+      {
+        "text": "XT60, до 500W"
+      },
+      {
+        "text": "За 12V и 24V системи"
+      }
+    ],
+    "metaTitle": "EcoFlow Alternator Charger XT60 Output Cable (1m) | EcoFlow България",
+    "metaDescription": "XT60 кабел 1 м, който свързва EcoFlow Alternator Charger с електроцентрала с XT60 вход — до 500W, само режим на зареждане.",
+    "compatibleWith": [
+      "delta-3-classic"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "sddled.webp",
+      "alt": "EcoFlow Alternator Charger XT60 Output Cable (1m) — кабел"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Алтернаторът — към XT60 входа",
+      "body": "С този 1-метров XT60 кабел свързвате зарядното устройство за алтернатор EcoFlow към електроцентрала с XT60 вход — EcoFlow или друга марка. Пренася до 500W (според спецификацията на XT60 входа) и работи само в режим на зареждане, без разреждане.\n\nПодходящ е за електроцентрали без XT150 порт (порт за допълнителна батерия), като EcoFlow DELTA 3 Classic.\n\n*При 24V системи XT60 портът на електроцентралата трябва да поддържа поне 48V.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Alternator Charger XT60 Output Cable",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "XT60 Output Cable Alternator Charger"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFLAltChargerXT60Output-1m"
+        },
+        {
+          "label": "Дължина",
+          "value": "1 м"
+        },
+        {
+          "label": "Конектор",
+          "value": "XT60"
+        },
+        {
+          "label": "Мощност",
+          "value": "до 500W"
+        },
+        {
+          "label": "Електрическа система",
+          "value": "12V и 24V"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow Alternator Charger → електроцентрали с XT60 вход"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/s/d/sddled.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",
+    "EAN 4895251628990 е два пъти в списъка — това е този продукт.",
+    "Има и по-нов вариант „Alternator Charger XT60 Output Cable“ (SKU 77999, EAN 4895251665995) — не е в списъка.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

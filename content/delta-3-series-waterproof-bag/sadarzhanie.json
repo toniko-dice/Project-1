@@ -1,0 +1,129 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow DELTA 3 Series Waterproof Bag",
+    "slug": "delta-3-series-waterproof-bag",
+    "categorySlug": "chanti-i-kalafi",
+    "productType": "accessory",
+    "tagline": "Водоустойчива чанта за DELTA 3 и DELTA 3 Plus",
+    "badge": "none",
+    "price": 71.07,
+    "externalUrl": "https://dice.bg/ecoflow-delta-3-series-waterproof-bag-vodonepromokaema-i-ustoychiva-chanta-za-prenasyane-na-ecoflow-delta-3-cheren-item72428",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "72428",
+    "ean": "4895251629638",
+    "description": "Водоустойчива чанта за EcoFlow DELTA 3 и DELTA 3 Plus — пази от вода, мръсотия и удари, с достъп до всички контакти.",
+    "highlights": [
+      {
+        "text": "Водоустойчива и износоустойчива"
+      },
+      {
+        "text": "Достъп до всички портове"
+      },
+      {
+        "text": "Допълнителни джобове"
+      }
+    ],
+    "metaTitle": "EcoFlow DELTA 3 Series Waterproof Bag | EcoFlow България",
+    "metaDescription": "Водоустойчива чанта за EcoFlow DELTA 3 и DELTA 3 Plus — пази от вода, мръсотия и удари, с достъп до всички контакти.",
+    "compatibleWith": [
+      "delta-3",
+      "delta-3-plus"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "72428_1.webp",
+      "alt": "EcoFlow DELTA 3 Series Waterproof Bag — чанта"
+    },
+    {
+      "file": "72428_2.webp",
+      "alt": "EcoFlow DELTA 3 Series Waterproof Bag — чанта"
+    },
+    {
+      "file": "72428_3.webp",
+      "alt": "EcoFlow DELTA 3 Series Waterproof Bag — чанта"
+    },
+    {
+      "file": "72428_4.webp",
+      "alt": "EcoFlow DELTA 3 Series Waterproof Bag — чанта"
+    },
+    {
+      "file": "72428_5.webp",
+      "alt": "EcoFlow DELTA 3 Series Waterproof Bag — чанта"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Защита по време на път",
+      "body": "Водоустойчивата чанта пази DELTA 3 и DELTA 3 Plus от вода, мръсотия и повреди по време на път, без да пречи на работата им. Изработена е от лек, водоустойчив и износоустойчив материал.\n\nОсигурява достъп до всички контакти и дръжката, а допълнителните джобове побират кабели и аксесоари.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow DELTA 3 водоустойчива чанта",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "DELTA 3 Series Waterproof Bag"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFDELTA3-BAG"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow DELTA 3, DELTA 3 Plus"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72428_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72428_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72428_3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72428_4.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72428_5.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",
+    "В dice.bg: по заявка (проверено 02.10.2026)."
+  ]
+}

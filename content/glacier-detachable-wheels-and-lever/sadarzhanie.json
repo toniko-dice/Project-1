@@ -1,0 +1,115 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow GLACIER Detachable Wheels and Lever",
+    "slug": "glacier-detachable-wheels-and-lever",
+    "categorySlug": "drugi-aksesoari",
+    "productType": "accessory",
+    "tagline": "Колела и дръжка за хладилника GLACIER",
+    "badge": "none",
+    "price": 122.2,
+    "externalUrl": "https://dice.bg/komplekt-otdeljaschi-se-kolela-i-dr-zhka-za-ecoflow-glacier-portable-fridge-ecoflow-glacier-detachable-wheels-and-lever-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "62276",
+    "ean": "4895251604833",
+    "description": "Комплект от две колела и дръжка за хладилника EcoFlow GLACIER — закрепват се здраво и се свалят бързо.",
+    "highlights": [
+      {
+        "text": "2 колела + дръжка"
+      },
+      {
+        "text": "Свалят се бързо"
+      },
+      {
+        "text": "За EcoFlow GLACIER"
+      }
+    ],
+    "metaTitle": "EcoFlow GLACIER Detachable Wheels and Lever | EcoFlow България",
+    "metaDescription": "Комплект от две колела и дръжка за хладилника EcoFlow GLACIER — закрепват се здраво и се свалят бързо."
+  },
+  "galeriya": [
+    {
+      "file": "62276_1_2.webp",
+      "alt": "EcoFlow GLACIER Detachable Wheels and Lever — колела и дръжка"
+    },
+    {
+      "file": "62276_2_2.webp",
+      "alt": "EcoFlow GLACIER Detachable Wheels and Lever — колела и дръжка"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "GLACIER — където ви отведе приключението",
+      "body": "С комплекта от две колела и дръжка вземате хладилника с фризер EcoFlow GLACIER навсякъде. Колелата и дръжката се закрепват здраво и стабилно, а при нужда се свалят бързо и лесно.\n\n*Хладилникът не е включен.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "Колело EcoFlow GLACIER",
+          "qty": 2
+        },
+        {
+          "name": "Дръжка EcoFlow GLACIER",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "GLACIER Detachable Wheels and Lever"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFA-GlacierMRW-MRL"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow GLACIER Portable Fridge (с ледогенератор)"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62276_1_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62276_2_2.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",
+    "За GLACIER (1-во поколение), не за GLACIER Classic → „Съвместим с“ е празно.",
+    "В dice.bg: по заявка (проверено 02.10.2026)."
+  ]
+}

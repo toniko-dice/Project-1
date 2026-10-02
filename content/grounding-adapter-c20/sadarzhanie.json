@@ -1,0 +1,128 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Portable Power Station Grounding Adapter (C20)",
+    "slug": "grounding-adapter-c20",
+    "categorySlug": "adapteri",
+    "productType": "accessory",
+    "tagline": "Адаптер за заземяване при зареждане на електромобил",
+    "badge": "none",
+    "price": 99,
+    "externalUrl": "https://dice.bg/adapter-za-zazemjavane-pri-zarezhdane-na-elektromobil-ecoflow-portable-power-station-grounding-adapter-cheren4335",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "77388",
+    "ean": "4895251600293",
+    "description": "Адаптер за заземяване с щепсел C20 — с него DELTA Pro или DELTA Max става аварийно захранване за електромобила ви.",
+    "highlights": [
+      {
+        "text": "Щепсел C20"
+      },
+      {
+        "text": "Зареждане на електромобил от електроцентрала"
+      },
+      {
+        "text": "USB-C кабел в комплекта"
+      }
+    ],
+    "metaTitle": "EcoFlow Portable Power Station Grounding Adapter (C20) | EcoFlow България",
+    "metaDescription": "Адаптер за заземяване с щепсел C20 — с него DELTA Pro или DELTA Max става аварийно захранване за електромобила ви."
+  },
+  "galeriya": [
+    {
+      "file": "untitled-1_1_18_1.webp",
+      "alt": "EcoFlow Portable Power Station Grounding Adapter (C20) — адаптер за заземяване"
+    },
+    {
+      "file": "60823_2_1.webp",
+      "alt": "EcoFlow Portable Power Station Grounding Adapter (C20) — адаптер за заземяване"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Електроцентралата — резервно захранване за електромобила",
+      "body": "Използвайте DELTA Pro или DELTA Max като аварийно резервно захранване за електромобила си и изминете допълнителни километри.\n\n*DELTA 3 и DELTA 3 Plus НЕ са съвместими с адаптера C14.\n*Ползвайте само USB-C кабела от комплекта — той няма функция за зареждане и не се заменя с други USB-C кабели.\n*Преди покупка проверете AC входа на вашата електроцентрала (вижте снимката).",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Grounding Adapter",
+          "qty": 1
+        },
+        {
+          "name": "USB-C кабел",
+          "qty": 1
+        },
+        {
+          "name": "Ръководство за употреба",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Grounding Adapter"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "ZMA003-EU/UK-C20"
+        },
+        {
+          "label": "Тип щепсел",
+          "value": "C20"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow DELTA Pro, DELTA Max"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/u/n/untitled-1_1_18_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60823_2_1.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {
+    "untitled-1_1_18_1.webp": {
+      "For DELTA 3 Max series, DELTA 2 Max, DELTA 2, DELTA Max, DELTA Pro (with C14 plug type)": "За серията DELTA 3 Max, DELTA 2 Max, DELTA 2, DELTA Max, DELTA Pro (с щепсел C14)",
+      "For DELTA Pro (with C20 plug type)": "За DELTA Pro (с щепсел C20)"
+    }
+  },
+  "_neyasni": [
+    "По dice.bg; в eu.ecoflow.com е вариант C20 на portable-power-station-grounding-adapter.",
+    "DELTA Pro / DELTA Max (1-во поколение) ги няма в сайта → „Съвместим с“ е празно.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

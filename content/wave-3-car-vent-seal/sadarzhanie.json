@@ -1,0 +1,131 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow WAVE 3 Car Vent Seal (Magnetic Version)",
+    "slug": "wave-3-car-vent-seal",
+    "categorySlug": "drugi-aksesoari",
+    "productType": "accessory",
+    "tagline": "Магнитно уплътнение за прозорец на кола за тръбите на WAVE 3",
+    "badge": "none",
+    "price": 71.07,
+    "externalUrl": "https://dice.bg/upl-tnenie-za-prozorec-za-avtomobil-za-ecoflow-wave-prenosim-portativen-klimatikr-ecoflow-wave-3-car-vent-seal-magnetic-version-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "72597",
+    "ean": "4895251631143",
+    "description": "Магнитно уплътнение за прозорец на автомобил, към което свързвате тръбите на климатика EcoFlow WAVE 3. Монтира се за 5 секунди.",
+    "highlights": [
+      {
+        "text": "Монтаж за 5 секунди"
+      },
+      {
+        "text": "650 × 1060 мм — за повечето коли, SUV и пикапи"
+      },
+      {
+        "text": "Водоустойчиво и топлоизолиращо"
+      }
+    ],
+    "metaTitle": "EcoFlow WAVE 3 Car Vent Seal (Magnetic Version) | EcoFlow България",
+    "metaDescription": "Магнитно уплътнение за прозорец на автомобил, към което свързвате тръбите на климатика EcoFlow WAVE 3. Монтира се за 5 секунди.",
+    "compatibleWith": [
+      "wave-3",
+      "wave-3-s-bateriya"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow_wave_3_car_vent_seal_magnetic_version_black-1.webp",
+      "alt": "EcoFlow WAVE 3 Car Vent Seal (Magnetic Version) — уплътнение за прозорец"
+    },
+    {
+      "file": "ecoflow_wave_3_car_vent_seal_magnetic_version_black-2.webp",
+      "alt": "EcoFlow WAVE 3 Car Vent Seal (Magnetic Version) — уплътнение за прозорец"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "WAVE 3 в колата",
+      "body": "Свържете тръбите на климатика EcoFlow WAVE 3 към уплътнението на прозореца за ефективно охлаждане. С размер 650 × 1060 мм пасва на повечето леки автомобили, включително SUV и пикапи.\n\nМагнитният дизайн позволява монтаж за 5 секунди. Уплътнението е водоустойчиво и топлоизолиращо — максимално ефективно охлаждане и отопление.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow WAVE 3 Car Vent Seal Magnetic Version",
+          "qty": 1
+        },
+        {
+          "name": "Малки ленти за прозорци",
+          "qty": 3
+        },
+        {
+          "name": "Големи ленти за прозорци",
+          "qty": 2
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "WAVE 3 Car Vent Seal Magnetic Version"
+        },
+        {
+          "label": "Материал",
+          "value": "20% PU покритие, 74% полиестер, 5% магнит, 1% други"
+        },
+        {
+          "label": "Размер",
+          "value": "650 × 1060 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "450 г"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow WAVE 3"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_wave_3_car_vent_seal_magnetic_version_black-1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_wave_3_car_vent_seal_magnetic_version_black-2.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Няма страница в eu.ecoflow.com — по dice.bg.",
+    "Фабричният номер в dice (EFA-WAVE2Duct-2.5m) е на WAVE 2 тръбите — пропуснат.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

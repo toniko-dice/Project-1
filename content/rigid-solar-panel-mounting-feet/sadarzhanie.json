@@ -1,0 +1,140 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Rigid Solar Panel Mounting Feet",
+    "slug": "rigid-solar-panel-mounting-feet",
+    "categorySlug": "montazh-i-kabeli-za-paneli",
+    "productType": "accessory",
+    "tagline": "4 крепежни планки за монтаж на Rigid панели",
+    "badge": "none",
+    "price": 19.94,
+    "externalUrl": "https://dice.bg/komplekt-ot-4-broja-kracheta-za-ecoflow-rigid-solarni-paneli-ecoflow-rigid-solar-panel-mounting-feet-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "61566",
+    "ean": "4895251600033",
+    "description": "Комплект от 4 метални крепежни планки за монтаж на соларни панели EcoFlow Rigid, например на покрива на каравана.",
+    "highlights": [
+      {
+        "text": "4 планки"
+      },
+      {
+        "text": "Антикорозионна алуминиева сплав"
+      },
+      {
+        "text": "Изцяло черни"
+      }
+    ],
+    "metaTitle": "EcoFlow Rigid Solar Panel Mounting Feet | EcoFlow България",
+    "metaDescription": "Комплект от 4 метални крепежни планки за монтаж на соларни панели EcoFlow Rigid, например на покрива на каравана.",
+    "compatibleWith": [
+      "stacionarni-paneli"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "61566_1.webp",
+      "alt": "EcoFlow Rigid Solar Panel Mounting Feet — крепежни планки"
+    },
+    {
+      "file": "61566_2.webp",
+      "alt": "EcoFlow Rigid Solar Panel Mounting Feet — крепежни планки"
+    },
+    {
+      "file": "61566_3.webp",
+      "alt": "EcoFlow Rigid Solar Panel Mounting Feet — крепежни планки"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Здрав монтаж на покрива",
+      "body": "Четири метални крепежни планки за монтиране на соларен панел EcoFlow Rigid на покрива на каравана. Изцяло черният дизайн се слива с покрива.\n\nИзработени са от антикорозионна, водоустойчива алуминиева сплав — за дълготраен монтаж.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "Крепежна планка",
+          "qty": 4
+        },
+        {
+          "name": "Винт M6 с шестостенна глава",
+          "qty": 4
+        },
+        {
+          "name": "Пружинна шайба M6",
+          "qty": 4
+        },
+        {
+          "name": "Плоска шайба M6",
+          "qty": 4
+        },
+        {
+          "name": "Голяма плоска шайба M6",
+          "qty": 8
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Rigid Solar Panel Mounting Feet"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "AKIT-MS331"
+        },
+        {
+          "label": "Материал",
+          "value": "антикорозионна водоустойчива алуминиева сплав"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "соларни панели EcoFlow Rigid"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61566_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61566_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61566_3.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",
+    "В dice „голяма плоска шайба M6“ е изброена два пъти по 4 — сумирана като 8.",
+    "Соларните панели не са включени.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

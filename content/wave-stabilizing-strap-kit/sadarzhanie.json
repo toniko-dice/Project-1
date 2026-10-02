@@ -1,0 +1,114 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow WAVE Stabilizing Strap Kit",
+    "slug": "wave-stabilizing-strap-kit",
+    "categorySlug": "drugi-aksesoari",
+    "productType": "accessory",
+    "tagline": "Комплект ремъци за укрепване на WAVE в превозни средства",
+    "badge": "none",
+    "price": 40.39,
+    "externalUrl": "https://dice.bg/komplekt-za-stabilizirane-za-ecoflow-wave-prenosim-portativen-klimatik-v-prevozni-sredstva-ecoflow-wave-stabilizing-strap-kit-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "72711",
+    "ean": "4895251643016",
+    "description": "Комплект за укрепване на климатика EcoFlow WAVE 3 / WAVE 2 и допълнителната му батерия върху хоризонтална повърхност — в кемпери, яхти и други превозни средства.",
+    "highlights": [
+      {
+        "text": "За WAVE 3 и WAVE 2"
+      },
+      {
+        "text": "Укрепва и допълнителната батерия"
+      },
+      {
+        "text": "За кемпери и яхти"
+      }
+    ],
+    "metaTitle": "EcoFlow WAVE Stabilizing Strap Kit | EcoFlow България",
+    "metaDescription": "Комплект за укрепване на климатика EcoFlow WAVE 3 / WAVE 2 и допълнителната му батерия върху хоризонтална повърхност — в кемпери, яхти и други превозни сре",
+    "compatibleWith": [
+      "wave-3",
+      "wave-3-s-bateriya"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "portativen-klimatik-v-prevozni-sredstva-cheren_1.webp",
+      "alt": "EcoFlow WAVE Stabilizing Strap Kit — стабилизиращ комплект"
+    },
+    {
+      "file": "portativen-klimatik-v-prevozni-sredstva-cheren_2.webp",
+      "alt": "EcoFlow WAVE Stabilizing Strap Kit — стабилизиращ комплект"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Стабилен и при движение",
+      "body": "С комплекта укрепвате климатика EcoFlow WAVE 3 или WAVE 2 и допълнителната му батерия върху хоризонтална повърхност там, където се друса — в кемпери, яхти и др.\n\n*Препоръчваме под мястото на монтажа да сложите дървена дъска, за да избегнете повреди от пробиването.\n*Климатикът и батерията не са включени.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow WAVE Stabilizing Strap Kit",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "WAVE Stabilizing Strap Kit"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFA-WAVE3STRAP"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow WAVE 3, WAVE 2 и допълнителната им батерия"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/p/o/portativen-klimatik-v-prevozni-sredstva-cheren_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/p/o/portativen-klimatik-v-prevozni-sredstva-cheren_2.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Фабричният номер EFA-WAVE3STRAP в eu.ecoflow.com е „EcoFlow Velcro Strap Handle“, а „WAVE Series Stabilizing Strap Kit“ там е EFA-WAVE2Im. Описанието в dice е за стабилизиращ комплект — заглавието е по dice.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

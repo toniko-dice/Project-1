@@ -1,0 +1,139 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Trolley (DELTA Pro Ultra)",
+    "slug": "trolley-delta-pro-ultra",
+    "categorySlug": "drugi-aksesoari",
+    "productType": "accessory",
+    "tagline": "Сгъваема количка за DELTA Pro Ultra",
+    "badge": "none",
+    "price": 129,
+    "compareAtPrice": 183.55,
+    "externalUrl": "https://dice.bg/praktichna-kolichka-za-ecoflow-delta-pro-ultra-6144wh-ecoflow-trolley-for-delta-pro-ultra-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "73133",
+    "ean": "4895251609036",
+    "description": "Сгъваема количка за EcoFlow DELTA Pro Ultra — издържа до 140 кг и се маневрира лесно.",
+    "highlights": [
+      {
+        "text": "До 140 кг товар"
+      },
+      {
+        "text": "За DELTA Pro Ultra"
+      },
+      {
+        "text": "Сгъваема"
+      }
+    ],
+    "metaTitle": "EcoFlow Trolley (DELTA Pro Ultra) | EcoFlow България",
+    "metaDescription": "Сгъваема количка за EcoFlow DELTA Pro Ultra — издържа до 140 кг и се маневрира лесно.",
+    "compatibleWith": [
+      "delta-pro-ultra"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow_trolley_delta_pro_ultra-1.webp",
+      "alt": "EcoFlow Trolley (DELTA Pro Ultra) — количка"
+    },
+    {
+      "file": "ecoflow_trolley_delta_pro_ultra-2.webp",
+      "alt": "EcoFlow Trolley (DELTA Pro Ultra) — количка"
+    },
+    {
+      "file": "ecoflow_trolley_delta_pro_ultra-3.webp",
+      "alt": "EcoFlow Trolley (DELTA Pro Ultra) — количка"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "DELTA Pro Ultra — и навън",
+      "body": "Удобна сгъваема количка, с която изнасяте EcoFlow DELTA Pro Ultra навън. Издържа до 140 кг и се маневрира плавно.\n\n*Количката е само за конфигурации с една батерия. Конфигурациите с няколко батерии са за стационарна употреба.\n*DELTA Pro Ultra не е включена.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Trolley for DELTA Pro Ultra",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Trolley For DELTA Pro Ultra"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFTrolley-DPU"
+        },
+        {
+          "label": "Максимален товар",
+          "value": "140 кг"
+        },
+        {
+          "label": "Материал",
+          "value": "стомана + PA"
+        },
+        {
+          "label": "Размери (сгъната)",
+          "value": "842 × 515 × 278 мм"
+        },
+        {
+          "label": "Размери (разгъната)",
+          "value": "1290 × 515 × 577 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "12,1 кг"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow DELTA Pro Ultra"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_trolley_delta_pro_ultra-1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_trolley_delta_pro_ultra-2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_trolley_delta_pro_ultra-3.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

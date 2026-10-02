@@ -1,0 +1,113 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow WAVE 3 Inlet Insulated Exhaust Pipe (154 mm)",
+    "slug": "wave-3-inlet-exhaust-pipe-154mm",
+    "categorySlug": "drugi-aksesoari",
+    "productType": "accessory",
+    "tagline": "Изолирана тръба 154 мм за WAVE 3",
+    "badge": "none",
+    "price": 50.62,
+    "externalUrl": "https://dice.bg/originalna-tr-ba-za-nasochvane-na-v-zduha-na-ecoflow-wave-3-ecoflow-wave-3-inlet-insulated-exhaust-pipe-154-mm-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "72884",
+    "description": "Оригинална изолирана тръба 154 мм, 2,5 м, за насочване на въздуха на климатика EcoFlow WAVE 3.",
+    "highlights": [
+      {
+        "text": "Диаметър 154 мм"
+      },
+      {
+        "text": "Дължина 2,5 м"
+      },
+      {
+        "text": "Топлоизолирана"
+      }
+    ],
+    "metaTitle": "EcoFlow WAVE 3 Inlet Insulated Exhaust Pipe (154 mm) | EcoFlow България",
+    "metaDescription": "Оригинална изолирана тръба 154 мм, 2,5 м, за насочване на въздуха на климатика EcoFlow WAVE 3.",
+    "compatibleWith": [
+      "wave-3",
+      "wave-3-s-bateriya"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "72884_ecoflow-wave-3-insulated-exhaust-pipe.webp",
+      "alt": "EcoFlow WAVE 3 Inlet Insulated Exhaust Pipe (154 mm) — тръба"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Насочено, ефективно охлаждане",
+      "body": "Свържете тръбата към EcoFlow WAVE 3 за насочено, ефективно охлаждане. WAVE 3 работи с или без тръби, така че го ползвате навсякъде.\n\nЗа охлаждане в палатка или затворено помещение свържете тръбата към горната предна част на климатика — тя извежда топлия въздух навън и помещението се охлажда максимално.\n\n*Двете тръби (154 мм и 129 мм) се продават отделно.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow WAVE 3 Inlet Insulated Exhaust Pipe",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "WAVE 3 Inlet Insulated Exhaust Pipe"
+        },
+        {
+          "label": "Диаметър",
+          "value": "154 мм"
+        },
+        {
+          "label": "Дължина",
+          "value": "2,5 м"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow WAVE 3"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72884_ecoflow-wave-3-insulated-exhaust-pipe.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Няма страница в eu.ecoflow.com — по dice.bg.",
+    "В dice.bg няма EAN — продуктът е само с SKU.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

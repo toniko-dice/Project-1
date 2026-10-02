@@ -1,0 +1,127 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Solar Angle Guide",
+    "slug": "solar-angle-guide",
+    "categorySlug": "montazh-i-kabeli-za-paneli",
+    "productType": "accessory",
+    "tagline": "Уред за насочване на соларния панел точно към слънцето",
+    "badge": "none",
+    "price": 14.83,
+    "externalUrl": "https://dice.bg/ured-za-pozicionirane-na-solarnite-paneli-za-maksimalno-pogl-schane-na-sl-ncheva-svetlina-ecoflow-solar-angle-guide-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "60766",
+    "ean": "4897082668404",
+    "description": "Малък уред, който се закача на ръба на соларния панел — по сянката нагласяте панела под 90° спрямо слънцето за максимално зареждане.",
+    "highlights": [
+      {
+        "text": "Панелът под 90° спрямо слънцето"
+      },
+      {
+        "text": "UV-устойчив"
+      },
+      {
+        "text": "25 г"
+      }
+    ],
+    "metaTitle": "EcoFlow Solar Angle Guide | EcoFlow България",
+    "metaDescription": "Малък уред, който се закача на ръба на соларния панел — по сянката нагласяте панела под 90° спрямо слънцето за максимално зареждане.",
+    "compatibleWith": [
+      "sgavaemi-paneli",
+      "stacionarni-paneli"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "60766_1.webp",
+      "alt": "EcoFlow Solar Angle Guide — уред за ъгъла"
+    },
+    {
+      "file": "60766_2.webp",
+      "alt": "EcoFlow Solar Angle Guide — уред за ъгъла"
+    },
+    {
+      "file": "60766_3.webp",
+      "alt": "EcoFlow Solar Angle Guide — уред за ъгъла"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Повече слънце — по-бързо зареждане",
+      "body": "Пазете слънчевите лъчи под ъгъл 90° спрямо панела и ги концентрирайте върху повърхността му. Уредът е устойчив на UV лъчи, а през прозрачния му корпус лесно подравнявате сянката с центъра.\n\nКак се използва:\n1. Закачете уреда на ръба на соларния панел.\n2. Наклонете панела така, че слънцето да грее през прозрачния корпус.\n3. Регулирайте ъгъла, докато сянката падне в средата на уреда.\n4. Колкото по-близо до средата, толкова по-близо сте до 90° — повече енергия и по-кратко зареждане.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow Solar Angle Guide",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Solar Angle Guide"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "SolarAG"
+        },
+        {
+          "label": "Размери",
+          "value": "50 × 4 × 30 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "25 г"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "соларни панели"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60766_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60766_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60766_3.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

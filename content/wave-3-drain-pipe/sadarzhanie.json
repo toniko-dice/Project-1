@@ -1,0 +1,106 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow WAVE 3 Drain Pipe (120 cm)",
+    "slug": "wave-3-drain-pipe",
+    "categorySlug": "drugi-aksesoari",
+    "productType": "accessory",
+    "tagline": "Дренажна тръба 120 см за конденза на WAVE 3",
+    "badge": "none",
+    "price": 9.71,
+    "externalUrl": "https://dice.bg/originalna-drenazhna-tr-ba-za-otvezhdane-na-kondenza-na-ecoflow-wave-3-ecoflow-wave-3-drain-pipe-cheren-prozrachen-120-sm",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "72886",
+    "description": "Оригинална дренажна тръба 120 см, която отвежда конденза от климатика EcoFlow WAVE 3.",
+    "highlights": [
+      {
+        "text": "Дължина 120 см"
+      },
+      {
+        "text": "Отвежда конденза"
+      }
+    ],
+    "metaTitle": "EcoFlow WAVE 3 Drain Pipe (120 cm) | EcoFlow България",
+    "metaDescription": "Оригинална дренажна тръба 120 см, която отвежда конденза от климатика EcoFlow WAVE 3.",
+    "compatibleWith": [
+      "wave-3",
+      "wave-3-s-bateriya"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "72886_ecoflow-wave-3-drain-pipe-.webp",
+      "alt": "EcoFlow WAVE 3 Drain Pipe (120 cm) — дренажна тръба"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Без излишна влага",
+      "body": "Дренажната тръба (тръба за отвеждане на кондензат) премахва излишната влага, която образува климатикът EcoFlow WAVE 3. Дължина 120 см.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow WAVE 3 Drain Pipe",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "WAVE 3 Drain Pipe"
+        },
+        {
+          "label": "Дължина",
+          "value": "120 см"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow WAVE 3"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен / прозрачен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72886_ecoflow-wave-3-drain-pipe-.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Няма страница в eu.ecoflow.com — по dice.bg.",
+    "В dice.bg няма EAN — продуктът е само с SKU.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

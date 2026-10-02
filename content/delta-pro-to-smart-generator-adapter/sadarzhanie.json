@@ -1,0 +1,118 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow DELTA Pro to Smart Generator Adapter",
+    "slug": "delta-pro-to-smart-generator-adapter",
+    "categorySlug": "adapteri",
+    "productType": "accessory",
+    "tagline": "Адаптер за свързване на DELTA Pro към Smart Generator",
+    "badge": "none",
+    "price": 91.52,
+    "externalUrl": "https://dice.bg/adapter-za-sv-rzvane-na-ecoflow-delta-pro-k-m-smart-generator-ecoflow-delta-pro-to-smart-generator-adapter-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "60703",
+    "ean": "4897082665786",
+    "description": "Адаптер за порта за допълнителна батерия на DELTA Pro или DELTA Pro Extra Battery — свързва ги към Smart Generator.",
+    "highlights": [
+      {
+        "text": "2 пина → 4+8 пина"
+      },
+      {
+        "text": "DELTA Pro → Smart Generator"
+      }
+    ],
+    "metaTitle": "EcoFlow DELTA Pro to Smart Generator Adapter | EcoFlow България",
+    "metaDescription": "Адаптер за порта за допълнителна батерия на DELTA Pro или DELTA Pro Extra Battery — свързва ги към Smart Generator."
+  },
+  "galeriya": [
+    {
+      "file": "60703_1.webp",
+      "alt": "EcoFlow DELTA Pro to Smart Generator Adapter — адаптер"
+    },
+    {
+      "file": "60703_2.webp",
+      "alt": "EcoFlow DELTA Pro to Smart Generator Adapter — адаптер"
+    },
+    {
+      "file": "60703_3.webp",
+      "alt": "EcoFlow DELTA Pro to Smart Generator Adapter — адаптер"
+    },
+    {
+      "file": "60703_4.webp",
+      "alt": "EcoFlow DELTA Pro to Smart Generator Adapter — адаптер"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Повече начини за зареждане",
+      "body": "Адаптерът се включва в порта за допълнителна батерия на DELTA Pro или DELTA Pro Extra Battery и дава повече възможности за зареждане.\n\nНужен е, за да свържете DELTA Pro към Smart Generator, както и допълнителна батерия EcoFlow към електроцентрала EcoFlow, когато се използват 2-пинови кабели. Преобразува 2 пина към 4+8 пина.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "Адаптер EcoFlow",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "DELTA Pro to Smart Generator Adapter"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "DELTAProTG"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow DELTA Pro, електроцентрали и допълнителни батерии EcoFlow"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60703_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60703_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60703_3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60703_4.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",
+    "DELTA Pro (1-во поколение) и Smart Generator ги няма в сайта → „Съвместим с“ е празно.",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}

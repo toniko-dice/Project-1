@@ -1,0 +1,126 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow RAPID 65W GaN Charger",
+    "slug": "rapid-gan-charger-65w",
+    "categorySlug": "zaryadni-ustroystva",
+    "productType": "accessory",
+    "tagline": "Зарядно 65W с 2×USB-C и 1×USB-A и USB-C кабел",
+    "badge": "none",
+    "price": 29,
+    "compareAtPrice": 50.62,
+    "externalUrl": "https://dice.bg/ecoflow-rapid-gan-wall-charger-65w-zahranvane-za-el-mrezha-za-laptopi-smartfoni-i-tableti-s-2xusb-c-i-1xusb-a-izhodi-s-usb-c-kabel-v-komplekta-tamnosiv-item70357",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "70357",
+    "ean": "4895251622905",
+    "description": "GaN зарядно 65W за лаптопи, смартфони и таблети — два USB-C и един USB-A изход, PD 3.0, USB-C кабел в комплекта.",
+    "highlights": [
+      {
+        "text": "До 65W"
+      },
+      {
+        "text": "2× USB-C + 1× USB-A"
+      },
+      {
+        "text": "Power Delivery 3.0"
+      },
+      {
+        "text": "USB-C кабел в комплекта"
+      }
+    ],
+    "metaTitle": "EcoFlow RAPID 65W GaN Charger | EcoFlow България",
+    "metaDescription": "GaN зарядно 65W за лаптопи, смартфони и таблети — два USB-C и един USB-A изход, PD 3.0, USB-C кабел в комплекта."
+  },
+  "galeriya": [
+    {
+      "file": "70357_1_1.webp",
+      "alt": "EcoFlow RAPID 65W GaN Charger — зарядно"
+    },
+    {
+      "file": "70357_2_1.webp",
+      "alt": "EcoFlow RAPID 65W GaN Charger — зарядно"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Бързо и безопасно зареждане",
+      "body": "Мощно и сигурно зарядно до 65W с бързо зареждане Power Delivery 3.0. Вграденият чип разпознава устройството и управлява захранването — устройствата се зареждат безопасно и не прегряват дори при дълго зареждане.\n\n*Устройства без бързо зареждане се зареждат с нормална скорост.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow RAPID GaN Wall Charger 65W",
+          "qty": 1
+        },
+        {
+          "name": "USB-C кабел",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "RAPID GaN Wall Charger 65W"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFA-65W-GAN-CHARGER-EU"
+        },
+        {
+          "label": "Максимална мощност",
+          "value": "65W"
+        },
+        {
+          "label": "Изходи",
+          "value": "2× USB-C, 1× USB-A"
+        },
+        {
+          "label": "Протокол",
+          "value": "Power Delivery 3.0"
+        },
+        {
+          "label": "Цвят",
+          "value": "тъмносив"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70357_1_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70357_2_1.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "В eu.ecoflow.com е само като подарък към други продукти — по dice.bg.",
+    "В dice.bg: по заявка (проверено 02.10.2026)."
+  ]
+}

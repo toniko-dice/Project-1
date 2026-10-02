@@ -1,0 +1,124 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow DELTA Max Waterproof Bag",
+    "slug": "delta-max-waterproof-bag",
+    "categorySlug": "chanti-i-kalafi",
+    "productType": "accessory",
+    "tagline": "Водоустойчива чанта за DELTA Max и DELTA 2 Max",
+    "badge": "none",
+    "price": 91.52,
+    "externalUrl": "https://dice.bg/vodonepromokaema-i-ustojchiva-chanta-za-prenasjane-na-ecoflow-delta-max-ecoflow-delta-max-waterproof-bag-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "60760",
+    "ean": "4897082665748",
+    "description": "Водоустойчива чанта за EcoFlow DELTA Max и DELTA 2 Max — пази от вода, мръсотия и удари, с прозрачен капак за екрана.",
+    "highlights": [
+      {
+        "text": "Водоустойчива"
+      },
+      {
+        "text": "Прозрачен капак за екрана"
+      },
+      {
+        "text": "Достъп до всички портове"
+      }
+    ],
+    "metaTitle": "EcoFlow DELTA Max Waterproof Bag | EcoFlow България",
+    "metaDescription": "Водоустойчива чанта за EcoFlow DELTA Max и DELTA 2 Max — пази от вода, мръсотия и удари, с прозрачен капак за екрана.",
+    "compatibleWith": [
+      "delta-2-max"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "60760_1.webp",
+      "alt": "EcoFlow DELTA Max Waterproof Bag — чанта"
+    },
+    {
+      "file": "60760_2.webp",
+      "alt": "EcoFlow DELTA Max Waterproof Bag — чанта"
+    },
+    {
+      "file": "60760_3.webp",
+      "alt": "EcoFlow DELTA Max Waterproof Bag — чанта"
+    },
+    {
+      "file": "60760_4.webp",
+      "alt": "EcoFlow DELTA Max Waterproof Bag — чанта"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Защита по време на път",
+      "body": "Чантата запазва лекотата на използване на DELTA Max и DELTA 2 Max и ги пази от вода, мръсотия и повреди по време на път. Лекият, водоустойчив и износоустойчив материал предпазва от атмосферни влияния, удари и драскотини.\n\nОсигурява достъп до всички контакти и дръжката, а прозрачният капак пази екрана, без да пречи да го следите.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow водоустойчива чанта",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Waterproof Bag"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "BDELTAMax-US"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow DELTA Max, DELTA 2 Max"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60760_1.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60760_2.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60760_3.webp",
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60760_4.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",
+    "dice.bg посочва само DELTA Max; в eu.ecoflow.com същият фабричен номер е „EcoFlow DELTA 2 Max / DELTA Max Cover“ — по желание е свързана и с DELTA 2 Max.",
+    "В dice.bg: по заявка (проверено 02.10.2026)."
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow STREAM AC Charging Cable (15m)",
+    "slug": "stream-ac-cable-15m",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "AC кабел 15 м за батериите STREAM към мрежата",
+    "badge": "none",
+    "price": 40.39,
+    "externalUrl": "https://dice.bg/sv-rzvasch-kabel-za-ecoflow-stream-battery-v-nshna-baterija-k-m-el-mrezhata-ecoflow-stream-ac-cable-15m-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "72599",
+    "ean": "4895251644693",
+    "description": "AC кабел 15 м за свързване на батерия от серията EcoFlow STREAM към ел. мрежата.",
+    "highlights": [
+      {
+        "text": "Дължина 15 м"
+      },
+      {
+        "text": "Батерия STREAM → ел. мрежа"
+      }
+    ],
+    "metaTitle": "EcoFlow STREAM AC Charging Cable (15m) | EcoFlow България",
+    "metaDescription": "AC кабел 15 м за свързване на батерия от серията EcoFlow STREAM към ел. мрежата.",
+    "compatibleWith": [
+      "stream-seriya"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "ecoflow_stream_ac_cable_for_ecoflow_stream_battery_15m-1.webp",
+      "alt": "EcoFlow STREAM AC Charging Cable (15m) — кабел"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Батерията STREAM — към мрежата",
+      "body": "Кабелът свързва батерия от серията EcoFlow STREAM към ел. мрежата. В комбинация с микроинвертора STREAM съхранявате енергията от деня и я ползвате вечер. Дължина 15 м.\n\n*Батерията не е включена.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow STREAM AC Cable 15 м",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "STREAM AC Cable 15m"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFL-STREAM-AC-15M-EU-H"
+        },
+        {
+          "label": "Дължина",
+          "value": "15 м"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "всички батерии EcoFlow STREAM"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": {
+    "galeriya": [
+      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_stream_ac_cable_for_ecoflow_stream_battery_15m-1.webp"
+    ],
+    "sekcii": []
+  },
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "По dice.bg и eu.ecoflow.com/products/stream-ac-charging-cable (вариант 15 м).",
+    "В dice.bg: Налично на склад (проверено 02.10.2026)."
+  ]
+}
