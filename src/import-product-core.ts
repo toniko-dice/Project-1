@@ -272,6 +272,128 @@ export const writeImageSizes = async (
   return размери
 }
 
+/**
+ * Подменя съдържанието на ВЕЧЕ СЪЩЕСТВУВАЩ запис в Медия.
+ *
+ * Не минава през качването на Payload, а презаписва файла и прави
+ * размерите със Sharp — точно както `media:regenerate`. Причината е
+ * конкретна: `payload.update` с нов файл проверява дали името е заето и
+ * при заето слага наставка. Заетото име е СОБСТВЕНОТО име на записа,
+ * затова `PC_R3_01.jpg` ставаше `PC_R3_01-1.jpg`, после `-2`. Името
+ * спираше да съвпада с това в `sadarzhanie.json`, следващият внос не
+ * намираше записа по основа и качваше нов — подмяната се превръщаше в
+ * дублиране. Проверено два пъти.
+ *
+ * Така номерът и всички връзки към записа остават същите, а
+ * съдържанието е новото.
+ *
+ * Файлът се записва КАКТО Е — JPEG остава JPEG, без преобразуване.
+ * Ако преводът е в друг формат от записания (оригиналите от EcoFlow са
+ * WebP под име `.jpg` и в Медия стоят като `.webp`; преводът е истински
+ * JPEG), се сменя разширението: `PC_02.webp` → `PC_02.jpg`, същият
+ * запис, размерите се правят наново, а старите файлове се трият. Основата
+ * на името е същата, тъй че следващият внос намира записа по нея.
+ * Преди подмяната се отказваше и 14 преведени снимки не стигаха до сайта.
+ */
+export const replaceMediaContent = async (
+  payload: Payload,
+  log: (m: string) => void,
+  doc: {
+    id: number
+    filename?: string | null
+    sizes?: Record<string, { filename?: string | null } | null> | null
+  },
+  данни: Buffer,
+  realExt: string,
+  file: string,
+  alt: string,
+): Promise<boolean> => {
+  const стар = doc.filename
+  if (!стар) return false
+
+  /*
+    Основата остава; разширението следва съдържанието на новия файл.
+
+    Освен ако друг запис има същата основа в друг регистър (`3_1_IMG`
+    до `3_1_img`): на Windows файловете им са едни и същи, затова
+    записът се мести под `caseSafeStem` — иначе подмяната пише върху
+    чуждата снимка.
+  */
+  const stemНаЗаписа = mediaFileStem(стар)
+  const другите = (await sameStemIgnoringCase(payload, stemНаЗаписа)).filter(
+    (d) => d.id !== doc.id,
+  )
+  const stem = другите.length ? caseSafeStem(stemНаЗаписа) : stemНаЗаписа
+  const filename = `${stem}${realExt}`
+  /** Файловете на другите записи — не се трият, в какъвто и регистър да са. */
+  const чужди = new Set(другите.flatMap(mediaFileNames).map((f) => f.toLowerCase()))
+
+  if (filename !== стар) {
+    // Новото име не бива да е на друг запис — иначе два записа биха делили файл.
+    const зает = (await sameStemIgnoringCase(payload, stem)).find(
+      (d) => d.id !== doc.id && d.filename?.toLowerCase() === filename.toLowerCase(),
+    )
+    if (зает) {
+      log(
+        `  ⚠ ${file}: преведената снимка е ${realExt.slice(1).toUpperCase()}, но името ` +
+          `${filename} е заето от запис № ${зает.id} — не е подменена`,
+      )
+      return false
+    }
+    if (stem !== stemНаЗаписа) {
+      log(
+        `  · ${file}: името се различава само по регистъра от запис № ${другите[0]!.id} ` +
+          `(${другите[0]!.filename}) — записът № ${doc.id} става ${filename}`,
+      )
+    } else {
+      log(`  · ${file}: форматът се сменя — ${стар} → ${filename} (запис № ${doc.id})`)
+    }
+  }
+
+  const MEDIA_DIR = path.resolve(process.cwd(), 'media')
+  await fs.writeFile(path.join(MEDIA_DIR, filename), данни)
+
+  const мета = await sharp(данни).metadata()
+  const размери = await writeImageSizes(payload, stem, данни)
+
+  /*
+    Записва се САМО описанието. Файлът не се подава — иначе Payload би
+    качил снимката наново и точно това искаме да избегнем.
+  */
+  await payload.update({
+    collection: 'media',
+    id: doc.id,
+    data: {
+      alt: alt || file,
+      filename,
+      mimeType: MIME[realExt],
+      filesize: данни.length,
+      width: мета.width,
+      height: мета.height,
+      sizes: размери,
+    } as never,
+    depth: 0,
+  })
+
+  /*
+    Старите файлове се трият чак СЛЕД записа: ако той падне, записът още
+    сочи тях и снимката на сайта не се чупи. Трие се само каквото вече
+    не е на записа — оригинал с друго разширение и размери с други
+    пропорции — и никога файл, чието име (без регистъра) е на друг запис.
+  */
+  const пазени = new Set<string>([
+    filename,
+    ...Object.values(размери).map((р) => (р as { filename: string }).filename),
+  ])
+  for (const f of mediaFileNames(doc)) {
+    if (!пазени.has(f) && !чужди.has(f.toLowerCase())) {
+      await fs.rm(path.join(MEDIA_DIR, f), { force: true })
+    }
+  }
+
+  return true
+}
+
 /** Номерът, с който се пълнят полетата при проверка — нищо не се записва. */
 const DRY_ID = -1
 
@@ -619,7 +741,13 @@ export const importProduct = async (
       оригинала `100_rigid_2.png` в `_originali/` (точно име) и вносът го
       подминаваше мълчаливо — 30 преведени снимки не стигнаха до сайта.
     */
-    const преведен = преведени.поИме.get(file) ?? преведени.поОснова.get(stem)
+    /*
+      PNG пред всичко останало със същата основа: обработените снимки с
+      прозрачен фон (`snimki:bql-fon`) се връщат като `<основа>.png` и
+      трябва да изместят и превод в `.jpg` със същото име.
+    */
+    const преведен =
+      преведени.поИме.get(`${stem}.png`) ?? преведени.поИме.get(file) ?? преведени.поОснова.get(stem)
     if (преведен) return { path: преведен, source: 'snimki' }
 
     const редът: [Карти, FileSource][] = [
@@ -831,125 +959,14 @@ export const importProduct = async (
     log(`  · ${file}: оригиналът е върнат непрекодиран (${data.length} B)`)
   }
 
-  /**
-   * Подменя съдържанието на ВЕЧЕ СЪЩЕСТВУВАЩ запис в Медия.
-   *
-   * Не минава през качването на Payload, а презаписва файла и прави
-   * размерите със Sharp — точно както `media:regenerate`. Причината е
-   * конкретна: `payload.update` с нов файл проверява дали името е заето и
-   * при заето слага наставка. Заетото име е СОБСТВЕНОТО име на записа,
-   * затова `PC_R3_01.jpg` ставаше `PC_R3_01-1.jpg`, после `-2`. Името
-   * спираше да съвпада с това в `sadarzhanie.json`, следващият внос не
-   * намираше записа по основа и качваше нов — подмяната се превръщаше в
-   * дублиране. Проверено два пъти.
-   *
-   * Така номерът и всички връзки към записа остават същите, а
-   * съдържанието е новото.
-   *
-   * Файлът се записва КАКТО Е — JPEG остава JPEG, без преобразуване.
-   * Ако преводът е в друг формат от записания (оригиналите от EcoFlow са
-   * WebP под име `.jpg` и в Медия стоят като `.webp`; преводът е истински
-   * JPEG), се сменя разширението: `PC_02.webp` → `PC_02.jpg`, същият
-   * запис, размерите се правят наново, а старите файлове се трият. Основата
-   * на името е същата, тъй че следващият внос намира записа по нея.
-   * Преди подмяната се отказваше и 14 преведени снимки не стигаха до сайта.
-   */
-  const подмениСъдържанието = async (
-    doc: {
-      id: number
-      filename?: string | null
-      sizes?: Record<string, { filename?: string | null } | null> | null
-    },
+  /** Подмяната на файла в Медия — виж `replaceMediaContent` (ниво модул). */
+  const подмениСъдържанието = (
+    doc: Parameters<typeof replaceMediaContent>[2],
     данни: Buffer,
     realExt: string,
     file: string,
     alt: string,
-  ): Promise<boolean> => {
-    const стар = doc.filename
-    if (!стар) return false
-
-    /*
-      Основата остава; разширението следва съдържанието на новия файл.
-
-      Освен ако друг запис има същата основа в друг регистър (`3_1_IMG`
-      до `3_1_img`): на Windows файловете им са едни и същи, затова
-      записът се мести под `caseSafeStem` — иначе подмяната пише върху
-      чуждата снимка.
-    */
-    const stemНаЗаписа = mediaFileStem(стар)
-    const другите = (await sameStemIgnoringCase(payload, stemНаЗаписа)).filter(
-      (d) => d.id !== doc.id,
-    )
-    const stem = другите.length ? caseSafeStem(stemНаЗаписа) : stemНаЗаписа
-    const filename = `${stem}${realExt}`
-    /** Файловете на другите записи — не се трият, в какъвто и регистър да са. */
-    const чужди = new Set(другите.flatMap(mediaFileNames).map((f) => f.toLowerCase()))
-
-    if (filename !== стар) {
-      // Новото име не бива да е на друг запис — иначе два записа биха делили файл.
-      const зает = (await sameStemIgnoringCase(payload, stem)).find(
-        (d) => d.id !== doc.id && d.filename?.toLowerCase() === filename.toLowerCase(),
-      )
-      if (зает) {
-        log(
-          `  ⚠ ${file}: преведената снимка е ${realExt.slice(1).toUpperCase()}, но името ` +
-            `${filename} е заето от запис № ${зает.id} — не е подменена`,
-        )
-        return false
-      }
-      if (stem !== stemНаЗаписа) {
-        log(
-          `  · ${file}: името се различава само по регистъра от запис № ${другите[0]!.id} ` +
-            `(${другите[0]!.filename}) — записът № ${doc.id} става ${filename}`,
-        )
-      } else {
-        log(`  · ${file}: форматът се сменя — ${стар} → ${filename} (запис № ${doc.id})`)
-      }
-    }
-
-    const MEDIA_DIR = path.resolve(process.cwd(), 'media')
-    await fs.writeFile(path.join(MEDIA_DIR, filename), данни)
-
-    const мета = await sharp(данни).metadata()
-    const размери = await writeImageSizes(payload, stem, данни)
-
-    /*
-      Записва се САМО описанието. Файлът не се подава — иначе Payload би
-      качил снимката наново и точно това искаме да избегнем.
-    */
-    await payload.update({
-      collection: 'media',
-      id: doc.id,
-      data: {
-        alt: alt || file,
-        filename,
-        mimeType: MIME[realExt],
-        filesize: данни.length,
-        width: мета.width,
-        height: мета.height,
-        sizes: размери,
-      } as never,
-      depth: 0,
-    })
-
-    /*
-      Старите файлове се трият чак СЛЕД записа: ако той падне, записът още
-      сочи тях и снимката на сайта не се чупи. Трие се само каквото вече
-      не е на записа — оригинал с друго разширение и размери с други
-      пропорции — и никога файл, чието име (без регистъра) е на друг запис.
-    */
-    const пазени = new Set<string>([
-      filename,
-      ...Object.values(размери).map((р) => (р as { filename: string }).filename),
-    ])
-    for (const f of mediaFileNames(doc)) {
-      if (!пазени.has(f) && !чужди.has(f.toLowerCase())) {
-        await fs.rm(path.join(MEDIA_DIR, f), { force: true })
-      }
-    }
-
-    return true
-  }
+  ) => replaceMediaContent(payload, log, doc, данни, realExt, file, alt)
 
   /**
    * Връща номера на изображението в Медия, качвайки или подменяйки при нужда.
