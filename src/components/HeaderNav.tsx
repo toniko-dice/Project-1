@@ -3,7 +3,8 @@
 import { ArrowRight, CaretDown, CaretUp, List, MagnifyingGlass, X } from '@phosphor-icons/react/dist/ssr'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { usePathname } from 'next/navigation'
+import { type PointerEvent, useEffect, useMemo, useRef, useState } from 'react'
 import { formatEur } from '@/lib/format'
 import { ImagePlaceholder } from './ImagePlaceholder'
 import { SearchBar } from './SearchBar'
@@ -33,7 +34,8 @@ export type MenuSection = {
   viewAllTileLabel?: string | null
 }
 
-export type MenuEntry = { key: string; label: string; url: string; sections: MenuSection[] }
+/** `url` е `null`, когато панелът няма категория — тогава името е текст. */
+export type MenuEntry = { key: string; label: string; url: string | null; sections: MenuSection[] }
 export type MenuGroup = { heading: string; defaultOpen: boolean; entries: MenuEntry[] }
 export type NavItem = {
   label: string
@@ -44,9 +46,26 @@ export type NavItem = {
 
 const BADGE_TEXT: Record<string, string> = { hot: 'HOT', new: 'НОВО' }
 
+/**
+ * Докосване, не мишка — за линковете, които при посочване и отварят нещо.
+ *
+ * С мишка посочването отваря (панел, меню), а кликът води към страницата.
+ * С пръст „посочване" няма: първото докосване само отваря, второто води.
+ * Иначе едно докосване и отваря, и навигира — менюто изобщо не се вижда.
+ */
+const сПръст = (e: PointerEvent) => e.pointerType === 'touch' || e.pointerType === 'pen'
+
 /* ---------- Карта в мрежата ---------- */
 
-const Card = ({ card, large = false }: { card: MenuCard; large?: boolean }) => {
+const Card = ({
+  card,
+  large = false,
+  onNavigate,
+}: {
+  card: MenuCard
+  large?: boolean
+  onNavigate: () => void
+}) => {
   const body = (
     <>
       <div className={`relative w-full ${large ? 'aspect-square' : 'aspect-[4/3]'}`}>
@@ -100,7 +119,7 @@ const Card = ({ card, large = false }: { card: MenuCard; large?: boolean }) => {
     'flex h-full cursor-pointer flex-col justify-center rounded-lg bg-tile transition-colors duration-200 hover:bg-tile-hover'
 
   return card.url ? (
-    <Link href={card.url} className={shell}>
+    <Link href={card.url} onClick={onNavigate} className={shell}>
       {body}
     </Link>
   ) : (
@@ -108,7 +127,15 @@ const Card = ({ card, large = false }: { card: MenuCard; large?: boolean }) => {
   )
 }
 
-const ViewAllTile = ({ url, label = 'Виж всички' }: { url?: string | null; label?: string }) => {
+const ViewAllTile = ({
+  url,
+  label = 'Виж всички',
+  onNavigate,
+}: {
+  url?: string | null
+  label?: string
+  onNavigate: () => void
+}) => {
   const inner = (
     <>
       <span className="flex size-10 items-center justify-center rounded-full border border-line-strong">
@@ -121,7 +148,7 @@ const ViewAllTile = ({ url, label = 'Виж всички' }: { url?: string | nu
     'flex h-full cursor-pointer flex-col items-center justify-center gap-3 rounded-lg bg-tile transition-colors duration-200 hover:bg-tile-hover'
 
   return url ? (
-    <Link href={url} className={shell}>
+    <Link href={url} onClick={onNavigate} className={shell}>
       {inner}
     </Link>
   ) : (
@@ -131,19 +158,40 @@ const ViewAllTile = ({ url, label = 'Виж всички' }: { url?: string | nu
 
 /* ---------- Дясната част на мега менюто ---------- */
 
-const PanelSections = ({ sections }: { sections: MenuSection[] }) => (
+const PanelSections = ({
+  sections,
+  onNavigate,
+}: {
+  sections: MenuSection[]
+  onNavigate: () => void
+}) => (
   <div className="space-y-8">
     {sections.map((section, si) => {
       const hasFeatured = Boolean(section.featured?.title)
       return (
         <div key={si}>
           <div className="mb-3 flex items-baseline justify-between gap-4">
+            {/*
+              Заглавието на раздела води там, където и „Виж всички" —
+              категорията или „Аксесоари за …". Без адрес остава текст.
+            */}
             <h3 className="border-l-2 border-ink pl-2 text-sm font-medium">
-              {section.heading}
+              {section.viewAllUrl ? (
+                <Link
+                  href={section.viewAllUrl}
+                  onClick={onNavigate}
+                  className="cursor-pointer underline-offset-2 transition-colors duration-150 hover:text-brand hover:underline"
+                >
+                  {section.heading}
+                </Link>
+              ) : (
+                section.heading
+              )}
             </h3>
             {section.viewAllUrl ? (
               <Link
                 href={section.viewAllUrl}
+                onClick={onNavigate}
                 className="shrink-0 cursor-pointer text-sm text-ink-muted underline-offset-2 transition-colors duration-150 hover:text-ink hover:underline"
               >
                 {section.viewAllLabel ?? 'Виж всички'}
@@ -158,18 +206,19 @@ const PanelSections = ({ sections }: { sections: MenuSection[] }) => (
           >
             {hasFeatured && section.featured ? (
               <div className="row-span-2">
-                <Card card={section.featured} large />
+                <Card card={section.featured} large onNavigate={onNavigate} />
               </div>
             ) : null}
 
             {section.cards.map((card, ci) => (
-              <Card key={ci} card={card} />
+              <Card key={ci} card={card} onNavigate={onNavigate} />
             ))}
 
             {section.showViewAllTile ? (
               <ViewAllTile
                 url={section.viewAllTileUrl ?? section.viewAllUrl}
                 label={section.viewAllTileLabel ?? undefined}
+                onNavigate={onNavigate}
               />
             ) : null}
           </div>
@@ -181,23 +230,35 @@ const PanelSections = ({ sections }: { sections: MenuSection[] }) => (
 
 /* ---------- Мега меню: сайдбар + панел ---------- */
 
-const MegaMenu = ({ item, onClose }: { item: NavItem; onClose: () => void }) => {
+const MegaMenu = ({
+  item,
+  index,
+  onClose,
+  onNavigate,
+}: {
+  item: NavItem
+  /** Номерът на главната точка — за връщане на фокуса при Esc. */
+  index: number
+  onClose: () => void
+  /** Клик по линк: менюто се затваря веднага. */
+  onNavigate: () => void
+}) => {
   const allEntries = useMemo(() => item.groups.flatMap((g) => g.entries), [item])
   const [activeKey, setActiveKey] = useState<string>(allEntries[0]?.key ?? '')
   const [openGroups, setOpenGroups] = useState<string[]>(() =>
     item.groups.filter((g, i) => g.defaultOpen || i === 0).map((g) => g.heading),
   )
 
-  // При смяна на главната точка сайдбарът се връща на първата подточка.
-  useEffect(() => {
-    setActiveKey(allEntries[0]?.key ?? '')
-    setOpenGroups(item.groups.filter((g, i) => g.defaultOpen || i === 0).map((g) => g.heading))
-  }, [item, allEntries])
+  /*
+    При смяна на главната точка сайдбарът се връща на първата подточка —
+    родителят подава `key` по точката и състоянието се ражда наново.
+  */
 
   const active = allEntries.find((e) => e.key === activeKey) ?? allEntries[0]
 
   return (
     <div
+      data-mega={index}
       className="absolute inset-x-0 top-full z-40 hidden border-t border-line bg-surface shadow-lg lg:block"
       onMouseLeave={onClose}
     >
@@ -211,46 +272,99 @@ const MegaMenu = ({ item, onClose }: { item: NavItem; onClose: () => void }) => 
         <div className="w-64 shrink-0">
           {item.groups.map((group) => {
             const isOpen = openGroups.includes(group.heading)
+            const toggle = () =>
+              setOpenGroups(
+                isOpen ? openGroups.filter((h) => h !== group.heading) : [...openGroups, group.heading],
+              )
+            /*
+              Заглавието на групата е линк към категорията на главната точка
+              само когато групата е една — тогава двете са едно и също
+              („Други продукти" → Аксесоари). Стрелката отделно сгъва.
+            */
+            const groupUrl = item.groups.length === 1 ? item.url : null
             return (
               <div key={group.heading} className="mb-2">
-                <button
-                  type="button"
-                  aria-expanded={isOpen}
-                  onClick={() =>
-                    setOpenGroups(
-                      isOpen
-                        ? openGroups.filter((h) => h !== group.heading)
-                        : [...openGroups, group.heading],
-                    )
-                  }
-                  className="flex min-h-11 w-full cursor-pointer items-center justify-between rounded px-2 text-left text-base font-medium transition-colors duration-200 hover:bg-nav-hover"
-                >
-                  {group.heading}
-                  {isOpen ? (
-                    <CaretUp size={14} aria-hidden="true" />
+                <div className="flex min-h-11 items-center rounded transition-colors duration-200 hover:bg-nav-hover">
+                  {groupUrl ? (
+                    <Link
+                      href={groupUrl}
+                      onClick={onNavigate}
+                      className="flex min-h-11 flex-1 cursor-pointer items-center px-2 text-left text-base font-medium hover:text-brand"
+                    >
+                      {group.heading}
+                    </Link>
                   ) : (
-                    <CaretDown size={14} aria-hidden="true" />
+                    <button
+                      type="button"
+                      onClick={toggle}
+                      className="flex min-h-11 flex-1 cursor-pointer items-center px-2 text-left text-base font-medium"
+                    >
+                      {group.heading}
+                    </button>
                   )}
-                </button>
+                  <button
+                    type="button"
+                    aria-expanded={isOpen}
+                    aria-label={isOpen ? `Сгъни „${group.heading}"` : `Разгъни „${group.heading}"`}
+                    onClick={toggle}
+                    className="flex size-11 shrink-0 cursor-pointer items-center justify-center"
+                  >
+                    {isOpen ? (
+                      <CaretUp size={14} aria-hidden="true" />
+                    ) : (
+                      <CaretDown size={14} aria-hidden="true" />
+                    )}
+                  </button>
+                </div>
 
                 {isOpen ? (
                   <ul className="mt-1">
                     {group.entries.map((entry) => {
                       const isActive = entry.key === activeKey
+                      const cls = `flex min-h-11 w-full cursor-pointer items-center rounded px-4 text-left text-sm transition-colors duration-200 ${
+                        isActive ? 'bg-nav-active font-medium' : 'hover:bg-nav-hover'
+                      }`
                       return (
                         <li key={entry.key}>
-                          <button
-                            type="button"
-                            onMouseEnter={() => setActiveKey(entry.key)}
-                            onFocus={() => setActiveKey(entry.key)}
-                            onClick={() => setActiveKey(entry.key)}
-                            aria-current={isActive ? 'true' : undefined}
-                            className={`flex min-h-11 w-full cursor-pointer items-center rounded px-4 text-left text-sm transition-colors duration-200 ${
-                              isActive ? 'bg-nav-active font-medium' : 'hover:bg-nav-hover'
-                            }`}
-                          >
-                            {entry.label}
-                          </button>
+                          {/*
+                            Посочване сменя панела вдясно, клик води към
+                            категорията. С пръст първото докосване само сменя
+                            панела (виж `сПръст`).
+                          */}
+                          {entry.url ? (
+                            <Link
+                              href={entry.url}
+                              onMouseEnter={() => setActiveKey(entry.key)}
+                              onFocus={() => setActiveKey(entry.key)}
+                              onPointerDown={(e) => {
+                                if (сПръст(e) && !isActive) e.currentTarget.dataset.firstTap = '1'
+                              }}
+                              onClick={(e) => {
+                                if (e.currentTarget.dataset.firstTap) {
+                                  delete e.currentTarget.dataset.firstTap
+                                  e.preventDefault()
+                                  setActiveKey(entry.key)
+                                  return
+                                }
+                                onNavigate()
+                              }}
+                              aria-current={isActive ? 'true' : undefined}
+                              className={cls}
+                            >
+                              {entry.label}
+                            </Link>
+                          ) : (
+                            <button
+                              type="button"
+                              onMouseEnter={() => setActiveKey(entry.key)}
+                              onFocus={() => setActiveKey(entry.key)}
+                              onClick={() => setActiveKey(entry.key)}
+                              aria-current={isActive ? 'true' : undefined}
+                              className={cls}
+                            >
+                              {entry.label}
+                            </button>
+                          )}
                         </li>
                       )
                     })}
@@ -265,7 +379,7 @@ const MegaMenu = ({ item, onClose }: { item: NavItem; onClose: () => void }) => 
         {/* Панел */}
         <div className="min-w-0 flex-1">
           {active?.sections?.length ? (
-            <PanelSections sections={active.sections} />
+            <PanelSections sections={active.sections} onNavigate={onNavigate} />
           ) : (
             /*
               Панел без показваем продукт — категория, която още няма
@@ -276,7 +390,11 @@ const MegaMenu = ({ item, onClose }: { item: NavItem; onClose: () => void }) => 
             <p className="text-sm text-ink-muted">
               Продуктите в тази категория предстоят.{' '}
               {active?.url ? (
-                <Link href={active.url} className="cursor-pointer text-ink underline underline-offset-2">
+                <Link
+                  href={active.url}
+                  onClick={onNavigate}
+                  className="cursor-pointer text-ink underline underline-offset-2"
+                >
                   Към категорията
                 </Link>
               ) : null}
@@ -315,16 +433,70 @@ export const HeaderNav = ({
 }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [mobileExpanded, setMobileExpanded] = useState<number | null>(null)
   const [searchOpen, setSearchOpen] = useState(false)
   const navRef = useRef<HTMLDivElement>(null)
+  const barRef = useRef<HTMLUListElement>(null)
+
+  /*
+    След клик по линк менюто се затваря — и НЕ се отваря отново само защото
+    мишката още стои върху точката. `заспало` е тази точка; отваря се пак,
+    когато мишката излезе от лентата с точките или посочи друга.
+  */
+  const [заспало, setЗаспало] = useState<number | null>(null)
+
+  const отвори = (i: number) => {
+    if (заспало === i) return
+    setЗаспало(null)
+    setOpenIndex(i)
+  }
+
+  /** Клик по линк в менюто — затваря веднага, без да чака мишката да излезе. */
+  const следКлик = () => {
+    setЗаспало(openIndex)
+    setOpenIndex(null)
+    setMobileOpen(false)
+    setMobileExpanded(null)
+  }
+
+  /*
+    Смяна на страницата — по какъвто и да е път („назад", линк от
+    страницата) — затваря менюто. Сравнява се по време на рендера, не в
+    ефект: така затварянето е в същия кадър, без мигване.
+  */
+  const pathname = usePathname()
+  const [страница, setСтраница] = useState(pathname)
+  if (страница !== pathname) {
+    setСтраница(pathname)
+    setOpenIndex(null)
+    setMobileOpen(false)
+    setMobileExpanded(null)
+  }
+
+  /* Заспалата точка се събужда, щом мишката е извън лентата с точките. */
+  useEffect(() => {
+    if (заспало === null) return
+    const onMove = (e: globalThis.PointerEvent) => {
+      if (!barRef.current?.contains(e.target as Node)) setЗаспало(null)
+    }
+    document.addEventListener('pointermove', onMove)
+    return () => document.removeEventListener('pointermove', onMove)
+  }, [заспало])
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        setOpenIndex(null)
-        setMobileOpen(false)
-        setSearchOpen(false)
+      if (e.key !== 'Escape') return
+      /*
+        Фокусът в мега менюто не бива да остане в скрит елемент — връща се
+        на главната точка, от която е отворено.
+      */
+      const mega = (document.activeElement as HTMLElement | null)?.closest<HTMLElement>('[data-mega]')
+      if (mega) {
+        document.querySelector<HTMLElement>(`[data-mega-trigger="${mega.dataset.mega}"]`)?.focus()
       }
+      setOpenIndex(null)
+      setMobileOpen(false)
+      setSearchOpen(false)
     }
     document.addEventListener('keydown', onKey)
     return () => document.removeEventListener('keydown', onKey)
@@ -337,6 +509,16 @@ export const HeaderNav = ({
     document.addEventListener('mousedown', onClick)
     return () => document.removeEventListener('mousedown', onClick)
   }, [])
+
+  /* Отвореното мобилно меню спира скрола на страницата; затварянето го пуска. */
+  useEffect(() => {
+    if (!mobileOpen) return
+    const стар = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = стар
+    }
+  }, [mobileOpen])
 
   return (
     <div ref={navRef} className="relative border-b border-line bg-surface">
@@ -375,7 +557,7 @@ export const HeaderNav = ({
         </Link>
 
         <nav aria-label="Основна навигация" className="hidden min-w-0 flex-1 justify-center lg:flex">
-          <ul className="flex items-center">
+          <ul ref={barRef} className="flex items-center">
             {items.map((item, i) => {
               const hasMenu = item.groups.length > 0
               const isOpen = openIndex === i
@@ -410,16 +592,50 @@ export const HeaderNav = ({
 
               return (
                 <li key={i}>
-                  {hasMenu ? (
+                  {hasMenu && item.url ? (
+                    /*
+                      Точка с меню И категория: посочването отваря менюто,
+                      кликът води към категорията („Други продукти" →
+                      /kategorii/aksesoari). С пръст — първото докосване
+                      отваря, второто води.
+                    */
+                    <Link
+                      href={item.url}
+                      data-mega-trigger={i}
+                      aria-haspopup="true"
+                      aria-expanded={isOpen}
+                      onMouseEnter={() => отвори(i)}
+                      onFocus={() => отвори(i)}
+                      onPointerDown={(e) => {
+                        if (сПръст(e) && !isOpen) e.currentTarget.dataset.firstTap = '1'
+                      }}
+                      onClick={(e) => {
+                        if (e.currentTarget.dataset.firstTap) {
+                          delete e.currentTarget.dataset.firstTap
+                          e.preventDefault()
+                          setOpenIndex(i)
+                          setSearchOpen(false)
+                          return
+                        }
+                        setSearchOpen(false)
+                        setЗаспало(i)
+                        setOpenIndex(null)
+                      }}
+                      className={base}
+                    >
+                      {inner}
+                    </Link>
+                  ) : hasMenu ? (
                     <button
                       type="button"
+                      data-mega-trigger={i}
                       aria-expanded={isOpen}
                       onClick={() => {
                         setOpenIndex(isOpen ? null : i)
                         /* Клик по точка от менюто прибира лентата за търсене. */
                         setSearchOpen(false)
                       }}
-                      onMouseEnter={() => setOpenIndex(i)}
+                      onMouseEnter={() => отвори(i)}
                       className={base}
                     >
                       {inner}
@@ -494,45 +710,94 @@ export const HeaderNav = ({
         лентата да се затвори (клик по точка я затваря).
       */}
       {!searchOpen && openIndex !== null && items[openIndex]?.groups.length ? (
-        <MegaMenu item={items[openIndex]} onClose={() => setOpenIndex(null)} />
+        <MegaMenu
+          key={openIndex}
+          item={items[openIndex]}
+          index={openIndex}
+          onClose={() => setOpenIndex(null)}
+          onNavigate={следКлик}
+        />
       ) : null}
 
-      {/* Мобилно меню */}
+      {/*
+        Мобилно меню. Името води към страницата, стрелката до него отваря
+        подменюто — две отделни цели, за да не би едно докосване и да
+        отвори, и да навигира.
+      */}
       {mobileOpen ? (
-        <div className="max-h-[70vh] overflow-y-auto border-t border-line bg-surface lg:hidden">
+        <div className="max-h-[70vh] overflow-y-auto overscroll-contain border-t border-line bg-surface lg:hidden">
           <nav aria-label="Мобилна навигация" className="container-site py-4">
             <ul className="space-y-1">
-              {items.map((item, i) => (
-                <li key={i}>
-                  <Link
-                    href={item.url ?? '#'}
-                    onClick={() => setMobileOpen(false)}
-                    className="flex min-h-11 cursor-pointer items-center rounded px-2 font-medium transition-colors duration-200 hover:bg-nav-hover"
-                  >
-                    {item.label}
-                  </Link>
-                  {item.groups.map((group) => (
-                    <div key={group.heading} className="ml-2 border-l border-line pl-3">
-                      <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-ink-muted">
-                        {group.heading}
-                      </p>
-                      <ul>
-                        {group.entries.map((entry) => (
-                          <li key={entry.key}>
-                            <Link
-                              href={entry.url}
-                              onClick={() => setMobileOpen(false)}
-                              className="flex min-h-11 cursor-pointer items-center rounded px-2 text-sm text-ink-muted transition-colors duration-200 hover:bg-nav-hover"
-                            >
-                              {entry.label}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
+              {items.map((item, i) => {
+                const разгънат = mobileExpanded === i
+                const превключи = () => setMobileExpanded(разгънат ? null : i)
+                return (
+                  <li key={i}>
+                    <div className="flex items-center">
+                      {item.url ? (
+                        <Link
+                          href={item.url}
+                          onClick={следКлик}
+                          className="flex min-h-11 flex-1 cursor-pointer items-center rounded px-2 font-medium transition-colors duration-200 hover:bg-nav-hover"
+                        >
+                          {item.label}
+                        </Link>
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={превключи}
+                          className="flex min-h-11 flex-1 cursor-pointer items-center rounded px-2 text-left font-medium transition-colors duration-200 hover:bg-nav-hover"
+                        >
+                          {item.label}
+                        </button>
+                      )}
+                      {item.groups.length ? (
+                        <button
+                          type="button"
+                          aria-expanded={разгънат}
+                          aria-label={разгънат ? `Затвори „${item.label}"` : `Отвори „${item.label}"`}
+                          onClick={превключи}
+                          className="flex size-11 shrink-0 cursor-pointer items-center justify-center rounded transition-colors duration-200 hover:bg-nav-hover"
+                        >
+                          <CaretDown
+                            size={16}
+                            aria-hidden="true"
+                            className={`transition-transform duration-200 ${разгънат ? 'rotate-180' : ''}`}
+                          />
+                        </button>
+                      ) : null}
                     </div>
-                  ))}
-                </li>
-              ))}
+                    {разгънат
+                      ? item.groups.map((group) => (
+                          <div key={group.heading} className="ml-2 border-l border-line pl-3">
+                            <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-ink-muted">
+                              {group.heading}
+                            </p>
+                            <ul>
+                              {group.entries.map((entry) => (
+                                <li key={entry.key}>
+                                  {entry.url ? (
+                                    <Link
+                                      href={entry.url}
+                                      onClick={следКлик}
+                                      className="flex min-h-11 cursor-pointer items-center rounded px-2 text-sm text-ink-muted transition-colors duration-200 hover:bg-nav-hover"
+                                    >
+                                      {entry.label}
+                                    </Link>
+                                  ) : (
+                                    <span className="flex min-h-11 items-center px-2 text-sm text-ink-muted">
+                                      {entry.label}
+                                    </span>
+                                  )}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))
+                      : null}
+                  </li>
+                )
+              })}
             </ul>
           </nav>
         </div>

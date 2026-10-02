@@ -268,14 +268,18 @@ export const Header = async () => {
           const panel = entry.panel
           if (!panel || typeof panel === 'number') return null
 
-          // Табът води към категорията на първата секция.
+          /*
+            Табът води към категорията на първата секция. Панел без
+            категория (PowerOcean) остава текст: адресът по slug-а на панела
+            сочеше несъществуваща категория — 404.
+          */
           const first = panel.sections?.[0]
           const category = first ? sectionCategory(first) : null
 
           return {
             key: `panel-${panel.id}`,
             label: panel.title?.trim() || panel.slug,
-            url: category ? categoryPath(category.slug) : categoryPath(panel.slug),
+            url: category ? categoryPath(category.slug) : null,
             sections: panelSections(panel, byId, accessories, catalog),
           }
         })
