@@ -72,13 +72,16 @@ export async function middleware(request: NextRequest) {
   }
 
   /*
-    Продуктът вече е под серията си и тя не се знае тук. Самата страница
-    `/kategorii/produkt/<slug>` намира продукта по адрес и пренасочва към
-    правилния — един скок повече, но без заявка към базата в middleware.
+    Продуктът вече е под серията си. `/api/kanon` я знае — направо там,
+    с един скок. Непознат продукт отива на `/kategorii/produkt/<slug>`,
+    който казва 404 (или намира чернова, ако бъде публикувана).
   */
   if (pathname.startsWith('/products/')) {
     const slug = pathname.slice('/products/'.length)
-    if (slug) return пренасочи(request, `/kategorii/produkt/${slug}`, search)
+    if (slug) {
+      const резервен = `/kategorii/produkt/${slug}`
+      return пренасочи(request, (await каноничнияАдрес(request, резервен)) ?? резервен, search)
+    }
   }
 
   const response = NextResponse.next()
