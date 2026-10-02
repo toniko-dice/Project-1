@@ -1,0 +1,644 @@
+{
+  "_bележка": "Първоначални стойности на атрибутите (02.10.2026). Внос: npm run import:attributes — попълва само продукти без атрибути; промените в админа не се презаписват. Стойности само по данните на продуктите (dice.bg / eu.ecoflow.com); където няма сигурни данни — не е попълнено.",
+  "produkti": {
+    "ac-c20-cable-eu": {
+      "duljina": [
+        1.5
+      ],
+      "konektor": [
+        "AC",
+        "C20"
+      ]
+    },
+    "ac-cable-eu": {
+      "duljina": [
+        1.5
+      ],
+      "konektor": [
+        "AC"
+      ]
+    },
+    "adjustable-ground-suspended-solar-bracket": {
+      "vid": [
+        "Стойка"
+      ]
+    },
+    "alternator-charger-custom-fit-output-cable-2m": {
+      "duljina": [
+        2
+      ],
+      "konektor": [
+        "4+8"
+      ]
+    },
+    "alternator-charger-plus-1000-solar-input-cable-5m": {
+      "duljina": [
+        5
+      ],
+      "konektor": [
+        "MC4"
+      ]
+    },
+    "alternator-charger-plus-custom-fit-output-cable-2m": {
+      "duljina": [
+        2
+      ],
+      "konektor": [
+        "4+8"
+      ]
+    },
+    "alternator-charger-xt150-cable-1m": {
+      "duljina": [
+        1
+      ],
+      "konektor": [
+        "XT150"
+      ]
+    },
+    "alternator-charger-xt150-cable-2m": {
+      "duljina": [
+        2
+      ],
+      "konektor": [
+        "XT150"
+      ]
+    },
+    "alternator-charger-xt60-output-cable-1m": {
+      "duljina": [
+        1
+      ],
+      "konektor": [
+        "XT60"
+      ]
+    },
+    "balcony-hook-kit": {
+      "vid": [
+        "Монтаж на балкон"
+      ]
+    },
+    "bkw-ac-cable-3m": {
+      "duljina": [
+        3
+      ],
+      "konektor": [
+        "AC"
+      ]
+    },
+    "bkw-ac-cable-5m": {
+      "duljina": [
+        5
+      ],
+      "konektor": [
+        "AC"
+      ]
+    },
+    "bkw-delta-pro-cable-0-5m": {
+      "duljina": [
+        0.5
+      ],
+      "konektor": [
+        "4+8"
+      ]
+    },
+    "bkw-delta-xt150-cable-0-4m": {
+      "duljina": [
+        0.4
+      ],
+      "konektor": [
+        "XT150"
+      ]
+    },
+    "bkw-delta-xt150-cable-1m": {
+      "duljina": [
+        1
+      ],
+      "konektor": [
+        "XT150"
+      ]
+    },
+    "bkw-river-cable-0-5m": {
+      "duljina": [
+        0.5
+      ]
+    },
+    "bkw-solar-cable-2m": {
+      "duljina": [
+        2
+      ],
+      "vid": [
+        "Кабел"
+      ]
+    },
+    "camping-light": {
+      "moshtnost": [
+        5
+      ],
+      "vid": [
+        "Осветление"
+      ]
+    },
+    "cushion": {
+      "vid": [
+        "Къмпинг"
+      ]
+    },
+    "delta-2-waterproof-bag": {
+      "vid": [
+        "Чанта"
+      ]
+    },
+    "delta-3-extra-battery-cable": {
+      "duljina": [
+        0.4
+      ]
+    },
+    "delta-3-max-plus-smart-extra-battery": {
+      "kapacitet-wh": [
+        2048
+      ]
+    },
+    "delta-3-series-waterproof-bag": {
+      "vid": [
+        "Чанта"
+      ]
+    },
+    "delta-3-smart-extra-battery": {
+      "kapacitet-wh": [
+        1024
+      ]
+    },
+    "delta-max-waterproof-bag": {
+      "vid": [
+        "Чанта"
+      ]
+    },
+    "delta-pro-3-ev-x-stream-adapter": {
+      "konektor": [
+        "Type 2"
+      ]
+    },
+    "delta-pro-3-flat-link-cable-0-85m": {
+      "duljina": [
+        0.85
+      ]
+    },
+    "delta-pro-3-flat-link-cable-2m": {
+      "duljina": [
+        2
+      ]
+    },
+    "delta-pro-extra-battery-cable": {
+      "duljina": [
+        0.75
+      ]
+    },
+    "delta-pro-remote-control": {
+      "vid": [
+        "Дистанционно"
+      ]
+    },
+    "delta-pro-to-smart-generator-adapter": {
+      "konektor": [
+        "4+8"
+      ]
+    },
+    "ev-x-stream-adapter-delta-pro": {
+      "konektor": [
+        "Type 2"
+      ]
+    },
+    "extra-battery-cable-1m": {
+      "duljina": [
+        1
+      ],
+      "konektor": [
+        "XT150"
+      ]
+    },
+    "extra-battery-cable-5m": {
+      "duljina": [
+        5
+      ],
+      "konektor": [
+        "XT150"
+      ]
+    },
+    "foldable-camping-chair": {
+      "vid": [
+        "Къмпинг"
+      ]
+    },
+    "glacier-detachable-wheels-and-lever": {
+      "vid": [
+        "Колички и колела"
+      ]
+    },
+    "glacier-plug-in-battery": {
+      "kapacitet-wh": [
+        298
+      ]
+    },
+    "glacier-xt60-car-cable-2-5m": {
+      "duljina": [
+        2.5
+      ],
+      "konektor": [
+        "XT60"
+      ]
+    },
+    "grounding-adapter-c20": {
+      "konektor": [
+        "C20"
+      ]
+    },
+    "infinity-cable-2m": {
+      "duljina": [
+        2
+      ]
+    },
+    "lfp-battery-power-cable-1-5m": {
+      "duljina": [
+        1.5
+      ]
+    },
+    "lfp-battery-power-cable-2-5m": {
+      "duljina": [
+        2.5
+      ]
+    },
+    "lfp-battery-power-cable-2m": {
+      "duljina": [
+        2
+      ]
+    },
+    "lfp-battery-power-cable-3-5m": {
+      "duljina": [
+        3.5
+      ]
+    },
+    "manual-transfer-switch": {
+      "vid": [
+        "Превключвател"
+      ]
+    },
+    "mobile-gear-dolly": {
+      "vid": [
+        "Колички и колела"
+      ]
+    },
+    "power-hat-l-xl": {
+      "vid": [
+        "Соларна шапка"
+      ]
+    },
+    "power-hat-m-l": {
+      "vid": [
+        "Соларна шапка"
+      ]
+    },
+    "rapid-gan-charger-65w": {
+      "moshtnost": [
+        65
+      ],
+      "broy-portove": [
+        3
+      ]
+    },
+    "rapid-magnetic-5000-cheren": {
+      "kapacitet-mah": [
+        5000
+      ],
+      "moshtnost": [
+        30
+      ]
+    },
+    "rapid-magnetic-5000-srebrist": {
+      "kapacitet-mah": [
+        5000
+      ],
+      "moshtnost": [
+        30
+      ]
+    },
+    "rapid-pro-charger-100w": {
+      "moshtnost": [
+        100
+      ],
+      "broy-portove": [
+        3
+      ]
+    },
+    "rapid-pro-charger-140w": {
+      "moshtnost": [
+        140
+      ],
+      "broy-portove": [
+        4
+      ]
+    },
+    "rapid-pro-desktop-charger-320w": {
+      "moshtnost": [
+        320
+      ],
+      "broy-portove": [
+        5
+      ]
+    },
+    "rapid-pro-power-bank-20000": {
+      "kapacitet-mah": [
+        20000
+      ],
+      "moshtnost": [
+        230
+      ]
+    },
+    "rapid-pro-power-bank-27650": {
+      "kapacitet-mah": [
+        27650
+      ],
+      "moshtnost": [
+        300
+      ]
+    },
+    "rapid-pro-usb-c-cable-240w": {
+      "duljina": [
+        1.83
+      ],
+      "konektor": [
+        "USB-C"
+      ]
+    },
+    "rapid-pro-x-apple-watch-charger": {
+      "moshtnost": [
+        5
+      ]
+    },
+    "rapid-pro-x-power-bank": {
+      "kapacitet-mah": [
+        27650
+      ],
+      "moshtnost": [
+        300
+      ]
+    },
+    "relay-module-13a": {
+      "vid": [
+        "Релеен модул"
+      ]
+    },
+    "relay-module-16a": {
+      "vid": [
+        "Релеен модул"
+      ]
+    },
+    "relay-module-20a": {
+      "vid": [
+        "Релеен модул"
+      ]
+    },
+    "relay-module-30a": {
+      "vid": [
+        "Релеен модул"
+      ]
+    },
+    "relay-module-6a": {
+      "vid": [
+        "Релеен модул"
+      ]
+    },
+    "rigid-solar-panel-mounting-feet": {
+      "vid": [
+        "Крепежи"
+      ]
+    },
+    "river-3-plus-eb300": {
+      "kapacitet-wh": [
+        286
+      ]
+    },
+    "river-bag": {
+      "vid": [
+        "Чанта"
+      ]
+    },
+    "shower-kit": {
+      "vid": [
+        "Къмпинг"
+      ]
+    },
+    "single-axis-solar-tracker": {
+      "vid": [
+        "Соларен тракер"
+      ]
+    },
+    "solar-angle-guide": {
+      "vid": [
+        "Уред за ъгъла"
+      ]
+    },
+    "solar-extension-cable-3m": {
+      "duljina": [
+        3
+      ],
+      "vid": [
+        "Кабел"
+      ]
+    },
+    "solar-mc4-xt60-cable-3-5m": {
+      "duljina": [
+        3.5
+      ],
+      "konektor": [
+        "MC4",
+        "XT60"
+      ],
+      "vid": [
+        "Кабел"
+      ]
+    },
+    "solar-mc4-xt60-cable-5m": {
+      "duljina": [
+        5
+      ],
+      "konektor": [
+        "MC4",
+        "XT60"
+      ],
+      "vid": [
+        "Кабел"
+      ]
+    },
+    "solar-mc4-xt60i-cable-2-5m": {
+      "duljina": [
+        2.5
+      ],
+      "konektor": [
+        "MC4",
+        "XT60i"
+      ],
+      "vid": [
+        "Кабел"
+      ]
+    },
+    "solar-mc4-xt60i-cable-3-5m": {
+      "duljina": [
+        3.5
+      ],
+      "konektor": [
+        "MC4",
+        "XT60i"
+      ],
+      "vid": [
+        "Кабел"
+      ]
+    },
+    "solar-mc4-xt60i-cable-5m": {
+      "duljina": [
+        5
+      ],
+      "konektor": [
+        "MC4",
+        "XT60i"
+      ],
+      "vid": [
+        "Кабел"
+      ]
+    },
+    "solar-parallel-connection-cable": {
+      "vid": [
+        "Кабел"
+      ]
+    },
+    "solar-tracker": {
+      "vid": [
+        "Соларен тракер"
+      ]
+    },
+    "stream-ac-cable-1-5m": {
+      "duljina": [
+        1.5
+      ],
+      "konektor": [
+        "AC"
+      ]
+    },
+    "stream-ac-cable-15m": {
+      "duljina": [
+        15
+      ],
+      "konektor": [
+        "AC"
+      ]
+    },
+    "stream-ac-cable-5m": {
+      "duljina": [
+        5
+      ],
+      "konektor": [
+        "AC"
+      ]
+    },
+    "stream-bkw-ac-cable-15m": {
+      "duljina": [
+        15
+      ],
+      "konektor": [
+        "AC"
+      ]
+    },
+    "stream-bkw-ac-cable-5m": {
+      "duljina": [
+        5
+      ],
+      "konektor": [
+        "AC"
+      ]
+    },
+    "stream-bkw-diy-cable-5m": {
+      "duljina": [
+        5
+      ]
+    },
+    "stream-diy-cable-1-5m": {
+      "duljina": [
+        1.5
+      ]
+    },
+    "stream-diy-cable-15m": {
+      "duljina": [
+        15
+      ]
+    },
+    "stream-diy-cable-5m": {
+      "duljina": [
+        5
+      ]
+    },
+    "stream-parallel-cable": {
+      "duljina": [
+        0.55
+      ]
+    },
+    "stream-solar-extension-cable": {
+      "duljina": [
+        2.95
+      ]
+    },
+    "super-flat-mc4-cable": {
+      "duljina": [
+        0.5
+      ],
+      "konektor": [
+        "MC4"
+      ],
+      "vid": [
+        "Кабел"
+      ]
+    },
+    "tilt-mount-bracket-28": {
+      "vid": [
+        "Стойка"
+      ]
+    },
+    "trail-series-waterproof-bag": {
+      "vid": [
+        "Чанта"
+      ]
+    },
+    "trolley-delta-pro-ultra": {
+      "vid": [
+        "Колички и колела"
+      ]
+    },
+    "wave-3-add-on-battery": {
+      "kapacitet-wh": [
+        1024
+      ]
+    },
+    "wave-3-car-vent-seal": {
+      "vid": [
+        "За климатика"
+      ]
+    },
+    "wave-3-drain-pipe": {
+      "vid": [
+        "За климатика"
+      ]
+    },
+    "wave-3-inlet-exhaust-pipe-154mm": {
+      "vid": [
+        "За климатика"
+      ]
+    },
+    "wave-3-outlet-exhaust-pipe-129mm": {
+      "vid": [
+        "За климатика"
+      ]
+    },
+    "wave-stabilizing-strap-kit": {
+      "vid": [
+        "За климатика"
+      ]
+    }
+  }
+}
