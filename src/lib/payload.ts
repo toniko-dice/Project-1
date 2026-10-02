@@ -538,7 +538,7 @@ export const getLatestProducts = cache(async (limit = 4): Promise<Product[]> =>
   }),
 )
 
-type GlobalSlug = 'header' | 'footer' | 'site-settings' | 'design'
+type GlobalSlug = 'header' | 'footer' | 'site-settings' | 'design' | 'filter-order'
 
 export const getGlobal = cache(async <T extends GlobalSlug>(slug: T) =>
   timed(`getGlobal(${slug})`, () =>

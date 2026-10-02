@@ -17,6 +17,7 @@ import {
   type CatalogEntry,
   isAccessoryCategory,
 } from '@/lib/catalog'
+import { filterOrderParams } from '@/lib/filter-order'
 import { buildFilters } from '@/lib/filters'
 import {
   categoryBranchIds,
@@ -108,10 +109,11 @@ export default async function CategoryPage({ params }: Args) {
     страницата „Аксесоари за …" и за менюто (`src/lib/catalog.ts`).
   */
   const съвместими: CatalogEntry[] = сФилтри ? [] : accessoriesForCategory(catalog, category.id)
-  const [products, accessories, attributes] = await Promise.all([
+  const [products, accessories, attributes, filterOrder] = await Promise.all([
     getCategoryProducts(slug, ids),
     getProductCards(съвместими.map((e) => e.id)),
     сФилтри ? getAttributes() : Promise.resolve([]),
+    сФилтри ? getGlobal('filter-order') : Promise.resolve(null),
   ])
   const страницаАксесоари =
     accessories.length && canHaveAccessoriesPage(catalog, category.id) ? accessoriesPath(slug) : null
@@ -129,6 +131,7 @@ export default async function CategoryPage({ params }: Args) {
           ? { kind: 'accessories-root', categoryId: category.id }
           : { kind: 'category', categoryId: category.id },
         accessoriesRootId: category.id,
+        order: filterOrderParams(filterOrder?.items),
       })
     : null
 

@@ -11,6 +11,7 @@ import {
   type Catalog,
   fillTemplate,
 } from '@/lib/catalog'
+import { filterOrderParams } from '@/lib/filter-order'
 import { buildFilters } from '@/lib/filters'
 import { getAttributes, getCatalog, getGlobal, getProductCards } from '@/lib/payload'
 import { ancestry, categoryCrumbs } from '@/lib/tree'
@@ -103,10 +104,11 @@ export default async function AccessoriesPage({ params }: Args) {
   }
   if (!canHaveAccessoriesPage(catalog, category.id) || !entries.length) notFound()
 
-  const [products, attributes, settings] = await Promise.all([
+  const [products, attributes, settings, filterOrder] = await Promise.all([
     getProductCards(entries.map((e) => e.id)),
     getAttributes(),
     getGlobal('site-settings'),
+    getGlobal('filter-order'),
   ])
 
   const root = catalog.tree.find((c) => c.slug === ACCESSORIES_ROOT_SLUG) ?? null
@@ -116,6 +118,7 @@ export default async function AccessoriesPage({ params }: Args) {
     attributes,
     scope: { kind: 'series-accessories', categoryId: category.id },
     accessoriesRootId: root?.id ?? null,
+    order: filterOrderParams(filterOrder.items),
   })
 
   const брой = products.length

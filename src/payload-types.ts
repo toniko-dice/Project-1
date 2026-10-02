@@ -114,6 +114,7 @@ export interface Config {
     footer: Footer;
     design: Design;
     'site-settings': SiteSetting;
+    'filter-order': FilterOrder;
     'payload-jobs-stats': PayloadJobsStat;
   };
   globalsSelect: {
@@ -121,6 +122,7 @@ export interface Config {
     footer: FooterSelect<false> | FooterSelect<true>;
     design: DesignSelect<false> | DesignSelect<true>;
     'site-settings': SiteSettingsSelect<false> | SiteSettingsSelect<true>;
+    'filter-order': FilterOrderSelect<false> | FilterOrderSelect<true>;
     'payload-jobs-stats': PayloadJobsStatsSelect<false> | PayloadJobsStatsSelect<true>;
   };
   locale: null;
@@ -3183,6 +3185,29 @@ export interface SiteSetting {
   createdAt?: string | null;
 }
 /**
+ * Редът на филтрите отстрани в категориите с аксесоари и на страниците „Аксесоари за …". Подрежда се с влачене. Филтър без стойности в дадена категория не се показва.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "filter-order".
+ */
+export interface FilterOrder {
+  id: number;
+  /**
+   * Цена винаги е последна. Нов атрибут, който го няма тук, се показва преди „Съвместимост", докато не бъде нареден.
+   */
+  items?:
+    | {
+        type?: ('attribute' | 'builtin') | null;
+        builtin?: ('nalichnost' | 'kategoriya' | 'model' | 'savmestimost' | 'cena') | null;
+        attribute?: (number | null) | Attribute;
+        label?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-jobs-stats".
  */
@@ -3330,6 +3355,24 @@ export interface SiteSettingsSelect<T extends boolean = true> {
   phone?: T;
   email?: T;
   distributorNotice?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "filter-order_select".
+ */
+export interface FilterOrderSelect<T extends boolean = true> {
+  items?:
+    | T
+    | {
+        type?: T;
+        builtin?: T;
+        attribute?: T;
+        label?: T;
+        id?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

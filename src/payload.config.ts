@@ -22,6 +22,7 @@ import { Testimonials } from './collections/Testimonials'
 import { Users } from './collections/Users'
 import { dailyBackupTask } from './jobs/backupTask'
 import { Design } from './globals/Design'
+import { FilterOrder } from './globals/FilterOrder'
 import { Footer } from './globals/Footer'
 import { Header } from './globals/Header'
 import { SiteSettings } from './globals/SiteSettings'
@@ -67,7 +68,7 @@ export default buildConfig({
     Users,
     Redirects,
   ],
-  globals: [Header, Footer, Design, SiteSettings],
+  globals: [Header, Footer, Design, SiteSettings, FilterOrder],
   // Архивирането по график минава през опашката за задачи на Payload.
   // Работи само докато сървърът върви — при спряна машина архив не се прави.
   jobs: {

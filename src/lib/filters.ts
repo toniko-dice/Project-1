@@ -9,6 +9,7 @@ import {
   deviceSeries,
   devicesInCategory,
 } from './catalog'
+import { sortByFilterOrder } from './filter-order'
 
 /**
  * ФИЛТРИТЕ НА СПИСЪК — сглобяват се на сървъра, прилагат се в браузъра.
@@ -58,6 +59,7 @@ export const buildFilters = ({
   attributes,
   scope,
   accessoriesRootId,
+  order,
 }: {
   catalog: Catalog
   entries: CatalogEntry[]
@@ -65,6 +67,8 @@ export const buildFilters = ({
   scope: FilterScope
   /** Категорията „Аксесоари" — децата ѝ са опциите на „Категория". */
   accessoriesRootId: number | null
+  /** Редът от глобала „Подредба на филтрите" (`filterOrderParams`). */
+  order: string[]
 }): FilterData => {
   const items: FilterItem[] = entries.map((e) => ({ id: e.id, price: e.price, values: {} }))
   const добави = (i: number, param: string, value: string) => {
@@ -208,7 +212,10 @@ export const buildFilters = ({
     не се показва (празните — още по-малко).
   */
   return {
-    groups: groups.filter((g) => g.kind === 'range' || g.options.length > 1),
+    groups: sortByFilterOrder(
+      groups.filter((g) => g.kind === 'range' || g.options.length > 1),
+      order,
+    ),
     items,
   }
 }
