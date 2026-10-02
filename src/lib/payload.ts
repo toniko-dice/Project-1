@@ -3,10 +3,11 @@ import { unstable_cache } from 'next/cache'
 import { getPayload } from 'payload'
 import { cache } from 'react'
 
-import type { Category, Product, ProductsSelect } from '@/payload-types'
-import type { Where } from 'payload'
+import type { Attribute, Category, Product, ProductsSelect } from '@/payload-types'
 import { Products } from '@/collections/Products'
+import { type Catalog, type CatalogEntry, makeCatalog } from './catalog'
 import { rankSearchResults, searchWhere, searchWords } from './search'
+import { productPath } from './urls'
 
 export const getPayloadClient = cache(async () => getPayload({ config }))
 
@@ -110,7 +111,17 @@ export const getProduct = cache(async (slug: string) =>
  * `depth: 2` е нужен заради адреса: серията на продукта е категорията от
  * второ ниво, тоест трябват родителят и родителят на родителя.
  */
-export type ProductForUrl = Pick<Product, 'id' | 'slug' | 'title' | 'category' | 'updatedAt'>
+export type ProductForUrl = Pick<
+  Product,
+  | 'id'
+  | 'slug'
+  | 'title'
+  | 'category'
+  | 'categorySlug'
+  | 'categoryParentSlug'
+  | 'categoryGrandparentSlug'
+  | 'updatedAt'
+>
 
 export const getPublishedProducts = cache(async (): Promise<ProductForUrl[]> => {
   const payload = await getPayloadClient()
@@ -119,7 +130,22 @@ export const getPublishedProducts = cache(async (): Promise<ProductForUrl[]> => 
     where: { _status: { equals: 'published' } },
     depth: 2,
     pagination: false,
-    select: { slug: true, title: true, category: true, updatedAt: true },
+    /*
+      Трите виртуални полета дават серията (т. 19). Без тях `productPath`
+      падаше на `category` — при дълбочина 2 бабата на подсерията е само
+      номер и продуктът в „DELTA 3 серия" излизаше под нея
+      (`/kategorii/delta-3-seriya/delta-3`): грешен адрес в картата на
+      сайта и в предварителното построяване, с пренасочване от него.
+    */
+    select: {
+      slug: true,
+      title: true,
+      category: true,
+      categorySlug: true,
+      categoryParentSlug: true,
+      categoryGrandparentSlug: true,
+      updatedAt: true,
+    },
   })
   return result.docs
 })
@@ -281,98 +307,128 @@ export const getCategoryProducts = cache(async (slug: string, ids: number[]) =>
 )
 
 /**
- * Аксесоарите, съвместими с дадени категории или модели.
+ * Лекото копие на каталога — за правилото за съвместимост и за филтрите.
  *
- * Аксесоарът стои в своята категория (Кабели, Адаптери) и сочи с
- * „Съвместим с" сериите и моделите, за които става. Оттук се пълнят
- * разделът „Аксесоари" на серията, „Свързани продукти" на модела и
- * секцията „Аксесоари" в панела на менюто — един списък, три места.
+ * Всички публикувани продукти, само номера и кратки стойности: категории,
+ * „Съвместим с", атрибути, цена, наличност. Около 150 реда, десетки
+ * килобайта — правилото в `src/lib/catalog.ts` се смята в паметта, без
+ * заявка на категория, модел или панел.
  */
-export const getCompatibleAccessories = cache(
-  async (categoryIds: number[], productIds: number[] = []) =>
-    timed(`getCompatibleAccessories(${categoryIds.length}/${productIds.length})`, () =>
-      cached(
-        ['accessories-cards', categoryIds.join(','), productIds.join(',')],
-        ['product', 'category'],
-        async () => {
-          if (!categoryIds.length && !productIds.length) return []
-          const payload = await getPayloadClient()
-
-          /*
-            Връзката е полиморфна (категории И продукти), затова двете
-            страни се търсят поотделно — Payload не приема смесен списък
-            в едно `in`.
-          */
-          const or: Where[] = []
-          if (categoryIds.length) or.push({ 'compatibleWith.value': { in: categoryIds } })
-          if (productIds.length) or.push({ 'compatibleWith.value': { in: productIds } })
-
-          const result = await payload.find({
-            collection: 'products',
-            where: { and: [{ _status: { equals: 'published' } }, { or }] },
-            sort: ['_order', 'title'],
-            pagination: false,
-            depth: 1,
-            select: cardSelect({ compatibleWith: true }),
-          })
-
-          /*
-            Полиморфната връзка не различава „категория 9" от „продукт 9" в
-            заявката — и двете са номер 9. Затова съвпадението се
-            потвърждава тук, по вид и номер.
-          */
-          const cats = new Set(categoryIds)
-          const prods = new Set(productIds)
-          return result.docs.filter((doc) =>
-            (doc.compatibleWith ?? []).some((rel) => {
-              if (!rel || typeof rel !== 'object') return false
-              const id = typeof rel.value === 'number' ? rel.value : rel.value?.id
-              if (typeof id !== 'number') return false
-              return rel.relationTo === 'categories' ? cats.has(id) : prods.has(id)
-            }),
-          )
-        },
-      ),
-    ),
-)
-
-export type CompatibilityLinks = {
-  id: number
-  categories: number[]
-  products: number[]
-}
-
-/**
- * Кой публикуван продукт с какво е съвместим — за раздела „Аксесоари" в
- * менюто.
- *
- * Само номерата: една лека заявка за целия каталог, не по една на панел.
- * Хедърът решава кои аксесоари са за кой панел и дотегля картите им с
- * `getProductsByIds`.
- */
-export const getCompatibilityLinks = cache(
-  async (): Promise<CompatibilityLinks[]> =>
-    timed('getCompatibilityLinks', () =>
-      cached(['compatibility-links'], ['menu', 'product'], async () => {
+export const getCatalogIndex = cache(
+  async (): Promise<CatalogEntry[]> =>
+    timed('getCatalogIndex', () =>
+      cached(['catalog-index'], ['product', 'category', 'menu'], async () => {
         const payload = await getPayloadClient()
         const result = await payload.find({
           collection: 'products',
           where: { _status: { equals: 'published' } },
-          select: { compatibleWith: true },
+          select: {
+            slug: true,
+            title: true,
+            categories: true,
+            compatibleWith: true,
+            attributes: true,
+            price: true,
+            availability: true,
+            _order: true,
+            updatedAt: true,
+          },
+          sort: ['_order', 'title'],
           pagination: false,
           depth: 0,
         })
-        return result.docs.flatMap((doc) => {
-          const links: CompatibilityLinks = { id: doc.id, categories: [], products: [] }
+        const номер = (v: unknown) =>
+          typeof v === 'number' ? v : ((v as { id?: number } | null)?.id ?? null)
+        return result.docs.map((doc): CatalogEntry => {
+          const compatCategories: number[] = []
+          const compatProducts: number[] = []
           for (const rel of doc.compatibleWith ?? []) {
-            const id = typeof rel.value === 'number' ? rel.value : rel.value?.id
-            if (typeof id !== 'number') continue
-            ;(rel.relationTo === 'categories' ? links.categories : links.products).push(id)
+            const id = номер(rel.value)
+            if (id === null) continue
+            ;(rel.relationTo === 'categories' ? compatCategories : compatProducts).push(id)
           }
-          return links.categories.length || links.products.length ? [links] : []
+          return {
+            id: doc.id,
+            slug: doc.slug,
+            title: doc.title,
+            categories: (doc.categories ?? []).flatMap((c) => {
+              const id = номер(c)
+              return id === null ? [] : [id]
+            }),
+            compatCategories,
+            compatProducts,
+            attributes: (doc.attributes ?? []).flatMap((a) => {
+              const id = номер(a.attribute)
+              return id === null || !a.value?.trim() ? [] : [{ attribute: id, value: a.value.trim() }]
+            }),
+            price: typeof doc.price === 'number' ? doc.price : null,
+            availability: doc.availability ?? null,
+            order: doc._order ?? '',
+            updatedAt: doc.updatedAt ?? null,
+          }
         })
       }),
     ),
+)
+
+/** Каталогът заедно с дървото — веднъж на заявка. */
+export const getCatalog = cache(async (): Promise<Catalog> => {
+  const [tree, entries] = await Promise.all([getCategoryTree(), getCatalogIndex()])
+  return makeCatalog(tree, entries)
+})
+
+/** Атрибутите за филтрите, в подредбата от админа (влачене). */
+export const getAttributes = cache(
+  async (): Promise<Attribute[]> =>
+    timed('getAttributes', () =>
+      cached(['attributes'], ['category', 'product'], async () => {
+        const payload = await getPayloadClient()
+        const result = await payload.find({
+          collection: 'attributes',
+          sort: '_order',
+          pagination: false,
+          depth: 0,
+        })
+        return result.docs
+      }),
+    ),
+)
+
+/**
+ * Карти по номера, в подадения ред — за списъци, чийто ред вече е решен
+ * (аксесоарите по правилото в `catalog.ts`). Само публикуваните.
+ */
+export const getProductCards = async (ids: number[]): Promise<Product[]> => {
+  if (!ids.length) return []
+  const byId = await getProductsByIds([...ids].sort((a, b) => a - b))
+  return ids.flatMap((id) => (byId[id] ? [byId[id]] : []))
+}
+
+/**
+ * Каноничният адрес на всеки публикуван продукт, по slug — за `/api/kanon`
+ * (продукт, отворен под чужда категория → 301 към този адрес).
+ */
+export const getCanonicalPaths = cache(
+  async (): Promise<Record<string, string>> =>
+    cached(['canonical-paths'], ['product', 'category'], async () => {
+      const products = await getPublishedProducts()
+      return Object.fromEntries(products.map((p) => [p.slug, productPath(p)]))
+    }),
+)
+
+/** Записаните пренасочвания: стар адрес → нов. Редовете са десетки. */
+export const getRedirectMap = cache(
+  async (): Promise<Record<string, string>> =>
+    cached(['redirect-map'], ['redirects'], async () => {
+      const payload = await getPayloadClient()
+      const result = await payload.find({
+        collection: 'redirects',
+        pagination: false,
+        depth: 0,
+        select: { from: true, to: true },
+      })
+      return Object.fromEntries(result.docs.map((r) => [r.from, r.to]))
+    }),
 )
 
 /** Адресите на всички категории — за предварително построяване на страниците. */

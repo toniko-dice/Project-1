@@ -1,6 +1,13 @@
-import type { CollectionBeforeValidateHook, CollectionConfig } from 'payload'
+import type {
+  CollectionBeforeChangeHook,
+  CollectionBeforeValidateHook,
+  CollectionConfig,
+  PayloadRequest,
+} from 'payload'
+import { normalizeNumber } from '../lib/attributes'
 import { AVAILABILITY_OPTIONS } from '../lib/availability'
 import { cleanSlug } from '../lib/slug'
+import { RESERVED_PRODUCT_SLUGS } from '../lib/urls'
 import { productBlocks } from '../blocks/product'
 import { expireEverything, revalidateProduct, revalidateProductDelete } from '../lib/revalidate'
 import { fillSearchText } from '../lib/search'
@@ -17,6 +24,63 @@ const syncPrimaryCategory: CollectionBeforeValidateHook = ({ data }) => {
   const първа = Array.isArray(data?.categories) ? data.categories[0] : undefined
   const id = typeof първа === 'object' && първа !== null ? (първа as { id?: number }).id : първа
   if (data && typeof id === 'number') data.category = id
+  return data
+}
+
+/** Номерата от връзка „много" — при запис са числа, при четене може да са обекти. */
+const relationIds = (value: unknown): number[] =>
+  (Array.isArray(value) ? value : []).flatMap((v) => {
+    const id = typeof v === 'object' && v !== null ? (v as { id?: unknown }).id : v
+    return typeof id === 'number' ? [id] : []
+  })
+
+/** Видът на атрибута — веднъж на заявка, не по веднъж на ред. */
+const attributeType = async (req: PayloadRequest, id: number): Promise<string | null> => {
+  const кеш = ((req.context.attributeTypes as Map<number, string | null> | undefined) ??=
+    new Map<number, string | null>())
+  if (!кеш.has(id)) {
+    const doc = await req.payload
+      .findByID({ collection: 'attributes', id, depth: 0, req })
+      .catch(() => null)
+    кеш.set(id, doc?.type ?? null)
+  }
+  return кеш.get(id) ?? null
+}
+
+/** Числовият атрибут иска число; „0,4" със запетая става. */
+const validateAttributeValue = async (
+  value: unknown,
+  { siblingData, req }: { siblingData: Record<string, unknown>; req: PayloadRequest },
+) => {
+  const [id] = relationIds([siblingData?.attribute])
+  // Ред без атрибут отпада при запис — няма какво да се проверява.
+  if (id === undefined) return true
+  if (typeof value !== 'string' || !value.trim()) return 'Попълнете стойност.'
+  if ((await attributeType(req, id)) === 'number' && normalizeNumber(value) === null) {
+    return 'Атрибутът е числов — напишете число, например 1,5.'
+  }
+  return true
+}
+
+/**
+ * Редовете с атрибути преди запис: без атрибут отпадат (изтрит атрибут
+ * или недовършен ред), числата се записват с точка — „0,4" става „0.4",
+ * за да се подреждат и филтрират като числа.
+ */
+const normalizeAttributes: CollectionBeforeChangeHook = async ({ data, req }) => {
+  if (!Array.isArray(data?.attributes)) return data
+  const редове = []
+  for (const ред of data.attributes as { attribute?: unknown; value?: unknown }[]) {
+    const [id] = relationIds([ред?.attribute])
+    if (id === undefined) continue
+    const стойност = String(ред.value ?? '').trim()
+    if ((await attributeType(req, id)) === 'number') {
+      редове.push({ ...ред, value: normalizeNumber(стойност) ?? стойност })
+    } else {
+      редове.push({ ...ред, value: стойност })
+    }
+  }
+  data.attributes = редове
   return data
 }
 
@@ -94,7 +158,7 @@ export const Products: CollectionConfig = {
   hooks: {
     /* Слепва полетата за търсене в `searchText` преди всеки запис. */
     beforeValidate: [syncPrimaryCategory],
-    beforeChange: [fillSearchText],
+    beforeChange: [fillSearchText, normalizeAttributes],
     afterChange: [revalidateProduct],
     afterDelete: [revalidateProductDelete],
   },
@@ -145,6 +209,17 @@ export const Products: CollectionConfig = {
                 beforeValidate: [
                   ({ value }) => (typeof value === 'string' ? cleanSlug(value) : value),
                 ],
+              },
+              /*
+                `/kategorii/<серия>/aksesoari` е страницата с аксесоарите на
+                серията — продукт със същия адрес би бил недостъпен.
+              */
+              validate: (value: unknown) => {
+                if (typeof value !== 'string' || !value.trim()) return 'Полето е задължително.'
+                if (RESERVED_PRODUCT_SLUGS.includes(value)) {
+                  return `„${value}" е запазен адрес — там е страницата с аксесоарите на серията. Изберете друг.`
+                }
+                return true
               },
             },
             {
@@ -523,6 +598,70 @@ export const Products: CollectionConfig = {
                 description:
                   'Избери серии или конкретни модели, с които работи. Показва се на страницата на серията и в „Свързани продукти" на модела.',
               },
+            },
+          ],
+        },
+        {
+          label: 'Атрибути',
+          description:
+            'Атрибутите се ползват за филтрите в категориите. Списъкът зависи от категориите на продукта.',
+          fields: [
+            {
+              /*
+                Масив, не по едно поле на атрибут: атрибутите ги добавя
+                собственикът, а кабел с два вида конектори има два реда
+                „Конектор". Всеки ред е отделна стойност при филтриране.
+              */
+              name: 'attributes',
+              type: 'array',
+              label: 'Атрибути',
+              labels: { singular: 'Атрибут', plural: 'Атрибути' },
+              admin: {
+                description:
+                  'Атрибутите се ползват за филтрите в категориите. Списъкът зависи от категориите на продукта.',
+              },
+              fields: [
+                {
+                  type: 'row',
+                  fields: [
+                    {
+                      name: 'attribute',
+                      type: 'relationship',
+                      relationTo: 'attributes',
+                      label: 'Атрибут',
+                      admin: { width: '50%' },
+                      /*
+                        В менюто — само атрибутите на категориите на продукта.
+                        Без `required`: изтрит атрибут оставя празна връзка
+                        (`ON DELETE SET NULL`), а `NOT NULL` би провалил
+                        изтриването. Ред без атрибут отпада при запис.
+                      */
+                      filterOptions: ({ data }) => {
+                        const ids = relationIds(data?.categories)
+                        return ids.length ? { categories: { in: ids } } : true
+                      },
+                      /*
+                        Списъкът е помощ, не забрана. Без своя проверка Payload
+                        отказва запис, чиято стойност не минава `filterOptions`
+                        — а вносът нарочно записва атрибут извън категориите
+                        (с предупреждение). Тогава продуктът не би се записвал
+                        от админа изобщо, дори заради цената (т. 11).
+                      */
+                      validate: () => true as const,
+                    },
+                    {
+                      name: 'value',
+                      type: 'text',
+                      label: 'Стойност',
+                      admin: {
+                        width: '50%',
+                        description: 'При числов атрибут — число; „0,4" със запетая също става.',
+                      },
+                      validate: validateAttributeValue,
+                    },
+                  ],
+                },
+              ],
             },
           ],
         },

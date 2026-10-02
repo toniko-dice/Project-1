@@ -8,6 +8,7 @@ import { en } from '@payloadcms/translations/languages/en'
 import { buildConfig } from 'payload'
 import sharp, { type SharpOptions } from 'sharp'
 
+import { Attributes } from './collections/Attributes'
 import { Awards } from './collections/Awards'
 import { Backups } from './collections/Backups'
 import { Categories } from './collections/Categories'
@@ -56,6 +57,7 @@ export default buildConfig({
     Pages,
     Products,
     Categories,
+    Attributes,
     MenuPanels,
     Media,
     Testimonials,

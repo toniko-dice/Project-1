@@ -172,6 +172,40 @@
   }
 
   /*
+    Плъзгачът „Цена от–до" — два `input[type=range]` един върху друг.
+
+    Самите ленти не приемат мишка (`pointer-events: none` в компонента),
+    иначе горната би покрила долната и лявата дръжка не би се хващала.
+    Мишката хваща само ДРЪЖКИТЕ.
+  */
+  .price-thumb::-webkit-slider-thumb {
+    pointer-events: auto;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 9999px;
+    background: var(--color-surface);
+    border: 2px solid var(--color-ink);
+    cursor: pointer;
+  }
+  .price-thumb::-moz-range-thumb {
+    pointer-events: auto;
+    width: 14px;
+    height: 14px;
+    border-radius: 9999px;
+    background: var(--color-surface);
+    border: 2px solid var(--color-ink);
+    cursor: pointer;
+  }
+  /* Поотделно: непознат псевдоелемент в общ списък изхвърля цялото правило. */
+  .price-thumb::-webkit-slider-runnable-track {
+    background: transparent;
+  }
+  .price-thumb::-moz-range-track {
+    background: transparent;
+  }
+
+  /*
     Лента, която излиза извън контейнера.
 
     Първата карта застава точно на левия ръб на контейнера, но самата лента

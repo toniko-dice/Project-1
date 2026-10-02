@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
-import { notFound, redirect } from 'next/navigation'
+import Link from 'next/link'
+import { notFound, permanentRedirect } from 'next/navigation'
 
 import { RenderProductSections } from '@/components/blocks/product'
 import { BuyButton } from '@/components/BuyButton'
+import { ProductCard } from '@/components/ProductCard'
 import { ProductAnchorNav, type Anchor } from '@/components/ProductAnchorNav'
 import { ProductGallery, type GalleryImage } from '@/components/ProductGallery'
 import { uniqueAnchor } from '@/lib/anchors'
@@ -10,15 +12,25 @@ import { availabilityOf } from '@/lib/availability'
 import { BADGE_LABELS, discountPercent, formatBgn, formatEur } from '@/lib/format'
 import { mediaAlt, mediaUrl } from '@/lib/media'
 import {
+  accessoriesForCategory,
+  accessoriesForProduct,
+  canHaveAccessoriesPage,
+} from '@/lib/catalog'
+import {
+  getCatalog,
   getCategoryTree,
-  getCompatibleAccessories,
   getGlobal,
   getProduct,
+  getProductCards,
   getPublishedProducts,
 } from '@/lib/payload'
+import type { Category, Product } from '@/payload-types'
 import { Breadcrumbs, breadcrumbSchema, type Crumb } from '@/components/Breadcrumbs'
-import { ancestry, categoryCrumbs } from '@/lib/tree'
-import { productPath } from '@/lib/urls'
+import { categoryCrumbs } from '@/lib/tree'
+import { accessoriesPath, productPath } from '@/lib/urls'
+
+/** Колко карти най-много в „Съвместими аксесоари"; останалите са на страницата на серията. */
+const МАКС_АКСЕСОАРИ = 8
 
 /** Адресът носи серията и slug-а: /kategorii/delta-seriya/delta-3. */
 type Args = { params: Promise<{ slug: string; product: string }> }
@@ -65,10 +77,11 @@ const validGtin13 = (value?: string | null): string | null => {
 
 export default async function ProductPage({ params }: Args) {
   const { slug: series, product: slug } = await params
-  const [product, settings, tree] = await Promise.all([
+  const [product, settings, tree, catalog] = await Promise.all([
     getProduct(slug),
     getGlobal('site-settings'),
     getCategoryTree(),
+    getCatalog(),
   ])
 
   if (!product) notFound()
@@ -76,36 +89,50 @@ export default async function ProductPage({ params }: Args) {
   /*
     Адресът съдържа серията. Ако някой отвори продукта под чужда серия —
     стар линк след преместване — правилният адрес е един и той е този под
-    серията му. Пренасочването е постоянно (виж `redirects`), но тук се
-    прихваща и случаят, в който записът в пренасочванията липсва.
+    серията му. Обикновено middleware-ът вече е върнал 301 (пита
+    `/api/kanon`); това е резервата за случая, в който не е — пак
+    постоянно, не временно.
   */
   const правилен = productPath(product)
-  if (правилен !== `/kategorii/${series}/${slug}`) redirect(правилен)
+  if (правилен !== `/kategorii/${series}/${slug}`) permanentRedirect(правилен)
 
   const категория =
     product.category && typeof product.category !== 'number' ? product.category : null
 
   /*
-    Аксесоарите за блока „Свързани продукти" в автоматичен режим.
-
-    Търси се НАГОРЕ по дървото, не надолу: кабел, отбелязан като съвместим
-    с „DELTA серия", важи за всеки модел в нея. Затова се подават
-    категориите на продукта и всички над тях, плюс самия продукт — за
-    аксесоарите, вързани към конкретния модел. Всички „Категории", не само
-    основната: продукт, сложен и в „Комплекти", носи и аксесоарите им.
+    Съвместимите аксесоари — НАГОРЕ от модела: самият продукт, всяка от
+    категориите му и всичко над тях (кабел за „DELTA серия" важи за всеки
+    DELTA). Правилото е в `src/lib/catalog.ts`, общо с менюто и с
+    филтъра „Модел".
   */
-  const всичките = (product.categories ?? []).flatMap((c) => {
-    const id = typeof c === 'number' ? c : c?.id
-    const cat = tree.find((t) => t.id === id)
-    return cat ? ancestry(tree, cat).map((a) => a.id) : []
+  const съвместими = accessoriesForProduct(catalog, product.id)
+  const accessories = await getProductCards(съвместими.map((e) => e.id))
+
+  /* Страницата „Аксесоари за <серията>", ако я има. */
+  const серия = tree.find((c) => c.slug === series)
+  const всичкиАксесоари =
+    серия &&
+    canHaveAccessoriesPage(catalog, серия.id) &&
+    accessoriesForCategory(catalog, серия.id).length
+      ? { url: accessoriesPath(серия.slug), label: `Всички аксесоари за ${серия.title}` }
+      : null
+
+  /*
+    „Съвместим с:" на страницата на аксесоара — линкове към каноничните
+    адреси. Черновите не се показват: линкът би водил към 404.
+  */
+  const съвместимСЪс = (product.compatibleWith ?? []).flatMap((rel) => {
+    const value = rel.value
+    if (!value || typeof value === 'number') return []
+    if (rel.relationTo === 'categories') {
+      const c = tree.find((t) => t.id === (value as Category).id)
+      const url = c ? categoryCrumbs(tree, c).at(-1)?.url : null
+      return c && url ? [{ label: c.title, url }] : []
+    }
+    const p = value as Product
+    return p._status === 'published' ? [{ label: p.title, url: productPath(p) }] : []
   })
-  const нагоре = [...new Set(категория ? [...ancestry(tree, категория).map((c) => c.id), ...всичките] : всичките)]
-  const accessories = нагоре.length
-    ? await getCompatibleAccessories(
-        нагоре.sort((a, b) => a - b),
-        [product.id],
-      )
-    : []
+
   const crumbs: Crumb[] = категория
     ? [...categoryCrumbs(tree, категория), { label: product.title, url: productPath(product) }]
     : [
@@ -245,6 +272,23 @@ export default async function ProductPage({ params }: Args) {
             {availability.line}
           </p>
 
+          {съвместимСЪс.length ? (
+            <p className="text-sm leading-relaxed">
+              <span className="text-ink-muted">Съвместим с: </span>
+              {съвместимСЪс.map((x, i) => (
+                <span key={x.url}>
+                  {i > 0 ? ', ' : null}
+                  <Link
+                    href={x.url}
+                    className="cursor-pointer underline underline-offset-2 transition-colors duration-150 hover:text-brand"
+                  >
+                    {x.label}
+                  </Link>
+                </span>
+              ))}
+            </p>
+          ) : null}
+
           {/* Продукт без акценти не оставя празно място — блокът изчезва изцяло. */}
           {highlights.length ? (
             <ul className="rounded-lg bg-tile p-4 text-sm leading-relaxed">
@@ -273,13 +317,48 @@ export default async function ProductPage({ params }: Args) {
       <ProductAnchorNav anchors={anchors} />
 
       {/* ── Секциите ── */}
+      {/*
+        Автоматичният блок „Свързани продукти" показва същите аксесоари —
+        при показан „Съвместими аксесоари" получава празен списък и не се
+        рендерира. Ръчните блокове не се засягат.
+      */}
       <RenderProductSections
         sections={sections}
         anchorIds={anchorIds}
         product={product}
         showBgn={showBgn}
-        accessories={accessories}
+        accessories={accessories.length ? [] : accessories}
       />
+
+      {/* ── Съвместими аксесоари ── */}
+      {accessories.length ? (
+        <section aria-labelledby="sav-aksesoari" className="container-site py-12 lg:py-16">
+          <h2
+            id="sav-aksesoari"
+            className="mb-8 text-center text-2xl font-medium tracking-tight sm:text-3xl"
+          >
+            Съвместими аксесоари
+          </h2>
+          <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+            {accessories.slice(0, МАКС_АКСЕСОАРИ).map((p) => (
+              <li key={p.id}>
+                <ProductCard product={p} showBgn={showBgn} className="h-full" />
+              </li>
+            ))}
+          </ul>
+          {всичкиАксесоари ? (
+            <div className="mt-8 text-center">
+              <Link
+                href={всичкиАксесоари.url}
+                className="inline-flex min-h-12 cursor-pointer items-center gap-2 rounded-md border border-line-strong px-6 text-sm font-medium transition-colors duration-200 hover:bg-tile"
+              >
+                {всичкиАксесоари.label}
+                <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+          ) : null}
+        </section>
+      ) : null}
     </>
   )
 }

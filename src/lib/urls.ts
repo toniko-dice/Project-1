@@ -109,6 +109,20 @@ export const productPath = (product: ProductLike): string => {
   return `${CATEGORY_BASE}/${series}/${product.slug}`
 }
 
+/* ─────────── аксесоари на серия ─────────── */
+
+/**
+ * `/kategorii/<категория>/aksesoari` — аксесоарите, съвместими с
+ * категорията. Стои на мястото на продукт в адреса, затова `aksesoari`
+ * е запазен: продукт с този адрес не се допуска (админ и внос).
+ */
+export const ACCESSORIES_SEGMENT = 'aksesoari'
+
+export const RESERVED_PRODUCT_SLUGS = [ACCESSORIES_SEGMENT]
+
+export const accessoriesPath = (categorySlug: string): string =>
+  `${categoryPath(categorySlug)}/${ACCESSORIES_SEGMENT}`
+
 /** Адресът на продукт; `null`, ако продуктът не е зареден. */
 export const productUrl = (value: number | Product | null | undefined): string | null =>
   value && typeof value !== 'number' ? productPath(value) : null

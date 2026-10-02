@@ -6,21 +6,31 @@ import { notFound, permanentRedirect } from 'next/navigation'
 import type { Category } from '@/payload-types'
 import { Breadcrumbs, breadcrumbSchema } from '@/components/Breadcrumbs'
 import { CategoryProducts, type CategoryTab } from '@/components/CategoryProducts'
+import { FilteredProducts } from '@/components/FilteredProducts'
 import { ImagePlaceholder } from '@/components/ImagePlaceholder'
 import { RenderBlocks } from '@/components/RenderBlocks'
 import { SectionImage } from '@/components/SectionImage'
 import { bannerImage, mediaAlt, mediaUrl } from '@/lib/media'
 import {
+  accessoriesForCategory,
+  canHaveAccessoriesPage,
+  type CatalogEntry,
+  isAccessoryCategory,
+} from '@/lib/catalog'
+import { buildFilters } from '@/lib/filters'
+import {
   categoryBranchIds,
+  getAttributes,
+  getCatalog,
   getCategory,
   getCategoryProducts,
   getCategorySlugs,
   getCategoryTree,
-  getCompatibleAccessories,
   getGlobal,
+  getProductCards,
 } from '@/lib/payload'
 import { ancestry, categoryCrumbs, childrenOf, levelOf } from '@/lib/tree'
-import { categoryPath, productPath } from '@/lib/urls'
+import { accessoriesPath, categoryPath, productPath } from '@/lib/urls'
 
 type Args = { params: Promise<{ slug: string }> }
 
@@ -63,10 +73,11 @@ export const generateMetadata = async ({ params }: Args): Promise<Metadata> => {
 export default async function CategoryPage({ params }: Args) {
   const { slug } = await params
 
-  const [category, tree, settings] = await Promise.all([
+  const [category, tree, settings, catalog] = await Promise.all([
     getCategory(slug),
     getCategoryTree(),
     getGlobal('site-settings'),
+    getCatalog(),
   ])
 
   if (!category) notFound()
@@ -85,15 +96,40 @@ export default async function CategoryPage({ params }: Args) {
   const ids = categoryBranchIds(tree, category.id)
 
   /*
-    Аксесоарите не са в тази категория — те стоят в „Кабели", „Адаптери"
-    и сочат насам с „Съвместим с". Затова се търсят отделно, по цялото
-    разклонение: аксесоар за DELTA 3 излиза и на страницата на DELTA
-    серия, и на портативните електроцентрали.
+    Категория с аксесоари (отметка „Филтри отстрани" на нея или над нея) —
+    списък с филтри. Другите — с раздели по подсерия и раздел „Аксесоари".
   */
-  const [products, accessories] = await Promise.all([
+  const сФилтри = isAccessoryCategory(catalog, category.id)
+
+  /*
+    Аксесоарите не са в тази категория — те стоят в „Кабели", „Адаптери"
+    и сочат насам с „Съвместим с". Правилото е едно за раздела тук, за
+    страницата „Аксесоари за …" и за менюто (`src/lib/catalog.ts`).
+  */
+  const съвместими: CatalogEntry[] = сФилтри ? [] : accessoriesForCategory(catalog, category.id)
+  const [products, accessories, attributes] = await Promise.all([
     getCategoryProducts(slug, ids),
-    getCompatibleAccessories(ids),
+    getProductCards(съвместими.map((e) => e.id)),
+    сФилтри ? getAttributes() : Promise.resolve([]),
   ])
+  const страницаАксесоари =
+    accessories.length && canHaveAccessoriesPage(catalog, category.id) ? accessoriesPath(slug) : null
+
+  const filters = сФилтри
+    ? buildFilters({
+        catalog,
+        entries: products.flatMap((p) => {
+          const e = catalog.byId.get(p.id)
+          return e ? [e] : []
+        }),
+        attributes,
+        // Категория с подкатегории („Аксесоари") получава и филтър „Категория".
+        scope: children.length
+          ? { kind: 'accessories-root', categoryId: category.id }
+          : { kind: 'category', categoryId: category.id },
+        accessoriesRootId: category.id,
+      })
+    : null
 
   const crumbs = categoryCrumbs(tree, category)
   const heroUrl = mediaUrl(category.heroImage, 'wide')
@@ -194,15 +230,36 @@ export default async function CategoryPage({ params }: Args) {
         ) : null}
 
         <div className="mt-10">
-          <CategoryProducts
-            products={products}
-            accessories={accessories}
-            tabs={tabs}
-            showBgn={Boolean(settings.showBgnPrices)}
-            basePath={categoryPath(slug)}
-            initialTab="all"
-          />
+          {filters ? (
+            <FilteredProducts
+              products={products}
+              filters={filters}
+              showBgn={Boolean(settings.showBgnPrices)}
+            />
+          ) : (
+            <CategoryProducts
+              products={products}
+              accessories={accessories}
+              tabs={tabs}
+              showBgn={Boolean(settings.showBgnPrices)}
+              basePath={categoryPath(slug)}
+              initialTab="all"
+            />
+          )}
         </div>
+
+        {/* Аксесоарите на серията — своя страница, само ако има такива. */}
+        {страницаАксесоари ? (
+          <div className="mt-8 text-center">
+            <Link
+              href={страницаАксесоари}
+              className="inline-flex min-h-12 cursor-pointer items-center gap-2 rounded-md border border-line-strong bg-surface px-6 text-sm font-medium transition-colors duration-200 hover:bg-tile"
+            >
+              Аксесоари за {category.title}
+              <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        ) : null}
 
         {/*
           Подкатегориите като карти — само когато категорията няма нито

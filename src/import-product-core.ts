@@ -37,6 +37,7 @@ import path from 'path'
 import type { Payload } from 'payload'
 import sharp from 'sharp'
 import { AVAILABILITY_VALUES, isAvailability } from './lib/availability'
+import { RESERVED_PRODUCT_SLUGS } from './lib/urls'
 
 /* ─────────── видове ─────────── */
 
@@ -512,6 +513,17 @@ export const importProduct = async (
 
   if (!content.produkt?.slug) {
     throw new ImportError('В sadarzhanie.json липсва produkt.slug.')
+  }
+
+  /*
+    `aksesoari` е адресът на страницата „Аксесоари за …" на серията —
+    продукт с него би бил недостъпен. Спира и при `--dry-run`, и при
+    чернова (тя минава без проверката на полето в админа).
+  */
+  if (RESERVED_PRODUCT_SLUGS.includes(String(content.produkt.slug))) {
+    throw new ImportError(
+      `Адресът „${content.produkt.slug}" е запазен (страницата с аксесоарите на серията). Сменете produkt.slug.`,
+    )
   }
 
   /*
@@ -1295,6 +1307,8 @@ export const importProduct = async (
     compatibleWithSlugs,
     compatibleWith: compatibleWithList,
     alsoInCategories: alsoInSlugs,
+    // Атрибутите са на `import:attributes` — този внос никога не ги пипа.
+    attributes: _attributes,
     ...productFields
   } = content.produkt as Record<string, unknown>
 

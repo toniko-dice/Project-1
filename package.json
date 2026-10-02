@@ -23,6 +23,8 @@
     "backfill:order": "payload run src/backfill-order.ts",
     "import:product": "payload run src/import-product.ts --",
     "import:all": "payload run src/import-all.ts --",
+    "import:attributes": "payload run src/import-attributes.ts --",
+    "seed:attributes": "payload run src/seed-attributes.ts --",
     "health": "payload run src/health-check.ts"
   },
   "dependencies": {

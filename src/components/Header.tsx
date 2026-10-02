@@ -3,14 +3,16 @@ import Link from 'next/link'
 
 import type { Category, MenuPanel, Product } from '@/payload-types'
 import {
-  type CompatibilityLinks,
-  getCategoryTree,
-  getCompatibilityLinks,
-  getGlobal,
-  getProductsByIds,
-} from '@/lib/payload'
+  ACCESSORIES_ROOT_SLUG,
+  accessoriesForCategory,
+  accessoriesForProduct,
+  byAvailabilityThenOrder,
+  canHaveAccessoriesPage,
+  type Catalog,
+} from '@/lib/catalog'
+import { getCatalog, getGlobal, getProductsByIds } from '@/lib/payload'
 import { mediaAlt, mediaDims, mediaUrl, productCardData } from '@/lib/media'
-import { categoryPath } from '@/lib/urls'
+import { accessoriesPath, categoryPath } from '@/lib/urls'
 import { HeaderNav, type MenuCard, type MenuSection, type NavItem } from './HeaderNav'
 
 type PanelSection = NonNullable<MenuPanel['sections']>[number]
@@ -81,60 +83,59 @@ const isAutoAccessories = (section: PanelSection) =>
  */
 const MAX_SECTION_CARDS = 6
 
+/** Категорията на панела — тази на първата му продуктова секция. */
+const panelCategory = (panel: MenuPanel): Category | null => {
+  const first = (panel.sections ?? []).find((s) => !s.accessories)
+  return first ? sectionCategory(first) : null
+}
+
 /**
- * Аксесоарите за устройствата в панела — за празния раздел „Аксесоари".
- *
- * Устройствата са продуктите от ОСТАНАЛИТЕ секции на панела. Аксесоар
- * влиза, ако „Съвместим с" сочи някое от тях, някоя от категориите му или
- * категория над тях: кабел, отбелязан за „DELTA серия", важи за всеки
- * модел в нея — същото правило като при „Свързани продукти" на модела.
+ * Аксесоарите за празния раздел „Аксесоари" — по СЪЩОТО правило като
+ * страницата „Аксесоари за …" (`src/lib/catalog.ts`), за категорията на
+ * панела. Иначе менюто показва едни аксесоари, а страницата зад „Всички
+ * аксесоари" — други. Панел без категория (PowerOcean) взима аксесоарите
+ * на устройствата си.
  */
 const autoAccessoryIds = (
   panel: MenuPanel,
+  catalog: Catalog,
   byId: Record<number, Product>,
-  links: CompatibilityLinks[],
-  parentOf: Map<number, number | null>,
 ): number[] => {
-  const устройства = new Set<number>()
-  const категории = new Set<number>()
+  const категория = panelCategory(panel)
+  if (категория) return accessoriesForCategory(catalog, категория.id).map((e) => e.id)
+
+  const ids = new Set<number>()
   for (const section of panel.sections ?? []) {
     if (section.accessories) continue
     for (const card of section.cards ?? []) {
       const id = cardProductId(card)
-      const p = id !== null ? byId[id] : undefined
-      if (!p) continue
-      устройства.add(p.id)
-      // Всички категории на устройството и всичко над тях.
-      for (const cat of p.categories?.length ? p.categories : [p.category]) {
-        let c: number | null | undefined = typeof cat === 'number' ? cat : cat?.id
-        while (c != null && !категории.has(c)) {
-          категории.add(c)
-          c = parentOf.get(c)
-        }
-      }
+      if (id === null || !byId[id]) continue
+      for (const e of accessoriesForProduct(catalog, id)) ids.add(e.id)
     }
   }
-  if (!устройства.size) return []
-
-  return links
-    .filter(
-      (l) =>
-        !устройства.has(l.id) &&
-        (l.products.some((id) => устройства.has(id)) ||
-          l.categories.some((id) => категории.has(id))),
-    )
-    .map((l) => l.id)
+  return [...ids]
 }
 
-/** Наличните първо, после `_order` (редът от админа), после заглавие. */
-const byAvailabilityThenOrder = (a: Product, b: Product) => {
-  const наличен = (p: Product) => (p.availability === 'in-stock' ? 0 : 1)
-  if (наличен(a) !== наличен(b)) return наличен(a) - наличен(b)
-  // `_order` е дробен ключ — сравнява се като низ, не по азбуката на езика.
-  const ka = a._order ?? ''
-  const kb = b._order ?? ''
-  if (ka !== kb) return ka < kb ? -1 : 1
-  return a.title.localeCompare(b.title, 'bg')
+/** Надписът, който админът носи по подразбиране — значи „не е попълван". */
+const ПОДРАЗБИРАНЕ = 'Виж всички'
+
+/**
+ * „Всички аксесоари за DELTA серия" → `/kategorii/delta-seriya/aksesoari`.
+ *
+ * Ръчно избрана категория, различна от „Аксесоари", има предимство — както
+ * и ръчно написан надпис. Без страница (няма аксесоари) остава старото.
+ */
+const accessoriesLink = (panel: MenuPanel, section: PanelSection, catalog: Catalog) => {
+  const ръчна = sectionCategory(section)
+  if (ръчна && ръчна.slug !== ACCESSORIES_ROOT_SLUG) return null
+  const категория = panelCategory(panel)
+  if (!категория || !canHaveAccessoriesPage(catalog, категория.id)) return null
+  if (!accessoriesForCategory(catalog, категория.id).length) return null
+  const свой = section.viewAllLabel?.trim()
+  return {
+    url: accessoriesPath(категория.slug),
+    label: свой && свой !== ПОДРАЗБИРАНЕ ? свой : `Всички аксесоари за ${категория.title}`,
+  }
 }
 
 /**
@@ -154,15 +155,26 @@ const panelSections = (
   panel: MenuPanel,
   byId: Record<number, Product>,
   accessories: Record<number, number[]>,
+  catalog: Catalog,
 ): MenuSection[] =>
   (panel.sections ?? []).flatMap((section): MenuSection[] => {
-    const общи = {
-      heading: section.heading,
-      viewAllLabel: section.viewAllLabel,
-      viewAllUrl: viewAllUrl(section),
-      showViewAllTile: Boolean(section.showViewAllTile),
-      viewAllTileUrl: section.viewAllTileUrl ?? viewAllUrl(section),
-    }
+    const аксесоари = section.accessories ? accessoriesLink(panel, section, catalog) : null
+    const общи = аксесоари
+      ? {
+          heading: section.heading,
+          viewAllLabel: аксесоари.label,
+          viewAllUrl: аксесоари.url,
+          showViewAllTile: Boolean(section.showViewAllTile),
+          viewAllTileUrl: section.viewAllTileUrl ?? аксесоари.url,
+          viewAllTileLabel: аксесоари.label,
+        }
+      : {
+          heading: section.heading,
+          viewAllLabel: section.viewAllLabel,
+          viewAllUrl: viewAllUrl(section),
+          showViewAllTile: Boolean(section.showViewAllTile),
+          viewAllTileUrl: section.viewAllTileUrl ?? viewAllUrl(section),
+        }
 
     if (isAutoAccessories(section)) {
       const cards = (accessories[panel.id] ?? [])
@@ -217,23 +229,19 @@ export const Header = async () => {
       }
     }
   }
-  const [cardsById, links, tree] = await Promise.all([
+  const [cardsById, catalog] = await Promise.all([
     getProductsByIds([...ids].sort((a, b) => a - b)),
-    getCompatibilityLinks(),
-    getCategoryTree(),
+    getCatalog(),
   ])
 
   /*
     Празните раздели „Аксесоари" — кои аксесоари за кой панел. Картите им
     се дотеглят с втора заявка, пак само публикуваните.
   */
-  const parentOf = new Map(
-    tree.map((c) => [c.id, typeof c.parent === 'number' ? c.parent : (c.parent?.id ?? null)]),
-  )
   const accessories: Record<number, number[]> = {}
   for (const panel of panels) {
     if ((panel.sections ?? []).some(isAutoAccessories)) {
-      accessories[panel.id] = autoAccessoryIds(panel, cardsById, links, parentOf)
+      accessories[panel.id] = autoAccessoryIds(panel, catalog, cardsById)
     }
   }
   const accessoryIds = [...new Set(Object.values(accessories).flat())].filter(
@@ -268,7 +276,7 @@ export const Header = async () => {
             key: `panel-${panel.id}`,
             label: panel.title?.trim() || panel.slug,
             url: category ? categoryPath(category.slug) : categoryPath(panel.slug),
-            sections: panelSections(panel, byId, accessories),
+            sections: panelSections(panel, byId, accessories, catalog),
           }
         })
         .filter((e): e is NonNullable<typeof e> => e !== null),

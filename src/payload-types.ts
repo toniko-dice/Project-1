@@ -70,6 +70,7 @@ export interface Config {
     pages: Page;
     products: Product;
     categories: Category;
+    attributes: Attribute;
     'menu-panels': MenuPanel;
     media: Media;
     testimonials: Testimonial;
@@ -89,6 +90,7 @@ export interface Config {
     pages: PagesSelect<false> | PagesSelect<true>;
     products: ProductsSelect<false> | ProductsSelect<true>;
     categories: CategoriesSelect<false> | CategoriesSelect<true>;
+    attributes: AttributesSelect<false> | AttributesSelect<true>;
     'menu-panels': MenuPanelsSelect<false> | MenuPanelsSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     testimonials: TestimonialsSelect<false> | TestimonialsSelect<true>;
@@ -663,6 +665,19 @@ export interface Product {
       )[]
     | null;
   /**
+   * Атрибутите се ползват за филтрите в категориите. Списъкът зависи от категориите на продукта.
+   */
+  attributes?:
+    | {
+        attribute?: (number | null) | Attribute;
+        /**
+         * При числов атрибут — число; „0,4" със запетая също става.
+         */
+        value?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  /**
    * Оригиналът показва спецификациите като плосък списък. Групите са наша добавка — при 30+ реда плоският списък е нечетим. Заглавието на групата е по избор: оставите ли го празно, редовете се сливат с предишната група.
    */
   specGroups?:
@@ -1091,6 +1106,10 @@ export interface Category {
    */
   stripBadge?: string | null;
   /**
+   * За категориите с аксесоари (Кабели, Адаптери…): списъкът е с филтри — цена, наличност, съвместимост и атрибутите на категорията. Важи и за подкатегориите ѝ. Категория с отметка няма страница „Аксесоари за …".
+   */
+  filters?: boolean | null;
+  /**
    * За лентата с категории. Препоръчително 160×160px.
    */
   icon?: (number | null) | Media;
@@ -1397,6 +1416,28 @@ export interface Category {
           }
       )[]
     | null;
+  accessoriesPage?: {
+    /**
+     * Празно = „Аксесоари за {име}".
+     */
+    h1?: string | null;
+    /**
+     * Празно = „Аксесоари за {име}".
+     */
+    metaTitle?: string | null;
+    /**
+     * Празно = „Кабели, адаптери, чанти и други аксесоари, съвместими с {име} — {брой} продукта. Купете от официалния дистрибутор на EcoFlow в България."
+     */
+    metaDescription?: string | null;
+    /**
+     * Под заглавието. Празно = „Всички аксесоари, съвместими с {име}: кабели, адаптери, допълнителни батерии, чанти и други."
+     */
+    intro?: string | null;
+    /**
+     * По избор, под продуктите. Празно = нищо.
+     */
+    outro?: string | null;
+  };
   metaTitle?: string | null;
   metaDescription?: string | null;
   /**
@@ -1439,6 +1480,35 @@ export interface Award {
   createdAt: string;
 }
 /**
+ * Атрибутите са филтрите отстрани в категориите („Дължина", „Капацитет"). Подредбата на филтрите се сменя с влачене. Стойностите се попълват в продукта, таб „Атрибути".
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "attributes".
+ */
+export interface Attribute {
+  id: number;
+  _order?: string | null;
+  name: string;
+  /**
+   * Попълва се от името при създаване и после не се сменя — стои в адресите на филтрите.
+   */
+  slug: string;
+  /**
+   * Число — стойностите се подреждат по големина (1 м, 2 м, 10 м). Текст — по азбучен ред.
+   */
+  type: 'number' | 'text';
+  /**
+   * По избор: „м", „mAh", „W", „Wh". Показва се след стойността.
+   */
+  unit?: string | null;
+  /**
+   * Къде се ползва атрибутът: в тези категории излиза като филтър, а в продуктите им — в падащото меню „Атрибут".
+   */
+  categories?: (number | Category)[] | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
  * Всеки панел е това, което се показва вдясно в мега менюто, когато потребителят посочи подточка от сайдбара. Секциите му са списъци с продукти — сайтът показва точно тях, в този ред.
  *
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1475,7 +1545,7 @@ export interface MenuPanel {
          */
         viewAllUrl?: string | null;
         /**
-         * Сайтът показва точно тези, в този ред; първият е голямата карта. При избор на продукт името, подзаглавието и снимката се попълват от него — може да ги промените. Цената винаги идва от продукта. Чернова не се показва.
+         * Сайтът показва първите шест в този ред — първият е голямата карта, останалите са зад „Виж всички". При избор на продукт името, подзаглавието и снимката се попълват от него — може да ги промените. Цената винаги идва от продукта. Чернова не се показва.
          */
         cards?:
           | {
@@ -1745,6 +1815,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'categories';
         value: number | Category;
+      } | null)
+    | ({
+        relationTo: 'attributes';
+        value: number | Attribute;
       } | null)
     | ({
         relationTo: 'menu-panels';
@@ -2084,6 +2158,13 @@ export interface ProductsSelect<T extends boolean = true> {
         id?: T;
       };
   compatibleWith?: T;
+  attributes?:
+    | T
+    | {
+        attribute?: T;
+        value?: T;
+        id?: T;
+      };
   specGroups?:
     | T
     | {
@@ -2332,6 +2413,7 @@ export interface CategoriesSelect<T extends boolean = true> {
   parent?: T;
   showInStrip?: T;
   stripBadge?: T;
+  filters?: T;
   icon?: T;
   heroImage?: T;
   heroTagline?: T;
@@ -2541,9 +2623,32 @@ export interface CategoriesSelect<T extends boolean = true> {
               blockName?: T;
             };
       };
+  accessoriesPage?:
+    | T
+    | {
+        h1?: T;
+        metaTitle?: T;
+        metaDescription?: T;
+        intro?: T;
+        outro?: T;
+      };
   metaTitle?: T;
   metaDescription?: T;
   noindex?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "attributes_select".
+ */
+export interface AttributesSelect<T extends boolean = true> {
+  _order?: T;
+  name?: T;
+  slug?: T;
+  type?: T;
+  unit?: T;
+  categories?: T;
   updatedAt?: T;
   createdAt?: T;
 }

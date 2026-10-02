@@ -1,55 +1,74 @@
 import { NextResponse, type NextRequest } from 'next/server'
 
 /**
- * Старите адреси водят към новите — 308, постоянно.
+ * Един адрес на страница — всичко останало е 301.
  *
- * Два вида:
+ * 1. **Вид на адреса.** Наклонена черта накрая и главни букви → 301 към
+ *    чистия адрес (`/kategorii/Kabeli/` → `/kategorii/kabeli`). Чертата се
+ *    маха тук, а не от Next: неговото пренасочване е 308 и е изключено със
+ *    `skipTrailingSlashRedirect` в `next.config.ts`.
+ * 2. **По правило.** Разделите `/products/…` и `/categories/…` се смениха
+ *    с `/kategorii/…`; разпознават се по началото на пътя, без заявка.
+ * 3. **По каталога.** Записано пренасочване (смяна на категория или адрес),
+ *    продукт под чужда категория, подсерия — `/api/kanon` знае каноничния
+ *    адрес. Отговорът се кешира 5 минути с таговете на каталога.
  *
- * 1. **По правило.** Целите раздели `/products/…` и `/categories/…` се
- *    смениха с `/kategorii/…`. Тези се разпознават по началото на пътя и
- *    се пращат на `/kategorii/…`, без заявка към базата.
- * 2. **По запис.** Смяна на категория или на адрес на продукт сменя
- *    адреса му. Тогава куките в `src/lib/revalidate.ts` записват реда в
- *    колекция „Пренасочвания" и той се търси тук.
+ * Плюс: адрес на категория С ПАРАМЕТРИ (филтри, раздел) получава
+ * `X-Robots-Tag: noindex, follow`. Canonical сочи чистия адрес, но
+ * комбинациите от филтри не бива да се индексират. Заглавие, а не
+ * `<meta>`: страниците са статични и не виждат параметрите на сървъра.
  *
- * Middleware, а не `next.config`: списъкът от базата се мени, докато
- * сайтът върви, а `redirects()` в конфигурацията се чете веднъж при старт.
+ * Middleware, а не `next.config`: каталогът се мени, докато сайтът върви,
+ * а `redirects()` в конфигурацията се чете веднъж при старт.
  *
- * Проверката минава само през пътищата, които могат да са стари — всичко
- * останало излиза веднага, без работа.
+ * 301 навсякъде (до 2 октомври 2026 — 308). За търсачките двете са едно и
+ * също; 301 е по-познатото и собственикът го поиска изрично.
  */
 
-/** Търси се запис само за тези начала — не за всяка снимка и скрипт. */
+/** Пътищата, за които се пита каталогът — не за всяка снимка и скрипт. */
 const ВЪЗМОЖНИ = ['/products/', '/categories/', '/kategorii/', '/power-stations']
 
 export const config = {
-  matcher: ['/products/:path*', '/categories/:path*', '/kategorii/:path*', '/power-stations'],
+  // Всичко без файловете (с разширение) и вътрешните на Next.
+  matcher: ['/((?!_next/|.*\\.[A-Za-z0-9]+$).*)'],
 }
+
+const пренасочи = (request: NextRequest, path: string, search: string, status = 301) =>
+  NextResponse.redirect(new URL(path + (path.includes('?') ? '' : search), request.url), status)
 
 export async function middleware(request: NextRequest) {
   const { pathname, search } = request.nextUrl
+  const служебен = pathname.startsWith('/api/') || pathname === '/api' || pathname.startsWith('/admin')
+
+  /* ── 1. Наклонена черта накрая ── */
+  if (pathname.length > 1 && pathname.endsWith('/')) {
+    const чист = pathname.replace(/\/+$/, '') || '/'
+    // API-то с 308: 301 превръща POST в GET.
+    return пренасочи(request, чист, search, служебен ? 308 : 301)
+  }
+
+  /* ── Главни букви (само латиница; %D0%B0 е кодирана кирилица и не се пипа) ── */
+  if (!служебен) {
+    const малки = pathname.replace(/%[0-9A-Fa-f]{2}|[A-Z]/g, (m) => (m.length === 3 ? m : m.toLowerCase()))
+    if (малки !== pathname) return пренасочи(request, малки, search)
+  }
+
   if (!ВЪЗМОЖНИ.some((p) => pathname === p || pathname.startsWith(p))) return NextResponse.next()
 
   /*
-    Записаните пренасочвания имат предимство: те знаят, че
+    Каталогът има предимство: той знае, че
     `/categories/domashni-baterii` вече е `/kategorii/powerocean`, а
     правилото по-долу би го пратило на несъществуваща страница.
   */
-  const записано = await запис(request, pathname)
-  if (записано) return NextResponse.redirect(new URL(записано + search, request.url), 308)
+  const каноничен = await каноничнияАдрес(request, pathname)
+  if (каноничен) return пренасочи(request, каноничен, search)
 
   if (pathname === '/power-stations') {
-    return NextResponse.redirect(
-      new URL('/kategorii/portativni-elektrocentrali' + search, request.url),
-      308,
-    )
+    return пренасочи(request, '/kategorii/portativni-elektrocentrali', search)
   }
 
   if (pathname.startsWith('/categories/')) {
-    return NextResponse.redirect(
-      new URL(pathname.replace('/categories/', '/kategorii/') + search, request.url),
-      308,
-    )
+    return пренасочи(request, pathname.replace('/categories/', '/kategorii/'), search)
   }
 
   /*
@@ -58,34 +77,33 @@ export async function middleware(request: NextRequest) {
     правилния — един скок повече, но без заявка към базата в middleware.
   */
   if (pathname.startsWith('/products/')) {
-    const slug = pathname.slice('/products/'.length).replace(/\/$/, '')
-    if (slug) {
-      return NextResponse.redirect(new URL(`/kategorii/produkt/${slug}${search}`, request.url), 308)
-    }
+    const slug = pathname.slice('/products/'.length)
+    if (slug) return пренасочи(request, `/kategorii/produkt/${slug}`, search)
   }
 
-  return NextResponse.next()
+  const response = NextResponse.next()
+  if (search && pathname.startsWith('/kategorii/')) {
+    response.headers.set('X-Robots-Tag', 'noindex, follow')
+  }
+  return response
 }
 
 /**
- * Записаното пренасочване за този път, ако има такова.
+ * Каноничният адрес за пътя, ако е различен — от `/api/kanon`.
  *
- * Чете се през REST API-то на Payload, защото middleware върви в Edge
- * средата, където базата не е достъпна. Заявката е по индексирано поле и
- * се кешира от Next между заявките.
+ * Middleware върви в Edge, където базата не е достъпна. Отговорът се
+ * кешира от Next между заявките, с таговете, които чистят куките при всеки
+ * запис в админа (`src/lib/revalidate.ts`).
  */
-const запис = async (request: NextRequest, pathname: string): Promise<string | null> => {
+const каноничнияАдрес = async (request: NextRequest, pathname: string): Promise<string | null> => {
   try {
-    const url = new URL(
-      `/api/redirects?where[from][equals]=${encodeURIComponent(pathname)}&limit=1&depth=0`,
-      request.nextUrl.origin,
-    )
-    const r = await fetch(url, { next: { revalidate: 300, tags: ['redirects'] } })
+    const url = new URL(`/api/kanon?path=${encodeURIComponent(pathname)}`, request.nextUrl.origin)
+    const r = await fetch(url, {
+      next: { revalidate: 300, tags: ['redirects', 'product', 'category'] },
+    })
     if (!r.ok) return null
-
-    const data = (await r.json()) as { docs?: { to?: string }[] }
-    const to = data.docs?.[0]?.to
-    return to && to !== pathname ? to : null
+    const data = (await r.json()) as { to?: string | null }
+    return data.to && data.to !== pathname ? data.to : null
   } catch {
     // Пренасочването е удобство; при проблем страницата продължава нормално.
     return null

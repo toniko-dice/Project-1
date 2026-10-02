@@ -29,6 +29,8 @@ export type MenuSection = {
   cards: MenuCard[]
   showViewAllTile: boolean
   viewAllTileUrl?: string | null
+  /** Надписът на плочката; празно — „Виж всички". */
+  viewAllTileLabel?: string | null
 }
 
 export type MenuEntry = { key: string; label: string; url: string; sections: MenuSection[] }
@@ -165,7 +167,10 @@ const PanelSections = ({ sections }: { sections: MenuSection[] }) => (
             ))}
 
             {section.showViewAllTile ? (
-              <ViewAllTile url={section.viewAllTileUrl ?? section.viewAllUrl} />
+              <ViewAllTile
+                url={section.viewAllTileUrl ?? section.viewAllUrl}
+                label={section.viewAllTileLabel ?? undefined}
+              />
             ) : null}
           </div>
         </div>

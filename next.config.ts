@@ -2,6 +2,12 @@ import { withPayload } from '@payloadcms/next/withPayload'
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  /*
+    Наклонената черта накрая се маха в `src/middleware.ts` с 301. Собственото
+    пренасочване на Next е 308 и стига преди middleware-а — затова е
+    изключено тук.
+  */
+  skipTrailingSlashRedirect: true,
   images: {
     formats: ['image/avif', 'image/webp'],
 
