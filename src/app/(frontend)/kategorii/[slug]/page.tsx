@@ -17,7 +17,7 @@ import {
   type CatalogEntry,
   isAccessoryCategory,
 } from '@/lib/catalog'
-import { filterOrderParams } from '@/lib/filter-order'
+import { filterOpenParams, filterOrderParams } from '@/lib/filter-order'
 import { buildFilters } from '@/lib/filters'
 import {
   categoryBranchIds,
@@ -132,6 +132,7 @@ export default async function CategoryPage({ params }: Args) {
           : { kind: 'category', categoryId: category.id },
         accessoriesRootId: category.id,
         order: filterOrderParams(filterOrder?.items),
+        open: filterOpenParams(filterOrder?.items),
       })
     : null
 

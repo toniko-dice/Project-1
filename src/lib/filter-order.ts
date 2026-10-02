@@ -8,7 +8,9 @@ import { attributeParam } from './attributes'
  * - филтър, който го няма на страницата, просто се прескача;
  * - филтър, който го няма в списъка (нов атрибут), застава преди
  *   „Съвместимост", в реда на влаченето в „Атрибути";
- * - Цена е последна ВИНАГИ, където и да е в списъка.
+ * - Цена е последна ВИНАГИ, където и да е в списъка;
+ * - отворен при зареждане е филтърът с отметка „Отворен по подразбиране";
+ *   новият атрибут извън списъка е затворен.
  */
 
 /** Вградените филтри: стойността е параметърът им в адреса. */
@@ -21,6 +23,9 @@ export const BUILTIN_FILTERS = [
 ] as const
 
 export const PRICE_PARAM = 'cena'
+
+/** Отворените, когато глобалът е празен — като първоначалното попълване. */
+export const DEFAULT_OPEN_FILTERS = ['nalichnost']
 const ПРЕДИ = 'savmestimost'
 
 /**
@@ -81,4 +86,20 @@ export const filterOrderParams = (
   if (редове.length) return редове
   const вградени = new Set<string>(BUILTIN_FILTERS.map((b) => b.value))
   return DEFAULT_FILTER_ORDER.map((k) => (вградени.has(k) ? k : attributeParam(k)))
+}
+
+/** Параметрите на филтрите с отметка „Отворен по подразбиране". */
+export const filterOpenParams = (
+  items:
+    | { type?: string | null; builtin?: string | null; attribute?: unknown; open?: boolean | null }[]
+    | null
+    | undefined,
+): string[] => {
+  if (!items?.length) return DEFAULT_OPEN_FILTERS
+  return items.flatMap((ред) => {
+    if (!ред.open) return []
+    if (ред.type === 'builtin') return ред.builtin ? [ред.builtin] : []
+    const slug = (ред.attribute as { slug?: string } | null)?.slug
+    return slug ? [attributeParam(slug)] : []
+  })
 }

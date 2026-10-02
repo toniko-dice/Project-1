@@ -60,6 +60,7 @@ export const buildFilters = ({
   scope,
   accessoriesRootId,
   order,
+  open,
 }: {
   catalog: Catalog
   entries: CatalogEntry[]
@@ -69,6 +70,8 @@ export const buildFilters = ({
   accessoriesRootId: number | null
   /** Редът от глобала „Подредба на филтрите" (`filterOrderParams`). */
   order: string[]
+  /** Отворените при зареждане (`filterOpenParams`); останалите са затворени. */
+  open: string[]
 }): FilterData => {
   const items: FilterItem[] = entries.map((e) => ({ id: e.id, price: e.price, values: {} }))
   const добави = (i: number, param: string, value: string) => {
@@ -215,7 +218,7 @@ export const buildFilters = ({
     groups: sortByFilterOrder(
       groups.filter((g) => g.kind === 'range' || g.options.length > 1),
       order,
-    ),
+    ).map((g) => ({ ...g, open: open.includes(g.param) })),
     items,
   }
 }

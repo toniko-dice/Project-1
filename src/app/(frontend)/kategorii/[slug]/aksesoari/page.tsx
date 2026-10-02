@@ -11,7 +11,7 @@ import {
   type Catalog,
   fillTemplate,
 } from '@/lib/catalog'
-import { filterOrderParams } from '@/lib/filter-order'
+import { filterOpenParams, filterOrderParams } from '@/lib/filter-order'
 import { buildFilters } from '@/lib/filters'
 import { getAttributes, getCatalog, getGlobal, getProductCards } from '@/lib/payload'
 import { ancestry, categoryCrumbs } from '@/lib/tree'
@@ -119,6 +119,7 @@ export default async function AccessoriesPage({ params }: Args) {
     scope: { kind: 'series-accessories', categoryId: category.id },
     accessoriesRootId: root?.id ?? null,
     order: filterOrderParams(filterOrder.items),
+    open: filterOpenParams(filterOrder.items),
   })
 
   const брой = products.length

@@ -3200,6 +3200,10 @@ export interface FilterOrder {
         type?: ('attribute' | 'builtin') | null;
         builtin?: ('nalichnost' | 'kategoriya' | 'model' | 'savmestimost' | 'cena') | null;
         attribute?: (number | null) | Attribute;
+        /**
+         * Отметнатите филтри са отворени, когато се зареди страницата.
+         */
+        open?: boolean | null;
         label?: string | null;
         id?: string | null;
       }[]
@@ -3370,6 +3374,7 @@ export interface FilterOrderSelect<T extends boolean = true> {
         type?: T;
         builtin?: T;
         attribute?: T;
+        open?: T;
         label?: T;
         id?: T;
       };

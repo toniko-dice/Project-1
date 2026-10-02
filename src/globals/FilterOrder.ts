@@ -90,6 +90,13 @@ export const FilterOrder: GlobalConfig = {
           label: 'Атрибут',
           admin: { condition: (_, siblingData) => siblingData?.type !== 'builtin' },
         },
+        {
+          name: 'open',
+          type: 'checkbox',
+          label: 'Отворен по подразбиране',
+          defaultValue: false,
+          admin: { description: 'Отметнатите филтри са отворени, когато се зареди страницата.' },
+        },
         { name: 'label', type: 'text', admin: { hidden: true } },
       ],
     },
