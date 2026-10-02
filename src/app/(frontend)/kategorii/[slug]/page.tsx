@@ -31,6 +31,7 @@ import {
 } from '@/lib/payload'
 import { ancestry, categoryCrumbs, childrenOf, levelOf } from '@/lib/tree'
 import { accessoriesPath, categoryPath, productPath } from '@/lib/urls'
+import { pageTitle } from '@/lib/title'
 
 type Args = { params: Promise<{ slug: string }> }
 
@@ -50,7 +51,7 @@ export const generateMetadata = async ({ params }: Args): Promise<Metadata> => {
 
   return {
     // Наставката „— EcoFlow България" идва от `title.template` в layout.
-    title: category.metaTitle ?? category.title,
+    title: pageTitle(category.metaTitle ?? category.title),
     description: category.metaDescription ?? category.description ?? undefined,
     /*
       Филтърът по подсерия НЕ е отделна страница за Google — canonical на

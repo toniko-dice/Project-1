@@ -28,6 +28,7 @@ import type { Category, Product } from '@/payload-types'
 import { Breadcrumbs, breadcrumbSchema, type Crumb } from '@/components/Breadcrumbs'
 import { categoryCrumbs } from '@/lib/tree'
 import { accessoriesPath, productPath } from '@/lib/urls'
+import { pageTitle } from '@/lib/title'
 
 /** Колко карти най-много в „Съвместими аксесоари"; останалите са на страницата на серията. */
 const МАКС_АКСЕСОАРИ = 8
@@ -53,7 +54,7 @@ export const generateMetadata = async ({ params }: Args): Promise<Metadata> => {
 
   return {
     // Наставката „— EcoFlow България" идва от `title.template` в layout.
-    title: product.metaTitle ?? product.title,
+    title: pageTitle(product.metaTitle ?? product.title),
     description: product.metaDescription ?? product.tagline ?? product.description ?? undefined,
     // Продуктът има ЕДИН адрес — този под серията си.
     alternates: { canonical: new URL(productPath(product), SITE_URL).toString() },

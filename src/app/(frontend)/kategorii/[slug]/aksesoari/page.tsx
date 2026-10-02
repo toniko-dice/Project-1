@@ -15,6 +15,7 @@ import { buildFilters } from '@/lib/filters'
 import { getAttributes, getCatalog, getGlobal, getProductCards } from '@/lib/payload'
 import { ancestry, categoryCrumbs } from '@/lib/tree'
 import { accessoriesPath, productPath } from '@/lib/urls'
+import { pageTitle } from '@/lib/title'
 
 /**
  * „Аксесоари за серия …" — `/kategorii/<категория>/aksesoari`.
@@ -78,7 +79,7 @@ export const generateMetadata = async ({ params }: Args): Promise<Metadata> => {
   }
   const { category, entries } = data
   return {
-    title: текст(category, 'metaTitle', entries.length) ?? undefined,
+    title: pageTitle(текст(category, 'metaTitle', entries.length)),
     description: текст(category, 'metaDescription', entries.length) ?? undefined,
     // Филтрите (`?kategoriya=…`) не са отделни страници — canonical е чистият адрес.
     alternates: { canonical: new URL(accessoriesPath(slug), SITE_URL).toString() },

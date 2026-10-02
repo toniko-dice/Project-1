@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { RenderBlocks } from '@/components/RenderBlocks'
 import { getGlobal, getPage, getPayloadClient } from '@/lib/payload'
 import { mediaUrl } from '@/lib/media'
+import { pageTitle } from '@/lib/title'
 
 type Args = { params: Promise<{ slug: string }> }
 
@@ -21,7 +22,7 @@ export const generateMetadata = async ({ params }: Args): Promise<Metadata> => {
   const ogImage = mediaUrl(page.metaImage, 'banner')
 
   return {
-    title: page.metaTitle ?? page.title,
+    title: pageTitle(page.metaTitle ?? page.title),
     description: page.metaDescription ?? undefined,
     openGraph: ogImage ? { images: [{ url: ogImage }] } : undefined,
   }

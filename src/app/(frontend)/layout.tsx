@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import { DesignTokens } from '@/components/DesignTokens'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
+import { TITLE_TEMPLATE } from '@/lib/title'
 import './globals.css'
 
 /*
@@ -37,7 +38,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
   title: {
     default: 'EcoFlow България — Портативни електроцентрали и домашно захранване',
-    template: '%s — EcoFlow България',
+    // Заглавие, което вече съдържа името, минава без шаблона — `pageTitle`.
+    template: TITLE_TEMPLATE,
   },
   description:
     'Официален вносител на EcoFlow за България. Портативни електроцентрали, домашни батерии, соларни панели и аксесоари.',
