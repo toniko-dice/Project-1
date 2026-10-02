@@ -239,9 +239,25 @@ export const writeImageSizes = async (
   const MEDIA_DIR = path.resolve(process.cwd(), 'media')
   const размери: Record<string, unknown> = {}
 
+  /*
+    Същото правило като Payload при качване (`getImageResizeAction`) и
+    `media:regenerate`: размер, по-голям от оригинала, НЕ се прави. До
+    2 октомври 2026 тук го нямаше и всяка подмяна (превод, PNG с прозрачен
+    фон) правеше `content`/`large` УВЕЛИЧЕНИ — 1000 px оригинал получаваше
+    1600 и 2000 px копия; така бяха 59 записа.
+  */
+  const meta = await sharp(данни).metadata()
+  const w = meta.width ?? 0
+  const h = meta.height ?? 0
+
   for (const size of payload.collections.media!.config.upload.imageSizes ?? []) {
     const targetW = size.width ?? null
     const targetH = size.height ?? null
+    const { withoutEnlargement } = size
+    if (targetW && targetH && withoutEnlargement === undefined && w < targetW && h < targetH) continue
+    if (withoutEnlargement === undefined && (!targetW || !targetH)) {
+      if ((targetW && w < targetW) || (targetH && h < targetH)) continue
+    }
     try {
       let pipeline = sharp(данни)
         .rotate()
