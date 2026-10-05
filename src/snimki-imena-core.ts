@@ -434,6 +434,14 @@ export const планЗаИмена = async (payload: Payload): Promise<План
   /** Запис в Медия по точната основа (с регистъра, както вноса). */
   const поОснова = new Map<string, MediaDoc>()
   for (const m of медия) if (m.filename) поОснова.set(основа(m.filename), m)
+  /*
+    Резерва: по „Оригинално име". Съдържание със СТАРИТЕ имена (върнато от
+    архив или от git) пак се свързва със записа си и получава новите — така
+    на 5 октомври 2026 бяха възстановени 338 файла след `git reset --hard`.
+    Само тук: вносът и замяната не търсят по него.
+  */
+  const поОригинал = new Map<string, MediaDoc>()
+  for (const m of медия) if (m.originalName) поОригинал.set(основа(m.originalName), m)
   const новаОснова = (id: number) => поЗапис.get(id)!.основа
 
   /** Старото име в съдържанието → новото; за общите папки. */
@@ -466,7 +474,13 @@ export const планЗаИмена = async (payload: Payload): Promise<План
     const запис = (file: string): MediaDoc | null => {
       const s = bareStem(file)
       const stem = много.has(s) ? `${s}-${path.extname(file).slice(1).toLowerCase()}` : s
-      return поОснова.get(stem) ?? поОснова.get(caseSafeStem(stem)) ?? null
+      return (
+        поОснова.get(stem) ??
+        поОснова.get(caseSafeStem(stem)) ??
+        поОригинал.get(stem) ??
+        поОригинал.get(caseSafeStem(stem)) ??
+        null
+      )
     }
 
     const адреси = адресиЗаСваляне(c._svali_snimki)
