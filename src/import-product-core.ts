@@ -37,7 +37,15 @@ import path from 'path'
 import type { Payload } from 'payload'
 import sharp from 'sharp'
 import { AVAILABILITY_VALUES, isAvailability } from './lib/availability'
+import {
+  адресиЗаСваляне,
+  катоОригинала,
+  смениИменатаВСъдържанието,
+  type СвалиСнимки,
+} from './lib/snimki-sadarzhanie'
 import { RESERVED_PRODUCT_SLUGS } from './lib/urls'
+
+export { fileNameFromUrl } from './lib/snimki-sadarzhanie'
 
 /* ─────────── видове ─────────── */
 
@@ -371,6 +379,18 @@ export const replaceMediaContent = async (
 
   const мета = await sharp(данни).metadata()
   const размери = await writeImageSizes(payload, stem, данни)
+  /*
+    Размер, който НЕ е направен наново (по-малка снимка), се чисти изрично.
+    `payload.update` слива групата `sizes` със старата: на 5 октомври 2026
+    запис № 1109 (700 px PNG на мястото на по-голям JPEG) остана с пет
+    стари размера, чиито файлове подмяната вече беше изтрила — 500 на
+    страницата на адаптера.
+  */
+  for (const size of payload.collections.media!.config.upload.imageSizes ?? []) {
+    if (!размери[size.name]) {
+      размери[size.name] = { filename: null, width: null, height: null, mimeType: null, filesize: null }
+    }
+  }
 
   /*
     Записва се САМО описанието. Файлът не се подава — иначе Payload би
@@ -399,7 +419,9 @@ export const replaceMediaContent = async (
   */
   const пазени = new Set<string>([
     filename,
-    ...Object.values(размери).map((р) => (р as { filename: string }).filename),
+    ...Object.values(размери)
+      .map((р) => (р as { filename: string | null }).filename)
+      .filter((f): f is string => Boolean(f)),
   ])
   for (const f of mediaFileNames(doc)) {
     if (!пазени.has(f) && !чужди.has(f.toLowerCase())) {
@@ -420,20 +442,15 @@ type Content = {
   galeriya?: { file: string; alt?: string }[]
   sekcii?: Card[]
   specGroups?: unknown[]
-  /** Адресите, от които се свалят снимките. Името е последният сегмент. */
-  _svali_snimki?: { galeriya?: string[]; sekcii?: string[] }
+  /**
+   * Адресите, от които се свалят снимките: `[{url, file}]` — файлът е
+   * смисленото име (`snimki:imena`). Старият вид `{galeriya, sekcii}` със
+   * списъци от адреси още се чете; името тогава е последният сегмент.
+   */
+  _svali_snimki?: СвалиСнимки
 }
 
 /* ─────────── сваляне на снимките ─────────── */
-
-/** Името на файла от адрес: последният сегмент, без въпросителната. */
-const fileNameFromUrl = (url: string): string => {
-  try {
-    return decodeURIComponent(new URL(url).pathname.split('/').pop() ?? '')
-  } catch {
-    return ''
-  }
-}
 
 /**
  * Сваля един файл и го записва БАЙТ ПО БАЙТ.
@@ -567,12 +584,8 @@ export const checkDownloadNameConflicts = async (folders: string[]): Promise<voi
       continue // Негоден JSON се докладва при самия внос на този продукт.
     }
 
-    for (const списък of [content._svali_snimki?.galeriya, content._svali_snimki?.sekcii]) {
-      for (const url of списък ?? []) {
-        if (typeof url !== 'string') continue
-        const name = fileNameFromUrl(url)
-        if (!name) continue
-
+    for (const { url, file: name } of адресиЗаСваляне(content._svali_snimki)) {
+      {
         const преди = адресПоИме.get(name)
         if (!преди) {
           адресПоИме.set(name, { url, folder })
@@ -679,6 +692,43 @@ export const importProduct = async (
 ` +
         `  Позволени: ${AVAILABILITY_VALUES.join(', ')}`,
     )
+  }
+
+  /* ─────────── същата снимка, вече внесена от друг продукт ─────────── */
+
+  /*
+    От `snimki:imena` нататък снимките в Медия са със смислени имена, а
+    новото съдържание идва с имената от dice/EcoFlow. Снимка, която друг
+    продукт вече е свалил от СЪЩИЯ адрес, взима неговото име — иначе
+    общите снимки на едно семейство продукти биха се качили втори път.
+    Съпоставянето е по адреса в `_svali_snimki`, не по старото име.
+  */
+  {
+    const поАдрес = new Map<string, string>()
+    for (const друга of await productFolders()) {
+      if (друга === folder) continue
+      try {
+        const c = JSON.parse(
+          await fs.readFile(path.join(CONTENT_ROOT, друга, 'sadarzhanie.json'), 'utf-8'),
+        ) as Content
+        if (!Array.isArray(c._svali_snimki)) continue
+        for (const a of адресиЗаСваляне(c._svali_snimki)) if (!поАдрес.has(a.url)) поАдрес.set(a.url, a.file)
+      } catch {
+        // Негоден JSON се докладва при вноса на онзи продукт.
+      }
+    }
+    const карта = new Map<string, string>()
+    for (const a of адресиЗаСваляне(content._svali_snimki)) {
+      const име = поАдрес.get(a.url)
+      if (име && име !== a.file) карта.set(a.file, име)
+    }
+    if (карта.size) {
+      смениИменатаВСъдържанието(content as unknown as Record<string, unknown>, карта)
+      for (const [от, до] of карта) log(`  · ${от}: същият адрес е внесен като ${до} — ползва се то`)
+      if (!dryRun) {
+        await fs.writeFile(JSON_FILE, катоОригинала(await fs.readFile(JSON_FILE, 'utf-8'), content), 'utf-8')
+      }
+    }
   }
 
   /* ─────────── изображения ─────────── */
@@ -799,12 +849,8 @@ export const importProduct = async (
     `PC_R3_01-jpg` и `PC_R3_01-png`.
   */
   const адреси = new Map<string, string>()
-  for (const списък of [content._svali_snimki?.galeriya, content._svali_snimki?.sekcii]) {
-    for (const url of списък ?? []) {
-      if (typeof url !== 'string') continue
-      const name = fileNameFromUrl(url)
-      if (name && !адреси.has(name)) адреси.set(name, url)
-    }
+  for (const { url, file } of адресиЗаСваляне(content._svali_snimki)) {
+    if (!адреси.has(file)) адреси.set(file, url)
   }
 
   let downloaded = 0

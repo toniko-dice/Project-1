@@ -27,6 +27,8 @@
     "seed:attributes": "payload run src/seed-attributes.ts --",
     "snimki:bql-fon": "payload run src/snimki-bql-fon.ts --",
     "snimki:zameni": "payload run src/snimki-zameni.ts --",
+    "snimki:imena": "payload run src/snimki-imena.ts --",
+    "snimki:proverka": "node scripts/snimki-proverka.mjs",
     "health": "payload run src/health-check.ts"
   },
   "dependencies": {

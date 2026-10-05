@@ -40,6 +40,7 @@ import {
   productFolders,
   revalidateServer,
 } from './import-product-core'
+import { именаСледВнос } from './snimki-imena-core'
 import { translationQueueSummary, updateTranslationQueue } from './import-prevod'
 
 /* ─────────── аргументи ─────────── */
@@ -271,6 +272,12 @@ if (dryRun) {
 } else {
   console.log('Нищо не е публикувано — черновите чакат преглед в админа.')
 }
+
+/*
+  Смислените имена на новите снимки — ПРЕДИ папката „за превод", за да
+  са копията и `spisak.md` с новите имена (`task-snimki-imena.md`, т. 4).
+*/
+for (const ред of await именаСледВнос(payload, { dryRun })) console.log(ред)
 
 /*
   Папката „за превод" — след свалянето, защото чакащите се копират от

@@ -25,6 +25,7 @@ import {
   productFolders,
   revalidateServer,
 } from './import-product-core'
+import { именаСледВнос } from './snimki-imena-core'
 import { translationQueueSummary, updateTranslationQueue } from './import-prevod'
 
 const die = (message: string): never => {
@@ -117,6 +118,9 @@ if (result.published) {
   console.log('Продуктът е ЧЕРНОВА и още не се вижда на сайта.')
   console.log('Отворете го в админа, прегледайте го и натиснете „Публикувай".')
 }
+
+// Смислените имена на новите снимки — преди „за превод" (`task-snimki-imena.md`, т. 4).
+for (const ред of await именаСледВнос(payload)) console.log(ред)
 
 // Пресмята се от ВСИЧКИ продукти — иначе списъкът би изгубил чакащите на другите.
 for (const ред of translationQueueSummary(await updateTranslationQueue(), false)) {

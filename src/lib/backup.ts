@@ -13,7 +13,7 @@ type ArchiverFactory = (
   options?: archiverNS.ArchiverOptions,
 ) => archiverNS.Archiver
 
-const createArchiver = ((archiverNS as unknown as { default?: ArchiverFactory }).default ??
+export const createArchiver = ((archiverNS as unknown as { default?: ArchiverFactory }).default ??
   (archiverNS as unknown as ArchiverFactory)) as ArchiverFactory
 
 /** Колко архива се пазят. По-старите се трият автоматично след успешен нов архив. */

@@ -480,6 +480,10 @@ export interface Media {
    * Описание на изображението за екранни четци и SEO. Задължително.
    */
   alt: string;
+  /**
+   * Името на файла, преди да получи смислено име. Само за справка.
+   */
+  originalName?: string | null;
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -2694,6 +2698,7 @@ export interface MenuPanelsSelect<T extends boolean = true> {
  */
 export interface MediaSelect<T extends boolean = true> {
   alt?: T;
+  originalName?: T;
   updatedAt?: T;
   createdAt?: T;
   url?: T;
