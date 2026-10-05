@@ -16,14 +16,16 @@
  * `07-jpg`/`07-png`. Тук съпоставянето е по името в Медия, тоест по името,
  * под което `snimki:bql-fon` е копирал снимката.
  *
- * Файл, който вече е в Медия байт по байт, се прескача. Накрая — отчет и
- * опресняване на кеша на сървъра.
+ * Файл, който вече е в Медия байт по байт, се прескача. Преди първата
+ * истинска подмяна се прави архив (оригиналите в `media/` се презаписват),
+ * без архив скриптът спира. Накрая — отчет и опресняване на кеша на сървъра.
  */
 import config from '@payload-config'
 import fs from 'fs/promises'
 import path from 'path'
 import { getPayload } from 'payload'
 
+import { createBackup } from './lib/backup'
 import {
   bareStem,
   caseSafeStem,
@@ -63,6 +65,7 @@ const заменени: string[] = []
 const същите: string[] = []
 const безСъвпадение: string[] = []
 const неуспешни: string[] = []
+let архив = false
 
 for (const [stem, name] of поОснова) {
   const запис = записи.get(stem) ?? записи.get(caseSafeStem(stem))
@@ -79,6 +82,16 @@ for (const [stem, name] of поОснова) {
   if (dryRun) {
     заменени.push(`${name} → № ${запис.id} (${запис.filename})`)
     continue
+  }
+  if (!архив) {
+    try {
+      const { doc } = await createBackup(payload, { label: 'Преди замяна на снимки (snimki:zameni)', trigger: 'ръчно' })
+      console.log(`Архив преди замяната: „${doc.label}" (№ ${doc.id})`)
+      архив = true
+    } catch (e) {
+      console.error(`\n✗ Архивът не се направи: ${(e as Error).message}\n  Замяната е спряна.`)
+      process.exit(1)
+    }
   }
   const ext = path.extname(name).toLowerCase()
   const realExt = ext === '.jpeg' ? '.jpg' : ext
