@@ -511,13 +511,32 @@ export const планЗаИмена = async (payload: Payload): Promise<План
       if (нов !== т) текстове.set(p, нов)
     }
 
-    /* файловете в подпапките */
+    /*
+      Файловете в подпапките — по точно име, иначе по основа: собственикът
+      превеждаше направо тук и записваше `PC_R3_01.jpg`, а JSON-ът сочи
+      `PC_R3_01.png`. Вносът намира превода по основа; без това правило
+      той оставаше със старото име и вносът искаше да свали оригинала.
+    */
+    const поОсноваВКартата = new Map<string, Set<string>>()
+    for (const [от, до] of карта) {
+      const s = bareStem(от)
+      поОсноваВКартата.set(s, new Set([...(поОсноваВКартата.get(s) ?? []), bareStem(до)]))
+    }
     for (const e of await fs.readdir(root, { withFileTypes: true })) {
       if (!e.isDirectory()) continue
       const dir = path.join(root, e.name)
-      for (const f of await fs.readdir(dir)) {
-        const нов = карта.get(f)
-        if (нов && нов !== f) файлове.push({ dir, от: f, до: нов })
+      const тук = await fs.readdir(dir)
+      const ниски = new Set(тук.map((f) => f.toLowerCase()))
+      for (const f of тук) {
+        const основи = поОсноваВКартата.get(bareStem(f))
+        const нов =
+          карта.get(f) ?? (основи?.size === 1 ? `${[...основи][0]}${path.extname(f).toLowerCase()}` : undefined)
+        if (!нов || нов === f) continue
+        if (!карта.has(f) && ниски.has(нов.toLowerCase())) {
+          проблеми.push(`content/${folder}/${e.name}/${f} → ${нов}: името вече е заето — не е преименуван`)
+          continue
+        }
+        файлове.push({ dir, от: f, до: нов })
       }
     }
   }
