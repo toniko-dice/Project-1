@@ -54,8 +54,14 @@ export type TranslationQueueResult = {
   notApplied: string[]
 }
 
-/** Карта на папка по пълно име и по основа — като при вноса. */
-const прочети = async (dir: string) => {
+/**
+ * Карта на папка по пълно име и по основа — като при вноса.
+ * `pngПърво`: за `content/snimki/` — прозрачният `<основа>.png` печели пред
+ * превод със същата основа, точно както във вноса (`намериЛокално`). Иначе
+ * при `X.jpg` + `X.png` списъкът сравнява `.jpg` с качения PNG и пише
+ * „преведена, но не е в Медия" за снимка, която е на сайта.
+ */
+const прочети = async (dir: string, pngПърво = false) => {
   const поИме = new Map<string, string>()
   const поОснова = new Map<string, string>()
   try {
@@ -70,7 +76,11 @@ const прочети = async (dir: string) => {
     // Папката още не съществува.
   }
   return {
-    намери: (file: string) => поИме.get(file) ?? поОснова.get(bareStem(file)) ?? null,
+    намери: (file: string) =>
+      (pngПърво ? поИме.get(`${bareStem(file)}.png`) : undefined) ??
+      поИме.get(file) ??
+      поОснова.get(bareStem(file)) ??
+      null,
   }
 }
 
@@ -80,7 +90,7 @@ const папкиНаПродукта = async (folder: string) => {
   const dirs = (await fs.readdir(root, { withFileTypes: true }))
     .filter((e) => e.isDirectory())
     .map((e) => path.join(root, e.name))
-  const карти = await Promise.all(dirs.map(прочети))
+  const карти = await Promise.all(dirs.map((d) => прочети(d)))
   return {
     намери: (file: string) => {
       for (const к of карти) {
@@ -136,7 +146,7 @@ const еднакви = async (a: string, b: string): Promise<boolean> => {
 export const updateTranslationQueue = async ({
   dryRun = false,
 }: { dryRun?: boolean } = {}): Promise<TranslationQueueResult> => {
-  const преведени = await прочети(SNIMKI_DIR)
+  const преведени = await прочети(SNIMKI_DIR, true)
   const оригинали = await прочети(ORIGINALI_DIR)
 
   /* ─── какво чака превод ─── */
