@@ -61,10 +61,13 @@ export const ProductCard = ({
   product,
   showBgn = true,
   className = '',
+  eager = false,
 }: {
   product: Product
   showBgn?: boolean
   className?: string
+  /** Първите карти в списък — над сгъвката, едната е LCP; без отлагане. */
+  eager?: boolean
 }) => {
   // Всичко идва от продукта през общия помощник — същото като в менюто.
   const data = productCardData(product)
@@ -85,7 +88,7 @@ export const ProductCard = ({
               alt={data.imageAlt}
               fill
               sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 18vw"
-              loading="lazy"
+              loading={eager ? 'eager' : 'lazy'}
               className="object-contain transition-transform duration-300 group-hover:scale-105"
             />
           ) : (

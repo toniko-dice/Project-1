@@ -6,6 +6,9 @@ import { useMemo, useState, useSyncExternalStore } from 'react'
 import type { Product } from '@/payload-types'
 import { ProductCard } from './ProductCard'
 
+/** Първият ред на най-широката мрежа — над сгъвката, без `loading="lazy"`. */
+const EAGER_CARDS = 4
+
 export type CategoryTab = {
   slug: string
   title: string
@@ -144,9 +147,9 @@ export const CategoryProducts = ({
 
       {показани.length ? (
         <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-          {показани.map((p) => (
+          {показани.map((p, i) => (
             <li key={p.id}>
-              <ProductCard product={p} showBgn={showBgn} className="h-full" />
+              <ProductCard product={p} showBgn={showBgn} className="h-full" eager={i < EAGER_CARDS} />
             </li>
           ))}
         </ul>
