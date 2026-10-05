@@ -96,9 +96,17 @@ export type ПланЗаИмена = {
 
 const основа = (filename: string): string => path.basename(filename, path.extname(filename))
 
+/**
+ * Транслитерация за имената на снимките: „ц" е „c", както в slug-овете на
+ * сайта (`kapacitet-wh`, `portativni-elektrocentrali`), а не „ts" на общата
+ * `slugify`. Общата не се пипа — от нея зависят котвите на страниците и
+ * адресите, които админът тепърва създава.
+ */
+const слъг = (text: string): string => slugify(text.replace(/[цЦ]/g, 'c'))
+
 /** Транслитерира и реже до `НАЙ_ДЪЛГО` знака по тире. */
 const име = (text: string): string => {
-  const s = slugify(text.replace(/\.(jpe?g|png|webp|avif|gif)$/i, ''))
+  const s = слъг(text.replace(/\.(jpe?g|png|webp|avif|gif)$/i, ''))
   if (s.length <= НАЙ_ДЪЛГО) return s
   const срязан = s.slice(0, НАЙ_ДЪЛГО)
   const тире = срязан.lastIndexOf('-')
@@ -239,12 +247,14 @@ export const новиИмена = async (
 
   const заети = new Set<string>()
   const поЗапис = new Map<number, { основа: string; място: string }>()
+  /*
+    Първо се събират ВСИЧКИ заявки и чак после се раздават имената:
+    неизползваните снимки пазят името си и то трябва да е заето, преди
+    първият продукт да си избере.
+  */
+  const заявки: { id: number; желано: string; място: string }[] = []
   const дай = (id: number, желано: string, място: string) => {
-    if (!има.has(id) || поЗапис.has(id) || !желано) return
-    let основа = желано
-    for (let n = 2; заети.has(основа); n += 1) основа = `${желано}-${n}`
-    заети.add(основа)
-    поЗапис.set(id, { основа, място })
+    if (има.has(id) && желано) заявки.push({ id, желано, място })
   }
 
   /* Продуктите — по `_order`, и черновите. */
@@ -268,12 +278,23 @@ export const новиИмена = async (
     ;((p.sections as Record<string, unknown>[]) ?? []).forEach((s, j) => {
       const блок = sectionsField ? блокЗа(sectionsField, s.blockType, blocksById) : null
       if (!блок) return
+      /*
+        Котвата („Надпис в менюто на страницата"), иначе заглавието на
+        секцията — до четири думи, иначе `sekciya-N`.
+      */
       const надпис = typeof s.anchorLabel === 'string' ? s.anchorLabel.trim() : ''
-      let котва = (надпис && slugify(надпис)) || `sekciya-${j + 1}`
-      for (let n = 2; котви.has(котва); n += 1) котва = `${(надпис && slugify(надпис)) || `sekciya-${j + 1}`}-${n}`
+      const заглавие = (typeof s.heading === 'string' ? s.heading : '')
+        .split(/\s+/)
+        .filter((дума) => /[\p{L}\p{N}]/u.test(дума))
+        .slice(0, 4)
+        .join(' ')
+      const име = надпис || заглавие
+      const база = (име && слъг(име)) || `sekciya-${j + 1}`
+      let котва = база
+      for (let n = 2; котви.has(котва); n += 1) котва = `${база}-${n}`
       котви.add(котва)
       снимкиВ(полетаНа(блок), s, blocksById).forEach(({ id }, k) =>
-        дай(id, `${slug}-${котва}-${k + 1}`, `продукт ${slug} — секция ${надпис ? `„${надпис}"` : j + 1}`),
+        дай(id, `${slug}-${котва}-${k + 1}`, `продукт ${slug} — секция ${име ? `„${име}"` : j + 1}`),
       )
     })
 
@@ -282,7 +303,7 @@ export const новиИмена = async (
     for (const { id, поле } of снимкиВ(други, p, blocksById)) {
       const n = (броячи.get(поле) ?? 0) + 1
       броячи.set(поле, n)
-      дай(id, `${slug}-${slugify(поле) || 'snimka'}-${n}`, `продукт ${slug} — поле ${поле}`)
+      дай(id, `${slug}-${слъг(поле) || 'snimka'}-${n}`, `продукт ${slug} — поле ${поле}`)
     }
   }
 
@@ -314,9 +335,23 @@ export const новиИмена = async (
     }
   }
 
-  /* Неизползваните (стари копия, сочени само от стари версии). */
+  /*
+    Неизползваните (стари копия, сочени само от стари версии) пазят името
+    си — по решение на собственика. Името им е заето за всички останали.
+  */
+  const ползвани = new Set(заявки.map((з) => з.id))
   for (const m of медия) {
-    if (!поЗапис.has(m.id)) позАлт(m.id, `snimka-${m.id}`, 'не се ползва (само стари версии)')
+    if (ползвани.has(m.id) || !m.filename) continue
+    заети.add(основа(m.filename).toLowerCase())
+    поЗапис.set(m.id, { основа: основа(m.filename), място: 'не се ползва — остава със старото име' })
+  }
+
+  for (const { id, желано, място } of заявки) {
+    if (поЗапис.has(id)) continue
+    let нова = желано
+    for (let n = 2; заети.has(нова); n += 1) нова = `${желано}-${n}`
+    заети.add(нова)
+    поЗапис.set(id, { основа: нова, място })
   }
 
   return { поЗапис, медия }
