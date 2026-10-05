@@ -644,8 +644,11 @@ export const приложиПлана = async (
         continue
       }
       const н = размерНов(старОсн, новаОсн, р)!
-      от.push(р.filename)
-      до.push(н)
+      // Два размера с един файл (`large` и `full` при 2000 px оригинал) — мести се веднъж.
+      if (!от.includes(р.filename)) {
+        от.push(р.filename)
+        до.push(н)
+      }
       sizes[k] = { filename: н, width: р.width, height: р.height, mimeType: р.mimeType, filesize: р.filesize }
     }
     ходове.push({
