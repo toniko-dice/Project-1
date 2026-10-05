@@ -71,3 +71,4 @@ content/_originali/*
 content/za-prevod/
 # Копията с бял фон за ръчна обработка — пишат се наново от `npm run snimki:bql-fon`.
 content/snimki-bql-fon/
+content/snimki-imena-proverka.csv

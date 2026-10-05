@@ -47,7 +47,10 @@ import {
 
 export const MEDIA_DIR = path.join(process.cwd(), 'media')
 export const ZA_PREVOD_DIR = path.join(CONTENT_ROOT, 'za-prevod')
+/** Таблицата на смените — в git, дописва се при всяка истинска смяна. */
 export const CSV_FILE = path.join(CONTENT_ROOT, 'snimki-imena.csv')
+/** Какво БИ се сменило (`--dry-run`) — пише се наново, извън git. */
+export const CSV_PROVERKA = path.join(CONTENT_ROOT, 'snimki-imena-proverka.csv')
 
 /** Колекциите без снимки за сайта — не се обхождат. */
 const БЕЗ = new Set(['media', 'backups', 'users', 'subscribers', 'redirects'])
@@ -596,6 +599,13 @@ export const csvЗаПлана = (план: ПланЗаИмена): string => {
   return '﻿' + редове.map((r) => r.map(клетка).join(';')).join('\r\n') + '\r\n'
 }
 
+/** Дописва редовете на плана в таблицата в git (със заглавен ред, ако е нова). */
+export const допишиТаблицата = async (план: ПланЗаИмена): Promise<void> => {
+  const csv = csvЗаПлана(план)
+  if (!(await exists(CSV_FILE))) return fs.writeFile(CSV_FILE, csv, 'utf-8')
+  await fs.appendFile(CSV_FILE, csv.split('\r\n').slice(1).join('\r\n'), 'utf-8')
+}
+
 /* ─────────── 4. смяната ─────────── */
 
 const размерНов = (старОснова: string, новаОсн: string, р: Размер): string | null => {
@@ -762,11 +772,8 @@ export const именаСледВнос = async (
     редове.push(`Нови имена на снимки: ${медия} в Медия, ${план.файлове.length} файла в content/`)
     for (const з of план.записи) редове.push(`  ${з.стар} → ${з.нов}`)
     for (const н of неуспешни) редове.push(`  ✗ ${н}`)
-    if (план.записи.length) {
-      // Таблицата в git расте с всяка смяна — за справка кое откъде е дошло.
-      const нови = csvЗаПлана({ ...план, файлове: [], безСъвпадение: [] }).split('\r\n').slice(1).join('\r\n')
-      await fs.appendFile(CSV_FILE, нови, 'utf-8')
-    }
+    // Таблицата в git расте с всяка смяна — за справка кое откъде е дошло.
+    if (план.записи.length) await допишиТаблицата({ ...план, файлове: [], безСъвпадение: [] })
   }
 
   const вСнимки = план.безСъвпадение.filter((б) => б.къде.startsWith('snimki/'))

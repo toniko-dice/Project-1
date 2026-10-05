@@ -1,7 +1,7 @@
 /**
  * Смислени имена на всички снимки — веднъж и навсякъде (`task-snimki-imena.md`).
  *
- *   npm run snimki:imena -- --dry-run   само таблицата content/snimki-imena.csv
+ *   npm run snimki:imena -- --dry-run   само таблицата content/snimki-imena-proverka.csv
  *   npm run snimki:imena                смяната + опресняване на кеша
  *
  * Правилото и какво се пипа — `src/snimki-imena-core.ts`. Преди истинската
@@ -16,13 +16,19 @@ import { getPayload } from 'payload'
 
 import { CONTENT_ROOT, revalidateServer } from './import-product-core'
 import { createArchiver, createBackup, STORE_DIR } from './lib/backup'
-import { csvЗаПлана, CSV_FILE, планЗаИмена, приложиПлана } from './snimki-imena-core'
+import {
+  csvЗаПлана,
+  CSV_PROVERKA,
+  допишиТаблицата,
+  планЗаИмена,
+  приложиПлана,
+} from './snimki-imena-core'
 
 const dryRun = process.argv.includes('--dry-run')
 const payload = await getPayload({ config })
 
 const план = await планЗаИмена(payload)
-await fs.writeFile(CSV_FILE, csvЗаПлана(план), 'utf-8')
+if (dryRun) await fs.writeFile(CSV_PROVERKA, csvЗаПлана(план), 'utf-8')
 
 const папки = new Set(план.файлове.map((ф) => path.relative(CONTENT_ROOT, ф.dir).split(path.sep)[0]))
 console.log(`\nИМЕНА НА СНИМКИТЕ${dryRun ? ' — ПРОВЕРКА, нищо не е сменено' : ''}`)
@@ -35,7 +41,7 @@ if (план.проблеми.length) {
   console.log(`Проблеми: ${план.проблеми.length}`)
   for (const п of план.проблеми) console.log(`  ⚠ ${п}`)
 }
-console.log(`Таблицата: content/snimki-imena.csv`)
+if (dryRun) console.log(`Таблицата: content/snimki-imena-proverka.csv`)
 
 if (dryRun || (!план.записи.length && !план.текстове.size && !план.файлове.length)) {
   if (!dryRun) console.log('Няма какво да се сменя.')
@@ -72,6 +78,8 @@ try {
 /* ─── смяната ─── */
 console.log('\nСмяна…')
 const { медия, неуспешни } = await приложиПлана(payload, план, (m) => console.log(m))
+await допишиТаблицата(план)
+console.log('Таблицата на смяната: content/snimki-imena.csv')
 console.log(`Медия: ${медия} записа с ново име`)
 console.log(`content/: ${план.текстове.size} файла с текст, ${план.файлове.length} снимки преименувани`)
 if (неуспешни.length) {
