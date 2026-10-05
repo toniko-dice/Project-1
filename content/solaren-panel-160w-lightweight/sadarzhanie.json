@@ -48,19 +48,19 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-160w-lightweight-portable-solar-panel-1242802814.png",
+      "file": "solaren-panel-160w-lightweight-1.png",
       "alt": "EcoFlow 160W Lightweight Portable Solar Panel — разгънат"
     },
     {
-      "file": "ecoflow-160w-lightweight-portable-solar-panel-1242802817.png",
+      "file": "solaren-panel-160w-lightweight-2.png",
       "alt": "EcoFlow 160W Lightweight Portable Solar Panel — сгънат, с дръжка"
     },
     {
-      "file": "ecoflow-160w-lightweight-portable-solar-panel-1242802816.png",
+      "file": "solaren-panel-160w-lightweight-3.png",
       "alt": "EcoFlow 160W Lightweight Portable Solar Panel — под ъгъл"
     },
     {
-      "file": "ecoflow-160w-lightweight-portable-solar-panel-1242802815.png",
+      "file": "solaren-panel-160w-lightweight-4.png",
       "alt": "EcoFlow 160W Lightweight Portable Solar Panel — детайл"
     }
   ],
@@ -72,7 +72,7 @@
       "anchorLabel": "Преглед",
       "heading": "",
       "body": "",
-      "image": "EU_1_PC.png",
+      "image": "solaren-panel-160w-lightweight-pregled-1.png",
       "imageAlt": "EcoFlow 160W Lightweight Portable Solar Panel — основни предимства"
     },
     {
@@ -82,7 +82,7 @@
       "anchorLabel": "Двулицев",
       "heading": "Повече енергия с двулицев дизайн",
       "body": "Основната и задната страна улавят и разсеяната светлина — изходната мощност стига до 177W при условия на изпитване BNPI, т.е. повече енергия от същото слънце в сравнение с обикновените еднолицеви панели. С водещата в бранша технология TOPCon панелът достига първокласна ефективност на преобразуване до 25% и зарежда електроцентралата ви още по-бързо.",
-      "image": "3_1_PC_f340019f-74e8-4424-b3b4-e215fc963b57.jpg",
+      "image": "solaren-panel-160w-lightweight-dvulicev-1.jpg",
       "imageAlt": "Двулицев соларен панел на поляна пред планина"
     },
     {
@@ -92,7 +92,7 @@
       "anchorLabel": "Портативност",
       "heading": "Свръхпортативен дизайн",
       "body": "Създаден от модерни леки материали, този панел от новото поколение е с 1,8 кг по-лек от предишните модели — пренася се без усилие и се прибира компактно.",
-      "image": "2_1_PC_31568195-b335-47d5-a6f0-618adcdb2d19.jpg",
+      "image": "solaren-panel-160w-lightweight-portativnost-1.jpg",
       "imageAlt": "Панелът се носи като куфарче"
     },
     {
@@ -101,7 +101,7 @@
       "theme": "light",
       "heading": "Вграден XT60",
       "body": "Вграденият XT60 кабел улеснява прибирането и връзката с портативната електроцентрала — по-бърза подготовка.",
-      "image": "EU_4_1_PC.jpg",
+      "image": "solaren-panel-160w-lightweight-vgraden-xt60-1.jpg",
       "imageAlt": "Вграден XT60 кабел"
     },
     {
@@ -111,7 +111,7 @@
       "anchorLabel": "Стойка",
       "heading": "Подходящ за всякакви условия",
       "body": "Сгъваемата вградена стойка е удобна и компактна. Регулира се от 30° до 60° — идеално дори за повечето райони на високи географски ширини.\n\nАко панелът ще стои окачен продължително, използвайте твърд (стационарен) соларен панел — леките сгъваеми панели не се препоръчват за такъв сценарий.",
-      "image": "EU_5_PC.jpg",
+      "image": "solaren-panel-160w-lightweight-stoyka-1.jpg",
       "imageAlt": "Стойка, регулируема от 30° до 60°"
     },
     {
@@ -121,7 +121,7 @@
       "anchorLabel": "Водач",
       "heading": "Вграден водач за ъгъла към слънцето",
       "body": "Дръжте слънчевите лъчи под ъгъл 90° и ги насочвайте към повърхността на панела — така получавате максимум светлина по всяко време.",
-      "image": "EU_6_PC.jpg",
+      "image": "solaren-panel-160w-lightweight-vodach-1.jpg",
       "imageAlt": "Водач за ъгъла към слънцето — как се ползва"
     },
     {
@@ -131,7 +131,7 @@
       "anchorLabel": "Издръжливост",
       "heading": "Издръжлив и водоустойчив",
       "body": "",
-      "image": "EU_7_PC.png",
+      "image": "solaren-panel-160w-lightweight-izdrazhlivost-1.png",
       "imageAlt": "Създаден да издържи на бурята; без прегряване"
     },
     {
@@ -140,7 +140,7 @@
       "theme": "light",
       "heading": "5 години гаранция",
       "body": "",
-      "image": "8_1_img_6730d52b-6871-4f98-8cea-8dd9a972907a.png",
+      "image": "solaren-panel-160w-lightweight-5-godini-garanciya-1.png",
       "imageAlt": "5 години гаранция"
     },
     {
@@ -151,13 +151,13 @@
         {
           "name": "EcoFlow 160W Lightweight Portable Solar Panel",
           "qty": 1,
-          "image": "ecoflow-160w-lightweight-portable-solar-panel-1242802814.png",
+          "image": "solaren-panel-160w-lightweight-1.png",
           "imageAlt": "EcoFlow 160W Lightweight Portable Solar Panel"
         },
         {
           "name": "Кратко ръководство, инструкции за безопасност и гаранционна карта",
           "qty": 1,
-          "image": "kutiya-rakovodstvo.webp",
+          "image": "delta-3-plus-kakvo-ima-v-kutiyata-3.webp",
           "imageAlt": "Кратко ръководство, инструкции за безопасност и гаранционна карта"
         }
       ],
@@ -233,27 +233,62 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-160w-lightweight-portable-solar-panel-1242802814.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-160w-lightweight-portable-solar-panel-1242802817.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-160w-lightweight-portable-solar-panel-1242802816.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-160w-lightweight-portable-solar-panel-1242802815.png"
-    ],
-    "sekcii": [
-      "https://eu.ecoflow.com/cdn/shop/files/EU_1_PC.png",
-      "https://eu.ecoflow.com/cdn/shop/files/3_1_PC_f340019f-74e8-4424-b3b4-e215fc963b57.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/2_1_PC_31568195-b335-47d5-a6f0-618adcdb2d19.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/EU_4_1_PC.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/EU_5_PC.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/EU_6_PC.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/EU_7_PC.png",
-      "https://eu.ecoflow.com/cdn/shop/files/8_1_img_6730d52b-6871-4f98-8cea-8dd9a972907a.png",
-      "https://eu.ecoflow.com/cdn/shop/files/EU_9_PC.png"
-    ]
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-160w-lightweight-portable-solar-panel-1242802814.png",
+      "file": "solaren-panel-160w-lightweight-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-160w-lightweight-portable-solar-panel-1242802817.png",
+      "file": "solaren-panel-160w-lightweight-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-160w-lightweight-portable-solar-panel-1242802816.png",
+      "file": "solaren-panel-160w-lightweight-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-160w-lightweight-portable-solar-panel-1242802815.png",
+      "file": "solaren-panel-160w-lightweight-4.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/EU_1_PC.png",
+      "file": "solaren-panel-160w-lightweight-pregled-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/3_1_PC_f340019f-74e8-4424-b3b4-e215fc963b57.jpg",
+      "file": "solaren-panel-160w-lightweight-dvulicev-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/2_1_PC_31568195-b335-47d5-a6f0-618adcdb2d19.jpg",
+      "file": "solaren-panel-160w-lightweight-portativnost-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/EU_4_1_PC.jpg",
+      "file": "solaren-panel-160w-lightweight-vgraden-xt60-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/EU_5_PC.jpg",
+      "file": "solaren-panel-160w-lightweight-stoyka-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/EU_6_PC.jpg",
+      "file": "solaren-panel-160w-lightweight-vodach-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/EU_7_PC.png",
+      "file": "solaren-panel-160w-lightweight-izdrazhlivost-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/8_1_img_6730d52b-6871-4f98-8cea-8dd9a972907a.png",
+      "file": "solaren-panel-160w-lightweight-5-godini-garanciya-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/EU_9_PC.png",
+      "file": "EU_9_PC.png"
+    }
+  ],
   "_prevod_nadpisi": {
-    "EU_1_PC.png": {
+    "solaren-panel-160w-lightweight-pregled-1.png": {
       "Up to 25% / solar conversion efficiency rate with a bifacial design": "До 25% / ефективност на преобразуване с двулицев дизайн",
       "Integrated Solar Angle Guide": "Вграден водач за ъгъла към слънцето",
       "Lightweight and portable": "Лек и портативен",
@@ -262,20 +297,20 @@
       "IP68 / water and dust-resistant": "IP68 / защита от вода и прах",
       "5-Year Warranty": "5 години гаранция"
     },
-    "EU_4_1_PC.jpg": {
+    "solaren-panel-160w-lightweight-vgraden-xt60-1.jpg": {
       "Integrated XT60 cable": "Вграден XT60 кабел"
     },
-    "EU_5_PC.jpg": {
+    "solaren-panel-160w-lightweight-stoyka-1.jpg": {
       "30-60° / adjustable stand": "30–60° / регулируема стойка",
       "60° / 30°": "остават"
     },
-    "EU_6_PC.jpg": {
+    "solaren-panel-160w-lightweight-vodach-1.jpg": {
       "How-To": "Как се ползва",
       "Step 01 / Angle your solar panel so the sun is shining through the transparent shell of the guide.": "Стъпка 01 / Наклонете панела така, че слънцето да свети през прозрачното капаче на водача.",
       "Step 02 / Once the sun is shining through the transparent shell, adjust the angle of your solar panel until the shadow hits the middle of the guide.": "Стъпка 02 / Когато слънцето свети през капачето, нагласете ъгъла на панела, докато сянката попадне в средата на водача.",
       "Step 03 / Aim to get as close to the middle circle as possible. The closer the angle of sunlight is to 90°, the higher the solar intake and the shorter the solar charging time.": "Стъпка 03 / Стремете се към средния кръг. Колкото по-близо до 90° е ъгълът на слънчевите лъчи, толкова по-голям е добивът и по-кратко зареждането."
     },
-    "EU_7_PC.png": {
+    "solaren-panel-160w-lightweight-izdrazhlivost-1.png": {
       "Built to Weather the Storm / With an IP68 water-resistance rating, our 160W Lightweight Portable Solar Panel maintains its high performance even when in contact with water. You can safely recharge in wet conditions, such as seaside or on a boat.": "Създаден да издържи на бурята / С клас на защита IP68 нашият 160W лек сгъваем соларен панел запазва високата си производителност дори в контакт с вода. Спокойно може да зареждате в мокри условия — край морето или на лодка.",
       "No Overheating / Designed to withstand high temperatures while still ensuring high levels of solar generation.": "Без прегряване / Проектиран да издържа на високи температури, като запазва високото ниво на соларен добив."
     },

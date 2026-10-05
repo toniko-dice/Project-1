@@ -40,23 +40,23 @@
   },
   "galeriya": [
     {
-      "file": "batd.webp",
+      "file": "delta-3-max-plus-smart-extra-battery-1.webp",
       "alt": "EcoFlow DELTA 3 Max Plus Smart Extra Battery — допълнителна батерия"
     },
     {
-      "file": "fffftitled.webp",
+      "file": "delta-3-max-plus-smart-extra-battery-2.webp",
       "alt": "EcoFlow DELTA 3 Max Plus Smart Extra Battery — допълнителна батерия"
     },
     {
-      "file": "batttitled.webp",
+      "file": "delta-3-max-plus-smart-extra-battery-3.webp",
       "alt": "EcoFlow DELTA 3 Max Plus Smart Extra Battery — допълнителна батерия"
     },
     {
-      "file": "ddddtled.webp",
+      "file": "delta-3-max-plus-smart-extra-battery-4.webp",
       "alt": "EcoFlow DELTA 3 Max Plus Smart Extra Battery — допълнителна батерия"
     },
     {
-      "file": "unsstitled.webp",
+      "file": "delta-3-max-plus-smart-extra-battery-5.webp",
       "alt": "EcoFlow DELTA 3 Max Plus Smart Extra Battery — допълнителна батерия"
     }
   ],
@@ -186,16 +186,28 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/b/a/batd.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/f/f/fffftitled.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/b/a/batttitled.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/d/d/ddddtled.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/u/n/unsstitled.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/b/a/batd.webp",
+      "file": "delta-3-max-plus-smart-extra-battery-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/f/f/fffftitled.webp",
+      "file": "delta-3-max-plus-smart-extra-battery-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/b/a/batttitled.webp",
+      "file": "delta-3-max-plus-smart-extra-battery-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/d/d/ddddtled.webp",
+      "file": "delta-3-max-plus-smart-extra-battery-4.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/u/n/unsstitled.webp",
+      "file": "delta-3-max-plus-smart-extra-battery-5.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Спецификациите на EcoFlow EU и dice.bg съвпадат. EcoFlow EU пише цвят „сребрист“.",

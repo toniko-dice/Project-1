@@ -38,15 +38,15 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-smart-meter-1.webp",
+      "file": "smart-meter-1.webp",
       "alt": "EcoFlow Smart Meter — умен електромер"
     },
     {
-      "file": "ecoflow-smart-meter-2.webp",
+      "file": "smart-meter-2.webp",
       "alt": "EcoFlow Smart Meter — умен електромер"
     },
     {
-      "file": "ecoflow-smart-meter-3.webp",
+      "file": "smart-meter-3.webp",
       "alt": "EcoFlow Smart Meter — умен електромер"
     }
   ],
@@ -58,7 +58,7 @@
       "anchorLabel": "Преглед",
       "heading": "Smart Meter — умно следене на енергията",
       "body": "Защо ви е нужен? Следене на енергията в целия дом в реално време · Автоматично откриване на излишната енергия · Соларна енергия без подаване към мрежата (zero feed-in) · Оптимизиран с алгоритъма EcoFlow OASIS",
-      "image": "PC_KV-Bills_to_0_eu.jpg",
+      "image": "smart-meter-pregled-1.jpg",
       "imageAlt": "Сметки до нула — управление на енергията в дома"
     },
     {
@@ -68,7 +68,7 @@
       "anchorLabel": "Цял дом",
       "heading": "Следене на енергията в целия дом за системата STREAM",
       "body": "Осветлението и вградените кухненски уреди не могат да се следят с умни контакти. За тях е нужен умен електромер, който измерва консумацията на цялата къща — така системата сама планира кога и откъде да захранва.",
-      "image": "pc_Whole-Home_Intelligent.jpg",
+      "image": "smart-meter-cyal-dom-1.jpg",
       "imageAlt": "Схема — Smart Meter следи консумацията на целия дом"
     },
     {
@@ -78,7 +78,7 @@
       "anchorLabel": "STREAM",
       "heading": "С STREAM AC Pro за съхранение на соларна енергия",
       "body": "Благодарение на AC свързването STREAM AC Pro лесно се добавя към съществуваща соларна система като батерия „включи и работи“. Достатъчно е да добавите умен електромер — системата сама решава кога да зарежда и кога да захранва дома от AC Pro, за да използвате максимално слънчевата енергия.",
-      "image": "pc_Pair_with_STREAM_AC_Pro_en.jpg",
+      "image": "smart-meter-stream-1.jpg",
       "imageAlt": "Схема — STREAM AC Pro и Smart Meter в дома"
     },
     {
@@ -87,7 +87,7 @@
       "theme": "light",
       "heading": "Лесен монтаж",
       "body": "Нужни са само прост монтаж и свързване — без скъпа инсталация и без промени по електрическите кръгове. Монтира се на DIN шина в таблото.",
-      "image": "pc_Easy_to_Install.jpg",
+      "image": "smart-meter-lesen-montazh-1.jpg",
       "imageAlt": "Smart Meter на DIN шина"
     },
     {
@@ -97,7 +97,7 @@
       "anchorLabel": "OASIS",
       "heading": "Цялата сила на OASIS",
       "body": "EcoFlow OASIS разкрива пълните си възможности с умния електромер — връзката, която превръща данните в действия. Данни в реално време, прецизно разпределение на натоварването и адаптивни прогнози с изкуствен интелект работят, когато Smart Meter е свързан с OASIS.",
-      "image": "PC_OASIS_EU.jpg",
+      "image": "smart-meter-oasis-1.jpg",
       "imageAlt": "Приложението EcoFlow с OASIS"
     },
     {
@@ -106,7 +106,7 @@
       "theme": "light",
       "heading": "Smart Meter × Smart Plug: без подаване към мрежата. Цялата соларна енергия е ваша¹",
       "body": "Smart Meter следи енергията в дома в реално време и засича всеки излишен ват. Умният контакт Smart Plug автоматично включва уредите, за да се използва всеки излишен ват. Приложението планира излишната енергия и само решава кога и къде да я използва.",
-      "image": "pc_Smart_Meter_x_Smart_Plug_eu.jpg",
+      "image": "smart-meter-smart-meter-smart-plug-1.jpg",
       "imageAlt": "Smart Meter, Smart Plug и приложението"
     },
     {
@@ -353,27 +353,50 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-smart-meter-1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-smart-meter-2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-smart-meter-3.webp"
-    ],
-    "sekcii": [
-      "https://eu.ecoflow.com/cdn/shop/files/PC_KV-Bills_to_0_eu.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_Whole-Home_Intelligent.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_Pair_with_STREAM_AC_Pro_en.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_Easy_to_Install.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_OASIS_EU.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_Smart_Meter_x_Smart_Plug_eu.jpg"
-    ]
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-smart-meter-1.webp",
+      "file": "smart-meter-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-smart-meter-2.webp",
+      "file": "smart-meter-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-smart-meter-3.webp",
+      "file": "smart-meter-3.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_KV-Bills_to_0_eu.jpg",
+      "file": "smart-meter-pregled-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Whole-Home_Intelligent.jpg",
+      "file": "smart-meter-cyal-dom-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Pair_with_STREAM_AC_Pro_en.jpg",
+      "file": "smart-meter-stream-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Easy_to_Install.jpg",
+      "file": "smart-meter-lesen-montazh-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_OASIS_EU.jpg",
+      "file": "smart-meter-oasis-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Smart_Meter_x_Smart_Plug_eu.jpg",
+      "file": "smart-meter-smart-meter-smart-plug-1.jpg"
+    }
+  ],
   "_prevod_nadpisi": {
-    "PC_KV-Bills_to_0_eu.jpg": {
+    "smart-meter-pregled-1.jpg": {
       "Bills to 0": "Сметки до 0",
       "Smart Home Power Management": "Умно управление на енергията в дома"
     },
-    "pc_Pair_with_STREAM_AC_Pro_en.jpg": {
+    "smart-meter-stream-1.jpg": {
       "STREAM Microinverter + AC Pro": "STREAM микроинвертор + AC Pro",
       "Home socket": "Контакт",
       "Household appliances": "Домакински уреди",
@@ -383,13 +406,13 @@
       "Grid": "Мрежа",
       "Electricity Meter": "Електромер"
     },
-    "PC_OASIS_EU.jpg": {
+    "smart-meter-oasis-1.jpg": {
       "Empower Your Home From Your Fingertips": "Управлявайте дома с едно докосване",
       "AI-Driven Energy, Always Optimized": "Енергия с изкуствен интелект — винаги оптимизирана",
       "Proactive Protection to Stay Ahead of the Risk": "Превантивна защита — преди риска",
       "Cut Costs, Not Comfort": "По-ниски разходи без компромис с комфорта"
     },
-    "pc_Smart_Meter_x_Smart_Plug_eu.jpg": {
+    "smart-meter-smart-meter-smart-plug-1.jpg": {
       "Smart Meter · Monitor": "Smart Meter · Следи",
       "Monitors household power flow in real time, precisely detects every surplus watt.": "Следи енергията в дома в реално време и засича всеки излишен ват.",
       "Smart Plug · Switch": "Smart Plug · Включва",

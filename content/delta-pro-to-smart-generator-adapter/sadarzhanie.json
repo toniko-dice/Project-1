@@ -29,19 +29,19 @@
   },
   "galeriya": [
     {
-      "file": "60703_1.webp",
+      "file": "delta-pro-to-smart-generator-adapter-1.webp",
       "alt": "EcoFlow DELTA Pro to Smart Generator Adapter — адаптер"
     },
     {
-      "file": "60703_2.webp",
+      "file": "delta-pro-to-smart-generator-adapter-2.webp",
       "alt": "EcoFlow DELTA Pro to Smart Generator Adapter — адаптер"
     },
     {
-      "file": "60703_3.webp",
+      "file": "delta-pro-to-smart-generator-adapter-3.webp",
       "alt": "EcoFlow DELTA Pro to Smart Generator Adapter — адаптер"
     },
     {
-      "file": "60703_4.webp",
+      "file": "delta-pro-to-smart-generator-adapter-4.webp",
       "alt": "EcoFlow DELTA Pro to Smart Generator Adapter — адаптер"
     }
   ],
@@ -100,15 +100,24 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60703_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60703_2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60703_3.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60703_4.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60703_1.webp",
+      "file": "delta-pro-to-smart-generator-adapter-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60703_2.webp",
+      "file": "delta-pro-to-smart-generator-adapter-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60703_3.webp",
+      "file": "delta-pro-to-smart-generator-adapter-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60703_4.webp",
+      "file": "delta-pro-to-smart-generator-adapter-4.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",

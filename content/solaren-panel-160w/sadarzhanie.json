@@ -43,35 +43,35 @@
   },
   "galeriya": [
     {
-      "file": "56916_1.webp",
+      "file": "solaren-panel-160w-1.webp",
       "alt": "EcoFlow 160W Solar Panel — изглед 1"
     },
     {
-      "file": "56916_2.webp",
+      "file": "solaren-panel-160w-2.webp",
       "alt": "EcoFlow 160W Solar Panel — изглед 2"
     },
     {
-      "file": "56916_3.webp",
+      "file": "solaren-panel-160w-3.webp",
       "alt": "EcoFlow 160W Solar Panel — изглед 3"
     },
     {
-      "file": "56916_4.webp",
+      "file": "solaren-panel-160w-4.webp",
       "alt": "EcoFlow 160W Solar Panel — изглед 4"
     },
     {
-      "file": "56916_5.webp",
+      "file": "solaren-panel-160w-5.webp",
       "alt": "EcoFlow 160W Solar Panel — изглед 5"
     },
     {
-      "file": "56916_6.webp",
+      "file": "solaren-panel-160w-6.webp",
       "alt": "EcoFlow 160W Solar Panel — изглед 6"
     },
     {
-      "file": "56916_7.webp",
+      "file": "solaren-panel-160w-7.webp",
       "alt": "EcoFlow 160W Solar Panel — изглед 7"
     },
     {
-      "file": "56916_8.webp",
+      "file": "solaren-panel-160w-8.webp",
       "alt": "EcoFlow 160W Solar Panel — изглед 8"
     }
   ],
@@ -109,7 +109,7 @@
       "anchorLabel": "Панелът",
       "heading": "Сгъваем соларен панел 160W за електроцентралите EcoFlow",
       "body": "Изработен от ефективни монокристални силициеви клетки с 21–22% ефективност на преобразуване, панелът зарежда портативните електроцентрали EcoFlow от сериите DELTA и RIVER през MC4 кабела. С паралелния кабел се свързват няколко панела за още по-бързо зареждане.",
-      "image": "56916_1.webp",
+      "image": "solaren-panel-160w-1.webp",
       "imageAlt": "Панелът, разгънат"
     },
     {
@@ -119,7 +119,7 @@
       "anchorLabel": "Стойка",
       "heading": "Калъф, който е и стойка",
       "body": "Панелът тежи 7 кг и се пренася в калъфа от комплекта, който служи и за стойка — с гумената дръжка и гъвкавата конзола ъгълът се нагласява от 0° до 180°, за най-добър ъгъл към слънцето.",
-      "image": "56916_2.webp",
+      "image": "solaren-panel-160w-2.webp",
       "imageAlt": "Панелът на стойката-калъф"
     },
     {
@@ -129,7 +129,7 @@
       "anchorLabel": "Издръжливост",
       "heading": "Издържа на всякакво време",
       "body": "Безшевният панел е устойчив на прах и вода — потопяем до един метър за 30 минути, а ETFE филмът предпазва от ултравиолетови лъчи. Идеален за дейности на открито.",
-      "image": "56916_3.webp",
+      "image": "solaren-panel-160w-3.webp",
       "imageAlt": "Панелът отблизо"
     },
     {
@@ -140,19 +140,19 @@
         {
           "name": "EcoFlow 160W соларен панел",
           "qty": 1,
-          "image": "56916_1.webp",
+          "image": "solaren-panel-160w-1.webp",
           "imageAlt": "EcoFlow 160W Solar Panel"
         },
         {
           "name": "Оригинална чанта за пренасяне, която става стойка",
           "qty": 1,
-          "image": "56916_2.webp",
+          "image": "solaren-panel-160w-2.webp",
           "imageAlt": "Чанта-стойка"
         },
         {
           "name": "Ръководство за употреба",
           "qty": 1,
-          "image": "kutiya-rakovodstvo.webp",
+          "image": "delta-3-plus-kakvo-ima-v-kutiyata-3.webp",
           "imageAlt": "Ръководство за употреба"
         }
       ],
@@ -228,19 +228,40 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/6/56916_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/6/56916_2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/6/56916_3.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/6/56916_4.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/6/56916_5.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/6/56916_6.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/6/56916_7.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/6/56916_8.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/6/56916_1.webp",
+      "file": "solaren-panel-160w-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/6/56916_2.webp",
+      "file": "solaren-panel-160w-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/6/56916_3.webp",
+      "file": "solaren-panel-160w-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/6/56916_4.webp",
+      "file": "solaren-panel-160w-4.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/6/56916_5.webp",
+      "file": "solaren-panel-160w-5.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/6/56916_6.webp",
+      "file": "solaren-panel-160w-6.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/6/56916_7.webp",
+      "file": "solaren-panel-160w-7.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/6/56916_8.webp",
+      "file": "solaren-panel-160w-8.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Баркодът в dice е записан с водеща нула (04897082663089); в продукта е без нея (4897082663089, както е в описанието на dice). Търсенето в dice го намира само с нулата.",

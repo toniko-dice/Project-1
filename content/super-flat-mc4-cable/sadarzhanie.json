@@ -35,19 +35,19 @@
   },
   "galeriya": [
     {
-      "file": "62871_1.webp",
+      "file": "super-flat-mc4-cable-1.webp",
       "alt": "EcoFlow Super Flat MC4 Cable (0.5m) — кабел"
     },
     {
-      "file": "62871_2.webp",
+      "file": "super-flat-mc4-cable-2.webp",
       "alt": "EcoFlow Super Flat MC4 Cable (0.5m) — кабел"
     },
     {
-      "file": "62871_3.webp",
+      "file": "super-flat-mc4-cable-3.webp",
       "alt": "EcoFlow Super Flat MC4 Cable (0.5m) — кабел"
     },
     {
-      "file": "62871_4.webp",
+      "file": "super-flat-mc4-cable-4.webp",
       "alt": "EcoFlow Super Flat MC4 Cable (0.5m) — кабел"
     }
   ],
@@ -114,15 +114,24 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62871_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62871_2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62871_3.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62871_4.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62871_1.webp",
+      "file": "super-flat-mc4-cable-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62871_2.webp",
+      "file": "super-flat-mc4-cable-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62871_3.webp",
+      "file": "super-flat-mc4-cable-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62871_4.webp",
+      "file": "super-flat-mc4-cable-4.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "За микроинвертора EcoFlow PowerStream (предишното поколение), който го няма в сайта → „Съвместим с“ е празно. Не е за STREAM Microinverter.",

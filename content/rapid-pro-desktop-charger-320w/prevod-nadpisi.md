@@ -1,6 +1,6 @@
 # EcoFlow RAPID Pro Desktop Charger (320W, 5 Ports, GaN) — надписи в снимките
 
-## `pc_ksp_eu_e711811c-1843-4734-8c19-4854abbb6e12.jpg`
+## `rapid-pro-desktop-charger-320w-pregled-1.jpg`
 - 320W Max Output → 320W макс. изходна мощност
 - 140W Max USB-C Power → 140W макс. от USB-C
 - 6-in-1 Multi-Device Ultra-Powerful Desktop Charger → 6 в 1 — мощно настолно зарядно за много устройства
@@ -9,11 +9,11 @@
 - Powerful and Compact Design with GaN Technology → Мощен и компактен дизайн с GaN технология
 - Smart LCD Screen Display → Умен LCD екран
 
-## `pc_GaN_Technology_eu.jpg`
+## `rapid-pro-desktop-charger-320w-klyuchovi-predimstva-1.jpg`
 - Powerful and Compact Design with GaN Technology EcoFlow RAPID Pro Multi-device Fast Charging Desktop Station → Мощен и компактен дизайн с GaN технология — настолна станция EcoFlow RAPID Pro за бързо зареждане на много устройства
 - Same Power, Smaller Size → Същата мощност, по-малък размер
 
-## `pc_6-in-1_Compact_Design_eu.jpg`
+## `rapid-pro-desktop-charger-320w-klyuchovi-predimstva-2.jpg`
 - Power up to 6 devices (including EcoFlow RAPID Pro Power Banks) simultaneously. → Зарежда до 6 устройства наведнъж (включително външните батерии EcoFlow RAPID Pro).
 - Recharge EcoFlow RAPID Pro 27k Power Bank to 80% in 20 minutes. → Зарежда EcoFlow RAPID Pro 27k до 80% за 20 минути.
 - Charge multiple devices with the same fast charging for all. → Бързо зареждане за всички устройства едновременно.
@@ -21,18 +21,18 @@
 - 140W single-port output → 140W от един порт
 - 320W pogo-pin port¹ → 320W през Pogo Pin¹
 
-## `pc_Superior_Safety_eu_20debb50-e35f-4b6a-829d-a2eeccb94a67.jpg`
+## `rapid-pro-desktop-charger-320w-klyuchovi-predimstva-3.jpg`
 - Advanced protection for maximum performance → Модерна защита за максимална производителност
 - Protected by EcoFlow's X-GUARD → Защитено от EcoFlow X-GUARD
 - EcoFlow RAPID Pro maintains its fast charging levels with around-the-clock safety checks. Its temperature sensor tests and adjusts for overheating up to 10 million times every day while intelligent BMS and EMS systems keep the rest running smoothly. → EcoFlow RAPID Pro запазва бързото зареждане с денонощни проверки за безопасност. Температурният сензор проверява и коригира прегряване до 10 милиона пъти на ден, а интелигентните системи BMS и EMS се грижат за всичко останало.
 
-## `pc_Smart_Display_eu_c13cf79a-8809-4426-abac-a38d3212328e.jpg`
+## `rapid-pro-desktop-charger-320w-klyuchovi-predimstva-4.jpg`
 - Smart, High-definition 3.02-inch LCD Screen → Умен LCD екран 3,02 инча с висока резолюция
 - Power data visualization → Данни за мощността
 - Standby clock theme settings → Часовник в режим на готовност
 - Power status animation → Анимация на състоянието
 
-## `pc_app_eu_9b06dc52-1bc5-4caf-8d8c-74fd07df844a.jpg`
+## `rapid-pro-desktop-charger-320w-prilozhenie-1.jpg`
 - Monitor → Наблюдение
 - Discharging power/voltage/current, historical usage data (weekly, monthly, yearly), and output. → Мощност, напрежение и ток, история на използването (седмица, месец, година) и изход.
 - Control → Управление
@@ -40,7 +40,7 @@
 - Battery Optimization Mode* → Оптимизация на батерията*
 - Enable while charging to extend the battery life of charging devices. → Включете при зареждане, за да удължите живота на батериите на устройствата.
 
-## `pc_screen.jpg`
+## `rapid-pro-desktop-charger-320w-prilozhenie-2.jpg`
 - Updating firmware → Обновяване на фърмуера
 - Restoring... → Възстановяване…
 - C1 PORT → ПОРТ C1

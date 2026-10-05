@@ -38,23 +38,23 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-stream-microinverter-1156661596.png",
+      "file": "stream-microinverter-1.png",
       "alt": "EcoFlow STREAM Microinverter — микроинвертор"
     },
     {
-      "file": "ecoflow-stream-microinverter-1159442632.png",
+      "file": "stream-microinverter-2.png",
       "alt": "EcoFlow STREAM Microinverter — микроинвертор"
     },
     {
-      "file": "ecoflow-stream-microinverter-1159442631.png",
+      "file": "stream-microinverter-3.png",
       "alt": "EcoFlow STREAM Microinverter — микроинвертор"
     },
     {
-      "file": "ecoflow-stream-microinverter-1159442630.png",
+      "file": "stream-microinverter-4.png",
       "alt": "EcoFlow STREAM Microinverter — микроинвертор"
     },
     {
-      "file": "ecoflow-stream-microinverter-1159442629.png",
+      "file": "stream-microinverter-5.png",
       "alt": "EcoFlow STREAM Microinverter — микроинвертор"
     }
   ],
@@ -66,7 +66,7 @@
       "anchorLabel": "Преглед",
       "heading": "Сметки по-ниски с до 137 €*",
       "body": "Соларната система EcoFlow STREAM свързва соларните панели с микроинвертора и превръща слънчевата светлина в готово за ползване електричество за дома. През деня захранва рутера, хладилника, телевизора и радиото. Системата произвежда до 858 kWh годишно и може да спести до 137 € на година от сметките за ток.*",
-      "image": "PC_01_EU.png",
+      "image": "stream-microinverter-pregled-1.png",
       "imageAlt": "Предимствата на STREAM Microinverter"
     },
     {
@@ -90,7 +90,7 @@
       "subheading": "Приложението EcoFlow — вече по-умно с Eco-AI",
       "subheadingPosition": "below",
       "body": "С Eco-AI приложението EcoFlow управлява енергията по-умно от всякога, когато е свързана соларна система от серията STREAM. Режимът AI-TOU спестява максимално, като анализира данните за мрежата и слънцето, а AI асистентът ви дава контрол 24/7 с едно докосване. Настройвайте режимите и управлявайте уредите отдалечено — у дома или навън.**",
-      "image": "PC_04_EU.png",
+      "image": "stream-microinverter-prilozhenie-1.png",
       "imageAlt": "Функциите с изкуствен интелект в приложението"
     },
     {
@@ -99,7 +99,7 @@
       "theme": "light",
       "heading": "Свързва се с умния дом",
       "body": "Свързва се с умни електромери и енергийни платформи на трети страни — следите консумацията на дома в реално време в приложението EcoFlow.",
-      "image": "kele.png",
+      "image": "stream-microinverter-svarzva-se-s-umniya-1.png",
       "imageAlt": "Съвместими платформи и марки"
     },
     {
@@ -108,7 +108,7 @@
       "theme": "light",
       "heading": "Вашият AI енергиен асистент 24/7",
       "body": "Всичко на едно място: състояние в реално време, календар на спестяванията и дистанционно управление на устройствата.",
-      "image": "PC_06_EU.png",
+      "image": "stream-microinverter-vashiyat-ai-energien-asistent-1.png",
       "imageAlt": "Приложението EcoFlow"
     },
     {
@@ -118,7 +118,7 @@
       "anchorLabel": "Монтаж",
       "heading": "Включвате и работи",
       "body": "Започвате да произвеждате ток за 30 минути. Без пробиване — поставяте го където ви е удобно и го местите лесно, идеално и за наематели. Монтирате го сами, без електротехник.",
-      "image": "PC_07_EU_33498bfd-f591-4304-977a-23654acab1cb.png",
+      "image": "stream-microinverter-montazh-1.png",
       "imageAlt": "Монтаж на балкон и в градината"
     },
     {
@@ -129,13 +129,13 @@
         {
           "name": "EcoFlow STREAM Microinverter 800W",
           "qty": 1,
-          "image": "01_Microiverter.png",
+          "image": "stream-microinverter-kakvo-ima-v-kutiyata-1.png",
           "imageAlt": "EcoFlow STREAM Microinverter 800W"
         },
         {
           "name": "AC кабел STREAM BKW (5 м)",
           "qty": 1,
-          "image": "02_01_EcoFlow_STREAM_BKW-AC_Cable_5m.png",
+          "image": "stream-microinverter-kakvo-ima-v-kutiyata-2.png",
           "imageAlt": "AC кабел STREAM BKW (5 м)"
         },
         {
@@ -145,25 +145,25 @@
         {
           "name": "Дюбели с винтове (комплект)",
           "qty": 1,
-          "image": "06_Expansion_screws_with_pipes.png",
+          "image": "stream-microinverter-kakvo-ima-v-kutiyata-3.png",
           "imageAlt": "Дюбели с винтове (комплект)"
         },
         {
           "name": "Инструкции за безопасност",
           "qty": 1,
-          "image": "11_Safety_Instructions_2505dcb9-5d6a-4567-b4ad-65fdd9baa52c.png",
+          "image": "stream-pro-kakvo-ima-v-kutiyata-7.png",
           "imageAlt": "Инструкции за безопасност"
         },
         {
           "name": "Ръководство за монтаж",
           "qty": 1,
-          "image": "12_Installation_Guide_ac28aa98-34b4-483a-b0a8-aa3ca8a69857.png",
+          "image": "stream-pro-kakvo-ima-v-kutiyata-8.png",
           "imageAlt": "Ръководство за монтаж"
         },
         {
           "name": "Гаранционна карта",
           "qty": 1,
-          "image": "10_Warranty_Card_2f6c83cb-9471-4bb0-aff5-c88266c1c9b7.png",
+          "image": "stream-pro-kakvo-ima-v-kutiyata-9.png",
           "imageAlt": "Гаранционна карта"
         }
       ]
@@ -340,30 +340,74 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-microinverter-1156661596.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-microinverter-1159442632.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-microinverter-1159442631.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-microinverter-1159442630.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-microinverter-1159442629.png"
-    ],
-    "sekcii": [
-      "https://eu.ecoflow.com/cdn/shop/files/PC_01_EU.png",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_04_EU.png",
-      "https://eu.ecoflow.com/cdn/shop/files/kele.png",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_06_EU.png",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_07_EU_33498bfd-f591-4304-977a-23654acab1cb.png",
-      "https://eu.ecoflow.com/cdn/shop/files/01_Microiverter.png",
-      "https://eu.ecoflow.com/cdn/shop/files/02_01_EcoFlow_STREAM_BKW-AC_Cable_5m.png",
-      "https://eu.ecoflow.com/cdn/shop/files/06_Expansion_screws_with_pipes.png",
-      "https://eu.ecoflow.com/cdn/shop/files/11_Safety_Instructions_2505dcb9-5d6a-4567-b4ad-65fdd9baa52c.png",
-      "https://eu.ecoflow.com/cdn/shop/files/12_Installation_Guide_ac28aa98-34b4-483a-b0a8-aa3ca8a69857.png",
-      "https://eu.ecoflow.com/cdn/shop/files/10_Warranty_Card_2f6c83cb-9471-4bb0-aff5-c88266c1c9b7.png"
-    ]
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-microinverter-1156661596.png",
+      "file": "stream-microinverter-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-microinverter-1159442632.png",
+      "file": "stream-microinverter-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-microinverter-1159442631.png",
+      "file": "stream-microinverter-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-microinverter-1159442630.png",
+      "file": "stream-microinverter-4.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-microinverter-1159442629.png",
+      "file": "stream-microinverter-5.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_01_EU.png",
+      "file": "stream-microinverter-pregled-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_04_EU.png",
+      "file": "stream-microinverter-prilozhenie-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/kele.png",
+      "file": "stream-microinverter-svarzva-se-s-umniya-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_06_EU.png",
+      "file": "stream-microinverter-vashiyat-ai-energien-asistent-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_07_EU_33498bfd-f591-4304-977a-23654acab1cb.png",
+      "file": "stream-microinverter-montazh-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/01_Microiverter.png",
+      "file": "stream-microinverter-kakvo-ima-v-kutiyata-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/02_01_EcoFlow_STREAM_BKW-AC_Cable_5m.png",
+      "file": "stream-microinverter-kakvo-ima-v-kutiyata-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/06_Expansion_screws_with_pipes.png",
+      "file": "stream-microinverter-kakvo-ima-v-kutiyata-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/11_Safety_Instructions_2505dcb9-5d6a-4567-b4ad-65fdd9baa52c.png",
+      "file": "stream-pro-kakvo-ima-v-kutiyata-7.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/12_Installation_Guide_ac28aa98-34b4-483a-b0a8-aa3ca8a69857.png",
+      "file": "stream-pro-kakvo-ima-v-kutiyata-8.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/10_Warranty_Card_2f6c83cb-9471-4bb0-aff5-c88266c1c9b7.png",
+      "file": "stream-pro-kakvo-ima-v-kutiyata-9.png"
+    }
+  ],
   "_prevod_nadpisi": {
-    "PC_01_EU.png": {
+    "stream-microinverter-pregled-1.png": {
       "Saves you up to €137 on electricity bills": "Спестява до 137 € от сметките за ток",
       "AI-powered energy management for maximum efficiency": "Управление на енергията с изкуствен интелект за максимална ефективност",
       "10-year warranty for long-term reliability*": "10 години гаранция за дългосрочна надеждност*",
@@ -371,17 +415,17 @@
       "IP67 microinverter / IP68 solar panel": "Микроинвертор IP67 / Соларен панел IP68",
       "Easy DIY installation": "Лесен монтаж сами"
     },
-    "PC_04_EU.png": {
+    "stream-microinverter-prilozhenie-1.png": {
       "AI-TOU (Dynamic Electricity Tariff)": "AI-TOU (динамична тарифа)",
       "AI Power Prediction": "AI прогноза за производството",
       "24/7 AI Assitant": "AI асистент 24/7"
     },
-    "PC_06_EU.png": {
+    "stream-microinverter-vashiyat-ai-energien-asistent-1.png": {
       "Status Overview — Monitor all energy data in real-time.": "Преглед на състоянието — всички данни за енергията в реално време.",
       "Savings Calendar — See your daily and weekly savings.": "Календар на спестяванията — дневни и седмични спестявания.",
       "Remote Control — Manage connected devices anytime, anywhere.": "Дистанционно управление — устройствата по всяко време и отвсякъде."
     },
-    "PC_07_EU_33498bfd-f591-4304-977a-23654acab1cb.png": {
+    "stream-microinverter-montazh-1.png": {
       "No Drilling Required — The drill-free design allows flexible placement and easy movement—perfect for renters.": "Без пробиване — поставяте го където искате и го местите лесно, идеално за наематели.",
       "Easy DIY Setup — With a plug-and-play design, set it up yourself in no time—no need for an electrician.": "Лесен монтаж — включвате и работи, монтирате го сами, без електротехник."
     }

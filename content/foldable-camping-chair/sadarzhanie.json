@@ -33,11 +33,11 @@
   },
   "galeriya": [
     {
-      "file": "71876_1.webp",
+      "file": "foldable-camping-chair-1.webp",
       "alt": "EcoFlow Foldable Camping Chair — къмпинг стол"
     },
     {
-      "file": "71876_2.webp",
+      "file": "foldable-camping-chair-2.webp",
       "alt": "EcoFlow Foldable Camping Chair — къмпинг стол"
     }
   ],
@@ -104,13 +104,16 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/1/71876_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/1/71876_2.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/1/71876_1.webp",
+      "file": "foldable-camping-chair-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/1/71876_2.webp",
+      "file": "foldable-camping-chair-2.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "В dice.bg няма описание — размерите и материалите са от eu.ecoflow.com/products/ecoflow-foldable-camping-chair.",

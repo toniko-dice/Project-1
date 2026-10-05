@@ -38,15 +38,15 @@
   },
   "galeriya": [
     {
-      "file": "62272_1_1.webp",
+      "file": "wave-2-add-on-battery-1.webp",
       "alt": "EcoFlow WAVE 2 Add-On Battery — допълнителна батерия"
     },
     {
-      "file": "62272_2_1.webp",
+      "file": "wave-2-add-on-battery-2.webp",
       "alt": "EcoFlow WAVE 2 Add-On Battery — допълнителна батерия"
     },
     {
-      "file": "62272_3_1.webp",
+      "file": "wave-2-add-on-battery-3.webp",
       "alt": "EcoFlow WAVE 2 Add-On Battery — допълнителна батерия"
     }
   ],
@@ -143,14 +143,20 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62272_1_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62272_2_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62272_3_1.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62272_1_1.webp",
+      "file": "wave-2-add-on-battery-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62272_2_1.webp",
+      "file": "wave-2-add-on-battery-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62272_3_1.webp",
+      "file": "wave-2-add-on-battery-3.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Страницата в eu.ecoflow.com е само с цена — съдържанието е по dice.bg.",

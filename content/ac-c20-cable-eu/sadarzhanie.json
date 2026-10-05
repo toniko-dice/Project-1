@@ -36,27 +36,27 @@
   },
   "galeriya": [
     {
-      "file": "67362_1.webp",
+      "file": "ac-c20-cable-eu-1.webp",
       "alt": "EcoFlow AC C20 Cable EU (1.5m) — кабел"
     },
     {
-      "file": "67362_2.webp",
+      "file": "ac-c20-cable-eu-2.webp",
       "alt": "EcoFlow AC C20 Cable EU (1.5m) — кабел"
     },
     {
-      "file": "67362_3.webp",
+      "file": "ac-c20-cable-eu-3.webp",
       "alt": "EcoFlow AC C20 Cable EU (1.5m) — кабел"
     },
     {
-      "file": "67362_4.webp",
+      "file": "ac-c20-cable-eu-4.webp",
       "alt": "EcoFlow AC C20 Cable EU (1.5m) — кабел"
     },
     {
-      "file": "67362_5.webp",
+      "file": "ac-c20-cable-eu-5.webp",
       "alt": "EcoFlow AC C20 Cable EU (1.5m) — кабел"
     },
     {
-      "file": "67362_6.webp",
+      "file": "ac-c20-cable-eu-6.webp",
       "alt": "EcoFlow AC C20 Cable EU (1.5m) — кабел"
     }
   ],
@@ -119,17 +119,32 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/7/67362_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/7/67362_2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/7/67362_3.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/7/67362_4.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/7/67362_5.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/7/67362_6.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/7/67362_1.webp",
+      "file": "ac-c20-cable-eu-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/7/67362_2.webp",
+      "file": "ac-c20-cable-eu-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/7/67362_3.webp",
+      "file": "ac-c20-cable-eu-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/7/67362_4.webp",
+      "file": "ac-c20-cable-eu-4.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/7/67362_5.webp",
+      "file": "ac-c20-cable-eu-5.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/7/67362_6.webp",
+      "file": "ac-c20-cable-eu-6.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "По dice.bg и eu.ecoflow.com/products/ac-charging-cable (вариант C20).",

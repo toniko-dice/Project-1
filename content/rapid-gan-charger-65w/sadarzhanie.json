@@ -36,11 +36,11 @@
   },
   "galeriya": [
     {
-      "file": "70357_1_1.webp",
+      "file": "rapid-gan-charger-65w-1.webp",
       "alt": "EcoFlow RAPID 65W GaN Charger — зарядно"
     },
     {
-      "file": "70357_2_1.webp",
+      "file": "rapid-gan-charger-65w-2.webp",
       "alt": "EcoFlow RAPID 65W GaN Charger — зарядно"
     }
   ],
@@ -111,13 +111,16 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70357_1_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70357_2_1.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70357_1_1.webp",
+      "file": "rapid-gan-charger-65w-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70357_2_1.webp",
+      "file": "rapid-gan-charger-65w-2.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "В eu.ecoflow.com е само като подарък към други продукти — по dice.bg.",

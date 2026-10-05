@@ -35,15 +35,15 @@
   },
   "galeriya": [
     {
-      "file": "61557_1.webp",
+      "file": "power-kit-power-hub-1.webp",
       "alt": "EcoFlow Power Kits Power Hub — захранващ хъб"
     },
     {
-      "file": "61557_2.webp",
+      "file": "power-kit-power-hub-2.webp",
       "alt": "EcoFlow Power Kits Power Hub — захранващ хъб"
     },
     {
-      "file": "61557_3.webp",
+      "file": "power-kit-power-hub-3.webp",
       "alt": "EcoFlow Power Kits Power Hub — захранващ хъб"
     }
   ],
@@ -189,14 +189,20 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61557_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61557_2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61557_3.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61557_1.webp",
+      "file": "power-kit-power-hub-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61557_2.webp",
+      "file": "power-kit-power-hub-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61557_3.webp",
+      "file": "power-kit-power-hub-3.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Страницата в eu.ecoflow.com е само с цена — съдържанието е по dice.bg.",

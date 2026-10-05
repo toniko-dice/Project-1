@@ -41,7 +41,7 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow_manual_trasfer_switch_for_ecoflow_deltra_pro_3-1.webp",
+      "file": "manual-transfer-switch-1.webp",
       "alt": "EcoFlow Manual Transfer Switch — ръчен превключвател"
     }
   ],
@@ -122,12 +122,12 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_manual_trasfer_switch_for_ecoflow_deltra_pro_3-1.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_manual_trasfer_switch_for_ecoflow_deltra_pro_3-1.webp",
+      "file": "manual-transfer-switch-1.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Продуктът го няма в сайтовете на EcoFlow за Европа — текстът и данните са от dice.bg (правилото „само dice“). Техническите параметри (ток, брой кръгове, размери) не са публикувани — не са добавени.",

@@ -38,31 +38,31 @@
   },
   "galeriya": [
     {
-      "file": "62856_1.webp",
+      "file": "camping-light-1.webp",
       "alt": "EcoFlow Multifunctional Camping Light — лампа за къмпинг"
     },
     {
-      "file": "62856_2.webp",
+      "file": "camping-light-2.webp",
       "alt": "EcoFlow Multifunctional Camping Light — лампа за къмпинг"
     },
     {
-      "file": "62856_3.webp",
+      "file": "camping-light-3.webp",
       "alt": "EcoFlow Multifunctional Camping Light — лампа за къмпинг"
     },
     {
-      "file": "62856_4.webp",
+      "file": "camping-light-4.webp",
       "alt": "EcoFlow Multifunctional Camping Light — лампа за къмпинг"
     },
     {
-      "file": "62856_5.webp",
+      "file": "camping-light-5.webp",
       "alt": "EcoFlow Multifunctional Camping Light — лампа за къмпинг"
     },
     {
-      "file": "62856_6.webp",
+      "file": "camping-light-6.webp",
       "alt": "EcoFlow Multifunctional Camping Light — лампа за къмпинг"
     },
     {
-      "file": "62856_7.webp",
+      "file": "camping-light-7.webp",
       "alt": "EcoFlow Multifunctional Camping Light — лампа за къмпинг"
     }
   ],
@@ -195,18 +195,36 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62856_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62856_2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62856_3.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62856_4.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62856_5.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62856_6.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62856_7.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62856_1.webp",
+      "file": "camping-light-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62856_2.webp",
+      "file": "camping-light-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62856_3.webp",
+      "file": "camping-light-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62856_4.webp",
+      "file": "camping-light-4.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62856_5.webp",
+      "file": "camping-light-5.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62856_6.webp",
+      "file": "camping-light-6.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62856_7.webp",
+      "file": "camping-light-7.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "По твое решение всичко е по dice.bg — име, текст, спецификации и снимки. EcoFlow EU пише за същия продукт (SCLI-B) 3600 mAh и IP54 и не споменава USB изход.",

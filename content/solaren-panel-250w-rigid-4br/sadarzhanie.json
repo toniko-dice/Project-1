@@ -43,7 +43,7 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-250w-rigid-solar-panel-4-pieces-1183981796.png",
+      "file": "solaren-panel-250w-rigid-4br-1.png",
       "alt": "EcoFlow 250W Rigid Solar Panel (4 pieces) — четири панела"
     }
   ],
@@ -55,7 +55,7 @@
       "anchorLabel": "Преглед",
       "heading": "EcoFlow 250W соларен панел",
       "body": "",
-      "image": "1_1_f10a0f2c-a3eb-445a-8477-ef3de10c060e.jpg",
+      "image": "solaren-panel-250w-rigid-4br-pregled-1.jpg",
       "imageAlt": "EcoFlow 250W Rigid Solar Panel (4 pieces) — основни предимства"
     },
     {
@@ -65,7 +65,7 @@
       "anchorLabel": "Двулицев",
       "heading": "Двулицев фотоволтаичен панел",
       "body": "С модулна ефективност 24,7% EcoFlow 250W соларният панел е сред най-ефективните в класа си. Благодарение на двулицевия дизайн улавя светлина и от двете страни и максимизира производството на енергия.",
-      "image": "2_1_IMG_8d6e0ea9-08d6-4911-863d-bb5b603507d1.jpg",
+      "image": "solaren-panel-250w-rigid-4br-dvulicev-1.jpg",
       "imageAlt": "24,7% ефективност"
     },
     {
@@ -75,7 +75,7 @@
       "anchorLabel": "N-тип",
       "heading": "Повече енергия благодарение на N-тип клетките",
       "body": "Енергията се произвежда постоянно, независимо от сезонните температурни колебания.",
-      "image": "3_1_IMG_ec998e24-75db-4be6-91c3-ca33a8f3093a.jpg",
+      "image": "solaren-panel-250w-rigid-4br-n-tip-1.jpg",
       "imageAlt": "Панел на балкон под дъжд и слънце — 25 години линейна гаранция за производителност"
     },
     {
@@ -85,7 +85,7 @@
       "anchorLabel": "Приложение",
       "heading": "Едно приложение — всичко пред очите ви",
       "body": "Умни спестявания с едно докосване в приложението.",
-      "image": "4_1_IMG_085dfeb4-448e-46e7-aa70-d5ef6efca764.jpg",
+      "image": "solaren-panel-250w-rigid-4br-prilozhenie-1.jpg",
       "imageAlt": "Приложението EcoFlow на телефон"
     },
     {
@@ -95,7 +95,7 @@
       "anchorLabel": "IP68",
       "heading": "IP68 защита от прах и вода",
       "body": "Соларните панели на EcoFlow работят добре и при дъжд, и в прашна среда.",
-      "image": "5_1_IMG_0dd21f76-98db-4323-9a52-15437cb136b8.jpg",
+      "image": "solaren-panel-250w-rigid-4br-ip68-1.jpg",
       "imageAlt": "Панели на покрив под дъжд, IP68"
     },
     {
@@ -105,7 +105,7 @@
       "anchorLabel": "Монтаж",
       "heading": "Лесен монтаж",
       "body": "Благодарение на нашите plug & play соларни системи вече не зависите от електротехници, майстори или монтажници.",
-      "image": "6_1_IMG_40a89695-0bdf-4d7a-a891-7f07b34cab51.jpg",
+      "image": "solaren-panel-250w-rigid-4br-montazh-1.jpg",
       "imageAlt": "Семейство монтира панел в градината"
     },
     {
@@ -114,7 +114,7 @@
       "theme": "light",
       "heading": "Разнообразни начини за монтаж",
       "body": "С вградените монтажни аксесоари EcoFlow 250W соларният панел е подходящ за почти всяко място — балкони, плоски покриви и градини.",
-      "image": "7_1_IMG_5be5177c-704b-491d-b894-be44e5c39872.jpg",
+      "image": "solaren-panel-250w-rigid-4br-raznoobrazni-nachini-za-montazh-1.jpg",
       "imageAlt": "Балкон, фасада, градина, покрив"
     },
     {
@@ -154,22 +154,42 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-250w-rigid-solar-panel-4-pieces-1183981796.png"
-    ],
-    "sekcii": [
-      "https://eu.ecoflow.com/cdn/shop/files/1_1_f10a0f2c-a3eb-445a-8477-ef3de10c060e.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/2_1_IMG_8d6e0ea9-08d6-4911-863d-bb5b603507d1.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/3_1_IMG_ec998e24-75db-4be6-91c3-ca33a8f3093a.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/4_1_IMG_085dfeb4-448e-46e7-aa70-d5ef6efca764.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/5_1_IMG_0dd21f76-98db-4323-9a52-15437cb136b8.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/6_1_IMG_40a89695-0bdf-4d7a-a891-7f07b34cab51.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/7_1_IMG_5be5177c-704b-491d-b894-be44e5c39872.jpg"
-    ]
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-250w-rigid-solar-panel-4-pieces-1183981796.png",
+      "file": "solaren-panel-250w-rigid-4br-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/1_1_f10a0f2c-a3eb-445a-8477-ef3de10c060e.jpg",
+      "file": "solaren-panel-250w-rigid-4br-pregled-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/2_1_IMG_8d6e0ea9-08d6-4911-863d-bb5b603507d1.jpg",
+      "file": "solaren-panel-250w-rigid-4br-dvulicev-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/3_1_IMG_ec998e24-75db-4be6-91c3-ca33a8f3093a.jpg",
+      "file": "solaren-panel-250w-rigid-4br-n-tip-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/4_1_IMG_085dfeb4-448e-46e7-aa70-d5ef6efca764.jpg",
+      "file": "solaren-panel-250w-rigid-4br-prilozhenie-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/5_1_IMG_0dd21f76-98db-4323-9a52-15437cb136b8.jpg",
+      "file": "solaren-panel-250w-rigid-4br-ip68-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/6_1_IMG_40a89695-0bdf-4d7a-a891-7f07b34cab51.jpg",
+      "file": "solaren-panel-250w-rigid-4br-montazh-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/7_1_IMG_5be5177c-704b-491d-b894-be44e5c39872.jpg",
+      "file": "solaren-panel-250w-rigid-4br-raznoobrazni-nachini-za-montazh-1.jpg"
+    }
+  ],
   "_prevod_nadpisi": {
-    "1_1_f10a0f2c-a3eb-445a-8477-ef3de10c060e.jpg": {
+    "solaren-panel-250w-rigid-4br-pregled-1.jpg": {
       "≥24.7% efficiency / TOPCon solar cells perform well even in low light conditions": "≥24,7% ефективност / TOPCon клетките работят добре и при слаба светлина",
       "Energy in your own hands / Dimensions 1137 × 1165 × 20 mm": "Енергията във вашите ръце / Размери 1137 × 1165 × 20 мм (внимание: таблицата на EcoFlow казва 1157)",
       "10 kg weigh per unit": "10 кг на панел",
@@ -179,22 +199,22 @@
       "App control management anywhere and anytime": "Управление от приложението отвсякъде и по всяко време",
       "Multi-mounting options / Including on balconies, flat roofs, tiled roofs, etc.": "Разнообразен монтаж / балкони, плоски покриви, керемидени покриви и др."
     },
-    "2_1_IMG_8d6e0ea9-08d6-4911-863d-bb5b603507d1.jpg": {
+    "solaren-panel-250w-rigid-4br-dvulicev-1.jpg": {
       "24.7%": "24,7%"
     },
-    "3_1_IMG_ec998e24-75db-4be6-91c3-ca33a8f3093a.jpg": {
+    "solaren-panel-250w-rigid-4br-n-tip-1.jpg": {
       "25 years linear performance guarantee": "25 години линейна гаранция за производителност"
     },
-    "4_1_IMG_085dfeb4-448e-46e7-aa70-d5ef6efca764.jpg": {
+    "solaren-panel-250w-rigid-4br-prilozhenie-1.jpg": {
       "Real-time control anywhere, anytime": "Контрол в реално време отвсякъде, по всяко време",
       "Seamless device networking on one platform": "Всички устройства в една платформа",
       "Energy price forecast*": "Прогноза на цената на тока*",
       "* This function is only available on certain models": "* Функцията е налична само при някои модели"
     },
-    "5_1_IMG_0dd21f76-98db-4323-9a52-15437cb136b8.jpg": {
+    "solaren-panel-250w-rigid-4br-ip68-1.jpg": {
       "IP68": "остава"
     },
-    "7_1_IMG_5be5177c-704b-491d-b894-be44e5c39872.jpg": {
+    "solaren-panel-250w-rigid-4br-raznoobrazni-nachini-za-montazh-1.jpg": {
       "Balcony": "Балкон",
       "Facade": "Фасада",
       "Garden": "Градина",

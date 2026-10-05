@@ -36,15 +36,15 @@
   },
   "galeriya": [
     {
-      "file": "60766_1.webp",
+      "file": "solar-angle-guide-1.webp",
       "alt": "EcoFlow Solar Angle Guide — уред за ъгъла"
     },
     {
-      "file": "60766_2.webp",
+      "file": "solar-angle-guide-2.webp",
       "alt": "EcoFlow Solar Angle Guide — уред за ъгъла"
     },
     {
-      "file": "60766_3.webp",
+      "file": "solar-angle-guide-3.webp",
       "alt": "EcoFlow Solar Angle Guide — уред за ъгъла"
     }
   ],
@@ -111,14 +111,20 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60766_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60766_2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60766_3.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60766_1.webp",
+      "file": "solar-angle-guide-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60766_2.webp",
+      "file": "solar-angle-guide-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60766_3.webp",
+      "file": "solar-angle-guide-3.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",

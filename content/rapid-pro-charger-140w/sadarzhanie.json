@@ -39,11 +39,11 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-rapid-pro-charger-140w-4-ports-gan-1171422041.png",
+      "file": "rapid-pro-charger-140w-1.png",
       "alt": "EcoFlow RAPID Pro Charger (140W, 4 Ports, GaN) — зарядно 140W"
     },
     {
-      "file": "ecoflow-rapid-pro-charger-140w-4-ports-gan-1171422040.png",
+      "file": "rapid-pro-charger-140w-2.png",
       "alt": "EcoFlow RAPID Pro Charger (140W, 4 Ports, GaN) — зарядно 140W"
     }
   ],
@@ -56,28 +56,28 @@
       "tabs": [
         {
           "label": "Портативно с GaN технология",
-          "image": "pc_GaN_Technology_eu_ac2291f5-b5ba-4fa8-b9e9-ccff2aa6da00.jpg",
+          "image": "rapid-pro-charger-100w-pregled-1.jpg",
           "imageAlt": "Портативно с GaN технология",
           "caption": "Компактният дизайн се вписва навсякъде, без да заема място и без да пречи на други устройства — около 36% по-малко от захранването Apple 140W USB-C.",
           "rows": []
         },
         {
           "label": "4 в 1 — бързо зарядно с много портове",
-          "image": "pc_Multi-plug_Charger_eu.jpg",
+          "image": "rapid-pro-charger-140w-pregled-2.jpg",
           "imageAlt": "4 в 1 — бързо зарядно с много портове",
           "caption": "Когато зарежда няколко устройства наведнъж, разпределя мощността според нуждите на всяко — ефективно, стабилно и безопасно.",
           "rows": []
         },
         {
           "label": "Висока стабилност",
-          "image": "pc_Advanced_Stability.jpg",
+          "image": "rapid-pro-charger-140w-pregled-3.jpg",
           "imageAlt": "Висока стабилност",
           "caption": "Включено в контакта, издържа товар до 0,6 кг, без да падне, и 10 употреби на ден без деформация. Щепселът издържа 5000 включвания и изключвания без износване.²",
           "rows": []
         },
         {
           "label": "Висока безопасност",
-          "image": "pc_140W_Charger_Superior_Safety_eu.jpg",
+          "image": "rapid-pro-charger-140w-pregled-4.jpg",
           "imageAlt": "Висока безопасност",
           "caption": "",
           "rows": []
@@ -93,21 +93,21 @@
       "tabs": [
         {
           "label": "Работа от разстояние",
-          "image": "pc__01_b8a9d78d-34c7-478c-af3d-afd46eb9f023.jpg",
+          "image": "rapid-pro-charger-140w-prilozheniya-1.jpg",
           "imageAlt": "Работа от разстояние",
           "caption": "",
           "rows": []
         },
         {
           "label": "В офиса",
-          "image": "pc__02_8b98fb89-907f-47c2-8f4a-3ceb211906fc.jpg",
+          "image": "rapid-pro-charger-140w-prilozheniya-2.jpg",
           "imageAlt": "В офиса",
           "caption": "",
           "rows": []
         },
         {
           "label": "Пътуване",
-          "image": "pc__04_d4befae7-83db-426c-9193-7c6f474965f2.jpg",
+          "image": "rapid-pro-charger-140w-prilozheniya-3.jpg",
           "imageAlt": "Пътуване",
           "caption": "",
           "rows": []
@@ -123,28 +123,28 @@
       "tabs": [
         {
           "label": "Един порт",
-          "image": "pc_140W_Charger_port_01.jpg",
+          "image": "rapid-pro-charger-140w-portove-1.jpg",
           "imageAlt": "Един порт",
           "caption": "",
           "rows": []
         },
         {
           "label": "Два порта",
-          "image": "pc_140W_Charger_port_02.jpg",
+          "image": "rapid-pro-charger-140w-portove-2.jpg",
           "imageAlt": "Два порта",
           "caption": "",
           "rows": []
         },
         {
           "label": "Три порта",
-          "image": "pc_140W_Charger_port_03.jpg",
+          "image": "rapid-pro-charger-140w-portove-3.jpg",
           "imageAlt": "Три порта",
           "caption": "",
           "rows": []
         },
         {
           "label": "Четири порта",
-          "image": "pc_140W_Charger_port_04.jpg",
+          "image": "rapid-pro-charger-140w-portove-4.jpg",
           "imageAlt": "Четири порта",
           "caption": "",
           "rows": []
@@ -158,7 +158,7 @@
       "theme": "light",
       "heading": "Енергия за нов свят",
       "body": "",
-      "image": "pc_About_EcoFlow_eu_13a918d0-cf23-48b3-9ee3-8af9b730a4f9.jpg",
+      "image": "rapid-pro-power-bank-20000-energiya-za-nov-svyat-1.jpg",
       "imageAlt": "За EcoFlow"
     },
     {
@@ -293,38 +293,76 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-charger-140w-4-ports-gan-1171422041.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-charger-140w-4-ports-gan-1171422040.png"
-    ],
-    "sekcii": [
-      "https://eu.ecoflow.com/cdn/shop/files/pc_140W_Charger_Superior_Safety_eu.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_140W_Charger_port_01.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_140W_Charger_port_02.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_140W_Charger_port_03.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_140W_Charger_port_04.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_About_EcoFlow_eu_13a918d0-cf23-48b3-9ee3-8af9b730a4f9.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_Advanced_Stability.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_GaN_Technology_eu_ac2291f5-b5ba-4fa8-b9e9-ccff2aa6da00.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_Multi-plug_Charger_eu.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc__01_b8a9d78d-34c7-478c-af3d-afd46eb9f023.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc__02_8b98fb89-907f-47c2-8f4a-3ceb211906fc.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc__04_d4befae7-83db-426c-9193-7c6f474965f2.jpg"
-    ]
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-charger-140w-4-ports-gan-1171422041.png",
+      "file": "rapid-pro-charger-140w-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-charger-140w-4-ports-gan-1171422040.png",
+      "file": "rapid-pro-charger-140w-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_140W_Charger_Superior_Safety_eu.jpg",
+      "file": "rapid-pro-charger-140w-pregled-4.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_140W_Charger_port_01.jpg",
+      "file": "rapid-pro-charger-140w-portove-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_140W_Charger_port_02.jpg",
+      "file": "rapid-pro-charger-140w-portove-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_140W_Charger_port_03.jpg",
+      "file": "rapid-pro-charger-140w-portove-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_140W_Charger_port_04.jpg",
+      "file": "rapid-pro-charger-140w-portove-4.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_About_EcoFlow_eu_13a918d0-cf23-48b3-9ee3-8af9b730a4f9.jpg",
+      "file": "rapid-pro-power-bank-20000-energiya-za-nov-svyat-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Advanced_Stability.jpg",
+      "file": "rapid-pro-charger-140w-pregled-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_GaN_Technology_eu_ac2291f5-b5ba-4fa8-b9e9-ccff2aa6da00.jpg",
+      "file": "rapid-pro-charger-100w-pregled-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Multi-plug_Charger_eu.jpg",
+      "file": "rapid-pro-charger-140w-pregled-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc__01_b8a9d78d-34c7-478c-af3d-afd46eb9f023.jpg",
+      "file": "rapid-pro-charger-140w-prilozheniya-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc__02_8b98fb89-907f-47c2-8f4a-3ceb211906fc.jpg",
+      "file": "rapid-pro-charger-140w-prilozheniya-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc__04_d4befae7-83db-426c-9193-7c6f474965f2.jpg",
+      "file": "rapid-pro-charger-140w-prilozheniya-3.jpg"
+    }
+  ],
   "_prevod_nadpisi": {
-    "pc_GaN_Technology_eu_ac2291f5-b5ba-4fa8-b9e9-ccff2aa6da00.jpg": {
+    "rapid-pro-charger-100w-pregled-1.jpg": {
       "Powerful and Compact Design with GaN Technology.": "Мощен и компактен дизайн с GaN технология.",
       "Ultra-Portable Design for On-the-Go Convenience.": "Изключително портативен — удобен в движение.",
       "Miniature Size, Maximum Performance.": "Миниатюрен размер, максимална производителност."
     },
-    "pc_Multi-plug_Charger_eu.jpg": {
+    "rapid-pro-charger-140w-pregled-2.jpg": {
       "Single Plug, Four-Device Charging Solution.": "Един контакт — зареждане на четири устройства.",
       "140W Fast Charging with EcoFlow X-Stream: 1 hr 58 min to fully charge a MacBook Pro 13\"": "140W бързо зареждане с EcoFlow X-Stream: MacBook Pro 13\" се зарежда напълно за 1 ч 58 мин",
       "Recharges the EcoFlow RAPID Pro 27k Power Bank from 0% to 80% in only 40 min with industry-leading charging technology.": "Зарежда външната батерия EcoFlow RAPID Pro 27k от 0% до 80% само за 40 мин с водеща технология за зареждане."
     },
-    "pc_140W_Charger_Superior_Safety_eu.jpg": {
+    "rapid-pro-charger-140w-pregled-4.jpg": {
       "Advanced protection for maximum performance": "Модерна защита за максимална производителност",
       "Protected by EcoFlow's X-GUARD": "Защитено от EcoFlow X-GUARD",
       "EcoFlow RAPID Pro maintains its fast charging levels 24/7 with around-the-clock safety checks. Its temperature sensor tests and adjusts for overheating up to 7,500 times every minute, while the VO-level fireproof shell protects externally.": "EcoFlow RAPID Pro запазва бързото зареждане 24/7 с денонощни проверки за безопасност. Температурният сензор проверява и коригира прегряване до 7500 пъти в минута, а негорим корпус клас V0 пази отвън."

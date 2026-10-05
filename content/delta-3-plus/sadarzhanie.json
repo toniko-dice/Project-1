@@ -48,23 +48,23 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-delta-3-series-portable-power-station-60905350299991.png",
+      "file": "delta-3-plus-1.png",
       "alt": "EcoFlow DELTA 3 Plus — изглед отпред"
     },
     {
-      "file": "ecoflow-delta-3-series-portable-power-station-60905350332759.png",
+      "file": "delta-3-plus-2.png",
       "alt": "EcoFlow DELTA 3 Plus — изглед отпред, дисплей"
     },
     {
-      "file": "ecoflow-delta-3-series-portable-power-station-60175528657239.png",
+      "file": "delta-3-plus-3.png",
       "alt": "EcoFlow DELTA 3 Plus на къмпинг"
     },
     {
-      "file": "ecoflow-delta-3-series-portable-power-station-1242802780.png",
+      "file": "delta-3-plus-4.png",
       "alt": "EcoFlow DELTA 3 Plus със соларен панел"
     },
     {
-      "file": "ecoflow-delta-3-series-portable-power-station-1248890635.png",
+      "file": "delta-3-plus-5.png",
       "alt": "EcoFlow DELTA 3 Plus — изглед отстрани"
     }
   ],
@@ -76,7 +76,7 @@
       "anchorLabel": "Преглед",
       "heading": "",
       "body": "",
-      "image": "PC_0_2_D3P_Main_KV.jpg"
+      "image": "delta-3-plus-pregled-1.jpg"
     },
     {
       "blockType": "featureSection",
@@ -84,7 +84,7 @@
       "theme": "light",
       "heading": "Водеща в индустрията портативна електроцентрала с най-бързото зареждане",
       "body": "",
-      "image": "1_1_89e83263-2f74-494c-9408-ceb946b52290.jpg"
+      "image": "delta-3-plus-vodeshta-v-industriyata-portativna-1.jpg"
     },
     {
       "blockType": "keySpecStrip",
@@ -132,35 +132,35 @@
       "tabs": [
         {
           "label": "От контакт",
-          "image": "PC_2_1_D3P_AC_Charging.jpg",
+          "image": "delta-3-plus-zarezhdane-1.jpg",
           "imageAlt": "Зареждане на DELTA 3 Plus от контакт",
           "caption": "1500W вход — пълен заряд за 56 минути. [1] С технологията X-Stream DELTA 3 се зарежда от 0 до 100% за 56 минути. Половин час на контакта дава часове резервно захранване преди спиране на тока.",
           "rows": []
         },
         {
           "label": "От слънце",
-          "image": "PC_2_2_D3P_Solar_Charging.jpg",
+          "image": "delta-3-plus-zarezhdane-2.jpg",
           "imageAlt": "Зареждане на DELTA 3 Plus от соларни панели",
           "caption": "Два соларни входа с MPPT, общо до 1000W (2 × 500W) — пълен заряд за 70 минути, дори при ограничено слънце. [2] На открито се презарежда, докато обядвате.",
           "rows": []
         },
         {
           "label": "От автомобил",
-          "image": "PC_2_3_D3P_Car_Charging.jpg",
+          "image": "delta-3-plus-zarezhdane-3.jpg",
           "imageAlt": "Зареждане на DELTA 3 Plus от автомобил",
           "caption": "С алтернаторното зарядно EcoFlow 800W — пълен заряд за около 1,3 часа, докато шофирате. [3]",
           "rows": []
         },
         {
           "label": "Комбинирано",
-          "image": "PC_2_4_D3P_Multi-Charging.jpg",
+          "image": "delta-3-plus-zarezhdane-4.jpg",
           "imageAlt": "Комбинирано зареждане на DELTA 3 Plus от контакт и слънце",
           "caption": "Контакт + слънце — пълен заряд за 56 минути с 1500W общ вход. [4] В ежедневието включвате и двете, а системата дава предимство на слънцето, за да пестите.",
           "rows": []
         },
         {
           "label": "От генератор",
-          "image": "PC_2_5_D3P__Generator_Charging.jpg",
+          "image": "delta-3-plus-zarezhdane-5.jpg",
           "imageAlt": "Зареждане на DELTA 3 Plus от Smart Generator",
           "caption": "С EcoFlow Smart Generator — до 1500W вход, пълен заряд за 56 минути. Ток и без слънце и без мрежа. [5]",
           "rows": []
@@ -175,28 +175,28 @@
       "tabs": [
         {
           "label": "Кемпер",
-          "image": "PC_3_1_D3P_RV.jpg",
+          "image": "delta-3-plus-moshten-izhod-nezabelezhima-rabota-1.jpg",
           "imageAlt": "DELTA 3 Plus в кемпер",
           "caption": "",
           "rows": []
         },
         {
           "label": "Резервно захранване у дома",
-          "image": "PC_3_2_D3P_Home_backup.jpg",
+          "image": "delta-3-plus-moshten-izhod-nezabelezhima-rabota-2.jpg",
           "imageAlt": "DELTA 3 Plus като резервно захранване у дома",
           "caption": "",
           "rows": []
         },
         {
           "label": "На открито",
-          "image": "PC_3_3_D3P__Outdoors.jpg",
+          "image": "delta-3-plus-moshten-izhod-nezabelezhima-rabota-3.jpg",
           "imageAlt": "DELTA 3 Plus на открито",
           "caption": "",
           "rows": []
         },
         {
           "label": "Професионална работа",
-          "image": "PC_3_4_D3P_Professional_work.jpg",
+          "image": "delta-3-plus-moshten-izhod-nezabelezhima-rabota-4.jpg",
           "imageAlt": "DELTA 3 Plus на работна площадка",
           "caption": "",
           "rows": []
@@ -211,14 +211,14 @@
       "tabs": [
         {
           "label": "11 изхода",
-          "image": "PC_4_1_D3P__11_Outputs.jpg",
+          "image": "delta-3-plus-kompakten-i-portativen-vpisva-1.jpg",
           "imageAlt": "DELTA 3 Plus — 11 изхода",
           "caption": "",
           "rows": []
         },
         {
           "label": "Компактен и лек",
-          "image": "PC_4_2_D3P_Compact_and_lightweight.jpg",
+          "image": "delta-3-plus-kompakten-i-portativen-vpisva-2.jpg",
           "imageAlt": "DELTA 3 Plus — компактен и лек",
           "caption": "",
           "rows": []
@@ -231,7 +231,7 @@
       "theme": "light",
       "heading": "Ултра тиха работа — 30 dB",
       "body": "Напълно незабележим под 600W — слива се с естествения фонов шум (30 dB). В палатка или у дома, няма да наруши съня ви.",
-      "image": "PC_5_1_D3P_X-Quiet.jpg"
+      "image": "delta-3-plus-ultra-tiha-rabota-30-1.jpg"
     },
     {
       "blockType": "featureSection",
@@ -241,7 +241,7 @@
       "subheading": "Интелигентна система за управление на енергията EcoFlow Oasis",
       "subheadingPosition": "below",
       "body": "",
-      "image": "6_1_KSP_5-_Inteligent.jpg"
+      "image": "delta-3-plus-spokoystvie-pri-avariya-udobstvo-1.jpg"
     },
     {
       "blockType": "featureSection",
@@ -249,7 +249,7 @@
       "theme": "light",
       "heading": "Надеждно резервно захранване за чувствителна техника с UPS от 10 ms [6]",
       "body": "",
-      "image": "D3P-UPS-EU-PC.jpg"
+      "image": "delta-3-plus-nadezhdno-rezervno-zahranvane-za-1.jpg"
     },
     {
       "blockType": "tabbedShowcase",
@@ -259,21 +259,21 @@
       "tabs": [
         {
           "label": "LFP батерия",
-          "image": "PC_8_1_D3P_LFP_Battery.jpg",
+          "image": "delta-3-plus-dalgotraen-i-izdrazhliv-nadezhdno-1.jpg",
           "imageAlt": "DELTA 3 Plus — LFP батерия",
           "caption": "Третото поколение LiFePO4 (LFP) клетки се зареждат бързо, без да губят дълготрайност. 4000 цикъла до 80% капацитет [7] — до 10 години надеждна употреба, 25% над стандарта в индустрията.",
           "rows": []
         },
         {
           "label": "IP65 батериен пакет",
-          "image": "PC_8_2_D3P_IP65_Battery_Pack.jpg",
+          "image": "delta-3-plus-dalgotraen-i-izdrazhliv-nadezhdno-2.jpg",
           "imageAlt": "DELTA 3 Plus — IP65 батериен пакет",
           "caption": "Батерията е с IP65 защита от пръски вода и прах — издържа на тежки условия и работи дълго.",
           "rows": []
         },
         {
           "label": "BMS",
-          "image": "PC_8_3_D3P_BMS.jpg",
+          "image": "delta-3-plus-dalgotraen-i-izdrazhliv-nadezhdno-3.jpg",
           "imageAlt": "DELTA 3 Plus — BMS",
           "caption": "Интелигентната система за управление на батерията следи температурата, напрежението и тока в реално време и пази клетките от презареждане и прегряване.",
           "rows": []
@@ -288,14 +288,14 @@
       "tabs": [
         {
           "label": "По-малък размер, същата мощност",
-          "image": "PC_9_1_D3P_Smaller_Size_Same_Power.jpg",
+          "image": "delta-3-plus-gavkavo-razshiryavane-za-mnogo-1.jpg",
           "imageAlt": "DELTA 3 Plus с DELTA 3 Plus Extra Battery",
           "caption": "Същата мощност, по-компактно. С EcoFlow DELTA 3 Extra Battery (1 kWh) стигате 2 kWh капацитет — с една трета по-малко и по-леко от батерията на DELTA 2.",
           "rows": []
         },
         {
           "label": "1 допълнителна батерия, 5× мощност",
-          "image": "PC_9_2_1_D3P_Extra_Battery_5x_the_Power.jpg",
+          "image": "delta-3-plus-gavkavo-razshiryavane-za-mnogo-2.jpg",
           "imageAlt": "DELTA 3 Plus с допълнителни батерии до 5 kWh",
           "caption": "Една допълнителна батерия, петкратно повече енергия — до 5 kWh за дни резервно захранване.",
           "rows": []
@@ -322,7 +322,7 @@
           "label": "DELTA 3 Plus",
           "tagline": "Най-висока производителност",
           "highlight": true,
-          "image": "ecoflow-delta-3-series-portable-power-station-60905350299991.png",
+          "image": "delta-3-plus-1.png",
           "imageAlt": "EcoFlow DELTA 3 Plus",
           "price": 799,
           "comparePrice": 1022,
@@ -424,19 +424,19 @@
         {
           "name": "EcoFlow DELTA 3 Plus",
           "qty": 1,
-          "image": "ecoflow-delta-3-series-portable-power-station-60905350299991.png",
+          "image": "delta-3-plus-1.png",
           "imageAlt": "EcoFlow DELTA 3 Plus"
         },
         {
           "name": "Захранващ кабел за контакт",
           "qty": 1,
-          "image": "kutiya-kabel.webp",
+          "image": "delta-3-plus-kakvo-ima-v-kutiyata-2.webp",
           "imageAlt": "Захранващ кабел за контакт"
         },
         {
           "name": "Ръководства и гаранционна карта",
           "qty": 1,
-          "image": "kutiya-rakovodstvo.webp",
+          "image": "delta-3-plus-kakvo-ima-v-kutiyata-3.webp",
           "imageAlt": "Ръководства и гаранционна карта"
         }
       ],
@@ -639,39 +639,112 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-3-series-portable-power-station-60905350299991.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-3-series-portable-power-station-60905350332759.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-3-series-portable-power-station-60175528657239.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-3-series-portable-power-station-1242802780.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-3-series-portable-power-station-1248890635.png"
-    ],
-    "sekcii": [
-      "https://eu.ecoflow.com/cdn/shop/files/PC_0_2_D3P_Main_KV.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/1_1_89e83263-2f74-494c-9408-ceb946b52290.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_2_1_D3P_AC_Charging.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_2_2_D3P_Solar_Charging.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_2_3_D3P_Car_Charging.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_2_4_D3P_Multi-Charging.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_2_5_D3P__Generator_Charging.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_3_1_D3P_RV.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_3_2_D3P_Home_backup.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_3_3_D3P__Outdoors.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_3_4_D3P_Professional_work.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_4_1_D3P__11_Outputs.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_4_2_D3P_Compact_and_lightweight.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_5_1_D3P_X-Quiet.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/6_1_KSP_5-_Inteligent.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/D3P-UPS-EU-PC.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_8_1_D3P_LFP_Battery.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_8_2_D3P_IP65_Battery_Pack.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_8_3_D3P_BMS.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_9_1_D3P_Smaller_Size_Same_Power.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_9_2_1_D3P_Extra_Battery_5x_the_Power.jpg"
-    ],
-    "_bележка": "Всички файлове са същите като при DELTA 3 — вече са в Медия. Копирай galeriya/ и sekcii/ от content/delta-3/ (вносът преизползва файловете по име, не качва втори път). Единствен нов е 1_1_89e83263… (колажът), ако още не е свален за DELTA 3."
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-3-series-portable-power-station-60905350299991.png",
+      "file": "delta-3-plus-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-3-series-portable-power-station-60905350332759.png",
+      "file": "delta-3-plus-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-3-series-portable-power-station-60175528657239.png",
+      "file": "delta-3-plus-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-3-series-portable-power-station-1242802780.png",
+      "file": "delta-3-plus-4.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-3-series-portable-power-station-1248890635.png",
+      "file": "delta-3-plus-5.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_0_2_D3P_Main_KV.jpg",
+      "file": "delta-3-plus-pregled-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/1_1_89e83263-2f74-494c-9408-ceb946b52290.jpg",
+      "file": "delta-3-plus-vodeshta-v-industriyata-portativna-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_2_1_D3P_AC_Charging.jpg",
+      "file": "delta-3-plus-zarezhdane-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_2_2_D3P_Solar_Charging.jpg",
+      "file": "delta-3-plus-zarezhdane-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_2_3_D3P_Car_Charging.jpg",
+      "file": "delta-3-plus-zarezhdane-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_2_4_D3P_Multi-Charging.jpg",
+      "file": "delta-3-plus-zarezhdane-4.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_2_5_D3P__Generator_Charging.jpg",
+      "file": "delta-3-plus-zarezhdane-5.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_3_1_D3P_RV.jpg",
+      "file": "delta-3-plus-moshten-izhod-nezabelezhima-rabota-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_3_2_D3P_Home_backup.jpg",
+      "file": "delta-3-plus-moshten-izhod-nezabelezhima-rabota-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_3_3_D3P__Outdoors.jpg",
+      "file": "delta-3-plus-moshten-izhod-nezabelezhima-rabota-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_3_4_D3P_Professional_work.jpg",
+      "file": "delta-3-plus-moshten-izhod-nezabelezhima-rabota-4.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_4_1_D3P__11_Outputs.jpg",
+      "file": "delta-3-plus-kompakten-i-portativen-vpisva-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_4_2_D3P_Compact_and_lightweight.jpg",
+      "file": "delta-3-plus-kompakten-i-portativen-vpisva-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_5_1_D3P_X-Quiet.jpg",
+      "file": "delta-3-plus-ultra-tiha-rabota-30-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/6_1_KSP_5-_Inteligent.jpg",
+      "file": "delta-3-plus-spokoystvie-pri-avariya-udobstvo-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/D3P-UPS-EU-PC.jpg",
+      "file": "delta-3-plus-nadezhdno-rezervno-zahranvane-za-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_8_1_D3P_LFP_Battery.jpg",
+      "file": "delta-3-plus-dalgotraen-i-izdrazhliv-nadezhdno-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_8_2_D3P_IP65_Battery_Pack.jpg",
+      "file": "delta-3-plus-dalgotraen-i-izdrazhliv-nadezhdno-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_8_3_D3P_BMS.jpg",
+      "file": "delta-3-plus-dalgotraen-i-izdrazhliv-nadezhdno-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_9_1_D3P_Smaller_Size_Same_Power.jpg",
+      "file": "delta-3-plus-gavkavo-razshiryavane-za-mnogo-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_9_2_1_D3P_Extra_Battery_5x_the_Power.jpg",
+      "file": "delta-3-plus-gavkavo-razshiryavane-za-mnogo-2.jpg"
+    }
+  ],
   "_prevod_nadpisi": "виж content/delta-3/prevod-nadpisi.md — банерите са същите",
   "_neyasni": [
     "Страницата на EcoFlow е обща за DELTA 3 и Plus: банерите са едни и същи, включително колажът с „1800W output“ и „0–100% in 56 minutes“ — валидни и за Plus.",

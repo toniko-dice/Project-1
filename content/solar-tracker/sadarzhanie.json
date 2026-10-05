@@ -39,27 +39,27 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-solar-tracker-52476897952083.png",
+      "file": "solar-tracker-1.png",
       "alt": "EcoFlow Solar Tracker — соларен тракер"
     },
     {
-      "file": "ecoflow-solar-tracker-35846458998976.png",
+      "file": "solar-tracker-2.png",
       "alt": "EcoFlow Solar Tracker — соларен тракер"
     },
     {
-      "file": "ecoflow-solar-tracker-35846459031744.png",
+      "file": "solar-tracker-3.png",
       "alt": "EcoFlow Solar Tracker — соларен тракер"
     },
     {
-      "file": "ecoflow-solar-tracker-52476898017619.png",
+      "file": "solar-tracker-4.png",
       "alt": "EcoFlow Solar Tracker — соларен тракер"
     },
     {
-      "file": "ecoflow-solar-tracker-52476898050387.png",
+      "file": "solar-tracker-5.png",
       "alt": "EcoFlow Solar Tracker — соларен тракер"
     },
     {
-      "file": "ecoflow-solar-tracker-52476897984851.png",
+      "file": "solar-tracker-6.png",
       "alt": "EcoFlow Solar Tracker — соларен тракер"
     }
   ],
@@ -188,17 +188,32 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.shopify.com/s/files/1/0592/6004/3456/files/ecoflow-solar-tracker-52476897952083.png",
-      "https://cdn.shopify.com/s/files/1/0592/6004/3456/products/ecoflow-solar-tracker-35846458998976.png",
-      "https://cdn.shopify.com/s/files/1/0592/6004/3456/products/ecoflow-solar-tracker-35846459031744.png",
-      "https://cdn.shopify.com/s/files/1/0592/6004/3456/files/ecoflow-solar-tracker-52476898017619.png",
-      "https://cdn.shopify.com/s/files/1/0592/6004/3456/files/ecoflow-solar-tracker-52476898050387.png",
-      "https://cdn.shopify.com/s/files/1/0592/6004/3456/files/ecoflow-solar-tracker-52476897984851.png"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0592/6004/3456/files/ecoflow-solar-tracker-52476897952083.png",
+      "file": "solar-tracker-1.png"
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0592/6004/3456/products/ecoflow-solar-tracker-35846458998976.png",
+      "file": "solar-tracker-2.png"
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0592/6004/3456/products/ecoflow-solar-tracker-35846459031744.png",
+      "file": "solar-tracker-3.png"
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0592/6004/3456/files/ecoflow-solar-tracker-52476898017619.png",
+      "file": "solar-tracker-4.png"
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0592/6004/3456/files/ecoflow-solar-tracker-52476898050387.png",
+      "file": "solar-tracker-5.png"
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0592/6004/3456/files/ecoflow-solar-tracker-52476897984851.png",
+      "file": "solar-tracker-6.png"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Самостоятелен Solar Tracker в eu.ecoflow.com няма (има само комплект с 400W панел) — текстът и спецификациите са от uk.ecoflow.com/products/solar-tracker (SolarTS-GM), снимките също.",

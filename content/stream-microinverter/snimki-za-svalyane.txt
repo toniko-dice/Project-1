@@ -1,19 +1,19 @@
 # Галерия
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-microinverter-1156661596.png
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-microinverter-1159442632.png
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-microinverter-1159442631.png
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-microinverter-1159442630.png
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-microinverter-1159442629.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-microinverter-1156661596.png  →  stream-microinverter-1.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-microinverter-1159442632.png  →  stream-microinverter-2.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-microinverter-1159442631.png  →  stream-microinverter-3.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-microinverter-1159442630.png  →  stream-microinverter-4.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-microinverter-1159442629.png  →  stream-microinverter-5.png
 
 # Секции
-https://eu.ecoflow.com/cdn/shop/files/PC_01_EU.png
-https://eu.ecoflow.com/cdn/shop/files/PC_04_EU.png
-https://eu.ecoflow.com/cdn/shop/files/kele.png
-https://eu.ecoflow.com/cdn/shop/files/PC_06_EU.png
-https://eu.ecoflow.com/cdn/shop/files/PC_07_EU_33498bfd-f591-4304-977a-23654acab1cb.png
-https://eu.ecoflow.com/cdn/shop/files/01_Microiverter.png
-https://eu.ecoflow.com/cdn/shop/files/02_01_EcoFlow_STREAM_BKW-AC_Cable_5m.png
-https://eu.ecoflow.com/cdn/shop/files/06_Expansion_screws_with_pipes.png
-https://eu.ecoflow.com/cdn/shop/files/11_Safety_Instructions_2505dcb9-5d6a-4567-b4ad-65fdd9baa52c.png
-https://eu.ecoflow.com/cdn/shop/files/12_Installation_Guide_ac28aa98-34b4-483a-b0a8-aa3ca8a69857.png
-https://eu.ecoflow.com/cdn/shop/files/10_Warranty_Card_2f6c83cb-9471-4bb0-aff5-c88266c1c9b7.png
+https://eu.ecoflow.com/cdn/shop/files/PC_01_EU.png  →  stream-microinverter-pregled-1.png
+https://eu.ecoflow.com/cdn/shop/files/PC_04_EU.png  →  stream-microinverter-prilozhenie-1.png
+https://eu.ecoflow.com/cdn/shop/files/kele.png  →  stream-microinverter-svarzva-se-s-umniya-1.png
+https://eu.ecoflow.com/cdn/shop/files/PC_06_EU.png  →  stream-microinverter-vashiyat-ai-energien-asistent-1.png
+https://eu.ecoflow.com/cdn/shop/files/PC_07_EU_33498bfd-f591-4304-977a-23654acab1cb.png  →  stream-microinverter-montazh-1.png
+https://eu.ecoflow.com/cdn/shop/files/01_Microiverter.png  →  stream-microinverter-kakvo-ima-v-kutiyata-1.png
+https://eu.ecoflow.com/cdn/shop/files/02_01_EcoFlow_STREAM_BKW-AC_Cable_5m.png  →  stream-microinverter-kakvo-ima-v-kutiyata-2.png
+https://eu.ecoflow.com/cdn/shop/files/06_Expansion_screws_with_pipes.png  →  stream-microinverter-kakvo-ima-v-kutiyata-3.png
+https://eu.ecoflow.com/cdn/shop/files/11_Safety_Instructions_2505dcb9-5d6a-4567-b4ad-65fdd9baa52c.png  →  stream-pro-kakvo-ima-v-kutiyata-7.png
+https://eu.ecoflow.com/cdn/shop/files/12_Installation_Guide_ac28aa98-34b4-483a-b0a8-aa3ca8a69857.png  →  stream-pro-kakvo-ima-v-kutiyata-8.png
+https://eu.ecoflow.com/cdn/shop/files/10_Warranty_Card_2f6c83cb-9471-4bb0-aff5-c88266c1c9b7.png  →  stream-pro-kakvo-ima-v-kutiyata-9.png

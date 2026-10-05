@@ -35,15 +35,15 @@
   },
   "galeriya": [
     {
-      "file": "61566_1.webp",
+      "file": "rigid-solar-panel-mounting-feet-1.webp",
       "alt": "EcoFlow Rigid Solar Panel Mounting Feet — крепежни планки"
     },
     {
-      "file": "61566_2.webp",
+      "file": "rigid-solar-panel-mounting-feet-2.webp",
       "alt": "EcoFlow Rigid Solar Panel Mounting Feet — крепежни планки"
     },
     {
-      "file": "61566_3.webp",
+      "file": "rigid-solar-panel-mounting-feet-3.webp",
       "alt": "EcoFlow Rigid Solar Panel Mounting Feet — крепежни планки"
     }
   ],
@@ -122,14 +122,20 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61566_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61566_2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61566_3.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61566_1.webp",
+      "file": "rigid-solar-panel-mounting-feet-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61566_2.webp",
+      "file": "rigid-solar-panel-mounting-feet-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61566_3.webp",
+      "file": "rigid-solar-panel-mounting-feet-3.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",

@@ -38,11 +38,11 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-x-shelly-smart-plug-1183338868.png",
+      "file": "smart-plug-1.png",
       "alt": "EcoFlow × Shelly Smart Plug — умен контакт"
     },
     {
-      "file": "ecoflow-x-shelly-smart-plug-1170934934.png",
+      "file": "smart-plug-2.png",
       "alt": "EcoFlow × Shelly Smart Plug — умен контакт"
     }
   ],
@@ -54,7 +54,7 @@
       "anchorLabel": "Преглед",
       "heading": "Smart Plug — умно включване на уредите",
       "body": "Защо ви е нужен? Включвате и работи · Следене на мощността на важните уреди в реално време · Автоматично включване според излишната енергия · Умно управление на натоварването със соларната система EcoFlow STREAM",
-      "image": "pc_ksp_eu.png",
+      "image": "smart-plug-pregled-1.png",
       "imageAlt": "Функциите на Smart Plug"
     },
     {
@@ -64,7 +64,7 @@
       "anchorLabel": "Енергия",
       "heading": "Автоматично разпределение на енергията",
       "body": "Когато умните контакти са част от балконската соларна система, те следят консумацията на уредите и помагат на микроинвертора да им подаде точно толкова енергия, колкото им трябва. Излишъкът се съхранява в батерията — нищо не се губи.",
-      "image": "pc_Energy_Auto-Allocation_d5c6c448-4ff4-48eb-a382-899c8dedb75d.jpg",
+      "image": "smart-plug-energiya-1.jpg",
       "imageAlt": "Разпределение на енергията през деня"
     },
     {
@@ -74,7 +74,7 @@
       "anchorLabel": "Приложение",
       "heading": "Дистанционно управление, графици и таймери",
       "body": "Когато системата е свързана с интернет, я управлявате от телефона. Включете настолната лампа или вентилатора, преди да се приберете.\n\nЗадайте графици или таймери — уредите се включват и изключват сами, когато поискате, дори без интернет.",
-      "image": "pc_App_Remote_Control.jpg",
+      "image": "smart-plug-prilozhenie-1.jpg",
       "imageAlt": "Управление на контакта от приложението"
     },
     {
@@ -83,7 +83,7 @@
       "theme": "light",
       "heading": "Следене на енергията в реално време",
       "body": "Следете консумацията на уредите в реално време и във времето, с подробни отчети в приложението EcoFlow. Така опознавате навиците си и пестите енергия.",
-      "image": "pc_Real-time_Energy_Tracking.jpg",
+      "image": "smart-plug-sledene-na-energiyata-v-1.jpg",
       "imageAlt": "Следене на консумацията в приложението"
     },
     {
@@ -92,7 +92,7 @@
       "theme": "light",
       "heading": "Режим „Отсъствие“",
       "body": "Избрани уреди, например лампи, се включват периодично и нередовно — сякаш има някой вкъщи. Подходящо, когато отсъствате за по-дълго — допълнителна сигурност за дома.",
-      "image": "pc_Away_Mode.jpg",
+      "image": "smart-plug-rezhim-otsastvie-1.jpg",
       "imageAlt": "Режим „Отсъствие“"
     },
     {
@@ -101,7 +101,7 @@
       "theme": "light",
       "heading": "Smart Meter × Smart Plug: без подаване към мрежата. Цялата соларна енергия е ваша¹",
       "body": "Smart Meter следи енергията в дома в реално време и засича всеки излишен ват. Smart Plug автоматично включва уредите, за да се използва всеки излишен ват. Приложението планира излишната енергия и само решава кога и къде да я използва.",
-      "image": "pc_Smart_Meter_x_Smart_Plug_eu.jpg",
+      "image": "smart-meter-smart-meter-smart-plug-1.jpg",
       "imageAlt": "Smart Meter, Smart Plug и приложението"
     },
     {
@@ -110,7 +110,7 @@
       "theme": "light",
       "heading": "Още предимства",
       "body": "",
-      "image": "smart_plug_pc_8.png",
+      "image": "smart-plug-oshte-predimstva-1.png",
       "imageAlt": "Предимствата на Smart Plug"
     },
     {
@@ -177,35 +177,58 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-x-shelly-smart-plug-1183338868.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-x-shelly-smart-plug-1170934934.png"
-    ],
-    "sekcii": [
-      "https://eu.ecoflow.com/cdn/shop/files/pc_ksp_eu.png",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_Energy_Auto-Allocation_d5c6c448-4ff4-48eb-a382-899c8dedb75d.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_App_Remote_Control.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_Real-time_Energy_Tracking.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_Away_Mode.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_Smart_Meter_x_Smart_Plug_eu.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/smart_plug_pc_8.png"
-    ]
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-x-shelly-smart-plug-1183338868.png",
+      "file": "smart-plug-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-x-shelly-smart-plug-1170934934.png",
+      "file": "smart-plug-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_ksp_eu.png",
+      "file": "smart-plug-pregled-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Energy_Auto-Allocation_d5c6c448-4ff4-48eb-a382-899c8dedb75d.jpg",
+      "file": "smart-plug-energiya-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_App_Remote_Control.jpg",
+      "file": "smart-plug-prilozhenie-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Real-time_Energy_Tracking.jpg",
+      "file": "smart-plug-sledene-na-energiyata-v-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Away_Mode.jpg",
+      "file": "smart-plug-rezhim-otsastvie-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Smart_Meter_x_Smart_Plug_eu.jpg",
+      "file": "smart-meter-smart-meter-smart-plug-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/smart_plug_pc_8.png",
+      "file": "smart-plug-oshte-predimstva-1.png"
+    }
+  ],
   "_prevod_nadpisi": {
-    "pc_ksp_eu.png": {
+    "smart-plug-pregled-1.png": {
       "Energy Auto-Allocation": "Автоматично разпределение на енергията",
       "App Remote Control": "Управление от приложението",
       "Real-Time Energy Tracking": "Следене на енергията в реално време",
       "Away Mode": "Режим „Отсъствие“"
     },
-    "pc_Energy_Auto-Allocation_d5c6c448-4ff4-48eb-a382-899c8dedb75d.jpg": {
+    "smart-plug-energiya-1.jpg": {
       "Peak Rates": "Върхова тарифа",
       "Home Usage": "Консумация",
       "Solar Production": "Соларно производство",
       "12 AM / 6 AM / 12 PM / 6 PM": "00:00 / 06:00 / 12:00 / 18:00"
     },
-    "smart_plug_pc_8.png": {
+    "smart-plug-oshte-predimstva-1.png": {
       "WIFI&Blutooth operated": "Работи с Wi-Fi и Bluetooth",
       "2 years wrranty": "2 години гаранция",
       "Over-temperature protection": "Защита от прегряване",

@@ -1,43 +1,43 @@
 # galeriya/
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1174282884.png
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1174819351.png
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1175154526.png
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1174819350.png
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1174819349.png
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1174819348.png
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1175154529.jpg
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1175154530.jpg
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1174282884.png  →  delta-pro-ultra-1.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1174819351.png  →  delta-pro-ultra-2.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1175154526.png  →  delta-pro-ultra-3.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1174819350.png  →  delta-pro-ultra-4.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1174819349.png  →  delta-pro-ultra-5.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1174819348.png  →  delta-pro-ultra-6.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1175154529.jpg  →  delta-pro-ultra-7.jpg
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1175154530.jpg  →  delta-pro-ultra-8.jpg
 
 # sekcii/
-https://eu.ecoflow.com/cdn/shop/files/EU_UKGroup_161269588.jpg
-https://eu.ecoflow.com/cdn/shop/files/pc_Home_Power_9d7ddf1d-9650-4061-920b-b9aad3a0f937.jpg
-https://eu.ecoflow.com/cdn/shop/files/pc_Solar_Storage_157b2ab4-661d-48f6-b9af-fcabeb9478b1.jpg
-https://eu.ecoflow.com/cdn/shop/files/pc_Backup_44db2e51-52d4-4fbf-9c61-aff304d80d56.jpg
-https://eu.ecoflow.com/cdn/shop/files/pc_Industrial_Commercial_Use.jpg
-https://eu.ecoflow.com/cdn/shop/files/pc_6-30kWh_Capacity_en_c3085275-6517-4178-81a2-cb355c2d6f6d.jpg
-https://eu.ecoflow.com/cdn/shop/files/pc_6900W_output_f41c52a4-04d6-423f-8148-c4c3bf8253b6.jpg
-https://eu.ecoflow.com/cdn/shop/files/pc_Multiple_Area_Uses_en_3ba69816-6653-4660-8c98-8d3d8d04b474.jpg
-https://eu.ecoflow.com/cdn/shop/files/pc_Whole-Home_Use_en_502aa7f5-8af6-4087-a118-8d147b8441fa.jpg
-https://eu.ecoflow.com/cdn/shop/files/pc_Off-Grid_House_en_5cf6b265-db46-499d-9404-cc3cfd3f14eb.jpg
-https://eu.ecoflow.com/cdn/shop/files/pc_Industrial_Commercial_Use_ed701eb3-76c9-4da0-b029-a6be18daecb7.jpg
-https://eu.ecoflow.com/cdn/shop/files/pc_5_Ways_Charge.jpg
-https://eu.ecoflow.com/cdn/shop/files/pc_EcoFlow_OASIS.jpg
-https://eu.ecoflow.com/cdn/shop/files/Single_Load_or_Area.jpg
-https://eu.ecoflow.com/cdn/shop/files/Multiple_Loads_or_Areas.jpg
-https://eu.ecoflow.com/cdn/shop/files/pc_Take_With_You_Anywhere.jpg
-https://eu.ecoflow.com/cdn/shop/files/PC_30db.jpg
-https://eu.ecoflow.com/cdn/shop/files/pc_82a0c46b-3cf0-4342-a510-f1a35fef5625.jpg
-https://eu.ecoflow.com/cdn/shop/files/pc_BMS.jpg
-https://eu.ecoflow.com/cdn/shop/files/Operating_temperatures__-4_to_113.jpg
-https://eu.ecoflow.com/cdn/shop/files/dpu_mts_new_senario_window1-tuya.png
-https://eu.ecoflow.com/cdn/shop/files/IP54_dustproof_and_splashproof.jpg
-https://eu.ecoflow.com/cdn/shop/files/eu_EcoFlow_DELTA_Pro_Ultra_Inverter_cd6e154b-88b0-46b0-aebe-d5dc9eb165bf.png
-https://eu.ecoflow.com/cdn/shop/files/Ecoflow_Portable_Stand.png
-https://eu.ecoflow.com/cdn/shop/files/EcoFlow_Disassembly_and_Assembly_Tool.png
-https://eu.ecoflow.com/cdn/shop/files/EcoFlow_Solar_to_Low-PV_Port_Charging_Cable.png
-https://eu.ecoflow.com/cdn/shop/files/EcoFlow_AC_Charging_Cable-C20.png
-https://eu.ecoflow.com/cdn/shop/files/Quick_Start_Guide_7a73c3fc-94a6-46d8-afe1-36e2eca9a30e.png
-https://eu.ecoflow.com/cdn/shop/files/warranty_card_9a410ff6-cb42-448d-a2db-9b5808ecede8.png
-https://eu.ecoflow.com/cdn/shop/files/EcoFlow_DELTA_Pro_Ultra_Battery.png
-https://eu.ecoflow.com/cdn/shop/files/EcoFlow_Battery_Connection_Cable_DELTA_Pro_Ultra_-0.2m_8fdbf6c1-df4c-4fb6-94d7-b2606daf16f0.png
-https://eu.ecoflow.com/cdn/shop/files/Safety_Guide_6c8b730f-4064-4a88-927f-e59245fcb153.png
+https://eu.ecoflow.com/cdn/shop/files/EU_UKGroup_161269588.jpg  →  delta-pro-ultra-pregled-1.jpg
+https://eu.ecoflow.com/cdn/shop/files/pc_Home_Power_9d7ddf1d-9650-4061-920b-b9aad3a0f937.jpg  →  delta-pro-ultra-nay-moshtnoto-reshenie-na-ecoflow-1.jpg
+https://eu.ecoflow.com/cdn/shop/files/pc_Solar_Storage_157b2ab4-661d-48f6-b9af-fcabeb9478b1.jpg  →  delta-pro-ultra-nay-moshtnoto-reshenie-na-ecoflow-2.jpg
+https://eu.ecoflow.com/cdn/shop/files/pc_Backup_44db2e51-52d4-4fbf-9c61-aff304d80d56.jpg  →  delta-pro-ultra-nay-moshtnoto-reshenie-na-ecoflow-3.jpg
+https://eu.ecoflow.com/cdn/shop/files/pc_Industrial_Commercial_Use.jpg  →  delta-pro-ultra-nay-moshtnoto-reshenie-na-ecoflow-4.jpg
+https://eu.ecoflow.com/cdn/shop/files/pc_6-30kWh_Capacity_en_c3085275-6517-4178-81a2-cb355c2d6f6d.jpg  →  delta-pro-ultra-kapacitet-1.jpg
+https://eu.ecoflow.com/cdn/shop/files/pc_6900W_output_f41c52a4-04d6-423f-8148-c4c3bf8253b6.jpg  →  delta-pro-ultra-moshtnost-1.jpg
+https://eu.ecoflow.com/cdn/shop/files/pc_Multiple_Area_Uses_en_3ba69816-6653-4660-8c98-8d3d8d04b474.jpg  →  delta-pro-ultra-prilozheniya-1.jpg
+https://eu.ecoflow.com/cdn/shop/files/pc_Whole-Home_Use_en_502aa7f5-8af6-4087-a118-8d147b8441fa.jpg  →  delta-pro-ultra-prilozheniya-2.jpg
+https://eu.ecoflow.com/cdn/shop/files/pc_Off-Grid_House_en_5cf6b265-db46-499d-9404-cc3cfd3f14eb.jpg  →  delta-pro-ultra-prilozheniya-3.jpg
+https://eu.ecoflow.com/cdn/shop/files/pc_Industrial_Commercial_Use_ed701eb3-76c9-4da0-b029-a6be18daecb7.jpg  →  delta-pro-ultra-prilozheniya-4.jpg
+https://eu.ecoflow.com/cdn/shop/files/pc_5_Ways_Charge.jpg  →  delta-pro-ultra-zarezhdane-1.jpg
+https://eu.ecoflow.com/cdn/shop/files/pc_EcoFlow_OASIS.jpg  →  delta-pro-ultra-prilozhenie-1.jpg
+https://eu.ecoflow.com/cdn/shop/files/Single_Load_or_Area.jpg  →  delta-pro-ultra-sistema-1.jpg
+https://eu.ecoflow.com/cdn/shop/files/Multiple_Loads_or_Areas.jpg  →  delta-pro-ultra-sistema-2.jpg
+https://eu.ecoflow.com/cdn/shop/files/pc_Take_With_You_Anywhere.jpg  →  delta-pro-ultra-vzemete-ya-navsyakade-1.jpg
+https://eu.ecoflow.com/cdn/shop/files/PC_30db.jpg  →  delta-pro-ultra-ups-1.jpg
+https://eu.ecoflow.com/cdn/shop/files/pc_82a0c46b-3cf0-4342-a510-f1a35fef5625.jpg  →  delta-pro-ultra-bezopasnost-1.jpg
+https://eu.ecoflow.com/cdn/shop/files/pc_BMS.jpg  →  delta-pro-ultra-bezopasnost-2.jpg
+https://eu.ecoflow.com/cdn/shop/files/Operating_temperatures__-4_to_113.jpg  →  delta-pro-ultra-izdrazhlivost-1.jpg
+https://eu.ecoflow.com/cdn/shop/files/dpu_mts_new_senario_window1-tuya.png  →  delta-pro-ultra-izdrazhlivost-2.png
+https://eu.ecoflow.com/cdn/shop/files/IP54_dustproof_and_splashproof.jpg  →  delta-pro-ultra-izdrazhlivost-3.jpg
+https://eu.ecoflow.com/cdn/shop/files/eu_EcoFlow_DELTA_Pro_Ultra_Inverter_cd6e154b-88b0-46b0-aebe-d5dc9eb165bf.png  →  delta-pro-ultra-kakvo-ima-v-kutiyata-1.png
+https://eu.ecoflow.com/cdn/shop/files/Ecoflow_Portable_Stand.png  →  delta-pro-ultra-kakvo-ima-v-kutiyata-2.png
+https://eu.ecoflow.com/cdn/shop/files/EcoFlow_Disassembly_and_Assembly_Tool.png  →  delta-pro-ultra-kakvo-ima-v-kutiyata-3.png
+https://eu.ecoflow.com/cdn/shop/files/EcoFlow_Solar_to_Low-PV_Port_Charging_Cable.png  →  delta-pro-ultra-kakvo-ima-v-kutiyata-4.png
+https://eu.ecoflow.com/cdn/shop/files/EcoFlow_AC_Charging_Cable-C20.png  →  delta-pro-ultra-kakvo-ima-v-kutiyata-5.png
+https://eu.ecoflow.com/cdn/shop/files/Quick_Start_Guide_7a73c3fc-94a6-46d8-afe1-36e2eca9a30e.png  →  delta-pro-ultra-kakvo-ima-v-kutiyata-6.png
+https://eu.ecoflow.com/cdn/shop/files/warranty_card_9a410ff6-cb42-448d-a2db-9b5808ecede8.png  →  delta-pro-ultra-kakvo-ima-v-kutiyata-7.png
+https://eu.ecoflow.com/cdn/shop/files/EcoFlow_DELTA_Pro_Ultra_Battery.png  →  delta-pro-ultra-kakvo-ima-v-kutiyata-8.png
+https://eu.ecoflow.com/cdn/shop/files/EcoFlow_Battery_Connection_Cable_DELTA_Pro_Ultra_-0.2m_8fdbf6c1-df4c-4fb6-94d7-b2606daf16f0.png  →  delta-pro-ultra-kakvo-ima-v-kutiyata-9.png
+https://eu.ecoflow.com/cdn/shop/files/Safety_Guide_6c8b730f-4064-4a88-927f-e59245fcb153.png  →  delta-pro-ultra-kakvo-ima-v-kutiyata-10.png

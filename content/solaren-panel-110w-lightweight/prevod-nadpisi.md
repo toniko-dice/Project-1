@@ -2,7 +2,7 @@
 
 Преведените файлове се слагат в `content/snimki/` под същото име.
 
-## `1_1_036da1e2-deb0-4e40-b5ca-62be566abf3d.png`
+## `solaren-panel-110w-lightweight-pregled-1.png`
 - Lightweight and Portable → Лек и портативен
 - Up to 25% / solar conversion efficiency rate → До 25% / ефективност на преобразуване
 - Bifacial Design, high-energy capturing → Двулицев дизайн, улавя повече енергия
@@ -10,10 +10,10 @@
 - IP68 / water and dust-resistant → IP68 / защита от вода и прах
 - 30-60° / adjustable support stand → 30–60° / регулируема стойка
 
-## `4_1_img_f917c03a-de7a-409d-942c-f23051fe75fa.png`
+## `solaren-panel-110w-lightweight-oshte-poveche-dobiv-1.png`
 - 25% → остава
 
-## `5_1_IMG_4e59bff1-95bf-4d06-acf2-133971d61b2c.png`
+## `solaren-panel-110w-lightweight-vodach-1.png`
 - How-To → Как се ползва
 - Step 01 / Angle your solar panel so the sun shines through the transparent shell of the guide. → Стъпка 01 / Наклонете панела така, че слънцето да свети през прозрачното капаче на водача.
 - Step 02 / Once the sun shines through the transparent shell, adjust the angle of your solar panel until the shadow hits the middle of the guide. → Стъпка 02 / Когато слънцето свети през капачето, нагласете ъгъла на панела, докато сянката попадне в средата на водача.

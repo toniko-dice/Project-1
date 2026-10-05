@@ -32,23 +32,23 @@
   },
   "galeriya": [
     {
-      "file": "60711_1.webp",
+      "file": "ev-x-stream-adapter-delta-pro-1.webp",
       "alt": "EcoFlow EV X-Stream Adapter (DELTA Pro) — адаптер"
     },
     {
-      "file": "60711_2.webp",
+      "file": "ev-x-stream-adapter-delta-pro-2.webp",
       "alt": "EcoFlow EV X-Stream Adapter (DELTA Pro) — адаптер"
     },
     {
-      "file": "60711_3.webp",
+      "file": "ev-x-stream-adapter-delta-pro-3.webp",
       "alt": "EcoFlow EV X-Stream Adapter (DELTA Pro) — адаптер"
     },
     {
-      "file": "60711_4.webp",
+      "file": "ev-x-stream-adapter-delta-pro-4.webp",
       "alt": "EcoFlow EV X-Stream Adapter (DELTA Pro) — адаптер"
     },
     {
-      "file": "60711_5.webp",
+      "file": "ev-x-stream-adapter-delta-pro-5.webp",
       "alt": "EcoFlow EV X-Stream Adapter (DELTA Pro) — адаптер"
     }
   ],
@@ -137,16 +137,28 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60711_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60711_2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60711_3.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60711_4.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60711_5.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60711_1.webp",
+      "file": "ev-x-stream-adapter-delta-pro-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60711_2.webp",
+      "file": "ev-x-stream-adapter-delta-pro-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60711_3.webp",
+      "file": "ev-x-stream-adapter-delta-pro-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60711_4.webp",
+      "file": "ev-x-stream-adapter-delta-pro-4.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60711_5.webp",
+      "file": "ev-x-stream-adapter-delta-pro-5.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",

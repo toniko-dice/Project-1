@@ -32,23 +32,23 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-delta-max-extra-battery-cable-5m--0.webp",
+      "file": "extra-battery-cable-5m-1.webp",
       "alt": "EcoFlow Extra Battery Cable (5m) — кабел за допълнителна батерия"
     },
     {
-      "file": "ecoflow-delta-max-extra-battery-cable-5m-5.webp",
+      "file": "extra-battery-cable-5m-2.webp",
       "alt": "EcoFlow Extra Battery Cable (5m) — кабел за допълнителна батерия"
     },
     {
-      "file": "ecoflow-delta-max-extra-battery-cable-5m-4.webp",
+      "file": "extra-battery-cable-5m-3.webp",
       "alt": "EcoFlow Extra Battery Cable (5m) — кабел за допълнителна батерия"
     },
     {
-      "file": "ecoflow-delta-max-extra-battery-cable-5m-3.webp",
+      "file": "extra-battery-cable-5m-4.webp",
       "alt": "EcoFlow Extra Battery Cable (5m) — кабел за допълнителна батерия"
     },
     {
-      "file": "ecoflow-delta-max-extra-battery-cable-5m-2.webp",
+      "file": "extra-battery-cable-5m-5.webp",
       "alt": "EcoFlow Extra Battery Cable (5m) — кабел за допълнителна батерия"
     }
   ],
@@ -95,16 +95,28 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-delta-max-extra-battery-cable-5m--0.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-delta-max-extra-battery-cable-5m-5.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-delta-max-extra-battery-cable-5m-4.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-delta-max-extra-battery-cable-5m-3.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-delta-max-extra-battery-cable-5m-2.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-delta-max-extra-battery-cable-5m--0.webp",
+      "file": "extra-battery-cable-5m-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-delta-max-extra-battery-cable-5m-5.webp",
+      "file": "extra-battery-cable-5m-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-delta-max-extra-battery-cable-5m-4.webp",
+      "file": "extra-battery-cable-5m-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-delta-max-extra-battery-cable-5m-3.webp",
+      "file": "extra-battery-cable-5m-4.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-delta-max-extra-battery-cable-5m-2.webp",
+      "file": "extra-battery-cable-5m-5.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "В dice.bg няма описание — текстът е от eu.ecoflow.com/products/ecoflow-extra-battery-cable-5m.",

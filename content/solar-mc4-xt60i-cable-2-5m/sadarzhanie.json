@@ -40,35 +40,35 @@
   },
   "galeriya": [
     {
-      "file": "60694_6.webp",
+      "file": "solar-mc4-xt60i-cable-2-5m-1.webp",
       "alt": "EcoFlow Solar MC4 to XT60i Charging Cable (2.5m) — кабел"
     },
     {
-      "file": "xt60iiiiiid.webp",
+      "file": "solar-mc4-xt60i-cable-2-5m-2.webp",
       "alt": "EcoFlow Solar MC4 to XT60i Charging Cable (2.5m) — кабел"
     },
     {
-      "file": "xt60iiiiid.webp",
+      "file": "solar-mc4-xt60i-cable-2-5m-3.webp",
       "alt": "EcoFlow Solar MC4 to XT60i Charging Cable (2.5m) — кабел"
     },
     {
-      "file": "xt60iiiid.webp",
+      "file": "solar-mc4-xt60i-cable-2-5m-4.webp",
       "alt": "EcoFlow Solar MC4 to XT60i Charging Cable (2.5m) — кабел"
     },
     {
-      "file": "xt60iiid.webp",
+      "file": "solar-mc4-xt60i-cable-2-5m-5.webp",
       "alt": "EcoFlow Solar MC4 to XT60i Charging Cable (2.5m) — кабел"
     },
     {
-      "file": "xt60iid.webp",
+      "file": "solar-mc4-xt60i-cable-2-5m-6.webp",
       "alt": "EcoFlow Solar MC4 to XT60i Charging Cable (2.5m) — кабел"
     },
     {
-      "file": "xt60id.webp",
+      "file": "solar-mc4-xt60i-cable-2-5m-7.webp",
       "alt": "EcoFlow Solar MC4 to XT60i Charging Cable (2.5m) — кабел"
     },
     {
-      "file": "xt60iiiiiiiid.webp",
+      "file": "solar-mc4-xt60i-cable-2-5m-8.webp",
       "alt": "EcoFlow Solar MC4 to XT60i Charging Cable (2.5m) — кабел"
     }
   ],
@@ -135,19 +135,40 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60694_6.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/x/t/xt60iiiiiid.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/x/t/xt60iiiiid.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/x/t/xt60iiiid.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/x/t/xt60iiid.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/x/t/xt60iid.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/x/t/xt60id.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/x/t/xt60iiiiiiiid.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60694_6.webp",
+      "file": "solar-mc4-xt60i-cable-2-5m-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/x/t/xt60iiiiiid.webp",
+      "file": "solar-mc4-xt60i-cable-2-5m-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/x/t/xt60iiiiid.webp",
+      "file": "solar-mc4-xt60i-cable-2-5m-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/x/t/xt60iiiid.webp",
+      "file": "solar-mc4-xt60i-cable-2-5m-4.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/x/t/xt60iiid.webp",
+      "file": "solar-mc4-xt60i-cable-2-5m-5.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/x/t/xt60iid.webp",
+      "file": "solar-mc4-xt60i-cable-2-5m-6.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/x/t/xt60id.webp",
+      "file": "solar-mc4-xt60i-cable-2-5m-7.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/x/t/xt60iiiiiiiid.webp",
+      "file": "solar-mc4-xt60i-cable-2-5m-8.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "По dice.bg и eu.ecoflow.com/products/solar-charging-cable.",

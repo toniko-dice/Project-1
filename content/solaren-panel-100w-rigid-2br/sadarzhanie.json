@@ -44,19 +44,19 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-100w-rigid-solar-panel-42462954061988.png",
+      "file": "solaren-panel-100w-rigid-2br-1.png",
       "alt": "EcoFlow 100W Rigid Solar Panel (2 pieces) — отпред"
     },
     {
-      "file": "ecoflow-100w-rigid-solar-panel-42462953701540.png",
+      "file": "solaren-panel-100w-rigid-2br-2.png",
       "alt": "EcoFlow 100W Rigid Solar Panel (2 pieces) — под ъгъл"
     },
     {
-      "file": "ecoflow-100w-rigid-solar-panel-42462953832612.png",
+      "file": "solaren-panel-100w-rigid-2br-3.png",
       "alt": "EcoFlow 100W Rigid Solar Panel (2 pieces) — отзад"
     },
     {
-      "file": "ecoflow-100w-rigid-solar-panel-42462952882340.jpg",
+      "file": "solaren-panel-100w-rigid-2br-4.jpg",
       "alt": "EcoFlow 100W Rigid Solar Panel (2 pieces) — на покрив"
     }
   ],
@@ -68,7 +68,7 @@
       "anchorLabel": "Преглед",
       "heading": "",
       "body": "",
-      "image": "rigid_100_1.png",
+      "image": "solaren-panel-100w-rigid-2br-pregled-1.png",
       "imageAlt": "EcoFlow 100W Rigid Solar Panel (2 pieces) — основни предимства"
     },
     {
@@ -77,7 +77,7 @@
       "theme": "light",
       "heading": "100W твърди соларни панели",
       "body": "",
-      "image": "100_rigid_2.png",
+      "image": "solaren-panel-100w-rigid-2br-100w-tvardi-solarni-paneli-1.png",
       "imageAlt": "Панели на покрива на ван"
     },
     {
@@ -89,7 +89,7 @@
       "subheading": "Високоефективни монокристални клетки",
       "subheadingPosition": "above",
       "body": "Нашият 100W твърд соларен панел е с отлична ефективност на преобразуване от 23% — зареждате още по-бързо. Комбинирайте го с Power Kits или с портативна електроцентрала на EcoFlow — вграденият MPPT алгоритъм оптимизира соларния вход.",
-      "image": "100_rigid_3.png",
+      "image": "solaren-panel-100w-rigid-2br-efektivnost-1.png",
       "imageAlt": "23% ефективност"
     },
     {
@@ -101,7 +101,7 @@
       "subheading": "Готови отвори на панела за сигурен монтаж",
       "subheadingPosition": "above",
       "body": "С готовите отвори 100W твърдият панел е готов за монтаж на вана или на автономната ви система. Комбинирайте го с монтажните крачета за 100W твърд соларен панел за сигурно закрепване към всяка повърхност.",
-      "image": "100_rigid_4.png",
+      "image": "solaren-panel-100w-rigid-2br-montazh-1.png",
       "imageAlt": "Монтажно краче и отвори"
     },
     {
@@ -113,7 +113,7 @@
       "subheading": "Клас на водоустойчивост IP68*",
       "subheadingPosition": "above",
       "body": "Нашият 100W твърд соларен панел е създаден за навън. С клас на водоустойчивост IP68* панелът издържа на прах, водни струи с ниско налягане, ветрове до 210 км/ч и дори обилен сняг.\n\n*Водо- и прахоустойчивостта са изпитани в контролирани лабораторни условия — клас IP68 по стандарт IEC 60529 (максимална дълбочина 1 м за до 72 часа).",
-      "image": "100_rigid_5.png",
+      "image": "solaren-panel-100w-rigid-2br-ip68-1.png",
       "imageAlt": "IP68 — панелът под водни пръски"
     },
     {
@@ -125,7 +125,7 @@
       "subheading": "Покрит със силно защитно ламиниране и закалено стъкло",
       "subheadingPosition": "above",
       "body": "Със здрава антикорозионна алуминиева рамка нашият 100W твърд соларен панел е проектиран да събира слънце на открито с години. Монокристалните клетки са покрити със силно защитно ламиниране и закалено стъкло, което повишава производителността и осигурява дълготрайна издръжливост.",
-      "image": "100_rigid_6.png",
+      "image": "solaren-panel-100w-rigid-2br-izdrazhlivost-1.png",
       "imageAlt": "Защитно покритие и антикорозионна рамка"
     },
     {
@@ -137,7 +137,7 @@
       "subheading": "Соларен кабел за универсална съвместимост",
       "subheadingPosition": "above",
       "body": "С универсалния соларен конектор нашият 100W твърд соларен панел се свързва с всяка ваша съществуваща соларна система на трети производител. Зареждайте 48V системи и портативни електроцентрали с един или няколко панела.",
-      "image": "100_rigid_7.png",
+      "image": "solaren-panel-100w-rigid-2br-savmestimost-1.png",
       "imageAlt": "Универсален соларен конектор"
     },
     {
@@ -147,7 +147,7 @@
       "anchorLabel": "Какво има в кутията",
       "heading": "Какво има в кутията",
       "body": "1. 2 × 100W твърд соларен панел\n2. 2 × монтажни крачета\n3. Ръководство за употреба и гаранционна карта\n\nКабелът от соларен конектор към XT60i не е включен в комплекта — продава се отделно.",
-      "image": "100W_Rigid.jpg",
+      "image": "solaren-panel-100w-rigid-2br-kakvo-ima-v-kutiyata-1.jpg",
       "imageAlt": "Панел отпред и отзад, ръководство"
     },
     {
@@ -220,46 +220,78 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://eu.ecoflow.com/cdn/shop/products/ecoflow-100w-rigid-solar-panel-42462954061988.png",
-      "https://eu.ecoflow.com/cdn/shop/products/ecoflow-100w-rigid-solar-panel-42462953701540.png",
-      "https://eu.ecoflow.com/cdn/shop/products/ecoflow-100w-rigid-solar-panel-42462953832612.png",
-      "https://eu.ecoflow.com/cdn/shop/products/ecoflow-100w-rigid-solar-panel-42462952882340.jpg"
-    ],
-    "sekcii": [
-      "https://eu.ecoflow.com/cdn/shop/files/rigid_100_1.png",
-      "https://eu.ecoflow.com/cdn/shop/files/100_rigid_2.png",
-      "https://eu.ecoflow.com/cdn/shop/files/100_rigid_3.png",
-      "https://eu.ecoflow.com/cdn/shop/files/100_rigid_4.png",
-      "https://eu.ecoflow.com/cdn/shop/files/100_rigid_5.png",
-      "https://eu.ecoflow.com/cdn/shop/files/100_rigid_6.png",
-      "https://eu.ecoflow.com/cdn/shop/files/100_rigid_7.png",
-      "https://eu.ecoflow.com/cdn/shop/files/100W_Rigid.jpg"
-    ]
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/products/ecoflow-100w-rigid-solar-panel-42462954061988.png",
+      "file": "solaren-panel-100w-rigid-2br-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/products/ecoflow-100w-rigid-solar-panel-42462953701540.png",
+      "file": "solaren-panel-100w-rigid-2br-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/products/ecoflow-100w-rigid-solar-panel-42462953832612.png",
+      "file": "solaren-panel-100w-rigid-2br-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/products/ecoflow-100w-rigid-solar-panel-42462952882340.jpg",
+      "file": "solaren-panel-100w-rigid-2br-4.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/rigid_100_1.png",
+      "file": "solaren-panel-100w-rigid-2br-pregled-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/100_rigid_2.png",
+      "file": "solaren-panel-100w-rigid-2br-100w-tvardi-solarni-paneli-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/100_rigid_3.png",
+      "file": "solaren-panel-100w-rigid-2br-efektivnost-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/100_rigid_4.png",
+      "file": "solaren-panel-100w-rigid-2br-montazh-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/100_rigid_5.png",
+      "file": "solaren-panel-100w-rigid-2br-ip68-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/100_rigid_6.png",
+      "file": "solaren-panel-100w-rigid-2br-izdrazhlivost-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/100_rigid_7.png",
+      "file": "solaren-panel-100w-rigid-2br-savmestimost-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/100W_Rigid.jpg",
+      "file": "solaren-panel-100w-rigid-2br-kakvo-ima-v-kutiyata-1.jpg"
+    }
+  ],
   "_prevod_nadpisi": {
-    "rigid_100_1.png": {
+    "solaren-panel-100w-rigid-2br-pregled-1.png": {
       "23% Conversion Rate for Fast-Charging": "23% ефективност за бързо зареждане",
       "Ready to Install / Mounting Holes": "Готов за монтаж / отвори за монтаж",
       "IP68 Weatherproof": "IP68 устойчив на атмосферни условия",
       "Robust Durability / Highly Protective": "Здрав и издръжлив / силна защита",
       "Universally Compatible": "Универсално съвместим"
     },
-    "100_rigid_2.png": {
+    "solaren-panel-100w-rigid-2br-100w-tvardi-solarni-paneli-1.png": {
       "100W Rigid Solar Panels": "100W твърди соларни панели",
       "With a compact design and high-efficiency rating, string together several of these industry-leading solar panels to quickly charge your LFP batteries and power your RV for days.": "Компактни и високоефективни — свържете няколко от тези водещи в бранша панела, за да зареждате бързо LFP батериите си и да захранвате кемпера с дни."
     },
-    "100_rigid_3.png": {
+    "solaren-panel-100w-rigid-2br-efektivnost-1.png": {
       "23%": "остава"
     },
-    "100_rigid_4.png": {
+    "solaren-panel-100w-rigid-2br-montazh-1.png": {
       "Mounting Holes": "Отвори за монтаж"
     },
-    "100_rigid_5.png": {
+    "solaren-panel-100w-rigid-2br-ip68-1.png": {
       "IP68": "остава"
     },
-    "100_rigid_6.png": {
+    "solaren-panel-100w-rigid-2br-izdrazhlivost-1.png": {
       "Highly Protective": "Силна защита",
       "Anti-Corrosive": "Антикорозионна"
     }

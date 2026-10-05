@@ -36,7 +36,7 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-stream-solar-extension_-cable_1.webp",
+      "file": "stream-solar-extension-cable-1.webp",
       "alt": "EcoFlow STREAM Solar Panel Extension Cable (2.95m) — удължителен кабел"
     }
   ],
@@ -99,12 +99,12 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-stream-solar-extension_-cable_1.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-stream-solar-extension_-cable_1.webp",
+      "file": "stream-solar-extension-cable-1.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "По dice.bg и eu.ecoflow.com/products/ecoflow-stream-solar-panel-extension-cable. dice.bg пише „Solar към XT60“ — EcoFlow не го споменава; не е сложено.",

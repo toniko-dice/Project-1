@@ -1,12 +1,12 @@
 # Галерия
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-x-shelly-smart-plug-1183338868.png
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-x-shelly-smart-plug-1170934934.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-x-shelly-smart-plug-1183338868.png  →  smart-plug-1.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-x-shelly-smart-plug-1170934934.png  →  smart-plug-2.png
 
 # Секции
-https://eu.ecoflow.com/cdn/shop/files/pc_ksp_eu.png
-https://eu.ecoflow.com/cdn/shop/files/pc_Energy_Auto-Allocation_d5c6c448-4ff4-48eb-a382-899c8dedb75d.jpg
-https://eu.ecoflow.com/cdn/shop/files/pc_App_Remote_Control.jpg
-https://eu.ecoflow.com/cdn/shop/files/pc_Real-time_Energy_Tracking.jpg
-https://eu.ecoflow.com/cdn/shop/files/pc_Away_Mode.jpg
-https://eu.ecoflow.com/cdn/shop/files/pc_Smart_Meter_x_Smart_Plug_eu.jpg
-https://eu.ecoflow.com/cdn/shop/files/smart_plug_pc_8.png
+https://eu.ecoflow.com/cdn/shop/files/pc_ksp_eu.png  →  smart-plug-pregled-1.png
+https://eu.ecoflow.com/cdn/shop/files/pc_Energy_Auto-Allocation_d5c6c448-4ff4-48eb-a382-899c8dedb75d.jpg  →  smart-plug-energiya-1.jpg
+https://eu.ecoflow.com/cdn/shop/files/pc_App_Remote_Control.jpg  →  smart-plug-prilozhenie-1.jpg
+https://eu.ecoflow.com/cdn/shop/files/pc_Real-time_Energy_Tracking.jpg  →  smart-plug-sledene-na-energiyata-v-1.jpg
+https://eu.ecoflow.com/cdn/shop/files/pc_Away_Mode.jpg  →  smart-plug-rezhim-otsastvie-1.jpg
+https://eu.ecoflow.com/cdn/shop/files/pc_Smart_Meter_x_Smart_Plug_eu.jpg  →  smart-meter-smart-meter-smart-plug-1.jpg
+https://eu.ecoflow.com/cdn/shop/files/smart_plug_pc_8.png  →  smart-plug-oshte-predimstva-1.png

@@ -32,11 +32,11 @@
   },
   "galeriya": [
     {
-      "file": "untitled-1_1_18_1.webp",
+      "file": "grounding-adapter-c20-1.webp",
       "alt": "EcoFlow Portable Power Station Grounding Adapter (C20) — адаптер за заземяване"
     },
     {
-      "file": "60823_2_1.webp",
+      "file": "grounding-adapter-c20-2.webp",
       "alt": "EcoFlow Portable Power Station Grounding Adapter (C20) — адаптер за заземяване"
     }
   ],
@@ -107,15 +107,18 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/u/n/untitled-1_1_18_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60823_2_1.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/u/n/untitled-1_1_18_1.webp",
+      "file": "grounding-adapter-c20-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60823_2_1.webp",
+      "file": "grounding-adapter-c20-2.webp"
+    }
+  ],
   "_prevod_nadpisi": {
-    "untitled-1_1_18_1.webp": {
+    "grounding-adapter-c20-1.webp": {
       "For DELTA 3 Max series, DELTA 2 Max, DELTA 2, DELTA Max, DELTA Pro (with C14 plug type)": "За серията DELTA 3 Max, DELTA 2 Max, DELTA 2, DELTA Max, DELTA Pro (с щепсел C14)",
       "For DELTA Pro (with C20 plug type)": "За DELTA Pro (с щепсел C20)"
     }

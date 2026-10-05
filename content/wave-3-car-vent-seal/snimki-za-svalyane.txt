@@ -1,6 +1,6 @@
 # Галерия
-https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_wave_3_car_vent_seal_magnetic_version_black-1.webp
-https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_wave_3_car_vent_seal_magnetic_version_black-2.webp
+https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_wave_3_car_vent_seal_magnetic_version_black-1.webp  →  wave-3-car-vent-seal-1.webp
+https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_wave_3_car_vent_seal_magnetic_version_black-2.webp  →  wave-3-car-vent-seal-2.webp
 
 # Секции
 

@@ -39,19 +39,19 @@
   },
   "galeriya": [
     {
-      "file": "70350_1.webp",
+      "file": "rapid-magnetic-5000-srebrist-1.webp",
       "alt": "EcoFlow RAPID Magnetic Power Bank 5000mAh (сребрист) — магнитна външна батерия"
     },
     {
-      "file": "70350_2.webp",
+      "file": "rapid-magnetic-5000-srebrist-2.webp",
       "alt": "EcoFlow RAPID Magnetic Power Bank 5000mAh (сребрист) — магнитна външна батерия"
     },
     {
-      "file": "70350_3.webp",
+      "file": "rapid-magnetic-5000-srebrist-3.webp",
       "alt": "EcoFlow RAPID Magnetic Power Bank 5000mAh (сребрист) — магнитна външна батерия"
     },
     {
-      "file": "70350_4.webp",
+      "file": "rapid-magnetic-5000-srebrist-4.webp",
       "alt": "EcoFlow RAPID Magnetic Power Bank 5000mAh (сребрист) — магнитна външна батерия"
     }
   ],
@@ -171,15 +171,24 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70350_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70350_2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70350_3.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70350_4.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70350_1.webp",
+      "file": "rapid-magnetic-5000-srebrist-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70350_2.webp",
+      "file": "rapid-magnetic-5000-srebrist-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70350_3.webp",
+      "file": "rapid-magnetic-5000-srebrist-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70350_4.webp",
+      "file": "rapid-magnetic-5000-srebrist-4.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "По dice.bg. EcoFlow EU продава 5000 и 10000 mAh на една страница (EF-RAPID5000-EU / -B-EU) — описанието съвпада.",

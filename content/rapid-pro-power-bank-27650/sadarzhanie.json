@@ -45,35 +45,35 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1171422051.png",
+      "file": "rapid-pro-power-bank-27650-1.png",
       "alt": "EcoFlow RAPID Pro Power Bank (27,650mAh, 300W, 140W Built-in Cable) — външна батерия"
     },
     {
-      "file": "ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1171422048.png",
+      "file": "rapid-pro-power-bank-27650-2.png",
       "alt": "EcoFlow RAPID Pro Power Bank (27,650mAh, 300W, 140W Built-in Cable) — външна батерия"
     },
     {
-      "file": "ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1171422047.png",
+      "file": "rapid-pro-power-bank-27650-3.png",
       "alt": "EcoFlow RAPID Pro Power Bank (27,650mAh, 300W, 140W Built-in Cable) — външна батерия"
     },
     {
-      "file": "ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1174090697.jpg",
+      "file": "rapid-pro-power-bank-27650-4.jpg",
       "alt": "EcoFlow RAPID Pro Power Bank (27,650mAh, 300W, 140W Built-in Cable) — външна батерия"
     },
     {
-      "file": "ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1174090696.jpg",
+      "file": "rapid-pro-power-bank-27650-5.jpg",
       "alt": "EcoFlow RAPID Pro Power Bank (27,650mAh, 300W, 140W Built-in Cable) — външна батерия"
     },
     {
-      "file": "ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1174090699.jpg",
+      "file": "rapid-pro-power-bank-27650-6.jpg",
       "alt": "EcoFlow RAPID Pro Power Bank (27,650mAh, 300W, 140W Built-in Cable) — външна батерия"
     },
     {
-      "file": "ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1174090698.jpg",
+      "file": "rapid-pro-power-bank-27650-7.jpg",
       "alt": "EcoFlow RAPID Pro Power Bank (27,650mAh, 300W, 140W Built-in Cable) — външна батерия"
     },
     {
-      "file": "ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1174090695.jpg",
+      "file": "rapid-pro-power-bank-27650-8.jpg",
       "alt": "EcoFlow RAPID Pro Power Bank (27,650mAh, 300W, 140W Built-in Cable) — външна батерия"
     }
   ],
@@ -87,28 +87,28 @@
       "tabs": [
         {
           "label": "Работа от разстояние",
-          "image": "pc__01_fe1aa127-020c-44d5-bc24-bcf0f35181f7.jpg",
+          "image": "rapid-pro-power-bank-27650-prilozheniya-1.jpg",
           "imageAlt": "Работа от разстояние",
           "caption": "",
           "rows": []
         },
         {
           "label": "Пътуване",
-          "image": "pc__07_5899bc49-a9dc-46f9-8e19-17a0059a537e.jpg",
+          "image": "rapid-pro-power-bank-27650-prilozheniya-2.jpg",
           "imageAlt": "Пътуване",
           "caption": "",
           "rows": []
         },
         {
           "label": "В офиса",
-          "image": "pc__06_9f536208-d3a7-4800-b293-8c91ce82a2f2.jpg",
+          "image": "rapid-pro-power-bank-27650-prilozheniya-3.jpg",
           "imageAlt": "В офиса",
           "caption": "",
           "rows": []
         },
         {
           "label": "Забавления",
-          "image": "pc__02_b14c743e-8780-4940-9336-45b8e76d01cf.jpg",
+          "image": "rapid-pro-power-bank-27650-prilozheniya-4.jpg",
           "imageAlt": "Забавления",
           "caption": "",
           "rows": []
@@ -124,28 +124,28 @@
       "tabs": [
         {
           "label": "Един порт",
-          "image": "pc_ports_01.jpg",
+          "image": "rapid-pro-power-bank-27650-portove-1.jpg",
           "imageAlt": "Един порт",
           "caption": "",
           "rows": []
         },
         {
           "label": "Два порта",
-          "image": "pc_ports_04.jpg",
+          "image": "rapid-pro-power-bank-27650-portove-2.jpg",
           "imageAlt": "Два порта",
           "caption": "",
           "rows": []
         },
         {
           "label": "Три порта",
-          "image": "pc_ports_03.jpg",
+          "image": "rapid-pro-power-bank-27650-portove-3.jpg",
           "imageAlt": "Три порта",
           "caption": "",
           "rows": []
         },
         {
           "label": "Четири порта",
-          "image": "pc_ports_02.jpg",
+          "image": "rapid-pro-power-bank-27650-portove-4.jpg",
           "imageAlt": "Четири порта",
           "caption": "",
           "rows": []
@@ -158,7 +158,7 @@
       "theme": "light",
       "heading": "Енергия за нов свят",
       "body": "",
-      "image": "pc_About_EcoFlow_eu_13a918d0-cf23-48b3-9ee3-8af9b730a4f9.jpg",
+      "image": "rapid-pro-power-bank-20000-energiya-za-nov-svyat-1.jpg",
       "imageAlt": "За EcoFlow"
     },
     {
@@ -173,7 +173,7 @@
         {
           "name": "Чанта от фланела",
           "qty": 1,
-          "image": "Flannel_Bag.png",
+          "image": "rapid-pro-power-bank-20000-kakvo-ima-v-kutiyata-1.png",
           "imageAlt": "Чанта от фланела"
         }
       ]
@@ -337,38 +337,88 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1171422051.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1171422048.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1171422047.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1174090697.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1174090696.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1174090699.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1174090698.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1174090695.jpg"
-    ],
-    "sekcii": [
-      "https://eu.ecoflow.com/cdn/shop/files/pc__01_fe1aa127-020c-44d5-bc24-bcf0f35181f7.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc__07_5899bc49-a9dc-46f9-8e19-17a0059a537e.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc__06_9f536208-d3a7-4800-b293-8c91ce82a2f2.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc__02_b14c743e-8780-4940-9336-45b8e76d01cf.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_ports_01.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_ports_04.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_ports_03.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_ports_02.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_About_EcoFlow_eu_13a918d0-cf23-48b3-9ee3-8af9b730a4f9.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/Flannel_Bag.png"
-    ]
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1171422051.png",
+      "file": "rapid-pro-power-bank-27650-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1171422048.png",
+      "file": "rapid-pro-power-bank-27650-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1171422047.png",
+      "file": "rapid-pro-power-bank-27650-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1174090697.jpg",
+      "file": "rapid-pro-power-bank-27650-4.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1174090696.jpg",
+      "file": "rapid-pro-power-bank-27650-5.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1174090699.jpg",
+      "file": "rapid-pro-power-bank-27650-6.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1174090698.jpg",
+      "file": "rapid-pro-power-bank-27650-7.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1174090695.jpg",
+      "file": "rapid-pro-power-bank-27650-8.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc__01_fe1aa127-020c-44d5-bc24-bcf0f35181f7.jpg",
+      "file": "rapid-pro-power-bank-27650-prilozheniya-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc__07_5899bc49-a9dc-46f9-8e19-17a0059a537e.jpg",
+      "file": "rapid-pro-power-bank-27650-prilozheniya-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc__06_9f536208-d3a7-4800-b293-8c91ce82a2f2.jpg",
+      "file": "rapid-pro-power-bank-27650-prilozheniya-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc__02_b14c743e-8780-4940-9336-45b8e76d01cf.jpg",
+      "file": "rapid-pro-power-bank-27650-prilozheniya-4.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_ports_01.jpg",
+      "file": "rapid-pro-power-bank-27650-portove-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_ports_04.jpg",
+      "file": "rapid-pro-power-bank-27650-portove-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_ports_03.jpg",
+      "file": "rapid-pro-power-bank-27650-portove-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_ports_02.jpg",
+      "file": "rapid-pro-power-bank-27650-portove-4.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_About_EcoFlow_eu_13a918d0-cf23-48b3-9ee3-8af9b730a4f9.jpg",
+      "file": "rapid-pro-power-bank-20000-energiya-za-nov-svyat-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Flannel_Bag.png",
+      "file": "rapid-pro-power-bank-20000-kakvo-ima-v-kutiyata-1.png"
+    }
+  ],
   "_prevod_nadpisi": {
-    "ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1174090697.jpg": {
+    "rapid-pro-power-bank-27650-4.jpg": {
       "Fast Charge 4 Devices at Once": "Бързо зареждане на 4 устройства наведнъж",
       "Up to 300W output": "До 300W изходна мощност",
       "1 × 140W USB-C · 2 × 65W USB-C · 1 × 140W Built-in, Retractable Cable": "1 × 140W USB-C · 2 × 65W USB-C · 1 × 140W вграден прибиращ се кабел",
       "Charge 50% MacBook Pro 16'' = 30 min": "50% заряд на MacBook Pro 16'' = 30 мин"
     },
-    "ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1174090696.jpg": {
+    "rapid-pro-power-bank-27650-5.jpg": {
       "Ultra-Fast Recharging": "Ултрабързо презареждане",
       "EcoFlow RAPID Pro Desktop Charger*": "Настолно зарядно EcoFlow RAPID Pro*",
       "Single-port input": "Вход през един порт",
@@ -376,26 +426,26 @@
       "min": "мин",
       "* EcoFlow RAPID Pro Desktop Charger sold separately": "* Настолното зарядно EcoFlow RAPID Pro се продава отделно"
     },
-    "ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1174090699.jpg": {
+    "rapid-pro-power-bank-27650-6.jpg": {
       "Big Power, Compact Size": "Голяма мощност, компактен размер",
       "Air-travel-friendly": "Разрешена в самолет",
       "times / time": "пъти / път"
     },
-    "ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1174090698.jpg": {
+    "rapid-pro-power-bank-27650-7.jpg": {
       "Integrated 60 cm USB-C Cable": "Вграден USB-C кабел 60 см",
       "There's no need to carry extras": "Не е нужно да носите допълнителни кабели",
       "TPE soft-touch silicone cable": "Мек силиконов TPE кабел",
       "5,000 pull cycle-tested": "Тестван на 5000 издърпвания",
       "5,000 swing cycle-tested with 5 kg load": "Тестван на 5000 огъвания с товар 5 кг"
     },
-    "ecoflow-rapid-pro-power-bank-27-650mah-300w-140w-built-in-cable-1174090695.jpg": {
+    "rapid-pro-power-bank-27650-8.jpg": {
       "Universal Compatibility": "Универсална съвместимост",
       "Compatible with 99% of everyday electronic devices": "Съвместима с 99% от ежедневните електронни устройства",
       "iPhone Series": "Серия iPhone",
       "Sony Devices": "Устройства Sony",
       "(марките и моделите остават)": "—"
     },
-    "pc_About_EcoFlow_eu_13a918d0-cf23-48b3-9ee3-8af9b730a4f9.jpg": {
+    "rapid-pro-power-bank-20000-energiya-za-nov-svyat-1.jpg": {
       "Power a New World": "Енергия за нов свят",
       "EcoFlow is a leading provider of eco-friendly energy solutions committed to powering a new world. Since its founding in 2017, EcoFlow has worked towards being the FIRST in power solutions, Flexible, Innovative, Reliable, Simple, and Thorough - for individuals and families, whether at home, outdoors, or on the go. With a smart manufacturing center in China and headquarters in the USA, Germany, and Japan, EcoFlow has empowered over 5 million users in 140 markets worldwide.": "EcoFlow е водещ доставчик на екологични енергийни решения, посветен на енергията за нов свят. От основаването си през 2017 г. EcoFlow се стреми да бъде ПЪРВИ в енергийните решения — гъвкави, иновативни, надеждни, прости и задълбочени — за хора и семейства у дома, на открито и в движение. С умен производствен център в Китай и централи в САЩ, Германия и Япония, EcoFlow дава енергия на над 5 милиона потребители в 140 пазара по света."
     }

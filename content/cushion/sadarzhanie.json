@@ -32,27 +32,27 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-cushion-42630390349988_2000x.webp",
+      "file": "cushion-1.webp",
       "alt": "EcoFlow Cushion — възглавница"
     },
     {
-      "file": "image_1_.webp",
+      "file": "cushion-2.webp",
       "alt": "EcoFlow Cushion — възглавница"
     },
     {
-      "file": "image_2_.webp",
+      "file": "cushion-3.webp",
       "alt": "EcoFlow Cushion — възглавница"
     },
     {
-      "file": "image_3_.webp",
+      "file": "cushion-4.webp",
       "alt": "EcoFlow Cushion — възглавница"
     },
     {
-      "file": "image_4_.webp",
+      "file": "cushion-5.webp",
       "alt": "EcoFlow Cushion — възглавница"
     },
     {
-      "file": "image.webp",
+      "file": "cushion-6.webp",
       "alt": "EcoFlow Cushion — възглавница"
     }
   ],
@@ -115,17 +115,32 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-cushion-42630390349988_2000x.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/i/m/image_1_.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/i/m/image_2_.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/i/m/image_3_.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/i/m/image_4_.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/i/m/image.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-cushion-42630390349988_2000x.webp",
+      "file": "cushion-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/i/m/image_1_.webp",
+      "file": "cushion-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/i/m/image_2_.webp",
+      "file": "cushion-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/i/m/image_3_.webp",
+      "file": "cushion-4.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/i/m/image_4_.webp",
+      "file": "cushion-5.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/i/m/image.webp",
+      "file": "cushion-6.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "По dice.bg; eu.ecoflow.com/products/ecoflow-cushion е само с кратко описание.",

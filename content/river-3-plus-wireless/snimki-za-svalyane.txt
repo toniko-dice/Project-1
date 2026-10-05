@@ -1,9 +1,9 @@
 # galeriya/
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560970.png
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560969.png
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560973.png
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560971.png
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560972.png
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560966.jpg
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560970.png  →  river-3-max-plus-wireless-kakvo-ima-v-kutiyata-1.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560969.png  →  river-3-plus-wireless-2.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560973.png  →  river-3-max-plus-wireless-3.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560971.png  →  river-3-max-plus-wireless-4.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560972.png  →  river-3-max-plus-wireless-5.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560966.jpg  →  river-3-plus-wireless-6.jpg
 
 # sekcii/ — същите файлове като content/river-3-max-plus-wireless/sekcii (вече в Медия)

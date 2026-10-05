@@ -1,9 +1,9 @@
 # galeriya/
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556327.png
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556328.png
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556329.png
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556330.png
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556325.png
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556324.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556327.png  →  river-3-plus-kakvo-ima-v-kutiyata-5.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556328.png  →  river-3-max-2.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556329.png  →  river-3-max-3.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556330.png  →  river-3-max-4.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556325.png  →  river-3-max-5.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556324.png  →  river-3-max-6.png
 
 # sekcii/ — същите файлове като content/river-3-plus/sekcii (вече в Медия)

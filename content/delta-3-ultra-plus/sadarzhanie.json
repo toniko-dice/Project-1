@@ -52,27 +52,27 @@
   },
   "galeriya": [
     {
-      "file": "4895251650571-1_1.webp",
+      "file": "delta-3-ultra-plus-1.webp",
       "alt": "EcoFlow DELTA 3 Ultra Plus — изглед отпред"
     },
     {
-      "file": "4895251650571-2_1.webp",
+      "file": "delta-3-ultra-plus-2.webp",
       "alt": "EcoFlow DELTA 3 Ultra Plus — отпред, под ъгъл"
     },
     {
-      "file": "4895251650571-3_1.webp",
+      "file": "delta-3-ultra-plus-3.webp",
       "alt": "EcoFlow DELTA 3 Ultra Plus — предна страна, контакти"
     },
     {
-      "file": "4895251650571-4_1.webp",
+      "file": "delta-3-ultra-plus-4.webp",
       "alt": "EcoFlow DELTA 3 Ultra Plus — задна страна"
     },
     {
-      "file": "4895251650571-5_1.webp",
+      "file": "delta-3-ultra-plus-5.webp",
       "alt": "EcoFlow DELTA 3 Ultra Plus — входове"
     },
     {
-      "file": "4895251650571-6_1.webp",
+      "file": "delta-3-ultra-plus-6.webp",
       "alt": "EcoFlow DELTA 3 Ultra Plus — странично, колела"
     }
   ],
@@ -122,7 +122,7 @@
       "anchorLabel": "За дома",
       "heading": "Домашна електроцентрала с 3 kWh, разширяема до 11 kWh",
       "body": "DELTA 3 Ultra Plus е първата портативна домашна електроцентрала с резервно захранване на дома, интелигентно управление на енергията и по-ниски сметки за ток. Свързва се директно към домашната инсталация през Smart Home Panel (не е включен в комплекта). От захранване на отделен уред до спиране на тока за дни — с допълнителни батерии, умни генератори и Smart Home Panel капацитетът стига до 11 kWh.",
-      "image": "4895251650571-7_1.webp"
+      "image": "delta-3-ultra-plus-za-doma-1.webp"
     },
     {
       "blockType": "featureSection",
@@ -131,7 +131,7 @@
       "anchorLabel": "Мощност",
       "heading": "3600W — захранва 99,99% от уредите",
       "body": "Водещ в класа си изход от 3600W (7200W пик) — сушилни, климатици и всяка техника с голяма мощност. С X-Boost захранва уреди до 4600W. Нужна ви е още мощност? Две станции през Smart Home Panel дават 8000W — у дома, на открито или на обекта.",
-      "image": "4895251650571-9_1.webp"
+      "image": "delta-3-ultra-plus-moshtnost-1.webp"
     },
     {
       "blockType": "featureSection",
@@ -140,7 +140,7 @@
       "anchorLabel": "Зареждане",
       "heading": "6 начина за зареждане — от 0 до 80% за 89 минути",
       "body": "Технологията X-Stream е бърза и безопасна: от контакт до 80% за 89 минути, а системата за управление на батерията пази клетките. За първи път портативна електроцентрала се зарежда и от хилядите станции за електромобили — до 3400W, в движение. Комбинирано зареждане до 3960W — за 48 минути. От слънце — 1600W вход, пълен заряд за 101 минути, широк диапазон 11–150V, съвместим с 90% от соларните панели с MC4 конектори, с интелигентно MPPT проследяване.",
-      "image": "4895251650571-8_1.webp"
+      "image": "delta-3-ultra-plus-zarezhdane-1.webp"
     },
     {
       "blockType": "featureSection",
@@ -149,7 +149,7 @@
       "anchorLabel": "Умен дом",
       "heading": "Smart Home Panel и превключване за 10 ms",
       "body": "Smart Home Panel (не е включен в комплекта) е сърцето на екосистемата: свързва до две станции DELTA 3 Ultra Plus с до 10 домашни вериги. При спиране на тока превключва за 10 ms, а приложението EcoFlow ви държи в течение и ви оставя да избирате кои уреди са с предимство. Настройки за нива на зареждане и разреждане, скорост на зареждане от контакт, управление на умния генератор — всичко от телефона.",
-      "image": "4895251650571-10_1.webp"
+      "image": "delta-3-ultra-plus-umen-dom-1.webp"
     },
     {
       "blockType": "inTheBox",
@@ -159,19 +159,19 @@
         {
           "name": "EcoFlow DELTA 3 Ultra Plus",
           "qty": 1,
-          "image": "4895251650571-1_1.webp",
+          "image": "delta-3-ultra-plus-1.webp",
           "imageAlt": "EcoFlow DELTA 3 Ultra Plus"
         },
         {
           "name": "Захранващ кабел за контакт",
           "qty": 1,
-          "image": "kutiya-kabel.webp",
+          "image": "delta-3-plus-kakvo-ima-v-kutiyata-2.webp",
           "imageAlt": "Захранващ кабел за контакт"
         },
         {
           "name": "Ръководство за употреба",
           "qty": 1,
-          "image": "kutiya-rakovodstvo.webp",
+          "image": "delta-3-plus-kakvo-ima-v-kutiyata-3.webp",
           "imageAlt": "Ръководство за употреба"
         }
       ],
@@ -289,23 +289,48 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-1_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-2_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-3_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-4_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-5_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-6_1.webp"
-    ],
-    "sekcii": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-7_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-8_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-9_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-10_1.webp"
-    ],
-    "_bележка": "Снимките са от dice.bg, webp. kutiya-*.webp са в Медия."
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-1_1.webp",
+      "file": "delta-3-ultra-plus-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-2_1.webp",
+      "file": "delta-3-ultra-plus-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-3_1.webp",
+      "file": "delta-3-ultra-plus-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-4_1.webp",
+      "file": "delta-3-ultra-plus-4.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-5_1.webp",
+      "file": "delta-3-ultra-plus-5.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-6_1.webp",
+      "file": "delta-3-ultra-plus-6.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-7_1.webp",
+      "file": "delta-3-ultra-plus-za-doma-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-8_1.webp",
+      "file": "delta-3-ultra-plus-zarezhdane-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-9_1.webp",
+      "file": "delta-3-ultra-plus-moshtnost-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/4/8/4895251650571-10_1.webp",
+      "file": "delta-3-ultra-plus-umen-dom-1.webp"
+    }
+  ],
   "_prevod_nadpisi": "няма — снимките са без надписи",
   "_neyasni": [
     "НЯМА официална страница в eu.ecoflow.com — всичко е от dice.bg. Спецификациите да се сверят с партньорския портал преди публикуване; съмнителни данни от dice: „AC Charging Input: 100-120V~15A 1800W“ (американски стандарт — за ЕС вероятно 230V), соларният вход „1600W max. and LPV 11-60V/20A“ (непълно — липсва HPV диапазонът; в текста се споменава 11–150V), „1 x USB-A“.",

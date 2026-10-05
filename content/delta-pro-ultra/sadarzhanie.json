@@ -52,35 +52,35 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-delta-pro-ultra-home-diy-power-station-1174282884.png",
+      "file": "delta-pro-ultra-1.png",
       "alt": "EcoFlow DELTA Pro Ultra — инвертор и батерия"
     },
     {
-      "file": "ecoflow-delta-pro-ultra-home-diy-power-station-1174819351.png",
+      "file": "delta-pro-ultra-2.png",
       "alt": "EcoFlow DELTA Pro Ultra — изглед отпред"
     },
     {
-      "file": "ecoflow-delta-pro-ultra-home-diy-power-station-1175154526.png",
+      "file": "delta-pro-ultra-3.png",
       "alt": "EcoFlow DELTA Pro Ultra — под ъгъл"
     },
     {
-      "file": "ecoflow-delta-pro-ultra-home-diy-power-station-1174819350.png",
+      "file": "delta-pro-ultra-4.png",
       "alt": "EcoFlow DELTA Pro Ultra — изглед отзад"
     },
     {
-      "file": "ecoflow-delta-pro-ultra-home-diy-power-station-1174819349.png",
+      "file": "delta-pro-ultra-5.png",
       "alt": "EcoFlow DELTA Pro Ultra — изглед отстрани"
     },
     {
-      "file": "ecoflow-delta-pro-ultra-home-diy-power-station-1174819348.png",
+      "file": "delta-pro-ultra-6.png",
       "alt": "EcoFlow DELTA Pro Ultra — изглед отгоре"
     },
     {
-      "file": "ecoflow-delta-pro-ultra-home-diy-power-station-1175154529.jpg",
+      "file": "delta-pro-ultra-7.jpg",
       "alt": "EcoFlow DELTA Pro Ultra пред дома"
     },
     {
-      "file": "ecoflow-delta-pro-ultra-home-diy-power-station-1175154530.jpg",
+      "file": "delta-pro-ultra-8.jpg",
       "alt": "EcoFlow DELTA Pro Ultra на път"
     }
   ],
@@ -92,7 +92,7 @@
       "anchorLabel": "Преглед",
       "heading": "Накратко",
       "body": "",
-      "image": "EU_UKGroup_161269588.jpg"
+      "image": "delta-pro-ultra-pregled-1.jpg"
     },
     {
       "blockType": "tabbedShowcase",
@@ -102,28 +102,28 @@
       "tabs": [
         {
           "label": "Всеки ден",
-          "image": "pc_Home_Power_9d7ddf1d-9650-4061-920b-b9aad3a0f937.jpg",
+          "image": "delta-pro-ultra-nay-moshtnoto-reshenie-na-ecoflow-1.jpg",
           "imageAlt": "DELTA Pro Ultra в ежедневието",
           "caption": "Мощна енергия, която се вписва в ежедневието — зареждате електромобила, готвите, забавлявате гости на терасата — всичко от една система.",
           "rows": []
         },
         {
           "label": "Съхранение на слънце",
-          "image": "pc_Solar_Storage_157b2ab4-661d-48f6-b9af-fcabeb9478b1.jpg",
+          "image": "delta-pro-ultra-nay-moshtnoto-reshenie-na-ecoflow-2.jpg",
           "imageAlt": "DELTA Pro Ultra съхранява соларна енергия",
           "caption": "Произвеждате слънчева енергия през деня и я пазите за когато ви трябва. DELTA Pro Ultra прибира излишъка от панелите — нищо не се губи.",
           "rows": []
         },
         {
           "label": "Резервно захранване",
-          "image": "pc_Backup_44db2e51-52d4-4fbf-9c61-aff304d80d56.jpg",
+          "image": "delta-pro-ultra-nay-moshtnoto-reshenie-na-ecoflow-3.jpg",
           "imageAlt": "DELTA Pro Ultra при спиране на тока",
           "caption": "При буря или спиране на тока DELTA Pro Ultra мигновено захранва най-важното — или цялата къща.",
           "rows": []
         },
         {
           "label": "Индустрия и бизнес",
-          "image": "pc_Industrial_Commercial_Use.jpg",
+          "image": "delta-pro-ultra-nay-moshtnoto-reshenie-na-ecoflow-4.jpg",
           "imageAlt": "DELTA Pro Ultra за професионална употреба",
           "caption": "",
           "rows": []
@@ -137,7 +137,7 @@
       "anchorLabel": "Капацитет",
       "heading": "6–30 kWh капацитет за седмици* комфорт",
       "body": "Изведете сигурността на домашното захранване на друго ниво — до 30 kWh капацитет. За обикновено домакинство това са седмици резервно захранване за осветлението и уредите, хладилника включително (времето зависи от уредите). Стикова се и пести място — побира се удобно в гараж или сервизно помещение. * Времето за резервно захранване зависи от използваните уреди.",
-      "image": "pc_6-30kWh_Capacity_en_c3085275-6517-4178-81a2-cb355c2d6f6d.jpg"
+      "image": "delta-pro-ultra-kapacitet-1.jpg"
     },
     {
       "blockType": "featureSection",
@@ -146,7 +146,7 @@
       "anchorLabel": "Мощност",
       "heading": "Един модул 6900W покрива всички уреди",
       "body": "С 6900W изход EcoFlow DELTA Pro Ultra върти без усилие и най-енергоемките домакински уреди — дори зарядно за електромобил. С X-Fusion гарантира пълните 6900W дори по време на зареждане.",
-      "image": "pc_6900W_output_f41c52a4-04d6-423f-8148-c4c3bf8253b6.jpg"
+      "image": "delta-pro-ultra-moshtnost-1.jpg"
     },
     {
       "blockType": "tabbedShowcase",
@@ -157,28 +157,28 @@
       "tabs": [
         {
           "label": "Няколко зони",
-          "image": "pc_Multiple_Area_Uses_en_3ba69816-6653-4660-8c98-8d3d8d04b474.jpg",
+          "image": "delta-pro-ultra-prilozheniya-1.jpg",
           "imageAlt": "DELTA Pro Ultra — захранване на няколко зони",
           "caption": "",
           "rows": []
         },
         {
           "label": "Целият дом",
-          "image": "pc_Whole-Home_Use_en_502aa7f5-8af6-4087-a118-8d147b8441fa.jpg",
+          "image": "delta-pro-ultra-prilozheniya-2.jpg",
           "imageAlt": "DELTA Pro Ultra — захранване на целия дом",
           "caption": "",
           "rows": []
         },
         {
           "label": "Извън мрежата",
-          "image": "pc_Off-Grid_House_en_5cf6b265-db46-499d-9404-cc3cfd3f14eb.jpg",
+          "image": "delta-pro-ultra-prilozheniya-3.jpg",
           "imageAlt": "DELTA Pro Ultra — къща извън мрежата",
           "caption": "",
           "rows": []
         },
         {
           "label": "Индустрия и бизнес",
-          "image": "pc_Industrial_Commercial_Use_ed701eb3-76c9-4da0-b029-a6be18daecb7.jpg",
+          "image": "delta-pro-ultra-prilozheniya-4.jpg",
           "imageAlt": "DELTA Pro Ultra — индустриална и търговска употреба",
           "caption": "",
           "rows": []
@@ -192,7 +192,7 @@
       "anchorLabel": "Зареждане",
       "heading": "5 начина за бързо зареждане — винаги с енергия",
       "body": "С EcoFlow DELTA Pro Ultra изборът е ваш. Освен обичайните начини — слънце и мрежа — вече зареждате и от бензинов генератор, и дори от зарядна станция за електромобил. С най-бързото зареждане в индустрията — 8800W — пълните две батерии само за 2 часа.",
-      "image": "pc_5_Ways_Charge.jpg"
+      "image": "delta-pro-ultra-zarezhdane-1.jpg"
     },
     {
       "blockType": "featureSection",
@@ -201,7 +201,7 @@
       "anchorLabel": "Приложение",
       "heading": "Управление на енергията 24/7 с EcoFlow OASIS",
       "body": "",
-      "image": "pc_EcoFlow_OASIS.jpg"
+      "image": "delta-pro-ultra-prilozhenie-1.jpg"
     },
     {
       "blockType": "tabbedShowcase",
@@ -212,14 +212,14 @@
       "tabs": [
         {
           "label": "Един товар или зона",
-          "image": "Single_Load_or_Area.jpg",
+          "image": "delta-pro-ultra-sistema-1.jpg",
           "imageAlt": "Соларни панели + DELTA Pro Ultra",
           "caption": "Соларни панели + DELTA Pro Ultra: пералня, сушилня, електромобил — съвместим със зарядни станции на други производители.",
           "rows": []
         },
         {
           "label": "Няколко товара или зони",
-          "image": "Multiple_Loads_or_Areas.jpg",
+          "image": "delta-pro-ultra-sistema-2.jpg",
           "imageAlt": "Соларни панели + ръчен превключвател + DELTA Pro Ultra",
           "caption": "Соларни панели + ръчен превключвател* + DELTA Pro Ultra: сервизно помещение, кухня, хол. * Монтажът изисква правоспособен електротехник. Ако вече имате ръчен превключвател — за DELTA Pro Ultra той трябва да е с номинален работен ток над 40A.",
           "rows": []
@@ -232,7 +232,7 @@
       "layout": "stacked",
       "heading": "Вземете я навсякъде*",
       "body": "С количката DELTA Pro Ultra идва с вас — навън или при преместване. * Портативността се отнася за конфигурация с една батерия. Конфигурациите с няколко батерии са за стационарна употреба.",
-      "image": "pc_Take_With_You_Anywhere.jpg"
+      "image": "delta-pro-ultra-vzemete-ya-navsyakade-1.jpg"
     },
     {
       "blockType": "featureSection",
@@ -241,7 +241,7 @@
       "anchorLabel": "UPS",
       "heading": "Резервно захранване, което дори няма да забележите",
       "body": "С UPS-а на EcoFlow DELTA Pro Ultra едва ще усетите спирането на тока. DELTA Pro Ultra пази чувствителната ви електроника денонощно и работи на тихите 0 dB — работите от дома или спите спокойно.* * При ниска консумация под 2000W.",
-      "image": "PC_30db.jpg"
+      "image": "delta-pro-ultra-ups-1.jpg"
     },
     {
       "blockType": "tabbedShowcase",
@@ -252,14 +252,14 @@
       "tabs": [
         {
           "label": "EcoFlow X-Cooling",
-          "image": "pc_82a0c46b-3cf0-4342-a510-f1a35fef5625.jpg",
+          "image": "delta-pro-ultra-bezopasnost-1.jpg",
           "imageAlt": "DELTA Pro Ultra — X-Cooling",
           "caption": "С гъвкавия си plug-and-play дизайн и ненадминат соларен вход EcoFlow DELTA Pro Ultra ви оставя да сглобите решение точно за вашите нужди. Има и заключване на соларните входове — за безопасност и сигурна връзка.",
           "rows": []
         },
         {
           "label": "По-добра производителност с BMS",
-          "image": "pc_BMS.jpg",
+          "image": "delta-pro-ultra-bezopasnost-2.jpg",
           "imageAlt": "DELTA Pro Ultra — BMS",
           "caption": "Най-модерната LFP технология и усъвършенстваната система за управление на батерията (BMS) следят ключовите данни и осигуряват безопасност, дълъг живот и висока производителност. Всяка батерия издържа 3500+ цикъла, преди капацитетът да падне до 80% — и продължава да работи и след това.",
           "rows": []
@@ -275,21 +275,21 @@
       "tabs": [
         {
           "label": "Работа от –20 °C до 45 °C",
-          "image": "Operating_temperatures__-4_to_113.jpg",
+          "image": "delta-pro-ultra-izdrazhlivost-1.jpg",
           "imageAlt": "DELTA Pro Ultra — работен температурен диапазон",
           "caption": "",
           "rows": []
         },
         {
           "label": "Издържа високо напрежение до 290V",
-          "image": "dpu_mts_new_senario_window1-tuya.png",
+          "image": "delta-pro-ultra-izdrazhlivost-2.png",
           "imageAlt": "DELTA Pro Ultra — защита от високо напрежение",
           "caption": "",
           "rows": []
         },
         {
           "label": "IP54 — прах и пръски",
-          "image": "IP54_dustproof_and_splashproof.jpg",
+          "image": "delta-pro-ultra-izdrazhlivost-3.jpg",
           "imageAlt": "DELTA Pro Ultra — IP54 защита",
           "caption": "* IP54 защитата важи само когато всички портове са затворени с капачетата.",
           "rows": []
@@ -307,43 +307,43 @@
             {
               "name": "EcoFlow DELTA Pro Ultra инвертор",
               "qty": 1,
-              "image": "eu_EcoFlow_DELTA_Pro_Ultra_Inverter_cd6e154b-88b0-46b0-aebe-d5dc9eb165bf.png",
+              "image": "delta-pro-ultra-kakvo-ima-v-kutiyata-1.png",
               "imageAlt": "EcoFlow DELTA Pro Ultra инвертор"
             },
             {
               "name": "Портативна стойка EcoFlow",
               "qty": 1,
-              "image": "Ecoflow_Portable_Stand.png",
+              "image": "delta-pro-ultra-kakvo-ima-v-kutiyata-2.png",
               "imageAlt": "Портативна стойка"
             },
             {
               "name": "Инструмент за сглобяване и разглобяване",
               "qty": 1,
-              "image": "EcoFlow_Disassembly_and_Assembly_Tool.png",
+              "image": "delta-pro-ultra-kakvo-ima-v-kutiyata-3.png",
               "imageAlt": "Инструмент за сглобяване"
             },
             {
               "name": "Кабел за зареждане от соларен панел към Low-PV входа",
               "qty": 1,
-              "image": "EcoFlow_Solar_to_Low-PV_Port_Charging_Cable.png",
+              "image": "delta-pro-ultra-kakvo-ima-v-kutiyata-4.png",
               "imageAlt": "Кабел за соларен панел"
             },
             {
               "name": "Захранващ кабел за контакт C20",
               "qty": 1,
-              "image": "EcoFlow_AC_Charging_Cable-C20.png",
+              "image": "delta-pro-ultra-kakvo-ima-v-kutiyata-5.png",
               "imageAlt": "Захранващ кабел C20"
             },
             {
               "name": "Кратко ръководство",
               "qty": 1,
-              "image": "Quick_Start_Guide_7a73c3fc-94a6-46d8-afe1-36e2eca9a30e.png",
+              "image": "delta-pro-ultra-kakvo-ima-v-kutiyata-6.png",
               "imageAlt": "Кратко ръководство"
             },
             {
               "name": "Гаранционна карта",
               "qty": 1,
-              "image": "warranty_card_9a410ff6-cb42-448d-a2db-9b5808ecede8.png",
+              "image": "delta-pro-ultra-kakvo-ima-v-kutiyata-7.png",
               "imageAlt": "Гаранционна карта"
             }
           ]
@@ -354,19 +354,19 @@
             {
               "name": "EcoFlow DELTA Pro Ultra батерия",
               "qty": 1,
-              "image": "EcoFlow_DELTA_Pro_Ultra_Battery.png",
+              "image": "delta-pro-ultra-kakvo-ima-v-kutiyata-8.png",
               "imageAlt": "EcoFlow DELTA Pro Ultra батерия"
             },
             {
               "name": "Кабел за свързване на батерията (DELTA Pro Ultra) — 0,2 m",
               "qty": 1,
-              "image": "EcoFlow_Battery_Connection_Cable_DELTA_Pro_Ultra_-0.2m_8fdbf6c1-df4c-4fb6-94d7-b2606daf16f0.png",
+              "image": "delta-pro-ultra-kakvo-ima-v-kutiyata-9.png",
               "imageAlt": "Кабел за свързване на батерията"
             },
             {
               "name": "Ръководство за безопасност",
               "qty": 1,
-              "image": "Safety_Guide_6c8b730f-4064-4a88-927f-e59245fcb153.png",
+              "image": "delta-pro-ultra-kakvo-ima-v-kutiyata-10.png",
               "imageAlt": "Ръководство за безопасност"
             }
           ]
@@ -510,53 +510,168 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1174282884.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1174819351.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1175154526.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1174819350.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1174819349.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1174819348.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1175154529.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1175154530.jpg"
-    ],
-    "sekcii": [
-      "https://eu.ecoflow.com/cdn/shop/files/EU_UKGroup_161269588.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_Home_Power_9d7ddf1d-9650-4061-920b-b9aad3a0f937.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_Solar_Storage_157b2ab4-661d-48f6-b9af-fcabeb9478b1.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_Backup_44db2e51-52d4-4fbf-9c61-aff304d80d56.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_Industrial_Commercial_Use.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_6-30kWh_Capacity_en_c3085275-6517-4178-81a2-cb355c2d6f6d.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_6900W_output_f41c52a4-04d6-423f-8148-c4c3bf8253b6.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_Multiple_Area_Uses_en_3ba69816-6653-4660-8c98-8d3d8d04b474.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_Whole-Home_Use_en_502aa7f5-8af6-4087-a118-8d147b8441fa.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_Off-Grid_House_en_5cf6b265-db46-499d-9404-cc3cfd3f14eb.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_Industrial_Commercial_Use_ed701eb3-76c9-4da0-b029-a6be18daecb7.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_5_Ways_Charge.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_EcoFlow_OASIS.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/Single_Load_or_Area.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/Multiple_Loads_or_Areas.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_Take_With_You_Anywhere.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_30db.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_82a0c46b-3cf0-4342-a510-f1a35fef5625.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/pc_BMS.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/Operating_temperatures__-4_to_113.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/dpu_mts_new_senario_window1-tuya.png",
-      "https://eu.ecoflow.com/cdn/shop/files/IP54_dustproof_and_splashproof.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/eu_EcoFlow_DELTA_Pro_Ultra_Inverter_cd6e154b-88b0-46b0-aebe-d5dc9eb165bf.png",
-      "https://eu.ecoflow.com/cdn/shop/files/Ecoflow_Portable_Stand.png",
-      "https://eu.ecoflow.com/cdn/shop/files/EcoFlow_Disassembly_and_Assembly_Tool.png",
-      "https://eu.ecoflow.com/cdn/shop/files/EcoFlow_Solar_to_Low-PV_Port_Charging_Cable.png",
-      "https://eu.ecoflow.com/cdn/shop/files/EcoFlow_AC_Charging_Cable-C20.png",
-      "https://eu.ecoflow.com/cdn/shop/files/Quick_Start_Guide_7a73c3fc-94a6-46d8-afe1-36e2eca9a30e.png",
-      "https://eu.ecoflow.com/cdn/shop/files/warranty_card_9a410ff6-cb42-448d-a2db-9b5808ecede8.png",
-      "https://eu.ecoflow.com/cdn/shop/files/EcoFlow_DELTA_Pro_Ultra_Battery.png",
-      "https://eu.ecoflow.com/cdn/shop/files/EcoFlow_Battery_Connection_Cable_DELTA_Pro_Ultra_-0.2m_8fdbf6c1-df4c-4fb6-94d7-b2606daf16f0.png",
-      "https://eu.ecoflow.com/cdn/shop/files/Safety_Guide_6c8b730f-4064-4a88-927f-e59245fcb153.png"
-    ],
-    "_bележка": "Снимките за кутията (инвертор, стойка, инструмент, кабели, ръководства, батерия) са в списъка за sekcii/."
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1174282884.png",
+      "file": "delta-pro-ultra-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1174819351.png",
+      "file": "delta-pro-ultra-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1175154526.png",
+      "file": "delta-pro-ultra-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1174819350.png",
+      "file": "delta-pro-ultra-4.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1174819349.png",
+      "file": "delta-pro-ultra-5.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1174819348.png",
+      "file": "delta-pro-ultra-6.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1175154529.jpg",
+      "file": "delta-pro-ultra-7.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-pro-ultra-home-diy-power-station-1175154530.jpg",
+      "file": "delta-pro-ultra-8.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/EU_UKGroup_161269588.jpg",
+      "file": "delta-pro-ultra-pregled-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Home_Power_9d7ddf1d-9650-4061-920b-b9aad3a0f937.jpg",
+      "file": "delta-pro-ultra-nay-moshtnoto-reshenie-na-ecoflow-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Solar_Storage_157b2ab4-661d-48f6-b9af-fcabeb9478b1.jpg",
+      "file": "delta-pro-ultra-nay-moshtnoto-reshenie-na-ecoflow-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Backup_44db2e51-52d4-4fbf-9c61-aff304d80d56.jpg",
+      "file": "delta-pro-ultra-nay-moshtnoto-reshenie-na-ecoflow-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Industrial_Commercial_Use.jpg",
+      "file": "delta-pro-ultra-nay-moshtnoto-reshenie-na-ecoflow-4.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_6-30kWh_Capacity_en_c3085275-6517-4178-81a2-cb355c2d6f6d.jpg",
+      "file": "delta-pro-ultra-kapacitet-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_6900W_output_f41c52a4-04d6-423f-8148-c4c3bf8253b6.jpg",
+      "file": "delta-pro-ultra-moshtnost-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Multiple_Area_Uses_en_3ba69816-6653-4660-8c98-8d3d8d04b474.jpg",
+      "file": "delta-pro-ultra-prilozheniya-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Whole-Home_Use_en_502aa7f5-8af6-4087-a118-8d147b8441fa.jpg",
+      "file": "delta-pro-ultra-prilozheniya-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Off-Grid_House_en_5cf6b265-db46-499d-9404-cc3cfd3f14eb.jpg",
+      "file": "delta-pro-ultra-prilozheniya-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Industrial_Commercial_Use_ed701eb3-76c9-4da0-b029-a6be18daecb7.jpg",
+      "file": "delta-pro-ultra-prilozheniya-4.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_5_Ways_Charge.jpg",
+      "file": "delta-pro-ultra-zarezhdane-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_EcoFlow_OASIS.jpg",
+      "file": "delta-pro-ultra-prilozhenie-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Single_Load_or_Area.jpg",
+      "file": "delta-pro-ultra-sistema-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Multiple_Loads_or_Areas.jpg",
+      "file": "delta-pro-ultra-sistema-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Take_With_You_Anywhere.jpg",
+      "file": "delta-pro-ultra-vzemete-ya-navsyakade-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_30db.jpg",
+      "file": "delta-pro-ultra-ups-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_82a0c46b-3cf0-4342-a510-f1a35fef5625.jpg",
+      "file": "delta-pro-ultra-bezopasnost-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_BMS.jpg",
+      "file": "delta-pro-ultra-bezopasnost-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Operating_temperatures__-4_to_113.jpg",
+      "file": "delta-pro-ultra-izdrazhlivost-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/dpu_mts_new_senario_window1-tuya.png",
+      "file": "delta-pro-ultra-izdrazhlivost-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/IP54_dustproof_and_splashproof.jpg",
+      "file": "delta-pro-ultra-izdrazhlivost-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/eu_EcoFlow_DELTA_Pro_Ultra_Inverter_cd6e154b-88b0-46b0-aebe-d5dc9eb165bf.png",
+      "file": "delta-pro-ultra-kakvo-ima-v-kutiyata-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Ecoflow_Portable_Stand.png",
+      "file": "delta-pro-ultra-kakvo-ima-v-kutiyata-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/EcoFlow_Disassembly_and_Assembly_Tool.png",
+      "file": "delta-pro-ultra-kakvo-ima-v-kutiyata-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/EcoFlow_Solar_to_Low-PV_Port_Charging_Cable.png",
+      "file": "delta-pro-ultra-kakvo-ima-v-kutiyata-4.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/EcoFlow_AC_Charging_Cable-C20.png",
+      "file": "delta-pro-ultra-kakvo-ima-v-kutiyata-5.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Quick_Start_Guide_7a73c3fc-94a6-46d8-afe1-36e2eca9a30e.png",
+      "file": "delta-pro-ultra-kakvo-ima-v-kutiyata-6.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/warranty_card_9a410ff6-cb42-448d-a2db-9b5808ecede8.png",
+      "file": "delta-pro-ultra-kakvo-ima-v-kutiyata-7.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/EcoFlow_DELTA_Pro_Ultra_Battery.png",
+      "file": "delta-pro-ultra-kakvo-ima-v-kutiyata-8.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/EcoFlow_Battery_Connection_Cable_DELTA_Pro_Ultra_-0.2m_8fdbf6c1-df4c-4fb6-94d7-b2606daf16f0.png",
+      "file": "delta-pro-ultra-kakvo-ima-v-kutiyata-9.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Safety_Guide_6c8b730f-4064-4a88-927f-e59245fcb153.png",
+      "file": "delta-pro-ultra-kakvo-ima-v-kutiyata-10.png"
+    }
+  ],
   "_prevod_nadpisi": "виж prevod-nadpisi.md",
   "_neyasni": [
     "Секцията „Сравнение на DELTA Pro моделите“ и „Съвместимост“ на EcoFlow са празни блокове (без данни на страницата) — пропуснати.",

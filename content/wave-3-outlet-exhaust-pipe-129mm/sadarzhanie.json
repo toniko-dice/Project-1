@@ -35,7 +35,7 @@
   },
   "galeriya": [
     {
-      "file": "72885_ecoflow-wave-3-outlet-insulated-exhaust-pipe.webp",
+      "file": "wave-3-outlet-exhaust-pipe-129mm-1.webp",
       "alt": "EcoFlow WAVE 3 Outlet Insulated Exhaust Pipe (129 mm) — тръба"
     }
   ],
@@ -98,12 +98,12 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72885_ecoflow-wave-3-outlet-insulated-exhaust-pipe.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72885_ecoflow-wave-3-outlet-insulated-exhaust-pipe.webp",
+      "file": "wave-3-outlet-exhaust-pipe-129mm-1.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Няма страница в eu.ecoflow.com — по dice.bg.",

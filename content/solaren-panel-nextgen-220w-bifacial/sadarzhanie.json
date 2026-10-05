@@ -44,27 +44,27 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-nextgen-220w-bifacial-portable-solar-panel7_1.webp",
+      "file": "solaren-panel-nextgen-220w-bifacial-1.webp",
       "alt": "EcoFlow NextGen 220W Bifacial Portable Solar Panel — разгънат със стойка"
     },
     {
-      "file": "ecoflow-nextgen-220w-bifacial-portable-solar-panel0_1.webp",
+      "file": "solaren-panel-nextgen-220w-bifacial-2.webp",
       "alt": "EcoFlow NextGen 220W Bifacial Portable Solar Panel — под ъгъл"
     },
     {
-      "file": "ecoflow-nextgen-220w-bifacial-portable-solar-panel12_1.webp",
+      "file": "solaren-panel-nextgen-220w-bifacial-3.webp",
       "alt": "EcoFlow NextGen 220W Bifacial Portable Solar Panel — отпред"
     },
     {
-      "file": "ecoflow-nextgen-220w-bifacial-portable-solar-panel5_1.webp",
+      "file": "solaren-panel-nextgen-220w-bifacial-4.webp",
       "alt": "EcoFlow NextGen 220W Bifacial Portable Solar Panel — отзад"
     },
     {
-      "file": "ecoflow-nextgen-220w-bifacial-portable-solar-panel6_1.webp",
+      "file": "solaren-panel-nextgen-220w-bifacial-5.webp",
       "alt": "EcoFlow NextGen 220W Bifacial Portable Solar Panel — детайл"
     },
     {
-      "file": "ecoflow-nextgen-220w-bifacial-portable-solar-panel2_1.webp",
+      "file": "solaren-panel-nextgen-220w-bifacial-6.webp",
       "alt": "EcoFlow NextGen 220W Bifacial Portable Solar Panel — изглед 6"
     }
   ],
@@ -102,7 +102,7 @@
       "anchorLabel": "Двулицев",
       "heading": "Двулицев соларен панел от следващо поколение",
       "body": "Двулицевият сгъваем соларен панел EcoFlow 220W максимизира добива благодарение на двустранния си дизайн: 220W основна мощност отпред и задна страна, която улавя разсеяната околна светлина. Така събира повече светлина от традиционните еднолицеви панели. N-тип TOPCon монокристалните клетки дават до 25% ефективност на преобразуване.",
-      "image": "ecoflow-nextgen-220w-bifacial-portable-solar-panel7_1.webp",
+      "image": "solaren-panel-nextgen-220w-bifacial-1.webp",
       "imageAlt": "Панелът, разгънат на стойката"
     },
     {
@@ -112,7 +112,7 @@
       "anchorLabel": "Стойка",
       "heading": "Вградена стойка и соларен водач",
       "body": "Вградената стойка се нагласява лесно на 30°, 60° или 90°. Вграденият водач за ъгъла към слънцето ви показва кога сянката е в центъра — тогава панелът е перпендикулярен на най-силните лъчи. С включения XT60i кабел зарежда електроцентралите на EcoFlow с до 220W; MC4 конекторът го прави съвместим и с други електроцентрали със соларен вход.",
-      "image": "ecoflow-nextgen-220w-bifacial-portable-solar-panel0_1.webp",
+      "image": "solaren-panel-nextgen-220w-bifacial-2.webp",
       "imageAlt": "Панелът под ъгъл"
     },
     {
@@ -122,7 +122,7 @@
       "anchorLabel": "Издръжливост",
       "heading": "Създаден за приключения",
       "body": "Безшевният панел е потопяем до един метър за 30 минути (IP68), а ETFE филмът предпазва от ултравиолетови лъчи. Свързвайте няколко панела последователно или паралелно за още по-бързо зареждане. В комплекта има оригинална чанта за пренасяне.",
-      "image": "ecoflow-nextgen-220w-bifacial-portable-solar-panel5_1.webp",
+      "image": "solaren-panel-nextgen-220w-bifacial-4.webp",
       "imageAlt": "Задната страна на панела"
     },
     {
@@ -133,25 +133,25 @@
         {
           "name": "EcoFlow NextGen 220W Bifacial соларен панел",
           "qty": 1,
-          "image": "ecoflow-nextgen-220w-bifacial-portable-solar-panel7_1.webp",
+          "image": "solaren-panel-nextgen-220w-bifacial-1.webp",
           "imageAlt": "EcoFlow NextGen 220W Bifacial Portable Solar Panel"
         },
         {
           "name": "Кабел EcoFlow XT60i",
           "qty": 1,
-          "image": "kutiya-kabel.webp",
+          "image": "delta-3-plus-kakvo-ima-v-kutiyata-2.webp",
           "imageAlt": "Кабел EcoFlow XT60i"
         },
         {
           "name": "Оригинална чанта за пренасяне",
           "qty": 1,
-          "image": "ecoflow-nextgen-220w-bifacial-portable-solar-panel12_1.webp",
+          "image": "solaren-panel-nextgen-220w-bifacial-3.webp",
           "imageAlt": "Чанта за пренасяне"
         },
         {
           "name": "Ръководство за употреба",
           "qty": 1,
-          "image": "kutiya-rakovodstvo.webp",
+          "image": "delta-3-plus-kakvo-ima-v-kutiyata-3.webp",
           "imageAlt": "Ръководство за употреба"
         }
       ],
@@ -219,17 +219,32 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel7_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel0_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel12_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel5_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel6_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel2_1.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel7_1.webp",
+      "file": "solaren-panel-nextgen-220w-bifacial-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel0_1.webp",
+      "file": "solaren-panel-nextgen-220w-bifacial-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel12_1.webp",
+      "file": "solaren-panel-nextgen-220w-bifacial-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel5_1.webp",
+      "file": "solaren-panel-nextgen-220w-bifacial-4.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel6_1.webp",
+      "file": "solaren-panel-nextgen-220w-bifacial-5.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel2_1.webp",
+      "file": "solaren-panel-nextgen-220w-bifacial-6.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Няма жива страница в eu.ecoflow.com (само „refurbished“, която показва снимките и спецификациите на новия 220W Lightweight) — съдържанието е по описанието в dice.bg, преразказано; числата са само от dice.",

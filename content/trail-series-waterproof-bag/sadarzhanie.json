@@ -35,27 +35,27 @@
   },
   "galeriya": [
     {
-      "file": "efb-trail200-300-bag-1.webp",
+      "file": "trail-series-waterproof-bag-1.webp",
       "alt": "EcoFlow TRAIL Series Waterproof Bag — чанта"
     },
     {
-      "file": "efb-trail200-300-bag-2.webp",
+      "file": "trail-series-waterproof-bag-2.webp",
       "alt": "EcoFlow TRAIL Series Waterproof Bag — чанта"
     },
     {
-      "file": "efb-trail200-300-bag-3.webp",
+      "file": "trail-series-waterproof-bag-3.webp",
       "alt": "EcoFlow TRAIL Series Waterproof Bag — чанта"
     },
     {
-      "file": "efb-trail200-300-bag-4.webp",
+      "file": "trail-series-waterproof-bag-4.webp",
       "alt": "EcoFlow TRAIL Series Waterproof Bag — чанта"
     },
     {
-      "file": "efb-trail200-300-bag-5.webp",
+      "file": "trail-series-waterproof-bag-5.webp",
       "alt": "EcoFlow TRAIL Series Waterproof Bag — чанта"
     },
     {
-      "file": "efb-trail200-300-bag-6.webp",
+      "file": "trail-series-waterproof-bag-6.webp",
       "alt": "EcoFlow TRAIL Series Waterproof Bag — чанта"
     }
   ],
@@ -118,17 +118,32 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/f/efb-trail200-300-bag-1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/f/efb-trail200-300-bag-2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/f/efb-trail200-300-bag-3.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/f/efb-trail200-300-bag-4.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/f/efb-trail200-300-bag-5.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/f/efb-trail200-300-bag-6.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/f/efb-trail200-300-bag-1.webp",
+      "file": "trail-series-waterproof-bag-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/f/efb-trail200-300-bag-2.webp",
+      "file": "trail-series-waterproof-bag-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/f/efb-trail200-300-bag-3.webp",
+      "file": "trail-series-waterproof-bag-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/f/efb-trail200-300-bag-4.webp",
+      "file": "trail-series-waterproof-bag-4.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/f/efb-trail200-300-bag-5.webp",
+      "file": "trail-series-waterproof-bag-5.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/f/efb-trail200-300-bag-6.webp",
+      "file": "trail-series-waterproof-bag-6.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "В eu.ecoflow.com е „Waterproof Carrying Case“ с кратко описание — по dice.bg.",

@@ -38,23 +38,23 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow_power_kit_power_dock-1.webp",
+      "file": "power-kit-power-dock-1.webp",
       "alt": "EcoFlow Power Kit Power Dock — разширителна станция"
     },
     {
-      "file": "ecoflow_power_kit_power_dock-2.webp",
+      "file": "power-kit-power-dock-2.webp",
       "alt": "EcoFlow Power Kit Power Dock — разширителна станция"
     },
     {
-      "file": "ecoflow_power_kit_power_dock-3.webp",
+      "file": "power-kit-power-dock-3.webp",
       "alt": "EcoFlow Power Kit Power Dock — разширителна станция"
     },
     {
-      "file": "ecoflow_power_kit_power_dock-4.webp",
+      "file": "power-kit-power-dock-4.webp",
       "alt": "EcoFlow Power Kit Power Dock — разширителна станция"
     },
     {
-      "file": "ecoflow_power_kit_power_dock-5.webp",
+      "file": "power-kit-power-dock-5.webp",
       "alt": "EcoFlow Power Kit Power Dock — разширителна станция"
     }
   ],
@@ -172,16 +172,28 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_dock-1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_dock-2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_dock-3.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_dock-4.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_dock-5.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_dock-1.webp",
+      "file": "power-kit-power-dock-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_dock-2.webp",
+      "file": "power-kit-power-dock-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_dock-3.webp",
+      "file": "power-kit-power-dock-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_dock-4.webp",
+      "file": "power-kit-power-dock-4.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_dock-5.webp",
+      "file": "power-kit-power-dock-5.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Продуктът го няма в eu.ecoflow.com — съдържанието е по dice.bg.",

@@ -47,7 +47,7 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-450w-portable-solar-panel-59886674510167.png",
+      "file": "solaren-panel-450w-rigid-2br-1.png",
       "alt": "EcoFlow 450W Rigid Solar Panel (2 pieces) — отпред"
     }
   ],
@@ -59,7 +59,7 @@
       "anchorLabel": "Преглед",
       "heading": "",
       "body": "",
-      "image": "1_1_9d938c8d-3c32-48f8-b111-407db55ee9bc.png",
+      "image": "solaren-panel-450w-rigid-2br-pregled-1.png",
       "imageAlt": "EcoFlow 450W Rigid Solar Panel (2 pieces) — основни предимства"
     },
     {
@@ -69,7 +69,7 @@
       "anchorLabel": "Монтаж",
       "heading": "Бърз и лесен монтаж",
       "body": "Свързвате лесно няколко панела към съществуващата си 48V система с универсален конектор.",
-      "image": "2_1_2fd2b898-0074-4b14-8b01-409355337f9d.png",
+      "image": "solaren-panel-450w-rigid-2br-montazh-1.png",
       "imageAlt": "Три панела в двора на къща"
     },
     {
@@ -78,7 +78,7 @@
       "theme": "light",
       "heading": "450W твърд соларен панел",
       "body": "Идеален за домакинства в мрежата и извън нея, които искат да съхраняват и ползват слънчева енергия за дома си.",
-      "image": "3_1_fa4b8f94-1987-4575-b789-526d2c96c295.png",
+      "image": "solaren-panel-450w-rigid-2br-450w-tvard-solaren-panel-1.png",
       "imageAlt": "Два панела на покрив"
     },
     {
@@ -88,7 +88,7 @@
       "anchorLabel": "Ефективност",
       "heading": "Висока соларна ефективност",
       "body": "Изработен от високоефективни монокристални клетки, 450W твърдият соларен панел е с отлична ефективност до 23% — зареждате по-бързо, отколкото с панели с подобен размер. Включете го към съществуващата си фотоволтаична система или към Power Kits и оставете вградения MPPT алгоритъм да оптимизира соларния вход.",
-      "image": "4_1_150ab9ec-a317-42eb-a9a2-0fe89f441ba4.png",
+      "image": "solaren-panel-450w-rigid-2br-efektivnost-1.png",
       "imageAlt": "23% ефективност"
     },
     {
@@ -98,7 +98,7 @@
       "anchorLabel": "Издръжливост",
       "heading": "Водоустойчив и издръжлив",
       "body": "С клас IP68* и здрава антикорозионна алуминиева рамка панелът издържа на вятър до 210 км/ч* и значително снежно натоварване* и събира слънчева енергия с години.\n\n*Водо- и прахоустойчивостта са изпитани в контролирани лабораторни условия — клас IP68 в 1 м вода за 72 часа.\n*Правилно монтираните панели издържат на динамично натоварване от вятър 2400 Pa (скорост 210 км/ч) и статично снежно натоварване 5400 Pa.",
-      "image": "5_1_b31d0240-7f30-4b89-bbff-98d67d0dab7a.png",
+      "image": "solaren-panel-450w-rigid-2br-izdrazhlivost-1.png",
       "imageAlt": "IP68 и защитно покритие, TÜV сертификат"
     },
     {
@@ -108,7 +108,7 @@
       "anchorLabel": "Приложение",
       "heading": "Решение за автономни и мрежови системи",
       "body": "Този панел с висока мощност работи както в мрежови, така и в автономни соларни системи — съхранявате енергия за спиране на тока, намалявате сметките или захранвате дом извън мрежата.",
-      "image": "6_1_f5e8e172-4612-4de7-ab82-8c80c21da6cc.png",
+      "image": "solaren-panel-450w-rigid-2br-prilozhenie-1.png",
       "imageAlt": "Кемпер с панел на покрива в планината"
     },
     {
@@ -118,7 +118,7 @@
       "anchorLabel": "Съвместимост",
       "heading": "Универсално съвместим",
       "body": "Соларните панели на EcoFlow използват универсален соларен конектор, така че може да ги ползвате дори със съществуващата си 48V система. 450W панелът има 30 см кабел за зареждане — достатъчно място за монтаж на няколко панела и максимален соларен вход.",
-      "image": "7_1_e9dadf33-4e68-4d59-80bb-c5498f24e17d.png",
+      "image": "solaren-panel-450w-rigid-2br-savmestimost-1.png",
       "imageAlt": "Универсален соларен конектор"
     },
     {
@@ -128,7 +128,7 @@
       "anchorLabel": "Какво има в кутията",
       "heading": "Какво има в кутията",
       "body": "1. 2 × 450W твърд соларен панел\n2. Ръководство за употреба и гаранционна карта\n\nКабелът от соларен конектор към XT60i не е включен в комплекта — продава се отделно.",
-      "image": "8_1.jpg",
+      "image": "solaren-panel-450w-rigid-2br-kakvo-ima-v-kutiyata-1.jpg",
       "imageAlt": "Панел отпред и отзад, ръководство"
     },
     {
@@ -181,33 +181,56 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-450w-portable-solar-panel-59886674510167.png"
-    ],
-    "sekcii": [
-      "https://eu.ecoflow.com/cdn/shop/files/1_1_9d938c8d-3c32-48f8-b111-407db55ee9bc.png",
-      "https://eu.ecoflow.com/cdn/shop/files/2_1_2fd2b898-0074-4b14-8b01-409355337f9d.png",
-      "https://eu.ecoflow.com/cdn/shop/files/3_1_fa4b8f94-1987-4575-b789-526d2c96c295.png",
-      "https://eu.ecoflow.com/cdn/shop/files/4_1_150ab9ec-a317-42eb-a9a2-0fe89f441ba4.png",
-      "https://eu.ecoflow.com/cdn/shop/files/5_1_b31d0240-7f30-4b89-bbff-98d67d0dab7a.png",
-      "https://eu.ecoflow.com/cdn/shop/files/6_1_f5e8e172-4612-4de7-ab82-8c80c21da6cc.png",
-      "https://eu.ecoflow.com/cdn/shop/files/7_1_e9dadf33-4e68-4d59-80bb-c5498f24e17d.png",
-      "https://eu.ecoflow.com/cdn/shop/files/8_1.jpg"
-    ]
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-450w-portable-solar-panel-59886674510167.png",
+      "file": "solaren-panel-450w-rigid-2br-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/1_1_9d938c8d-3c32-48f8-b111-407db55ee9bc.png",
+      "file": "solaren-panel-450w-rigid-2br-pregled-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/2_1_2fd2b898-0074-4b14-8b01-409355337f9d.png",
+      "file": "solaren-panel-450w-rigid-2br-montazh-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/3_1_fa4b8f94-1987-4575-b789-526d2c96c295.png",
+      "file": "solaren-panel-450w-rigid-2br-450w-tvard-solaren-panel-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/4_1_150ab9ec-a317-42eb-a9a2-0fe89f441ba4.png",
+      "file": "solaren-panel-450w-rigid-2br-efektivnost-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/5_1_b31d0240-7f30-4b89-bbff-98d67d0dab7a.png",
+      "file": "solaren-panel-450w-rigid-2br-izdrazhlivost-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/6_1_f5e8e172-4612-4de7-ab82-8c80c21da6cc.png",
+      "file": "solaren-panel-450w-rigid-2br-prilozhenie-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/7_1_e9dadf33-4e68-4d59-80bb-c5498f24e17d.png",
+      "file": "solaren-panel-450w-rigid-2br-savmestimost-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/8_1.jpg",
+      "file": "solaren-panel-450w-rigid-2br-kakvo-ima-v-kutiyata-1.jpg"
+    }
+  ],
   "_prevod_nadpisi": {
-    "1_1_9d938c8d-3c32-48f8-b111-407db55ee9bc.png": {
+    "solaren-panel-450w-rigid-2br-pregled-1.png": {
       "Conversion Rate 23%": "Ефективност 23%",
       "IP68 Waterproof": "IP68 водоустойчив",
       "Universally Compatible": "Универсално съвместим",
       "Off-grid Solution": "Извън мрежата",
       "On-grid Solution": "В мрежата"
     },
-    "4_1_150ab9ec-a317-42eb-a9a2-0fe89f441ba4.png": {
+    "solaren-panel-450w-rigid-2br-efektivnost-1.png": {
       "23%": "остава"
     },
-    "5_1_b31d0240-7f30-4b89-bbff-98d67d0dab7a.png": {
+    "solaren-panel-450w-rigid-2br-izdrazhlivost-1.png": {
       "IP68": "остава",
       "TÜV certified / Highly Protective": "TÜV сертифициран / силна защита"
     }

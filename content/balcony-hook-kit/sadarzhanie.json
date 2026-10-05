@@ -36,19 +36,19 @@
   },
   "galeriya": [
     {
-      "file": "62870_1.webp",
+      "file": "balcony-hook-kit-1.webp",
       "alt": "EcoFlow Balcony Hook Kit — комплект за балкон"
     },
     {
-      "file": "62870_2.webp",
+      "file": "balcony-hook-kit-2.webp",
       "alt": "EcoFlow Balcony Hook Kit — комплект за балкон"
     },
     {
-      "file": "62870_3.webp",
+      "file": "balcony-hook-kit-3.webp",
       "alt": "EcoFlow Balcony Hook Kit — комплект за балкон"
     },
     {
-      "file": "62870_4.webp",
+      "file": "balcony-hook-kit-4.webp",
       "alt": "EcoFlow Balcony Hook Kit — комплект за балкон"
     }
   ],
@@ -115,15 +115,24 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62870_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62870_2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62870_3.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62870_4.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62870_1.webp",
+      "file": "balcony-hook-kit-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62870_2.webp",
+      "file": "balcony-hook-kit-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62870_3.webp",
+      "file": "balcony-hook-kit-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62870_4.webp",
+      "file": "balcony-hook-kit-4.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",

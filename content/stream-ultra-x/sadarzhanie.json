@@ -48,27 +48,27 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-stream-ultra-x-1183190545.png",
+      "file": "stream-ultra-x-1.png",
       "alt": "EcoFlow STREAM Ultra X — под ъгъл"
     },
     {
-      "file": "ecoflow-stream-ultra-x-1183190541.png",
+      "file": "stream-ultra-x-2.png",
       "alt": "EcoFlow STREAM Ultra X — отпред"
     },
     {
-      "file": "ecoflow-stream-ultra-x-1183190546.png",
+      "file": "stream-ultra-x-3.png",
       "alt": "EcoFlow STREAM Ultra X — изглед 3"
     },
     {
-      "file": "ecoflow-stream-ultra-x-1183190544.png",
+      "file": "stream-ultra-x-4.png",
       "alt": "EcoFlow STREAM Ultra X — изглед 4"
     },
     {
-      "file": "ecoflow-stream-ultra-x-1183190543.png",
+      "file": "stream-ultra-x-5.png",
       "alt": "EcoFlow STREAM Ultra X — изглед 5"
     },
     {
-      "file": "ecoflow-stream-ultra-x-1183190542.png",
+      "file": "stream-ultra-x-6.png",
       "alt": "EcoFlow STREAM Ultra X — изглед 6"
     }
   ],
@@ -80,7 +80,7 @@
       "anchorLabel": "Преглед",
       "heading": "Максимално използване на слънцето, максимални спестявания",
       "body": "",
-      "image": "PC_8247c93b-2dce-4443-9ac5-49cb25aa29c9.png",
+      "image": "stream-ultra-x-pregled-1.png",
       "imageAlt": "EcoFlow STREAM Ultra X — основни предимства"
     },
     {
@@ -92,14 +92,14 @@
       "tabs": [
         {
           "label": "Две устройства",
-          "image": "tab_02_PC.png",
+          "image": "stream-ultra-x-2300w-1.png",
           "imageAlt": "Две устройства STREAM — 2300W изцяло от слънце",
           "caption": "",
           "rows": []
         },
         {
           "label": "Едно устройство",
-          "image": "tab_01_PC.png",
+          "image": "stream-ultra-x-2300w-2.png",
           "imageAlt": "Едно устройство STREAM — 1200W от слънце + 1100W от мрежата",
           "caption": "",
           "rows": []
@@ -113,7 +113,7 @@
       "anchorLabel": "Капацитет",
       "heading": "Енергия от залез до изгрев: от 3,84 kWh до 23 kWh",
       "body": "EcoFlow STREAM Ultra X надхвърля стандартите в бранша — улавя излишната слънчева енергия през деня, за да ви захранва през нощта, и лесно се мащабира според нуждите ви.",
-      "image": "PC_7eeb71b5-642f-4000-83e1-c02bafcf4d85.jpg",
+      "image": "stream-ultra-x-kapacitet-1.jpg",
       "imageAlt": "3,84 kWh с едно устройство / 23 kWh с шест"
     },
     {
@@ -125,14 +125,14 @@
       "tabs": [
         {
           "label": "Две устройства в паралел",
-          "image": "tab_01_PC.jpg",
+          "image": "stream-ultra-x-2300w-2.jpg",
           "imageAlt": "Две устройства STREAM в паралел до пералня",
           "caption": "Свържете две устройства STREAM или STREAM Ultra X с допълнителна батерия STREAM чрез паралелен кабел. Така захранвате мощни уреди до 2300W (в мрежа) — изцяло от слънце.",
           "rows": []
         },
         {
           "label": "Plug-and-play децентрализирана соларна мрежа",
-          "image": "tab_02_PC.jpg",
+          "image": "stream-ultra-x-2300w-1.jpg",
           "imageAlt": "Устройства STREAM в различни стаи",
           "caption": "",
           "rows": []
@@ -146,7 +146,7 @@
       "anchorLabel": "Соларен вход",
       "heading": "Уловете всеки лъч, максимум слънце",
       "body": "Съберете слънчевата енергия по-бързо от всякога. С четири модерни MPPT и цели 2000W соларен вход батерията STREAM улавя и съхранява повече слънчева енергия, по-ефективно.",
-      "image": "PC_63cf3747-aca5-4ee6-a9c1-5a7c60fa5fa1.jpg",
+      "image": "stream-ultra-x-solaren-vhod-1.jpg",
       "imageAlt": "Четири MPPT входа с кабели"
     },
     {
@@ -155,7 +155,7 @@
       "theme": "light",
       "heading": "Облаците и здрачът не спират слънцето ви",
       "body": "Батерията STREAM ползва технология за слаба светлина и улавя енергия дори при мътно небе — до един час повече соларен добив на ден в сравнение със средното за бранша.",
-      "image": "PC_76859d43-817b-49cc-a7a0-7881f7e78833.jpg",
+      "image": "stream-ultra-x-oblacite-i-zdrachat-ne-1.jpg",
       "imageAlt": "Изгрев, здрач, облаци — работи и при слаба светлина"
     },
     {
@@ -167,7 +167,7 @@
       "subheading": "Вградена в хардуера и софтуера",
       "subheadingPosition": "below",
       "body": "",
-      "image": "PC_10e5515b-3dd8-4174-ab5f-0b30ee86f38c.jpg",
+      "image": "stream-ultra-x-bezopasnost-1.jpg",
       "imageAlt": "Шест защити и сертификати за сигурност на данните"
     },
     {
@@ -177,7 +177,7 @@
       "anchorLabel": "Време",
       "heading": "Готов за всякакво време",
       "body": "",
-      "image": "PC_6eeba3dc-c5bb-418e-88ad-5541a78878d7.png",
+      "image": "stream-ultra-x-vreme-1.png",
       "imageAlt": "6000 цикъла, 15 години, 10 години гаранция, LFP; plug & play; 30 dB; −20 °C; IP65"
     },
     {
@@ -187,7 +187,7 @@
       "anchorLabel": "AI",
       "heading": "Енергия с AI — винаги оптимизирана",
       "body": "EcoFlow OASIS не само отговаря бързо на въпросите ви за управлението на енергията — дава и умен анализ и персонални съвети за оптимизация, за да извлечете максимума от системата си.",
-      "image": "PC_f638d317-c4e8-4067-b7b2-d9553e21ab3e.jpg",
+      "image": "stream-ultra-x-ai-1.jpg",
       "imageAlt": "Функциите на приложението EcoFlow"
     },
     {
@@ -217,7 +217,7 @@
       "theme": "light",
       "heading": "Хармония между марките",
       "body": "EcoFlow OASIS събира устройства на трети производители с протоколи Tibber, Matter и Shelly в една обща платформа. По-просто и интуитивно, без прескачане между няколко платформи и приложения.",
-      "image": "02_PC_a7f4f4d2-fef0-42ab-956a-046055d6ea14.jpg",
+      "image": "stream-ultra-x-harmoniya-mezhdu-markite-1.jpg",
       "imageAlt": "Лога на съвместими марки и платформи"
     },
     {
@@ -227,7 +227,7 @@
       "anchorLabel": "Дизайн",
       "heading": "Шедьовър на индустриалния дизайн",
       "body": "Изработен от еко-текстурирани материали без боя за по-малък въглероден отпечатък. Устойчивата на надраскване монолитна конструкция е дълготрайна, а сменяемите предни панели — топло натурално дърво и матово черно — се вписват във всеки интериор.\n\nСтил „топло дърво“, ефектно и елегантно: с реалистичната си дървесна текстура този панел носи уютна топлина във всяка стая.",
-      "image": "PC_01_b5367db9-914e-4388-87dc-3c30ac0bc802.jpg",
+      "image": "stream-ultra-x-dizayn-1.jpg",
       "imageAlt": "STREAM Ultra X с дървен преден панел"
     },
     {
@@ -237,7 +237,7 @@
       "anchorLabel": "Детайли",
       "heading": "Разгледайте детайлите на STREAM Ultra X",
       "body": "",
-      "image": "PC_7f7c3f03-53eb-4765-bc4d-a52ff4905c8e.jpg",
+      "image": "stream-ultra-x-detayli-1.jpg",
       "imageAlt": "AC контакти, паралелен и мрежов терминал, 4 MPPT; 420 × 294 × 460 мм"
     },
     {
@@ -360,55 +360,55 @@
         {
           "name": "STREAM Ultra X × 800W",
           "qty": 1,
-          "image": "Ultra_X.png",
+          "image": "stream-ultra-x-kakvo-ima-v-kutiyata-1.png",
           "imageAlt": "EcoFlow STREAM Ultra X"
         },
         {
           "name": "Удължителен кабел STREAM за соларен панел (2,95 м)",
           "qty": 8,
-          "image": "03_EcoFlow_STREAM_Solar_Panel_Extension_Cable_2.95m_d36041d1-3ff4-4b8b-aea3-342bb12864a4.png",
+          "image": "stream-pro-kakvo-ima-v-kutiyata-2.png",
           "imageAlt": "Удължителен кабел за соларен панел"
         },
         {
           "name": "Кабел STREAM AC (1,5 м)",
           "qty": 1,
-          "image": "04_01_EU__Stream_AC_Cable_1.5m_b4a7d5e0-db66-467a-beb3-cc497101a0c4.png",
+          "image": "stream-pro-kakvo-ima-v-kutiyata-3.png",
           "imageAlt": "Кабел STREAM AC (1,5 м)"
         },
         {
           "name": "Ключ за PV конектори",
           "qty": 1,
-          "image": "05_PV_Wrench_2157d0a5-766c-4ab0-a9f0-2ef1faabe06c.png",
+          "image": "stream-pro-kakvo-ima-v-kutiyata-4.png",
           "imageAlt": "Ключ за PV конектори"
         },
         {
           "name": "Монтажна скоба",
           "qty": 1,
-          "image": "08_mounting_bracket.png",
+          "image": "stream-pro-kakvo-ima-v-kutiyata-5.png",
           "imageAlt": "Монтажна скоба"
         },
         {
           "name": "Заключваща скоба",
           "qty": 1,
-          "image": "07_locking_bracket.png",
+          "image": "stream-pro-kakvo-ima-v-kutiyata-6.png",
           "imageAlt": "Заключваща скоба"
         },
         {
           "name": "Инструкции за безопасност",
           "qty": 1,
-          "image": "11_Safety_Instructions_bf0d7fb5-0d22-4393-8ba1-32f67aefd0bd.png",
+          "image": "stream-ultra-x-kakvo-ima-v-kutiyata-7.png",
           "imageAlt": "Инструкции за безопасност"
         },
         {
           "name": "Ръководство за монтаж",
           "qty": 1,
-          "image": "12_Installation_Guide_b8e2163f-ffb1-40f4-8c9c-2bbc97ec92d0.png",
+          "image": "stream-ultra-x-kakvo-ima-v-kutiyata-8.png",
           "imageAlt": "Ръководство за монтаж"
         },
         {
           "name": "Гаранционна карта",
           "qty": 1,
-          "image": "10_Warranty_Card_2f6c83cb-9471-4bb0-aff5-c88266c1c9b7.png",
+          "image": "stream-pro-kakvo-ima-v-kutiyata-9.png",
           "imageAlt": "Гаранционна карта"
         }
       ],
@@ -594,43 +594,126 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-x-1183190545.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-x-1183190541.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-x-1183190546.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-x-1183190544.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-x-1183190543.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-x-1183190542.png"
-    ],
-    "sekcii": [
-      "https://eu.ecoflow.com/cdn/shop/files/02_PC_a7f4f4d2-fef0-42ab-956a-046055d6ea14.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/03_EcoFlow_STREAM_Solar_Panel_Extension_Cable_2.95m_d36041d1-3ff4-4b8b-aea3-342bb12864a4.png",
-      "https://eu.ecoflow.com/cdn/shop/files/04_01_EU__Stream_AC_Cable_1.5m_b4a7d5e0-db66-467a-beb3-cc497101a0c4.png",
-      "https://eu.ecoflow.com/cdn/shop/files/05_PV_Wrench_2157d0a5-766c-4ab0-a9f0-2ef1faabe06c.png",
-      "https://eu.ecoflow.com/cdn/shop/files/07_locking_bracket.png",
-      "https://eu.ecoflow.com/cdn/shop/files/08_mounting_bracket.png",
-      "https://eu.ecoflow.com/cdn/shop/files/10_Warranty_Card_2f6c83cb-9471-4bb0-aff5-c88266c1c9b7.png",
-      "https://eu.ecoflow.com/cdn/shop/files/11_Safety_Instructions_bf0d7fb5-0d22-4393-8ba1-32f67aefd0bd.png",
-      "https://eu.ecoflow.com/cdn/shop/files/12_Installation_Guide_b8e2163f-ffb1-40f4-8c9c-2bbc97ec92d0.png",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_01_b5367db9-914e-4388-87dc-3c30ac0bc802.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_10e5515b-3dd8-4174-ab5f-0b30ee86f38c.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_63cf3747-aca5-4ee6-a9c1-5a7c60fa5fa1.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_6eeba3dc-c5bb-418e-88ad-5541a78878d7.png",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_76859d43-817b-49cc-a7a0-7881f7e78833.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_7eeb71b5-642f-4000-83e1-c02bafcf4d85.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_7f7c3f03-53eb-4765-bc4d-a52ff4905c8e.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_8247c93b-2dce-4443-9ac5-49cb25aa29c9.png",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_f638d317-c4e8-4067-b7b2-d9553e21ab3e.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/Ultra_X.png",
-      "https://eu.ecoflow.com/cdn/shop/files/tab_01_PC.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/tab_01_PC.png",
-      "https://eu.ecoflow.com/cdn/shop/files/tab_02_PC.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/tab_02_PC.png"
-    ]
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-x-1183190545.png",
+      "file": "stream-ultra-x-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-x-1183190541.png",
+      "file": "stream-ultra-x-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-x-1183190546.png",
+      "file": "stream-ultra-x-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-x-1183190544.png",
+      "file": "stream-ultra-x-4.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-x-1183190543.png",
+      "file": "stream-ultra-x-5.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-x-1183190542.png",
+      "file": "stream-ultra-x-6.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/02_PC_a7f4f4d2-fef0-42ab-956a-046055d6ea14.jpg",
+      "file": "stream-ultra-x-harmoniya-mezhdu-markite-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/03_EcoFlow_STREAM_Solar_Panel_Extension_Cable_2.95m_d36041d1-3ff4-4b8b-aea3-342bb12864a4.png",
+      "file": "stream-pro-kakvo-ima-v-kutiyata-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/04_01_EU__Stream_AC_Cable_1.5m_b4a7d5e0-db66-467a-beb3-cc497101a0c4.png",
+      "file": "stream-pro-kakvo-ima-v-kutiyata-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/05_PV_Wrench_2157d0a5-766c-4ab0-a9f0-2ef1faabe06c.png",
+      "file": "stream-pro-kakvo-ima-v-kutiyata-4.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/07_locking_bracket.png",
+      "file": "stream-pro-kakvo-ima-v-kutiyata-6.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/08_mounting_bracket.png",
+      "file": "stream-pro-kakvo-ima-v-kutiyata-5.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/10_Warranty_Card_2f6c83cb-9471-4bb0-aff5-c88266c1c9b7.png",
+      "file": "stream-pro-kakvo-ima-v-kutiyata-9.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/11_Safety_Instructions_bf0d7fb5-0d22-4393-8ba1-32f67aefd0bd.png",
+      "file": "stream-ultra-x-kakvo-ima-v-kutiyata-7.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/12_Installation_Guide_b8e2163f-ffb1-40f4-8c9c-2bbc97ec92d0.png",
+      "file": "stream-ultra-x-kakvo-ima-v-kutiyata-8.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_01_b5367db9-914e-4388-87dc-3c30ac0bc802.jpg",
+      "file": "stream-ultra-x-dizayn-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_10e5515b-3dd8-4174-ab5f-0b30ee86f38c.jpg",
+      "file": "stream-ultra-x-bezopasnost-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_63cf3747-aca5-4ee6-a9c1-5a7c60fa5fa1.jpg",
+      "file": "stream-ultra-x-solaren-vhod-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_6eeba3dc-c5bb-418e-88ad-5541a78878d7.png",
+      "file": "stream-ultra-x-vreme-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_76859d43-817b-49cc-a7a0-7881f7e78833.jpg",
+      "file": "stream-ultra-x-oblacite-i-zdrachat-ne-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_7eeb71b5-642f-4000-83e1-c02bafcf4d85.jpg",
+      "file": "stream-ultra-x-kapacitet-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_7f7c3f03-53eb-4765-bc4d-a52ff4905c8e.jpg",
+      "file": "stream-ultra-x-detayli-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_8247c93b-2dce-4443-9ac5-49cb25aa29c9.png",
+      "file": "stream-ultra-x-pregled-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_f638d317-c4e8-4067-b7b2-d9553e21ab3e.jpg",
+      "file": "stream-ultra-x-ai-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Ultra_X.png",
+      "file": "stream-ultra-x-kakvo-ima-v-kutiyata-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/tab_01_PC.jpg",
+      "file": "stream-ultra-x-2300w-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/tab_01_PC.png",
+      "file": "stream-ultra-x-2300w-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/tab_02_PC.jpg",
+      "file": "stream-ultra-x-2300w-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/tab_02_PC.png",
+      "file": "stream-ultra-x-2300w-1.png"
+    }
+  ],
   "_prevod_nadpisi": {
-    "PC_8247c93b-2dce-4443-9ac5-49cb25aa29c9.png": {
+    "stream-ultra-x-pregled-1.png": {
       "Break 800W Limits / Up to 2300W Solar Output / Innovation, Certified": "Отвъд лимита от 800W / до 2300W соларен изход / Иновация, сертифицирана",
       "4MPPT / 2000W Solar Input": "4 MPPT / 2000W соларен вход",
       "3.84kWh / Scalable up to 23kWh": "3,84 kWh / разширяем до 23 kWh",
@@ -640,36 +723,36 @@
       "2 Scalable Options for Different Needs / Parallel / Distribution": "2 варианта за разширяване / паралелно / разпределено",
       "15-Year Lifespan / Safe & Durable": "15 години живот / безопасен и издръжлив"
     },
-    "tab_02_PC.png": {
+    "stream-ultra-x-2300w-1.png": {
       "EcoFlow STREAM Series / Powers appliances up to 2300W using 100% solar energy. / 2300W": "Серия EcoFlow STREAM / захранва уреди до 2300W изцяло от слънце / 2300W",
       "Traditional Solar Plant System / Powers appliances up to 2300W by combining 800W from solar and 1500W from the grid simultaneously. / 800W 1500W": "Традиционна соларна система / до 2300W, като комбинира 800W от слънце и 1500W от мрежата / 800W 1500W",
       "Input 2000W / Input 900W / Output 1100W / Output 1200W / Total output 2300W / Grid Input 1500W / Output 800W": "Вход 2000W / Вход 900W / Изход 1100W / Изход 1200W / Общ изход 2300W / Вход от мрежата 1500W / Изход 800W"
     },
-    "tab_01_PC.png": {
+    "stream-ultra-x-2300w-2.png": {
       "EcoFlow STREAM Series / Powers appliances up to 2300W by combining 1200W from solar and 1100W from the grid simultaneously. / 1200W 1100W": "Серия EcoFlow STREAM / до 2300W, като комбинира 1200W от слънце и 1100W от мрежата / 1200W 1100W",
       "Traditional Solar Plant System …": "като при „Две устройства“",
       "Grid Input 1100W / Input 2000W / Output 1200W / Input 800W / Total output 2300W": "Вход от мрежата 1100W / Вход 2000W / Изход 1200W / Вход 800W / Общ изход 2300W"
     },
-    "PC_7eeb71b5-642f-4000-83e1-c02bafcf4d85.jpg": {
+    "stream-ultra-x-kapacitet-1.jpg": {
       "3.84kWh / With a single unit": "3,84 kWh / с едно устройство",
       "23kWh / With 6 units": "23 kWh / с 6 устройства"
     },
-    "PC_76859d43-817b-49cc-a7a0-7881f7e78833.jpg": {
+    "stream-ultra-x-oblacite-i-zdrachat-ne-1.jpg": {
       "…": "като при STREAM Ultra (PC_280903bc…): Изгрев | Здрач | Облаци …"
     },
-    "PC_10e5515b-3dd8-4174-ab5f-0b30ee86f38c.jpg": {
+    "stream-ultra-x-bezopasnost-1.jpg": {
       "Flame-Retardant Casing … Smart Battery Management": "като при STREAM Ultra (PC_44c91e89…) — шестте защити",
       "Privacy & Data Protection / Certified to global standards for security and compliance.": "Защита на данните / Сертифицирано по световни стандарти за сигурност",
       "TRUSTe / PSTI / NISTIR 8425 / NISTIR 8259 / ISO 9001 / ISO 13849 / SRRC / FCC SDOC": "остават"
     },
-    "PC_6eeba3dc-c5bb-418e-88ad-5541a78878d7.png": {
+    "stream-ultra-x-vreme-1.png": {
       "6,000 Cycles / 15-Year Lifespan / 10-Year Warranty / LFP Technology": "6000 цикъла / 15 години живот / 10 години гаранция / LFP технология",
       "Plug & Play, Power Anywhere": "Plug & Play, енергия навсякъде",
       "Silent Operation 30 dB": "Тиха работа 30 dB",
       "-20°C Operation / Reliable winter performance with self-heating technology": "Работа при −20 °C / надеждна зима със самозатопляне",
       "IP65 Water and Dust Resistance": "IP65 защита от вода и прах"
     },
-    "PC_f638d317-c4e8-4067-b7b2-d9553e21ab3e.jpg": {
+    "stream-ultra-x-ai-1.jpg": {
       "FREE features": "БЕЗПЛАТНИ функции",
       "Activate the EcoFlow App and Pair with Smart Meter to Save More - up to €228/year ADDITIONAL savings on electricity bills / up to 29%/year HIGHER Saving / up to 108% GREATER winter savings": "Активирайте приложението EcoFlow и го сдвоете с умен електромер, за да спестите повече — до 228 €/год. ДОПЪЛНИТЕЛНИ спестявания / до 29%/год. ПО-ВИСОКИ спестявания / до 108% ПОВЕЧЕ през зимата",
       "Remote Control": "Дистанционно управление",
@@ -682,7 +765,7 @@
       "Energy Usage Prioritization": "Приоритизиране на консумацията",
       "Eco Energy Program / Turn every kilowatt-hour into rewards, savings, and bragging rights. (coming soon in September)": "Програма Eco Energy / всеки киловатчас — награди и спестявания (скоро)"
     },
-    "PC_7f7c3f03-53eb-4765-bc4d-a52ff4905c8e.jpg": {
+    "stream-ultra-x-detayli-1.jpg": {
       "AC Outlets / Parallel Terminal / Grid Terminal / 4MPPT": "AC контакти / Паралелен терминал / Мрежов терминал / 4 MPPT",
       "420mm / 294mm / 460mm": "420 мм / 294 мм / 460 мм"
     }

@@ -36,23 +36,23 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-handtruck-59419228504407_2000x.webp",
+      "file": "mobile-gear-dolly-1.webp",
       "alt": "EcoFlow Mobile Gear Dolly — количка"
     },
     {
-      "file": "ecoflow-handtruck-59419228733783_1066x.webp",
+      "file": "mobile-gear-dolly-2.webp",
       "alt": "EcoFlow Mobile Gear Dolly — количка"
     },
     {
-      "file": "61pu3rkebsl._ac_sx679_.webp",
+      "file": "mobile-gear-dolly-3.webp",
       "alt": "EcoFlow Mobile Gear Dolly — количка"
     },
     {
-      "file": "51rtud77ihl._ac_sx679_.webp",
+      "file": "mobile-gear-dolly-4.webp",
       "alt": "EcoFlow Mobile Gear Dolly — количка"
     },
     {
-      "file": "untitldsdsed.webp",
+      "file": "mobile-gear-dolly-5.webp",
       "alt": "EcoFlow Mobile Gear Dolly — количка"
     }
   ],
@@ -127,16 +127,28 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-handtruck-59419228504407_2000x.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-handtruck-59419228733783_1066x.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61pu3rkebsl._ac_sx679_.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/1/51rtud77ihl._ac_sx679_.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/u/n/untitldsdsed.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-handtruck-59419228504407_2000x.webp",
+      "file": "mobile-gear-dolly-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-handtruck-59419228733783_1066x.webp",
+      "file": "mobile-gear-dolly-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61pu3rkebsl._ac_sx679_.webp",
+      "file": "mobile-gear-dolly-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/5/1/51rtud77ihl._ac_sx679_.webp",
+      "file": "mobile-gear-dolly-4.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/u/n/untitldsdsed.webp",
+      "file": "mobile-gear-dolly-5.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Няма страница в eu.ecoflow.com — по dice.bg.",

@@ -41,43 +41,43 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-single-axis-solar-tracker-1175973237.png",
+      "file": "single-axis-solar-tracker-1.png",
       "alt": "EcoFlow Single Axis Solar Tracker — соларен тракер"
     },
     {
-      "file": "ecoflow-single-axis-solar-tracker-1175973239.png",
+      "file": "single-axis-solar-tracker-2.png",
       "alt": "EcoFlow Single Axis Solar Tracker — соларен тракер"
     },
     {
-      "file": "ecoflow-single-axis-solar-tracker-1175973238.png",
+      "file": "single-axis-solar-tracker-3.png",
       "alt": "EcoFlow Single Axis Solar Tracker — соларен тракер"
     },
     {
-      "file": "ecoflow-single-axis-solar-tracker-1175973236.png",
+      "file": "single-axis-solar-tracker-4.png",
       "alt": "EcoFlow Single Axis Solar Tracker — соларен тракер"
     },
     {
-      "file": "ecoflow-single-axis-solar-tracker-51173854773591.png",
+      "file": "single-axis-solar-tracker-5.png",
       "alt": "EcoFlow Single Axis Solar Tracker — соларен тракер"
     },
     {
-      "file": "ecoflow-single-axis-solar-tracker-51055940763991.png",
+      "file": "single-axis-solar-tracker-6.png",
       "alt": "EcoFlow Single Axis Solar Tracker — соларен тракер"
     },
     {
-      "file": "ecoflow-single-axis-solar-tracker-51055916122455.png",
+      "file": "single-axis-solar-tracker-7.png",
       "alt": "EcoFlow Single Axis Solar Tracker — соларен тракер"
     },
     {
-      "file": "ecoflow-single-axis-solar-tracker-51055916548439.png",
+      "file": "single-axis-solar-tracker-8.png",
       "alt": "EcoFlow Single Axis Solar Tracker — соларен тракер"
     },
     {
-      "file": "ecoflow-single-axis-solar-tracker-51055955476823.png",
+      "file": "single-axis-solar-tracker-9.png",
       "alt": "EcoFlow Single Axis Solar Tracker — соларен тракер"
     },
     {
-      "file": "ecoflow-single-axis-solar-tracker-51055916155223.png",
+      "file": "single-axis-solar-tracker-10.png",
       "alt": "EcoFlow Single Axis Solar Tracker — соларен тракер"
     }
   ],
@@ -89,7 +89,7 @@
       "anchorLabel": "Преглед",
       "heading": "До 60% повече енергия",
       "body": "Едноосният соларен тракер EcoFlow дава енергийна независимост на всеки апартамент и балкон, като заема минимално място. Той автоматично следи ъгъла на преките слънчеви лъчи от 10° до 85° по една ос и използва максимално възобновяемата енергия.",
-      "image": "single_axis_solar_tracker_pc_1.jpg",
+      "image": "single-axis-solar-tracker-pregled-1.jpg",
       "imageAlt": "соларен тракер"
     },
     {
@@ -98,7 +98,7 @@
       "theme": "light",
       "heading": "Повече енергия от по-малко място",
       "body": "* В средни до високи географски ширини (30°–60°) едноосното проследяване дава значително повече енергия от вертикален или оптимално фиксиран монтаж. При идеални условия:\n- поне 20% повече от най-добрия фиксиран монтаж за мястото, независимо от посоката в диапазона югоизток–югозапад;\n- от 60% до 146% повече от вертикален монтаж, независимо от посоката в диапазона югоизток–югозапад.",
-      "image": "single_axis_solar_tracker_pc_2.jpg",
+      "image": "single-axis-solar-tracker-poveche-energiya-ot-po-malko-1.jpg",
       "imageAlt": "до 60% повече енергия"
     },
     {
@@ -117,7 +117,7 @@
       "theme": "light",
       "heading": "По-добро енергоспестяващо решение",
       "body": "С разтегателната рамка тракерът работи с повечето твърди соларни панели на пазара: дължина 1000–2500 мм, ширина 600–1200 мм и дебелина 30–40 мм.",
-      "image": "single_axis_solar_tracker_4.jpg",
+      "image": "single-axis-solar-tracker-po-dobro-energospestyavashto-reshenie-1.jpg",
       "imageAlt": "тракер с панел"
     },
     {
@@ -126,7 +126,7 @@
       "theme": "light",
       "heading": "Максимална ефективност",
       "body": "Към мрежата: с микроинвертор става най-удобното енергоспестяващо решение за дома.\n\nИзвън мрежата: с преносима електроцентрала е най-силният и стабилен източник на енергия за приключенията ви.",
-      "image": "single_axis_solar_tracker_5.jpg",
+      "image": "single-axis-solar-tracker-maksimalna-efektivnost-1.jpg",
       "imageAlt": "тракер на балкон с електроцентрала"
     },
     {
@@ -135,7 +135,7 @@
       "theme": "light",
       "heading": "Умно управление",
       "body": "Тракерът се включва сам и работи през целия ден, а се изключва, когато слънцето залезе или не се вижда. Следите работата му в приложението EcoFlow, а при нужда нагласяте ъгъла и ръчно. Ефективен, интелигентен и безопасен.",
-      "image": "single_axis_solar_tracker_6.jpg",
+      "image": "single-axis-solar-tracker-umno-upravlenie-1.jpg",
       "imageAlt": "приложение EcoFlow"
     },
     {
@@ -144,7 +144,7 @@
       "theme": "light",
       "heading": "Надеждна работа и сигурност",
       "body": "Тракерът е от силно устойчива на корозия поцинкована стомана с отлична водоустойчивост — за надежден и дълготраен монтаж навън при всякакво време. Балконската соларна система EcoFlow е дългосрочна инвестиция в енергийната независимост на дома.\n\n* Контролната кутия не е водоустойчива при силни бури.",
-      "image": "single_axis_solar_tracker_pc_7.jpg",
+      "image": "single-axis-solar-tracker-nadezhdna-rabota-i-sigurnost-1.jpg",
       "imageAlt": "IP68 и 3 години"
     },
     {
@@ -164,7 +164,7 @@
       "anchorLabel": "Какво има в кутията",
       "heading": "Какво има в кутията",
       "body": "",
-      "image": "single_axis_solar_tracker_9.png",
+      "image": "single-axis-solar-tracker-kakvo-ima-v-kutiyata-1.png",
       "imageAlt": "съдържание на кутията"
     },
     {
@@ -220,31 +220,78 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-1175973237.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-1175973239.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-1175973238.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-1175973236.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-51173854773591.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-51055940763991.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-51055916122455.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-51055916548439.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-51055955476823.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-51055916155223.png"
-    ],
-    "sekcii": [
-      "https://eu.ecoflow.com/cdn/shop/files/single_axis_solar_tracker_4.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/single_axis_solar_tracker_5.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/single_axis_solar_tracker_6.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/single_axis_solar_tracker_9.png",
-      "https://eu.ecoflow.com/cdn/shop/files/single_axis_solar_tracker_pc_1.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/single_axis_solar_tracker_pc_2.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/single_axis_solar_tracker_pc_7.jpg"
-    ]
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-1175973237.png",
+      "file": "single-axis-solar-tracker-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-1175973239.png",
+      "file": "single-axis-solar-tracker-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-1175973238.png",
+      "file": "single-axis-solar-tracker-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-1175973236.png",
+      "file": "single-axis-solar-tracker-4.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-51173854773591.png",
+      "file": "single-axis-solar-tracker-5.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-51055940763991.png",
+      "file": "single-axis-solar-tracker-6.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-51055916122455.png",
+      "file": "single-axis-solar-tracker-7.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-51055916548439.png",
+      "file": "single-axis-solar-tracker-8.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-51055955476823.png",
+      "file": "single-axis-solar-tracker-9.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-single-axis-solar-tracker-51055916155223.png",
+      "file": "single-axis-solar-tracker-10.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/single_axis_solar_tracker_4.jpg",
+      "file": "single-axis-solar-tracker-po-dobro-energospestyavashto-reshenie-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/single_axis_solar_tracker_5.jpg",
+      "file": "single-axis-solar-tracker-maksimalna-efektivnost-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/single_axis_solar_tracker_6.jpg",
+      "file": "single-axis-solar-tracker-umno-upravlenie-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/single_axis_solar_tracker_9.png",
+      "file": "single-axis-solar-tracker-kakvo-ima-v-kutiyata-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/single_axis_solar_tracker_pc_1.jpg",
+      "file": "single-axis-solar-tracker-pregled-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/single_axis_solar_tracker_pc_2.jpg",
+      "file": "single-axis-solar-tracker-poveche-energiya-ot-po-malko-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/single_axis_solar_tracker_pc_7.jpg",
+      "file": "single-axis-solar-tracker-nadezhdna-rabota-i-sigurnost-1.jpg"
+    }
+  ],
   "_prevod_nadpisi": {
-    "single_axis_solar_tracker_pc_1.jpg": {
+    "single-axis-solar-tracker-pregled-1.jpg": {
       "60% more power is produced": "60% повече произведена енергия",
       "10°-85° automatic adjustable angle": "10°–85° автоматично регулиране на ъгъла",
       "Smart sensors (light and rain)": "Умни сензори (светлина и дъжд)",
@@ -253,12 +300,12 @@
       "Plug-and-play": "Включвате и работи",
       "3-year warranty": "3 години гаранция"
     },
-    "single_axis_solar_tracker_pc_2.jpg": {
+    "single-axis-solar-tracker-poveche-energiya-ot-po-malko-1.jpg": {
       "Maximize power w/ 60% Boost": "До 60% повече енергия",
       "Utilize only 0.45 m² of minimal space": "Заема само 0,45 m²",
       "Reduce 20% electricity bills*": "До 20% по-ниски сметки за ток*"
     },
-    "single_axis_solar_tracker_pc_7.jpg": {
+    "single-axis-solar-tracker-nadezhdna-rabota-i-sigurnost-1.jpg": {
       "IP68 Waterproof* and Dust Resistant": "IP68 — водоустойчив* и прахоустойчив",
       "3-Year performance guarantee": "3 години гаранция за работа"
     }

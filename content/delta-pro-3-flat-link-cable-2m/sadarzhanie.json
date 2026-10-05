@@ -35,7 +35,7 @@
   },
   "galeriya": [
     {
-      "file": "72453_1.webp",
+      "file": "delta-pro-3-flat-link-cable-2m-1.webp",
       "alt": "EcoFlow Extra Battery Flat Link Cable (2m) — кабел"
     }
   ],
@@ -98,12 +98,12 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72453_1.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72453_1.webp",
+      "file": "delta-pro-3-flat-link-cable-2m-1.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "По dice.bg и eu.ecoflow.com/products/extra-battery-flat-link-cable (вариант 2 м).",

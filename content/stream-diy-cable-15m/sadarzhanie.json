@@ -35,7 +35,7 @@
   },
   "galeriya": [
     {
-      "file": "72960_1.webp",
+      "file": "stream-diy-cable-15m-1.webp",
       "alt": "EcoFlow STREAM DIY Cable (15 m) — кабел STREAM"
     }
   ],
@@ -98,12 +98,12 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72960_1.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72960_1.webp",
+      "file": "stream-diy-cable-15m-1.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Продуктът го няма в eu.ecoflow.com — по dice.bg.",

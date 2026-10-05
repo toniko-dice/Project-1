@@ -36,7 +36,7 @@
   },
   "galeriya": [
     {
-      "file": "4895251666008-1.webp",
+      "file": "alternator-charger-xt150-cable-1m-1.webp",
       "alt": "EcoFlow Alternator Charger XT150 Output Cable (1m) — кабел"
     }
   ],
@@ -95,12 +95,12 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/4/8/4895251666008-1.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/4/8/4895251666008-1.webp",
+      "file": "alternator-charger-xt150-cable-1m-1.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "По dice.bg и eu.ecoflow.com/products/alternator-charger-xt150-output-cable.",

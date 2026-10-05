@@ -1,7 +1,7 @@
 # Галерия
-https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_trolley_delta_pro_ultra-1.webp
-https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_trolley_delta_pro_ultra-2.webp
-https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_trolley_delta_pro_ultra-3.webp
+https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_trolley_delta_pro_ultra-1.webp  →  trolley-delta-pro-ultra-1.webp
+https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_trolley_delta_pro_ultra-2.webp  →  trolley-delta-pro-ultra-2.webp
+https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_trolley_delta_pro_ultra-3.webp  →  trolley-delta-pro-ultra-3.webp
 
 # Секции
 

@@ -38,27 +38,27 @@
   },
   "galeriya": [
     {
-      "file": "4895251651165-1_1.webp",
+      "file": "rapid-pro-x-apple-watch-charger-1.webp",
       "alt": "EcoFlow RAPID Pro X Magnetic Block MFi Apple Watch Charger — зарядно за Apple Watch"
     },
     {
-      "file": "4895251651165-2_1.webp",
+      "file": "rapid-pro-x-apple-watch-charger-2.webp",
       "alt": "EcoFlow RAPID Pro X Magnetic Block MFi Apple Watch Charger — зарядно за Apple Watch"
     },
     {
-      "file": "ddsds.webp",
+      "file": "rapid-pro-x-apple-watch-charger-3.webp",
       "alt": "EcoFlow RAPID Pro X Magnetic Block MFi Apple Watch Charger — зарядно за Apple Watch"
     },
     {
-      "file": "_ed_6.webp",
+      "file": "rapid-pro-x-apple-watch-charger-4.webp",
       "alt": "EcoFlow RAPID Pro X Magnetic Block MFi Apple Watch Charger — зарядно за Apple Watch"
     },
     {
-      "file": "4895251651165-4.webp",
+      "file": "rapid-pro-x-apple-watch-charger-5.webp",
       "alt": "EcoFlow RAPID Pro X Magnetic Block MFi Apple Watch Charger — зарядно за Apple Watch"
     },
     {
-      "file": "4895251651165-5.webp",
+      "file": "rapid-pro-x-apple-watch-charger-6.webp",
       "alt": "EcoFlow RAPID Pro X Magnetic Block MFi Apple Watch Charger — зарядно за Apple Watch"
     }
   ],
@@ -155,17 +155,32 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/4/8/4895251651165-1_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/4/8/4895251651165-2_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/d/d/ddsds.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/_/e/_ed_6.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/4/8/4895251651165-4.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/4/8/4895251651165-5.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/4/8/4895251651165-1_1.webp",
+      "file": "rapid-pro-x-apple-watch-charger-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/4/8/4895251651165-2_1.webp",
+      "file": "rapid-pro-x-apple-watch-charger-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/d/d/ddsds.webp",
+      "file": "rapid-pro-x-apple-watch-charger-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/_/e/_ed_6.webp",
+      "file": "rapid-pro-x-apple-watch-charger-4.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/4/8/4895251651165-4.webp",
+      "file": "rapid-pro-x-apple-watch-charger-5.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/4/8/4895251651165-5.webp",
+      "file": "rapid-pro-x-apple-watch-charger-6.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Продуктът го няма като отделна страница в eu.ecoflow.com — по dice.bg.",

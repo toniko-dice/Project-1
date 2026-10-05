@@ -32,7 +32,7 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow_stream_ac_cable_for_ecoflow_stream_battery_5m-1.webp",
+      "file": "stream-ac-cable-5m-1.webp",
       "alt": "EcoFlow STREAM AC Charging Cable (5m) — кабел"
     }
   ],
@@ -95,12 +95,12 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_stream_ac_cable_for_ecoflow_stream_battery_5m-1.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_stream_ac_cable_for_ecoflow_stream_battery_5m-1.webp",
+      "file": "stream-ac-cable-5m-1.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "По dice.bg и eu.ecoflow.com/products/stream-ac-charging-cable (вариант 5 м).",

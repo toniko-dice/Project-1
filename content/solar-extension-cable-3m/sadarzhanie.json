@@ -39,7 +39,7 @@
   },
   "galeriya": [
     {
-      "file": "60691_1.webp",
+      "file": "solar-extension-cable-3m-1.webp",
       "alt": "EcoFlow Solar Extension Cable (3m, 2 pcs) — кабел"
     }
   ],
@@ -102,12 +102,12 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60691_1.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60691_1.webp",
+      "file": "solar-extension-cable-3m-1.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "По dice.bg и eu.ecoflow.com/products/solar-extension-cable.",

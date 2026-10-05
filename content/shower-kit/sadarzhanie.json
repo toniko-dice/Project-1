@@ -37,15 +37,15 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-shower-kit-komplekt-dush-pompa-i-sgyvaema-kofa-za-ecoflow-wave1.webp",
+      "file": "shower-kit-1.webp",
       "alt": "EcoFlow Shower Kit — душ комплект"
     },
     {
-      "file": "ecoflow-shower-kit-komplekt-dush-pompa-i-sgyvaema-kofa-za-ecoflow-wave.webp",
+      "file": "shower-kit-2.webp",
       "alt": "EcoFlow Shower Kit — душ комплект"
     },
     {
-      "file": "ecoflow-shower-kit-komplekt-dush-pompa-i-sgyvaema-kofa-za-ecoflow-wave3.webp",
+      "file": "shower-kit-3.webp",
       "alt": "EcoFlow Shower Kit — душ комплект"
     }
   ],
@@ -124,14 +124,20 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-shower-kit-komplekt-dush-pompa-i-sgyvaema-kofa-za-ecoflow-wave1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-shower-kit-komplekt-dush-pompa-i-sgyvaema-kofa-za-ecoflow-wave.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-shower-kit-komplekt-dush-pompa-i-sgyvaema-kofa-za-ecoflow-wave3.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-shower-kit-komplekt-dush-pompa-i-sgyvaema-kofa-za-ecoflow-wave1.webp",
+      "file": "shower-kit-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-shower-kit-komplekt-dush-pompa-i-sgyvaema-kofa-za-ecoflow-wave.webp",
+      "file": "shower-kit-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-shower-kit-komplekt-dush-pompa-i-sgyvaema-kofa-za-ecoflow-wave3.webp",
+      "file": "shower-kit-3.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",

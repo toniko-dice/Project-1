@@ -51,11 +51,11 @@
 - `5_3_IMG` (автомобил): 0-100% in 3.3 hr → 0–100% за 3,3 ч
 - `5_4_IMG` (генератор): 0-100% in 1 hr → 0–100% за 1 ч
 
-## `15_1_IMG.jpg` — приложението (3 карти)
+## `river-3-max-plus-wireless-prilozhenie-1.jpg` — приложението (3 карти)
 - Monitoring / Enhanced with our upgraded app and a vibrant colour display, RIVER 3 Plus (Wireless) offers advanced charging status and battery health insights. → Наблюдение / С обновеното приложение и цветния дисплей RIVER 3 Plus (Wireless) показва подробно състоянието на зареждането и здравето на батерията.
 - Custom settings / The upgraded app offers versatile charging settings, including speed control, timed charging, power-saving mode, and low-battery alerts. → Настройки по ваш вкус / Обновеното приложение предлага гъвкави настройки на зареждането — скорост, зареждане по график, енергоспестяващ режим и предупреждение при ниска батерия.
 - Remote control / Connect seamlessly with Bluetooth and Wi-Fi. Remote control your unit via a Wi-Fi connection when you're not at home. → Дистанционно управление / Свързвате се лесно през Bluetooth и Wi-Fi. Управлявате устройството отдалечено през Wi-Fi, когато не сте у дома.
 
-## `16_1_IMG.jpg` — детайли на продукта (схема с номера)
+## `river-3-max-plus-wireless-detayli-na-produkta-1.jpg` — детайли на продукта (схема с номера)
 Изходи/входове: 1. DC output switch → Ключ DC изходи; 2. DC outlet ×1 → DC изход ×1; 3. Display screen → Дисплей; 4. USB-C output port ×1 → USB-C изход ×1; 5. USB-A output port ×2 → USB-A изход ×2; 6. AC outlet ×3 → Контакти AC ×3; 7. AC output switch → Ключ AC изходи; 8. Main power button → Главен бутон; 9. Strip light → Лента за осветление; 10. Strip light switch → Ключ на лентата; 11. AC input port → AC вход; 12. Solar/Car input port → Соларен/автомобилен вход; 13. USB-B UPS communication port → USB-B порт за UPS комуникация; 14. Extra Battery connection port (with protective cover) → Порт за допълнителна батерия (с капаче); 15. Heat vent → Вентилация.
 Дисплей: 1. Total input power and power source → Обща входяща мощност и източник; 2. App connection → Връзка с приложението; 3. Scheduled charging and discharging → Зареждане/разреждане по график; 4. AC Always-on → AC винаги включен; 5. Remaining charge/recharge time → Оставащо време за разреждане/зареждане; 6. Remaining battery percentage → Оставащ заряд в %; 7. Fan status → Състояние на вентилатора; 8. Charging speed adjustment → Регулиране на скоростта на зареждане; 9. Charge/discharge level limit → Ограничение на нивото на заряд/разряд; 10. Total output power and output port → Обща изходяща мощност и порт; 11. UPS status → Състояние на UPS; 12. Extra Battery connection status → Връзка с допълнителната батерия.

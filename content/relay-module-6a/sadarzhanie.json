@@ -41,31 +41,31 @@
   },
   "galeriya": [
     {
-      "file": "70278_1.webp",
+      "file": "relay-module-6a-1.webp",
       "alt": "EcoFlow Relay Module 6A — релеен модул 6A"
     },
     {
-      "file": "70278_2.webp",
+      "file": "relay-module-6a-2.webp",
       "alt": "EcoFlow Relay Module 6A — релеен модул 6A"
     },
     {
-      "file": "70278_3.webp",
+      "file": "relay-module-6a-3.webp",
       "alt": "EcoFlow Relay Module 6A — релеен модул 6A"
     },
     {
-      "file": "70278_4_1.webp",
+      "file": "relay-module-6a-4.webp",
       "alt": "EcoFlow Relay Module 6A — релеен модул 6A"
     },
     {
-      "file": "70278_5.webp",
+      "file": "relay-module-6a-5.webp",
       "alt": "EcoFlow Relay Module 6A — релеен модул 6A"
     },
     {
-      "file": "70278_6.webp",
+      "file": "relay-module-6a-6.webp",
       "alt": "EcoFlow Relay Module 6A — релеен модул 6A"
     },
     {
-      "file": "70278_7.webp",
+      "file": "relay-module-6a-7.webp",
       "alt": "EcoFlow Relay Module 6A — релеен модул 6A"
     }
   ],
@@ -138,18 +138,36 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70278_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70278_2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70278_3.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70278_4_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70278_5.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70278_6.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70278_7.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70278_1.webp",
+      "file": "relay-module-6a-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70278_2.webp",
+      "file": "relay-module-6a-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70278_3.webp",
+      "file": "relay-module-6a-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70278_4_1.webp",
+      "file": "relay-module-6a-4.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70278_5.webp",
+      "file": "relay-module-6a-5.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70278_6.webp",
+      "file": "relay-module-6a-6.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70278_7.webp",
+      "file": "relay-module-6a-7.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Продуктът го няма в сайтовете на EcoFlow за Европа — текстът е 1:1 по dice.bg.",

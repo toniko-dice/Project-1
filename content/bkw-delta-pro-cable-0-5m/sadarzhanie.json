@@ -32,11 +32,11 @@
   },
   "galeriya": [
     {
-      "file": "62868_1.webp",
+      "file": "bkw-delta-pro-cable-0-5m-1.webp",
       "alt": "EcoFlow BKW-DELTA Pro Cable (0.5m) — кабел"
     },
     {
-      "file": "62868_2.webp",
+      "file": "bkw-delta-pro-cable-0-5m-2.webp",
       "alt": "EcoFlow BKW-DELTA Pro Cable (0.5m) — кабел"
     }
   ],
@@ -99,13 +99,16 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62868_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62868_2.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62868_1.webp",
+      "file": "bkw-delta-pro-cable-0-5m-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62868_2.webp",
+      "file": "bkw-delta-pro-cable-0-5m-2.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "За микроинвертора EcoFlow PowerStream (предишното поколение), който го няма в сайта → „Съвместим с“ е празно. Не е за STREAM Microinverter. DELTA Pro също го няма.",

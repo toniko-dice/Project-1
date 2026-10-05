@@ -39,39 +39,39 @@
   },
   "galeriya": [
     {
-      "file": "72546_ecoflow-wave-3-add-on-battery-1.webp",
+      "file": "wave-3-add-on-battery-1.webp",
       "alt": "EcoFlow WAVE 3 Add-On Battery — допълнителна батерия"
     },
     {
-      "file": "72546_ecoflow-wave-3-add-on-battery-2.webp",
+      "file": "wave-3-add-on-battery-2.webp",
       "alt": "EcoFlow WAVE 3 Add-On Battery — допълнителна батерия"
     },
     {
-      "file": "72546_ecoflow-wave-3-add-on-battery-3.webp",
+      "file": "wave-3-add-on-battery-3.webp",
       "alt": "EcoFlow WAVE 3 Add-On Battery — допълнителна батерия"
     },
     {
-      "file": "72546_ecoflow-wave-3-add-on-battery-4.webp",
+      "file": "wave-3-add-on-battery-4.webp",
       "alt": "EcoFlow WAVE 3 Add-On Battery — допълнителна батерия"
     },
     {
-      "file": "wave31111_1.webp",
+      "file": "wave-3-add-on-battery-5.webp",
       "alt": "EcoFlow WAVE 3 Add-On Battery — допълнителна батерия"
     },
     {
-      "file": "wave3111_2.webp",
+      "file": "wave-3-add-on-battery-6.webp",
       "alt": "EcoFlow WAVE 3 Add-On Battery — допълнителна батерия"
     },
     {
-      "file": "wave311_1.webp",
+      "file": "wave-3-add-on-battery-7.webp",
       "alt": "EcoFlow WAVE 3 Add-On Battery — допълнителна батерия"
     },
     {
-      "file": "wave31_1.webp",
+      "file": "wave-3-add-on-battery-8.webp",
       "alt": "EcoFlow WAVE 3 Add-On Battery — допълнителна батерия"
     },
     {
-      "file": "wave3_1.webp",
+      "file": "wave-3-add-on-battery-9.webp",
       "alt": "EcoFlow WAVE 3 Add-On Battery — допълнителна батерия"
     }
   ],
@@ -176,20 +176,44 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72546_ecoflow-wave-3-add-on-battery-1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72546_ecoflow-wave-3-add-on-battery-2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72546_ecoflow-wave-3-add-on-battery-3.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72546_ecoflow-wave-3-add-on-battery-4.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/w/a/wave31111_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/w/a/wave3111_2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/w/a/wave311_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/w/a/wave31_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/w/a/wave3_1.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72546_ecoflow-wave-3-add-on-battery-1.webp",
+      "file": "wave-3-add-on-battery-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72546_ecoflow-wave-3-add-on-battery-2.webp",
+      "file": "wave-3-add-on-battery-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72546_ecoflow-wave-3-add-on-battery-3.webp",
+      "file": "wave-3-add-on-battery-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/2/72546_ecoflow-wave-3-add-on-battery-4.webp",
+      "file": "wave-3-add-on-battery-4.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/w/a/wave31111_1.webp",
+      "file": "wave-3-add-on-battery-5.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/w/a/wave3111_2.webp",
+      "file": "wave-3-add-on-battery-6.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/w/a/wave311_1.webp",
+      "file": "wave-3-add-on-battery-7.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/w/a/wave31_1.webp",
+      "file": "wave-3-add-on-battery-8.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/w/a/wave3_1.webp",
+      "file": "wave-3-add-on-battery-9.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "В eu.ecoflow.com няма отделна страница — батерията се продава само в комплект с WAVE 3. По dice.bg.",

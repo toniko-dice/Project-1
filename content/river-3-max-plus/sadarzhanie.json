@@ -56,27 +56,27 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-river-3-plus-portable-power-station-1146556323.png",
+      "file": "river-3-plus-kakvo-ima-v-kutiyata-9.png",
       "alt": "EcoFlow RIVER 3 Max Plus — изглед отпред"
     },
     {
-      "file": "ecoflow-river-3-plus-portable-power-station-1146556322.png",
+      "file": "river-3-max-plus-2.png",
       "alt": "EcoFlow RIVER 3 Max Plus — отпред, изходи"
     },
     {
-      "file": "ecoflow-river-3-plus-portable-power-station-1146556320.png",
+      "file": "river-3-max-plus-3.png",
       "alt": "EcoFlow RIVER 3 Max Plus — изглед отзад"
     },
     {
-      "file": "ecoflow-river-3-plus-portable-power-station-1146556319.png",
+      "file": "river-3-max-plus-4.png",
       "alt": "EcoFlow RIVER 3 Max Plus — изглед отстрани"
     },
     {
-      "file": "ecoflow-river-3-plus-portable-power-station-1146556321.png",
+      "file": "river-3-max-plus-5.png",
       "alt": "EcoFlow RIVER 3 Max Plus — изглед отгоре"
     },
     {
-      "file": "ecoflow-river-3-plus-portable-power-station-1146556339.png",
+      "file": "river-3-max-plus-6.png",
       "alt": "EcoFlow RIVER 3 Max Plus на бюро"
     }
   ],
@@ -88,7 +88,7 @@
       "anchorLabel": "Преглед",
       "heading": "",
       "body": "",
-      "image": "1_1_kv_d9588423-b500-4083-9171-99ac112bbe9d.jpg"
+      "image": "river-3-plus-pregled-1.jpg"
     },
     {
       "blockType": "featureSection",
@@ -96,7 +96,7 @@
       "theme": "light",
       "heading": "Надежден спътник при спиране на тока и на път",
       "body": "",
-      "image": "1_2.jpg"
+      "image": "river-3-plus-nadezhden-spatnik-pri-spirane-1.jpg"
     },
     {
       "blockType": "tabbedShowcase",
@@ -107,21 +107,21 @@
       "tabs": [
         {
           "label": "286Wh",
-          "image": "2_1_IMG.jpg",
+          "image": "river-3-plus-kapacitet-1.jpg",
           "imageAlt": "RIVER 3 Plus — 286Wh, време на работа на уреди",
           "caption": "",
           "rows": []
         },
         {
           "label": "572Wh",
-          "image": "2_2_IMG.jpg",
+          "image": "river-3-plus-kapacitet-2.jpg",
           "imageAlt": "RIVER 3 Max — 572Wh, време на работа на уреди",
           "caption": "",
           "rows": []
         },
         {
           "label": "858Wh",
-          "image": "2_3_IMG.jpg",
+          "image": "river-3-plus-kapacitet-3.jpg",
           "imageAlt": "RIVER 3 Max Plus — 858Wh, време на работа на уреди",
           "caption": "",
           "rows": []
@@ -134,7 +134,7 @@
       "theme": "light",
       "heading": "Свързване без усилие",
       "body": "",
-      "image": "3_1_IMG.jpg"
+      "image": "river-3-plus-svarzvane-bez-usilie-1.jpg"
     },
     {
       "blockType": "featureSection",
@@ -142,7 +142,7 @@
       "theme": "light",
       "heading": "Още една възможност за зареждане и презареждане",
       "body": "",
-      "image": "3_2_IMG.jpg"
+      "image": "river-3-plus-oshte-edna-vazmozhnost-za-1.jpg"
     },
     {
       "blockType": "featureSection",
@@ -153,7 +153,7 @@
       "subheading": "До 600W изход",
       "subheadingPosition": "below",
       "body": "RIVER 3 Max Plus е звяр сред малките електроцентрали — до 600W номинална мощност. С технологията X-Boost захранва продължително нагревателни уреди до 1200W без усилие и поддържа 90% от домакинските уреди. А с вградената лампа никога няма да останете на тъмно.",
-      "image": "4_1_IMG.jpg"
+      "image": "river-3-plus-moshtnost-1.jpg"
     },
     {
       "blockType": "tabbedShowcase",
@@ -164,28 +164,28 @@
       "tabs": [
         {
           "label": "От слънце",
-          "image": "5_1_IMG.jpg",
+          "image": "river-3-plus-zarezhdane-1.jpg",
           "imageAlt": "Зареждане на RIVER 3 Plus от соларен панел",
           "caption": "Зареждане от слънце: RIVER 3 Plus се пълни за само 1,5 часа с 220W соларен вход. За още по-голяма портативност — 45W сгъваем соларен панел (Type-C), който зарежда устройствата ви директно.",
           "rows": []
         },
         {
           "label": "От контакт",
-          "image": "5_2_IMG.jpg",
+          "image": "river-3-plus-zarezhdane-2.jpg",
           "imageAlt": "Зареждане на RIVER 3 Plus от контакт",
           "caption": "Зареждане от контакт: RIVER 3 Plus се зарежда за 1 час с X-Stream, без да уврежда батерията — благодарение на клетките от автомобилен клас и технологията за поддържащо зареждане.",
           "rows": []
         },
         {
           "label": "От автомобил",
-          "image": "5_3_IMG.jpg",
+          "image": "river-3-plus-zarezhdane-3.jpg",
           "imageAlt": "Зареждане на RIVER 3 Plus в автомобил",
           "caption": "Зареждане от автомобил: зареждайте RIVER 3 Plus от акумулатора на колата, докато шофирате — идеално за път.",
           "rows": []
         },
         {
           "label": "От генератор",
-          "image": "5_4_IMG.jpg",
+          "image": "river-3-plus-zarezhdane-4.jpg",
           "imageAlt": "Зареждане на RIVER 3 Plus от генератор",
           "caption": "Зареждане от генератор: презареждане за само 1 час с бензинов генератор — за цял ден тиха, безопасна и ефективна енергия.",
           "rows": []
@@ -201,7 +201,7 @@
       "subheading": "Безпроблемна работа от дома и игри",
       "subheadingPosition": "below",
       "body": "RIVER 3 Max Plus дава първокласна защита с превключване под 10 ms и пази чувствителната техника за домашен офис и игри при внезапно спиране на тока.",
-      "image": "6_1_IMG.jpg"
+      "image": "river-3-plus-ups-1.jpg"
     },
     {
       "blockType": "tabbedShowcase",
@@ -211,21 +211,21 @@
       "tabs": [
         {
           "label": "Защита за работа и игри",
-          "image": "7_1_IMG.jpg",
+          "image": "river-3-plus-cyalostno-ups-reshenie-1.jpg",
           "imageAlt": "RIVER 3 Max Plus захранва компютър при спиране на тока",
           "caption": "С 286Wh капацитет и 600W изход RIVER 3 Max Plus захранва 3W Wi-Fi рутер до 35 часа. Може да поддържа почти всяка офис техника, включително компютър 600W, поне 21 минути — достатъчно за безопасно изключване и довършване на започнатото.",
           "rows": []
         },
         {
           "label": "Умно известяване при спиране на тока",
-          "image": "7_2_IMG.jpg",
+          "image": "river-3-plus-cyalostno-ups-reshenie-2.jpg",
           "imageAlt": "RIVER 3 Max Plus — известия в приложението",
           "caption": "Оставате информирани при спиране на тока — RIVER 3 Max Plus известява със светодиод, през приложението и софтуерно. Интерфейсът за данни, съвместим с компютър и NAS, заедно със софтуера на EcoFlow ви предупреждава и автоматично записва данните при ниска батерия.",
           "rows": []
         },
         {
           "label": "Дизайн, удобен за UPS",
-          "image": "7_3_IMG.jpg",
+          "image": "river-3-plus-cyalostno-ups-reshenie-3.jpg",
           "imageAlt": "RIVER 3 Max Plus — задни контакти и дисплей",
           "caption": "С двата задни контакта скривате кабелите на устройствата. Следите UPS-а в реално време на обновения дисплей.",
           "rows": []
@@ -240,7 +240,7 @@
       "subheading": "Посрещнете спирането на тока и удължете престоя навън",
       "subheadingPosition": "below",
       "body": "С революционната технология X-GaN Power RIVER 3 Max Plus променя индустрията с компактни, тихи батерии за по-дълга работа на малката електроника. Благодарение на високата енергийна ефективност на GaN RIVER 3 Max Plus дава до два пъти по-дълга работа на уредите с малка мощност.",
-      "image": "8_1_IMG.jpg"
+      "image": "river-3-plus-do-2-po-dalga-rabota-1.jpg"
     },
     {
       "blockType": "featureSection",
@@ -250,7 +250,7 @@
       "subheading": "Удобна енергия за из път",
       "subheadingPosition": "below",
       "body": "RIVER 3 Max Plus губи по-малко топлина, изисква по-малко място за охлаждане и е с компактен дизайн. Побира се лесно в малки пространства — шкаф, миниван или чанта — за удобно съхранение.",
-      "image": "9_1_IMG.jpg"
+      "image": "river-3-plus-izklyuchitelno-kompaktna-i-leka-1.jpg"
     },
     {
       "blockType": "featureSection",
@@ -260,7 +260,7 @@
       "subheading": "Тихо резервно захранване за спокойствие денем и нощем",
       "subheadingPosition": "below",
       "body": "С охлаждащата технология X-GanPower RIVER 3 Max Plus работи тихо като в библиотека — под 30 dB на разстояние 0,5 m. Спокойствие денем и нощем, дори когато работи без прекъсване.",
-      "image": "10_1_IMG.jpg"
+      "image": "river-3-plus-pod-30-db-tih-1.jpg"
     },
     {
       "blockType": "tabbedShowcase",
@@ -271,21 +271,21 @@
       "tabs": [
         {
           "label": "Водо-, огне- и удароустойчива",
-          "image": "11_1_IMG_a716dbe9-56b2-4244-a249-e49146865a31.jpg",
+          "image": "river-3-plus-izdrazhlivost-1.jpg",
           "imageAlt": "RIVER 3 Max Plus — защита IP54",
           "caption": "С IP54 защита на батерията щетите от вода са сведени до минимум. Здравият огнеустойчив корпус издържа на тежки условия. Дори след падане от 1 метър RIVER 3 Max Plus не се поврежда.",
           "rows": []
         },
         {
           "label": "LiFePO4 клетки, 10 години живот",
-          "image": "11_2_IMG.jpg",
+          "image": "river-3-plus-izdrazhlivost-2.jpg",
           "imageAlt": "RIVER 3 Max Plus — LiFePO4 клетки",
           "caption": "RIVER 3 Max Plus издържа 3000 цикъла на зареждане — около 10 години всекидневна употреба, преди капацитетът да падне до 80%.",
           "rows": []
         },
         {
           "label": "Защита на батерията X-Guard",
-          "image": "11_3_IMG.jpg",
+          "image": "river-3-plus-izdrazhlivost-3.jpg",
           "imageAlt": "RIVER 3 Max Plus — технология X-Guard",
           "caption": "С усъвършенстван алгоритъм за облачно наблюдение на батерията и над 40 мерки за безопасност RIVER 3 Max Plus се пази от рискове по ток, напрежение, температура и вериги.",
           "rows": []
@@ -301,7 +301,7 @@
       "subheading": "Удобен, интелигентен, персонализиран контрол на енергията",
       "subheadingPosition": "below",
       "body": "",
-      "image": "12_1_IMG_d3a2093e-e72c-4e9f-901f-ceb38b87d7a8.jpg"
+      "image": "river-3-plus-prilozhenie-1.jpg"
     },
     {
       "blockType": "featureSection",
@@ -309,7 +309,7 @@
       "theme": "light",
       "heading": "Детайли на продукта",
       "body": "",
-      "image": "13_1_IMG.jpg"
+      "image": "river-3-plus-detayli-na-produkta-1.jpg"
     },
     {
       "blockType": "inTheBox",
@@ -322,25 +322,25 @@
             {
               "name": "EcoFlow RIVER 3 Plus",
               "qty": 1,
-              "image": "ecoflow-river-3-plus-portable-power-station-1146556335.png",
+              "image": "river-3-plus-1.png",
               "imageAlt": "EcoFlow RIVER 3 Plus"
             },
             {
               "name": "Захранващ кабел за контакт",
               "qty": 1,
-              "image": "kutiya-kabel.webp",
+              "image": "delta-3-plus-kakvo-ima-v-kutiyata-2.webp",
               "imageAlt": "Захранващ кабел за контакт"
             },
             {
               "name": "Кабел EcoFlow USB-B към USB-A за UPS комуникация",
               "qty": 1,
-              "image": "kutiya-kabel-ups.webp",
+              "image": "river-3-plus-kakvo-ima-v-kutiyata-3.webp",
               "imageAlt": "Кабел USB-B към USB-A за UPS комуникация"
             },
             {
               "name": "Кратко ръководство и гаранционна карта",
               "qty": 1,
-              "image": "kutiya-rakovodstvo.webp",
+              "image": "delta-3-plus-kakvo-ima-v-kutiyata-3.webp",
               "imageAlt": "Кратко ръководство и гаранционна карта"
             }
           ]
@@ -351,25 +351,25 @@
             {
               "name": "EcoFlow RIVER 3 Max",
               "qty": 1,
-              "image": "ecoflow-river-3-plus-portable-power-station-1146556327.png",
+              "image": "river-3-plus-kakvo-ima-v-kutiyata-5.png",
               "imageAlt": "EcoFlow RIVER 3 Max"
             },
             {
               "name": "Захранващ кабел за контакт",
               "qty": 1,
-              "image": "kutiya-kabel.webp",
+              "image": "delta-3-plus-kakvo-ima-v-kutiyata-2.webp",
               "imageAlt": "Захранващ кабел за контакт"
             },
             {
               "name": "Кабел EcoFlow USB-B към USB-A за UPS комуникация",
               "qty": 1,
-              "image": "kutiya-kabel-ups.webp",
+              "image": "river-3-plus-kakvo-ima-v-kutiyata-3.webp",
               "imageAlt": "Кабел USB-B към USB-A за UPS комуникация"
             },
             {
               "name": "Кратко ръководство и гаранционна карта",
               "qty": 1,
-              "image": "kutiya-rakovodstvo.webp",
+              "image": "delta-3-plus-kakvo-ima-v-kutiyata-3.webp",
               "imageAlt": "Кратко ръководство и гаранционна карта"
             }
           ]
@@ -380,25 +380,25 @@
             {
               "name": "EcoFlow RIVER 3 Max Plus",
               "qty": 1,
-              "image": "ecoflow-river-3-plus-portable-power-station-1146556323.png",
+              "image": "river-3-plus-kakvo-ima-v-kutiyata-9.png",
               "imageAlt": "EcoFlow RIVER 3 Max Plus"
             },
             {
               "name": "Захранващ кабел за контакт",
               "qty": 1,
-              "image": "kutiya-kabel.webp",
+              "image": "delta-3-plus-kakvo-ima-v-kutiyata-2.webp",
               "imageAlt": "Захранващ кабел за контакт"
             },
             {
               "name": "Кабел EcoFlow USB-B към USB-A за UPS комуникация",
               "qty": 1,
-              "image": "kutiya-kabel-ups.webp",
+              "image": "river-3-plus-kakvo-ima-v-kutiyata-3.webp",
               "imageAlt": "Кабел USB-B към USB-A за UPS комуникация"
             },
             {
               "name": "Кратко ръководство и гаранционна карта",
               "qty": 1,
-              "image": "kutiya-rakovodstvo.webp",
+              "image": "delta-3-plus-kakvo-ima-v-kutiyata-3.webp",
               "imageAlt": "Кратко ръководство и гаранционна карта"
             }
           ]
@@ -542,18 +542,32 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556323.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556322.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556320.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556319.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556321.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556339.png"
-    ],
-    "sekcii": [],
-    "_bележка": "Секциите и кутията са със същите файлове като RIVER 3 Plus — вече в Медия (копирай sekcii/ от content/river-3-plus/). Нови са само 6-те за галерията."
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556323.png",
+      "file": "river-3-plus-kakvo-ima-v-kutiyata-9.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556322.png",
+      "file": "river-3-max-plus-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556320.png",
+      "file": "river-3-max-plus-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556319.png",
+      "file": "river-3-max-plus-4.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556321.png",
+      "file": "river-3-max-plus-5.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-portable-power-station-1146556339.png",
+      "file": "river-3-max-plus-6.png"
+    }
+  ],
   "_prevod_nadpisi": "виж content/river-3-plus/prevod-nadpisi.md — банерите са същите",
   "_neyasni": [
     "Същата страница като RIVER 3 Plus; името е сменено на RIVER 3 Max Plus в секциите за устройството. В „Капацитет“ и „Зареждане“ е оставено както при EcoFlow, защото времената са за базовата станция 286Wh — казано е изрично в увода.",

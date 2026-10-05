@@ -32,11 +32,11 @@
   },
   "galeriya": [
     {
-      "file": "62276_1_2.webp",
+      "file": "glacier-detachable-wheels-and-lever-1.webp",
       "alt": "EcoFlow GLACIER Detachable Wheels and Lever — колела и дръжка"
     },
     {
-      "file": "62276_2_2.webp",
+      "file": "glacier-detachable-wheels-and-lever-2.webp",
       "alt": "EcoFlow GLACIER Detachable Wheels and Lever — колела и дръжка"
     }
   ],
@@ -99,13 +99,16 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62276_1_2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62276_2_2.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62276_1_2.webp",
+      "file": "glacier-detachable-wheels-and-lever-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/2/62276_2_2.webp",
+      "file": "glacier-detachable-wheels-and-lever-2.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",

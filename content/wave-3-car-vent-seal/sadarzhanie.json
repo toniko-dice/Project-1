@@ -36,11 +36,11 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow_wave_3_car_vent_seal_magnetic_version_black-1.webp",
+      "file": "wave-3-car-vent-seal-1.webp",
       "alt": "EcoFlow WAVE 3 Car Vent Seal (Magnetic Version) — уплътнение за прозорец"
     },
     {
-      "file": "ecoflow_wave_3_car_vent_seal_magnetic_version_black-2.webp",
+      "file": "wave-3-car-vent-seal-2.webp",
       "alt": "EcoFlow WAVE 3 Car Vent Seal (Magnetic Version) — уплътнение за прозорец"
     }
   ],
@@ -115,13 +115,16 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_wave_3_car_vent_seal_magnetic_version_black-1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_wave_3_car_vent_seal_magnetic_version_black-2.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_wave_3_car_vent_seal_magnetic_version_black-1.webp",
+      "file": "wave-3-car-vent-seal-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_wave_3_car_vent_seal_magnetic_version_black-2.webp",
+      "file": "wave-3-car-vent-seal-2.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Няма страница в eu.ecoflow.com — по dice.bg.",

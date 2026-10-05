@@ -2,7 +2,7 @@
 
 Банерите са общи за DELTA 3 и DELTA 3 Plus (страницата на EcoFlow е една).
 
-## `1_1_89e83263-2f74-494c-9408-ceb946b52290.jpg` — колаж с 9 плочки
+## `delta-3-plus-vodeshta-v-industriyata-portativna-1.jpg` — колаж с 9 плочки
 
 | Оригинал | Български |
 |---|---|
@@ -16,15 +16,15 @@
 | LFP with 4000 cycles to 80%⁷ | LFP с 4000 цикъла до 80%⁷ |
 | 1024Wh capacity, expandable up to 5kWh. | 1024Wh капацитет, разширяем до 5 kWh |
 
-## `PC_0_2_D3P_Main_KV.jpg` — главен банер
+## `delta-3-plus-pregled-1.jpg` — главен банер
 | EcoFlow DELTA 3 Series / For Any Scenario, Power Ready in 30 Min | EcoFlow DELTA 3 серия / За всяка ситуация, готов за 30 минути |
 
 ## Останалите `PC_*` банери
 Заглавие + текст върху снимката — българските текстове са в `sadarzhanie.json`
 (`caption` на съответния раздел / `heading` и `body` на секцията).
 
-## `D3P-UPS-EU-PC.jpg` — UPS диаграма
+## `delta-3-plus-nadezhdno-rezervno-zahranvane-za-1.jpg` — UPS диаграма
 Надписите на диаграмата (Grid / DELTA 3 / NAS…) — по избор.
 
-## `6_1_KSP_5-_Inteligent.jpg` — екран на приложението
+## `delta-3-plus-spokoystvie-pri-avariya-udobstvo-1.jpg` — екран на приложението
 Английски интерфейс — по избор.

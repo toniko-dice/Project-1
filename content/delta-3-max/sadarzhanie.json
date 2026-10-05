@@ -40,23 +40,23 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-delta-3-max-series-portable-power-station-1197150547_2000x.png",
+      "file": "delta-3-max-1.png",
       "alt": "EcoFlow DELTA 3 Max — изглед отпред"
     },
     {
-      "file": "ecoflow-delta-3-max-series-portable-power-station-1197150546_2000x.webp",
+      "file": "delta-3-max-2.webp",
       "alt": "EcoFlow DELTA 3 Max — изглед отпред, дисплей"
     },
     {
-      "file": "ecoflow-delta-3-max-series-2048wh-portable-power-station-1214367335_2000x.png",
+      "file": "delta-3-max-3.png",
       "alt": "EcoFlow DELTA 3 Max — изглед отстрани"
     },
     {
-      "file": "ecoflow-delta-3-max-series-2048wh-portable-power-station-1214367342_2000x.png",
+      "file": "delta-3-max-4.png",
       "alt": "EcoFlow DELTA 3 Max със соларен панел"
     },
     {
-      "file": "ecoflow-delta-3-max-series-2048wh-portable-power-station-1244018670_2000x.png",
+      "file": "delta-3-max-5.png",
       "alt": "EcoFlow DELTA 3 Max със соларен панел на открито"
     }
   ],
@@ -67,7 +67,7 @@
       "theme": "light",
       "heading": "Винаги готов. Повече мощност.",
       "body": "",
-      "image": "01_EU_4d7a5521-a35b-40bf-a982-6546d3e75245.png",
+      "image": "delta-3-max-pregled-1.png",
       "anchorLabel": "Преглед",
       "subheading": "Първата в индустрията соларна батерия от 2 kWh с до 3000W изход (DELTA 3 Max Plus)",
       "subheadingPosition": "below"
@@ -80,7 +80,7 @@
       "subheading": "Нова ера в мощността",
       "subheadingPosition": "below",
       "body": "Енергия от следващо ниво за спокойствие от следващо ниво.",
-      "image": "02_0ce55bda-deee-4204-88ae-b2d4993b4ec6.jpg"
+      "image": "delta-3-max-2400w-izhod-2-kwh-1.jpg"
     },
     {
       "blockType": "keySpecStrip",
@@ -126,35 +126,35 @@
       "tabs": [
         {
           "label": "Кухня",
-          "image": "03_01_Kitchen.jpg",
+          "image": "delta-3-max-2400w-izhod-4800w-pik-1.jpg",
           "imageAlt": "DELTA 3 Max в кухня",
           "caption": "Хладилник (300W), микровълнова (1300W), кафемашина (1000W), блендер (500W), електрически тиган (1200W).",
           "rows": []
         },
         {
           "label": "Хол",
-          "image": "03_02_Living_Room_EU.jpg",
+          "image": "delta-3-max-2400w-izhod-4800w-pik-2.jpg",
           "imageAlt": "DELTA 3 Max в хол",
           "caption": "Телевизор 50″ (110W), говорители (400W), проектор (65W), PS5 (200W).",
           "rows": []
         },
         {
           "label": "Кемпер",
-          "image": "03_03_RV_Camping.png",
+          "image": "delta-3-max-2400w-izhod-4800w-pik-3.png",
           "imageAlt": "DELTA 3 Max на къмпинг",
           "caption": "Отопляемо одеяло (100W), електрическа скара (1150W), електрическа кана (1500W), лампа (10W), мини хладилник (60W). Anderson порт с 95% ефективност за DC уреди.",
           "rows": []
         },
         {
           "label": "Офис",
-          "image": "03_04_Office.webp",
+          "image": "delta-3-max-2400w-izhod-4800w-pik-4.webp",
           "imageAlt": "DELTA 3 Max в домашен офис",
           "caption": "Компютър (500W), лаптоп (60W), NAS (50W), Wi-Fi рутер (50W). При спиране на тока превключва за под 10 ms — без прекъсване.",
           "rows": []
         },
         {
           "label": "Пералня",
-          "image": "03_06_Laundry_Room.jpg",
+          "image": "delta-3-max-2400w-izhod-4800w-pik-5.jpg",
           "imageAlt": "DELTA 3 Max в перално помещение",
           "caption": "Пералня (500W), сушилня (2450W), парна ютия (1875W), осветление (10W).",
           "rows": []
@@ -168,7 +168,7 @@
       "theme": "light",
       "heading": "Пълноконтактни LFP клетки от автомобилен клас: надеждност от следващо ниво",
       "body": "DELTA 3 Max е с пълноконтактни (full-tab) LFP клетки от автомобилен клас. Пълноконтактният дизайн намалява съпротивлението, повишава ефективността и безопасността и дава по-голям капацитет с по-малко топлина — тоест по-дълъг живот на батерията.",
-      "image": "08_d1f399c6-8ca2-4a1f-8780-768ad3f0e985.webp"
+      "image": "delta-3-max-palnokontaktni-lfp-kletki-ot-1.webp"
     },
     {
       "blockType": "featureSection",
@@ -176,7 +176,7 @@
       "theme": "light",
       "heading": "Ненадминат баланс за ненадминат живот на батерията",
       "body": "С 27% по-малко клетки на киловатчас [5] нашият 16-клетъчен дизайн работи по-хладно, живее по-дълго и дава по-голяма стабилност. Всяка клетка е строго тествана за капацитет, напрежение и вътрешно съпротивление — резултатът е изключително еднороден пакет, защитен от презареждане, дисбаланс и преждевременно износване.",
-      "image": "09.png"
+      "image": "delta-3-max-nenadminat-balans-za-nenadminat-1.png"
     },
     {
       "blockType": "featureSection",
@@ -184,7 +184,7 @@
       "theme": "light",
       "heading": "Създаден да издържа",
       "body": "От химията на батерията до конструкцията — DELTA 3 Max е проектиран за екстремна издръжливост, устойчивост на средата и почти безшумна работа: енергия, на която можете да разчитате повече от 10 години. [1]",
-      "image": "10.png"
+      "image": "delta-3-max-sazdaden-da-izdarzha-1.png"
     },
     {
       "blockType": "featureSection",
@@ -194,7 +194,7 @@
       "subheading": "Ново ниво на бързина",
       "subheadingPosition": "below",
       "body": "Дистанционен контрол на зареждането за повече спокойствие.",
-      "image": "11_9d785f80-8335-40d4-a14c-2abb0110178a.jpg"
+      "image": "delta-3-max-izklyuchitelno-gavkavo-pet-nachina-1.jpg"
     },
     {
       "blockType": "tabbedShowcase",
@@ -204,35 +204,35 @@
       "tabs": [
         {
           "label": "От контакт",
-          "image": "12_01_AC_Charging_a3ef6201-bfa1-4a5d-86d0-30ae084ddda0.jpg",
+          "image": "delta-3-max-zarezhdane-1.jpg",
           "imageAlt": "Зареждане на DELTA 3 Max от електрически контакт",
           "caption": "2300W вход — пълен заряд за 68 минути с технологията X-Stream. [7] Режимът Storm Guard [8] следи предупрежденията за тежко време и автоматично включва зареждането от контакта, дори отдалечено.",
           "rows": []
         },
         {
           "label": "От слънце",
-          "image": "12_02_Solar_Charging.jpg",
+          "image": "delta-3-max-zarezhdane-2.jpg",
           "imageAlt": "Зареждане на DELTA 3 Max от соларни панели",
           "caption": "До 500W соларен вход — по-бърза и по-гъвкава соларна система, у дома и на път.",
           "rows": []
         },
         {
           "label": "От алтернатор",
-          "image": "12_03_Alternator_Charging.jpg",
+          "image": "delta-3-max-zarezhdane-3.jpg",
           "imageAlt": "Зареждане на DELTA 3 Max от автомобил с алтернаторно зарядно",
           "caption": "До 500W вход през XT60 порта с алтернаторното зарядно EcoFlow 500W [9] — зарежда се, докато шофирате, многократно по-бързо от запалката. [10]",
           "rows": []
         },
         {
           "label": "От генератор",
-          "image": "12_04_Generator_Charging.webp",
+          "image": "delta-3-max-zarezhdane-4.webp",
           "imageAlt": "Зареждане на DELTA 3 Max от генератор",
           "caption": "Хибридно захранване с генератор — до 2400W вход. Ток и без слънце, с контрол от приложението и съвместимост с генератори на други марки.",
           "rows": []
         },
         {
           "label": "Солар + алтернатор",
-          "image": "12_05_Solar_Alternator_Dual_Charging.jpg",
+          "image": "delta-3-max-zarezhdane-5.jpg",
           "imageAlt": "Двойно зареждане на DELTA 3 Max от соларни панели и алтернатор",
           "caption": "Двоен вход — соларни панели и алтернатор едновременно (до 500W + 500W) — за по-бързо зареждане дори на път.",
           "rows": []
@@ -245,7 +245,7 @@
       "theme": "light",
       "heading": "По-задълбочена информация, по-лесен контрол",
       "body": "Следете потреблението, спестяванията и соларното производство на едно табло. Лесно проверявате състоянието на батерията, прогнозата за слънце, цената на тока в реално време и колко сте спестили.",
-      "image": "13.webp"
+      "image": "delta-3-max-po-zadalbochena-informaciya-po-lesen-kontrol-1.webp"
     },
     {
       "blockType": "featureSection",
@@ -255,7 +255,7 @@
       "subheading": "Зареждайте в евтините часове и спестявайте",
       "subheadingPosition": "below",
       "body": "DELTA 3 Max оптимизира потреблението, за да намали сметката за ток, докато захранва дома ви устойчиво. Задавате автоматични задачи — да се зарежда вечер, при ниска тарифа, и да отдава през деня. [8]",
-      "image": "14_f24a48ae-1624-4f0c-95a1-4ffd8e113372.webp"
+      "image": "delta-3-max-bez-kompromis-s-komforta-1.webp"
     },
     {
       "blockType": "comparisonTable",
@@ -267,7 +267,7 @@
           "label": "DELTA 3 Max",
           "tagline": "2400W, без разширяване",
           "highlight": true,
-          "image": "ecoflow-delta-3-max-series-portable-power-station-1197150547_2000x.png",
+          "image": "delta-3-max-1.png",
           "imageAlt": "EcoFlow DELTA 3 Max",
           "price": 1149,
           "ctaLabel": "Купи сега",
@@ -404,19 +404,19 @@
         {
           "name": "EcoFlow DELTA 3 Max",
           "qty": 1,
-          "image": "ecoflow-delta-3-max-series-portable-power-station-1197150547_2000x.png",
+          "image": "delta-3-max-1.png",
           "imageAlt": "EcoFlow DELTA 3 Max"
         },
         {
           "name": "Захранващ кабел за контакт",
           "qty": 1,
-          "image": "kutiya-kabel.webp",
+          "image": "delta-3-plus-kakvo-ima-v-kutiyata-2.webp",
           "imageAlt": "Захранващ кабел за контакт"
         },
         {
           "name": "Ръководство и гаранционна карта",
           "qty": 1,
-          "image": "kutiya-rakovodstvo.webp",
+          "image": "delta-3-plus-kakvo-ima-v-kutiyata-3.webp",
           "imageAlt": "Ръководство и гаранционна карта"
         }
       ],
@@ -649,13 +649,7 @@
     "Секции само за Plus, нарочно пропуснати: „Pick Your Priority Outputs“, „2–10kWh expandable capacity“ (15, 16_01–04), „Garage“ (X-Fusion)."
   ],
   "_galeriya_bележка": "В папката има и снимки на сребристия DELTA 3 Max PLUS (1214367330, 1214367331, 1214367333, 1214367340, 1244018669) — нарочно НЕ са в галерията на Max. Ще послужат за Max Plus. 1214367335.webp е копие на .png със същия размер — не се ползва.",
-  "_svali_snimki": {
-    "_bележка": "Свалят се от eu.ecoflow.com/cdn/shop/files/<име> в content/delta-3-max/sekcii/",
-    "faylove": [
-      "07.jpg",
-      "07.png"
-    ]
-  },
+  "_svali_snimki": [],
   "_sekcii_chakat_snimka": {
     "_bележка": "Секции без файл. 07.jpg (майка с дете, при EcoFlow е видео) — след „Създаден да издържа“ НЕ, а ПРЕДИ „Пълноконтактни LFP клетки…“; 07.png (портативност) — след „Без компромис с комфорта“. Свалят се от eu.ecoflow.com/cdn/shop/files/07.jpg и /07.png.",
     "sekcii": [
@@ -680,7 +674,7 @@
     ]
   },
   "_prevod_nadpisi": {
-    "13.webp": [
+    "delta-3-max-po-zadalbochena-informaciya-po-lesen-kontrol-1.webp": [
       "Output → Изход",
       "Solar Generation → Соларно производство",
       "Earning → Спестявания"

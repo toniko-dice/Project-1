@@ -39,7 +39,7 @@
 - 2.4 hours — Dish Washer 1380W → 2,4 часа — Съдомиялна 1380W
 - 3.3 hours — Coffee Maker 1000W → 3,3 часа — Кафемашина 1000W
 
-### `pc_en_ON_site_DIY_Project.jpg` — Работа на обекта
+### `delta-pro-3-prilozheniya-2.jpg` — Работа на обекта
 - **DIY Without Limits** → **Майсторене без граници**
 - Power drills, hammers and 3D printers all day with expandable capacity. → Бормашини, къртачи и 3D принтери цял ден — с разширяем капацитет.
 - 3.0 hours — Electric Drill 1080W → 3,0 часа — Бормашина 1080W
@@ -101,7 +101,7 @@
 ## 4. `PC_Silent_as_a_Whisper_…jpg`, `PC_Seamless_Power_Backup_…jpg`
 Без надписи — само снимки.
 
-## 5. `pc_eu_6_Unique_Ways_to_Charge.jpg` — 6 плочки
+## 5. `delta-pro-3-zarezhdane-1.jpg` — 6 плочки
 
 | Оригинал | Български |
 |---|---|
@@ -112,12 +112,12 @@
 | Backyard: Gas Generator / 3200W \| 1.24 Hours⁴ | На двора: генератор / 3200W \| 1,24 часа⁴ |
 | Car: Cigarette Lighter Charging | Автомобил: от запалката |
 
-## 6. `pc_Charge_Fast_Everywhere_eu.jpg`
+## 6. `delta-pro-3-barzo-zarezhdane-navsyakade-3-1.jpg`
 Само логото X-STREAM — без превод.
 
 ## 7. Раздели „Усетете сигурността…“ (4 снимки)
-`pc_State-of-the-art_LFP_Tech_eu.jpg`, `pc_BMS_…X-Guard_eu.jpg`, `pc_Revolutionising_Durable_Construction_eu.jpg` — без надписи.
-`pc_5_Years_Warranty_Zero_Worries_eu.jpg` — печат „5 YEAR WARRANTY“ → „5 ГОДИНИ ГАРАНЦИЯ“.
+`delta-pro-3-bezopasnost-1.jpg`, `pc_BMS_…X-Guard_eu.jpg`, `delta-pro-3-bezopasnost-3.jpg` — без надписи.
+`delta-pro-3-bezopasnost-4.jpg` — печат „5 YEAR WARRANTY“ → „5 ГОДИНИ ГАРАНЦИЯ“.
 
 ## 8. `pc_EcoFlow_App_eu_…jpg` — приложението (3 панела)
 

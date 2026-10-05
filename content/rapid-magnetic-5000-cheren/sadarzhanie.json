@@ -39,7 +39,7 @@
   },
   "galeriya": [
     {
-      "file": "70352_1.webp",
+      "file": "rapid-magnetic-5000-cheren-1.webp",
       "alt": "EcoFlow RAPID Magnetic Power Bank 5000mAh (черен) — магнитна външна батерия"
     }
   ],
@@ -159,12 +159,12 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70352_1.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70352_1.webp",
+      "file": "rapid-magnetic-5000-cheren-1.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "По dice.bg. EcoFlow EU продава 5000 и 10000 mAh на една страница (EF-RAPID5000-EU / -B-EU) — описанието съвпада.",

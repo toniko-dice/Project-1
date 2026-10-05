@@ -35,35 +35,35 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow_power_kit_power_hub_5kva-1.webp",
+      "file": "power-kit-power-hub-5kva-1.webp",
       "alt": "EcoFlow Power Kit Power Hub 5kVA — захранващ хъб 5kVA"
     },
     {
-      "file": "ecoflow_power_kit_power_hub_5kva-2.webp",
+      "file": "power-kit-power-hub-5kva-2.webp",
       "alt": "EcoFlow Power Kit Power Hub 5kVA — захранващ хъб 5kVA"
     },
     {
-      "file": "ecoflow_power_kit_power_hub_5kva-3.webp",
+      "file": "power-kit-power-hub-5kva-3.webp",
       "alt": "EcoFlow Power Kit Power Hub 5kVA — захранващ хъб 5kVA"
     },
     {
-      "file": "ecoflow_power_kit_power_hub_5kva-4.webp",
+      "file": "power-kit-power-hub-5kva-4.webp",
       "alt": "EcoFlow Power Kit Power Hub 5kVA — захранващ хъб 5kVA"
     },
     {
-      "file": "ecoflow_power_kit_power_hub_5kva-5.webp",
+      "file": "power-kit-power-hub-5kva-5.webp",
       "alt": "EcoFlow Power Kit Power Hub 5kVA — захранващ хъб 5kVA"
     },
     {
-      "file": "ecoflow_power_kit_power_hub_5kva-6.webp",
+      "file": "power-kit-power-hub-5kva-6.webp",
       "alt": "EcoFlow Power Kit Power Hub 5kVA — захранващ хъб 5kVA"
     },
     {
-      "file": "ecoflow_power_kit_power_hub_5kva-7.webp",
+      "file": "power-kit-power-hub-5kva-7.webp",
       "alt": "EcoFlow Power Kit Power Hub 5kVA — захранващ хъб 5kVA"
     },
     {
-      "file": "ecoflow_power_kit_power_hub_5kva-8.webp",
+      "file": "power-kit-power-hub-5kva-8.webp",
       "alt": "EcoFlow Power Kit Power Hub 5kVA — захранващ хъб 5kVA"
     }
   ],
@@ -312,19 +312,40 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_hub_5kva-1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_hub_5kva-2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_hub_5kva-3.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_hub_5kva-4.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_hub_5kva-5.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_hub_5kva-6.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_hub_5kva-7.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_hub_5kva-8.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_hub_5kva-1.webp",
+      "file": "power-kit-power-hub-5kva-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_hub_5kva-2.webp",
+      "file": "power-kit-power-hub-5kva-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_hub_5kva-3.webp",
+      "file": "power-kit-power-hub-5kva-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_hub_5kva-4.webp",
+      "file": "power-kit-power-hub-5kva-4.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_hub_5kva-5.webp",
+      "file": "power-kit-power-hub-5kva-5.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_hub_5kva-6.webp",
+      "file": "power-kit-power-hub-5kva-6.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_hub_5kva-7.webp",
+      "file": "power-kit-power-hub-5kva-7.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_hub_5kva-8.webp",
+      "file": "power-kit-power-hub-5kva-8.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Продуктът го няма в eu.ecoflow.com — съдържанието е по dice.bg.",

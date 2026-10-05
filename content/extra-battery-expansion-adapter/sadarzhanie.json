@@ -36,7 +36,7 @@
   },
   "galeriya": [
     {
-      "file": "4895251665834-1.webp",
+      "file": "extra-battery-expansion-adapter-1.webp",
       "alt": "EcoFlow Extra Battery Expansion Adapter — адаптер"
     }
   ],
@@ -99,12 +99,12 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/4/8/4895251665834-1.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/4/8/4895251665834-1.webp",
+      "file": "extra-battery-expansion-adapter-1.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Продуктът го няма в eu.ecoflow.com — по dice.bg.",

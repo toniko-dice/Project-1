@@ -35,19 +35,19 @@
   },
   "galeriya": [
     {
-      "file": "60760_1.webp",
+      "file": "delta-max-waterproof-bag-1.webp",
       "alt": "EcoFlow DELTA Max Waterproof Bag — чанта"
     },
     {
-      "file": "60760_2.webp",
+      "file": "delta-max-waterproof-bag-2.webp",
       "alt": "EcoFlow DELTA Max Waterproof Bag — чанта"
     },
     {
-      "file": "60760_3.webp",
+      "file": "delta-max-waterproof-bag-3.webp",
       "alt": "EcoFlow DELTA Max Waterproof Bag — чанта"
     },
     {
-      "file": "60760_4.webp",
+      "file": "delta-max-waterproof-bag-4.webp",
       "alt": "EcoFlow DELTA Max Waterproof Bag — чанта"
     }
   ],
@@ -106,15 +106,24 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60760_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60760_2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60760_3.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60760_4.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60760_1.webp",
+      "file": "delta-max-waterproof-bag-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60760_2.webp",
+      "file": "delta-max-waterproof-bag-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60760_3.webp",
+      "file": "delta-max-waterproof-bag-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60760_4.webp",
+      "file": "delta-max-waterproof-bag-4.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",

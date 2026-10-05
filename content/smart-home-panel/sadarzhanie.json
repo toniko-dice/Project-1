@@ -35,39 +35,39 @@
   },
   "galeriya": [
     {
-      "file": "61550_1.webp",
+      "file": "smart-home-panel-1.webp",
       "alt": "EcoFlow Smart Home Panel Combo — умен домашен панел"
     },
     {
-      "file": "61550_2.webp",
+      "file": "smart-home-panel-2.webp",
       "alt": "EcoFlow Smart Home Panel Combo — умен домашен панел"
     },
     {
-      "file": "61550_3.webp",
+      "file": "smart-home-panel-3.webp",
       "alt": "EcoFlow Smart Home Panel Combo — умен домашен панел"
     },
     {
-      "file": "61550_4.webp",
+      "file": "smart-home-panel-4.webp",
       "alt": "EcoFlow Smart Home Panel Combo — умен домашен панел"
     },
     {
-      "file": "61550_5.webp",
+      "file": "smart-home-panel-5.webp",
       "alt": "EcoFlow Smart Home Panel Combo — умен домашен панел"
     },
     {
-      "file": "61550_6.webp",
+      "file": "smart-home-panel-6.webp",
       "alt": "EcoFlow Smart Home Panel Combo — умен домашен панел"
     },
     {
-      "file": "61550_7.webp",
+      "file": "smart-home-panel-7.webp",
       "alt": "EcoFlow Smart Home Panel Combo — умен домашен панел"
     },
     {
-      "file": "61550_8.webp",
+      "file": "smart-home-panel-8.webp",
       "alt": "EcoFlow Smart Home Panel Combo — умен домашен панел"
     },
     {
-      "file": "61550_9.webp",
+      "file": "smart-home-panel-9.webp",
       "alt": "EcoFlow Smart Home Panel Combo — умен домашен панел"
     }
   ],
@@ -246,20 +246,44 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_3.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_4.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_5.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_6.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_7.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_8.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_9.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_1.webp",
+      "file": "smart-home-panel-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_2.webp",
+      "file": "smart-home-panel-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_3.webp",
+      "file": "smart-home-panel-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_4.webp",
+      "file": "smart-home-panel-4.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_5.webp",
+      "file": "smart-home-panel-5.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_6.webp",
+      "file": "smart-home-panel-6.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_7.webp",
+      "file": "smart-home-panel-7.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_8.webp",
+      "file": "smart-home-panel-8.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61550_9.webp",
+      "file": "smart-home-panel-9.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Страницата в eu.ecoflow.com (smart-home-panel) е само с цена и няколко реда — съдържанието е по dice.bg.",

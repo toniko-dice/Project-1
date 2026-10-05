@@ -35,7 +35,7 @@
   },
   "galeriya": [
     {
-      "file": "sddled.webp",
+      "file": "alternator-charger-xt60-output-cable-1m-1.webp",
       "alt": "EcoFlow Alternator Charger XT60 Output Cable (1m) — кабел"
     }
   ],
@@ -106,12 +106,12 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/s/d/sddled.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/s/d/sddled.webp",
+      "file": "alternator-charger-xt60-output-cable-1m-1.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",

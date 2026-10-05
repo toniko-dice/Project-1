@@ -30,15 +30,15 @@
   },
   "galeriya": [
     {
-      "file": "60828_1.webp",
+      "file": "delta-pro-extra-battery-cable-1.webp",
       "alt": "EcoFlow DELTA Pro Extra Battery Cable (0.75m) — кабел"
     },
     {
-      "file": "60828_2.webp",
+      "file": "delta-pro-extra-battery-cable-2.webp",
       "alt": "EcoFlow DELTA Pro Extra Battery Cable (0.75m) — кабел"
     },
     {
-      "file": "60828_3.webp",
+      "file": "delta-pro-extra-battery-cable-3.webp",
       "alt": "EcoFlow DELTA Pro Extra Battery Cable (0.75m) — кабел"
     }
   ],
@@ -101,14 +101,20 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60828_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60828_2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60828_3.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60828_1.webp",
+      "file": "delta-pro-extra-battery-cable-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60828_2.webp",
+      "file": "delta-pro-extra-battery-cable-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60828_3.webp",
+      "file": "delta-pro-extra-battery-cable-3.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "По dice.bg и eu.ecoflow.com/products/delta-pro-extra-battery-cable.",

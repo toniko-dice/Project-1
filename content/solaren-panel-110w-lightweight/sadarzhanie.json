@@ -48,19 +48,19 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-110w-lightweight-portable-solar-panel-1209646562.png",
+      "file": "solaren-panel-110w-lightweight-1.png",
       "alt": "EcoFlow 110W Lightweight Portable Solar Panel — разгънат"
     },
     {
-      "file": "ecoflow-110w-lightweight-portable-solar-panel-1209646563.png",
+      "file": "solaren-panel-110w-lightweight-2.png",
       "alt": "EcoFlow 110W Lightweight Portable Solar Panel — сгънат, с дръжка"
     },
     {
-      "file": "ecoflow-110w-lightweight-portable-solar-panel-1209646561.png",
+      "file": "solaren-panel-110w-lightweight-3.png",
       "alt": "EcoFlow 110W Lightweight Portable Solar Panel — под ъгъл"
     },
     {
-      "file": "ecoflow-110w-lightweight-portable-solar-panel-1209646564.png",
+      "file": "solaren-panel-110w-lightweight-4.png",
       "alt": "EcoFlow 110W Lightweight Portable Solar Panel — детайл"
     }
   ],
@@ -72,7 +72,7 @@
       "anchorLabel": "Преглед",
       "heading": "",
       "body": "",
-      "image": "1_1_036da1e2-deb0-4e40-b5ca-62be566abf3d.png",
+      "image": "solaren-panel-110w-lightweight-pregled-1.png",
       "imageAlt": "EcoFlow 110W Lightweight Portable Solar Panel — основни предимства"
     },
     {
@@ -82,7 +82,7 @@
       "anchorLabel": "Портативност",
       "heading": "Свръхпортативен дизайн",
       "body": "Създаден от модерни леки материали, този панел от новото поколение е с 0,7 кг по-лек от предишния модел (17,5% по-малко тегло) — пренася се без усилие и се прибира компактно.",
-      "image": "2_1_img_6415f2e4-fec2-4071-a101-af82f445719c.png",
+      "image": "solaren-panel-110w-lightweight-portativnost-1.png",
       "imageAlt": "Панелът се носи като куфарче"
     },
     {
@@ -92,7 +92,7 @@
       "anchorLabel": "Двулицев",
       "heading": "Повече енергия с двулицев дизайн",
       "body": "Основната и задната страна улавят и разсеяната светлина — изходната мощност стига до 122W при условия на изпитване BNPI, т.е. повече енергия от същото слънце в сравнение с обикновените еднолицеви панели.",
-      "image": "3_1_img_ef3515e6-a838-4020-b05c-69fd1a9d1521.png",
+      "image": "solaren-panel-110w-lightweight-dvulicev-1.png",
       "imageAlt": "Двулицев соларен панел на открито"
     },
     {
@@ -101,7 +101,7 @@
       "theme": "light",
       "heading": "Още повече добив",
       "body": "С водещата в бранша технология TOPCon панелът достига първокласна ефективност на преобразуване до 25% и зарежда електроцентралата ви още по-бързо.",
-      "image": "4_1_img_f917c03a-de7a-409d-942c-f23051fe75fa.png",
+      "image": "solaren-panel-110w-lightweight-oshte-poveche-dobiv-1.png",
       "imageAlt": "До 25% ефективност на преобразуване"
     },
     {
@@ -111,7 +111,7 @@
       "anchorLabel": "Стойка",
       "heading": "Подходящ за всякакви условия",
       "body": "Сгъваемата вградена стойка е удобна и компактна. Регулира се от 30° до 60° — идеално за повечето райони на високи географски ширини.\n\nАко панелът ще стои окачен продължително, използвайте твърд (стационарен) соларен панел — леките сгъваеми панели не се препоръчват за такъв сценарий.",
-      "image": "4_2_img_0e0b6234-6974-4ff7-9c63-2a4a98bf1255.png",
+      "image": "solaren-panel-110w-lightweight-stoyka-1.png",
       "imageAlt": "Панелът пред кемпер сред природата"
     },
     {
@@ -121,7 +121,7 @@
       "anchorLabel": "Водач",
       "heading": "Вграден водач за ъгъла към слънцето",
       "body": "Дръжте слънчевите лъчи под ъгъл 90° и ги насочвайте към повърхността на панела — така получавате максимум слънце по всяко време.",
-      "image": "5_1_IMG_4e59bff1-95bf-4d06-acf2-133971d61b2c.png",
+      "image": "solaren-panel-110w-lightweight-vodach-1.png",
       "imageAlt": "Водач за ъгъла към слънцето — как се ползва"
     },
     {
@@ -133,7 +133,7 @@
       "subheading": "Създаден да издържи на бурята",
       "subheadingPosition": "below",
       "body": "С клас на защита IP68 нашият 110W лек сгъваем соларен панел запазва високата си производителност дори в контакт с вода. Спокойно може да зареждате край морето или да го вземете на лодката.\n\nIP68 се отнася само за самия соларен панел, без съединителната кутия.",
-      "image": "6_1_IMG_2d8eec4d-e4b4-4553-9679-7d6dd653662f.png",
+      "image": "solaren-panel-110w-lightweight-izdrazhlivost-1.png",
       "imageAlt": "Панелът под водни пръски"
     },
     {
@@ -142,7 +142,7 @@
       "theme": "light",
       "heading": "Без прегряване",
       "body": "Проектиран да издържа на високи температури, като запазва високото ниво на соларен добив.",
-      "image": "6_2_IMG_7f0b2d62-fe27-4873-9e22-a29fa8c411b5.png",
+      "image": "solaren-panel-110w-lightweight-bez-pregryavane-1.png",
       "imageAlt": "Слоевете на панела"
     },
     {
@@ -155,13 +155,13 @@
           "label": "EcoFlow NextGen сгъваем соларен панел",
           "tagline": "Нов",
           "highlight": true,
-          "image": "7_1_1_IMG.png",
+          "image": "solaren-panel-110w-lightweight-sravnenie-1.png",
           "imageAlt": "EcoFlow NextGen сгъваем соларен панел"
         },
         {
           "label": "EcoFlow соларен панел",
           "tagline": "Предишно поколение",
-          "image": "7_1_2_IMG_35b49a2a-a6d9-453d-9009-41ffd2db6ba6.png",
+          "image": "solaren-panel-110w-lightweight-sravnenie-2.png",
           "imageAlt": "EcoFlow соларен панел"
         }
       ],
@@ -226,13 +226,13 @@
         {
           "name": "EcoFlow 110W Lightweight Portable Solar Panel",
           "qty": 1,
-          "image": "ecoflow-110w-lightweight-portable-solar-panel-1209646562.png",
+          "image": "solaren-panel-110w-lightweight-1.png",
           "imageAlt": "EcoFlow 110W Lightweight Portable Solar Panel"
         },
         {
           "name": "Кратко ръководство, инструкции за безопасност и гаранционна карта",
           "qty": 1,
-          "image": "kutiya-rakovodstvo.webp",
+          "image": "delta-3-plus-kakvo-ima-v-kutiyata-3.webp",
           "imageAlt": "Кратко ръководство, инструкции за безопасност и гаранционна карта"
         }
       ],
@@ -311,28 +311,66 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-110w-lightweight-portable-solar-panel-1209646562.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-110w-lightweight-portable-solar-panel-1209646563.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-110w-lightweight-portable-solar-panel-1209646561.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-110w-lightweight-portable-solar-panel-1209646564.png"
-    ],
-    "sekcii": [
-      "https://eu.ecoflow.com/cdn/shop/files/1_1_036da1e2-deb0-4e40-b5ca-62be566abf3d.png",
-      "https://eu.ecoflow.com/cdn/shop/files/2_1_img_6415f2e4-fec2-4071-a101-af82f445719c.png",
-      "https://eu.ecoflow.com/cdn/shop/files/3_1_img_ef3515e6-a838-4020-b05c-69fd1a9d1521.png",
-      "https://eu.ecoflow.com/cdn/shop/files/4_1_img_f917c03a-de7a-409d-942c-f23051fe75fa.png",
-      "https://eu.ecoflow.com/cdn/shop/files/4_2_img_0e0b6234-6974-4ff7-9c63-2a4a98bf1255.png",
-      "https://eu.ecoflow.com/cdn/shop/files/5_1_IMG_4e59bff1-95bf-4d06-acf2-133971d61b2c.png",
-      "https://eu.ecoflow.com/cdn/shop/files/6_1_IMG_2d8eec4d-e4b4-4553-9679-7d6dd653662f.png",
-      "https://eu.ecoflow.com/cdn/shop/files/6_2_IMG_7f0b2d62-fe27-4873-9e22-a29fa8c411b5.png",
-      "https://eu.ecoflow.com/cdn/shop/files/7_1_1_IMG.png",
-      "https://eu.ecoflow.com/cdn/shop/files/7_1_2_IMG_35b49a2a-a6d9-453d-9009-41ffd2db6ba6.png"
-    ]
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-110w-lightweight-portable-solar-panel-1209646562.png",
+      "file": "solaren-panel-110w-lightweight-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-110w-lightweight-portable-solar-panel-1209646563.png",
+      "file": "solaren-panel-110w-lightweight-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-110w-lightweight-portable-solar-panel-1209646561.png",
+      "file": "solaren-panel-110w-lightweight-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-110w-lightweight-portable-solar-panel-1209646564.png",
+      "file": "solaren-panel-110w-lightweight-4.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/1_1_036da1e2-deb0-4e40-b5ca-62be566abf3d.png",
+      "file": "solaren-panel-110w-lightweight-pregled-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/2_1_img_6415f2e4-fec2-4071-a101-af82f445719c.png",
+      "file": "solaren-panel-110w-lightweight-portativnost-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/3_1_img_ef3515e6-a838-4020-b05c-69fd1a9d1521.png",
+      "file": "solaren-panel-110w-lightweight-dvulicev-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/4_1_img_f917c03a-de7a-409d-942c-f23051fe75fa.png",
+      "file": "solaren-panel-110w-lightweight-oshte-poveche-dobiv-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/4_2_img_0e0b6234-6974-4ff7-9c63-2a4a98bf1255.png",
+      "file": "solaren-panel-110w-lightweight-stoyka-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/5_1_IMG_4e59bff1-95bf-4d06-acf2-133971d61b2c.png",
+      "file": "solaren-panel-110w-lightweight-vodach-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/6_1_IMG_2d8eec4d-e4b4-4553-9679-7d6dd653662f.png",
+      "file": "solaren-panel-110w-lightweight-izdrazhlivost-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/6_2_IMG_7f0b2d62-fe27-4873-9e22-a29fa8c411b5.png",
+      "file": "solaren-panel-110w-lightweight-bez-pregryavane-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/7_1_1_IMG.png",
+      "file": "solaren-panel-110w-lightweight-sravnenie-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/7_1_2_IMG_35b49a2a-a6d9-453d-9009-41ffd2db6ba6.png",
+      "file": "solaren-panel-110w-lightweight-sravnenie-2.png"
+    }
+  ],
   "_prevod_nadpisi": {
-    "1_1_036da1e2-deb0-4e40-b5ca-62be566abf3d.png": {
+    "solaren-panel-110w-lightweight-pregled-1.png": {
       "Lightweight and Portable": "Лек и портативен",
       "Up to 25% / solar conversion efficiency rate": "До 25% / ефективност на преобразуване",
       "Bifacial Design, high-energy capturing": "Двулицев дизайн, улавя повече енергия",
@@ -340,10 +378,10 @@
       "IP68 / water and dust-resistant": "IP68 / защита от вода и прах",
       "30-60° / adjustable support stand": "30–60° / регулируема стойка"
     },
-    "4_1_img_f917c03a-de7a-409d-942c-f23051fe75fa.png": {
+    "solaren-panel-110w-lightweight-oshte-poveche-dobiv-1.png": {
       "25%": "остава"
     },
-    "5_1_IMG_4e59bff1-95bf-4d06-acf2-133971d61b2c.png": {
+    "solaren-panel-110w-lightweight-vodach-1.png": {
       "How-To": "Как се ползва",
       "Step 01 / Angle your solar panel so the sun shines through the transparent shell of the guide.": "Стъпка 01 / Наклонете панела така, че слънцето да свети през прозрачното капаче на водача.",
       "Step 02 / Once the sun shines through the transparent shell, adjust the angle of your solar panel until the shadow hits the middle of the guide.": "Стъпка 02 / Когато слънцето свети през капачето, нагласете ъгъла на панела, докато сянката попадне в средата на водача.",

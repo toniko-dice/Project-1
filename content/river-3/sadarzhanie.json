@@ -52,27 +52,27 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-river-3-portable-power-station-59806313021783.png",
+      "file": "river-3-ups-1.png",
       "alt": "EcoFlow RIVER 3 — изглед отпред"
     },
     {
-      "file": "ecoflow-river-3-portable-power-station-59806313054551.png",
+      "file": "river-3-ups-2.png",
       "alt": "EcoFlow RIVER 3 — отпред, изходи"
     },
     {
-      "file": "ecoflow-river-3-portable-power-station-59806313152855.png",
+      "file": "river-3-ups-3.png",
       "alt": "EcoFlow RIVER 3 — изглед отстрани"
     },
     {
-      "file": "ecoflow-river-3-portable-power-station-59806313120087.png",
+      "file": "river-3-ups-4.png",
       "alt": "EcoFlow RIVER 3 — изглед отзад"
     },
     {
-      "file": "ecoflow-river-3-portable-power-station-59818276716887.jpg",
+      "file": "river-3-ups-5.jpg",
       "alt": "EcoFlow RIVER 3 на къмпинг"
     },
     {
-      "file": "ecoflow-river-3-portable-power-station-59818276684119.jpg",
+      "file": "river-3-ups-6.jpg",
       "alt": "EcoFlow RIVER 3 на маса пред палатка"
     }
   ],
@@ -84,7 +84,7 @@
       "anchorLabel": "Преглед",
       "heading": "Идеалната първа батерия — компактна, но с мощна производителност",
       "body": "",
-      "image": "PC_R3_01.png"
+      "image": "river-3-ups-pregled-1.png"
     },
     {
       "blockType": "featureSection",
@@ -94,7 +94,7 @@
       "subheading": "Удължете престоя навън и посрещнете спирането на тока с GaN",
       "subheadingPosition": "below",
       "body": "С революционната технология X-GaNPower RIVER 3 постига по-висока енергийна ефективност — по-дълга работа на уредите с малка мощност, компактен дизайн и по-тиха работа.",
-      "image": "PC_R3_01_1.jpg"
+      "image": "river-3-ups-kompakten-dizayn-s-moshtna-1.jpg"
     },
     {
       "blockType": "featureSection",
@@ -102,7 +102,7 @@
       "theme": "light",
       "heading": "30% по-компактна за из път",
       "body": "RIVER 3 губи по-малко топлина, изисква по-малко място за охлаждане и е с компактен дизайн. Побира се лесно в малки пространства — шкаф или чанта — за удобно съхранение и пренасяне.",
-      "image": "PC_R3_01_2.jpg"
+      "image": "river-3-ups-30-po-kompaktna-za-iz-1.jpg"
     },
     {
       "blockType": "featureSection",
@@ -110,7 +110,7 @@
       "theme": "light",
       "heading": "До 2× по-дълга работа на осветление и мрежа",
       "body": "RIVER 3 променя представата за енергийна ефективност — двойно по-дълга работа на уреди под 100W, у дома и сред природата. [1]",
-      "image": "PC_R3_01_3.jpg"
+      "image": "river-3-ups-do-2-po-dalga-rabota-1.jpg"
     },
     {
       "blockType": "featureSection",
@@ -118,7 +118,7 @@
       "theme": "light",
       "heading": "Под 30 dB — тих като шепот за резервно захранване 24/7",
       "body": "С подобреното охлаждане на X-GaNPower RIVER 3 работи тихо като в библиотека — под 30 dB на разстояние 0,5 m. [2] Спокойствие денем и нощем, дори когато работи без прекъсване.",
-      "image": "PC_R3_01_4.jpg"
+      "image": "river-3-ups-pod-30-db-tih-1.jpg"
     },
     {
       "blockType": "tabbedShowcase",
@@ -129,28 +129,28 @@
       "tabs": [
         {
           "label": "От контакт",
-          "image": "PC_R3_02_1.jpg",
+          "image": "river-3-ups-zarezhdane-1.jpg",
           "imageAlt": "Зареждане на RIVER 3 от контакт",
           "caption": "RIVER 3 се зарежда за 1 час с X-Stream, без да уврежда батерията — благодарение на клетките от автомобилен клас и технологията за поддържащо зареждане.",
           "rows": []
         },
         {
           "label": "От слънце",
-          "image": "6_2_Solar_charging.jpg",
+          "image": "river-3-ups-zarezhdane-2.jpg",
           "imageAlt": "Зареждане на RIVER 3 от соларен панел",
           "caption": "Заредете RIVER 3 за само 2,6 часа със 110W соларен вход. За още по-голяма портативност — 45W сгъваем соларен панел (Type-C), който се сгъва до размера на лаптоп и зарежда устройствата ви директно.",
           "rows": []
         },
         {
           "label": "От автомобил",
-          "image": "6_3_Car_charging.jpg",
+          "image": "river-3-ups-zarezhdane-3.jpg",
           "imageAlt": "Зареждане на RIVER 3 в автомобил",
           "caption": "Зареждайте RIVER 3 от акумулатора на колата, докато шофирате — идеално за път.",
           "rows": []
         },
         {
           "label": "От генератор",
-          "image": "6_4_Generator_charging.jpg",
+          "image": "river-3-ups-zarezhdane-4.jpg",
           "imageAlt": "Зареждане на RIVER 3 от генератор",
           "caption": "Презареждане за само 1 час с бензинов генератор — за цял ден тиха, безопасна и ефективна енергия.",
           "rows": []
@@ -166,21 +166,21 @@
       "tabs": [
         {
           "label": "Водо-, огне- и удароустойчива",
-          "image": "PC_R3_03_1.jpg",
+          "image": "river-3-ups-izdrazhlivost-1.jpg",
           "imageAlt": "RIVER 3 — защита от вода, огън и удар",
           "caption": "",
           "rows": []
         },
         {
           "label": "LiFePO4 клетки, 10 години живот",
-          "image": "PC_R3_03_2.jpg",
+          "image": "river-3-ups-izdrazhlivost-2.jpg",
           "imageAlt": "RIVER 3 — LiFePO4 клетки",
           "caption": "",
           "rows": []
         },
         {
           "label": "Защита на батерията X-Guard",
-          "image": "PC_R3_03_3.jpg",
+          "image": "river-3-ups-izdrazhlivost-3.jpg",
           "imageAlt": "RIVER 3 — технология X-Guard",
           "caption": "",
           "rows": []
@@ -196,7 +196,7 @@
       "subheading": "Надежден спътник сред природата и при спиране на тока",
       "subheadingPosition": "below",
       "body": "RIVER 3 поддържа 90% от най-нужните ви уреди с 300W мощност. С технологията X-Boost захранва без усилие и нагревателни уреди до 600W.",
-      "image": "PC_R3_04.jpg"
+      "image": "river-3-ups-moshtnost-1.jpg"
     },
     {
       "blockType": "featureSection",
@@ -205,7 +205,7 @@
       "anchorLabel": "UPS",
       "heading": "UPS под 20 ms за живот без прекъсване",
       "body": "При спиране на тока контактът превключва към захранване от RIVER 3 за едва забележими 20 ms. Най-важните домашни уреди продължават да работят — храната остава студена, охраната и връзката не спират. Безпроблемно автоматично превключване за постоянно спокойствие.",
-      "image": "PC_R3_05.jpg"
+      "image": "river-3-ups-ups-1.jpg"
     },
     {
       "blockType": "featureSection",
@@ -216,7 +216,7 @@
       "subheading": "Удобен, интелигентен, персонализиран контрол на енергията",
       "subheadingPosition": "below",
       "body": "",
-      "image": "PC_R3_06.jpg"
+      "image": "river-3-ups-prilozhenie-1.jpg"
     },
     {
       "blockType": "featureSection",
@@ -224,7 +224,7 @@
       "theme": "light",
       "heading": "Детайли на продукта",
       "body": "",
-      "image": "11_1_Product_Details_EU.jpg"
+      "image": "river-3-ups-detayli-na-produkta-1.jpg"
     },
     {
       "blockType": "inTheBox",
@@ -234,19 +234,19 @@
         {
           "name": "EcoFlow RIVER 3",
           "qty": 1,
-          "image": "ecoflow-river-3-portable-power-station-59806313021783.png",
+          "image": "river-3-ups-1.png",
           "imageAlt": "EcoFlow RIVER 3"
         },
         {
           "name": "Захранващ кабел за контакт",
           "qty": 1,
-          "image": "kutiya-kabel.webp",
+          "image": "delta-3-plus-kakvo-ima-v-kutiyata-2.webp",
           "imageAlt": "Захранващ кабел за контакт"
         },
         {
           "name": "Кратко ръководство и гаранционна карта",
           "qty": 1,
-          "image": "kutiya-rakovodstvo.webp",
+          "image": "delta-3-plus-kakvo-ima-v-kutiyata-3.webp",
           "imageAlt": "Кратко ръководство и гаранционна карта"
         }
       ],
@@ -374,36 +374,100 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-portable-power-station-59806313021783.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-portable-power-station-59806313054551.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-portable-power-station-59806313152855.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-portable-power-station-59806313120087.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-portable-power-station-59818276716887.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-portable-power-station-59818276684119.jpg"
-    ],
-    "sekcii": [
-      "https://eu.ecoflow.com/cdn/shop/files/PC_R3_01.png",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_R3_01_1.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_R3_01_2.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_R3_01_3.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_R3_01_4.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_R3_02_1.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/6_2_Solar_charging.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/6_3_Car_charging.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/6_4_Generator_charging.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_R3_03_1.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_R3_03_2.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_R3_03_3.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_R3_04.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_R3_05.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/PC_R3_06.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/11_1_Product_Details_EU.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/RIVER_3_PC.png"
-    ],
-    "_bележка": "Всички файлове са същите като при RIVER 3 (UPS) — копирай galeriya/ и sekcii/ от content/river-3-ups/. Нищо ново за сваляне."
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-portable-power-station-59806313021783.png",
+      "file": "river-3-ups-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-portable-power-station-59806313054551.png",
+      "file": "river-3-ups-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-portable-power-station-59806313152855.png",
+      "file": "river-3-ups-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-portable-power-station-59806313120087.png",
+      "file": "river-3-ups-4.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-portable-power-station-59818276716887.jpg",
+      "file": "river-3-ups-5.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-portable-power-station-59818276684119.jpg",
+      "file": "river-3-ups-6.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_R3_01.png",
+      "file": "river-3-ups-pregled-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_R3_01_1.jpg",
+      "file": "river-3-ups-kompakten-dizayn-s-moshtna-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_R3_01_2.jpg",
+      "file": "river-3-ups-30-po-kompaktna-za-iz-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_R3_01_3.jpg",
+      "file": "river-3-ups-do-2-po-dalga-rabota-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_R3_01_4.jpg",
+      "file": "river-3-ups-pod-30-db-tih-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_R3_02_1.jpg",
+      "file": "river-3-ups-zarezhdane-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/6_2_Solar_charging.jpg",
+      "file": "river-3-ups-zarezhdane-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/6_3_Car_charging.jpg",
+      "file": "river-3-ups-zarezhdane-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/6_4_Generator_charging.jpg",
+      "file": "river-3-ups-zarezhdane-4.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_R3_03_1.jpg",
+      "file": "river-3-ups-izdrazhlivost-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_R3_03_2.jpg",
+      "file": "river-3-ups-izdrazhlivost-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_R3_03_3.jpg",
+      "file": "river-3-ups-izdrazhlivost-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_R3_04.jpg",
+      "file": "river-3-ups-moshtnost-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_R3_05.jpg",
+      "file": "river-3-ups-ups-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_R3_06.jpg",
+      "file": "river-3-ups-prilozhenie-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/11_1_Product_Details_EU.jpg",
+      "file": "river-3-ups-detayli-na-produkta-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/RIVER_3_PC.png",
+      "file": "RIVER_3_PC.png"
+    }
+  ],
   "_prevod_nadpisi": "виж prevod-nadpisi.md",
   "_neyasni": [
     "Капацитет: EcoFlow пишат 245Wh; в адреса на dice.bg е „256wh“. Записано 245Wh по EcoFlow.",

@@ -38,19 +38,19 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow_power_kit_power_link-1.webp",
+      "file": "power-kit-power-link-1.webp",
       "alt": "EcoFlow Power Kit Power Link — модул"
     },
     {
-      "file": "ecoflow_power_kit_power_link-2.webp",
+      "file": "power-kit-power-link-2.webp",
       "alt": "EcoFlow Power Kit Power Link — модул"
     },
     {
-      "file": "ecoflow_power_kit_power_link-3.webp",
+      "file": "power-kit-power-link-3.webp",
       "alt": "EcoFlow Power Kit Power Link — модул"
     },
     {
-      "file": "ecoflow_power_kit_power_link-4.webp",
+      "file": "power-kit-power-link-4.webp",
       "alt": "EcoFlow Power Kit Power Link — модул"
     }
   ],
@@ -180,15 +180,24 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_link-1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_link-2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_link-3.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_link-4.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_link-1.webp",
+      "file": "power-kit-power-link-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_link-2.webp",
+      "file": "power-kit-power-link-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_link-3.webp",
+      "file": "power-kit-power-link-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_power_kit_power_link-4.webp",
+      "file": "power-kit-power-link-4.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Продуктът го няма в eu.ecoflow.com — съдържанието е по dice.bg.",

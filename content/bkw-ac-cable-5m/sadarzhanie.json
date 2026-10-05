@@ -29,7 +29,7 @@
   },
   "galeriya": [
     {
-      "file": "67157_1.webp",
+      "file": "bkw-ac-cable-5m-1.webp",
       "alt": "EcoFlow BKW-AC Cable (5m) — кабел"
     }
   ],
@@ -92,12 +92,12 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/7/67157_1.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/7/67157_1.webp",
+      "file": "bkw-ac-cable-5m-1.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "За микроинвертора EcoFlow PowerStream (предишното поколение), който го няма в сайта → „Съвместим с“ е празно. Не е за STREAM Microinverter.",

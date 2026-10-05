@@ -32,7 +32,7 @@
   },
   "galeriya": [
     {
-      "file": "4895251665988-1.webp",
+      "file": "alternator-charger-plus-1000-solar-input-cable-5m-1.webp",
       "alt": "EcoFlow Alternator Charger Plus 1000 Solar Input Cable 12AWG (5m) — соларен кабел"
     }
   ],
@@ -103,12 +103,12 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/4/8/4895251665988-1.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/4/8/4895251665988-1.webp",
+      "file": "alternator-charger-plus-1000-solar-input-cable-5m-1.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Няма страница в eu.ecoflow.com — по dice.bg.",

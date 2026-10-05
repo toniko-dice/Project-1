@@ -33,11 +33,11 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-alternator-charger-custom-fit-output-cable-2m_1_.webp",
+      "file": "alternator-charger-custom-fit-output-cable-2m-1.webp",
       "alt": "EcoFlow Alternator Charger Custom Fit Output Cable (2m) — кабел"
     },
     {
-      "file": "ecoflow-alternator-charger-custom-fit-output-cable-2m-2_1_.webp",
+      "file": "alternator-charger-custom-fit-output-cable-2m-2.webp",
       "alt": "EcoFlow Alternator Charger Custom Fit Output Cable (2m) — кабел"
     }
   ],
@@ -96,13 +96,16 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-alternator-charger-custom-fit-output-cable-2m_1_.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-alternator-charger-custom-fit-output-cable-2m-2_1_.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-alternator-charger-custom-fit-output-cable-2m_1_.webp",
+      "file": "alternator-charger-custom-fit-output-cable-2m-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-alternator-charger-custom-fit-output-cable-2m-2_1_.webp",
+      "file": "alternator-charger-custom-fit-output-cable-2m-2.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",

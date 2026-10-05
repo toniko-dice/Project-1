@@ -56,27 +56,27 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-river-3-plus-wireless-portable-power-station-1170560970.png",
+      "file": "river-3-max-plus-wireless-kakvo-ima-v-kutiyata-1.png",
       "alt": "EcoFlow RIVER 3 Plus (Wireless) — изглед отпред"
     },
     {
-      "file": "ecoflow-river-3-plus-wireless-portable-power-station-1170560969.png",
+      "file": "river-3-plus-wireless-2.png",
       "alt": "EcoFlow RIVER 3 Plus (Wireless) — с извадена RAPID батерия"
     },
     {
-      "file": "ecoflow-river-3-plus-wireless-portable-power-station-1170560973.png",
+      "file": "river-3-max-plus-wireless-3.png",
       "alt": "EcoFlow RIVER 3 Plus (Wireless) — изглед отзад"
     },
     {
-      "file": "ecoflow-river-3-plus-wireless-portable-power-station-1170560971.png",
+      "file": "river-3-max-plus-wireless-4.png",
       "alt": "EcoFlow RIVER 3 Plus (Wireless) — отгоре, гнездо за RAPID"
     },
     {
-      "file": "ecoflow-river-3-plus-wireless-portable-power-station-1170560972.png",
+      "file": "river-3-max-plus-wireless-5.png",
       "alt": "EcoFlow RIVER 3 Plus (Wireless) — изглед отдолу"
     },
     {
-      "file": "ecoflow-river-3-plus-wireless-portable-power-station-1170560966.jpg",
+      "file": "river-3-plus-wireless-6.jpg",
       "alt": "EcoFlow RIVER 3 Plus (Wireless) — пренасяне"
     }
   ],
@@ -88,7 +88,7 @@
       "anchorLabel": "Преглед",
       "heading": "",
       "body": "",
-      "image": "1_1_kv_d9588423-b500-4083-9171-99ac112bbe9d.jpg"
+      "image": "river-3-plus-pregled-1.jpg"
     },
     {
       "blockType": "featureSection",
@@ -96,7 +96,7 @@
       "theme": "light",
       "heading": "Модулна, изключително гъвкава електроцентрала за всяка ситуация",
       "body": "",
-      "image": "01_2_6a12fb46-23f5-4091-8b91-05d94540e29e.png"
+      "image": "river-3-max-plus-wireless-modulna-izklyuchitelno-gavkava-elektrocentrala-1.png"
     },
     {
       "blockType": "featureSection",
@@ -107,7 +107,7 @@
       "subheading": "На път или като резервно захранване у дома — покрити сте.",
       "subheadingPosition": "below",
       "body": "RIVER 3 Plus (Wireless) е с модулен дизайн: отделяща се външна батерия RAPID (5000mAh) и разширяем капацитет с допълнителна батерия — ненадмината гъвкавост за всичките ви нужди от енергия. Вземете външната батерия за път, риболов или преход, а станцията оставете у дома или на къмпинга. Добавете допълнителната батерия за по-дълго резервно захранване и RIVER 3 Plus (Wireless) става вашето гъвкаво решение за всяка ситуация.",
-      "image": "02_01-Versatile_modular_design_for_every_situation.jpg"
+      "image": "river-3-max-plus-wireless-modulen-dizayn-1.jpg"
     },
     {
       "blockType": "featureSection",
@@ -115,7 +115,7 @@
       "theme": "light",
       "heading": "Закачане с едно движение, сигурен захват",
       "body": "С pogo-pin контакти просто пъхате външната батерия в RIVER 3 Plus (Wireless) и тя започва да се зарежда автоматично. Сигурната връзка я държи на място при пренасяне.",
-      "image": "02_02-Snap-in_charging_with_a_steady_hold.jpg"
+      "image": "river-3-max-plus-wireless-zakachane-s-edno-dvizhenie-1.jpg"
     },
     {
       "blockType": "featureSection",
@@ -123,7 +123,7 @@
       "theme": "light",
       "heading": "Допълнително безжично зареждане",
       "body": "Оставете iPhone или AirPods върху площадката и се зареждат безжично — на път или при работа от разстояние.",
-      "image": "02_03-Extra_wireless_charging_option.jpg"
+      "image": "river-3-max-plus-wireless-dopalnitelno-bezzhichno-zarezhdane-1.jpg"
     },
     {
       "blockType": "tabbedShowcase",
@@ -134,21 +134,21 @@
       "tabs": [
         {
           "label": "Двойно по-бързо безжично зареждане",
-          "image": "03_01-Qi2-cerfiticated_wireless_charging_that_s_twice_as_fast..jpg",
+          "image": "river-3-max-plus-wireless-rapid-1.jpg",
           "imageAlt": "RAPID — 15W Qi2 безжично зареждане",
           "caption": "",
           "rows": []
         },
         {
           "label": "Максимална скорост с вградения кабел",
-          "image": "03_03-Max-speed_charging_with_a_built-in_cable.jpg",
+          "image": "river-3-max-plus-wireless-rapid-2.jpg",
           "imageAlt": "RAPID — до 30W с вградения USB-C кабел",
           "caption": "",
           "rows": []
         },
         {
           "label": "Най-бързо презареждащата се външна батерия",
-          "image": "03_02-The_ultimate_fast-recharging_power_bank.jpg",
+          "image": "river-3-max-plus-wireless-rapid-3.jpg",
           "imageAlt": "RAPID — 0–70% за 33 минути",
           "caption": "",
           "rows": []
@@ -164,7 +164,7 @@
       "subheading": "До 600W изход",
       "subheadingPosition": "below",
       "body": "RIVER 3 Plus (Wireless) е звяр сред малките електроцентрали — до 600W номинална мощност. С технологията X-Boost захранва продължително нагревателни уреди до 1200W без усилие и поддържа 90% от домакинските уреди. А с вградената лампа никога няма да останете на тъмно.",
-      "image": "04-Your_reliable_companion_through_outages_or_in_the_wild..jpg"
+      "image": "river-3-max-plus-wireless-moshtnost-1.jpg"
     },
     {
       "blockType": "tabbedShowcase",
@@ -175,21 +175,21 @@
       "tabs": [
         {
           "label": "286Wh",
-          "image": "05_1_IMG_f92959a1-8be0-4a47-8778-9f532864448a.jpg",
+          "image": "river-3-max-plus-wireless-kapacitet-1.jpg",
           "imageAlt": "RIVER 3 Plus (Wireless) — 286Wh, време на работа на уреди",
           "caption": "",
           "rows": []
         },
         {
           "label": "572Wh",
-          "image": "05_2_IMG_e0117575-71fc-417d-8329-1a529caf38c5.jpg",
+          "image": "river-3-max-plus-wireless-kapacitet-2.jpg",
           "imageAlt": "RIVER 3 Max (Wireless) — 572Wh, време на работа на уреди",
           "caption": "",
           "rows": []
         },
         {
           "label": "858Wh",
-          "image": "05_3_IMG_e12b1d55-9722-4145-9058-85df35635fa7.jpg",
+          "image": "river-3-max-plus-wireless-kapacitet-3.jpg",
           "imageAlt": "RIVER 3 Plus (Wireless) — 858Wh, време на работа на уреди",
           "caption": "",
           "rows": []
@@ -205,28 +205,28 @@
       "tabs": [
         {
           "label": "От слънце",
-          "image": "5_1_IMG.jpg",
+          "image": "river-3-plus-zarezhdane-1.jpg",
           "imageAlt": "Зареждане на RIVER 3 Plus (Wireless) от соларен панел",
           "caption": "Зареждане от слънце: RIVER 3 Plus (Wireless) се пълни за само 1,5 часа с 220W соларен вход. За още по-голяма портативност — 45W сгъваем соларен панел (Type-C), който зарежда устройствата ви директно.",
           "rows": []
         },
         {
           "label": "От контакт",
-          "image": "08_2_IMG.jpg",
+          "image": "river-3-max-plus-wireless-zarezhdane-2.jpg",
           "imageAlt": "Зареждане на RIVER 3 Plus (Wireless) от контакт",
           "caption": "Зареждане от контакт: RIVER 3 Plus (Wireless) се зарежда за 1 час с X-Stream, без да уврежда батерията — благодарение на клетките от автомобилен клас и технологията за поддържащо зареждане.",
           "rows": []
         },
         {
           "label": "От автомобил",
-          "image": "5_3_IMG.jpg",
+          "image": "river-3-plus-zarezhdane-3.jpg",
           "imageAlt": "Зареждане на RIVER 3 Plus (Wireless) в автомобил",
           "caption": "Зареждане от автомобил: зареждайте RIVER 3 Plus (Wireless) от акумулатора на колата, докато шофирате — идеално за път.",
           "rows": []
         },
         {
           "label": "От генератор",
-          "image": "5_4_IMG.jpg",
+          "image": "river-3-plus-zarezhdane-4.jpg",
           "imageAlt": "Зареждане на RIVER 3 Plus (Wireless) от генератор",
           "caption": "Зареждане от генератор: презареждане за само 1 час с бензинов генератор — за цял ден тиха, безопасна и ефективна енергия.",
           "rows": []
@@ -241,7 +241,7 @@
       "subheading": "Удобна енергия за из път",
       "subheadingPosition": "below",
       "body": "RIVER 3 Plus (Wireless) губи по-малко топлина, изисква по-малко място за охлаждане и е с компактен дизайн. Побира се лесно в малки пространства — шкаф, миниван или чанта — за удобно съхранение и пренасяне.",
-      "image": "12-IMG.jpg"
+      "image": "river-3-max-plus-wireless-izklyuchitelno-kompaktna-i-leka-1.jpg"
     },
     {
       "blockType": "featureSection",
@@ -252,7 +252,7 @@
       "subheading": "Безпроблемна работа от дома и игри",
       "subheadingPosition": "below",
       "body": "RIVER 3 Plus (Wireless) дава първокласна защита с превключване под 10 ms и пази чувствителната техника за домашен офис и игри при внезапно спиране на тока.",
-      "image": "6_1_IMG.jpg"
+      "image": "river-3-plus-ups-1.jpg"
     },
     {
       "blockType": "featureSection",
@@ -263,7 +263,7 @@
       "subheading": "Удобен, интелигентен, персонализиран контрол на енергията",
       "subheadingPosition": "below",
       "body": "",
-      "image": "15_1_IMG.jpg"
+      "image": "river-3-max-plus-wireless-prilozhenie-1.jpg"
     },
     {
       "blockType": "featureSection",
@@ -271,7 +271,7 @@
       "theme": "light",
       "heading": "Детайли на продукта",
       "body": "",
-      "image": "16_1_IMG.jpg"
+      "image": "river-3-max-plus-wireless-detayli-na-produkta-1.jpg"
     },
     {
       "blockType": "inTheBox",
@@ -285,25 +285,25 @@
             {
               "name": "EcoFlow RIVER 3 Plus (Wireless)",
               "qty": 1,
-              "image": "ecoflow-river-3-plus-wireless-portable-power-station-1170560970.png",
+              "image": "river-3-max-plus-wireless-kakvo-ima-v-kutiyata-1.png",
               "imageAlt": "EcoFlow RIVER 3 Plus (Wireless)"
             },
             {
               "name": "Захранващ кабел за контакт",
               "qty": 1,
-              "image": "kutiya-kabel.webp",
+              "image": "delta-3-plus-kakvo-ima-v-kutiyata-2.webp",
               "imageAlt": "Захранващ кабел за контакт"
             },
             {
               "name": "Кабел EcoFlow USB-B към USB-A за UPS комуникация",
               "qty": 1,
-              "image": "kutiya-kabel-ups.webp",
+              "image": "river-3-plus-kakvo-ima-v-kutiyata-3.webp",
               "imageAlt": "Кабел USB-B към USB-A за UPS комуникация"
             },
             {
               "name": "Кратко ръководство и гаранционна карта",
               "qty": 1,
-              "image": "kutiya-rakovodstvo.webp",
+              "image": "delta-3-plus-kakvo-ima-v-kutiyata-3.webp",
               "imageAlt": "Кратко ръководство и гаранционна карта"
             }
           ]
@@ -314,25 +314,25 @@
             {
               "name": "EcoFlow RIVER 3 Max (Wireless)",
               "qty": 1,
-              "image": "ecoflow-river-3-plus-wireless-portable-power-station-1170566041.png",
+              "image": "river-3-max-plus-wireless-kakvo-ima-v-kutiyata-5.png",
               "imageAlt": "EcoFlow RIVER 3 Max (Wireless)"
             },
             {
               "name": "Захранващ кабел за контакт",
               "qty": 1,
-              "image": "kutiya-kabel.webp",
+              "image": "delta-3-plus-kakvo-ima-v-kutiyata-2.webp",
               "imageAlt": "Захранващ кабел за контакт"
             },
             {
               "name": "Кабел EcoFlow USB-B към USB-A за UPS комуникация",
               "qty": 1,
-              "image": "kutiya-kabel-ups.webp",
+              "image": "river-3-plus-kakvo-ima-v-kutiyata-3.webp",
               "imageAlt": "Кабел USB-B към USB-A за UPS комуникация"
             },
             {
               "name": "Кратко ръководство и гаранционна карта",
               "qty": 1,
-              "image": "kutiya-rakovodstvo.webp",
+              "image": "delta-3-plus-kakvo-ima-v-kutiyata-3.webp",
               "imageAlt": "Кратко ръководство и гаранционна карта"
             }
           ]
@@ -343,25 +343,25 @@
             {
               "name": "EcoFlow RIVER 3 Max Plus (Wireless)",
               "qty": 1,
-              "image": "ecoflow-river-3-plus-wireless-portable-power-station-1170560975.png",
+              "image": "river-3-max-plus-wireless-1.png",
               "imageAlt": "EcoFlow RIVER 3 Max Plus (Wireless)"
             },
             {
               "name": "Захранващ кабел за контакт",
               "qty": 1,
-              "image": "kutiya-kabel.webp",
+              "image": "delta-3-plus-kakvo-ima-v-kutiyata-2.webp",
               "imageAlt": "Захранващ кабел за контакт"
             },
             {
               "name": "Кабел EcoFlow USB-B към USB-A за UPS комуникация",
               "qty": 1,
-              "image": "kutiya-kabel-ups.webp",
+              "image": "river-3-plus-kakvo-ima-v-kutiyata-3.webp",
               "imageAlt": "Кабел USB-B към USB-A за UPS комуникация"
             },
             {
               "name": "Кратко ръководство и гаранционна карта",
               "qty": 1,
-              "image": "kutiya-rakovodstvo.webp",
+              "image": "delta-3-plus-kakvo-ima-v-kutiyata-3.webp",
               "imageAlt": "Кратко ръководство и гаранционна карта"
             }
           ]
@@ -536,18 +536,32 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560970.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560969.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560973.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560971.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560972.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560966.jpg"
-    ],
-    "sekcii": [],
-    "_bележка": "Всички снимки за секциите и кутията са същите като при RIVER 3 Max Plus (Wireless) — вече са в Медия, вносът ги преизползва по име. Копирай папката sekcii/ от content/river-3-max-plus-wireless/ (или я остави празна, ако вносът намира файловете в Медия). Нови са само 6-те снимки за галерията; …1170560970.png и …1170560971.png може вече да са в Медия от кутията на Max Plus."
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560970.png",
+      "file": "river-3-max-plus-wireless-kakvo-ima-v-kutiyata-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560969.png",
+      "file": "river-3-plus-wireless-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560973.png",
+      "file": "river-3-max-plus-wireless-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560971.png",
+      "file": "river-3-max-plus-wireless-4.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560972.png",
+      "file": "river-3-max-plus-wireless-5.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-river-3-plus-wireless-portable-power-station-1170560966.jpg",
+      "file": "river-3-plus-wireless-6.jpg"
+    }
+  ],
   "_prevod_nadpisi": "виж content/river-3-max-plus-wireless/prevod-nadpisi.md — банерите са същите",
   "_neyasni": [
     "Страницата на EcoFlow е обща за Plus и Max Plus (Wireless); текстовете са за RIVER 3 Plus (Wireless) — този продукт — и са оставени 1:1.",

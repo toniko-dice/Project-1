@@ -3,7 +3,7 @@
 ## `1_1_kv_…jpg` — главен банер (същият като при Max Plus Wireless)
 | EcoFlow RIVER 3 Plus Series / Start Small, Power Strong | EcoFlow RIVER 3 Plus серия / Започни с малко, захрани много |
 
-## `1_2.jpg` — колаж
+## `river-3-plus-nadezhden-spatnik-pri-spirane-1.jpg` — колаж
 | Оригинал | Български |
 |---|---|
 | Up to 600W output / X-BOOST 1200W | До 600W изход / X-BOOST 1200W |
@@ -29,5 +29,5 @@
 ## `12_1_IMG_…jpg` — приложението (3 карти)
 Както при Wireless варианта (Monitoring / Custom settings / Remote control), само „RIVER 3 Plus (Wireless)“ → „RIVER 3 Plus“.
 
-## `13_1_IMG.jpg` — детайли на продукта
+## `river-3-plus-detayli-na-produkta-1.jpg` — детайли на продукта
 Схема с номера — както при Wireless варианта.

@@ -1,38 +1,38 @@
 # Галерия
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-pro-max-1181675439.png
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-pro-1170917746.png
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-pro-1158520551.png
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-pro-1158520550.png
-https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-series-plug-play-solar-plant-1175543836.jpg
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-pro-max-1181675439.png  →  stream-ultra-1.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-pro-1170917746.png  →  stream-pro-2.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-pro-1158520551.png  →  stream-pro-3.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ultra-pro-1158520550.png  →  stream-pro-4.png
+https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-series-plug-play-solar-plant-1175543836.jpg  →  stream-pro-5.jpg
 
 # Секции
-https://eu.ecoflow.com/cdn/shop/files/01_EcoFlow_STREAM_Ultra_cbbf1e6a-f615-4b74-b07a-6e75dd3bfa0b.png
-https://eu.ecoflow.com/cdn/shop/files/01_PC_acacafa4-9629-4dea-92d6-7ee31f577fa3.png
-https://eu.ecoflow.com/cdn/shop/files/01_PC_db2b122b-6741-458c-857c-922ea67a1c01.png
-https://eu.ecoflow.com/cdn/shop/files/02_PC_7d7bc6b7-0472-49d3-8056-b8ec70084b09.png
-https://eu.ecoflow.com/cdn/shop/files/03_EcoFlow_STREAM_Solar_Panel_Extension_Cable_2.95m_d36041d1-3ff4-4b8b-aea3-342bb12864a4.png
-https://eu.ecoflow.com/cdn/shop/files/03_PC_5d98729d-3dbc-4202-a8b5-e7bbc7152347.png
-https://eu.ecoflow.com/cdn/shop/files/03_PC_63097602-f363-444f-bd3e-7c3a7d3842d3.png
-https://eu.ecoflow.com/cdn/shop/files/04_01_EU__Stream_AC_Cable_1.5m_b4a7d5e0-db66-467a-beb3-cc497101a0c4.png
-https://eu.ecoflow.com/cdn/shop/files/05_PV_Wrench_2157d0a5-766c-4ab0-a9f0-2ef1faabe06c.png
-https://eu.ecoflow.com/cdn/shop/files/07_locking_bracket.png
-https://eu.ecoflow.com/cdn/shop/files/08_mounting_bracket.png
-https://eu.ecoflow.com/cdn/shop/files/10_Warranty_Card_2f6c83cb-9471-4bb0-aff5-c88266c1c9b7.png
-https://eu.ecoflow.com/cdn/shop/files/11_Safety_Instructions_2505dcb9-5d6a-4567-b4ad-65fdd9baa52c.png
-https://eu.ecoflow.com/cdn/shop/files/12_Installation_Guide_ac28aa98-34b4-483a-b0a8-aa3ca8a69857.png
-https://eu.ecoflow.com/cdn/shop/files/PC-1_35022c54-525d-45ee-a9ab-914894dd453d.png
-https://eu.ecoflow.com/cdn/shop/files/PC_123b5843-bd61-4e5b-a4aa-81ab61b8eae9.png
-https://eu.ecoflow.com/cdn/shop/files/PC_26371c98-a25a-4069-91ae-ee33889b4a2b.png
-https://eu.ecoflow.com/cdn/shop/files/PC_280903bc-a2cc-4db1-a3c6-38e98cb304d3.jpg
-https://eu.ecoflow.com/cdn/shop/files/PC_34a8b4ba-0f0c-4098-8a20-25b59c339e3b.png
-https://eu.ecoflow.com/cdn/shop/files/PC_384754f4-28a8-4589-bbcc-926a928dd3bc.png
-https://eu.ecoflow.com/cdn/shop/files/PC_44c91e89-4798-4fdc-8866-8bc1d0870953.png
-https://eu.ecoflow.com/cdn/shop/files/PC_7b3d0dd2-03f8-454f-96b1-1f2ebe52076f.png
-https://eu.ecoflow.com/cdn/shop/files/PC_921de8ad-6440-4324-afdc-36c9eb81dc35.png
-https://eu.ecoflow.com/cdn/shop/files/PC_a4088fad-cc88-48b3-8384-87e6c55d3a13.png
-https://eu.ecoflow.com/cdn/shop/files/PC_afc05e98-c95e-457e-858e-5eee1dee4faf.png
-https://eu.ecoflow.com/cdn/shop/files/PC_bfb3ebe1-5392-4a4b-bc87-a4dc1ecc4cbe.png
-https://eu.ecoflow.com/cdn/shop/files/PC_d2aa772f-3e97-437c-af26-4491b9c05f39.png
-https://eu.ecoflow.com/cdn/shop/files/PC_dc95e136-b884-498d-bd42-8bab683c8588.png
-https://eu.ecoflow.com/cdn/shop/files/PC_e3dacad9-d401-494b-9279-77a2222ea172.png
-https://eu.ecoflow.com/cdn/shop/files/PC_fbe6c5dd-1c8a-4580-a703-e6dedb67847b.png
+https://eu.ecoflow.com/cdn/shop/files/01_EcoFlow_STREAM_Ultra_cbbf1e6a-f615-4b74-b07a-6e75dd3bfa0b.png  →  stream-ultra-kakvo-ima-v-kutiyata-1.png
+https://eu.ecoflow.com/cdn/shop/files/01_PC_acacafa4-9629-4dea-92d6-7ee31f577fa3.png  →  stream-pro-dalag-zhivot-s-lfp-1.png
+https://eu.ecoflow.com/cdn/shop/files/01_PC_db2b122b-6741-458c-857c-922ea67a1c01.png  →  stream-pro-moshtnost-1.png
+https://eu.ecoflow.com/cdn/shop/files/02_PC_7d7bc6b7-0472-49d3-8056-b8ec70084b09.png  →  stream-pro-tiha-rabota-do-30-1.png
+https://eu.ecoflow.com/cdn/shop/files/03_EcoFlow_STREAM_Solar_Panel_Extension_Cable_2.95m_d36041d1-3ff4-4b8b-aea3-342bb12864a4.png  →  stream-pro-kakvo-ima-v-kutiyata-2.png
+https://eu.ecoflow.com/cdn/shop/files/03_PC_5d98729d-3dbc-4202-a8b5-e7bbc7152347.png  →  stream-pro-moshtnost-2.png
+https://eu.ecoflow.com/cdn/shop/files/03_PC_63097602-f363-444f-bd3e-7c3a7d3842d3.png  →  stream-pro-vreme-1.png
+https://eu.ecoflow.com/cdn/shop/files/04_01_EU__Stream_AC_Cable_1.5m_b4a7d5e0-db66-467a-beb3-cc497101a0c4.png  →  stream-pro-kakvo-ima-v-kutiyata-3.png
+https://eu.ecoflow.com/cdn/shop/files/05_PV_Wrench_2157d0a5-766c-4ab0-a9f0-2ef1faabe06c.png  →  stream-pro-kakvo-ima-v-kutiyata-4.png
+https://eu.ecoflow.com/cdn/shop/files/07_locking_bracket.png  →  stream-pro-kakvo-ima-v-kutiyata-6.png
+https://eu.ecoflow.com/cdn/shop/files/08_mounting_bracket.png  →  stream-pro-kakvo-ima-v-kutiyata-5.png
+https://eu.ecoflow.com/cdn/shop/files/10_Warranty_Card_2f6c83cb-9471-4bb0-aff5-c88266c1c9b7.png  →  stream-pro-kakvo-ima-v-kutiyata-9.png
+https://eu.ecoflow.com/cdn/shop/files/11_Safety_Instructions_2505dcb9-5d6a-4567-b4ad-65fdd9baa52c.png  →  stream-pro-kakvo-ima-v-kutiyata-7.png
+https://eu.ecoflow.com/cdn/shop/files/12_Installation_Guide_ac28aa98-34b4-483a-b0a8-aa3ca8a69857.png  →  stream-pro-kakvo-ima-v-kutiyata-8.png
+https://eu.ecoflow.com/cdn/shop/files/PC-1_35022c54-525d-45ee-a9ab-914894dd453d.png  →  stream-pro-ac-izhod-1.png
+https://eu.ecoflow.com/cdn/shop/files/PC_123b5843-bd61-4e5b-a4aa-81ab61b8eae9.png  →  stream-pro-sistemata-1.png
+https://eu.ecoflow.com/cdn/shop/files/PC_26371c98-a25a-4069-91ae-ee33889b4a2b.png  →  stream-pro-razshiryavane-1.png
+https://eu.ecoflow.com/cdn/shop/files/PC_280903bc-a2cc-4db1-a3c6-38e98cb304d3.jpg  →  stream-pro-slaba-svetlina-1.jpg
+https://eu.ecoflow.com/cdn/shop/files/PC_34a8b4ba-0f0c-4098-8a20-25b59c339e3b.png  →  stream-pro-pregled-1.png
+https://eu.ecoflow.com/cdn/shop/files/PC_384754f4-28a8-4589-bbcc-926a928dd3bc.png  →  stream-pro-umen-dom-1.png
+https://eu.ecoflow.com/cdn/shop/files/PC_44c91e89-4798-4fdc-8866-8bc1d0870953.png  →  stream-pro-bezopasnost-1.png
+https://eu.ecoflow.com/cdn/shop/files/PC_7b3d0dd2-03f8-454f-96b1-1f2ebe52076f.png  →  stream-pro-dinamichni-ceni-na-toka-1.png
+https://eu.ecoflow.com/cdn/shop/files/PC_921de8ad-6440-4324-afdc-36c9eb81dc35.png  →  stream-pro-povishete-spestyavaniyata-s-tou-1.png
+https://eu.ecoflow.com/cdn/shop/files/PC_a4088fad-cc88-48b3-8384-87e6c55d3a13.png  →  stream-pro-ecoflow-ai-asistent-bez-1.png
+https://eu.ecoflow.com/cdn/shop/files/PC_afc05e98-c95e-457e-858e-5eee1dee4faf.png  →  stream-pro-edna-stapka-po-blizo-do-1.png
+https://eu.ecoflow.com/cdn/shop/files/PC_bfb3ebe1-5392-4a4b-bc87-a4dc1ecc4cbe.png  →  stream-pro-razpredeleno-1.png
+https://eu.ecoflow.com/cdn/shop/files/PC_d2aa772f-3e97-437c-af26-4491b9c05f39.png  →  stream-pro-nula-smetki-1.png
+https://eu.ecoflow.com/cdn/shop/files/PC_dc95e136-b884-498d-bd42-8bab683c8588.png  →  stream-pro-softuer-1.png
+https://eu.ecoflow.com/cdn/shop/files/PC_e3dacad9-d401-494b-9279-77a2222ea172.png  →  stream-pro-zashtita-na-lichnite-vi-1.png
+https://eu.ecoflow.com/cdn/shop/files/PC_fbe6c5dd-1c8a-4580-a703-e6dedb67847b.png  →  stream-pro-tochni-solarni-prognozi-maksimum-1.png

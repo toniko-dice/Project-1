@@ -36,31 +36,31 @@
   },
   "galeriya": [
     {
-      "file": "65178_1.webp",
+      "file": "adjustable-ground-suspended-solar-bracket-1.webp",
       "alt": "EcoFlow Adjustable Ground & Suspended Solar Bracket — соларна стойка"
     },
     {
-      "file": "65178_2.webp",
+      "file": "adjustable-ground-suspended-solar-bracket-2.webp",
       "alt": "EcoFlow Adjustable Ground & Suspended Solar Bracket — соларна стойка"
     },
     {
-      "file": "65178_3.webp",
+      "file": "adjustable-ground-suspended-solar-bracket-3.webp",
       "alt": "EcoFlow Adjustable Ground & Suspended Solar Bracket — соларна стойка"
     },
     {
-      "file": "65178_4.webp",
+      "file": "adjustable-ground-suspended-solar-bracket-4.webp",
       "alt": "EcoFlow Adjustable Ground & Suspended Solar Bracket — соларна стойка"
     },
     {
-      "file": "65178_5.webp",
+      "file": "adjustable-ground-suspended-solar-bracket-5.webp",
       "alt": "EcoFlow Adjustable Ground & Suspended Solar Bracket — соларна стойка"
     },
     {
-      "file": "65178_6.webp",
+      "file": "adjustable-ground-suspended-solar-bracket-6.webp",
       "alt": "EcoFlow Adjustable Ground & Suspended Solar Bracket — соларна стойка"
     },
     {
-      "file": "65178_7.webp",
+      "file": "adjustable-ground-suspended-solar-bracket-7.webp",
       "alt": "EcoFlow Adjustable Ground & Suspended Solar Bracket — соларна стойка"
     }
   ],
@@ -119,18 +119,36 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/5/65178_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/5/65178_2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/5/65178_3.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/5/65178_4.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/5/65178_5.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/5/65178_6.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/5/65178_7.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/5/65178_1.webp",
+      "file": "adjustable-ground-suspended-solar-bracket-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/5/65178_2.webp",
+      "file": "adjustable-ground-suspended-solar-bracket-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/5/65178_3.webp",
+      "file": "adjustable-ground-suspended-solar-bracket-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/5/65178_4.webp",
+      "file": "adjustable-ground-suspended-solar-bracket-4.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/5/65178_5.webp",
+      "file": "adjustable-ground-suspended-solar-bracket-5.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/5/65178_6.webp",
+      "file": "adjustable-ground-suspended-solar-bracket-6.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/5/65178_7.webp",
+      "file": "adjustable-ground-suspended-solar-bracket-7.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",

@@ -1,10 +1,10 @@
 # Галерия
-https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel7_1.webp
-https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel0_1.webp
-https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel12_1.webp
-https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel5_1.webp
-https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel6_1.webp
-https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel2_1.webp
+https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel7_1.webp  →  solaren-panel-nextgen-220w-bifacial-1.webp
+https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel0_1.webp  →  solaren-panel-nextgen-220w-bifacial-2.webp
+https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel12_1.webp  →  solaren-panel-nextgen-220w-bifacial-3.webp
+https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel5_1.webp  →  solaren-panel-nextgen-220w-bifacial-4.webp
+https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel6_1.webp  →  solaren-panel-nextgen-220w-bifacial-5.webp
+https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-nextgen-220w-bifacial-portable-solar-panel2_1.webp  →  solaren-panel-nextgen-220w-bifacial-6.webp
 
 # Секции
 

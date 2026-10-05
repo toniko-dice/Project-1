@@ -1,6 +1,6 @@
 # RIVER 3 (UPS) — вградени надписи в банерите и превод
 
-## `PC_R3_01.png` — колаж
+## `river-3-ups-pregled-1.png` — колаж
 | Оригинал | Български |
 |---|---|
 | Up to 2× runtime for <100W appliances | До 2× по-дълга работа за уреди под 100W |
@@ -22,8 +22,8 @@
 - `6_3_Car_charging`: 0-100% in 2.8 hr → 0–100% за 2,8 ч
 - `6_4_Generator_charging`: 0-100% in 1 hr → 0–100% за 1 ч
 
-## `PC_R3_06.jpg` — приложението
+## `river-3-ups-prilozhenie-1.jpg` — приложението
 Същите три карти като при RIVER 3 Plus: Monitoring → Наблюдение; Custom settings → Настройки по ваш вкус; Remote control → Дистанционно управление (пълните текстове са в content/river-3-max-plus-wireless/prevod-nadpisi.md, само „RIVER 3 Plus (Wireless)“ → „RIVER 3“).
 
-## `11_1_Product_Details_EU.jpg` — схема с номера
+## `river-3-ups-detayli-na-produkta-1.jpg` — схема с номера
 Както при RIVER 3 Plus (виж същия файл), без порта за допълнителна батерия.

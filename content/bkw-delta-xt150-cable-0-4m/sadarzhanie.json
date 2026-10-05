@@ -32,15 +32,15 @@
   },
   "galeriya": [
     {
-      "file": "bkwdeltaebcable-0.4m-1.webp",
+      "file": "bkw-delta-xt150-cable-0-4m-1.webp",
       "alt": "EcoFlow BKW-DELTA Cable XT150 (0.4 m) — кабел"
     },
     {
-      "file": "bkwdeltaebcable-0.4m-2.webp",
+      "file": "bkw-delta-xt150-cable-0-4m-2.webp",
       "alt": "EcoFlow BKW-DELTA Cable XT150 (0.4 m) — кабел"
     },
     {
-      "file": "bkwdeltaebcable-0.4m-3.webp",
+      "file": "bkw-delta-xt150-cable-0-4m-3.webp",
       "alt": "EcoFlow BKW-DELTA Cable XT150 (0.4 m) — кабел"
     }
   ],
@@ -103,14 +103,20 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/b/k/bkwdeltaebcable-0.4m-1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/b/k/bkwdeltaebcable-0.4m-2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/b/k/bkwdeltaebcable-0.4m-3.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/b/k/bkwdeltaebcable-0.4m-1.webp",
+      "file": "bkw-delta-xt150-cable-0-4m-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/b/k/bkwdeltaebcable-0.4m-2.webp",
+      "file": "bkw-delta-xt150-cable-0-4m-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/b/k/bkwdeltaebcable-0.4m-3.webp",
+      "file": "bkw-delta-xt150-cable-0-4m-3.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "За микроинвертора EcoFlow PowerStream (предишното поколение), който го няма в сайта → „Съвместим с“ е празно. Не е за STREAM Microinverter. DELTA 2 / DELTA Max също ги няма.",

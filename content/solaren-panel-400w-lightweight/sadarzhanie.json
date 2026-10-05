@@ -47,15 +47,15 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-400w-portable-solar-panel-1186050766.png",
+      "file": "solaren-panel-400w-lightweight-1.png",
       "alt": "EcoFlow 400W Lightweight Portable Solar Panel — разгънат"
     },
     {
-      "file": "ecoflow-400w-portable-solar-panel-1186050765.png",
+      "file": "solaren-panel-400w-lightweight-2.png",
       "alt": "EcoFlow 400W Lightweight Portable Solar Panel — сгънат, с дръжка"
     },
     {
-      "file": "ecoflow-400w-portable-solar-panel-1186050764.png",
+      "file": "solaren-panel-400w-lightweight-3.png",
       "alt": "EcoFlow 400W Lightweight Portable Solar Panel — под ъгъл"
     }
   ],
@@ -67,7 +67,7 @@
       "anchorLabel": "Преглед",
       "heading": "",
       "body": "",
-      "image": "1_1_453689ca-90b8-4d8f-ba2e-174986fecde8.png",
+      "image": "solaren-panel-400w-lightweight-pregled-1.png",
       "imageAlt": "EcoFlow 400W Lightweight Portable Solar Panel — основни предимства"
     },
     {
@@ -77,7 +77,7 @@
       "anchorLabel": "Двулицев",
       "heading": "Повече енергия с двулицев дизайн",
       "body": "Основната и задната страна улавят и разсеяната светлина — изходната мощност стига до 445W при условия на изпитване BNPI, т.е. повече енергия от същото слънце в сравнение с обикновените еднолицеви панели. С водещата в бранша технология TOPCon панелът достига първокласна ефективност на преобразуване до 25% и зарежда електроцентралата ви още по-бързо.",
-      "image": "2_1_img_9c9c5052-2f33-441f-9bed-f90eda22f179.png",
+      "image": "solaren-panel-400w-lightweight-dvulicev-1.png",
       "imageAlt": "Двулицев соларен панел на открито"
     },
     {
@@ -87,7 +87,7 @@
       "anchorLabel": "Портативност",
       "heading": "Свръхпортативен дизайн",
       "body": "Създаден от модерни леки материали, този панел от новото поколение е с 5,8 кг по-лек от предишните модели — пренася се без усилие и се прибира компактно.",
-      "image": "3_1_img_bbb77589-02c2-44c6-90e9-6ee9326f3c79.png",
+      "image": "solaren-panel-400w-lightweight-portativnost-1.png",
       "imageAlt": "Панелът се носи като куфарче"
     },
     {
@@ -97,7 +97,7 @@
       "anchorLabel": "Стойка",
       "heading": "Подходящ за всякакви условия",
       "body": "Сгъваемата вградена стойка е удобна и компактна. Регулира се на 30°, 45° и 60° — идеално за повечето райони на високи географски ширини.\n\nАко панелът ще стои окачен продължително, използвайте твърд (стационарен) соларен панел — леките сгъваеми панели не се препоръчват за такъв сценарий.",
-      "image": "4_1_img_e5d98993-50d8-46d5-8eef-34b64a7842b3.png",
+      "image": "solaren-panel-400w-lightweight-stoyka-1.png",
       "imageAlt": "Стойка с три положения — 30°, 45° и 60°"
     },
     {
@@ -107,7 +107,7 @@
       "anchorLabel": "Водач",
       "heading": "Вграден водач за ъгъла към слънцето",
       "body": "Дръжте слънчевите лъчи под ъгъл 90° и ги насочвайте към повърхността на панела — така получавате максимум слънце по всяко време.",
-      "image": "5_1_IMG_9365500e-0f06-4946-9e03-4f9cd9f99db5.png",
+      "image": "solaren-panel-400w-lightweight-vodach-1.png",
       "imageAlt": "Водач за ъгъла към слънцето — как се ползва"
     },
     {
@@ -119,7 +119,7 @@
       "subheading": "Създаден да издържи на бурята",
       "subheadingPosition": "below",
       "body": "С клас на защита IP68 нашият 400W лек сгъваем соларен панел запазва високата си производителност дори в контакт с вода. Спокойно може да зареждате край морето или да го вземете на лодката.",
-      "image": "6_1_IMG_dba0cb1a-07ee-4d35-9fd0-e15ef3d78f1d.png",
+      "image": "solaren-panel-400w-lightweight-izdrazhlivost-1.png",
       "imageAlt": "Панелът под водни пръски"
     },
     {
@@ -128,7 +128,7 @@
       "theme": "light",
       "heading": "Без прегряване",
       "body": "Проектиран да издържа на високи температури, като запазва високото ниво на соларен добив.",
-      "image": "6_2_IMG.png",
+      "image": "solaren-panel-400w-lightweight-bez-pregryavane-1.png",
       "imageAlt": "Слоевете на панела"
     },
     {
@@ -141,13 +141,13 @@
           "label": "EcoFlow Lightweight сгъваеми соларни панели",
           "tagline": "Нови",
           "highlight": true,
-          "image": "7_1_IMG_ac91c421-e139-4ea6-a729-6ae856fbb454.png",
+          "image": "solaren-panel-400w-lightweight-sravnenie-1.png",
           "imageAlt": "EcoFlow Lightweight сгъваеми соларни панели"
         },
         {
           "label": "EcoFlow соларен панел",
           "tagline": "Предишно поколение",
-          "image": "7_1_2_IMG_37965ea6-c28a-4165-b6e1-375c1f41c940.png",
+          "image": "solaren-panel-400w-lightweight-sravnenie-2.png",
           "imageAlt": "EcoFlow соларен панел"
         }
       ],
@@ -212,13 +212,13 @@
         {
           "name": "EcoFlow 400W Lightweight Portable Solar Panel",
           "qty": 1,
-          "image": "ecoflow-400w-portable-solar-panel-1186050766.png",
+          "image": "solaren-panel-400w-lightweight-1.png",
           "imageAlt": "EcoFlow 400W Lightweight Portable Solar Panel"
         },
         {
           "name": "Кратко ръководство, инструкции за безопасност и гаранционна карта",
           "qty": 1,
-          "image": "kutiya-rakovodstvo.webp",
+          "image": "delta-3-plus-kakvo-ima-v-kutiyata-3.webp",
           "imageAlt": "Кратко ръководство, инструкции за безопасност и гаранционна карта"
         }
       ],
@@ -294,38 +294,73 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-400w-portable-solar-panel-1186050766.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-400w-portable-solar-panel-1186050765.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-400w-portable-solar-panel-1186050764.png"
-    ],
-    "sekcii": [
-      "https://eu.ecoflow.com/cdn/shop/files/1_1_453689ca-90b8-4d8f-ba2e-174986fecde8.png",
-      "https://eu.ecoflow.com/cdn/shop/files/2_1_img_9c9c5052-2f33-441f-9bed-f90eda22f179.png",
-      "https://eu.ecoflow.com/cdn/shop/files/3_1_img_bbb77589-02c2-44c6-90e9-6ee9326f3c79.png",
-      "https://eu.ecoflow.com/cdn/shop/files/4_1_img_e5d98993-50d8-46d5-8eef-34b64a7842b3.png",
-      "https://eu.ecoflow.com/cdn/shop/files/5_1_IMG_9365500e-0f06-4946-9e03-4f9cd9f99db5.png",
-      "https://eu.ecoflow.com/cdn/shop/files/6_1_IMG_dba0cb1a-07ee-4d35-9fd0-e15ef3d78f1d.png",
-      "https://eu.ecoflow.com/cdn/shop/files/6_2_IMG.png",
-      "https://eu.ecoflow.com/cdn/shop/files/8_1_IMG_a9bab071-4b52-4b6a-ae10-9e5427ebed24.png",
-      "https://eu.ecoflow.com/cdn/shop/files/7_1_IMG_ac91c421-e139-4ea6-a729-6ae856fbb454.png",
-      "https://eu.ecoflow.com/cdn/shop/files/7_1_2_IMG_37965ea6-c28a-4165-b6e1-375c1f41c940.png"
-    ]
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-400w-portable-solar-panel-1186050766.png",
+      "file": "solaren-panel-400w-lightweight-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-400w-portable-solar-panel-1186050765.png",
+      "file": "solaren-panel-400w-lightweight-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-400w-portable-solar-panel-1186050764.png",
+      "file": "solaren-panel-400w-lightweight-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/1_1_453689ca-90b8-4d8f-ba2e-174986fecde8.png",
+      "file": "solaren-panel-400w-lightweight-pregled-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/2_1_img_9c9c5052-2f33-441f-9bed-f90eda22f179.png",
+      "file": "solaren-panel-400w-lightweight-dvulicev-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/3_1_img_bbb77589-02c2-44c6-90e9-6ee9326f3c79.png",
+      "file": "solaren-panel-400w-lightweight-portativnost-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/4_1_img_e5d98993-50d8-46d5-8eef-34b64a7842b3.png",
+      "file": "solaren-panel-400w-lightweight-stoyka-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/5_1_IMG_9365500e-0f06-4946-9e03-4f9cd9f99db5.png",
+      "file": "solaren-panel-400w-lightweight-vodach-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/6_1_IMG_dba0cb1a-07ee-4d35-9fd0-e15ef3d78f1d.png",
+      "file": "solaren-panel-400w-lightweight-izdrazhlivost-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/6_2_IMG.png",
+      "file": "solaren-panel-400w-lightweight-bez-pregryavane-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/8_1_IMG_a9bab071-4b52-4b6a-ae10-9e5427ebed24.png",
+      "file": "8_1_IMG_a9bab071-4b52-4b6a-ae10-9e5427ebed24.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/7_1_IMG_ac91c421-e139-4ea6-a729-6ae856fbb454.png",
+      "file": "solaren-panel-400w-lightweight-sravnenie-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/7_1_2_IMG_37965ea6-c28a-4165-b6e1-375c1f41c940.png",
+      "file": "solaren-panel-400w-lightweight-sravnenie-2.png"
+    }
+  ],
   "_prevod_nadpisi": {
-    "1_1_453689ca-90b8-4d8f-ba2e-174986fecde8.png": {
+    "solaren-panel-400w-lightweight-pregled-1.png": {
       "Lightweight and portable": "Лек и портативен",
       "30°/45°/60° / 3-angle adjustable support stand": "30°/45°/60° / стойка с три положения",
       "Integrated solar angle guide": "Вграден водач за ъгъла към слънцето",
       "Up to 25% / solar conversion efficiency rate": "До 25% / ефективност на преобразуване",
       "IP68 / water and dust-resistant": "IP68 / защита от вода и прах"
     },
-    "4_1_img_e5d98993-50d8-46d5-8eef-34b64a7842b3.png": {
+    "solaren-panel-400w-lightweight-stoyka-1.png": {
       "Adjustable stand with 30°, 45°, and 60° positions": "Регулируема стойка с положения 30°, 45° и 60°",
       "60° / 45° / 30°": "остават"
     },
-    "5_1_IMG_9365500e-0f06-4946-9e03-4f9cd9f99db5.png": {
+    "solaren-panel-400w-lightweight-vodach-1.png": {
       "How-To …": "същият текст като при 110W (5_1_IMG) — Как се ползва / Стъпка 01–03"
     },
     "8_1_IMG_a9bab071-4b52-4b6a-ae10-9e5427ebed24.png": {

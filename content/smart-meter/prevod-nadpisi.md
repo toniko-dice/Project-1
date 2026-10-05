@@ -1,10 +1,10 @@
 # EcoFlow Smart Meter — надписи в снимките
 
-## `PC_KV-Bills_to_0_eu.jpg`
+## `smart-meter-pregled-1.jpg`
 - Bills to 0 → Сметки до 0
 - Smart Home Power Management → Умно управление на енергията в дома
 
-## `pc_Pair_with_STREAM_AC_Pro_en.jpg`
+## `smart-meter-stream-1.jpg`
 - STREAM Microinverter + AC Pro → STREAM микроинвертор + AC Pro
 - Home socket → Контакт
 - Household appliances → Домакински уреди
@@ -14,13 +14,13 @@
 - Grid → Мрежа
 - Electricity Meter → Електромер
 
-## `PC_OASIS_EU.jpg`
+## `smart-meter-oasis-1.jpg`
 - Empower Your Home From Your Fingertips → Управлявайте дома с едно докосване
 - AI-Driven Energy, Always Optimized → Енергия с изкуствен интелект — винаги оптимизирана
 - Proactive Protection to Stay Ahead of the Risk → Превантивна защита — преди риска
 - Cut Costs, Not Comfort → По-ниски разходи без компромис с комфорта
 
-## `pc_Smart_Meter_x_Smart_Plug_eu.jpg`
+## `smart-meter-smart-meter-smart-plug-1.jpg`
 - Smart Meter · Monitor → Smart Meter · Следи
 - Monitors household power flow in real time, precisely detects every surplus watt. → Следи енергията в дома в реално време и засича всеки излишен ват.
 - Smart Plug · Switch → Smart Plug · Включва

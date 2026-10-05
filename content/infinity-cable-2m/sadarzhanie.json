@@ -35,11 +35,11 @@
   },
   "galeriya": [
     {
-      "file": "61553_1.webp",
+      "file": "infinity-cable-2m-1.webp",
       "alt": "EcoFlow Infinity Cable (2m) — кабел"
     },
     {
-      "file": "61553_2.webp",
+      "file": "infinity-cable-2m-2.webp",
       "alt": "EcoFlow Infinity Cable (2m) — кабел"
     }
   ],
@@ -102,13 +102,16 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61553_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61553_2.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61553_1.webp",
+      "file": "infinity-cable-2m-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61553_2.webp",
+      "file": "infinity-cable-2m-2.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "По dice.bg и eu.ecoflow.com/products/infinity-cable.",

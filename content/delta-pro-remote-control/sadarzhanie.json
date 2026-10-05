@@ -35,11 +35,11 @@
   },
   "galeriya": [
     {
-      "file": "60910_1.webp",
+      "file": "delta-pro-remote-control-1.webp",
       "alt": "EcoFlow DELTA Pro Remote Control — дистанционно управление"
     },
     {
-      "file": "60910_2.webp",
+      "file": "delta-pro-remote-control-2.webp",
       "alt": "EcoFlow DELTA Pro Remote Control — дистанционно управление"
     }
   ],
@@ -129,13 +129,16 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60910_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60910_2.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60910_1.webp",
+      "file": "delta-pro-remote-control-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60910_2.webp",
+      "file": "delta-pro-remote-control-2.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Текстът е от eu.ecoflow.com (там е по-подробен) — няма разминавания с dice.bg. dice.bg няма технически параметри (полето е празно).",

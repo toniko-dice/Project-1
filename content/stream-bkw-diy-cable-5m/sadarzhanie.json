@@ -35,23 +35,23 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-stream-bkw-diy-cable-5m-svyrzvasht-kabel-za-ecoflow-stream.webp",
+      "file": "stream-bkw-diy-cable-5m-1.webp",
       "alt": "EcoFlow STREAM BKW DIY Cable (5m) — кабел"
     },
     {
-      "file": "ecoflow-stream-bkw-diy-cable-5m-svyrzvasht-kabel-za-ecoflow-stream-2.webp",
+      "file": "stream-bkw-diy-cable-5m-2.webp",
       "alt": "EcoFlow STREAM BKW DIY Cable (5m) — кабел"
     },
     {
-      "file": "ecoflow-stream-bkw-diy-cable-5m-svyrzvasht-kabel-za-ecoflow-stream-3.webp",
+      "file": "stream-bkw-diy-cable-5m-3.webp",
       "alt": "EcoFlow STREAM BKW DIY Cable (5m) — кабел"
     },
     {
-      "file": "ecoflow-stream-bkw-diy-cable-5m-svyrzvasht-kabel-za-ecoflow-stream-4.webp",
+      "file": "stream-bkw-diy-cable-5m-4.webp",
       "alt": "EcoFlow STREAM BKW DIY Cable (5m) — кабел"
     },
     {
-      "file": "ecoflow-stream-bkw-diy-cable-5m-svyrzvasht-kabel-za-ecoflow-stream-5.webp",
+      "file": "stream-bkw-diy-cable-5m-5.webp",
       "alt": "EcoFlow STREAM BKW DIY Cable (5m) — кабел"
     }
   ],
@@ -114,16 +114,28 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-stream-bkw-diy-cable-5m-svyrzvasht-kabel-za-ecoflow-stream.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-stream-bkw-diy-cable-5m-svyrzvasht-kabel-za-ecoflow-stream-2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-stream-bkw-diy-cable-5m-svyrzvasht-kabel-za-ecoflow-stream-3.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-stream-bkw-diy-cable-5m-svyrzvasht-kabel-za-ecoflow-stream-4.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-stream-bkw-diy-cable-5m-svyrzvasht-kabel-za-ecoflow-stream-5.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-stream-bkw-diy-cable-5m-svyrzvasht-kabel-za-ecoflow-stream.webp",
+      "file": "stream-bkw-diy-cable-5m-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-stream-bkw-diy-cable-5m-svyrzvasht-kabel-za-ecoflow-stream-2.webp",
+      "file": "stream-bkw-diy-cable-5m-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-stream-bkw-diy-cable-5m-svyrzvasht-kabel-za-ecoflow-stream-3.webp",
+      "file": "stream-bkw-diy-cable-5m-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-stream-bkw-diy-cable-5m-svyrzvasht-kabel-za-ecoflow-stream-4.webp",
+      "file": "stream-bkw-diy-cable-5m-4.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow-stream-bkw-diy-cable-5m-svyrzvasht-kabel-za-ecoflow-stream-5.webp",
+      "file": "stream-bkw-diy-cable-5m-5.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Няма страница в eu.ecoflow.com — по dice.bg.",

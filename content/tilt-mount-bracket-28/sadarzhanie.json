@@ -36,19 +36,19 @@
   },
   "galeriya": [
     {
-      "file": "61576_1.webp",
+      "file": "tilt-mount-bracket-28-1.webp",
       "alt": "EcoFlow 28” Tilt Mount Bracket — соларна стойка"
     },
     {
-      "file": "61576_.webp",
+      "file": "tilt-mount-bracket-28-2.webp",
       "alt": "EcoFlow 28” Tilt Mount Bracket — соларна стойка"
     },
     {
-      "file": "61576_3.webp",
+      "file": "tilt-mount-bracket-28-3.webp",
       "alt": "EcoFlow 28” Tilt Mount Bracket — соларна стойка"
     },
     {
-      "file": "61576_4.webp",
+      "file": "tilt-mount-bracket-28-4.webp",
       "alt": "EcoFlow 28” Tilt Mount Bracket — соларна стойка"
     }
   ],
@@ -147,15 +147,24 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61576_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61576_.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61576_3.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61576_4.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61576_1.webp",
+      "file": "tilt-mount-bracket-28-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61576_.webp",
+      "file": "tilt-mount-bracket-28-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61576_3.webp",
+      "file": "tilt-mount-bracket-28-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61576_4.webp",
+      "file": "tilt-mount-bracket-28-4.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Страницата в eu.ecoflow.com е кратка — съдържанието е по dice.bg.",

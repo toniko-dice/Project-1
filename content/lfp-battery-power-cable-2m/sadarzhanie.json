@@ -8,7 +8,7 @@
     "productType": "accessory",
     "tagline": "Кабел 2 м за свързване на батерия EcoFlow LFP към Power Hub",
     "badge": "none",
-    "price": 135.0,
+    "price": 135,
     "externalUrl": "https://dice.bg/kabel-za-sv-rzvane-na-ecoflow-lfp-battery-k-m-ecoflow-power-kit-power-hub-ecoflow-lfp-battery-power-cable-2m-cheren",
     "ctaLabel": "Купи сега",
     "availability": "in-stock",
@@ -35,19 +35,19 @@
   },
   "galeriya": [
     {
-      "file": "61569_1_1.webp",
+      "file": "lfp-battery-power-cable-2m-1.webp",
       "alt": "EcoFlow LFP Battery Power Cable (2 m) — кабел за батерия"
     },
     {
-      "file": "61569_2_2.webp",
+      "file": "lfp-battery-power-cable-2m-2.webp",
       "alt": "EcoFlow LFP Battery Power Cable (2 m) — кабел за батерия"
     },
     {
-      "file": "61569_3_2.webp",
+      "file": "lfp-battery-power-cable-2m-3.webp",
       "alt": "EcoFlow LFP Battery Power Cable (2 m) — кабел за батерия"
     },
     {
-      "file": "61569_4_2.webp",
+      "file": "lfp-battery-power-cable-2m-4.webp",
       "alt": "EcoFlow LFP Battery Power Cable (2 m) — кабел за батерия"
     }
   ],
@@ -110,15 +110,24 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61569_1_1.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61569_2_2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61569_3_2.webp",
-      "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61569_4_2.webp"
-    ],
-    "sekcii": []
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61569_1_1.webp",
+      "file": "lfp-battery-power-cable-2m-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61569_2_2.webp",
+      "file": "lfp-battery-power-cable-2m-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61569_3_2.webp",
+      "file": "lfp-battery-power-cable-2m-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/1/61569_4_2.webp",
+      "file": "lfp-battery-power-cable-2m-4.webp"
+    }
+  ],
   "_prevod_nadpisi": {},
   "_neyasni": [
     "Продуктът го няма в eu.ecoflow.com — по dice.bg.",

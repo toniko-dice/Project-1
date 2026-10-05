@@ -47,19 +47,19 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-glacier-classic-portable-fridge-freezer-1167932170.png",
+      "file": "glacier-classic-35l-1.png",
       "alt": "EcoFlow GLACIER Classic 35L — под ъгъл"
     },
     {
-      "file": "ecoflow-glacier-classic-portable-fridge-freezer-1167932173.png",
+      "file": "glacier-classic-35l-2.png",
       "alt": "EcoFlow GLACIER Classic 35L — отстрани"
     },
     {
-      "file": "ecoflow-glacier-classic-portable-fridge-freezer-1167932172.png",
+      "file": "glacier-classic-35l-3.png",
       "alt": "EcoFlow GLACIER Classic 35L — отгоре"
     },
     {
-      "file": "ecoflow-glacier-classic-portable-fridge-freezer-1167932171.png",
+      "file": "glacier-classic-35l-4.png",
       "alt": "EcoFlow GLACIER Classic 35L — отзад"
     }
   ],
@@ -71,7 +71,7 @@
       "anchorLabel": "Преглед",
       "heading": "Защо EcoFlow GLACIER Classic се отличава",
       "body": "",
-      "image": "1_1_363d9420-944b-4b30-8c53-bc6d5077b12a.jpg",
+      "image": "glacier-classic-35l-pregled-1.jpg",
       "imageAlt": "EcoFlow GLACIER Classic 35L — основни предимства"
     },
     {
@@ -83,7 +83,7 @@
       "subheading": "Една зона, два режима",
       "subheadingPosition": "below",
       "body": "При 35L хладилникът е с една зона, която превключвате между режим хладилник и фризер. По-големите 45L и 55L са с две независими зони — пресни и замразени храни едновременно.",
-      "image": "2_1_img_f26b2c3e-d998-4427-8d23-109e57cbdea0.jpg",
+      "image": "glacier-classic-35l-zoni-1.jpg",
       "imageAlt": "Двете зони — хладилник и фризер"
     },
     {
@@ -95,7 +95,7 @@
       "subheading": "До 58 кенчета в компактен дизайн",
       "subheadingPosition": "below",
       "body": "С 40%* по-компактен дизайн — повече място в колата, истински дом на колела. EcoFlow GLACIER Classic използва пространството максимално: побира 58 (35L), 72 (45L) или 90 (55L) кенчета по 330 мл, като остава стегнат и пести място. Моделът 35L побира 58 кенчета.",
-      "image": "3_1_img_b7c97797-455e-4d4d-ad37-d30e396c0ddc.jpg",
+      "image": "glacier-classic-35l-kapacitet-1.jpg",
       "imageAlt": "Компактни размери и кенчета вътре"
     },
     {
@@ -107,35 +107,35 @@
       "tabs": [
         {
           "label": "Къмпинг с кола",
-          "image": "4_1_img_1b7eb4c5-3323-49c9-a383-f9e8169d62d6.jpg",
+          "image": "glacier-classic-35l-prilozheniya-1.jpg",
           "imageAlt": "Къмпинг с кола",
           "caption": "",
           "rows": []
         },
         {
           "label": "Кемпер",
-          "image": "4_2_img.jpg",
+          "image": "glacier-classic-35l-prilozheniya-2.jpg",
           "imageAlt": "Кемпер",
           "caption": "",
           "rows": []
         },
         {
           "label": "Къмпинг с палатка",
-          "image": "4_3_img.jpg",
+          "image": "glacier-classic-35l-prilozheniya-3.jpg",
           "imageAlt": "Къмпинг с палатка",
           "caption": "",
           "rows": []
         },
         {
           "label": "Пикник до колата",
-          "image": "4_4_img.jpg",
+          "image": "glacier-classic-35l-prilozheniya-4.jpg",
           "imageAlt": "Пикник до колата",
           "caption": "",
           "rows": []
         },
         {
           "label": "Пазаруване",
-          "image": "4_5_img.jpg",
+          "image": "glacier-classic-35l-prilozheniya-5.jpg",
           "imageAlt": "Пазаруване",
           "caption": "",
           "rows": []
@@ -160,7 +160,7 @@
       "theme": "light",
       "heading": "Без разтопен лед и мокра храна",
       "body": "",
-      "image": "6_1_img_ad425b91-3744-4964-8884-8ce9ebbab1ee.jpg",
+      "image": "glacier-classic-35l-bez-raztopen-led-i-1.jpg",
       "imageAlt": "Хладилна чанта срещу GLACIER Classic"
     },
     {
@@ -172,7 +172,7 @@
       "subheading": "Енергоспестяваща система за охлаждане",
       "subheadingPosition": "above",
       "body": "53 мм изолационна пяна и отлично уплътнение пазят храната студена по-дълго, като намаляват температурните колебания и течовете.\n\n*По лабораторни данни изолацията е с 60% по-дебела от тази на стандартните хладилници.",
-      "image": "7_1_img_cd6b8176-29e9-4871-b03b-5398b3b1e42e.jpg",
+      "image": "glacier-classic-35l-ohlazhdane-1.jpg",
       "imageAlt": "Изолацията на хладилника"
     },
     {
@@ -181,7 +181,7 @@
       "theme": "light",
       "heading": "Ефективен компресор за по-дълга работа",
       "body": "Високоефективният компресор с медна намотка охлажда мощно с 40% по-ниска консумация от стандартните хладилници — батерията стига за по-дълго извън мрежата.",
-      "image": "7_2_img_670ff47c-e331-4681-b688-340e90e7416d.jpg",
+      "image": "glacier-classic-35l-efektiven-kompresor-za-po-dalga-1.jpg",
       "imageAlt": "Компресорът"
     },
     {
@@ -193,21 +193,21 @@
       "tabs": [
         {
           "label": "Капак от двете страни",
-          "image": "6dca49d7a614f40dd25bd4ee9f812ccc_73b19d54-3b05-41f4-b0d2-d819cf191980.gif",
+          "image": "glacier-classic-35l-dizayn-1.gif",
           "imageAlt": "Капакът се отваря от двете страни",
           "caption": "Достигате храната от която и да е страна, както и да е поставен хладилникът в колата. Двустранният капак дава гъвкав и удобен достъп при всяко разположение.",
           "rows": []
         },
         {
           "label": "Готов за път",
-          "image": "8_2_img.jpg",
+          "image": "glacier-classic-35l-dizayn-2.jpg",
           "imageAlt": "Хладилникът в багажника",
           "caption": "Предлага се в 35L, 45L и 55L; EcoFlow GLACIER Classic 35L е колкото стандартен 24-инчов куфар. Идеален за SUV, кемпери клас B, офроуд автомобили и други — пести ценно място и дава достатъчно обем за приключенията ви.",
           "rows": []
         },
         {
           "label": "Лесно плъзгане*",
-          "image": "8_3_img_4a1a5fa0-440f-41f6-8adc-a0d3b05b932a.jpg",
+          "image": "glacier-classic-35l-dizayn-3.jpg",
           "imageAlt": "Хладилникът на плъзгаща се шина",
           "caption": "Изваждате GLACIER Classic от колата лесно, дори на тясно. Идеално при тесен паркинг или на къмпинг — по-малко усилие при товарене и разтоварване.\n\n*Плъзгащата шина EcoFlow GLACIER Classic Slide with Straps се продава отделно.",
           "rows": []
@@ -223,7 +223,7 @@
       "subheading": "Аксесоари за приключения",
       "subheadingPosition": "above",
       "body": "Вертикално място за инструменти, подправки и други необходими неща — повече удобство навън.",
-      "image": "9_1_img_1ac8b9f1-43af-42fb-a56f-3105c507627b.jpg",
+      "image": "glacier-classic-35l-aksesoari-1.jpg",
       "imageAlt": "Табло за закачане"
     },
     {
@@ -232,7 +232,7 @@
       "theme": "light",
       "heading": "Чанта за съхранение",
       "body": "Малките неща — кенчета, прибори, подправки — стоят подредени и подръка.",
-      "image": "9_3_img.jpg",
+      "image": "glacier-classic-35l-chanta-za-sahranenie-1.jpg",
       "imageAlt": "Чанта за съхранение"
     },
     {
@@ -241,7 +241,7 @@
       "theme": "light",
       "heading": "Скрити широки дръжки от двете страни",
       "body": "Скритите широки дръжки от двете страни позволяват стабилно и удобно носене от двама души.",
-      "image": "10_1_img_6504c8eb-017c-49c9-bd72-2ed6688ab835.jpg",
+      "image": "glacier-classic-35l-skriti-shiroki-drazhki-ot-1.jpg",
       "imageAlt": "Скритите дръжки"
     },
     {
@@ -253,7 +253,7 @@
       "subheading": "С EcoFlow OASIS",
       "subheadingPosition": "below",
       "body": "Наблюдавайте, управлявайте и настройвайте GLACIER отдалечено през приложението EcoFlow. От състоянието на батерията в реално време до предупреждения за теч, смяна на режими и изключване по график — всичко е на едно докосване от телефона.",
-      "image": "11_1_img_4ec56237-e8ad-46aa-b42b-580969ca01ae.jpg",
+      "image": "glacier-classic-35l-prilozhenie-1.jpg",
       "imageAlt": "Приложението EcoFlow"
     },
     {
@@ -264,28 +264,28 @@
       "tabs": [
         {
           "label": "Режим Max",
-          "image": "12_1_img_00d79fff-50e4-4445-a9a0-e7d17fb19224.jpg",
+          "image": "glacier-classic-35l-umni-rezhimi-za-maksimalno-1.jpg",
           "imageAlt": "Режим Max",
           "caption": "Максимално охлаждане за неща като сладолед или замразено месо, които изискват строг температурен контрол.",
           "rows": []
         },
         {
           "label": "Режим Eco",
-          "image": "12_2_img.jpg",
+          "image": "glacier-classic-35l-umni-rezhimi-za-maksimalno-2.jpg",
           "imageAlt": "Режим Eco",
           "caption": "По-ниска консумация — батерията стига за по-дълго при дълги пътувания.",
           "rows": []
         },
         {
           "label": "Температурна аларма",
-          "image": "12_3_img.jpg",
+          "image": "glacier-classic-35l-umni-rezhimi-za-maksimalno-3.jpg",
           "imageAlt": "Температурна аларма",
           "caption": "Получавате известие, ако температурата вътре се отклони с над 5 °C за повече от 10 минути — месото и млечните продукти остават безопасни.",
           "rows": []
         },
         {
           "label": "История на температурата",
-          "image": "12_4_img.jpg",
+          "image": "glacier-classic-35l-umni-rezhimi-za-maksimalno-4.jpg",
           "imageAlt": "История на температурата",
           "caption": "Крива на температурата за 7 дни — виждате отклоненията и сте сигурни, че храната е постоянно свежа.",
           "rows": []
@@ -299,7 +299,7 @@
       "anchorLabel": "Захранване",
       "heading": "Студът не спира",
       "body": "Няколко начина на захранване.\n\n*За оптимална работа ползвайте батерията — слънцето е непостоянно. Батерията EcoFlow GLACIER Plug-in Battery се продава отделно.\n*Съвместим с алтернаторните зарядни EcoFlow 500W и 800W.",
-      "image": "13_1_img_e20c7b63-2b59-4441-aff3-aff485740f2b.jpg",
+      "image": "glacier-classic-35l-zahranvane-1.jpg",
       "imageAlt": "Начини на захранване"
     },
     {
@@ -308,7 +308,7 @@
       "theme": "light",
       "heading": "Служи и за външна батерия",
       "body": "USB-C портът от 100W зарежда телефони и лаптопи — оставате на линия с това, което има значение.",
-      "image": "14_1_img_9fd88522-7c5a-4cb5-9430-9edf9ce4fa8b.jpg",
+      "image": "glacier-classic-35l-sluzhi-i-za-vanshna-1.jpg",
       "imageAlt": "Зареждане на лаптоп от хладилника"
     },
     {
@@ -404,31 +404,31 @@
         {
           "name": "EcoFlow GLACIER Classic 35L",
           "qty": 1,
-          "image": "16_1_1_img.png",
+          "image": "glacier-classic-35l-kakvo-ima-v-kutiyata-1.png",
           "imageAlt": "EcoFlow GLACIER Classic 35L"
         },
         {
           "name": "Захранващ адаптер EcoFlow AC",
           "qty": 1,
-          "image": "16_1_2_img.png",
+          "image": "glacier-classic-35l-kakvo-ima-v-kutiyata-2.png",
           "imageAlt": "AC адаптер"
         },
         {
           "name": "Кошница",
           "qty": 1,
-          "image": "16_1_3_img.png",
+          "image": "glacier-classic-35l-kakvo-ima-v-kutiyata-3.png",
           "imageAlt": "Кошница"
         },
         {
           "name": "Кабел за зареждане от кола EcoFlow",
           "qty": 1,
-          "image": "16_1_4_img.png",
+          "image": "glacier-classic-35l-kakvo-ima-v-kutiyata-4.png",
           "imageAlt": "Кабел за кола"
         },
         {
           "name": "Инструкции за безопасност, кратко ръководство, гаранционна карта",
           "qty": 1,
-          "image": "16_1_6_img.png",
+          "image": "glacier-classic-35l-kakvo-ima-v-kutiyata-5.png",
           "imageAlt": "Документи"
         }
       ]
@@ -492,7 +492,7 @@
       "anchorLabel": "Съвместимост",
       "heading": "Съвместимост на EcoFlow GLACIER Classic",
       "body": "С кои електроцентрали, батерии, зарядни и соларни панели на EcoFlow работи GLACIER Classic и през кой порт.",
-      "image": "17_1_img_62f48112-73be-4fa7-8ff0-eaabe9d962bf.jpg",
+      "image": "glacier-classic-35l-savmestimost-1.jpg",
       "imageAlt": "Таблица за съвместимост"
     },
     {
@@ -629,48 +629,146 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-glacier-classic-portable-fridge-freezer-1167932170.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-glacier-classic-portable-fridge-freezer-1167932173.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-glacier-classic-portable-fridge-freezer-1167932172.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-glacier-classic-portable-fridge-freezer-1167932171.png"
-    ],
-    "sekcii": [
-      "https://eu.ecoflow.com/cdn/shop/files/10_1_img_6504c8eb-017c-49c9-bd72-2ed6688ab835.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/11_1_img_4ec56237-e8ad-46aa-b42b-580969ca01ae.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/12_1_img_00d79fff-50e4-4445-a9a0-e7d17fb19224.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/12_2_img.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/12_3_img.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/12_4_img.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/13_1_img_e20c7b63-2b59-4441-aff3-aff485740f2b.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/14_1_img_9fd88522-7c5a-4cb5-9430-9edf9ce4fa8b.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/16_1_1_img.png",
-      "https://eu.ecoflow.com/cdn/shop/files/16_1_2_img.png",
-      "https://eu.ecoflow.com/cdn/shop/files/16_1_3_img.png",
-      "https://eu.ecoflow.com/cdn/shop/files/16_1_4_img.png",
-      "https://eu.ecoflow.com/cdn/shop/files/16_1_6_img.png",
-      "https://eu.ecoflow.com/cdn/shop/files/17_1_img_62f48112-73be-4fa7-8ff0-eaabe9d962bf.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/1_1_363d9420-944b-4b30-8c53-bc6d5077b12a.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/2_1_img_f26b2c3e-d998-4427-8d23-109e57cbdea0.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/3_1_img_b7c97797-455e-4d4d-ad37-d30e396c0ddc.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/4_1_img_1b7eb4c5-3323-49c9-a383-f9e8169d62d6.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/4_2_img.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/4_3_img.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/4_4_img.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/4_5_img.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/6_1_img_ad425b91-3744-4964-8884-8ce9ebbab1ee.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/6dca49d7a614f40dd25bd4ee9f812ccc_73b19d54-3b05-41f4-b0d2-d819cf191980.gif",
-      "https://eu.ecoflow.com/cdn/shop/files/7_1_img_cd6b8176-29e9-4871-b03b-5398b3b1e42e.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/7_2_img_670ff47c-e331-4681-b688-340e90e7416d.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/8_2_img.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/8_3_img_4a1a5fa0-440f-41f6-8adc-a0d3b05b932a.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/9_1_img_1ac8b9f1-43af-42fb-a56f-3105c507627b.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/9_3_img.jpg"
-    ]
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-glacier-classic-portable-fridge-freezer-1167932170.png",
+      "file": "glacier-classic-35l-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-glacier-classic-portable-fridge-freezer-1167932173.png",
+      "file": "glacier-classic-35l-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-glacier-classic-portable-fridge-freezer-1167932172.png",
+      "file": "glacier-classic-35l-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-glacier-classic-portable-fridge-freezer-1167932171.png",
+      "file": "glacier-classic-35l-4.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/10_1_img_6504c8eb-017c-49c9-bd72-2ed6688ab835.jpg",
+      "file": "glacier-classic-35l-skriti-shiroki-drazhki-ot-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/11_1_img_4ec56237-e8ad-46aa-b42b-580969ca01ae.jpg",
+      "file": "glacier-classic-35l-prilozhenie-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/12_1_img_00d79fff-50e4-4445-a9a0-e7d17fb19224.jpg",
+      "file": "glacier-classic-35l-umni-rezhimi-za-maksimalno-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/12_2_img.jpg",
+      "file": "glacier-classic-35l-umni-rezhimi-za-maksimalno-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/12_3_img.jpg",
+      "file": "glacier-classic-35l-umni-rezhimi-za-maksimalno-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/12_4_img.jpg",
+      "file": "glacier-classic-35l-umni-rezhimi-za-maksimalno-4.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/13_1_img_e20c7b63-2b59-4441-aff3-aff485740f2b.jpg",
+      "file": "glacier-classic-35l-zahranvane-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/14_1_img_9fd88522-7c5a-4cb5-9430-9edf9ce4fa8b.jpg",
+      "file": "glacier-classic-35l-sluzhi-i-za-vanshna-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/16_1_1_img.png",
+      "file": "glacier-classic-35l-kakvo-ima-v-kutiyata-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/16_1_2_img.png",
+      "file": "glacier-classic-35l-kakvo-ima-v-kutiyata-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/16_1_3_img.png",
+      "file": "glacier-classic-35l-kakvo-ima-v-kutiyata-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/16_1_4_img.png",
+      "file": "glacier-classic-35l-kakvo-ima-v-kutiyata-4.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/16_1_6_img.png",
+      "file": "glacier-classic-35l-kakvo-ima-v-kutiyata-5.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/17_1_img_62f48112-73be-4fa7-8ff0-eaabe9d962bf.jpg",
+      "file": "glacier-classic-35l-savmestimost-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/1_1_363d9420-944b-4b30-8c53-bc6d5077b12a.jpg",
+      "file": "glacier-classic-35l-pregled-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/2_1_img_f26b2c3e-d998-4427-8d23-109e57cbdea0.jpg",
+      "file": "glacier-classic-35l-zoni-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/3_1_img_b7c97797-455e-4d4d-ad37-d30e396c0ddc.jpg",
+      "file": "glacier-classic-35l-kapacitet-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/4_1_img_1b7eb4c5-3323-49c9-a383-f9e8169d62d6.jpg",
+      "file": "glacier-classic-35l-prilozheniya-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/4_2_img.jpg",
+      "file": "glacier-classic-35l-prilozheniya-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/4_3_img.jpg",
+      "file": "glacier-classic-35l-prilozheniya-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/4_4_img.jpg",
+      "file": "glacier-classic-35l-prilozheniya-4.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/4_5_img.jpg",
+      "file": "glacier-classic-35l-prilozheniya-5.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/6_1_img_ad425b91-3744-4964-8884-8ce9ebbab1ee.jpg",
+      "file": "glacier-classic-35l-bez-raztopen-led-i-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/6dca49d7a614f40dd25bd4ee9f812ccc_73b19d54-3b05-41f4-b0d2-d819cf191980.gif",
+      "file": "glacier-classic-35l-dizayn-1.gif"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/7_1_img_cd6b8176-29e9-4871-b03b-5398b3b1e42e.jpg",
+      "file": "glacier-classic-35l-ohlazhdane-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/7_2_img_670ff47c-e331-4681-b688-340e90e7416d.jpg",
+      "file": "glacier-classic-35l-efektiven-kompresor-za-po-dalga-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/8_2_img.jpg",
+      "file": "glacier-classic-35l-dizayn-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/8_3_img_4a1a5fa0-440f-41f6-8adc-a0d3b05b932a.jpg",
+      "file": "glacier-classic-35l-dizayn-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/9_1_img_1ac8b9f1-43af-42fb-a56f-3105c507627b.jpg",
+      "file": "glacier-classic-35l-aksesoari-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/9_3_img.jpg",
+      "file": "glacier-classic-35l-chanta-za-sahranenie-1.jpg"
+    }
+  ],
   "_prevod_nadpisi": {
-    "1_1_363d9420-944b-4b30-8c53-bc6d5077b12a.jpg": {
+    "glacier-classic-35l-pregled-1.jpg": {
       "Dual-zone flexibility* / Store fresh and frozen foods simultaneously / *45L & 55L only": "Гъвкавост с две зони* / Съхранявайте пресни и замразени храни едновременно / *само 45L и 55L",
       "Up to 43 hr* off-grid use / *The Plug-in Battery is sold separately": "До 43 ч* без мрежа / *Батерията се продава отделно",
       "3 size options for every ride / 35L 45L 55L": "3 размера за всяко пътуване / 35L 45L 55L",
@@ -678,24 +776,24 @@
       "53mm/2-inch foam layer to keep freshness intact": "53 мм изолационна пяна — запазва свежестта",
       "App control": "Управление от приложението"
     },
-    "2_1_img_f26b2c3e-d998-4427-8d23-109e57cbdea0.jpg": {
+    "glacier-classic-35l-zoni-1.jpg": {
       "Freezer+Freezer / Freezer+Fridge / Freezer / Fridge": "Фризер+Фризер / Фризер+Хладилник / Фризер / Хладилник"
     },
-    "3_1_img_b7c97797-455e-4d4d-ad37-d30e396c0ddc.jpg": {
+    "glacier-classic-35l-kapacitet-1.jpg": {
       "40% more compact than the industry average.": "40% по-компактен от средното за бранша."
     },
-    "6_1_img_ad425b91-3744-4964-8884-8ce9ebbab1ee.jpg": {
+    "glacier-classic-35l-bez-raztopen-led-i-1.jpg": {
       "Insulated Cooler": "Хладилна чанта",
       "GLACIER Classic": "остава"
     },
-    "13_1_img_e20c7b63-2b59-4441-aff3-aff485740f2b.jpg": {
+    "glacier-classic-35l-zahranvane-1.jpg": {
       "AC Charging (95W)": "Зареждане от контакт (95W)",
       "Car Power Outlet Charging (12V/24V, 100W)": "От гнездото в колата (12V/24V, 100W)",
       "Solar Charging (11-30V, compatible with panels ≤110W)*": "Соларно зареждане (11–30V, панели до 110W)*",
       "EcoFlow Alternator Charger (110W)*": "Алтернаторно зарядно EcoFlow (110W)*",
       "USB-C Charging (100W bidirectional)": "Зареждане през USB-C (100W, двупосочно)"
     },
-    "17_1_img_62f48112-73be-4fa7-8ff0-eaabe9d962bf.jpg": {
+    "glacier-classic-35l-savmestimost-1.jpg": {
       "Таблица за съвместимост (много малък текст)": "по желание — може да остане на английски; ключовото е в текста на секцията"
     }
   },

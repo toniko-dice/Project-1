@@ -1,10 +1,10 @@
 # Галерия
-https://cdn.shopify.com/s/files/1/0592/6004/3456/files/ecoflow-solar-tracker-52476897952083.png
-https://cdn.shopify.com/s/files/1/0592/6004/3456/products/ecoflow-solar-tracker-35846458998976.png
-https://cdn.shopify.com/s/files/1/0592/6004/3456/products/ecoflow-solar-tracker-35846459031744.png
-https://cdn.shopify.com/s/files/1/0592/6004/3456/files/ecoflow-solar-tracker-52476898017619.png
-https://cdn.shopify.com/s/files/1/0592/6004/3456/files/ecoflow-solar-tracker-52476898050387.png
-https://cdn.shopify.com/s/files/1/0592/6004/3456/files/ecoflow-solar-tracker-52476897984851.png
+https://cdn.shopify.com/s/files/1/0592/6004/3456/files/ecoflow-solar-tracker-52476897952083.png  →  solar-tracker-1.png
+https://cdn.shopify.com/s/files/1/0592/6004/3456/products/ecoflow-solar-tracker-35846458998976.png  →  solar-tracker-2.png
+https://cdn.shopify.com/s/files/1/0592/6004/3456/products/ecoflow-solar-tracker-35846459031744.png  →  solar-tracker-3.png
+https://cdn.shopify.com/s/files/1/0592/6004/3456/files/ecoflow-solar-tracker-52476898017619.png  →  solar-tracker-4.png
+https://cdn.shopify.com/s/files/1/0592/6004/3456/files/ecoflow-solar-tracker-52476898050387.png  →  solar-tracker-5.png
+https://cdn.shopify.com/s/files/1/0592/6004/3456/files/ecoflow-solar-tracker-52476897984851.png  →  solar-tracker-6.png
 
 # Секции
 

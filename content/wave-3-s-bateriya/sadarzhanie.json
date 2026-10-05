@@ -49,23 +49,23 @@
   },
   "galeriya": [
     {
-      "file": "ecoflow-wave-3-portable-air-conditioner-1161220816.png",
+      "file": "wave-3-s-bateriya-1.png",
       "alt": "EcoFlow WAVE 3 + WAVE 3 Add-On Battery — климатик с батерия"
     },
     {
-      "file": "ecoflow-wave-3-portable-air-conditioner-1161220828.png",
+      "file": "wave-3-1.png",
       "alt": "EcoFlow WAVE 3 + WAVE 3 Add-On Battery — под ъгъл"
     },
     {
-      "file": "ecoflow-wave-3-portable-air-conditioner-1161220820.png",
+      "file": "wave-3-2.png",
       "alt": "EcoFlow WAVE 3 + WAVE 3 Add-On Battery — отзад"
     },
     {
-      "file": "ecoflow-wave-3-portable-air-conditioner-1161220818.png",
+      "file": "wave-3-3.png",
       "alt": "EcoFlow WAVE 3 + WAVE 3 Add-On Battery — отпред"
     },
     {
-      "file": "ecoflow-wave-3-portable-air-conditioner-1161220826.png",
+      "file": "wave-3-4.png",
       "alt": "EcoFlow WAVE 3 + WAVE 3 Add-On Battery — отгоре"
     }
   ],
@@ -77,7 +77,7 @@
       "anchorLabel": "Преглед",
       "heading": "Защо EcoFlow WAVE 3 се отличава",
       "body": "",
-      "image": "1_1_f0bca206-32e1-4376-bac2-f1ab2c9bee35.jpg",
+      "image": "wave-3-pregled-1.jpg",
       "imageAlt": "EcoFlow WAVE 3 — основни предимства"
     },
     {
@@ -89,49 +89,49 @@
       "tabs": [
         {
           "label": "Кола",
-          "image": "2_1_Car_Camping.png",
+          "image": "wave-3-prilozheniya-1.png",
           "imageAlt": "Кола",
           "caption": "",
           "rows": []
         },
         {
           "label": "Палатка",
-          "image": "2_2_Tent_Camping.png",
+          "image": "wave-3-prilozheniya-2.png",
           "imageAlt": "Палатка",
           "caption": "",
           "rows": []
         },
         {
           "label": "Кемпер",
-          "image": "2_3_Outdoor_Fun_482f689d-51b0-4fea-a8ab-89ab0f6f1a50.png",
+          "image": "wave-3-prilozheniya-3.png",
           "imageAlt": "Кемпер",
           "caption": "",
           "rows": []
         },
         {
           "label": "На открито",
-          "image": "2_4_Outdoor_Fun.png",
+          "image": "wave-3-prilozheniya-4.png",
           "imageAlt": "На открито",
           "caption": "",
           "rows": []
         },
         {
           "label": "У дома",
-          "image": "2_5_Indoor_Spaces.png",
+          "image": "wave-3-prilozheniya-5.png",
           "imageAlt": "У дома",
           "caption": "",
           "rows": []
         },
         {
           "label": "Камиони",
-          "image": "2_6_Semi-Trucks.png",
+          "image": "wave-3-prilozheniya-6.png",
           "imageAlt": "Камиони",
           "caption": "",
           "rows": []
         },
         {
           "label": "Лодка",
-          "image": "2_7_Boating.png",
+          "image": "wave-3-prilozheniya-7.png",
           "imageAlt": "Лодка",
           "caption": "",
           "rows": []
@@ -147,7 +147,7 @@
       "subheading": "6100 BTU охлаждане и 6800 BTU отопление",
       "subheadingPosition": "below",
       "body": "Сваля температурата с 8 °C само за 15 минути¹ с 6100 BTU мощност — идеална среда за всеки сценарий. Затопля бързо с 6800 BTU — вдига температурата с 9 °C за 15 минути² — идеално за уют при хладни есенни къмпинги.",
-      "image": "3_1_img.png",
+      "image": "wave-3-moshtnost-1.png",
       "imageAlt": "6100 BTU охлаждане и 6800 BTU отопление"
     },
     {
@@ -159,7 +159,7 @@
       "subheading": "Допълнителна батерия 1024Wh LFP",
       "subheadingPosition": "below",
       "body": "Допълнителната батерия дава до 8 часа работа без прекъсване³ — цяла нощ спокоен сън. Качествените LFP клетки осигуряват живот до 10 години при ежедневна употреба.",
-      "image": "4_1_img.png",
+      "image": "wave-3-bateriya-1.png",
       "imageAlt": "8 часа работа"
     },
     {
@@ -171,7 +171,7 @@
       "subheading": "С EcoFlow OASIS",
       "subheadingPosition": "below",
       "body": "Управлявайте всичко от телефона, където и да сте — от състоянието на батерията в реално време до известия за оттичане на водата, смяна на режими и изключване по график.",
-      "image": "5_1_img.png",
+      "image": "wave-3-prilozhenie-1.png",
       "imageAlt": "Приложението EcoFlow"
     },
     {
@@ -182,35 +182,35 @@
       "tabs": [
         {
           "label": "Автоматичен режим",
-          "image": "6_1_Automatic_Function.png",
+          "image": "wave-3-umni-rezhimi-za-maksimalen-1.png",
           "imageAlt": "Автоматичен режим",
           "caption": "Превключва автоматично на отопление, когато температурата падне — топло дори в студена нощ на планински къмпинг, за спокоен сън.",
           "rows": []
         },
         {
           "label": "Грижа за домашни любимци",
-          "image": "6_2_Pet_Care.png",
+          "image": "wave-3-umni-rezhimi-za-maksimalen-2.png",
           "imageAlt": "Грижа за домашни любимци",
           "caption": "Задайте в приложението температурен диапазон 35–45 °C, за да пазите любимеца си от топлинен удар у дома. Щом зададената температура бъде надвишена, WAVE 3 започва да охлажда автоматично и ви изпраща известие.",
           "rows": []
         },
         {
           "label": "Изсушаване",
-          "image": "6_3_Dehumidification_Function.png",
+          "image": "wave-3-umni-rezhimi-za-maksimalen-3.png",
           "imageAlt": "Изсушаване",
           "caption": "Регулира влажността до желаното ниво — удобно и в дъждовните сезони.",
           "rows": []
         },
         {
           "label": "Нощен режим",
-          "image": "6_4_Sleep_Mode.png",
+          "image": "wave-3-umni-rezhimi-za-maksimalen-4.png",
           "imageAlt": "Нощен режим",
           "caption": "Работи само при 44 dB — колкото тих разговор — за спокойна почивка.",
           "rows": []
         },
         {
           "label": "Известие за вода",
-          "image": "6_5_Water_Drain_Alert.png",
+          "image": "wave-3-umni-rezhimi-za-maksimalen-5.png",
           "imageAlt": "Известие за вода",
           "caption": "Когато резервоарът за вода наближи пълен, приложението ви напомня да го изпразните, за да работи оптимално.",
           "rows": []
@@ -226,28 +226,28 @@
       "tabs": [
         {
           "label": "Соларно (400W)",
-          "image": "7_1_Solar_Charging_400W.png",
+          "image": "wave-3-zarezhdane-1.png",
           "imageAlt": "Соларно (400W)",
           "caption": "Пълен заряд за 3 часа. Порт: XT60 на допълнителната батерия.",
           "rows": []
         },
         {
           "label": "Алтернаторно зарядно EcoFlow (400W/800W)",
-          "image": "7_2_EcoFlow_Alternator_Charger_400W_800W.png",
+          "image": "wave-3-zarezhdane-2.png",
           "imageAlt": "Алтернаторно зарядно EcoFlow (400W/800W)",
           "caption": "Зареждане в движение — за 102 минути сте готови. Порт: и на WAVE 3, и на батерията (не се препоръчва директно към WAVE 3 заради нестабилното захранване).",
           "rows": []
         },
         {
           "label": "От контакт (700W)",
-          "image": "7_3_AC_Charging_700W.png",
+          "image": "wave-3-zarezhdane-3.png",
           "imageAlt": "От контакт (700W)",
           "caption": "Пълен заряд за 2 часа. Порт: XT150 на WAVE 3 и на батерията.",
           "rows": []
         },
         {
           "label": "От гнездото в колата (100W)",
-          "image": "7_4_Car_Power_Outlet_100W.png",
+          "image": "wave-3-zarezhdane-4.png",
           "imageAlt": "От гнездото в колата (100W)",
           "caption": "Аварийно зареждане за 10 часа. Порт: XT60 на батерията.",
           "rows": []
@@ -261,7 +261,7 @@
       "anchorLabel": "Ново",
       "heading": "Вижте какво ново",
       "body": "Сравнение на WAVE 3 с предишния WAVE 2.",
-      "image": "9_1_img.png",
+      "image": "wave-3-novo-1.png",
       "imageAlt": "WAVE 3 срещу WAVE 2"
     },
     {
@@ -275,43 +275,43 @@
             {
               "name": "EcoFlow WAVE 3",
               "qty": 1,
-              "image": "10_1_1_img.png",
+              "image": "wave-3-kakvo-ima-v-kutiyata-1.png",
               "imageAlt": "EcoFlow WAVE 3"
             },
             {
               "name": "Изолиран въздуховод",
               "qty": 1,
-              "image": "10_1_2_img.png",
+              "image": "wave-3-kakvo-ima-v-kutiyata-2.png",
               "imageAlt": "Изолиран въздуховод"
             },
             {
               "name": "Капаци-адаптери за въздуховода (A, B, C)",
               "qty": 1,
-              "image": "10_1_3_img.png",
+              "image": "wave-3-kakvo-ima-v-kutiyata-3.png",
               "imageAlt": "Капаци-адаптери за въздуховода (A, B, C)"
             },
             {
               "name": "Маркуч за оттичане",
               "qty": 1,
-              "image": "10_1_4_img.png",
+              "image": "wave-3-kakvo-ima-v-kutiyata-4.png",
               "imageAlt": "Маркуч за оттичане"
             },
             {
               "name": "Макара за навиване",
               "qty": 1,
-              "image": "10_1_5_img.png",
+              "image": "wave-3-kakvo-ima-v-kutiyata-5.png",
               "imageAlt": "Макара за навиване"
             },
             {
               "name": "Шаблон за размера на отвора",
               "qty": 1,
-              "image": "10_1_6_img.png",
+              "image": "wave-3-kakvo-ima-v-kutiyata-6.png",
               "imageAlt": "Шаблон за размера на отвора"
             },
             {
               "name": "Инструкции за безопасност, кратко ръководство, гаранционна карта",
               "qty": 1,
-              "image": "10_1_7_img_85df9622-a820-4fce-b6ae-c63582396278.png",
+              "image": "wave-3-kakvo-ima-v-kutiyata-7.png",
               "imageAlt": "Инструкции за безопасност, кратко ръководство, гаранционна карта"
             }
           ]
@@ -322,25 +322,25 @@
             {
               "name": "EcoFlow WAVE 3 Add-On Battery",
               "qty": 1,
-              "image": "10_1_8_img.png",
+              "image": "wave-3-s-bateriya-kakvo-ima-v-kutiyata-8.png",
               "imageAlt": "EcoFlow WAVE 3 Add-On Battery"
             },
             {
               "name": "Кабел за допълнителната батерия",
               "qty": 1,
-              "image": "10_1_9_img.png",
+              "image": "wave-3-s-bateriya-kakvo-ima-v-kutiyata-9.png",
               "imageAlt": "Кабел за допълнителната батерия"
             },
             {
               "name": "Кабел за зареждане от кола",
               "qty": 1,
-              "image": "10_1_10_img.png",
+              "image": "wave-3-s-bateriya-kakvo-ima-v-kutiyata-10.png",
               "imageAlt": "Кабел за зареждане от кола"
             },
             {
               "name": "Инструкции за безопасност, кратко ръководство, гаранционна карта",
               "qty": 1,
-              "image": "10_1_11_img.png",
+              "image": "wave-3-s-bateriya-kakvo-ima-v-kutiyata-11.png",
               "imageAlt": "Инструкции за безопасност, кратко ръководство, гаранционна карта"
             }
           ]
@@ -403,7 +403,7 @@
       "anchorLabel": "Съвместимост",
       "heading": "Съвместимост на WAVE 3",
       "body": "С кои батерии и електроцентрали на EcoFlow работи WAVE 3 и през кой порт.",
-      "image": "11_1_img_6dae059a-89ad-435a-9668-3c1098d681d3.png",
+      "image": "wave-3-savmestimost-1.png",
       "imageAlt": "Таблица за съвместимост на WAVE 3"
     },
     {
@@ -412,7 +412,7 @@
       "theme": "light",
       "heading": "Съвместимост на допълнителната батерия WAVE 3",
       "body": "",
-      "image": "12_1_img_c1455214-d313-4702-be63-833cabb1a842.png",
+      "image": "wave-3-savmestimost-na-dopalnitelnata-bateriya-1.png",
       "imageAlt": "Таблица за съвместимост на батерията"
     },
     {
@@ -577,67 +577,180 @@
       ]
     }
   ],
-  "_svali_snimki": {
-    "galeriya": [
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-wave-3-portable-air-conditioner-1161220816.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-wave-3-portable-air-conditioner-1161220828.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-wave-3-portable-air-conditioner-1161220820.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-wave-3-portable-air-conditioner-1161220818.png",
-      "https://eu.ecoflow.com/cdn/shop/files/ecoflow-wave-3-portable-air-conditioner-1161220826.png"
-    ],
-    "sekcii": [
-      "https://eu.ecoflow.com/cdn/shop/files/10_1_10_img.png",
-      "https://eu.ecoflow.com/cdn/shop/files/10_1_11_img.png",
-      "https://eu.ecoflow.com/cdn/shop/files/10_1_1_img.png",
-      "https://eu.ecoflow.com/cdn/shop/files/10_1_2_img.png",
-      "https://eu.ecoflow.com/cdn/shop/files/10_1_3_img.png",
-      "https://eu.ecoflow.com/cdn/shop/files/10_1_4_img.png",
-      "https://eu.ecoflow.com/cdn/shop/files/10_1_5_img.png",
-      "https://eu.ecoflow.com/cdn/shop/files/10_1_6_img.png",
-      "https://eu.ecoflow.com/cdn/shop/files/10_1_7_img_85df9622-a820-4fce-b6ae-c63582396278.png",
-      "https://eu.ecoflow.com/cdn/shop/files/10_1_8_img.png",
-      "https://eu.ecoflow.com/cdn/shop/files/10_1_9_img.png",
-      "https://eu.ecoflow.com/cdn/shop/files/11_1_img_6dae059a-89ad-435a-9668-3c1098d681d3.png",
-      "https://eu.ecoflow.com/cdn/shop/files/12_1_img_c1455214-d313-4702-be63-833cabb1a842.png",
-      "https://eu.ecoflow.com/cdn/shop/files/1_1_f0bca206-32e1-4376-bac2-f1ab2c9bee35.jpg",
-      "https://eu.ecoflow.com/cdn/shop/files/2_1_Car_Camping.png",
-      "https://eu.ecoflow.com/cdn/shop/files/2_2_Tent_Camping.png",
-      "https://eu.ecoflow.com/cdn/shop/files/2_3_Outdoor_Fun_482f689d-51b0-4fea-a8ab-89ab0f6f1a50.png",
-      "https://eu.ecoflow.com/cdn/shop/files/2_4_Outdoor_Fun.png",
-      "https://eu.ecoflow.com/cdn/shop/files/2_5_Indoor_Spaces.png",
-      "https://eu.ecoflow.com/cdn/shop/files/2_6_Semi-Trucks.png",
-      "https://eu.ecoflow.com/cdn/shop/files/2_7_Boating.png",
-      "https://eu.ecoflow.com/cdn/shop/files/3_1_img.png",
-      "https://eu.ecoflow.com/cdn/shop/files/4_1_img.png",
-      "https://eu.ecoflow.com/cdn/shop/files/5_1_img.png",
-      "https://eu.ecoflow.com/cdn/shop/files/6_1_Automatic_Function.png",
-      "https://eu.ecoflow.com/cdn/shop/files/6_2_Pet_Care.png",
-      "https://eu.ecoflow.com/cdn/shop/files/6_3_Dehumidification_Function.png",
-      "https://eu.ecoflow.com/cdn/shop/files/6_4_Sleep_Mode.png",
-      "https://eu.ecoflow.com/cdn/shop/files/6_5_Water_Drain_Alert.png",
-      "https://eu.ecoflow.com/cdn/shop/files/7_1_Solar_Charging_400W.png",
-      "https://eu.ecoflow.com/cdn/shop/files/7_2_EcoFlow_Alternator_Charger_400W_800W.png",
-      "https://eu.ecoflow.com/cdn/shop/files/7_3_AC_Charging_700W.png",
-      "https://eu.ecoflow.com/cdn/shop/files/7_4_Car_Power_Outlet_100W.png",
-      "https://eu.ecoflow.com/cdn/shop/files/9_1_img.png"
-    ]
-  },
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-wave-3-portable-air-conditioner-1161220816.png",
+      "file": "wave-3-s-bateriya-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-wave-3-portable-air-conditioner-1161220828.png",
+      "file": "wave-3-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-wave-3-portable-air-conditioner-1161220820.png",
+      "file": "wave-3-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-wave-3-portable-air-conditioner-1161220818.png",
+      "file": "wave-3-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-wave-3-portable-air-conditioner-1161220826.png",
+      "file": "wave-3-4.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/10_1_10_img.png",
+      "file": "wave-3-s-bateriya-kakvo-ima-v-kutiyata-10.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/10_1_11_img.png",
+      "file": "wave-3-s-bateriya-kakvo-ima-v-kutiyata-11.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/10_1_1_img.png",
+      "file": "wave-3-kakvo-ima-v-kutiyata-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/10_1_2_img.png",
+      "file": "wave-3-kakvo-ima-v-kutiyata-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/10_1_3_img.png",
+      "file": "wave-3-kakvo-ima-v-kutiyata-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/10_1_4_img.png",
+      "file": "wave-3-kakvo-ima-v-kutiyata-4.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/10_1_5_img.png",
+      "file": "wave-3-kakvo-ima-v-kutiyata-5.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/10_1_6_img.png",
+      "file": "wave-3-kakvo-ima-v-kutiyata-6.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/10_1_7_img_85df9622-a820-4fce-b6ae-c63582396278.png",
+      "file": "wave-3-kakvo-ima-v-kutiyata-7.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/10_1_8_img.png",
+      "file": "wave-3-s-bateriya-kakvo-ima-v-kutiyata-8.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/10_1_9_img.png",
+      "file": "wave-3-s-bateriya-kakvo-ima-v-kutiyata-9.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/11_1_img_6dae059a-89ad-435a-9668-3c1098d681d3.png",
+      "file": "wave-3-savmestimost-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/12_1_img_c1455214-d313-4702-be63-833cabb1a842.png",
+      "file": "wave-3-savmestimost-na-dopalnitelnata-bateriya-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/1_1_f0bca206-32e1-4376-bac2-f1ab2c9bee35.jpg",
+      "file": "wave-3-pregled-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/2_1_Car_Camping.png",
+      "file": "wave-3-prilozheniya-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/2_2_Tent_Camping.png",
+      "file": "wave-3-prilozheniya-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/2_3_Outdoor_Fun_482f689d-51b0-4fea-a8ab-89ab0f6f1a50.png",
+      "file": "wave-3-prilozheniya-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/2_4_Outdoor_Fun.png",
+      "file": "wave-3-prilozheniya-4.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/2_5_Indoor_Spaces.png",
+      "file": "wave-3-prilozheniya-5.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/2_6_Semi-Trucks.png",
+      "file": "wave-3-prilozheniya-6.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/2_7_Boating.png",
+      "file": "wave-3-prilozheniya-7.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/3_1_img.png",
+      "file": "wave-3-moshtnost-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/4_1_img.png",
+      "file": "wave-3-bateriya-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/5_1_img.png",
+      "file": "wave-3-prilozhenie-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/6_1_Automatic_Function.png",
+      "file": "wave-3-umni-rezhimi-za-maksimalen-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/6_2_Pet_Care.png",
+      "file": "wave-3-umni-rezhimi-za-maksimalen-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/6_3_Dehumidification_Function.png",
+      "file": "wave-3-umni-rezhimi-za-maksimalen-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/6_4_Sleep_Mode.png",
+      "file": "wave-3-umni-rezhimi-za-maksimalen-4.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/6_5_Water_Drain_Alert.png",
+      "file": "wave-3-umni-rezhimi-za-maksimalen-5.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/7_1_Solar_Charging_400W.png",
+      "file": "wave-3-zarezhdane-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/7_2_EcoFlow_Alternator_Charger_400W_800W.png",
+      "file": "wave-3-zarezhdane-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/7_3_AC_Charging_700W.png",
+      "file": "wave-3-zarezhdane-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/7_4_Car_Power_Outlet_100W.png",
+      "file": "wave-3-zarezhdane-4.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/9_1_img.png",
+      "file": "wave-3-novo-1.png"
+    }
+  ],
   "_prevod_nadpisi": {
-    "1_1_f0bca206-32e1-4376-bac2-f1ab2c9bee35.jpg": {
+    "wave-3-pregled-1.jpg": {
       "15 min to quickly cool¹ or heat² your space": "15 мин за бързо охлаждане¹ или отопление² на пространството",
       "8 hours of wireless comfort with the add-on battery³": "8 часа комфорт без кабел с допълнителната батерия³",
       "Hassle-free installation": "Лесен монтаж",
       "Multiple ways to power up": "Много начини на захранване",
       "Seamless control with the EcoFlow app": "Лесно управление с приложението EcoFlow"
     },
-    "3_1_img.png": {
+    "wave-3-moshtnost-1.png": {
       "6100 BTU cooling power": "6100 BTU мощност на охлаждане",
       "6800 BTU heating power": "6800 BTU мощност на отопление"
     },
-    "4_1_img.png": {
+    "wave-3-bateriya-1.png": {
       "8 Hr": "8 ч"
     },
-    "9_1_img.png": {
+    "wave-3-novo-1.png": {
       "WAVE 3 / WAVE 2": "остават",
       "Cooling Capacity / Heating Capacity / Cooling Area / Battery Chemistry / Battery Cycle Life / Battery Charging Options / Functions / Pet Care / Water Drain Notification": "Мощност на охлаждане / Мощност на отопление / Площ на охлаждане / Химия на батерията / Живот на батерията / Зареждане на батерията / Функции / Грижа за любимци / Известие за вода",
       "4,000 cycles to 80% capacity / 800 cycles to 80% capacity": "4000 цикъла до 80% капацитет / 800 цикъла до 80% капацитет",
@@ -645,7 +758,7 @@
       "Cooling / Heating / Auto / Fan / Dehumidification / Only Cooling / Heating / Fan": "Охлаждане / Отопление / Авто / Вентилатор / Изсушаване / Само охлаждане / отопление / вентилатор",
       "Yes / No": "Да / Не"
     },
-    "11_1_img_6dae059a-89ad-435a-9668-3c1098d681d3.png": {
+    "wave-3-savmestimost-1.png": {
       "Таблица за съвместимост": "Product / Compatibility / EcoFlow WAVE 3 Ports / EcoFlow Connection Accessories → Продукт / Съвместимост / Порт на WAVE 3 / Аксесоар за свързване; „Extra Battery Port (XT150 port)“ → „Порт за допълнителна батерия (XT150)“; „EcoFlow Extra Battery Cable“ → „Кабел EcoFlow за допълнителна батерия“"
     }
   },
