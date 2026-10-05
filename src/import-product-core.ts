@@ -532,7 +532,8 @@ const neededFiles = (content: Content): Set<string> => {
 
 /* ─────────── папки със съдържание ─────────── */
 
-export const CONTENT_ROOT = path.join(process.cwd(), 'content')
+/** `CONTENT_ROOT=<папка>` — за проверка върху копие (напр. разархивиран архив на content/). */
+export const CONTENT_ROOT = process.env.CONTENT_ROOT || path.join(process.cwd(), 'content')
 
 /* ─────────── двете общи папки ─────────── */
 
