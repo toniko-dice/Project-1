@@ -119,11 +119,11 @@ export const PageHeroBlock = ({ block }: { block: BlockOf<'pageHero'> }) => (
         без да закрива сцената отдолу.
       */}
       <div className="absolute inset-x-0 top-0 h-3/5 bg-gradient-to-b from-white/70 via-white/40 to-transparent" />
-      <div className="absolute inset-x-0 top-0 px-4 pt-8 md:pt-14">
+      <div className="absolute inset-x-0 top-0 px-4 pt-8 md:pt-12">
         <div className="mx-auto max-w-[1000px] text-center text-[#222]">
           <h1 className="text-[28px] font-medium leading-[1.2] md:text-[44px] lg:text-[52px]">{block.heading}</h1>
           {block.body ? (
-            <p className="mx-auto mt-3 max-w-[880px] text-sm leading-[1.35] md:text-lg lg:text-xl">{block.body}</p>
+            <p className="mx-auto mt-3 max-w-[880px] text-sm leading-[1.35] md:text-lg">{block.body}</p>
           ) : null}
         </div>
       </div>
