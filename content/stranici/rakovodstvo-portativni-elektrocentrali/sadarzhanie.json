@@ -1,0 +1,396 @@
+{
+  "_bележка": "Съдържание на страница (колекция Pages). Внася се с npm run import:page rakovodstvo-portativni-elektrocentrali. Продуктите са по slug.",
+  "_iztochnik": "https://eu.ecoflow.com/pages/portable-power-stations",
+  "stranica": {
+    "title": "Ръководство: портативни електроцентрали",
+    "slug": "rakovodstvo-portativni-elektrocentrali",
+    "metaTitle": "Как да изберете портативна електроцентрала | EcoFlow",
+    "metaDescription": "Какво е портативна електроцентрала, как работи и коя да изберете: EcoFlow DELTA за дома и RIVER за навън. Сравнение на времето за работа и въпроси.",
+    "metaImage": "rakovodstvo-portativni-elektrocentrali-pregled-1.jpg"
+  },
+  "sekcii": [
+    {
+      "blockType": "pageHero",
+      "heading": "Портативни електроцентрали: как да изберете",
+      "body": "Портативните електроцентрали EcoFlow са генератори на батерия, които захранват техниката ви навсякъде. С различен капацитет, мощност и портове има подходяща за всяка нужда — резервно захранване за дома, къмпинг, пътуване с кемпер, работа с инструменти или авария. Надеждна енергия от EcoFlow, винаги с вас.",
+      "image": "rakovodstvo-portativni-elektrocentrali-pregled-1.jpg",
+      "imageMobile": "rakovodstvo-portativni-elektrocentrali-pregled-2.jpg",
+      "imageAlt": "Портативни електроцентрали EcoFlow на къмпинг сред природата"
+    },
+    {
+      "blockType": "anchorNav",
+      "_bележка": "Лента с котви, лепне под хедъра. Пунктовете идват от anchorLabel на секциите по ред."
+    },
+    {
+      "blockType": "contentSlider",
+      "heading": "Какво е портативна електроцентрала и как работи?",
+      "body": "Портативната електроцентрала е компактна, лесна за ползване акумулаторна система. Тя събира енергия от контакта или от соларни панели и захранва уредите ви навсякъде. Работи безшумно, без изгорели газове и поема всичко — от телефона до големите домакински уреди. Идеална е за резервно захранване на дома, къмпинг, кемпер, аварии, живот извън мрежата или като UPS.",
+      "slides": [
+        {
+          "label": "Как работи",
+          "image": "rakovodstvo-portativni-elektrocentrali-kak-raboti-1.png",
+          "imageMobile": "rakovodstvo-portativni-elektrocentrali-kak-raboti-2.png",
+          "imageAlt": "Как портативната електроцентрала захранва дома със соларни панели"
+        },
+        {
+          "label": "На открито",
+          "image": "rakovodstvo-portativni-elektrocentrali-na-otkrito-1.webp",
+          "imageMobile": "rakovodstvo-portativni-elektrocentrali-na-otkrito-2.webp",
+          "imageAlt": "Пикник сред природата с портативна електроцентрала EcoFlow"
+        },
+        {
+          "label": "Вкъщи",
+          "image": "rakovodstvo-portativni-elektrocentrali-vkashti-1.webp",
+          "imageMobile": "rakovodstvo-portativni-elektrocentrali-vkashti-2.webp",
+          "imageAlt": "Зареждане на таблет от портативна електроцентрала вкъщи"
+        },
+        {
+          "label": "Мобилно и извън мрежата",
+          "image": "rakovodstvo-portativni-elektrocentrali-izvan-mrezhata-1.webp",
+          "imageMobile": "rakovodstvo-portativni-elektrocentrali-izvan-mrezhata-2.webp",
+          "imageAlt": "Портативна електроцентрала край лагерен огън"
+        }
+      ]
+    },
+    {
+      "blockType": "accordionImage",
+      "heading": "Защо да изберете портативна електроцентрала EcoFlow?",
+      "image": "rakovodstvo-portativni-elektrocentrali-zashto-ecoflow-1.webp",
+      "imageMobile": "rakovodstvo-portativni-elektrocentrali-zashto-ecoflow-2.webp",
+      "imageAlt": "Зареждане на устройства от портативна електроцентрала EcoFlow",
+      "items": [
+        {
+          "title": "Мощност без граници: свобода да ползвате каквото искате",
+          "text": "С технологията X-Boost портативните електроцентрали EcoFlow дават мощен изход за променлив ток и захранват 99% от основните уреди — от електрически бойлер до централен климатик. Спокойна енергия и за резервно захранване на дома, и за приключения навън."
+        },
+        {
+          "title": "Много начини за зареждане: според нуждите ви",
+          "text": "Електроцентралите EcoFlow се зареждат по различни начини — от контакт, от соларни панели, от автомобила и дори от смарт генератор. Технологията X-Stream съкращава времето за зареждане до 50%. Без чакане — вкъщи, на път или извън мрежата."
+        },
+        {
+          "title": "Създадени за безопасност: защита, която не спира",
+          "text": "Портативните електроцентрали EcoFlow са с LFP батерии и защита IP65 — за над 10 години ежедневна употреба. Системата за управление на батерията с X-Guard следи 40 показателя за безопасност денонощно, със защита в реално време през приложението. С 5 години гаранция — спокойна енергия за всички ваши приключения."
+        },
+        {
+          "title": "Патенти и отличия: иновации, които говорят сами",
+          "text": "С 1129 патентовани технологии продуктите ни дават изключителна производителност и поставят нови стандарти в индустрията. Иновациите ни са отличени от най-престижните медии в света, сред които Forbes, Bloomberg и The Wall Street Journal."
+        },
+        {
+          "title": "Гаранция: сигурно качество",
+          "text": "Предлагаме пълна и конкурентна гаранция за всички наши устройства, за да пазарувате спокойно."
+        }
+      ]
+    },
+    {
+      "blockType": "splitBanner",
+      "anchorLabel": "Вкъщи",
+      "heading": "Портативни електроцентрали EcoFlow — надеждно резервно захранване за дома",
+      "body": "Портативните електроцентрали EcoFlow DELTA са отлично решение за по-ниска сметка за ток. С капацитет от 1 до 21,5 kWh и до 7200W изход серията DELTA ви дава устойчив и изгоден източник на енергия. Спестявайте и захранвайте мощни уреди като отоплителни уреди и централен климатик, без да се тревожите от растящите цени на тока.",
+      "image": "rakovodstvo-portativni-elektrocentrali-rezervno-zahranvane-1.webp",
+      "imageMobile": "rakovodstvo-portativni-elektrocentrali-rezervno-zahranvane-2.webp",
+      "imageAlt": "Портативна електроцентрала EcoFlow DELTA до леглото по време на спиране на тока",
+      "ctaLabel": "Разгледайте",
+      "ctaLink": "/kategorii/delta-seriya"
+    },
+    {
+      "blockType": "runtimeCompare",
+      "products": [
+        {
+          "product": "delta-3-max-plus",
+          "specLine": "2048Wh | 3000W | 3900W X-Boost"
+        },
+        {
+          "product": "delta-3-plus",
+          "specLine": "1024Wh | 1800W | 2400W X-Boost"
+        },
+        {
+          "product": "delta-pro-3",
+          "specLine": "4kWh | 4000W | 6000W X-Boost"
+        },
+        {
+          "product": "delta-2-max",
+          "specLine": "2–6kWh | 2400W | 3100W X-Boost"
+        }
+      ],
+      "rows": [
+        {
+          "label": "Лампа 10W:",
+          "values": [
+            "7,2 дни",
+            "4 дни",
+            "13,6 дни",
+            "7,3 дни"
+          ]
+        },
+        {
+          "label": "Телефон 11Wh:",
+          "values": [
+            "159 зареждания",
+            "89 зареждания",
+            "297,9 ч",
+            "143 зареждания"
+          ]
+        },
+        {
+          "label": "Хладилна кутия 60W:",
+          "values": [
+            "1,2 дни",
+            "0,6–1,3 дни",
+            "2,2 дни",
+            "1,2–2,4 дни"
+          ]
+        },
+        {
+          "label": "Кафемашина 1000W:",
+          "values": [
+            "1,75 ч",
+            "0,8 ч",
+            "3,3 ч",
+            "1,6 ч"
+          ]
+        },
+        {
+          "label": "Микровълнова 1300W:",
+          "values": [
+            "1,35 ч",
+            "0,6 ч",
+            "2,5 ч",
+            "1,3 ч"
+          ]
+        },
+        {
+          "label": "Wi-Fi рутер 10W:",
+          "values": [
+            "175 ч",
+            "58 ч",
+            "327,7 ч",
+            "60 ч"
+          ]
+        },
+        {
+          "label": "Климатик 1800W:",
+          "values": [
+            "0,97 ч",
+            "0,4 ч",
+            "1,8 ч",
+            "1,6 ч"
+          ]
+        }
+      ]
+    },
+    {
+      "blockType": "imageWithText",
+      "image": "rakovodstvo-portativni-elektrocentrali-delta-3-classic-1.jpg",
+      "imageMobile": "rakovodstvo-portativni-elektrocentrali-delta-3-classic-2.jpg",
+      "imageAlt": "Семейство на къмпинг с EcoFlow DELTA 3 Classic",
+      "heading": "EcoFlow DELTA 3 Classic",
+      "subheading": "Най-изгодната портативна електроцентрала на EcoFlow с 1 kWh",
+      "body": "Умен избор за приключения навън и за работа",
+      "product": "delta-3-classic",
+      "ctaLabel": "Купи сега"
+    },
+    {
+      "blockType": "splitBanner",
+      "anchorLabel": "На открито",
+      "heading": "Портативни електроцентрали EcoFlow — надежден спътник навън",
+      "body": "Създадени за хората, които обичат природата, портативните електроцентрали EcoFlow дават от 300 до 800W изход и от 256 до 858Wh енергия — при тегло едва от 3,5 до 10,8 кг. Захранват всичко нужно на къмпинга — от LED лампи и телефони до хладилни чанти и медицински уреди. Независимо дали пътувате с кемпер, работите от гората или просто почивате извън мрежата — в дъжд и слънце те ви дават чиста енергия, където и да ви отведе пътят.",
+      "image": "rakovodstvo-portativni-elektrocentrali-na-otkrito-3.png",
+      "imageMobile": "rakovodstvo-portativni-elektrocentrali-na-otkrito-4.png",
+      "imageAlt": "Портативна електроцентрала EcoFlow RIVER на къмпинг",
+      "ctaLabel": "Разгледайте",
+      "ctaLink": "/kategorii/river-seriya"
+    },
+    {
+      "blockType": "runtimeCompare",
+      "products": [
+        {
+          "product": "river-3-plus",
+          "specLine": "286Wh | 600W | 1200W X-Boost"
+        },
+        {
+          "product": "river-3-ups",
+          "specLine": "245Wh | 300W | 600W X-Boost"
+        }
+      ],
+      "rows": [
+        {
+          "label": "Лампа 9W:",
+          "values": [
+            "18 ч",
+            "17 ч"
+          ]
+        },
+        {
+          "label": "Телефон 11Wh:",
+          "values": [
+            "18,8 ч",
+            "17,4 ч"
+          ]
+        },
+        {
+          "label": "Wi-Fi рутер 3W:",
+          "values": [
+            "35 ч",
+            "30,8 ч"
+          ]
+        },
+        {
+          "label": "Лаптоп 60Wh:",
+          "values": [
+            "3,9 ч",
+            "3,4 ч"
+          ]
+        },
+        {
+          "label": "Хладилна кутия:",
+          "values": [
+            "3,6 ч",
+            "3,2 ч"
+          ]
+        }
+      ]
+    },
+    {
+      "blockType": "productCarousel",
+      "anchorLabel": "Продукти",
+      "cardStyle": "price",
+      "sectionTitle": "Всички портативни електроцентрали",
+      "fromCategory": "portativni-elektrocentrali",
+      "_bележка": "Всички публикувани продукти от категорията, по реда на категорията. Без ръчен списък."
+    },
+    {
+      "blockType": "faqBlock",
+      "anchorLabel": "Въпроси",
+      "heading": "Често задавани въпроси за портативните електроцентрали EcoFlow",
+      "items": [
+        {
+          "question": "Безопасни ли са портативните електроцентрали?",
+          "answer": "Да, когато се ползват внимателно. Има няколко правила, които намаляват риска. Първото е устройството винаги да е сухо, за да се избегнат токов удар или повреди. Внимавайте и кабелите да не пречат на минаването, за да не се спъне някой. При отговорна употреба портативните електроцентрали са напълно безопасни."
+        },
+        {
+          "question": "Екологични ли са портативните електроцентрали?",
+          "answer": "Да. Портативните електроцентрали се зареждат многократно от различни източници, така че ги ползвате отново и отново. Още по-екологични стават със соларни панели, от които се зареждат със слънчева енергия. Слънцето е напълно възобновяем и чист източник на енергия."
+        },
+        {
+          "question": "Колко време може да работи портативната електроцентрала?",
+          "answer": "Зависи от модела. Различните модели са с различен капацитет на батерията, а от него зависи колко дълго работят до следващото зареждане. Важно е и какви уреди включвате: мощните уреди (например телевизор или хладилник) изтощават батерията по-бързо от телефони и лаптопи."
+        },
+        {
+          "question": "Колко години издържат портативните електроцентрали?",
+          "answer": "Животът на устройството зависи главно от модела и типа батерия. LFP батериите (LiFePO4), каквито има в електроцентралите EcoFlow, издържат около 6500 цикъла, преди капацитетът им да намалее. Колко години ще служи електроцентралата зависи и от това колко често я ползвате и зареждате. От утвърдена марка можете да очаквате много години работа — за преносимо и резервно захранване до 10 и повече години. Това е издръжлива и изгодна инвестиция."
+        },
+        {
+          "question": "Каква е разликата между портативна електроцентрала и генератор?",
+          "answer": "Основната разлика е, че генераторът произвежда енергия, а портативната електроцентрала само я съхранява — тя сама не създава нова енергия. Електроцентралата пази енергията, с която я заредите от соларни панели, контакт, автомобил и други, за да я вземете с вас и ползвате по-късно. При EcoFlow можете да добавите соларни панели към електроцентралата и да я превърнете в соларен генератор, без да купувате отделен генератор."
+        },
+        {
+          "question": "Може ли EcoFlow да се зарежда, докато се ползва?",
+          "answer": "Да, електроцентралите EcoFlow могат да се зареждат, докато захранват уреди. Важно е изходящата мощност да не е по-голяма от входящата — иначе не остава енергия за съхраняване. Например ако зареждате с 1000W, а уредите теглят 1200W, нивото на батерията ще пада, макар формално да „се зарежда“, защото се изпразва по-бързо, отколкото се пълни."
+        },
+        {
+          "question": "Безшумна ли е портативната електроцентрала EcoFlow?",
+          "answer": "Портативните електроцентрали EcoFlow са много тихи, особено в сравнение с генераторите на гориво. Пълна тишина не можем да обещаем, защото това е електрически уред, който изпълнява различни функции — както и лаптопът издава звук. Шумът е минимален и не пречи — средно около 45 децибела, колкото в библиотека или птичи песни."
+        },
+        {
+          "question": "Коя портативна електроцентрала EcoFlow е най-добрата?",
+          "answer": "Най-добрата зависи изцяло от нуждите ви и от това какво искате да захранвате. Електроцентралите EcoFlow са в две серии — RIVER и DELTA, всяка с модели като Max, Pro и др. Серията DELTA Pro е най-мощната, но и най-голямата: идеална за резервно захранване на дома, но по-малко практична за къмпинг от модел от серията RIVER. Помислете защо ви е електроцентрала и колко енергия ви трябва — това ще ви насочи."
+        },
+        {
+          "question": "Каква по размер електроцентрала ми трябва?",
+          "answer": "Електроцентралите са с различни размери за различни нужди — и като габарити, и като капацитет. Ако ще я местите често, изберете по-компактна и лека. Ако ви трябват повече мощност и капацитет за уреди като хладилник и климатик, приемете по-малка преносимост за повече мощност. Най-добре претеглете преносимостта, мощността, капацитета, теглото и размерите."
+        },
+        {
+          "question": "Какви батерии използва EcoFlow?",
+          "answer": "В зависимост от модела портативните електроцентрали EcoFlow са с литиево-йонни (Li-Ion), NCM или литиево-желязо-фосфатни батерии (LiFePO4/LFP). Литиево-йонните и NCM батериите са надеждни, но LiFePO4 са най-издръжливи: мощни, бързо се зареждат и живеят 4–5 пъти по-дълго от литиево-йонните. LFP батериите са и по-екологични и по-безопасни, защото са без кобалт. Издържат до 6500 цикъла и позволяват 100% дълбочина на разреждане, като пазят от прекомерно разреждане."
+        }
+      ]
+    },
+    {
+      "blockType": "legalText",
+      "text": "Наименованията „DELTA“ и „RIVER“ на тази страница се отнасят за продукти, произвеждани изключително от ECOFLOW INC."
+    }
+  ],
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/07_KV_PC.jpg",
+      "file": "rakovodstvo-portativni-elektrocentrali-pregled-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/07_KV_M.jpg",
+      "file": "rakovodstvo-portativni-elektrocentrali-pregled-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Frame_161269079_0ceb9271-05f1-49e7-91b9-043ab9fcbd7a.png",
+      "file": "rakovodstvo-portativni-elektrocentrali-kak-raboti-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Frame_128720240_e100bb11-2636-4476-ac0e-4f7f2ae90231.png",
+      "file": "rakovodstvo-portativni-elektrocentrali-kak-raboti-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/01_PC_EU_UK.webp",
+      "file": "rakovodstvo-portativni-elektrocentrali-na-otkrito-1.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/01_M_EU_UK.webp",
+      "file": "rakovodstvo-portativni-elektrocentrali-na-otkrito-2.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/02_PC_UK.webp",
+      "file": "rakovodstvo-portativni-elektrocentrali-vkashti-1.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/02_M_UK.webp",
+      "file": "rakovodstvo-portativni-elektrocentrali-vkashti-2.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/03_PC_EU_UK.webp",
+      "file": "rakovodstvo-portativni-elektrocentrali-izvan-mrezhata-1.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/03_M_EU_UK.webp",
+      "file": "rakovodstvo-portativni-elektrocentrali-izvan-mrezhata-2.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/04_PC_EU_UK.webp",
+      "file": "rakovodstvo-portativni-elektrocentrali-zashto-ecoflow-1.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/04_M_EU_UK.webp",
+      "file": "rakovodstvo-portativni-elektrocentrali-zashto-ecoflow-2.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/05_PC_UK.webp",
+      "file": "rakovodstvo-portativni-elektrocentrali-rezervno-zahranvane-1.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/05_M_UK.webp",
+      "file": "rakovodstvo-portativni-elektrocentrali-rezervno-zahranvane-2.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/delta-3-classic-portable-power-station-eu-pc.jpg",
+      "file": "rakovodstvo-portativni-elektrocentrali-delta-3-classic-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/delta-3-classic-portable-power-station-eu-m.jpg",
+      "file": "rakovodstvo-portativni-elektrocentrali-delta-3-classic-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/EU_bbeff9b3-57d3-4dd7-bdfd-991ee13a6195.png",
+      "file": "rakovodstvo-portativni-elektrocentrali-na-otkrito-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/EU-M_99f468d9-c4c5-4372-b01b-fb8686766fb1.png",
+      "file": "rakovodstvo-portativni-elektrocentrali-na-otkrito-4.png"
+    }
+  ],
+  "_neyasni": [
+    "Страницата е по eu.ecoflow.com/pages/portable-power-stations (снето на 06.10.2026). Пропуснати по решение на собственика: „Hear From Our Users“ (отзиви), „Buyer's Guides“ (блог), продукти, които не продаваме (DELTA 2, DELTA Pro 1-во пок., RIVER 2 Pro/Max, TRAIL, рефърбишд, соларни генератори), и въпросът за Octopus Energy (програма само за Великобритания).",
+    "Таблиците с времената на работа са 1:1 от EcoFlow. Някои стойности изглеждат странно, но са така в оригинала: DELTA Pro 3 — „Телефон 11Wh: 297,9 ч“ (останалите са в зареждания); RIVER 3 Plus/UPS — „Телефон 11Wh“ в часове. Ако EcoFlow ги поправи — да се обновят.",
+    "В таблицата „На открито“ са само RIVER 3 Plus и RIVER 3 (UPS) — RIVER 2 Pro и RIVER 2 Max не се продават у нас.",
+    "Теглото в текста „На открито“ е превърнато от 7,7–23,8 lb в 3,5–10,8 кг.",
+    "Снимката „Вкъщи“ (02_PC_UK) е с британски контакти — така е и в EU сайта. Ако искате, може да се смени с друга.",
+    "В снимките няма вградени надписи — няма нищо за превод.",
+    "Цените, „Купи сега“ и „Научете повече“ идват от продуктите в сайта (dice.bg и страницата на продукта), не са записани тук."
+  ]
+}
