@@ -1,0 +1,669 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:product delta-2-max. Снимките се свалят по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "eu.ecoflow.com/products/delta-2-max-portable-power-station (снето на 06.10.2026); цена, наличност, EAN и код — dice.bg.",
+  "produkt": {
+    "title": "EcoFlow DELTA 2 Max",
+    "slug": "delta-2-max",
+    "categorySlug": "delta-seriya",
+    "productType": "hero",
+    "tagline": "2048Wh капацитет / 2400W изход",
+    "badge": "none",
+    "price": 1226.59,
+    "compareAtPrice": 1431.11,
+    "externalUrl": "https://dice.bg/portativna-profesionalna-elektrocentrala-za-zarezhdane-na-ustrojstva-ecoflow-delta-max-2-portable-power-station-2048wh-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "on-request",
+    "brand": "EcoFlow",
+    "sku": "62320",
+    "ean": "4895251604772",
+    "description": "Портативна електроцентрала с 2048Wh LFP батерия и 2400W изход (3100W с X-Boost). Разширява се до 6 kWh, зарежда се до 80% за 43 минути и приема до 1000W от соларни панели. 3000 цикъла и 5 години гаранция.",
+    "highlights": [
+      {
+        "title": "2400W изход, 3100W с X-Boost",
+        "text": "Четири контакта, два USB-C по 100W, четири USB-A, изход за запалка и два DC5521."
+      },
+      {
+        "title": "От 2 до 6 kWh",
+        "text": "С до две допълнителни батерии капацитетът стига 6144Wh."
+      },
+      {
+        "title": "Бързо зареждане",
+        "text": "До 80% за 43 минути от контакт и слънце, до 1000W соларен вход през два входа с MPPT."
+      },
+      {
+        "title": "LFP за 10 години",
+        "text": "3000 цикъла до 80% капацитет, усъвършенстван BMS и 5 години гаранция."
+      }
+    ],
+    "metaTitle": "EcoFlow DELTA 2 Max — 2048Wh, 2400W, до 6 kWh",
+    "metaDescription": "EcoFlow DELTA 2 Max: 2048Wh LFP, 2400W изход и 3100W с X-Boost, разширяване до 6 kWh, 1000W соларен вход. 3000 цикъла, 5 години гаранция."
+  },
+  "galeriya": [
+    {
+      "file": "delta-2-max-1.png",
+      "alt": "EcoFlow DELTA 2 Max — изглед отпред"
+    },
+    {
+      "file": "delta-2-max-2.png",
+      "alt": "EcoFlow DELTA 2 Max — изглед отзад, контакти"
+    },
+    {
+      "file": "delta-2-max-3.png",
+      "alt": "EcoFlow DELTA 2 Max — изглед отстрани"
+    },
+    {
+      "file": "delta-2-max-4.png",
+      "alt": "EcoFlow DELTA 2 Max — изглед отстрани с логото"
+    },
+    {
+      "file": "delta-2-max-5.png",
+      "alt": "EcoFlow DELTA 2 Max — с допълнителна батерия"
+    },
+    {
+      "file": "delta-2-max-6.png",
+      "alt": "EcoFlow DELTA 2 Max — със соларен панел"
+    },
+    {
+      "file": "delta-2-max-7.webp",
+      "alt": "EcoFlow DELTA 2 Max — с допълнителна батерия"
+    },
+    {
+      "file": "delta-2-max-8.png",
+      "alt": "EcoFlow DELTA 2 Max — на терасата"
+    },
+    {
+      "file": "delta-2-max-9.png",
+      "alt": "EcoFlow DELTA 2 Max — резервно захранване за дома"
+    },
+    {
+      "file": "delta-2-max-10.png",
+      "alt": "EcoFlow DELTA 2 Max — захранва хладилника"
+    },
+    {
+      "file": "delta-2-max-11.png",
+      "alt": "EcoFlow DELTA 2 Max — в хола"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Мощност за дома и за пътя",
+      "body": "DELTA 2 Max събира 2048Wh в LFP батерия, дава 2400W от четири контакта и с X-Boost захранва уреди до 3100W. Разширява се до 6 kWh, зарежда се до 80% за 43 минути [3] и приема до 1000W от слънцето.",
+      "image": "delta-2-max-pregled-1.png",
+      "imageAlt": "Серията EcoFlow DELTA 2 — DELTA 2 и DELTA 2 Max"
+    },
+    {
+      "blockType": "keySpecStrip",
+      "items": [
+        {
+          "value": "2048Wh",
+          "label": "капацитет"
+        },
+        {
+          "value": "2400W",
+          "label": "изход, 4800W пик"
+        },
+        {
+          "value": "3100W",
+          "label": "с X-Boost"
+        },
+        {
+          "value": "до 6 kWh",
+          "label": "с две допълнителни батерии"
+        },
+        {
+          "value": "1000W",
+          "label": "соларен вход"
+        },
+        {
+          "value": "43 мин",
+          "label": "до 80% (контакт + слънце) [3]"
+        },
+        {
+          "value": "3000",
+          "label": "цикъла до 80% капацитет"
+        },
+        {
+          "value": "30 dB",
+          "label": "тиха работа [5]"
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "10 години ежедневна употреба",
+      "body": "LFP батерията издържа 3000 цикъла, преди капацитетът ѝ да падне до 80%. Това са около 10 години, ако я зареждате и разреждате всеки ден. [1]",
+      "image": "delta-2-max-10-godini-ezhednevna-upotreba-1.png",
+      "imageAlt": "DELTA 2 Max — 10 години живот на батерията, 3000 цикъла"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "LFP химия — до 6 пъти по-дълъг живот",
+      "body": "Литиево-желязо-фосфатните (LFP) клетки издържат до 6 пъти повече цикли от обикновените литиево-йонни батерии.",
+      "image": "delta-2-max-lfp-himiya-do-6-1.png",
+      "imageAlt": "LFP батерия на DELTA 2 Max"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Усъвършенстван BMS",
+      "body": "Системата за управление на батерията следи напрежението, тока и температурата и автоматично я пази от презареждане, прегряване и късо съединение.",
+      "image": "delta-2-max-usavarshenstvan-bms-1.png",
+      "imageAlt": "Система за управление на батерията (BMS) на DELTA 2 Max"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "layout": "tabs-top",
+      "heading": "Защита на няколко нива",
+      "tabs": [
+        {
+          "label": "LFP клетки",
+          "image": "delta-2-max-zashtita-na-nyakolko-niva-1.png",
+          "imageAlt": "LFP клетките на DELTA 2 Max",
+          "caption": "LFP клетките са първият слой защита — стабилна химия за хиляди цикли.",
+          "rows": []
+        },
+        {
+          "label": "Неплъзгаща се основа",
+          "image": "delta-2-max-zashtita-na-nyakolko-niva-2.png",
+          "imageAlt": "Гумена неплъзгаща се основа на DELTA 2 Max",
+          "caption": "Гумената основа държи станцията стабилна на място.",
+          "rows": []
+        },
+        {
+          "label": "Здрав корпус",
+          "image": "delta-2-max-zashtita-na-nyakolko-niva-3.png",
+          "imageAlt": "Монолитният корпус на DELTA 2 Max",
+          "caption": "Монолитна конструкция с огнеупорен корпус (UL94-5VA) и подсилени портове.",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "С 30% по-лек",
+      "body": "По-новата технология прави DELTA 2 Max с около 30% по-лек от подобни станции с LFP батерия от 2 kWh. [2]",
+      "image": "delta-2-max-s-30-po-lek-1.png",
+      "imageAlt": "DELTA 2 Max — по-лека конструкция"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Мощност",
+      "heading": "Захранва 99% от уредите",
+      "body": "2400W постоянна мощност и 4800W пик. С X-Boost DELTA 2 Max пуска и уреди с мощност до 3100W.",
+      "image": "delta-2-max-moshtnost-1.png",
+      "imageAlt": "DELTA 2 Max захранва уредите в дома"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Приложения",
+      "layout": "tabs-top",
+      "heading": "2048Wh за всяка ситуация",
+      "tabs": [
+        {
+          "label": "Вкъщи",
+          "image": "delta-2-max-prilozheniya-1.png",
+          "imageAlt": "DELTA 2 Max като резервно захранване за дома",
+          "caption": "Хладилник* — 14 ч, Wi-Fi рутер — 97 ч, телевизор — 15 ч, микровълнова — 1,3 ч, блендер — 3,3 ч, пералня — 3,3 ч.",
+          "rows": []
+        },
+        {
+          "label": "Кемпер и природа",
+          "image": "delta-2-max-prilozheniya-2.png",
+          "imageAlt": "DELTA 2 Max на къмпинг",
+          "caption": "Хладилна кутия — 29 ч, сешоар — 1 ч, кафемашина — 1,6 ч, електрически грил — 1,4 ч, проектор — 25 ч, телефон — 143 зареждания.",
+          "rows": []
+        },
+        {
+          "label": "Майсторене",
+          "image": "delta-2-max-prilozheniya-3.png",
+          "imageAlt": "DELTA 2 Max захранва електрически инструменти",
+          "caption": "Циркуляр — 1,2 ч, перфоратор — 1,3 ч, машина за рязане — 1,5 ч, заваръчен апарат — 54 мин.",
+          "rows": []
+        },
+        {
+          "label": "Снимки и видео",
+          "image": "delta-2-max-prilozheniya-4.png",
+          "imageAlt": "DELTA 2 Max на снимачна площадка",
+          "caption": "Фотоапарат — 99 зареждания, лаптоп — 26 зареждания, дрон — 39 зареждания, тонколона — 97 ч.",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Разширяване",
+      "heading": "Разширяване до 6 kWh",
+      "body": "Добавете до две допълнителни батерии — DELTA 2 Max Smart Extra Battery или DELTA Max Smart Extra Battery — и капацитетът стига до 6144Wh.",
+      "image": "delta-2-max-razshiryavane-1.png",
+      "imageAlt": "DELTA 2 Max с две допълнителни батерии — 6144Wh"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Зареждане",
+      "heading": "До 80% за 43 минути",
+      "body": "С контакт и соларни панели едновременно DELTA 2 Max стига 80% за 43 минути. [3] Само от контакта — до 80% за 53 минути, с технологията X-Stream.",
+      "image": "delta-2-max-zarezhdane-1.png",
+      "imageAlt": "DELTA 2 Max се зарежда от контакт и соларни панели"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Два соларни входа, до 1000W",
+      "subheading": "Пълен заряд от слънцето за 2,3 часа",
+      "subheadingPosition": "below",
+      "body": "Два независими соларни входа, всеки със свой MPPT контролер, приемат общо до 1000W. Пълен заряд от слънцето за около 2,3 часа — например с два панела по 400W или четири двулицеви панела по 220W. [4]",
+      "image": "delta-2-max-dva-solarni-vhoda-do-1.png",
+      "imageAlt": "DELTA 2 Max с два соларни панела"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Управление от приложението",
+      "body": "В приложението EcoFlow задавате кога да се зарежда станцията — например в часовете с по-евтин ток. Включвате режима „AC винаги включен“, променяте мощността на зареждане от контакта и от слънцето и получавате известие, когато батерията е изтощена.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "5 години гаранция",
+      "body": "DELTA 2 Max идва с 5 години гаранция.",
+      "image": "delta-2-max-5-godini-garanciya-1.png",
+      "imageAlt": "5 години гаранция на DELTA 2 Max"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Тиха работа — 30 dB",
+      "body": "При слабо натоварване DELTA 2 Max работи с около 30 dB. Подобни станции са около 55 dB. [5]",
+      "image": "delta-2-max-tiha-rabota-30-db-1.png",
+      "imageAlt": "DELTA 2 Max работи тихо"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow DELTA 2 Max",
+          "qty": 1,
+          "image": "delta-2-max-kakvo-ima-v-kutiyata-1.png",
+          "imageAlt": "EcoFlow DELTA 2 Max"
+        },
+        {
+          "name": "Захранващ кабел за контакт",
+          "qty": 1,
+          "image": "delta-2-max-kakvo-ima-v-kutiyata-2.jpg",
+          "imageAlt": "Захранващ кабел за контакт"
+        },
+        {
+          "name": "Ръководство и гаранционна карта",
+          "qty": 1,
+          "image": "delta-2-max-kakvo-ima-v-kutiyata-3.png",
+          "imageAlt": "Ръководство и гаранционна карта"
+        }
+      ]
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "footnotes",
+      "items": [
+        {
+          "text": "3000 цикъла до над 80% от първоначалния капацитет. 10 години са оценка при един цикъл на ден, по данни на EcoFlow."
+        },
+        {
+          "text": "В сравнение с подобни портативни станции с LFP батерия от 2 kWh на пазара."
+        },
+        {
+          "text": "При зареждане едновременно от контакт (1800W) и соларни панели (до 600W), общо 2400W."
+        },
+        {
+          "text": "При 1000W соларен вход — около 2,3 ч; при 880W — около 2,6 ч; при 800W — около 2,8 ч. Реалното време зависи от слънцето, температурата и ъгъла на панелите."
+        },
+        {
+          "text": "Измерено на около 50 см, при слабо зареждане и изход 500W. Подобните станции са около 55 dB."
+        },
+        {
+          "text": "* Времената за работа са изчислени от EcoFlow за хладилник 120W и са приблизителни. Реалните резултати зависят от уреда и условията."
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Общи",
+      "rows": [
+        {
+          "label": "Капацитет",
+          "value": "2048 Wh"
+        },
+        {
+          "label": "Тип батерия",
+          "value": "LFP (литиево-желязо-фосфатна)"
+        },
+        {
+          "label": "Живот",
+          "value": "3000 цикъла до над 80% капацитет"
+        },
+        {
+          "label": "Размери",
+          "value": "497 × 242 × 305 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "около 23 кг"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Изход променлив ток",
+      "rows": [
+        {
+          "label": "Брой контакти",
+          "value": "4"
+        },
+        {
+          "label": "Максимална мощност",
+          "value": "2400W"
+        },
+        {
+          "label": "Пикова мощност",
+          "value": "4800W"
+        },
+        {
+          "label": "Мощност с X-Boost",
+          "value": "3100W"
+        }
+      ]
+    },
+    {
+      "groupLabel": "USB изходи",
+      "rows": [
+        {
+          "label": "USB-A",
+          "value": "2 порта, 5V 2,4A, до 12W на порт"
+        },
+        {
+          "label": "USB-A бързо зареждане",
+          "value": "2 порта, 5V 2,4A / 9V 2A / 12V 1,5A, до 18W"
+        },
+        {
+          "label": "USB-C",
+          "value": "2 порта, 5/9/12/15/20V 5A, до 100W на порт"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Изход постоянен ток",
+      "rows": [
+        {
+          "label": "Изход за запалка",
+          "value": "1 порт, 12,6V 10A, до 126W"
+        },
+        {
+          "label": "DC5521",
+          "value": "2 порта, 12,6V 3A, до 38W на порт"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Зареждане",
+      "rows": [
+        {
+          "label": "От контакт",
+          "value": "X-Stream, до 2300W, 10A"
+        },
+        {
+          "label": "От соларни панели",
+          "value": "2 входа, 11–60V 15A, до 500W на вход, общо до 1000W"
+        },
+        {
+          "label": "От автомобил",
+          "value": "12V / 24V, 8A"
+        },
+        {
+          "label": "До 80%",
+          "value": "43 мин (контакт + слънце), 53 мин (само контакт)"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Допълнителна батерия",
+      "rows": [
+        {
+          "label": "Разширяване",
+          "value": "до две DELTA 2 Max Smart Extra Battery или DELTA Max Smart Extra Battery"
+        },
+        {
+          "label": "Максимален капацитет",
+          "value": "6144 Wh"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Свързаност",
+      "rows": [
+        {
+          "label": "Wi-Fi",
+          "value": "да"
+        },
+        {
+          "label": "Bluetooth",
+          "value": "да"
+        },
+        {
+          "label": "Приложение",
+          "value": "EcoFlow"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Гаранция",
+      "rows": [
+        {
+          "label": "Гаранция",
+          "value": "5 години"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-2-max-portable-power-station-51305159590231.png",
+      "file": "delta-2-max-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-2-max-portable-power-station-50850209399127.png",
+      "file": "delta-2-max-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-2-max-portable-power-station-50850209497431.png",
+      "file": "delta-2-max-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-2-max-portable-power-station-50850209366359.png",
+      "file": "delta-2-max-4.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-2-max-portable-power-station-51119135916375.png",
+      "file": "delta-2-max-5.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-2-max-portable-power-station-1197065413.png",
+      "file": "delta-2-max-6.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-2-max-portable-power-station-1259401009.webp",
+      "file": "delta-2-max-7.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-2-max-portable-power-station-50913123434839.png",
+      "file": "delta-2-max-8.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-2-max-portable-power-station-54962508661079.png",
+      "file": "delta-2-max-9.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-2-max-portable-power-station-50913123402071.png",
+      "file": "delta-2-max-10.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-delta-2-max-portable-power-station-50913123369303.png",
+      "file": "delta-2-max-11.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/18-Delta_2_series_pc.png",
+      "file": "delta-2-max-pregled-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/10-year-PC.png",
+      "file": "delta-2-max-10-godini-ezhednevna-upotreba-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC-LFP_Battery_Chemistry_9ffb1689-69ff-4b1c-a3de-dfcd6e64afda.png",
+      "file": "delta-2-max-lfp-himiya-do-6-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC-Advanced_BMS_Protection_93d34e44-d711-4a07-85eb-ea5f7f5da7c5.png",
+      "file": "delta-2-max-usavarshenstvan-bms-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC-With_LFP_cells_209807d7-bb00-4e40-93d4-3edc863bf038.png",
+      "file": "delta-2-max-zashtita-na-nyakolko-niva-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC-A_rubber_anti-slip_base_226f3882-e4f0-4110-81d9-9653c6b6c840.png",
+      "file": "delta-2-max-zashtita-na-nyakolko-niva-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC-Robust_Design_5ba9ab75-a055-4fc1-9303-aab02e88cbff.png",
+      "file": "delta-2-max-zashtita-na-nyakolko-niva-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC-Upgraded_Tech_Lighter_Weight_e7f20d07-a4a8-4c56-a837-89f4c4842ec2.png",
+      "file": "delta-2-max-s-30-po-lek-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC-Run_99_of_Appliances_with_X-Boost._c337069e-0f80-40fb-8b0a-79cc91307771.png",
+      "file": "delta-2-max-moshtnost-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Web-11-1-Home_Backup-EN.png",
+      "file": "delta-2-max-prilozheniya-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_-_11-2-RVing_Outdoors-EN.png",
+      "file": "delta-2-max-prilozheniya-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_-_11-3-DIY_Projects-EN.png",
+      "file": "delta-2-max-prilozheniya-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_-_11-4-Filmmaking_Photography-EN.png",
+      "file": "delta-2-max-prilozheniya-4.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC-Expandable_up_to_6kWh_7ed0df06-9357-4b30-9790-f62e75162e70.png",
+      "file": "delta-2-max-razshiryavane-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC-Mask_group_153b1e27-65b4-43da-9fc4-75e51feb23ff.png",
+      "file": "delta-2-max-zarezhdane-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_-_14-99_MPPT_Efficiency.png",
+      "file": "delta-2-max-dva-solarni-vhoda-do-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_-_16-5-Year_Warranty.png",
+      "file": "delta-2-max-5-godini-garanciya-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC-As_Quiet_as_30_dB_f711defc-9ee8-4945-9cbc-6fc2a968d7d8.png",
+      "file": "delta-2-max-tiha-rabota-30-db-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_-_19-1-DELTA_2_Max.png",
+      "file": "delta-2-max-kakvo-ima-v-kutiyata-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/AC_charging_cable.jpg",
+      "file": "delta-2-max-kakvo-ima-v-kutiyata-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/PC_-_19-5-User_manual_warranty_card.png",
+      "file": "delta-2-max-kakvo-ima-v-kutiyata-3.png"
+    }
+  ],
+  "_prevod_nadpisi": {
+    "delta-2-max-10-godini-ezhednevna-upotreba-1.png": {
+      "10 YEARS": "10 ГОДИНИ",
+      "3000 cycles": "3000 цикъла"
+    },
+    "delta-2-max-prilozheniya-1.png": {
+      "Refrigerator 14 Hr": "Хладилник 14 ч",
+      "WiFi Router 97 Hr": "Wi-Fi рутер 97 ч",
+      "TV 15 Hr": "Телевизор 15 ч",
+      "Microwave 1.3 Hr": "Микровълнова 1,3 ч",
+      "Blender 3.3 Hr": "Блендер 3,3 ч",
+      "Washing machine 3.3 Hr": "Пералня 3,3 ч"
+    },
+    "delta-2-max-prilozheniya-2.png": {
+      "Portable Fridge 29 Hr": "Хладилна кутия 29 ч",
+      "Hair Dryer 1 Hr": "Сешоар 1 ч",
+      "Coffee Maker 1.6 Hr": "Кафемашина 1,6 ч",
+      "Electric grill 1.4 Hr": "Електрически грил 1,4 ч",
+      "Projector 25 Hr": "Проектор 25 ч",
+      "Phone 143 Times": "Телефон 143 пъти"
+    },
+    "delta-2-max-prilozheniya-3.png": {
+      "Circular Saw 1.2 Hr": "Циркуляр 1,2 ч",
+      "Electric Hammer 1.3 Hr": "Перфоратор 1,3 ч",
+      "Cutting Machine 1.5 Hr": "Машина за рязане 1,5 ч",
+      "Welding Machine 54 Min": "Заваръчен апарат 54 мин"
+    },
+    "delta-2-max-prilozheniya-4.png": {
+      "Camera 99 Times": "Фотоапарат 99 пъти",
+      "Laptop 26 Times": "Лаптоп 26 пъти",
+      "Drone 39 Times": "Дрон 39 пъти",
+      "Speaker 97 Hr": "Тонколона 97 ч"
+    }
+  },
+  "_neyasni": [
+    "Цена, стара цена и наличност („по заявка“) от dice.bg, проверени на 06.10.2026. EAN 4895251604772 от dice.bg (контролната цифра е вярна).",
+    "Слъгът delta-2-max е на досегашния скрит продукт-заместител — НЕ се сменя. Продуктът да се ПУБЛИКУВА след вноса, а снимката-заместител да се махне.",
+    "Галерия: пропуснати са снимките от EU, на които има други продукти, които не са в кутията (твърд соларен панел, микроинвертор STREAM, Smart Generator) и двата почти еднакви изгледа отпред.",
+    "Секцията с приложението при EcoFlow е с видео — тук е само текст, без снимка.",
+    "Снимката „PC-_9-icon-EN.png“ (иконки с английски текст) не е взета — същото е в лентата с основните числа.",
+    "В спецификациите на EU редът „AC Input Voltage“ е грешно копиран от друг ред — пропуснат.",
+    "DELTA 2 Max Smart Extra Battery (dice.bg, код 62321) още не е в сайта — ако се добави, да се върже в секцията „Разширяване до 6 kWh“.",
+    "Снимки с английски надписи за превод: виж prevod-nadpisi.md (5 снимки)."
+  ]
+}
