@@ -69,10 +69,11 @@ export const generateMetadata = async (): Promise<Metadata> => {
 }
 
 export default async function HomePage() {
-  const [page, settings, footer] = await Promise.all([
+  const [page, settings, footer, header] = await Promise.all([
     getPage('home'),
     getGlobal('site-settings'),
     getGlobal('footer'),
+    getGlobal('header'),
   ])
 
   // Празна база — показваме къде да се въведе съдържанието, вместо бяла страница.
@@ -104,7 +105,7 @@ export default async function HomePage() {
     <div className="bg-canvas">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(схемаНаСайта(settings, footer)) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(схемаНаСайта(settings, footer, header.logo)) }}
       />
       <RenderBlocks
         layout={page.layout}
@@ -129,9 +130,11 @@ export default async function HomePage() {
 const схемаНаСайта = (
   settings: Awaited<ReturnType<typeof getGlobal<'site-settings'>>>,
   footer: Awaited<ReturnType<typeof getGlobal<'footer'>>>,
+  /** Логото от „Меню (хедър)" — там е качено; „Общи настройки" е резерва. */
+  headerLogo: Parameters<typeof mediaUrl>[0],
 ) => {
   const url = absoluteUrl('/')
-  const logo = mediaUrl(settings.logo)
+  const logo = mediaUrl(settings.logo) ?? mediaUrl(headerLogo)
   const sameAs = (footer.social ?? []).map((s) => s.url).filter(истинскиПрофил)
   const contactPoint =
     settings.phone || settings.email
