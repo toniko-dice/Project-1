@@ -102,17 +102,28 @@ export const CategoryStripBlock = async () => {
 export const ProductCarouselBlock = async ({
   block,
   showBgn,
+  guide = false,
 }: {
   block: BlockOf<'productCarousel'>
   showBgn: boolean
+  /** На страница-ръководство: ширината (1200 px) и заглавието (H2 в центъра) на ръководството. */
+  guide?: boolean
 }) => {
   // Ръчният списък или всички от „Продукти от категория" — виж `carouselProducts`.
   const products = await carouselProducts(block)
   if (!products.length) return null
 
   return (
-    <PageSection>
-      <SectionHeading>{block.sectionTitle}</SectionHeading>
+    <PageSection className={guide ? '!max-w-[1264px]' : ''}>
+      {guide ? (
+        block.sectionTitle ? (
+          <h2 className="mb-8 text-center text-[28px] font-bold leading-[1.3] text-black md:mb-10 md:text-[40px]">
+            {block.sectionTitle}
+          </h2>
+        ) : null
+      ) : (
+        <SectionHeading>{block.sectionTitle}</SectionHeading>
+      )}
       {block.subtitle ? (
         <p className="-mt-4 mb-6 text-sm text-ink-muted">{block.subtitle}</p>
       ) : null}

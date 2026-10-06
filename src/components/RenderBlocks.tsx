@@ -54,6 +54,9 @@ export const RenderBlocks = ({
     секции, по реда им. Идентификаторът е от надписа (`uniqueAnchor`, както
     на продуктовата страница), за да е четим адресът: `#vkashti`.
   */
+  /* Страница-ръководство (със „Заглавна снимка (H1)") — каруселът взима нейния стил. */
+  const guide = layout.some((b) => b.blockType === 'pageHero' && !b.hidden)
+
   const used = new Set<string>()
   const anchorIds = layout.map((b) => {
     const label = 'anchorLabel' in b ? b.anchorLabel?.trim() : ''
@@ -72,7 +75,7 @@ export const RenderBlocks = ({
             ? block.hidden
               ? null
               : <ProductAnchorNav key={key} anchors={anchors} />
-            : рендер(block, key, showBgn, i)
+            : рендер(block, key, showBgn, i, guide)
         /* Котвата е обвивка — блоковете не знаят за нея; `scroll-mt` е под залепената лента. */
         const секция = anchorIds[i] ? (
           <div key={key} id={anchorIds[i]!} className="scroll-mt-14">
@@ -96,7 +99,13 @@ export const RenderBlocks = ({
 }
 
 /** Една секция към своя компонент; скритата — нищо. */
-const рендер = (block: NonNullable<Page['layout']>[number], key: string, showBgn: boolean, index: number) => {
+const рендер = (
+  block: NonNullable<Page['layout']>[number],
+  key: string,
+  showBgn: boolean,
+  index: number,
+  guide: boolean,
+) => {
   /*
     Скритата секция остава в базата и в админа, но не се рендерира.
     Проверката е тук, а не във всеки блок — иначе при всеки нов блок
@@ -113,7 +122,7 @@ const рендер = (block: NonNullable<Page['layout']>[number], key: string, s
     case 'bannerCarousel':
       return <BannerCarouselBlock key={key} block={block} />
     case 'productCarousel':
-      return <ProductCarouselBlock key={key} block={block} showBgn={showBgn} />
+      return <ProductCarouselBlock key={key} block={block} showBgn={showBgn} guide={guide} />
     case 'bannerProductRow':
       return <BannerProductRowBlock key={key} block={block} showBgn={showBgn} />
     case 'promoCards':

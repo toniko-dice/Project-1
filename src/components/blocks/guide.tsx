@@ -113,11 +113,17 @@ export const PageHeroBlock = ({ block }: { block: BlockOf<'pageHero'> }) => (
         priority
         className="absolute inset-0 size-full object-cover"
       />
-      <div className="absolute inset-x-0 top-0 px-4 pt-8 md:pt-[76px]">
-        <div className="mx-auto max-w-[792px] text-center text-[#222]">
-          <h1 className="text-[28px] font-medium leading-[1.2] md:text-[56px]">{block.heading}</h1>
+      {/*
+        Лек бял воал отгоре: заглавието тук е по-дълго от това на оригинала
+        и текстът стига до продуктите на снимката. Воалът пази четимостта,
+        без да закрива сцената отдолу.
+      */}
+      <div className="absolute inset-x-0 top-0 h-3/5 bg-gradient-to-b from-white/70 via-white/40 to-transparent" />
+      <div className="absolute inset-x-0 top-0 px-4 pt-8 md:pt-14">
+        <div className="mx-auto max-w-[1000px] text-center text-[#222]">
+          <h1 className="text-[28px] font-medium leading-[1.2] md:text-[44px] lg:text-[52px]">{block.heading}</h1>
           {block.body ? (
-            <p className="mt-3 text-sm leading-[1.3] md:text-2xl md:leading-[1.2]">{block.body}</p>
+            <p className="mx-auto mt-3 max-w-[880px] text-sm leading-[1.35] md:text-lg lg:text-xl">{block.body}</p>
           ) : null}
         </div>
       </div>
@@ -280,7 +286,7 @@ export const RuntimeCompareBlock = ({ block, showBgn }: { block: BlockOf<'runtim
               {cols.map(({ product, specLine }) => {
                 const card = productCardData(product, {}, 'card')
                 return (
-                  <div key={product.id} className="flex flex-col items-center px-2 pb-6 pt-6 text-center md:px-4">
+                  <div key={product.id} className="flex flex-col items-center px-2 pb-6 pt-6 text-center">
                     <Link href={card.url ?? '#'} className="relative block aspect-square w-full max-w-[217px]">
                       {card.imageUrl ? (
                         <Image
@@ -297,6 +303,8 @@ export const RuntimeCompareBlock = ({ block, showBgn }: { block: BlockOf<'runtim
                     </Link>
                     <h3 className="mb-3 mt-2.5 text-base font-medium leading-[1.15] text-black md:text-xl">{card.title}</h3>
                     <p className="text-sm leading-[1.2] text-[#898989]">{specLine?.trim() || card.tagline}</p>
+                    {/* Цената и бутоните — в дъното, на една линия във всички колони. */}
+                    <div className="mt-auto" />
                     {card.price !== null ? (
                       <p className="mt-4 flex flex-wrap items-baseline justify-center gap-2">
                         <span className="tabular text-base font-semibold">{formatEur(card.price)}</span>
