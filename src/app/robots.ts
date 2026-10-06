@@ -1,12 +1,14 @@
 import type { MetadataRoute } from 'next'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
+import { absoluteUrl } from '@/lib/site-url'
 
 /**
  * `robots.txt`.
  *
- * Затворени са админът и API-то — те нямат какво да дадат на търсачка, а
- * `/api/media/file/…` остава отворено, защото оттам идват снимките.
+ * Затворени са админът и API-то — те нямат какво да дадат на търсачка.
+ * `/api/media/` е ИЗРИЧНО отворено (`Allow` преди `Disallow`): оттам идват
+ * всички снимки, а до 6 октомври 2026 `Disallow: /api/` спираше и тях —
+ * Google не виждаше нито една снимка на сайта.
  *
  * `?sub=` не се забранява: canonical вече казва, че разделът е същата
  * страница, а забраната би попречила на Google да го прочете.
@@ -18,7 +20,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
  */
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [{ userAgent: '*', allow: '/', disallow: ['/admin', '/api/'] }],
-    sitemap: new URL('/sitemap.xml', SITE_URL).toString(),
+    rules: [{ userAgent: '*', allow: ['/', '/api/media/'], disallow: ['/admin', '/api/'] }],
+    sitemap: absoluteUrl('/sitemap.xml'),
   }
 }

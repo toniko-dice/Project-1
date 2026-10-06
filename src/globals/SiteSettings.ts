@@ -1,5 +1,6 @@
 import type { GlobalConfig } from 'payload'
 import { revalidateGlobal } from '../lib/revalidate'
+import { HOME_H1_DEFAULT } from '../lib/title'
 
 export const SiteSettings: GlobalConfig = {
   slug: 'site-settings',
@@ -72,6 +73,27 @@ export const SiteSettings: GlobalConfig = {
           admin: {
             description:
               'Стои до задължителната отметка във формата за бюлетин. Изисква се от ЗЗЛД — затова е поле, а не зашит текст.',
+          },
+        },
+      ],
+    },
+    {
+      type: 'collapsible',
+      label: 'Начална страница',
+      fields: [
+        /*
+          Тук, а не в самата начална страница: тя не се записва, докато
+          три задължителни снимки са празни (CLAUDE.md, „Какво още не е
+          направено") — полето там би било непроменимо.
+        */
+        {
+          name: 'homeH1',
+          type: 'text',
+          label: 'H1 на началната страница',
+          defaultValue: HOME_H1_DEFAULT,
+          admin: {
+            description:
+              'Главното заглавие на началната страница — за търсачките описва сайта. Показва се над лентата с категориите.',
           },
         },
       ],

@@ -11,6 +11,7 @@ import { RESERVED_PRODUCT_SLUGS } from '../lib/urls'
 import { productBlocks } from '../blocks/product'
 import { expireEverything, revalidateProduct, revalidateProductDelete } from '../lib/revalidate'
 import { fillSearchText } from '../lib/search'
+import { metaDescriptionCounter, metaTitleCounter } from '../fields/seo'
 
 /**
  * Основната категория = първата от „Категории".
@@ -748,12 +749,14 @@ export const Products: CollectionConfig = {
               label: 'Заглавие за търсачки',
               admin: { description: 'Ако е празно, се ползва името на продукта.' },
             },
+            metaTitleCounter(),
             {
               name: 'metaDescription',
               type: 'textarea',
               label: 'Описание за търсачки',
               admin: { description: 'Ако е празно, се ползва кратката спецификация.' },
             },
+            metaDescriptionCounter(),
           ],
         },
         {

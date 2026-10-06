@@ -1,9 +1,9 @@
 import { CaretRight } from '@phosphor-icons/react/dist/ssr'
 import Link from 'next/link'
 
-export type Crumb = { label: string; url: string | null }
+import { absoluteUrl } from '@/lib/site-url'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
+export type Crumb = { label: string; url: string | null }
 
 /**
  * Хлебни трохи — пътят от началото до текущата страница.
@@ -56,7 +56,7 @@ export const breadcrumbSchema = (items: Crumb[]) => ({
     position: i + 1,
     name: item.label,
     ...(item.url && i < items.length - 1
-      ? { item: new URL(item.url, SITE_URL).toString() }
+      ? { item: absoluteUrl(item.url) }
       : {}),
   })),
 })

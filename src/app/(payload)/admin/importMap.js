@@ -1,5 +1,6 @@
 import { RowLabel as RowLabel_7f4fa5fc68fb5a0a92393f6444a57fbd } from '@/components/admin/RowLabel'
 import { Note as Note_b1f9a6b9bae36f5ee25cc75b578bb654 } from '@/components/admin/Note'
+import { CharCounter as CharCounter_df79ae1a509e474e617a96ef4417adcd } from '@/components/admin/CharCounter'
 import { BlockLabel as BlockLabel_65d5559e4024d0730eedfbb5dfb037d8 } from '@/components/admin/BlockLabel'
 import { RscEntryLexicalCell as RscEntryLexicalCell_44fe37237e0ebf4470c9990d8cb7b07e } from '@payloadcms/richtext-lexical/rsc'
 import { RscEntryLexicalField as RscEntryLexicalField_44fe37237e0ebf4470c9990d8cb7b07e } from '@payloadcms/richtext-lexical/rsc'
@@ -34,6 +35,7 @@ import { CollectionCards as CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1 } f
 export const importMap = {
   "@/components/admin/RowLabel#RowLabel": RowLabel_7f4fa5fc68fb5a0a92393f6444a57fbd,
   "@/components/admin/Note#Note": Note_b1f9a6b9bae36f5ee25cc75b578bb654,
+  "@/components/admin/CharCounter#CharCounter": CharCounter_df79ae1a509e474e617a96ef4417adcd,
   "@/components/admin/BlockLabel#BlockLabel": BlockLabel_65d5559e4024d0730eedfbb5dfb037d8,
   "@payloadcms/richtext-lexical/rsc#RscEntryLexicalCell": RscEntryLexicalCell_44fe37237e0ebf4470c9990d8cb7b07e,
   "@payloadcms/richtext-lexical/rsc#RscEntryLexicalField": RscEntryLexicalField_44fe37237e0ebf4470c9990d8cb7b07e,

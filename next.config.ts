@@ -1,5 +1,8 @@
 import { withPayload } from '@payloadcms/next/withPayload'
 import type { NextConfig } from 'next'
+import { PHASE_PRODUCTION_BUILD } from 'next/constants'
+
+import { isLocalSiteUrl } from './src/lib/site-url'
 
 const nextConfig: NextConfig = {
   /*
@@ -29,4 +32,26 @@ const nextConfig: NextConfig = {
   },
 }
 
-export default withPayload(nextConfig, { devBundleServerPackages: false })
+/*
+  Билд за продукция без истински адрес на сайта би записал localhost в
+  robots.txt, sitemap, canonical, og:url и JSON-LD — Google щеше да
+  индексира адреси, които не съществуват. Затова билдът спира.
+
+  `npm run build:local` (ALLOW_LOCAL_SITE_URL=1) е САМО за проверка на
+  локалната машина — никога за качване на сървъра.
+*/
+const провериАдреса = () => {
+  const url = process.env.NEXT_PUBLIC_SITE_URL
+  if (!isLocalSiteUrl(url) || process.env.ALLOW_LOCAL_SITE_URL === '1') return
+  throw new Error(
+    `NEXT_PUBLIC_SITE_URL е ${url ? `„${url}"` : 'празен'} — за продукция трябва истинският адрес ` +
+      '(напр. https://ecoflow.bg). Задайте го в .env. За проверка на локалната машина: npm run build:local.',
+  )
+}
+
+const config = (phase: string) => {
+  if (phase === PHASE_PRODUCTION_BUILD) провериАдреса()
+  return withPayload(nextConfig, { devBundleServerPackages: false })
+}
+
+export default config

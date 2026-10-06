@@ -6,6 +6,12 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
       "port": 3000
+    },
+    {
+      "name": "ecoflow-bg-main",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "C:/CLAUDE/ecoflow-bg", "run", "dev"],
+      "port": 3000
     }
   ]
 }

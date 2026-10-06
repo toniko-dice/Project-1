@@ -2,22 +2,23 @@ import type { MetadataRoute } from 'next'
 
 import { accessoriesForCategory, canHaveAccessoriesPage } from '@/lib/catalog'
 import { getCatalog, getCategoryTree, getPayloadClient, getPublishedProducts } from '@/lib/payload'
+import { mediaUrl } from '@/lib/media'
+import { categoryNoindex } from '@/lib/seo'
+import { absoluteUrl } from '@/lib/site-url'
 import { levelOf } from '@/lib/tree'
 import { accessoriesPath, categoryPath, productPath } from '@/lib/urls'
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
-
-const абсолютен = (path: string) => new URL(path, SITE_URL).toString()
 
 /**
  * Картата на сайта.
  *
- * Влизат: публикуваните продукти, категориите без отметка „Да не се
- * индексира" и публикуваните страници. НЕ влизат:
+ * Влизат: публикуваните продукти (със снимките си), категориите без
+ * отметка „Да не се индексира" и публикуваните страници. НЕ влизат:
  *
  * - подсериите — те нямат собствена страница, а са раздели на серията
  *   (`?sub=`), и canonical им сочи серията;
  * - категориите с `noindex` — смисълът на отметката е точно този;
+ * - празните категории — без нито един публикуван продукт в разклонението
+ *   (`isEmptyCategory`); връщат се сами с първия продукт;
  * - черновите — те не се виждат и на сайта.
  *
  * Страниците „Аксесоари за …" влизат, когато имат поне един аксесоар;
@@ -43,7 +44,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const начална = pages.docs.find((p) => p.slug === 'home')
   const записи: MetadataRoute.Sitemap = [
     {
-      url: абсолютен('/'),
+      url: absoluteUrl('/'),
       lastModified: начална?.updatedAt ? new Date(начална.updatedAt) : undefined,
       changeFrequency: 'weekly',
       priority: 1,
@@ -53,18 +54,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const page of pages.docs) {
     if (page.slug === 'home') continue
     записи.push({
-      url: абсолютен(`/${page.slug}`),
+      url: absoluteUrl(`/${page.slug}`),
       lastModified: page.updatedAt ? new Date(page.updatedAt) : undefined,
       changeFrequency: 'monthly',
     })
   }
 
   for (const category of tree) {
-    if (category.noindex) continue
+    // Отметката „Да не се индексира" ИЛИ празна категория (т. 3 — връща се сама).
+    if (categoryNoindex(catalog, category)) continue
     if (levelOf(tree, category) > 1) continue
 
     записи.push({
-      url: абсолютен(categoryPath(category.slug)),
+      url: absoluteUrl(categoryPath(category.slug)),
       lastModified: category.updatedAt ? new Date(category.updatedAt) : undefined,
       changeFrequency: 'weekly',
       priority: 0.8,
@@ -81,7 +83,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       null,
     )
     записи.push({
-      url: абсолютен(accessoriesPath(category.slug)),
+      url: absoluteUrl(accessoriesPath(category.slug)),
       lastModified: последна ? new Date(последна) : undefined,
       changeFrequency: 'weekly',
       priority: 0.7,
@@ -89,11 +91,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   for (const product of products) {
+    /*
+      Снимките на продукта — `<image:image>` (т. 2): главната първа, после
+      галерията, до 10. Адресът е webp размерът `large`, който галерията
+      реално показва (`ProductGallery`), не JPEG оригиналът.
+    */
+    const снимки = [product.image, ...(product.gallery ?? []).map((g) => g.image)]
+      .map((m) => mediaUrl(m, 'large'))
+      .filter((u): u is string => Boolean(u))
+      .slice(0, 10)
+      .map(absoluteUrl)
     записи.push({
-      url: абсолютен(productPath(product)),
+      url: absoluteUrl(productPath(product)),
       lastModified: product.updatedAt ? new Date(product.updatedAt) : undefined,
       changeFrequency: 'weekly',
       priority: 0.9,
+      ...(снимки.length ? { images: снимки } : {}),
     })
   }
 

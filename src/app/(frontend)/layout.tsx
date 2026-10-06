@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import { DesignTokens } from '@/components/DesignTokens'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
+import { SITE_URL } from '@/lib/site-url'
 import { TITLE_TEMPLATE } from '@/lib/title'
 import './globals.css'
 
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
     търсачките. Google не разчита относителен адрес и снимката не влиза
     в резултатите. Оправя целия сайт наведнъж, не само една страница.
   */
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'EcoFlow България — Портативни електроцентрали и домашно захранване',
     // Заглавие, което вече съдържа името, минава без шаблона — `pageTitle`.

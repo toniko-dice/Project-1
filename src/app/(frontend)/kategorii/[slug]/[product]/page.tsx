@@ -29,6 +29,7 @@ import { Breadcrumbs, breadcrumbSchema, type Crumb } from '@/components/Breadcru
 import { categoryCrumbs } from '@/lib/tree'
 import { accessoriesPath, productPath } from '@/lib/urls'
 import { pageTitle } from '@/lib/title'
+import { absoluteUrl } from '@/lib/site-url'
 
 /** Колко карти най-много в „Съвместими аксесоари"; останалите са на страницата на серията. */
 const МАКС_АКСЕСОАРИ = 8
@@ -57,23 +58,23 @@ export const generateMetadata = async ({ params }: Args): Promise<Metadata> => {
     title: pageTitle(product.metaTitle ?? product.title),
     description: product.metaDescription ?? product.tagline ?? product.description ?? undefined,
     // Продуктът има ЕДИН адрес — този под серията си.
-    alternates: { canonical: new URL(productPath(product), SITE_URL).toString() },
+    alternates: { canonical: absoluteUrl(productPath(product)) },
     openGraph: image ? { images: [{ url: image }] } : undefined,
   }
 }
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
-
-/** Търсачките не разчитат относителни адреси на снимки. */
-const absoluteUrl = (path: string): string => new URL(path, SITE_URL).toString()
 
 /**
- * GTIN се приема само ако е точно 13 цифри.
- * Невалиден идентификатор дава грешка при валидация; липсващият не дава.
+ * GTIN се приема само ако е точно 13 цифри С вярна контролна цифра
+ * (`4895251600712-1` и сгрешена цифра отпадат). Невалиден идентификатор
+ * дава грешка при валидация; липсващият не дава.
  */
 const validGtin13 = (value?: string | null): string | null => {
   const digits = value?.trim() ?? ''
-  return /^\d{13}$/.test(digits) ? digits : null
+  if (!/^\d{13}$/.test(digits)) return null
+  // Контролната цифра на EAN-13: тегла 1 и 3 редом върху първите 12.
+  const сума = [...digits.slice(0, 12)].reduce((s, d, i) => s + Number(d) * (i % 2 ? 3 : 1), 0)
+  return (10 - (сума % 10)) % 10 === Number(digits[12]) ? digits : null
 }
 
 export default async function ProductPage({ params }: Args) {
@@ -212,9 +213,16 @@ export default async function ProductPage({ params }: Args) {
       price: product.price,
       priceCurrency: 'EUR',
       availability: availability.schema,
-      // Покупката се извършва във външния магазин — това е верният адрес.
+      itemCondition: 'https://schema.org/NewCondition',
+      // Покупката се извършва във външния магазин — това е верният адрес и продавачът.
       url: product.externalUrl,
+      seller: { '@type': 'Organization', name: 'dice.bg' },
     },
+    /*
+      БЕЗ `aggregateRating`/`review`, докато няма истински отзиви
+      (`task-seo-tehnichesko.md`, т. 8) — измислена оценка е нарушение на
+      правилата на Google за маркировка.
+    */
   }
 
   return (

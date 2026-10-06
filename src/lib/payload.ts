@@ -121,6 +121,8 @@ export type ProductForUrl = Pick<
   | 'categoryParentSlug'
   | 'categoryGrandparentSlug'
   | 'updatedAt'
+  | 'image'
+  | 'gallery'
 >
 
 export const getPublishedProducts = cache(async (): Promise<ProductForUrl[]> => {
@@ -145,6 +147,9 @@ export const getPublishedProducts = cache(async (): Promise<ProductForUrl[]> => 
       categoryParentSlug: true,
       categoryGrandparentSlug: true,
       updatedAt: true,
+      // За `<image:image>` в картата на сайта.
+      image: true,
+      gallery: true,
     },
   })
   return result.docs

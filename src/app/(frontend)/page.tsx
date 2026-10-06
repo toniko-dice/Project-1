@@ -1,26 +1,79 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+import type { Page } from '@/payload-types'
 import { RenderBlocks } from '@/components/RenderBlocks'
 import { getGlobal, getPage } from '@/lib/payload'
 import { mediaUrl } from '@/lib/media'
-import { pageTitle } from '@/lib/title'
+import { absoluteUrl } from '@/lib/site-url'
+import { finalTitle, HOME_H1_DEFAULT, pageTitle, SITE_NAME } from '@/lib/title'
+
+/** Снимката за споделяне: от SEO полето, иначе първият слайд на банера, иначе логото. */
+const снимкаЗаСподеляне = (
+  page: Page,
+  logo: Parameters<typeof mediaUrl>[0],
+): string | null => {
+  const own = mediaUrl(page.metaImage, 'banner')
+  if (own) return own
+  for (const block of page.layout ?? []) {
+    if (block.blockType !== 'heroBanner' || block.hidden) continue
+    const first = mediaUrl(block.slides?.[0]?.image, 'banner')
+    if (first) return first
+  }
+  return mediaUrl(logo)
+}
+
+/**
+ * Профил в социалните мрежи — само истински адрес. Във футъра стоят
+ * `https://facebook.com` и подобни заместители (без път); `sameAs` с тях
+ * би казал на Google, че фирмата Е самият Facebook.
+ */
+const истинскиПрофил = (url?: string | null): boolean => {
+  try {
+    const u = new URL(url ?? '')
+    return /^https?:$/.test(u.protocol) && u.pathname.replace(/\/+$/, '').length > 1
+  } catch {
+    return false
+  }
+}
 
 export const generateMetadata = async (): Promise<Metadata> => {
-  const page = await getPage('home')
+  const [page, settings] = await Promise.all([getPage('home'), getGlobal('site-settings')])
   if (!page) return {}
 
-  const ogImage = mediaUrl(page.metaImage, 'banner')
+  const title = page.metaTitle?.trim() || SITE_NAME
+  const description = page.metaDescription ?? undefined
+  const image = снимкаЗаСподеляне(page, settings.logo)
+  const url = absoluteUrl('/')
 
   return {
-    title: pageTitle(page.metaTitle),
-    description: page.metaDescription ?? undefined,
-    openGraph: ogImage ? { images: [{ url: ogImage }] } : undefined,
+    title: pageTitle(title),
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: finalTitle(title),
+      description,
+      url,
+      type: 'website',
+      locale: 'bg_BG',
+      siteName: SITE_NAME,
+      ...(image ? { images: [{ url: image }] } : {}),
+    },
+    twitter: {
+      card: image ? 'summary_large_image' : 'summary',
+      title: finalTitle(title),
+      description,
+      ...(image ? { images: [image] } : {}),
+    },
   }
 }
 
 export default async function HomePage() {
-  const [page, settings] = await Promise.all([getPage('home'), getGlobal('site-settings')])
+  const [page, settings, footer] = await Promise.all([
+    getPage('home'),
+    getGlobal('site-settings'),
+    getGlobal('footer'),
+  ])
 
   // Празна база — показваме къде да се въведе съдържанието, вместо бяла страница.
   if (!page) {
@@ -49,7 +102,58 @@ export default async function HomePage() {
       затова сивото се слага тук, а не на `body`.
     */
     <div className="bg-canvas">
-      <RenderBlocks layout={page.layout} showBgn={Boolean(settings.showBgnPrices)} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(схемаНаСайта(settings, footer)) }}
+      />
+      <RenderBlocks
+        layout={page.layout}
+        showBgn={Boolean(settings.showBgnPrices)}
+        heading={
+          /*
+            H1 описва сайта (т. 6), а не текущата промоция в банера. Над
+            лентата с категориите — там е естественото „за какво е сайтът".
+          */
+          <div className="container-site pt-10 text-center lg:pt-12">
+            <h1 className="text-2xl font-medium leading-tight tracking-tight sm:text-3xl">
+              {settings.homeH1?.trim() || HOME_H1_DEFAULT}
+            </h1>
+          </div>
+        }
+      />
     </div>
   )
+}
+
+/** JSON-LD на началната: `WebSite` и `Organization` (т. 6). */
+const схемаНаСайта = (
+  settings: Awaited<ReturnType<typeof getGlobal<'site-settings'>>>,
+  footer: Awaited<ReturnType<typeof getGlobal<'footer'>>>,
+) => {
+  const url = absoluteUrl('/')
+  const logo = mediaUrl(settings.logo)
+  const sameAs = (footer.social ?? []).map((s) => s.url).filter(истинскиПрофил)
+  const contactPoint =
+    settings.phone || settings.email
+      ? {
+          '@type': 'ContactPoint',
+          contactType: 'customer service',
+          areaServed: 'BG',
+          availableLanguage: ['bg'],
+          ...(settings.phone ? { telephone: settings.phone } : {}),
+          ...(settings.email ? { email: settings.email } : {}),
+        }
+      : null
+  return [
+    { '@context': 'https://schema.org', '@type': 'WebSite', name: SITE_NAME, url },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url,
+      ...(logo ? { logo: absoluteUrl(logo) } : {}),
+      ...(contactPoint ? { contactPoint } : {}),
+      ...(sameAs.length ? { sameAs } : {}),
+    },
+  ]
 }

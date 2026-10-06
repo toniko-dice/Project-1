@@ -208,10 +208,17 @@ export const HeroSlider = ({
                     dark={slide.dark}
                   />
 
+                  {/*
+                    H2, не H1: H1 на страницата описва нея самата — на
+                    началната „H1 на началната страница" от „Общи настройки",
+                    на категорията — името ѝ. До 6 октомври 2026 H1 на
+                    началната беше „До 55% отстъпка" (а всеки слайд даваше
+                    още един H1). Видът е същият.
+                  */}
                   {slide.heading ? (
-                    <h1 className="text-3xl font-medium leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                    <h2 className="text-3xl font-medium leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                       {slide.heading}
-                    </h1>
+                    </h2>
                   ) : null}
 
                   {slide.subheading ? (

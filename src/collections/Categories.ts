@@ -2,6 +2,7 @@ import type { CollectionAfterChangeHook, CollectionBeforeChangeHook, CollectionC
 import { cleanSlug } from '../lib/slug'
 import { layoutField } from '../blocks/pageLayout'
 import { revalidateAllOnDelete, revalidateCategory } from '../lib/revalidate'
+import { metaDescriptionCounter, metaTitleCounter } from '../fields/seo'
 
 const parentId = (p: unknown): number | null =>
   typeof p === 'number' ? p : ((p as { id?: number } | null)?.id ?? null)
@@ -183,7 +184,21 @@ export const Categories: CollectionConfig = {
               label: 'Описание под заглавието',
               admin: {
                 description:
-                  'Кратък въвеждащ текст под името на категорията. Ползва се и като описание за търсачки, ако полето в раздел SEO е празно.',
+                  'Кратък въвеждащ текст под името на категорията.',
+              },
+            },
+            /*
+              SEO текстът под продуктите (`task-seo-tehnichesko.md`, т. 13).
+              Целият текст е в HTML-а — дългият само се свива на екрана
+              (`BelowListText`), за да го чете и търсачката.
+            */
+            {
+              name: 'belowList',
+              type: 'richText',
+              label: 'Текст под списъка',
+              admin: {
+                description:
+                  'По избор. Показва се под продуктите (и под линка „Аксесоари за …"). Над ~150 думи на сайта се свива до три реда с бутон „Покажи още" — целият текст остава видим за търсачките.',
               },
             },
           ],
@@ -247,8 +262,26 @@ export const Categories: CollectionConfig = {
         {
           label: 'SEO',
           fields: [
-            { name: 'metaTitle', type: 'text', label: 'Заглавие за търсачки' },
-            { name: 'metaDescription', type: 'textarea', label: 'Описание за търсачки' },
+            {
+              name: 'metaTitle',
+              type: 'text',
+              label: 'Заглавие за търсачки',
+              admin: {
+                description:
+                  'Празно = името на категорията (при еднакви имена — и името на родителя).',
+              },
+            },
+            metaTitleCounter(),
+            {
+              name: 'metaDescription',
+              type: 'textarea',
+              label: 'Описание за търсачки',
+              admin: {
+                description:
+                  'Празно = автоматично: „{Име} EcoFlow — {N} продукта: {до 3 имена}. Цени и наличност от официалния дистрибутор за България."',
+              },
+            },
+            metaDescriptionCounter(),
             {
               name: 'noindex',
               type: 'checkbox',

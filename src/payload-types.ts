@@ -1129,9 +1129,27 @@ export interface Category {
    */
   banner?: (number | null) | Media;
   /**
-   * Кратък въвеждащ текст под името на категорията. Ползва се и като описание за търсачки, ако полето в раздел SEO е празно.
+   * Кратък въвеждащ текст под името на категорията.
    */
   description?: string | null;
+  /**
+   * По избор. Показва се под продуктите (и под линка „Аксесоари за …"). Над ~150 думи на сайта се свива до три реда с бутон „Покажи още" — целият текст остава видим за търсачките.
+   */
+  belowList?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
   layout?:
     | (
         | {
@@ -2425,6 +2443,7 @@ export interface CategoriesSelect<T extends boolean = true> {
   heroTagline?: T;
   banner?: T;
   description?: T;
+  belowList?: T;
   layout?:
     | T
     | {
@@ -3180,6 +3199,10 @@ export interface SiteSetting {
    * Стои до задължителната отметка във формата за бюлетин. Изисква се от ЗЗЛД — затова е поле, а не зашит текст.
    */
   newsletterConsentText?: string | null;
+  /**
+   * Главното заглавие на началната страница — за търсачките описва сайта. Показва се над лентата с категориите.
+   */
+  homeH1?: string | null;
   companyName?: string | null;
   vatNumber?: string | null;
   address?: string | null;
@@ -3358,6 +3381,7 @@ export interface SiteSettingsSelect<T extends boolean = true> {
   shopUrl?: T;
   showBgnPrices?: T;
   newsletterConsentText?: T;
+  homeH1?: T;
   companyName?: T;
   vatNumber?: T;
   address?: T;

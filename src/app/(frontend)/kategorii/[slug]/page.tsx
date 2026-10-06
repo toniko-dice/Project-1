@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { notFound, permanentRedirect } from 'next/navigation'
 
 import type { Category } from '@/payload-types'
+import { BelowListText } from '@/components/BelowListText'
 import { Breadcrumbs, breadcrumbSchema } from '@/components/Breadcrumbs'
 import { CategoryProducts, type CategoryTab } from '@/components/CategoryProducts'
 import { FilteredProducts } from '@/components/FilteredProducts'
@@ -32,11 +33,12 @@ import {
 } from '@/lib/payload'
 import { ancestry, categoryCrumbs, childrenOf, levelOf } from '@/lib/tree'
 import { accessoriesPath, categoryPath, productPath } from '@/lib/urls'
-import { pageTitle } from '@/lib/title'
+import { categoryMetaDescription, categoryMetaTitle, categoryNoindex } from '@/lib/seo'
+import { finalTitle, pageTitle, SITE_NAME } from '@/lib/title'
+import { absoluteUrl } from '@/lib/site-url'
 
 type Args = { params: Promise<{ slug: string }> }
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
 
 export const generateStaticParams = async () => {
   const slugs = await getCategorySlugs()
@@ -45,23 +47,43 @@ export const generateStaticParams = async () => {
 
 export const generateMetadata = async ({ params }: Args): Promise<Metadata> => {
   const { slug } = await params
-  const category = await getCategory(slug)
+  const [category, catalog, tree] = await Promise.all([getCategory(slug), getCatalog(), getCategoryTree()])
   if (!category) return {}
 
-  const image = mediaUrl(category.banner ?? category.heroImage, 'banner')
+  /*
+    OG снимката: банерът или заглавната снимка на категорията, иначе
+    главната снимка на първия продукт в списъка (т. 7).
+  */
+  let image = mediaUrl(category.banner ?? category.heroImage, 'banner')
+  if (!image) {
+    const [първи] = await getCategoryProducts(slug, categoryBranchIds(tree, category.id))
+    image = първи ? mediaUrl(първи.image, 'full') : null
+  }
+  const title = categoryMetaTitle(catalog, category)
+  const description = categoryMetaDescription(catalog, category)
+  const url = absoluteUrl(categoryPath(slug))
 
   return {
-    // Наставката „— EcoFlow България" идва от `title.template` в layout.
-    title: pageTitle(category.metaTitle ?? category.title),
-    description: category.metaDescription ?? category.description ?? undefined,
+    // Наставката — само ако се събира в 60 знака (`pageTitle`).
+    title: pageTitle(title),
+    description,
     /*
       Филтърът по подсерия НЕ е отделна страница за Google — canonical на
       всички раздели сочи чистия адрес. Иначе един и същи списък се
       индексира по веднъж за всеки раздел.
     */
-    alternates: { canonical: new URL(categoryPath(slug), SITE_URL).toString() },
-    robots: category.noindex ? { index: false, follow: true } : undefined,
-    openGraph: image ? { images: [{ url: image }] } : undefined,
+    alternates: { canonical: url },
+    // Отметката от админа или празна категория (т. 3) — връща се сама с първия продукт.
+    robots: categoryNoindex(catalog, category) ? { index: false, follow: true } : undefined,
+    openGraph: {
+      title: finalTitle(title),
+      description,
+      url,
+      type: 'website',
+      locale: 'bg_BG',
+      siteName: SITE_NAME,
+      ...(image ? { images: [{ url: image }] } : {}),
+    },
   }
 }
 
@@ -164,7 +186,7 @@ export default async function CategoryPage({ params }: Args) {
               itemListElement: products.map((p, i) => ({
                 '@type': 'ListItem',
                 position: i + 1,
-                url: new URL(productPath(p), SITE_URL).toString(),
+                url: absoluteUrl(productPath(p)),
                 name: p.title,
               })),
             },
@@ -265,6 +287,9 @@ export default async function CategoryPage({ params }: Args) {
             </Link>
           </div>
         ) : null}
+
+        {/* SEO текстът — под продуктите и под линка към аксесоарите (т. 13). */}
+        <BelowListText data={category.belowList} />
 
         {/*
           Подкатегориите като карти — само когато категорията няма нито

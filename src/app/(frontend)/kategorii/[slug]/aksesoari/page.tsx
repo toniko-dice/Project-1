@@ -16,7 +16,9 @@ import { buildFilters } from '@/lib/filters'
 import { getAttributes, getCatalog, getGlobal, getProductCards } from '@/lib/payload'
 import { ancestry, categoryCrumbs } from '@/lib/tree'
 import { accessoriesPath, productPath } from '@/lib/urls'
-import { pageTitle } from '@/lib/title'
+import { mediaUrl } from '@/lib/media'
+import { finalTitle, pageTitle, SITE_NAME } from '@/lib/title'
+import { absoluteUrl } from '@/lib/site-url'
 
 /**
  * „Аксесоари за серия …" — `/kategorii/<категория>/aksesoari`.
@@ -31,8 +33,6 @@ import { pageTitle } from '@/lib/title'
  */
 
 type Args = { params: Promise<{ slug: string }> }
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
 
 const ПОДРАЗБИРАНЕ = {
   h1: 'Аксесоари за {име}',
@@ -79,12 +79,32 @@ export const generateMetadata = async ({ params }: Args): Promise<Metadata> => {
     return {}
   }
   const { category, entries } = data
+  const title = текст(category, 'metaTitle', entries.length) ?? ''
+  const description = текст(category, 'metaDescription', entries.length) ?? undefined
+  const url = absoluteUrl(accessoriesPath(slug))
+
+  // OG снимката: на категорията, иначе главната на първия аксесоар (т. 7).
+  let image = mediaUrl(category.banner ?? category.heroImage, 'banner')
+  if (!image) {
+    const [първи] = await getProductCards([entries[0]!.id])
+    image = първи ? mediaUrl(първи.image, 'full') : null
+  }
+
   return {
-    title: pageTitle(текст(category, 'metaTitle', entries.length)),
-    description: текст(category, 'metaDescription', entries.length) ?? undefined,
+    title: pageTitle(title),
+    description,
     // Филтрите (`?kategoriya=…`) не са отделни страници — canonical е чистият адрес.
-    alternates: { canonical: new URL(accessoriesPath(slug), SITE_URL).toString() },
+    alternates: { canonical: url },
     robots: category.noindex ? { index: false, follow: true } : undefined,
+    openGraph: {
+      title: finalTitle(title),
+      description,
+      url,
+      type: 'website',
+      locale: 'bg_BG',
+      siteName: SITE_NAME,
+      ...(image ? { images: [{ url: image }] } : {}),
+    },
   }
 }
 
@@ -146,7 +166,7 @@ export default async function AccessoriesPage({ params }: Args) {
               itemListElement: products.map((p, i) => ({
                 '@type': 'ListItem',
                 position: i + 1,
-                url: new URL(productPath(p), SITE_URL).toString(),
+                url: absoluteUrl(productPath(p)),
                 name: p.title,
               })),
             },
