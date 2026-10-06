@@ -527,9 +527,12 @@ export const HeaderNav = ({
           <span className="flex items-center gap-2">
             {logoUrl ? (
               /*
-                Широко лого: 24 px високо, ширина по съотношението на файла,
-                най-много 160 px. Ширината и височината са истинските, за да
-                не трепва при зареждане. Квадратното лого изобщо не стига
+                Широко лого: 14 px високо — горният ред (лого + „МАГАЗИН")
+                е колкото реда „Официален дистрибутор за България" под него
+                (6 октомври 2026, по желание на собственика; преди 24 px и
+                до 160 px ширина). Ширината следва съотношението, без
+                таван. Ширината и височината са истинските, за да не
+                трепва при зареждане. Квадратното лого изобщо не стига
                 дотук — Header.tsx подава null и излиза надписът.
               */
               <Image
@@ -537,7 +540,7 @@ export const HeaderNav = ({
                 alt={logoAlt}
                 width={logoWidth}
                 height={logoHeight}
-                className="h-6 w-auto max-w-40 object-contain object-left"
+                className="h-[14px] w-auto max-w-none object-contain object-left"
                 priority
               />
             ) : (
