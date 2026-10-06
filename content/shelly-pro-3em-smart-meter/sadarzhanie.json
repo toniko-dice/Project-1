@@ -30,8 +30,8 @@
         "text": "Данни за поне 60 дни"
       }
     ],
-    "metaTitle": "EcoFlow × Shelly Pro 3EM Smart Meter",
-    "metaDescription": "Умен трифазен електромер EcoFlow × Shelly Pro 3EM — следи енергията в целия дом и работи със системата STREAM.",
+    "metaTitle": "Shelly Pro 3EM — трифазен умен електромер за STREAM",
+    "metaDescription": "Трифазен умен електромер Shelly Pro 3EM за EcoFlow STREAM — следи енергията в целия дом и управлява соларната батерия.",
     "compatibleWith": [
       "stream-seriya"
     ]

@@ -30,8 +30,8 @@
         "text": "Монтаж на DIN шина"
       }
     ],
-    "metaTitle": "EcoFlow Smart Meter — умен електромер",
-    "metaDescription": "EcoFlow Smart Meter следи енергията в целия дом и работи със системата STREAM — соларна енергия без подаване към мрежата.",
+    "metaTitle": "EcoFlow Smart Meter — умен електромер за STREAM",
+    "metaDescription": "Умен електромер EcoFlow Smart Meter следи енергията в целия дом и работи със STREAM — соларната енергия се ползва, без да се подава в мрежата.",
     "compatibleWith": [
       "stream-seriya"
     ]
