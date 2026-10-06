@@ -1,0 +1,605 @@
+{
+  "_bележка": "SEO данни за продуктите (05.10.2026): мета заглавие ≤ 60 знака, мета описание 95–158 знака. Внос: npm run import:seo. Без 5-те временни продукта (delta-pro-ultra-x, delta-3-ultra, delta-2-max, solaren-panel-400w, smart-home-panel-2).",
+  "produkti": {
+    "delta-pro-3": {
+      "metaTitle": "EcoFlow DELTA Pro 3 — електроцентрала 4096Wh, 4000W",
+      "metaDescription": "Преносима електроцентрала EcoFlow DELTA Pro 3: 4096Wh, 4000W изход, разширяване до 12 kWh, 2600W соларен вход, UPS 10 ms и 5 години гаранция."
+    },
+    "delta-3-plus": {
+      "metaTitle": "EcoFlow DELTA 3 Plus — електроцентрала 1024Wh, 1800W",
+      "metaDescription": "EcoFlow DELTA 3 Plus: 1024Wh, 1800W изход и 3600W пик. Пълен заряд за 56 мин, соларен вход 1000W, LFP 4000 цикъла, разширяване до 5 kWh."
+    },
+    "delta-3-max": {
+      "metaTitle": "EcoFlow DELTA 3 Max — електроцентрала 2048Wh, 2400W",
+      "metaDescription": "EcoFlow DELTA 3 Max: 2048Wh, 2400W изход и 4800W пик, X-Boost до 3200W. LFP клетки за 10 години живот, пълен заряд за 68 минути."
+    },
+    "delta-3-classic": {
+      "metaTitle": "EcoFlow DELTA 3 Classic — електроцентрала 1024Wh",
+      "metaDescription": "EcoFlow DELTA 3 Classic: 1024Wh капацитет, 1800W изход и 3600W пик, до 80% за 45 минути. Най-изгодната електроцентрала от 1 kWh."
+    },
+    "delta-3-max-plus": {
+      "metaTitle": "EcoFlow DELTA 3 Max Plus — електроцентрала 2048Wh",
+      "metaDescription": "EcoFlow DELTA 3 Max Plus: 2048Wh, 3000W изход и 6000W пик, X-Boost 3900W. До 80% за 47 минути, разширяване до 10 kWh."
+    },
+    "delta-3": {
+      "metaTitle": "EcoFlow DELTA 3 — преносима електроцентрала 1024Wh",
+      "metaDescription": "Преносима електроцентрала EcoFlow DELTA 3: 1024Wh, 1800W изход, 3600W пик, пълен заряд за 56 минути, 5 начина за зареждане, LFP 4000 цикъла."
+    },
+    "delta-3-ultra-plus": {
+      "metaTitle": "EcoFlow DELTA 3 Ultra Plus — електроцентрала 3072Wh",
+      "metaDescription": "EcoFlow DELTA 3 Ultra Plus: 3072Wh, 3600W изход (7200W пик), разширяване до 11 kWh, 1600W соларен вход и зареждане от EV станция."
+    },
+    "delta-pro-ultra": {
+      "metaTitle": "EcoFlow DELTA Pro Ultra — домашна батерия 6144Wh",
+      "metaDescription": "EcoFlow DELTA Pro Ultra: инвертор 6900W и батерия 6144Wh, разширяване до 30 kWh, соларен вход 5600W. Резервно захранване за целия дом."
+    },
+    "river-3-plus": {
+      "metaTitle": "EcoFlow RIVER 3 Plus — преносима електроцентрала 286Wh",
+      "metaDescription": "Преносима електроцентрала EcoFlow RIVER 3 Plus: 286Wh, 600W (1200W X-Boost), разширяване до 858Wh, пълен заряд за 1 час, UPS под 10 ms."
+    },
+    "river-3-max": {
+      "metaTitle": "EcoFlow RIVER 3 Max — преносима електроцентрала 572Wh",
+      "metaDescription": "EcoFlow RIVER 3 Max: 572Wh (RIVER 3 Plus + EB300), 600W изход и 1200W X-Boost, 220W соларен вход, UPS под 10 ms, LiFePO4 3000 цикъла."
+    },
+    "river-3-max-plus": {
+      "metaTitle": "EcoFlow RIVER 3 Max Plus — електроцентрала 858Wh",
+      "metaDescription": "EcoFlow RIVER 3 Max Plus: 858Wh (RIVER 3 Plus + EB600), 600W изход и 1200W X-Boost, 220W соларен вход, UPS под 10 ms, под 30 dB."
+    },
+    "river-3-max-plus-wireless": {
+      "metaTitle": "EcoFlow RIVER 3 Max Plus Wireless — 858Wh с RAPID",
+      "metaDescription": "EcoFlow RIVER 3 Max Plus Wireless: 858Wh, 600W изход и отделяща се батерия RAPID 5000mAh с безжично зареждане Qi2 15W."
+    },
+    "river-3-ups": {
+      "metaTitle": "EcoFlow RIVER 3 UPS — електроцентрала 245Wh с UPS",
+      "metaDescription": "EcoFlow RIVER 3 UPS: 245Wh, 300W (600W X-Boost), UPS под 10 ms за рутер и компютър, пълен заряд за 1 час, LiFePO4 3000 цикъла."
+    },
+    "river-3": {
+      "metaTitle": "EcoFlow RIVER 3 — малка преносима електроцентрала 245Wh",
+      "metaDescription": "Малка преносима електроцентрала EcoFlow RIVER 3: 245Wh, 300W (600W X-Boost), пълен заряд за 1 час, под 30 dB, LiFePO4 3000 цикъла."
+    },
+    "river-3-plus-wireless": {
+      "metaTitle": "EcoFlow RIVER 3 Plus Wireless — 286Wh с RAPID батерия",
+      "metaDescription": "EcoFlow RIVER 3 Plus Wireless: електроцентрала 286Wh, 600W изход и отделяща се батерия RAPID 5000mAh с безжично зареждане Qi2 15W."
+    },
+    "solaren-panel-100w-flexible": {
+      "metaTitle": "EcoFlow 100W Flexible — гъвкав соларен панел за кемпер",
+      "metaDescription": "Гъвкав соларен панел EcoFlow 100W: 2,3 кг, огъва се до 258°, 23% ефективност, IP68. За покрива на кемпер, ван или лодка."
+    },
+    "solaren-panel-100w-rigid-2br": {
+      "metaTitle": "EcoFlow 100W Rigid — 2 стационарни соларни панела",
+      "metaDescription": "Комплект 2 стационарни соларни панела EcoFlow 100W: 23% ефективност, IP68, закалено стъкло, монтажни крачета в комплекта."
+    },
+    "solaren-panel-110w-lightweight": {
+      "metaTitle": "EcoFlow 110W Lightweight — лек сгъваем соларен панел",
+      "metaDescription": "Лек сгъваем соларен панел EcoFlow 110W: двулицев, до 25% ефективност, 3,3 кг, стойка 30–60°, IP68 и вграден XT60 конектор."
+    },
+    "solaren-panel-130w-rvmax-2br": {
+      "metaTitle": "EcoFlow 130W RVMax — 2 соларни панела за кемпер",
+      "metaDescription": "2 соларни панела EcoFlow RVMax 130W за покрив на кемпер: 12 мм дебелина, TOPCon до 25% ефективност, паралелно до 10 панела, IP68."
+    },
+    "solaren-panel-160w": {
+      "metaTitle": "EcoFlow 160W — сгъваем соларен панел с калъф-стойка",
+      "metaDescription": "Сгъваем соларен панел EcoFlow 160W: монокристални клетки 21–22%, калъф, който става стойка 0–180°, MC4 конектор, 7 кг."
+    },
+    "solaren-panel-160w-lightweight": {
+      "metaTitle": "EcoFlow 160W Lightweight — лек сгъваем соларен панел",
+      "metaDescription": "Лек сгъваем соларен панел EcoFlow 160W: двулицев, над 25% ефективност, 3,8 кг, стойка 30–60°, IP68 и вграден XT60 конектор."
+    },
+    "solaren-panel-175w-rigid": {
+      "metaTitle": "EcoFlow 175W Rigid — стационарен соларен панел TOPCon",
+      "metaDescription": "Стационарен соларен панел EcoFlow 175W с TOPCon клетки: до 25% ефективност, IP68, закалено стъкло. За ван, кемпер и дом."
+    },
+    "solaren-panel-220w-lightweight": {
+      "metaTitle": "EcoFlow 220W Lightweight — сгъваем соларен панел",
+      "metaDescription": "Сгъваем соларен панел EcoFlow 220W Lightweight: двулицев, до 25% ефективност, стойка 30–60°, IP68, 5 години гаранция."
+    },
+    "solaren-panel-250w-rigid-4br": {
+      "metaTitle": "EcoFlow 250W Rigid — 4 двулицеви соларни панела",
+      "metaDescription": "4 двулицеви стационарни соларни панела EcoFlow 250W: N-тип клетки, 24,7% ефективност, IP68. За балкон, покрив и градина."
+    },
+    "solaren-panel-400w-lightweight": {
+      "metaTitle": "EcoFlow 400W Lightweight — сгъваем соларен панел",
+      "metaDescription": "Сгъваем соларен панел EcoFlow 400W Lightweight: двулицев, до 25% ефективност, 10,2 кг, стойка 30°/45°/60°, IP68. Официален дистрибутор на EcoFlow за България."
+    },
+    "solaren-panel-400w-rigid-2br": {
+      "metaTitle": "EcoFlow 400W Rigid — 2 стационарни соларни панела",
+      "metaDescription": "Комплект 2 стационарни соларни панела EcoFlow 400W: 23% ефективност, IP68, антикорозионна рамка. За покрив и автономни системи."
+    },
+    "solaren-panel-450w-rigid-2br": {
+      "metaTitle": "EcoFlow 450W Rigid — 2 стационарни соларни панела",
+      "metaDescription": "Комплект 2 стационарни соларни панела EcoFlow 450W: до 23% ефективност, IP68, антикорозионна рамка. За покрив и автономни системи."
+    },
+    "solaren-panel-45w-type-c": {
+      "metaTitle": "EcoFlow 45W Type-C — сгъваем соларен панел с USB-C",
+      "metaDescription": "Сгъваем соларен панел EcoFlow 45W с USB-C изход: TOPCon клетки до 25%, 1,4 кг, IP68. Зарежда телефони и RIVER на път."
+    },
+    "solaren-panel-60w-type-c": {
+      "metaTitle": "EcoFlow 60W Type-C — сгъваем соларен панел с USB-C",
+      "metaDescription": "Сгъваем соларен панел EcoFlow 60W с USB-C изход: TOPCon клетки 25%, 2 кг, IP68. Зарежда телефони, лаптопи и RIVER на път."
+    },
+    "solaren-panel-nextgen-220w-bifacial": {
+      "metaTitle": "EcoFlow NextGen 220W — двулицев сгъваем соларен панел",
+      "metaDescription": "Двулицев сгъваем соларен панел EcoFlow NextGen 220W: TOPCon клетки до 25%, стойка 30/60/90°, IP68, кабел XT60i и чанта."
+    },
+    "stream-pro": {
+      "metaTitle": "EcoFlow STREAM Pro — соларна батерия за балкон 1,92 kWh",
+      "metaDescription": "Соларна батерия за балкон EcoFlow STREAM Pro: 1,92 kWh LFP, 3 MPPT и 1500W соларен вход, 1200W изход, до 11,52 kWh, plug & play."
+    },
+    "stream-ultra": {
+      "metaTitle": "EcoFlow STREAM Ultra — соларна батерия за балкон 1,92 kWh",
+      "metaDescription": "Соларна батерия за балкон EcoFlow STREAM Ultra: 1,92 kWh LFP, 4 MPPT и 2000W соларен вход, 1200W изход, до 11,52 kWh, plug & play."
+    },
+    "stream-ultra-x": {
+      "metaTitle": "EcoFlow STREAM Ultra X — соларна батерия за балкон 3,84 kWh",
+      "metaDescription": "Соларна батерия за балкон EcoFlow STREAM Ultra X: 3,84 kWh LFP, 4 MPPT и 2000W соларен вход, до 2300W изход, до 23 kWh."
+    },
+    "stream-microinverter": {
+      "metaTitle": "EcoFlow STREAM Microinverter — микроинвертор 800W за балкон",
+      "metaDescription": "Микроинвертор EcoFlow STREAM 800W за балконска соларна система: 2 MPPT входа, IP67, 10 години гаранция, с AC и соларни кабели."
+    },
+    "power-kit-power-hub": {
+      "metaTitle": "EcoFlow Power Kits Power Hub — захранване за кемпер",
+      "metaDescription": "EcoFlow Power Kits Power Hub — интегрирано захранване 48V за кемпери, каравани и малки домове, с батерии до 15 kWh."
+    },
+    "power-kit-power-hub-5kva": {
+      "metaTitle": "EcoFlow Power Hub 5kVA — захранване за кемпер и дом",
+      "metaDescription": "EcoFlow Power Kit Power Hub 5kVA — захранване 5000 VA за кемпери и малки домове, батерии до 45 kWh, соларен вход до 4800W."
+    },
+    "power-kit-power-link": {
+      "metaTitle": "EcoFlow Power Kit Power Link — модул за сензори и релета",
+      "metaDescription": "EcoFlow Power Kit Power Link събира сензорите, релетата и данните от кемпера в PowerInsight, конзолата или приложението."
+    },
+    "power-kit-console": {
+      "metaTitle": "EcoFlow Power Kits Console — конзола със 7\" дисплей",
+      "metaDescription": "Конзола EcoFlow Power Kits Console със 7-инчов сензорен дисплей — управление и наблюдение на цялата система Power Kits в кемпера."
+    },
+    "power-kit-power-dock": {
+      "metaTitle": "EcoFlow Power Kit Power Dock — до 9 батерии към Power Hub",
+      "metaDescription": "EcoFlow Power Kit Power Dock свързва до 9 батерии (45 kWh) към Power Hub и дава два 48V DC изхода за кемпер или малък дом."
+    },
+    "power-kit-smart-distribution-panel": {
+      "metaTitle": "EcoFlow AC/DC Smart Distribution Panel за Power Kits",
+      "metaDescription": "Умен разпределителен панел EcoFlow AC/DC за Power Kits: 6 AC и 12 DC позиции, управление на кръговете от приложението."
+    },
+    "smart-home-panel": {
+      "metaTitle": "EcoFlow Smart Home Panel Combo — умен панел за DELTA Pro",
+      "metaDescription": "EcoFlow Smart Home Panel Combo за DELTA Pro: 13 релейни модула, резервно захранване за до 10 кръга, превключване за 20 ms."
+    },
+    "manual-transfer-switch": {
+      "metaTitle": "Manual Transfer Switch — ръчен превключвател за DELTA Pro 3",
+      "metaDescription": "Ръчен превключвател EcoFlow за свързване на DELTA Pro 3 към ел. таблото — резервно захранване на избрани кръгове при спиране на тока."
+    },
+    "relay-module-6a": {
+      "metaTitle": "EcoFlow Relay Module 6A — релеен модул за Smart Home Panel",
+      "metaDescription": "Резервен релеен модул EcoFlow 6A за Smart Home Panel — управлява един кръг от ел. таблото при резервно захранване."
+    },
+    "relay-module-13a": {
+      "metaTitle": "EcoFlow Relay Module 13A — релеен модул за Smart Home Panel",
+      "metaDescription": "Резервен релеен модул EcoFlow 13A за Smart Home Panel — управлява един кръг от ел. таблото при резервно захранване."
+    },
+    "relay-module-16a": {
+      "metaTitle": "EcoFlow Relay Module 16A — релеен модул за Smart Home Panel",
+      "metaDescription": "Резервен релеен модул EcoFlow 16A за Smart Home Panel — управлява един кръг от ел. таблото при резервно захранване."
+    },
+    "relay-module-20a": {
+      "metaTitle": "EcoFlow Relay Module 20A — релеен модул за Smart Home Panel",
+      "metaDescription": "Резервен релеен модул EcoFlow 20A за Smart Home Panel — управлява един кръг от ел. таблото при резервно захранване."
+    },
+    "relay-module-30a": {
+      "metaTitle": "EcoFlow Relay Module 30A — релеен модул за Smart Home Panel",
+      "metaDescription": "Резервен релеен модул EcoFlow 30A за Smart Home Panel — управлява един кръг от ел. таблото при резервно захранване."
+    },
+    "wave-3": {
+      "metaTitle": "EcoFlow WAVE 3 — преносим климатик с отопление",
+      "metaDescription": "Преносим климатик EcoFlow WAVE 3: 6100 BTU охлаждане и 6800 BTU отопление, изсушаване, приложение. До 8 часа работа с батерия."
+    },
+    "wave-3-s-bateriya": {
+      "metaTitle": "EcoFlow WAVE 3 с батерия 1024Wh — климатик без кабел",
+      "metaDescription": "Комплект EcoFlow WAVE 3 + батерия 1024Wh LFP: климатик без кабел до 8 часа, 6100 BTU охлаждане и 6800 BTU отопление."
+    },
+    "glacier-classic-35l": {
+      "metaTitle": "EcoFlow GLACIER Classic 35L — преносим хладилник-фризер",
+      "metaDescription": "Преносим компресорен хладилник-фризер EcoFlow GLACIER Classic 35 л: от −20 до 20 °C, 58 кенчета, до 43 часа с батерия."
+    },
+    "glacier-classic-45l": {
+      "metaTitle": "EcoFlow GLACIER Classic 45L — преносим хладилник-фризер",
+      "metaDescription": "Хладилник-фризер EcoFlow GLACIER Classic 45 л с две зони: от −20 до 20 °C, 72 кенчета, до 39 часа с батерия, приложение."
+    },
+    "glacier-classic-55l": {
+      "metaTitle": "EcoFlow GLACIER Classic 55L — преносим хладилник-фризер",
+      "metaDescription": "Хладилник-фризер EcoFlow GLACIER Classic 55 л с две зони: от −20 до 20 °C, 90 кенчета, до 39 часа с батерия, приложение."
+    },
+    "smart-meter": {
+      "metaTitle": "EcoFlow Smart Meter — умен електромер за STREAM",
+      "metaDescription": "Умен електромер EcoFlow Smart Meter следи енергията в целия дом и работи със STREAM — соларната енергия се ползва, без да се подава в мрежата."
+    },
+    "smart-plug": {
+      "metaTitle": "EcoFlow × Shelly Smart Plug — умен контакт за STREAM",
+      "metaDescription": "Умен Wi-Fi контакт EcoFlow × Shelly: следи консумацията и включва уредите, когато има излишна соларна енергия от системата STREAM."
+    },
+    "shelly-pro-3em-smart-meter": {
+      "metaTitle": "Shelly Pro 3EM — трифазен умен електромер за STREAM",
+      "metaDescription": "Трифазен умен електромер Shelly Pro 3EM за EcoFlow STREAM — следи енергията в целия дом и управлява соларната батерия."
+    },
+    "rapid-magnetic-5000-cheren": {
+      "metaTitle": "EcoFlow RAPID Magnetic 5000mAh — магнитна батерия, черна",
+      "metaDescription": "Магнитна външна батерия EcoFlow RAPID 5000 mAh, черен цвят: безжично зареждане Qi2 15W, 30W през вградения USB-C кабел, стойка."
+    },
+    "rapid-magnetic-5000-srebrist": {
+      "metaTitle": "EcoFlow RAPID Magnetic 5000mAh — магнитна батерия, сребриста",
+      "metaDescription": "Магнитна външна батерия EcoFlow RAPID 5000 mAh, сребрист цвят: безжично зареждане Qi2 15W, 30W през вградения USB-C кабел, стойка."
+    },
+    "rapid-pro-power-bank-20000": {
+      "metaTitle": "EcoFlow RAPID Pro 20000mAh 230W — външна батерия",
+      "metaDescription": "Външна батерия EcoFlow RAPID Pro 20 000 mAh, 230W, с вграден USB-C кабел 100W — зарежда лаптоп и телефон, разрешена в самолет."
+    },
+    "rapid-pro-power-bank-27650": {
+      "metaTitle": "EcoFlow RAPID Pro 27650mAh 300W — външна батерия",
+      "metaDescription": "Външна батерия EcoFlow RAPID Pro 27 650 mAh, 300W, с вграден USB-C кабел 140W — за лаптопи и таблети, разрешена в самолет."
+    },
+    "rapid-pro-x-power-bank": {
+      "metaTitle": "EcoFlow RAPID Pro X 27650mAh 300W — външна батерия",
+      "metaDescription": "Външна батерия EcoFlow RAPID Pro X: 27 650 mAh, 300W, 140W USB-C и сменяеми магнитни модули. Разрешена в самолет."
+    },
+    "camping-light": {
+      "metaTitle": "EcoFlow Camping Light — къмпинг лампа и външна батерия",
+      "metaDescription": "Къмпинг лампа EcoFlow, която е и външна батерия 7200 mAh: няколко режима на светене, магнити и щипка, защита IP65."
+    },
+    "delta-3-max-plus-smart-extra-battery": {
+      "metaTitle": "DELTA 3 Max Plus Smart Extra Battery — батерия 2048Wh",
+      "metaDescription": "Допълнителна батерия EcoFlow DELTA 3 Max Plus Smart Extra Battery 2048Wh за DELTA 3 Max, DELTA 3 Max Plus и Ultra Plus."
+    },
+    "delta-3-smart-extra-battery": {
+      "metaTitle": "DELTA 3 Smart Extra Battery — допълнителна батерия 1024Wh",
+      "metaDescription": "Допълнителна батерия EcoFlow DELTA 3 Smart Extra Battery 1024Wh за DELTA 3 и DELTA 3 Plus — удвоява капацитета, LFP 4000 цикъла."
+    },
+    "glacier-plug-in-battery": {
+      "metaTitle": "EcoFlow GLACIER Plug-in Battery — батерия 298Wh",
+      "metaDescription": "Батерия EcoFlow GLACIER Plug-in Battery 298Wh — до 40 часа охлаждане без кабели за преносимите хладилници GLACIER и GLACIER Classic."
+    },
+    "river-3-plus-eb300": {
+      "metaTitle": "RIVER 3 Plus Smart Extra Battery EB300 — батерия 286Wh",
+      "metaDescription": "Допълнителна батерия EcoFlow EB300 (286Wh) за RIVER 3 Plus — удвоява капацитета до 572Wh, свързва се без кабели, USB-C 140W."
+    },
+    "wave-2-add-on-battery": {
+      "metaTitle": "EcoFlow WAVE 2 Add-On Battery — батерия 1159Wh",
+      "metaDescription": "Допълнителна батерия EcoFlow WAVE 2 Add-On Battery 1159Wh — до 8 часа повече работа на преносимия климатик WAVE 2."
+    },
+    "wave-3-add-on-battery": {
+      "metaTitle": "EcoFlow WAVE 3 Add-On Battery — батерия 1024Wh",
+      "metaDescription": "Допълнителна LFP батерия EcoFlow 1024Wh за климатика WAVE 3 — до 8 часа повече работа, зарежда и телефони през USB-A и USB-C."
+    },
+    "rapid-pro-charger-100w": {
+      "metaTitle": "EcoFlow RAPID Pro 100W GaN — зарядно с 3 порта",
+      "metaDescription": "Зарядно EcoFlow RAPID Pro 100W с GaN технология: 3 порта, до 100W от един USB-C. Компактно, със сгъваем щепсел. Официален дистрибутор на EcoFlow за България."
+    },
+    "rapid-pro-charger-140w": {
+      "metaTitle": "EcoFlow RAPID Pro 140W GaN — зарядно с 4 порта",
+      "metaDescription": "Зарядно EcoFlow RAPID Pro 140W с GaN технология: 4 порта, зарежда 4 устройства наведнъж. Компактно, със сгъваем щепсел."
+    },
+    "rapid-pro-desktop-charger-320w": {
+      "metaTitle": "EcoFlow RAPID Pro 320W — настолно GaN зарядно, 5 порта",
+      "metaDescription": "Настолно зарядно EcoFlow RAPID Pro 320W с GaN: 5 порта + Pogo Pin, до 140W на порт, зарежда RAPID Pro до 80% за 20 минути."
+    },
+    "rapid-pro-x-apple-watch-charger": {
+      "metaTitle": "RAPID Pro X зарядно за Apple Watch — магнитен модул MFi",
+      "metaDescription": "Магнитен модул за зареждане на Apple Watch към външната батерия EcoFlow RAPID Pro X: закача се с Pogo Pin, MFi сертифициран, 5W."
+    },
+    "rapid-gan-charger-65w": {
+      "metaTitle": "EcoFlow RAPID 65W GaN — зарядно с 3 порта и USB-C кабел",
+      "metaDescription": "GaN зарядно EcoFlow RAPID 65W за лаптопи, телефони и таблети: два USB-C и един USB-A изход, PD 3.0, USB-C кабел в комплекта."
+    },
+    "extra-battery-expansion-adapter": {
+      "metaTitle": "EcoFlow Extra Battery Expansion Adapter — за 2 батерии",
+      "metaDescription": "Адаптер EcoFlow за две допълнителни батерии към DELTA 3 Max Plus или DELTA 3 Ultra Plus — свързва се в порта за батерия отзад."
+    },
+    "delta-pro-3-ev-x-stream-adapter": {
+      "metaTitle": "EV X-Stream адаптер за DELTA Pro 3 — зареждане Type 2",
+      "metaDescription": "Адаптер EcoFlow EV X-Stream — зарежда DELTA Pro 3 с до 7200W от AC станции за електромобили с конектор Type 2. Официален дистрибутор на EcoFlow за България."
+    },
+    "ev-x-stream-adapter-delta-pro": {
+      "metaTitle": "EV X-Stream адаптер за DELTA Pro — зареждане Type 2",
+      "metaDescription": "Адаптер EcoFlow EV X-Stream за DELTA Pro — зареждане до 3400W от станции за електромобили с конектор Type 2, до 100% за 1,7 часа."
+    },
+    "delta-pro-to-smart-generator-adapter": {
+      "metaTitle": "Адаптер DELTA Pro към Smart Generator — EcoFlow",
+      "metaDescription": "Адаптер EcoFlow за свързване на DELTA Pro или DELTA Pro Extra Battery към Smart Generator — преобразува 2 пина към 4+8 пина."
+    },
+    "grounding-adapter-c20": {
+      "metaTitle": "EcoFlow адаптер за заземяване C20 — за електромобил",
+      "metaDescription": "Адаптер за заземяване EcoFlow с щепсел C20 — DELTA Pro или DELTA Max става аварийно захранване за зареждане на електромобил."
+    },
+    "delta-pro-3-flat-link-cable-0-85m": {
+      "metaTitle": "Кабел за допълнителна батерия DELTA Pro 3, 0,85 м",
+      "metaDescription": "Оригинален плосък кабел EcoFlow 0,85 м — свързва DELTA Pro 3 с допълнителната батерия DELTA Pro 3 или DELTA Pro Smart Extra Battery."
+    },
+    "delta-pro-3-flat-link-cable-2m": {
+      "metaTitle": "Кабел за допълнителна батерия DELTA Pro 3, 2 м",
+      "metaDescription": "Оригинален плосък кабел EcoFlow 2 м — свързва DELTA Pro 3 с допълнителната батерия DELTA Pro 3 или DELTA Pro Smart Extra Battery."
+    },
+    "extra-battery-cable-5m": {
+      "metaTitle": "EcoFlow Extra Battery Cable 5 м — кабел за батерия",
+      "metaDescription": "Кабел EcoFlow 5 м за допълнителна батерия: DELTA Max към батерия или Smart Generator, DELTA Pro към Smart Generator, DELTA 2 към батерия."
+    },
+    "extra-battery-cable-1m": {
+      "metaTitle": "EcoFlow Extra Battery Cable 1 м — кабел за DELTA Max",
+      "metaDescription": "Оригинален кабел EcoFlow 1 м, който свързва DELTA Max с допълнителната батерия DELTA Max Smart Extra Battery или със Smart Generator."
+    },
+    "delta-pro-extra-battery-cable": {
+      "metaTitle": "Кабел за допълнителна батерия DELTA Pro, 0,75 м",
+      "metaDescription": "Оригинален кабел EcoFlow 0,75 м, който свързва DELTA Pro с допълнителната батерия DELTA Pro Smart Extra Battery или Smart Generator."
+    },
+    "delta-3-extra-battery-cable": {
+      "metaTitle": "Кабел за допълнителна батерия DELTA 3, 0,4 м",
+      "metaDescription": "Оригинален кабел EcoFlow 40 см за свързване на DELTA 3 и DELTA 3 Plus с допълнителна батерия през порта за батерия отзад."
+    },
+    "lfp-battery-power-cable-1-5m": {
+      "metaTitle": "Кабел LFP батерия към Power Hub, 1,5 м — EcoFlow",
+      "metaDescription": "Оригинален кабел EcoFlow 1,5 м за свързване на батерия EcoFlow LFP към захранващия хъб Power Kit Power Hub в кемпер или дом."
+    },
+    "lfp-battery-power-cable-2m": {
+      "metaTitle": "Кабел LFP батерия към Power Hub, 2 м — EcoFlow",
+      "metaDescription": "Оригинален кабел EcoFlow 2 м за свързване на батерия EcoFlow LFP към захранващия хъб Power Kit Power Hub в кемпер или дом."
+    },
+    "lfp-battery-power-cable-2-5m": {
+      "metaTitle": "Кабел LFP батерия към Power Hub, 2,5 м — EcoFlow",
+      "metaDescription": "Оригинален кабел EcoFlow 2,5 м за свързване на батерия EcoFlow LFP към захранващия хъб Power Kit Power Hub в кемпер или дом."
+    },
+    "lfp-battery-power-cable-3-5m": {
+      "metaTitle": "Кабел LFP батерия към Power Hub, 3,5 м — EcoFlow",
+      "metaDescription": "Оригинален кабел EcoFlow 3,5 м за свързване на батерия EcoFlow LFP към захранващия хъб Power Kit Power Hub в кемпер или дом."
+    },
+    "rapid-pro-usb-c-cable-240w": {
+      "metaTitle": "EcoFlow RAPID Pro USB-C кабел 240W, 1,8 м",
+      "metaDescription": "USB-C към USB-C кабел EcoFlow RAPID Pro 240W, 1,8 м, с найлонова оплетка и E-Marker чип — за бързо зареждане на лаптопи."
+    },
+    "stream-bkw-ac-cable-5m": {
+      "metaTitle": "AC кабел 5 м за STREAM микроинвертор — EcoFlow",
+      "metaDescription": "Оригинален AC кабел EcoFlow 5 м, който свързва микроинвертора STREAM към контакта — за балконска соларна система."
+    },
+    "stream-bkw-ac-cable-15m": {
+      "metaTitle": "AC кабел 15 м за STREAM микроинвертор — EcoFlow",
+      "metaDescription": "Оригинален AC кабел EcoFlow 15 м, който свързва микроинвертора STREAM към контакта — за балконска соларна система."
+    },
+    "stream-bkw-diy-cable-5m": {
+      "metaTitle": "Кабел 5 м STREAM микроинвертор към ел. табло",
+      "metaDescription": "Кабел EcoFlow 5 м за директно свързване на микроинвертора STREAM към ел. таблото на дома. Монтажът се прави от електротехник."
+    },
+    "stream-diy-cable-1-5m": {
+      "metaTitle": "STREAM DIY кабел 1,5 м — батерия към ел. табло",
+      "metaDescription": "Кабел EcoFlow 1,5 м за директно свързване на батерия STREAM към ел. таблото на дома. Монтажът се прави от квалифициран електротехник."
+    },
+    "stream-diy-cable-5m": {
+      "metaTitle": "STREAM DIY кабел 5 м — батерия към ел. табло",
+      "metaDescription": "Кабел EcoFlow 5 м за директно свързване на батерия STREAM към ел. таблото на дома. Монтажът се прави от квалифициран електротехник."
+    },
+    "stream-diy-cable-15m": {
+      "metaTitle": "STREAM DIY кабел 15 м — батерия към ел. табло",
+      "metaDescription": "Кабел EcoFlow 15 м за директно свързване на батерия STREAM към ел. таблото на дома. Монтажът се прави от квалифициран електротехник."
+    },
+    "stream-ac-cable-1-5m": {
+      "metaTitle": "STREAM AC кабел 1,5 м — батерия STREAM към мрежата",
+      "metaDescription": "Оригинален AC кабел EcoFlow 1,5 м за свързване на батерия от серията STREAM към ел. мрежата — за балконска соларна система."
+    },
+    "stream-ac-cable-5m": {
+      "metaTitle": "STREAM AC кабел 5 м — батерия STREAM към мрежата",
+      "metaDescription": "Оригинален AC кабел EcoFlow 5 м за свързване на батерия от серията STREAM към ел. мрежата — за балконска соларна система."
+    },
+    "stream-ac-cable-15m": {
+      "metaTitle": "STREAM AC кабел 15 м — батерия STREAM към мрежата",
+      "metaDescription": "Оригинален AC кабел EcoFlow 15 м за свързване на батерия от серията STREAM към ел. мрежата — за балконска соларна система."
+    },
+    "stream-parallel-cable": {
+      "metaTitle": "Кабел за паралелно свързване на батерии STREAM",
+      "metaDescription": "Кабел EcoFlow 55 см за паралелно свързване на две батерии STREAM (STREAM Ultra, Pro, AC Pro) — за повече капацитет."
+    },
+    "stream-solar-extension-cable": {
+      "metaTitle": "Удължителен соларен кабел 2,95 м за STREAM",
+      "metaDescription": "Удължителен соларен кабел EcoFlow 2,95 м — свързва соларен панел към микроинвертора STREAM или към STREAM Ultra X, Ultra и Pro."
+    },
+    "ac-c20-cable-eu": {
+      "metaTitle": "Захранващ кабел C20 1,5 м за DELTA Pro — EcoFlow",
+      "metaDescription": "Оригинален захранващ AC кабел EcoFlow C20, 1,5 м, за зареждане на DELTA Pro, DELTA Pro 3 и DELTA Pro Ultra от контакта."
+    },
+    "ac-cable-eu": {
+      "metaTitle": "Захранващ AC кабел 1,5 м за DELTA и RIVER — EcoFlow",
+      "metaDescription": "Оригинален захранващ AC кабел EcoFlow 1,5 м за зареждане на електроцентралите DELTA и RIVER от контакта (без DELTA Pro)."
+    },
+    "alternator-charger-xt150-cable-1m": {
+      "metaTitle": "XT150 кабел 1 м за Alternator Charger — EcoFlow",
+      "metaDescription": "XT150 кабел EcoFlow 1 м — свързва Alternator Charger Plus 600 или 1000 към електроцентрала с XT150 порт за зареждане в движение."
+    },
+    "alternator-charger-xt150-cable-2m": {
+      "metaTitle": "XT150 кабел 2 м за Alternator Charger — EcoFlow",
+      "metaDescription": "XT150 кабел EcoFlow 2 м — свързва Alternator Charger Plus 600 или 1000 към електроцентрала с XT150 порт за зареждане в движение."
+    },
+    "alternator-charger-xt60-output-cable-1m": {
+      "metaTitle": "XT60 кабел 1 м за Alternator Charger — EcoFlow",
+      "metaDescription": "XT60 кабел EcoFlow 1 м — свързва Alternator Charger с електроцентрала с XT60 вход, до 500W, само режим на зареждане."
+    },
+    "alternator-charger-custom-fit-output-cable-2m": {
+      "metaTitle": "Кабел 2 м Alternator Charger към DELTA Pro",
+      "metaDescription": "Оригинален кабел EcoFlow 2 м — свързва Alternator Charger с DELTA Pro, DELTA Pro 3 и техните допълнителни батерии."
+    },
+    "alternator-charger-plus-custom-fit-output-cable-2m": {
+      "metaTitle": "Кабел 2 м Alternator Charger Plus към DELTA Pro",
+      "metaDescription": "Оригинален кабел EcoFlow 2 м — свързва Alternator Charger Plus 600 или 1000 с DELTA Pro, DELTA Pro 3 и техните батерии."
+    },
+    "alternator-charger-plus-1000-solar-input-cable-5m": {
+      "metaTitle": "Соларен кабел 5 м за Alternator Charger Plus 1000",
+      "metaDescription": "Соларен кабел EcoFlow 5 м, 12AWG, MC4 — свързва панел към Alternator Charger Plus 1000 и освобождава соларния вход на станцията."
+    },
+    "bkw-ac-cable-3m": {
+      "metaTitle": "AC кабел 3 м за микроинвертор PowerStream",
+      "metaDescription": "Оригинален AC кабел EcoFlow 3 м, който свързва микроинвертора PowerStream към контакта — за балконска соларна система."
+    },
+    "bkw-ac-cable-5m": {
+      "metaTitle": "AC кабел 5 м за микроинвертор PowerStream",
+      "metaDescription": "Оригинален AC кабел EcoFlow 5 м, който свързва микроинвертора PowerStream към контакта — за балконска соларна система."
+    },
+    "bkw-delta-pro-cable-0-5m": {
+      "metaTitle": "Кабел микроинвертор към DELTA Pro, 0,5 м — EcoFlow",
+      "metaDescription": "Кабел EcoFlow 0,5 м (4+8) за свързване на микроинвертора PowerStream към електроцентрала DELTA Pro — съхранявате соларната енергия."
+    },
+    "bkw-delta-xt150-cable-0-4m": {
+      "metaTitle": "XT150 кабел микроинвертор към DELTA, 0,4 м",
+      "metaDescription": "XT150 кабел EcoFlow 0,4 м за свързване на микроинвертора PowerStream към DELTA 2, DELTA 2 Max или DELTA Max — съхранявате соларната енергия."
+    },
+    "bkw-delta-xt150-cable-1m": {
+      "metaTitle": "XT150 кабел микроинвертор към DELTA, 1 м",
+      "metaDescription": "XT150 кабел EcoFlow 1 м за свързване на микроинвертора PowerStream към DELTA 2, DELTA 2 Max или DELTA Max — съхранявате соларната енергия."
+    },
+    "bkw-river-cable-0-5m": {
+      "metaTitle": "Кабел микроинвертор към RIVER, 0,5 м — EcoFlow",
+      "metaDescription": "Кабел EcoFlow 0,5 м — свързва микроинвертора PowerStream към 12V гнездото за кола на RIVER 2, RIVER 2 Max, RIVER 2 Pro и DELTA mini."
+    },
+    "bkw-solar-cable-2m": {
+      "metaTitle": "Кабел микроинвертор към соларен панел, 2 м",
+      "metaDescription": "Оригинален кабел EcoFlow 2 м за свързване на микроинвертора PowerStream към соларен панел — за балконска соларна система."
+    },
+    "glacier-xt60-car-cable-2-5m": {
+      "metaTitle": "XT60 кабел 2,5 м за хладилник GLACIER — EcoFlow",
+      "metaDescription": "Кабел EcoFlow XT60, 2,5 м — захранва преносимия хладилник GLACIER от гнездото за кола на електроцентралите EcoFlow."
+    },
+    "infinity-cable-2m": {
+      "metaTitle": "EcoFlow Infinity кабел 2 м — DELTA Pro към Smart Home Panel",
+      "metaDescription": "Оригинален кабел EcoFlow Infinity 2 м за свързване на DELTA Pro към Smart Home Panel — резервно захранване на дома. Не е за DELTA Pro 3."
+    },
+    "solar-extension-cable-3m": {
+      "metaTitle": "Удължителни соларни кабели 3 м, 2 бр. — EcoFlow",
+      "metaDescription": "2 удължителни соларни кабела EcoFlow по 3 м — електроцентралата остава на сянка, а соларните панели са на пряко слънце."
+    },
+    "solar-mc4-xt60-cable-3-5m": {
+      "metaTitle": "Соларен кабел MC4 към XT60, 3,5 м — EcoFlow",
+      "metaDescription": "Соларен кабел EcoFlow MC4 към XT60, 3,5 м — зарежда електроцентрала EcoFlow от соларен панел (за по-старите модели). Оригинален кабел."
+    },
+    "solar-mc4-xt60-cable-5m": {
+      "metaTitle": "Соларен кабел MC4 към XT60, 5 м — EcoFlow",
+      "metaDescription": "Соларен кабел EcoFlow MC4 към XT60, 5 м — зарежда електроцентрала EcoFlow от соларен панел (за по-старите модели). Оригинален кабел."
+    },
+    "solar-mc4-xt60i-cable-2-5m": {
+      "metaTitle": "Соларен кабел MC4 към XT60i, 2,5 м — EcoFlow",
+      "metaDescription": "Соларен кабел EcoFlow MC4 към XT60i, 2,5 м — зарежда електроцентрала EcoFlow от соларен панел. Оригинален кабел. Официален дистрибутор на EcoFlow за България."
+    },
+    "solar-mc4-xt60i-cable-3-5m": {
+      "metaTitle": "Соларен кабел MC4 към XT60i, 3,5 м — EcoFlow",
+      "metaDescription": "Соларен кабел EcoFlow MC4 към XT60i, 3,5 м — зарежда електроцентрала EcoFlow от соларен панел. Оригинален кабел. Официален дистрибутор на EcoFlow за България."
+    },
+    "solar-mc4-xt60i-cable-5m": {
+      "metaTitle": "Соларен кабел MC4 към XT60i, 5 м — EcoFlow",
+      "metaDescription": "Соларен кабел EcoFlow MC4 към XT60i, 5 м — зарежда електроцентрала EcoFlow от соларен панел. Оригинален кабел. Официален дистрибутор на EcoFlow за България."
+    },
+    "solar-parallel-connection-cable": {
+      "metaTitle": "Кабел за паралелно свързване на соларни панели",
+      "metaDescription": "Оригинален кабел EcoFlow за паралелно свързване на соларни панели към електроцентралите DELTA и RIVER — по-бързо зареждане."
+    },
+    "super-flat-mc4-cable": {
+      "metaTitle": "Плосък MC4 кабел 0,5 м за прозорец — EcoFlow",
+      "metaDescription": "Плосък MC4 кабел EcoFlow 0,5 м и 1,5 мм дебелина — свързва соларните панели с микроинвертора през процепа на прозорец, без пробиване."
+    },
+    "solar-tracker": {
+      "metaTitle": "EcoFlow Solar Tracker — двуосен соларен тракер",
+      "metaDescription": "Соларен тракер EcoFlow Solar Tracker следи слънцето по две оси и дава до 30% повече соларна енергия. За панели до 2,4 × 1,1 м."
+    },
+    "single-axis-solar-tracker": {
+      "metaTitle": "EcoFlow Single Axis Solar Tracker — тракер за балкон",
+      "metaDescription": "Едноосен соларен тракер EcoFlow за балкон — следи слънцето от 10° до 85° и дава до 60% повече енергия. Сензор за дъжд, IP68."
+    },
+    "adjustable-ground-suspended-solar-bracket": {
+      "metaTitle": "Регулируема стойка за соларен панел 400–520W",
+      "metaDescription": "Регулируема стойка EcoFlow за соларни панели 400W, 450W и 520W Rigid — ъгъл 20°–75°, монтаж на земя, стена или балкон."
+    },
+    "tilt-mount-bracket-28": {
+      "metaTitle": "Регулируема стойка 28\" за соларни панели 100–175W",
+      "metaDescription": "Регулируема стойка EcoFlow 28 инча за соларни панели 100W и 175W Rigid — ъгъл 0°–90°, за плоски покриви и каравани."
+    },
+    "balcony-hook-kit": {
+      "metaTitle": "EcoFlow Balcony Hook Kit — монтаж на панел на парапет",
+      "metaDescription": "Комплект куки EcoFlow за монтаж на соларни панели Rigid на парапет на балкон — до 30 кг, устойчив на вятър до степен 10."
+    },
+    "rigid-solar-panel-mounting-feet": {
+      "metaTitle": "Крепежни планки за соларни панели Rigid, 4 бр.",
+      "metaDescription": "4 метални крепежни планки EcoFlow от антикорозионна алуминиева сплав за монтаж на соларни панели Rigid на покрив на каравана."
+    },
+    "solar-angle-guide": {
+      "metaTitle": "EcoFlow Solar Angle Guide — уред за ъгъла на панела",
+      "metaDescription": "EcoFlow Solar Angle Guide се закача на соларния панел и по сянката го насочвате под 90° към слънцето — за по-бързо зареждане."
+    },
+    "delta-2-waterproof-bag": {
+      "metaTitle": "Водоустойчива чанта за EcoFlow DELTA 2",
+      "metaDescription": "Водоустойчива чанта EcoFlow за DELTA 2 — пази от вода, мръсотия и удари, с прозрачен капак за екрана и достъп до портовете."
+    },
+    "delta-3-series-waterproof-bag": {
+      "metaTitle": "Водоустойчива чанта за EcoFlow DELTA 3 и DELTA 3 Plus",
+      "metaDescription": "Водоустойчива чанта EcoFlow за DELTA 3 и DELTA 3 Plus — пази от вода, мръсотия и удари, с достъп до всички контакти."
+    },
+    "delta-max-waterproof-bag": {
+      "metaTitle": "Водоустойчива чанта за EcoFlow DELTA Max и DELTA 2 Max",
+      "metaDescription": "Водоустойчива чанта EcoFlow за DELTA Max и DELTA 2 Max — пази от вода, мръсотия и удари, с прозрачен капак за екрана."
+    },
+    "river-bag": {
+      "metaTitle": "Чанта за EcoFlow RIVER, RIVER Max и RIVER Pro",
+      "metaDescription": "Здрава чанта EcoFlow с IP54 за RIVER, RIVER Max и RIVER Pro — дръжка, регулируема презрамка и мрежест джоб за кабели."
+    },
+    "trail-series-waterproof-bag": {
+      "metaTitle": "Водоустойчива чанта за EcoFlow TRAIL 200 и 300",
+      "metaDescription": "Водоустойчива чанта EcoFlow за TRAIL 200 и TRAIL 300 — пази от вода и удари, с достъп до контактите и регулируема презрамка."
+    },
+    "delta-pro-remote-control": {
+      "metaTitle": "Дистанционно управление за EcoFlow DELTA Pro",
+      "metaDescription": "Дистанционно управление с дисплей за EcoFlow DELTA Pro — следите и управлявате изходите отдалеч през Bluetooth или Ethernet."
+    },
+    "cushion": {
+      "metaTitle": "EcoFlow Cushion — възглавница-одеяло за къмпинг",
+      "metaDescription": "EcoFlow Cushion — възглавница 2 в 1, която се разгъва в одеяло 115 × 145 см. За къмпинг, пътуване, колата и дома."
+    },
+    "foldable-camping-chair": {
+      "metaTitle": "EcoFlow сгъваем къмпинг стол",
+      "metaDescription": "Сгъваем къмпинг стол EcoFlow с олекотена алуминиева рамка и здрава двуслойна PVC седалка — за къмпинг, плаж и излети."
+    },
+    "glacier-detachable-wheels-and-lever": {
+      "metaTitle": "Колела и дръжка за хладилник EcoFlow GLACIER",
+      "metaDescription": "Комплект от две колела и дръжка за преносимия хладилник EcoFlow GLACIER — закрепват се здраво и се свалят бързо. Официален дистрибутор на EcoFlow за България."
+    },
+    "mobile-gear-dolly": {
+      "metaTitle": "EcoFlow Mobile Gear Dolly — количка за електроцентрала",
+      "metaDescription": "Сгъваема количка EcoFlow Mobile Gear Dolly за електроцентрали RIVER и DELTA — издържа до 75 кг и се маневрира лесно."
+    },
+    "trolley-delta-pro-ultra": {
+      "metaTitle": "Количка за EcoFlow DELTA Pro Ultra",
+      "metaDescription": "Сгъваема количка EcoFlow за DELTA Pro Ultra — издържа до 140 кг, за лесно местене на електроцентралата у дома и навън."
+    },
+    "power-hat-m-l": {
+      "metaTitle": "EcoFlow Power Hat M–L — соларна шапка със зарядно",
+      "metaDescription": "Соларна шапка EcoFlow Power Hat, размер M–L (56–58 см): зарежда телефона от слънцето през USB-A и USB-C, UPF50+, IP65, сгъваема."
+    },
+    "power-hat-l-xl": {
+      "metaTitle": "EcoFlow Power Hat L–XL — соларна шапка със зарядно",
+      "metaDescription": "Соларна шапка EcoFlow Power Hat, размер L–XL (59–61 см): зарежда телефона от слънцето през USB-A и USB-C, UPF50+, IP65, сгъваема."
+    },
+    "shower-kit": {
+      "metaTitle": "EcoFlow Shower Kit — преносим душ с помпа и кофа",
+      "metaDescription": "Преносим душ EcoFlow Shower Kit: помпа с вградена батерия 18,5Wh, душ глава и сгъваема кофа, IPX7. За къмпинг и плаж."
+    },
+    "wave-3-car-vent-seal": {
+      "metaTitle": "Уплътнение за прозорец на кола за EcoFlow WAVE 3",
+      "metaDescription": "Магнитно уплътнение EcoFlow за прозорец на кола, към което свързвате тръбите на климатика WAVE 3 — монтира се за 5 секунди."
+    },
+    "wave-3-drain-pipe": {
+      "metaTitle": "Дренажна тръба 120 см за климатик EcoFlow WAVE 3",
+      "metaDescription": "Оригинална дренажна тръба EcoFlow 120 см, която отвежда конденза от преносимия климатик WAVE 3. Официален дистрибутор на EcoFlow за България."
+    },
+    "wave-3-inlet-exhaust-pipe-154mm": {
+      "metaTitle": "Изолирана тръба 154 мм за климатик EcoFlow WAVE 3",
+      "metaDescription": "Оригинална изолирана тръба EcoFlow 154 мм, 2,5 м, за насочване на топлия въздух навън от преносимия климатик WAVE 3."
+    },
+    "wave-3-outlet-exhaust-pipe-129mm": {
+      "metaTitle": "Изолирана тръба 129 мм за климатик EcoFlow WAVE 3",
+      "metaDescription": "Оригинална изолирана тръба EcoFlow 129 мм, 2,5 м, за насочване на въздуха на преносимия климатик WAVE 3. Официален дистрибутор на EcoFlow за България."
+    },
+    "wave-stabilizing-strap-kit": {
+      "metaTitle": "Комплект за укрепване на климатик EcoFlow WAVE",
+      "metaDescription": "Комплект ремъци EcoFlow за укрепване на климатика WAVE 3 или WAVE 2 и батерията му в кемпер, яхта и други превозни средства."
+    }
+  }
+}
