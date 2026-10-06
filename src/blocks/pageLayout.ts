@@ -1,5 +1,16 @@
-import type { Block, BlocksField } from 'payload'
+import type { Block, BlocksField, Field } from 'payload'
 
+import {
+  AccordionImage,
+  AnchorNav,
+  ContentSlider,
+  GuideFaq,
+  GuideLegalText,
+  ImageWithText,
+  PageHero,
+  RuntimeCompare,
+  SplitBanner,
+} from './guide'
 import { hiddenField } from './shared'
 import {
   BannerCarousel,
@@ -23,8 +34,24 @@ import {
  */
 const withHidden = (block: Block): Block => ({
   ...block,
-  fields: [hiddenField, ...block.fields],
+  fields: [hiddenField, ...(block.slug === 'anchorNav' ? [] : [anchorLabelField]), ...block.fields],
 })
+
+/**
+ * Надписът на секцията в лентата с котви (блок „Лента с котви").
+ *
+ * Слага се централно, както „Скрит" — всеки блок може да е точка в
+ * лентата, без да се помни поотделно. Празно — секцията не участва.
+ */
+const anchorLabelField: Field = {
+  name: 'anchorLabel',
+  type: 'text',
+  label: 'Надпис в лентата с котви',
+  admin: {
+    description:
+      'Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.',
+  },
+}
 
 /**
  * Блоковете на съставените страници.
@@ -43,6 +70,15 @@ export const pageBlocks: Block[] = [
   BenefitsGrid,
   TestimonialsBlock,
   LogoWall,
+  PageHero,
+  AnchorNav,
+  ContentSlider,
+  AccordionImage,
+  SplitBanner,
+  RuntimeCompare,
+  ImageWithText,
+  GuideFaq,
+  GuideLegalText,
 ].map(withHidden)
 
 /** Полето „Секции на страницата" — еднакво навсякъде, където се ползва. */

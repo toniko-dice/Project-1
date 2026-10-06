@@ -188,6 +188,41 @@ export const Categories: CollectionConfig = {
               },
             },
             /*
+              Ред с линк към ръководство под продуктите, над „Текст под
+              списъка" (`task-stranica-portativni-elektrocentrali.md`, т. 3).
+              Адресът идва от избраната страница — преименуване на адреса ѝ
+              не оставя мъртъв линк.
+            */
+            {
+              name: 'guideLink',
+              type: 'group',
+              label: 'Линк към ръководство',
+              admin: {
+                description:
+                  'По избор. Ред под продуктите, напр. „Не знаете коя да изберете? Вижте ръководството … →". Без избрана страница не се показва.',
+              },
+              fields: [
+                {
+                  type: 'row',
+                  fields: [
+                    {
+                      name: 'page',
+                      type: 'relationship',
+                      relationTo: 'pages',
+                      label: 'Страница',
+                      admin: { width: '40%' },
+                    },
+                    {
+                      name: 'label',
+                      type: 'text',
+                      label: 'Текст на линка',
+                      admin: { width: '60%' },
+                    },
+                  ],
+                },
+              ],
+            },
+            /*
               SEO текстът под продуктите (`task-seo-tehnichesko.md`, т. 13).
               Целият текст е в HTML-а — дългият само се свива на екрана
               (`BelowListText`), за да го чете и търсачката.

@@ -19,6 +19,12 @@ export const Pages: CollectionConfig = {
   },
   access: { read: () => true },
   versions: { drafts: true },
+  /*
+    Страница като ВРЪЗКА (линкът към ръководство в категорията) носи само
+    адреса и името — иначе категорията би заредила целия layout на
+    страницата заедно с продуктите в него.
+  */
+  defaultPopulate: { title: true, slug: true, _status: true },
   hooks: {
     afterChange: [revalidatePage],
     afterDelete: [revalidatePageDelete],

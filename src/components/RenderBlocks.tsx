@@ -1,6 +1,8 @@
 import { Fragment, type ReactNode } from 'react'
 
 import type { Page } from '@/payload-types'
+import { uniqueAnchor } from '@/lib/anchors'
+import { type Anchor, ProductAnchorNav } from './ProductAnchorNav'
 import {
   BannerCarouselBlock,
   HeroBannerBlock,
@@ -8,6 +10,16 @@ import {
   WideBannerBlock,
 } from './blocks/banners'
 import { BenefitsGridBlock, LogoWallBlock, TestimonialsBlockRenderer } from './blocks/content'
+import {
+  AccordionImageBlock,
+  ContentSliderBlock,
+  GuideFaqBlock,
+  GuideLegalTextBlock,
+  ImageWithTextBlock,
+  PageHeroBlock,
+  RuntimeCompareBlock,
+  SplitBannerBlock,
+} from './blocks/guide'
 import {
   BannerProductRowBlock,
   CategoryStripBlock,
@@ -37,11 +49,38 @@ export const RenderBlocks = ({
   const лента = видими.find((i) => layout[i]!.blockType === 'categoryStrip')
   const преди = heading ? (лента ?? видими[1] ?? -1) : -1
 
+  /*
+    Котвите за „Лента с котви" — от „Надпис в лентата с котви" на видимите
+    секции, по реда им. Идентификаторът е от надписа (`uniqueAnchor`, както
+    на продуктовата страница), за да е четим адресът: `#vkashti`.
+  */
+  const used = new Set<string>()
+  const anchorIds = layout.map((b) => {
+    const label = 'anchorLabel' in b ? b.anchorLabel?.trim() : ''
+    return !b.hidden && label ? uniqueAnchor(label, used) : null
+  })
+  const anchors: Anchor[] = layout.flatMap((b, i) =>
+    anchorIds[i] && 'anchorLabel' in b ? [{ id: anchorIds[i]!, label: b.anchorLabel!.trim() }] : [],
+  )
+
   return (
     <>
       {layout.map((block, i) => {
         const key = `${block.blockType}-${i}`
-        const секция = рендер(block, key, showBgn)
+        const рендерирана =
+          block.blockType === 'anchorNav'
+            ? block.hidden
+              ? null
+              : <ProductAnchorNav key={key} anchors={anchors} />
+            : рендер(block, key, showBgn, i)
+        /* Котвата е обвивка — блоковете не знаят за нея; `scroll-mt` е под залепената лента. */
+        const секция = anchorIds[i] ? (
+          <div key={key} id={anchorIds[i]!} className="scroll-mt-14">
+            {рендерирана}
+          </div>
+        ) : (
+          рендерирана
+        )
         return i === преди ? (
           <Fragment key={key}>
             {heading}
@@ -57,7 +96,7 @@ export const RenderBlocks = ({
 }
 
 /** Една секция към своя компонент; скритата — нищо. */
-const рендер = (block: NonNullable<Page['layout']>[number], key: string, showBgn: boolean) => {
+const рендер = (block: NonNullable<Page['layout']>[number], key: string, showBgn: boolean, index: number) => {
   /*
     Скритата секция остава в базата и в админа, но не се рендерира.
     Проверката е тук, а не във всеки блок — иначе при всеки нов блок
@@ -87,6 +126,22 @@ const рендер = (block: NonNullable<Page['layout']>[number], key: string, s
       return <TestimonialsBlockRenderer key={key} block={block} />
     case 'logoWall':
       return <LogoWallBlock key={key} block={block} />
+    case 'pageHero':
+      return <PageHeroBlock key={key} block={block} />
+    case 'contentSlider':
+      return <ContentSliderBlock key={key} block={block} />
+    case 'accordionImage':
+      return <AccordionImageBlock key={key} block={block} index={index} />
+    case 'splitBanner':
+      return <SplitBannerBlock key={key} block={block} />
+    case 'runtimeCompare':
+      return <RuntimeCompareBlock key={key} block={block} showBgn={showBgn} />
+    case 'imageWithText':
+      return <ImageWithTextBlock key={key} block={block} />
+    case 'faqBlock':
+      return <GuideFaqBlock key={key} block={block} index={index} />
+    case 'legalText':
+      return <GuideLegalTextBlock key={key} block={block} />
     default:
       return null
   }

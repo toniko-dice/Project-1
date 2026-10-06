@@ -1,4 +1,4 @@
-import { ArrowRight } from '@phosphor-icons/react/dist/ssr'
+import { ArrowRight, CaretRight } from '@phosphor-icons/react/dist/ssr'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -13,6 +13,7 @@ import { ScrollRow } from '../ScrollRow'
 import { BannerButton, BannerEyebrow, PageSection, SectionHeading } from './section'
 import { ImagePlaceholder } from '../ImagePlaceholder'
 import { resolvedRelations } from '@/lib/relations'
+import { carouselProducts } from '@/lib/page-products'
 
 type Layout = NonNullable<Page['layout']>
 type BlockOf<T extends string> = Extract<Layout[number], { blockType: T }>
@@ -98,14 +99,15 @@ export const CategoryStripBlock = async () => {
 
 /* ─────────── Лента с продукти ─────────── */
 
-export const ProductCarouselBlock = ({
+export const ProductCarouselBlock = async ({
   block,
   showBgn,
 }: {
   block: BlockOf<'productCarousel'>
   showBgn: boolean
 }) => {
-  const products = resolvedRelations<Product>(block.products, 'productCarousel.products')
+  // Ръчният списък или всички от „Продукти от категория" — виж `carouselProducts`.
+  const products = await carouselProducts(block)
   if (!products.length) return null
 
   return (
@@ -177,13 +179,13 @@ export const ProductCarouselBlock = ({
 
 /* ─────────── Банер + продукти ─────────── */
 
-/** Кръглата стрелка вдясно в картите „Виж всички". */
+/** Кръглата стрелка › горе вдясно в картите „Виж всички". */
 const RoundArrow = () => (
   <span
     aria-hidden="true"
     className="flex size-8 shrink-0 items-center justify-center rounded-full border border-line-strong text-ink transition-colors duration-200 group-hover:border-ink"
   >
-    <ArrowRight size={14} weight="bold" />
+    <CaretRight size={14} weight="bold" />
   </span>
 )
 
@@ -291,9 +293,12 @@ export const BannerProductRowBlock = ({
           ))}
 
           {/*
-            Петата колона не е продукт, а две карти една над друга. Ако и
-            двете са без текст или без адрес, колоната изобщо не се показва —
-            вместо празна пунктирана плочка, каквато стоеше преди.
+            Плочката в края на реда: бяла карта с размера на продуктовите
+            (клетка от същата мрежа, `flex-1` я разпъва до височината на
+            реда) — заглавие горе вляво, кръгла стрелка горе вдясно, снимка
+            в дъното; цялата карта е линк. По желание под нея — втора, ниска
+            карта само с текст. Без текст или без адрес и на двете колоната
+            изобщо не се показва.
           */}
           {showMore ? (
             <li className="flex flex-col gap-4">
@@ -312,7 +317,7 @@ export const BannerProductRowBlock = ({
                   ) : null}
 
                   {moreImg ? (
-                    <span className="relative mt-4 block h-40 w-full">
+                    <span className="relative mt-auto block aspect-square w-full pt-4">
                       <Image
                         src={moreImg}
                         alt=""

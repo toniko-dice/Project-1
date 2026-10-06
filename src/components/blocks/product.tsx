@@ -752,6 +752,44 @@ const SpecTableBlock = ({
 
 /* ─────────── Въпроси и отговори ─────────── */
 
+/**
+ * Списъкът с въпроси — общ за продукта и за страниците (блок „Въпроси и
+ * отговори" в ръководствата), за да е един и същ акордеон навсякъде.
+ * Въпросът е H3: под H2 на секцията, както в оригинала.
+ */
+export const FaqList = ({
+  items,
+  name,
+}: {
+  items: { question?: string | null; answer?: string | null }[]
+  /** Общото име на `details` — уникално за страницата. */
+  name: string
+}) => (
+  /* Колоната е тясна като при другите текстови секции — дълъг ред се чете зле. */
+  <div className="mx-auto max-w-[56rem] divide-y divide-line border-y border-line">
+    {items.map((item, i) => (
+      /*
+        details/summary работят и без JavaScript. Общото `name` прави
+        акордеона изключващ — отварянето на въпрос затваря предишния,
+        без нито ред скрипт. Браузър, който не го разбира, просто
+        оставя няколко отворени.
+      */
+      <details key={i} name={name} className="group">
+        <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 py-4">
+          <h3 className="text-sm font-medium">{item.question}</h3>
+          <span
+            aria-hidden="true"
+            className="shrink-0 text-ink-muted transition-transform duration-200 group-open:rotate-45"
+          >
+            +
+          </span>
+        </summary>
+        <p className="pb-4 text-sm leading-relaxed text-ink-muted">{item.answer}</p>
+      </details>
+    ))}
+  </div>
+)
+
 const FaqBlockRenderer = ({ block, id }: { block: BlockOf<'faqBlock'>; id?: string | null }) => {
   const items = block.items ?? []
   if (!items.length) return null
@@ -759,30 +797,7 @@ const FaqBlockRenderer = ({ block, id }: { block: BlockOf<'faqBlock'>; id?: stri
   return (
     <Section id={id} className="container-site py-12 lg:py-16">
       <BlockHeading>{block.heading ?? 'Често задавани въпроси'}</BlockHeading>
-
-      {/* Колоната е тясна като при другите текстови секции — дълъг ред се чете зле. */}
-      <div className="mx-auto max-w-[56rem] divide-y divide-line border-y border-line">
-        {items.map((item, i) => (
-          /*
-            details/summary работят и без JavaScript. Общото `name` прави
-            акордеона изключващ — отварянето на въпрос затваря предишния,
-            без нито ред скрипт. Браузър, който не го разбира, просто
-            оставя няколко отворени.
-          */
-          <details key={i} name={`${id ?? 'faq'}-items`} className="group">
-            <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 py-4 text-sm font-medium">
-              {item.question}
-              <span
-                aria-hidden="true"
-                className="shrink-0 text-ink-muted transition-transform duration-200 group-open:rotate-45"
-              >
-                +
-              </span>
-            </summary>
-            <p className="pb-4 text-sm leading-relaxed text-ink-muted">{item.answer}</p>
-          </details>
-        ))}
-      </div>
+      <FaqList items={items} name={`${id ?? 'faq'}-items`} />
     </Section>
   )
 }

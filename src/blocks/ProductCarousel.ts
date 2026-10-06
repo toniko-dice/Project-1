@@ -1,5 +1,16 @@
-import type { Block } from 'payload'
+import type { Block, Validate } from 'payload'
+
 import { requiredUnlessHidden } from './shared'
+
+/**
+ * Ръчният списък е задължителен, освен когато блокът е скрит или
+ * продуктите идват от категория (`fromCategory`).
+ */
+const productsOrCategory: Validate = (value, { blockData }) => {
+  const b = blockData as { hidden?: boolean; fromCategory?: unknown } | undefined
+  if (b?.hidden === true || b?.fromCategory) return true
+  return Array.isArray(value) && value.length ? true : 'Изберете продукти или категория.'
+}
 
 /** Хоризонтално превъртащ се ред с продукти — секцията "Най-търсени" в референцията. */
 export const ProductCarousel: Block = {
@@ -14,8 +25,19 @@ export const ProductCarousel: Block = {
       type: 'relationship',
       relationTo: 'products',
       hasMany: true,
-      validate: requiredUnlessHidden,
+      validate: productsOrCategory,
       label: 'Продукти',
+      admin: { condition: (_, siblingData) => !siblingData?.fromCategory },
+    },
+    {
+      name: 'fromCategory',
+      type: 'relationship',
+      relationTo: 'categories',
+      label: 'Продукти от категория',
+      admin: {
+        description:
+          'Избрана — показват се ВСИЧКИ публикувани продукти от категорията и подкатегориите ѝ, по реда им, и ръчният списък не се ползва.',
+      },
     },
     {
       name: 'cardStyle',

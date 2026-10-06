@@ -87,33 +87,52 @@ export const BannerProductRow: Block = {
     {
       name: 'showMoreTile',
       type: 'checkbox',
-      label: 'Плочка "Виж още" в края на реда',
+      label: 'Показвай плочката в края на реда',
       defaultValue: true,
     },
     {
       name: 'moreTile',
       type: 'group',
-      label: 'Плочка "Виж още"',
+      label: 'Плочка в края на реда',
       admin: { condition: (_, siblingData) => Boolean(siblingData?.showMoreTile) },
       fields: [
         /*
-          Петата колона в оригинала са ДВЕ карти една над друга. Горната е
-          голяма, със снимка; долната е само текст със стрелка. Полетата с
-          наставка „secondary" са за долната. Ако и двете са празни,
-          колоната изобщо не се показва.
+          Бяла карта с размера на продуктовите до нея: заглавие горе вляво,
+          кръгла стрелка горе вдясно, снимка отдолу; цялата карта е линк.
+
+          По желание под нея — втора, ниска карта само с текст и стрелка
+          (в оригинала: „Аксесоари"). Полетата с наставка „secondary" са за
+          нея. Ако и двете са празни, колоната изобщо не се показва.
+
+          `task-stranica-portativni-elektrocentrali.md` искаше нова група
+          „Плочка в края на реда" — но тази е същата плочка; втора група
+          със същото значение би се разминала с първата. Стойностите по
+          подразбиране остават общи („Виж всички"), защото блокът стои и
+          под други серии.
         */
-        { name: 'label', type: 'text', defaultValue: 'Виж всички', label: 'Горна карта — текст' },
-        { name: 'url', type: 'text', label: 'Горна карта — адрес' },
+        {
+          name: 'label',
+          type: 'text',
+          defaultValue: 'Виж всички',
+          label: 'Заглавие',
+          admin: { description: 'Напр. „Вижте всички електроцентрали »".' },
+        },
+        {
+          name: 'url',
+          type: 'text',
+          label: 'Линк',
+          admin: { description: 'Напр. /rakovodstvo-portativni-elektrocentrali. Без линк плочката не се показва.' },
+        },
         {
           name: 'image',
           type: 'upload',
           relationTo: 'media',
-          label: 'Горна карта — снимка',
-          admin: { description: 'В оригинала това е групова снимка на продуктите от серията.' },
+          label: 'Снимка',
+          admin: { description: 'Групова снимка на продуктите — стои в долната част на картата.' },
         },
-        { name: 'description', type: 'text', label: 'Горна карта — описание' },
-        { name: 'secondaryLabel', type: 'text', label: 'Долна карта — текст' },
-        { name: 'secondaryUrl', type: 'text', label: 'Долна карта — адрес' },
+        { name: 'description', type: 'text', label: 'Текст под заглавието (по желание)' },
+        { name: 'secondaryLabel', type: 'text', label: 'Втора карта отдолу — текст' },
+        { name: 'secondaryUrl', type: 'text', label: 'Втора карта отдолу — адрес' },
       ],
     },
   ],

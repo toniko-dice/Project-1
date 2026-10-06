@@ -145,7 +145,7 @@ export const exists = async (p: string): Promise<boolean> => {
  * оригиналът се пази байт по байт. Скриптът го изписва, за да не се търси
  * несъществуващ бъг.
  */
-const sniffFormat = async (filePath: string): Promise<string | null> => {
+export const sniffFormat = async (filePath: string): Promise<string | null> => {
   const fh = await fs.open(filePath, 'r')
   try {
     const buf = Buffer.alloc(12)
@@ -161,7 +161,7 @@ const sniffFormat = async (filePath: string): Promise<string | null> => {
   }
 }
 
-const MIME: Record<string, string> = {
+export const MIME: Record<string, string> = {
   '.webp': 'image/webp',
   '.jpg': 'image/jpeg',
   '.jpeg': 'image/jpeg',
@@ -204,7 +204,7 @@ export const caseSafeStem = (stem: string): string =>
   `${stem}-${createHash('sha1').update(stem).digest('hex').slice(0, 6)}`
 
 /** Основата на име от Медия (без `bareStem`: Payload вече е махнал точките). */
-const mediaFileStem = (filename: string): string => path.basename(filename, path.extname(filename))
+export const mediaFileStem = (filename: string): string => path.basename(filename, path.extname(filename))
 
 type MediaNames = { filename?: string | null; sizes?: unknown }
 
@@ -463,7 +463,7 @@ type Content = {
  * наистина недостъпни. `User-Agent` на браузър, защото eu.ecoflow.com
  * връща 403 на заявка без него.
  */
-const downloadFile = async (url: string, dest: string): Promise<void> => {
+export const downloadFile = async (url: string, dest: string): Promise<void> => {
   let последна: Error | null = null
 
   for (let опит = 1; опит <= 3; опит += 1) {

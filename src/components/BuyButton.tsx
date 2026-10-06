@@ -15,7 +15,21 @@ import type { Product } from '@/payload-types'
  *
  * Покупката е в dice.bg, затова адресът е `externalUrl`, в нов раздел.
  */
-type Size = 'lg' | 'md'
+type Size = 'lg' | 'md' | 'sm'
+
+/*
+  Цветът — по мястото. Зеленото е бутонът на магазина навсякъде; черният и
+  синият са за ръководствата, както на eu.ecoflow.com (таблицата с
+  времената — черен, „снимка + текст" — син, овален). Правилото за
+  наличност и адресът са едни и същи — затова е опция тук, не нов бутон.
+*/
+type Tone = 'brand' | 'dark' | 'blue'
+
+const TONE: Record<Tone, string> = {
+  brand: 'rounded-md bg-brand text-white hover:bg-brand-dark',
+  dark: 'rounded-md bg-night text-white hover:bg-ink',
+  blue: 'rounded-full bg-[#2164ff] text-white hover:bg-[#1a50d6]',
+}
 
 const SIZE: Record<Size, string> = {
   // Продуктовата страница: 48 px, на цял ред на телефон, по съдържанието на голям екран.
@@ -26,25 +40,31 @@ const SIZE: Record<Size, string> = {
     затова там шрифтът и отстъпът са малко по-малки.
   */
   md: 'h-11 w-full px-2 text-[13px] sm:px-4 sm:text-sm',
+  // Ръководствата: 40 px, по съдържанието.
+  sm: 'min-h-10 px-6 text-sm',
 }
 
-const BASE =
-  'inline-flex items-center justify-center whitespace-nowrap rounded-md font-semibold'
+const BASE = 'inline-flex items-center justify-center whitespace-nowrap font-semibold'
 
 export const BuyButton = ({
   product,
   size = 'lg',
+  tone = 'brand',
+  label,
   className = '',
 }: {
   product: Pick<Product, 'availability' | 'externalUrl' | 'ctaLabel'>
   size?: Size
+  tone?: Tone
+  /** Надпис на мястото вместо `ctaLabel` на продукта — само при „в наличност". */
+  label?: string | null
   className?: string
 }) => {
   if (product.availability === 'out-of-stock') {
     return (
       <span
         aria-disabled="true"
-        className={`${BASE} ${SIZE[size]} cursor-not-allowed bg-tile text-ink-muted ${className}`}
+        className={`${BASE} ${SIZE[size]} cursor-not-allowed rounded-md bg-tile text-ink-muted ${className}`}
       >
         Изчерпан
       </span>
@@ -59,11 +79,11 @@ export const BuyButton = ({
       href={product.externalUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className={`${BASE} ${SIZE[size]} cursor-pointer bg-brand text-white transition-colors duration-200 hover:bg-brand-dark ${className}`}
+      className={`${BASE} ${SIZE[size]} ${TONE[tone]} cursor-pointer transition-colors duration-200 ${className}`}
     >
       {product.availability === 'on-request'
         ? 'Заяви в dice.bg'
-        : product.ctaLabel?.trim() || 'Купи сега'}
+        : label?.trim() || product.ctaLabel?.trim() || 'Купи сега'}
     </a>
   )
 }

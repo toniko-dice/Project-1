@@ -1,7 +1,7 @@
 /**
  * SEO отчет (`task-seo-tehnichesko.md`, т. 11) — `npm run seo:check`.
  *
- * Минава през публикуваните продукти и категориите и изписва:
+ * Минава през публикуваните продукти, категориите и страниците и изписва:
  * - мета заглавие над 60 знака — КАКТО ЩЕ ИЗЛЕЗЕ (`finalTitle`: с
  *   наставката, ако се събира);
  * - мета описание под 110 или над 158 знака, или празно (при категория
@@ -66,7 +66,7 @@ const entries: CatalogEntry[] = продукти.map((p) => ({
 }))
 const catalog = makeCatalog(tree, entries)
 
-type Ред = { вид: 'продукт' | 'категория'; slug: string; заглавие: string; описание: string; авто: boolean }
+type Ред = { вид: 'продукт' | 'категория' | 'страница'; slug: string; заглавие: string; описание: string; авто: boolean }
 const редове: Ред[] = []
 
 for (const p of продукти) {
@@ -83,6 +83,26 @@ for (const c of сСтраница) {
     заглавие: finalTitle(categoryMetaTitle(catalog, c)),
     описание: own || autoCategoryDescription(c.title, productsInBranch(catalog, c.id)),
     авто: !own,
+  })
+}
+
+/* Страниците — без началната: тя е „/" и заглавието ѝ идва от „Общи настройки". */
+const страниците = (
+  await payload.find({
+    collection: 'pages',
+    where: { and: [{ _status: { equals: 'published' } }, { slug: { not_equals: 'home' } }] },
+    pagination: false,
+    depth: 0,
+    select: { slug: true, title: true, metaTitle: true, metaDescription: true },
+  })
+).docs
+for (const p of страниците) {
+  редове.push({
+    вид: 'страница',
+    slug: p.slug,
+    заглавие: finalTitle(p.metaTitle || p.title),
+    описание: (p.metaDescription || '').trim(),
+    авто: false,
   })
 }
 
@@ -196,6 +216,8 @@ await поПартиди(
 )
 раздел(`ВЪТРЕШНИ ЛИНКОВЕ КЪМ 404 (проверени ${линкове.size})`, счупени.sort())
 
-console.log(`SEO ОТЧЕТ — ${продукти.length} публикувани продукта, ${сСтраница.length} категории със страница, ${страници.length} страници от sitemap`)
+console.log(
+  `SEO ОТЧЕТ — ${продукти.length} публикувани продукта, ${сСтраница.length} категории със страница, ${страниците.length} страници, ${страници.length} адреса от sitemap`,
+)
 console.log(изход.join('\n'))
 process.exit(0)

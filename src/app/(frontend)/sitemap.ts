@@ -35,8 +35,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       collection: 'pages',
       where: { _status: { equals: 'published' } },
       pagination: false,
-      depth: 0,
-      select: { slug: true, updatedAt: true },
+      // Дълбочина 1 — снимките в секциите идват като записи от Медия (за `<image:image>`).
+      depth: 1,
+      select: { slug: true, updatedAt: true, metaImage: true, layout: true },
     }),
     getCatalog(),
   ])
@@ -53,10 +54,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   for (const page of pages.docs) {
     if (page.slug === 'home') continue
+    const снимки = pageImages(page.metaImage, page.layout)
     записи.push({
       url: absoluteUrl(`/${page.slug}`),
       lastModified: page.updatedAt ? new Date(page.updatedAt) : undefined,
       changeFrequency: 'monthly',
+      ...(снимки.length ? { images: снимки } : {}),
     })
   }
 
@@ -111,4 +114,35 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   return записи
+}
+
+/**
+ * Снимките на страница за `<image:image>`: мета снимката първа, после
+ * снимките за компютър от видимите секции (`image` — не `imageMobile`,
+ * същата сцена в друга рамка), без повторения, до 10. Webp размерът
+ * `large`, както при продуктите.
+ *
+ * Обхождането е общо, а не по вид блок: нов блок със снимка влиза сам.
+ * Свързаните продукти не влизат — при дълбочина 1 тяхната снимка е само
+ * номер, а и те имат своя адрес в картата.
+ */
+const pageImages = (metaImage: unknown, layout: unknown): string[] => {
+  const адреси: string[] = []
+  const добави = (m: unknown) => {
+    if (!m || typeof m !== 'object' || !('filename' in m)) return
+    const url = mediaUrl(m as never, 'large') ?? mediaUrl(m as never)
+    if (url && !адреси.includes(absoluteUrl(url))) адреси.push(absoluteUrl(url))
+  }
+  добави(metaImage)
+  const обходи = (node: unknown): void => {
+    if (Array.isArray(node)) return node.forEach(обходи)
+    if (!node || typeof node !== 'object') return
+    if ((node as { hidden?: boolean }).hidden === true) return
+    for (const [k, v] of Object.entries(node)) {
+      if (k === 'image') добави(v)
+      else if (!['imageMobile', 'products', 'product', 'fromCategory'].includes(k)) обходи(v)
+    }
+  }
+  обходи(layout)
+  return адреси.slice(0, 10)
 }

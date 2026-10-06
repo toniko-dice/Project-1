@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound, permanentRedirect } from 'next/navigation'
 
-import type { Category } from '@/payload-types'
+import type { Category, Page } from '@/payload-types'
 import { BelowListText } from '@/components/BelowListText'
 import { Breadcrumbs, breadcrumbSchema } from '@/components/Breadcrumbs'
 import { CategoryProducts, type CategoryTab } from '@/components/CategoryProducts'
@@ -36,6 +36,7 @@ import { accessoriesPath, categoryPath, productPath } from '@/lib/urls'
 import { categoryMetaDescription, categoryMetaTitle, categoryNoindex } from '@/lib/seo'
 import { finalTitle, pageTitle, SITE_NAME } from '@/lib/title'
 import { absoluteUrl } from '@/lib/site-url'
+import { publishedRelation } from '@/lib/relations'
 
 type Args = { params: Promise<{ slug: string }> }
 
@@ -158,6 +159,7 @@ export default async function CategoryPage({ params }: Args) {
       })
     : null
 
+  const ръководство = publishedRelation<Page>(category.guideLink?.page)
   const crumbs = categoryCrumbs(tree, category)
   const heroUrl = mediaUrl(category.heroImage, 'wide')
   const banner = bannerImage(category.banner)
@@ -286,6 +288,22 @@ export default async function CategoryPage({ params }: Args) {
               <span aria-hidden="true">→</span>
             </Link>
           </div>
+        ) : null}
+
+        {/*
+          Линк към ръководство („Не знаете коя да изберете? …") — под
+          списъка, над „Текст под списъка". Адресът е от избраната страница;
+          чернова не дава линк към 404.
+        */}
+        {ръководство ? (
+          <p className="mt-8 text-center">
+            <Link
+              href={`/${ръководство.slug}`}
+              className="inline-flex min-h-11 cursor-pointer items-center text-[15px] font-medium text-ink underline decoration-line-strong underline-offset-4 transition-colors duration-200 hover:decoration-ink"
+            >
+              {category.guideLink?.label?.trim() || `${ръководство.title} →`}
+            </Link>
+          </p>
         ) : null}
 
         {/* SEO текстът — под продуктите и под линка към аксесоарите (т. 13). */}
