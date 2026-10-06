@@ -237,7 +237,12 @@ export const SplitBannerBlock = ({ block }: { block: BlockOf<'splitBanner'> }) =
         alt={block.imageAlt}
         sizes="100vw"
         className="size-full object-cover"
-        mobileClassName="h-auto w-full"
+        /*
+          Снимките за телефон на EcoFlow са сцена отгоре и черно отдолу
+          (там в оригинала ляга текстът). Тук текстът е ПОД снимката, затова
+          тя се изрязва до сцената — иначе остава празно черно поле.
+        */
+        mobileClassName="aspect-[9/5] w-full object-cover object-top"
       />
     </div>
     <div className="relative mx-auto flex max-w-[1250px] md:min-h-[506px] md:items-center md:justify-end md:px-3">
