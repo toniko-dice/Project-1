@@ -260,11 +260,16 @@ export const новиИмена = async (
     if (има.has(id) && желано) заявки.push({ id, желано, място })
   }
 
-  /* Продуктите — по `_order`, и черновите. */
+  /*
+    Продуктите — по `_order`, и черновите. С `draft: true` — последната
+    версия, не публикуваната: при внос върху продукт-чернова главният ред
+    още държи старото съдържание и на 6 октомври 2026 сивият заместител на
+    DELTA 2 Max излезе „главна снимка" и беше преименуван наново.
+  */
   const productsCfg = payload.collections.products!.config
   const productFields = полетаНа(productsCfg as never)
   const продукти = (
-    await payload.find({ collection: 'products', pagination: false, depth: 0, sort: '_order', draft: false })
+    await payload.find({ collection: 'products', pagination: false, depth: 0, sort: '_order', draft: true })
   ).docs as unknown as Record<string, unknown>[]
 
   for (const p of продукти) {
