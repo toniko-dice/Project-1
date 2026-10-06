@@ -31,5 +31,19 @@ export const resolvedRelations = <T,>(
     )
   }
 
-  return docs
+  /*
+    Чернова не се показва — както в менюто, категорията и търсенето.
+    Payload зарежда връзката, без да гледа статуса; на 6 октомври 2026
+    петте временни продукта, върнати в чернова, стояха в блоковете на
+    началната с линк към 404. Липсата е очаквана — без предупреждение.
+  */
+  return docs.filter(публикуван)
 }
+
+/** Свързан документ без чернова (`_status` е в `defaultPopulate` на продуктите). */
+export const публикуван = (doc: unknown): boolean =>
+  (doc as { _status?: string | null } | null)?._status !== 'draft'
+
+/** Свързаният документ, ако е зареден и не е чернова; иначе `null`. */
+export const publishedRelation = <T,>(value: number | T | null | undefined): T | null =>
+  value && typeof value !== 'number' && публикуван(value) ? value : null

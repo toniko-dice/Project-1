@@ -8,7 +8,7 @@ import { SectionImage } from '../SectionImage'
 import { ProductCard } from '../ProductCard'
 import { BoxTabs } from './BoxTabs'
 import { ProductTabs, type ShowcaseTab, type TabsLayout } from './ProductTabs'
-import { resolvedRelations } from '@/lib/relations'
+import { publishedRelation, resolvedRelations } from '@/lib/relations'
 
 type Sections = NonNullable<Product['sections']>
 type Section = Sections[number]
@@ -348,7 +348,7 @@ const BundleOptionsBlock = ({
       <ul className="flex flex-col gap-3">
         {options.map((o, i) => {
           const off = discountPercent(o.price, o.comparePrice)
-          const product = typeof o.product === 'number' ? null : o.product
+          const product = publishedRelation(o.product)
           const href = o.externalUrl || product?.externalUrl || null
           const clickable = !o.isCurrent && !o.soldOut && href
 
@@ -430,7 +430,8 @@ const ComparisonTableBlock = ({
   const rows = block.rows ?? []
 
   const cols = columns.map((c) => {
-    const product = typeof c.product === 'number' ? null : c.product
+    // Чернова — колоната остава с ръчните си полета, без линк към 404.
+    const product = publishedRelation(c.product)
     /*
       Всичко идва от продукта; полетата в колоната са замяна. Размерът е
       „content", не квадрат: „card" и „thumbnail" режат по центъра и при
