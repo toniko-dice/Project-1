@@ -232,6 +232,11 @@ export const Offers: CollectionConfig = {
           label: 'Продукти',
           fields: [
             {
+              name: 'draftGuard',
+              type: 'ui',
+              admin: { components: { Field: '@/components/admin/OfferDraftGuard#OfferDraftGuard' } },
+            },
+            {
               name: 'items',
               type: 'array',
               label: 'Редове',
