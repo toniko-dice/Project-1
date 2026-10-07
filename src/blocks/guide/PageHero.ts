@@ -21,6 +21,21 @@ export const PageHero: Block = {
       admin: { description: 'Главното заглавие на страницата. Една такава секция на страница.' },
     },
     { name: 'body', type: 'textarea', label: 'Текст под заглавието' },
+    {
+      /*
+        Тъмна снимка (нощен дом на „За EcoFlow") не понася тъмен текст под
+        бял воал — там текстът е бял, отдолу, върху затъмнение, както в
+        ecoflow.com/eu/about-us.
+      */
+      name: 'tone',
+      type: 'select',
+      label: 'Текст',
+      defaultValue: 'dark-top',
+      options: [
+        { label: 'Тъмен, отгоре (светла снимка)', value: 'dark-top' },
+        { label: 'Бял, отдолу (тъмна снимка)', value: 'light-bottom' },
+      ],
+    },
     ...imageFields(),
   ],
 }

@@ -434,7 +434,7 @@ await payload.updateGlobal({
       {
         heading: 'Фирма',
         links: [
-          { label: 'За нас', url: '/za-nas' },
+          { label: 'За EcoFlow', url: '/za-ecoflow' },
           { label: 'Контакти', url: '/kontakti' },
           { label: 'Кариери', url: '/karieri' },
           { label: 'Новини', url: '/novini' },

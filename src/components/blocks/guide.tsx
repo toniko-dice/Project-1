@@ -51,7 +51,7 @@ const Lead = ({ children, className = '' }: { children?: React.ReactNode; classN
  * Класовете на всяка се подават отделно — на телефон снимката често е с
  * естествената си височина, на компютър е изрязана в рамка.
  */
-const DualImage = ({
+export const DualImage = ({
   image,
   mobile,
   alt,
@@ -99,7 +99,10 @@ const DualImage = ({
 
 /* ─────────── Заглавна снимка (H1) ─────────── */
 
-export const PageHeroBlock = ({ block }: { block: BlockOf<'pageHero'> }) => (
+export const PageHeroBlock = ({ block }: { block: BlockOf<'pageHero'> }) =>
+  block.tone === 'light-bottom' ? (
+    <PageHeroLight block={block} />
+  ) : (
   <section className="relative overflow-hidden">
     {/*
       Снимката е фонът, текстът стои ОТГОРЕ в центъра, тъмен — както в
@@ -125,6 +128,33 @@ export const PageHeroBlock = ({ block }: { block: BlockOf<'pageHero'> }) => (
           <h1 className="text-[28px] font-medium leading-[1.2] md:text-[44px] lg:text-[52px]">{block.heading}</h1>
           {block.body ? (
             <p className="mx-auto mt-3 max-w-[880px] text-sm leading-[1.35] md:text-lg">{block.body}</p>
+          ) : null}
+        </div>
+      </div>
+    </div>
+  </section>
+  )
+
+/** Бял текст отдолу върху затъмнение — за тъмна снимка (`tone: light-bottom`). */
+const PageHeroLight = ({ block }: { block: BlockOf<'pageHero'> }) => (
+  <section className="relative overflow-hidden bg-black">
+    <div className="relative aspect-[375/600] w-full md:aspect-auto md:h-[min(760px,calc(100vh-60px))] md:min-h-[560px]">
+      <DualImage
+        image={block.image}
+        mobile={block.imageMobile}
+        alt={block.imageAlt}
+        sizes="100vw"
+        priority
+        className="absolute inset-0 size-full object-cover"
+      />
+      <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/85 via-black/45 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 px-4 pb-8 md:pb-14">
+        <div className="mx-auto max-w-[1100px] text-center text-white">
+          <h1 className="text-[30px] font-semibold leading-[1.15] md:text-[48px]">{block.heading}</h1>
+          {block.body ? (
+            <p className="mx-auto mt-4 max-w-[1000px] whitespace-pre-line text-sm leading-[1.45] text-white/90 md:text-base">
+              {block.body}
+            </p>
           ) : null}
         </div>
       </div>

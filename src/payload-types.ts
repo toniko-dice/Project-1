@@ -1202,6 +1202,10 @@ export interface Category {
              * По избор. Без снимка банерът е текст върху фона на страницата.
              */
             image?: (number | null) | Media;
+            /**
+             * По желание. Празно — същото като за компютър.
+             */
+            imageMobile?: (number | null) | Media;
             cta?: {
               label?: string | null;
               /**
@@ -1310,6 +1314,7 @@ export interface Category {
              */
             heading?: string | null;
             body?: string | null;
+            tone?: ('dark-top' | 'light-bottom') | null;
             image?: (number | null) | Media;
             /**
              * По желание. Празно — същата като за компютър.
@@ -1660,6 +1665,203 @@ export interface Category {
             id?: string | null;
             blockName?: string | null;
             blockType: 'simpleTable';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            heading?: string | null;
+            body?: string | null;
+            stats?:
+              | {
+                  /**
+                   * Както излиза накрая: „6 млн.+", „1129".
+                   */
+                  value?: string | null;
+                  label?: string | null;
+                  /**
+                   * Числото в стойността, до което се брои при влизане в екрана. Празно — без брояч.
+                   */
+                  countTo?: number | null;
+                  id?: string | null;
+                }[]
+              | null;
+            image?: (number | null) | Media;
+            /**
+             * По желание. Празно — същата като за компютър.
+             */
+            imageMobile?: (number | null) | Media;
+            /**
+             * За незрящи и за търсачките. Празно — описанието от Медия.
+             */
+            imageAlt?: string | null;
+            mapImage?: (number | null) | Media;
+            /**
+             * По желание. Празно — същата.
+             */
+            mapImageMobile?: (number | null) | Media;
+            /**
+             * Точка с надпис върху картата. Позицията е в проценти от ширината и височината на картата.
+             */
+            locations?:
+              | {
+                  label?: string | null;
+                  x?: number | null;
+                  y?: number | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'companyStats';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            heading?: string | null;
+            tabs?:
+              | {
+                  label?: string | null;
+                  heading?: string | null;
+                  body?: string | null;
+                  ctaLabel?: string | null;
+                  /**
+                   * Вътрешен път, напр. /kategorii/delta-seriya
+                   */
+                  ctaLink?: string | null;
+                  image?: (number | null) | Media;
+                  /**
+                   * По желание. Празно — същата като за компютър.
+                   */
+                  imageMobile?: (number | null) | Media;
+                  /**
+                   * За незрящи и за търсачките. Празно — описанието от Медия.
+                   */
+                  imageAlt?: string | null;
+                  /**
+                   * До 4 в ред; на телефон се плъзгат. Чернова не се показва.
+                   */
+                  products?:
+                    | {
+                        product?: (number | null) | Product;
+                        /**
+                         * Празно — кратката спецификация на продукта.
+                         */
+                        specLine?: string | null;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'productTabs';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            items?:
+              | {
+                  /**
+                   * Картата остава тук, но не се показва на сайта.
+                   */
+                  hidden?: boolean | null;
+                  image?: (number | null) | Media;
+                  title?: string | null;
+                  /**
+                   * Напр. „3 отличия".
+                   */
+                  subtitle?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'awardsMarquee';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            theme?: ('light' | 'dark') | null;
+            headingLevel?: ('h2' | 'h3') | null;
+            imagePosition?: ('below' | 'above') | null;
+            heading?: string | null;
+            body?: string | null;
+            image?: (number | null) | Media;
+            /**
+             * По желание. Празно — същата като за компютър.
+             */
+            imageMobile?: (number | null) | Media;
+            /**
+             * За незрящи и за търсачките. Празно — описанието от Медия.
+             */
+            imageAlt?: string | null;
+            /**
+             * До два. Първият е основният (запълнен).
+             */
+            buttons?:
+              | {
+                  label?: string | null;
+                  link?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'textSection';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            heading?: string | null;
+            items?:
+              | {
+                  /**
+                   * Картата остава тук, но не се показва на сайта.
+                   */
+                  hidden?: boolean | null;
+                  image?: (number | null) | Media;
+                  /**
+                   * Без кавички — слагат се сами („…").
+                   */
+                  quote?: string | null;
+                  source?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'pressQuotes';
           }
       )[]
     | null;
@@ -2084,6 +2286,10 @@ export interface Page {
              * По избор. Без снимка банерът е текст върху фона на страницата.
              */
             image?: (number | null) | Media;
+            /**
+             * По желание. Празно — същото като за компютър.
+             */
+            imageMobile?: (number | null) | Media;
             cta?: {
               label?: string | null;
               /**
@@ -2192,6 +2398,7 @@ export interface Page {
              */
             heading?: string | null;
             body?: string | null;
+            tone?: ('dark-top' | 'light-bottom') | null;
             image?: (number | null) | Media;
             /**
              * По желание. Празно — същата като за компютър.
@@ -2542,6 +2749,203 @@ export interface Page {
             id?: string | null;
             blockName?: string | null;
             blockType: 'simpleTable';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            heading?: string | null;
+            body?: string | null;
+            stats?:
+              | {
+                  /**
+                   * Както излиза накрая: „6 млн.+", „1129".
+                   */
+                  value?: string | null;
+                  label?: string | null;
+                  /**
+                   * Числото в стойността, до което се брои при влизане в екрана. Празно — без брояч.
+                   */
+                  countTo?: number | null;
+                  id?: string | null;
+                }[]
+              | null;
+            image?: (number | null) | Media;
+            /**
+             * По желание. Празно — същата като за компютър.
+             */
+            imageMobile?: (number | null) | Media;
+            /**
+             * За незрящи и за търсачките. Празно — описанието от Медия.
+             */
+            imageAlt?: string | null;
+            mapImage?: (number | null) | Media;
+            /**
+             * По желание. Празно — същата.
+             */
+            mapImageMobile?: (number | null) | Media;
+            /**
+             * Точка с надпис върху картата. Позицията е в проценти от ширината и височината на картата.
+             */
+            locations?:
+              | {
+                  label?: string | null;
+                  x?: number | null;
+                  y?: number | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'companyStats';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            heading?: string | null;
+            tabs?:
+              | {
+                  label?: string | null;
+                  heading?: string | null;
+                  body?: string | null;
+                  ctaLabel?: string | null;
+                  /**
+                   * Вътрешен път, напр. /kategorii/delta-seriya
+                   */
+                  ctaLink?: string | null;
+                  image?: (number | null) | Media;
+                  /**
+                   * По желание. Празно — същата като за компютър.
+                   */
+                  imageMobile?: (number | null) | Media;
+                  /**
+                   * За незрящи и за търсачките. Празно — описанието от Медия.
+                   */
+                  imageAlt?: string | null;
+                  /**
+                   * До 4 в ред; на телефон се плъзгат. Чернова не се показва.
+                   */
+                  products?:
+                    | {
+                        product?: (number | null) | Product;
+                        /**
+                         * Празно — кратката спецификация на продукта.
+                         */
+                        specLine?: string | null;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'productTabs';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            items?:
+              | {
+                  /**
+                   * Картата остава тук, но не се показва на сайта.
+                   */
+                  hidden?: boolean | null;
+                  image?: (number | null) | Media;
+                  title?: string | null;
+                  /**
+                   * Напр. „3 отличия".
+                   */
+                  subtitle?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'awardsMarquee';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            theme?: ('light' | 'dark') | null;
+            headingLevel?: ('h2' | 'h3') | null;
+            imagePosition?: ('below' | 'above') | null;
+            heading?: string | null;
+            body?: string | null;
+            image?: (number | null) | Media;
+            /**
+             * По желание. Празно — същата като за компютър.
+             */
+            imageMobile?: (number | null) | Media;
+            /**
+             * За незрящи и за търсачките. Празно — описанието от Медия.
+             */
+            imageAlt?: string | null;
+            /**
+             * До два. Първият е основният (запълнен).
+             */
+            buttons?:
+              | {
+                  label?: string | null;
+                  link?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'textSection';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            heading?: string | null;
+            items?:
+              | {
+                  /**
+                   * Картата остава тук, но не се показва на сайта.
+                   */
+                  hidden?: boolean | null;
+                  image?: (number | null) | Media;
+                  /**
+                   * Без кавички — слагат се сами („…").
+                   */
+                  quote?: string | null;
+                  source?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'pressQuotes';
           }
       )[]
     | null;
@@ -3341,6 +3745,7 @@ export interface PagesSelect<T extends boolean = true> {
               subheading?: T;
               priceNote?: T;
               image?: T;
+              imageMobile?: T;
               cta?:
                 | T
                 | {
@@ -3399,6 +3804,7 @@ export interface PagesSelect<T extends boolean = true> {
               anchorLabel?: T;
               heading?: T;
               body?: T;
+              tone?: T;
               image?: T;
               imageMobile?: T;
               imageAlt?: T;
@@ -3603,6 +4009,124 @@ export interface PagesSelect<T extends boolean = true> {
                     id?: T;
                   };
               note?: T;
+              id?: T;
+              blockName?: T;
+            };
+        companyStats?:
+          | T
+          | {
+              hidden?: T;
+              anchorLabel?: T;
+              heading?: T;
+              body?: T;
+              stats?:
+                | T
+                | {
+                    value?: T;
+                    label?: T;
+                    countTo?: T;
+                    id?: T;
+                  };
+              image?: T;
+              imageMobile?: T;
+              imageAlt?: T;
+              mapImage?: T;
+              mapImageMobile?: T;
+              locations?:
+                | T
+                | {
+                    label?: T;
+                    x?: T;
+                    y?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        productTabs?:
+          | T
+          | {
+              hidden?: T;
+              anchorLabel?: T;
+              heading?: T;
+              tabs?:
+                | T
+                | {
+                    label?: T;
+                    heading?: T;
+                    body?: T;
+                    ctaLabel?: T;
+                    ctaLink?: T;
+                    image?: T;
+                    imageMobile?: T;
+                    imageAlt?: T;
+                    products?:
+                      | T
+                      | {
+                          product?: T;
+                          specLine?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        awardsMarquee?:
+          | T
+          | {
+              hidden?: T;
+              anchorLabel?: T;
+              items?:
+                | T
+                | {
+                    hidden?: T;
+                    image?: T;
+                    title?: T;
+                    subtitle?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        textSection?:
+          | T
+          | {
+              hidden?: T;
+              anchorLabel?: T;
+              theme?: T;
+              headingLevel?: T;
+              imagePosition?: T;
+              heading?: T;
+              body?: T;
+              image?: T;
+              imageMobile?: T;
+              imageAlt?: T;
+              buttons?:
+                | T
+                | {
+                    label?: T;
+                    link?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        pressQuotes?:
+          | T
+          | {
+              hidden?: T;
+              anchorLabel?: T;
+              heading?: T;
+              items?:
+                | T
+                | {
+                    hidden?: T;
+                    image?: T;
+                    quote?: T;
+                    source?: T;
+                    id?: T;
+                  };
               id?: T;
               blockName?: T;
             };
@@ -4094,6 +4618,7 @@ export interface CategoriesSelect<T extends boolean = true> {
               subheading?: T;
               priceNote?: T;
               image?: T;
+              imageMobile?: T;
               cta?:
                 | T
                 | {
@@ -4152,6 +4677,7 @@ export interface CategoriesSelect<T extends boolean = true> {
               anchorLabel?: T;
               heading?: T;
               body?: T;
+              tone?: T;
               image?: T;
               imageMobile?: T;
               imageAlt?: T;
@@ -4356,6 +4882,124 @@ export interface CategoriesSelect<T extends boolean = true> {
                     id?: T;
                   };
               note?: T;
+              id?: T;
+              blockName?: T;
+            };
+        companyStats?:
+          | T
+          | {
+              hidden?: T;
+              anchorLabel?: T;
+              heading?: T;
+              body?: T;
+              stats?:
+                | T
+                | {
+                    value?: T;
+                    label?: T;
+                    countTo?: T;
+                    id?: T;
+                  };
+              image?: T;
+              imageMobile?: T;
+              imageAlt?: T;
+              mapImage?: T;
+              mapImageMobile?: T;
+              locations?:
+                | T
+                | {
+                    label?: T;
+                    x?: T;
+                    y?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        productTabs?:
+          | T
+          | {
+              hidden?: T;
+              anchorLabel?: T;
+              heading?: T;
+              tabs?:
+                | T
+                | {
+                    label?: T;
+                    heading?: T;
+                    body?: T;
+                    ctaLabel?: T;
+                    ctaLink?: T;
+                    image?: T;
+                    imageMobile?: T;
+                    imageAlt?: T;
+                    products?:
+                      | T
+                      | {
+                          product?: T;
+                          specLine?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        awardsMarquee?:
+          | T
+          | {
+              hidden?: T;
+              anchorLabel?: T;
+              items?:
+                | T
+                | {
+                    hidden?: T;
+                    image?: T;
+                    title?: T;
+                    subtitle?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        textSection?:
+          | T
+          | {
+              hidden?: T;
+              anchorLabel?: T;
+              theme?: T;
+              headingLevel?: T;
+              imagePosition?: T;
+              heading?: T;
+              body?: T;
+              image?: T;
+              imageMobile?: T;
+              imageAlt?: T;
+              buttons?:
+                | T
+                | {
+                    label?: T;
+                    link?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        pressQuotes?:
+          | T
+          | {
+              hidden?: T;
+              anchorLabel?: T;
+              heading?: T;
+              items?:
+                | T
+                | {
+                    hidden?: T;
+                    image?: T;
+                    quote?: T;
+                    source?: T;
+                    id?: T;
+                  };
               id?: T;
               blockName?: T;
             };

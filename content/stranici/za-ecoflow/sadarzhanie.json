@@ -1,0 +1,335 @@
+{
+  "_bележка": "Съдържание на страница „За EcoFlow“ (колекция Pages). Внася се с npm run import:page za-ecoflow. Продуктите са по slug. Блокове productTabs, companyStats, awardsMarquee, textSection и pressQuotes са нови — виж task-stranica-za-ecoflow.md.",
+  "_iztochnik": "https://www.ecoflow.com/eu/about-us",
+  "stranica": {
+    "title": "За EcoFlow",
+    "slug": "za-ecoflow",
+    "metaTitle": "За EcoFlow — история, мисия и отличия | EcoFlow България",
+    "metaDescription": "EcoFlow е създадена през 2017 г. и днес има над 6 млн. потребители в 140+ държави. Научете повече за марката, продуктите и отличията ѝ.",
+    "metaImage": "za-ecoflow-energiya-za-nov-svyat.webp"
+  },
+  "sekcii": [
+    {
+      "blockType": "pageHero",
+      "heading": "За EcoFlow",
+      "body": "Визията на EcoFlow е „Power a New World“ — енергия за един нов свят. Като водещ доставчик на екологични енергийни решения EcoFlow изгражда бъдеще с иновативни технологии и интелигентна, свързана система за управление на енергията в дома.\n\nМисията на EcoFlow е да даде на всеки човек и всяко семейство достъп до чиста, надеждна и достъпна енергия — с подход, в който на първо място е потребителят, във всичко, което компанията създава.",
+      "tone": "light-bottom",
+      "image": "za-ecoflow-energiya-za-nov-svyat.webp",
+      "imageMobile": "za-ecoflow-energiya-za-nov-svyat-2.webp",
+      "imageAlt": "Домове, захранвани с енергия от EcoFlow"
+    },
+    {
+      "blockType": "companyStats",
+      "heading": "Как започна всичко",
+      "body": "EcoFlow е създадена през 2017 г. от група инженери, специалисти по батерии, които имат мечта. В глобалния преход към възобновяема енергия компанията е водеща с портативни електроцентрали, соларни технологии и интелигентни решения за енергията в дома.",
+      "stats": [
+        {
+          "value": "6 млн.+",
+          "label": "потребители по света",
+          "countTo": 6
+        },
+        {
+          "value": "140+",
+          "label": "държави и региони",
+          "countTo": 140
+        },
+        {
+          "value": "1129",
+          "label": "патента",
+          "countTo": 1129
+        },
+        {
+          "value": "60+",
+          "label": "бизнес партньори по света",
+          "countTo": 60
+        }
+      ],
+      "locations": [
+        "САЩ",
+        "Германия",
+        "Япония"
+      ],
+      "image": "za-ecoflow-kak-zapochna-1.jpg",
+      "imageMobile": "za-ecoflow-kak-zapochna-1-2.jpg",
+      "mapImage": "za-ecoflow-karta-ofisi.png",
+      "mapImageMobile": "za-ecoflow-karta-ofisi-2.png",
+      "imageAlt": "Карта на света с офисите на EcoFlow"
+    },
+    {
+      "blockType": "productTabs",
+      "heading": "По-умна енергия, по-добър живот",
+      "_bележка": "Табът „Домашна енергия“ (OCEAN 2) е махнат — не го продаваме. STREAM 5000 и STREAM AC 5000 са махнати по решение на собственика. Спецификациите в specLine са от картите на EU страницата.",
+      "tabs": [
+        {
+          "label": "Соларни системи",
+          "heading": "Соларна енергия за дома — просто и лесно",
+          "body": "Съхранявайте слънчевата енергия, намалете сметките за ток и захранвайте дома си с гъвкава батерийна система, която просто включвате в контакта.",
+          "ctaLabel": "Научете повече",
+          "ctaLink": "/kategorii/stream-seriya",
+          "image": "stream-ultra-x-dizayn-1.webp",
+          "imageAlt": "EcoFlow STREAM Ultra X у дома",
+          "products": [
+            {
+              "product": "stream-ultra-x",
+              "specLine": "Разширяема до 23 kWh"
+            },
+            {
+              "product": "stream-ultra",
+              "specLine": "1,92–11,52 kWh | до 12 kW соларен вход (6 устройства × 4 MPPT)"
+            }
+          ]
+        },
+        {
+          "label": "Електроцентрали",
+          "heading": "Енергия навсякъде, където ви трябва",
+          "body": "Водеща в индустрията енергия, на която винаги можете да разчитате — от кратки прекъсвания на тока у дома до приключения навън.",
+          "ctaLabel": "Научете повече",
+          "ctaLink": "/kategorii/portativni-elektrocentrali",
+          "image": "za-ecoflow-elektrocentrali.webp",
+          "imageMobile": "za-ecoflow-elektrocentrali-2.webp",
+          "imageAlt": "Портативни електроцентрали EcoFlow DELTA у дома",
+          "products": [
+            {
+              "product": "delta-3-max",
+              "specLine": "2 kWh капацитет | 3000W макс. изход"
+            },
+            {
+              "product": "delta-pro-3",
+              "specLine": "4 kWh капацитет | 4000W изход"
+            },
+            {
+              "product": "delta-3-plus",
+              "specLine": "1–5 kWh капацитет | 1800W AC изход"
+            }
+          ]
+        },
+        {
+          "label": "Умен живот",
+          "heading": "Иновативни решения за умен живот",
+          "body": "От соларни панели до преносим климатик — останете на комфорт и свързани, където и да сте.",
+          "ctaLabel": "Научете повече",
+          "ctaLink": "/kategorii/umni-ustroystva",
+          "image": "za-ecoflow-umen-zhivot.webp",
+          "imageMobile": "za-ecoflow-umen-zhivot-2.webp",
+          "imageAlt": "Продукти EcoFlow за къмпинг и пътуване сред природата",
+          "products": [
+            {
+              "product": "wave-3",
+              "specLine": "Мощно охлаждане и отопление | Без кабели"
+            },
+            {
+              "product": "glacier-classic-35l",
+              "specLine": "39–43 ч работа без мрежа"
+            },
+            {
+              "product": "solaren-panel-nextgen-220w-bifacial",
+              "specLine": "До 25% ефективност | Двулицев дизайн"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blockType": "wideBanner",
+      "heading": "№ 1 в света в интелигентните решения за съхранение на енергия в дома*",
+      "theme": "dark",
+      "image": "za-ecoflow-nomer-1.jpg",
+      "imageMobile": "za-ecoflow-nomer-1-2.jpg",
+      "_bележка": "Ако wideBanner няма мобилна снимка — ползвай само image."
+    },
+    {
+      "blockType": "legalText",
+      "text": "* По продажби за 2024 г. EcoFlow е № 1 в света сред марките за интелигентни решения за съхранение на енергия в дома. Източник: Frost & Sullivan, Global Smart Home Energy Storage Solutions Industry Research Report (проучването е завършено през декември 2025 г.).\n** „Интелигентни решения за съхранение на енергия в дома“ са продукти, които съчетават производство, съхранение и интелигентно управление на енергията в дома — соларни системи, домашни батерии, резервни и портативни електроцентрали."
+    },
+    {
+      "blockType": "awardsMarquee",
+      "_bележка": "Лента с лога, върти се безкрайно; спира при hover. Логата са бели върху тъмно (както в EU) — провери на кой фон стоят.",
+      "items": [
+        {
+          "title": "TIME Best Inventions",
+          "subtitle": "3 отличия",
+          "image": "za-ecoflow-otlichie-time.png"
+        },
+        {
+          "title": "iF Design",
+          "subtitle": "9 отличия",
+          "image": "za-ecoflow-otlichie-if.png"
+        },
+        {
+          "title": "CES Innovation",
+          "subtitle": "6 отличия",
+          "image": "za-ecoflow-otlichie-ces.png"
+        },
+        {
+          "title": "Red Dot Design",
+          "subtitle": "10 отличия",
+          "image": "za-ecoflow-otlichie-red-dot.png"
+        },
+        {
+          "title": "UX Design",
+          "subtitle": "Отличие",
+          "image": "za-ecoflow-otlichie-ux.png"
+        },
+        {
+          "title": "Yanko Design",
+          "subtitle": "2 отличия",
+          "image": "za-ecoflow-otlichie-yanko.png"
+        },
+        {
+          "title": "TIME",
+          "subtitle": "Водещи GreenTech компании в света за 2025 г.",
+          "image": "za-ecoflow-otlichie-time-greentech.png"
+        }
+      ]
+    },
+    {
+      "blockType": "textSection",
+      "theme": "dark",
+      "headingLevel": "h2",
+      "heading": "Екосистемата EcoFlow",
+      "body": "EcoFlow си партнира с над 15 марки и изгражда свързана екосистема, в която енергията в дома се управлява и синхронизира безпроблемно."
+    },
+    {
+      "blockType": "textSection",
+      "theme": "dark",
+      "headingLevel": "h3",
+      "heading": "Алиансът на екосистемата",
+      "body": "Алиансът свързва решенията на EcoFlow за чиста енергия с широк набор от домашни уреди — от енергийни монитори и термостати до зарядни станции за електромобили, хладилници и други.",
+      "image": "za-ecoflow-alians.png",
+      "imageMobile": "za-ecoflow-alians-2.png",
+      "imageAlt": "Марки партньори в алианса на EcoFlow",
+      "imagePosition": "above"
+    },
+    {
+      "blockType": "pressQuotes",
+      "heading": "Защо EcoFlow",
+      "items": [
+        {
+          "source": "Forbes",
+          "quote": "Продуктът беше впечатляващо добре проектиран още тогава, а продуктите на компанията само стават все по-добри.",
+          "image": "za-ecoflow-medii-forbes.jpg"
+        },
+        {
+          "source": "Bloomberg",
+          "quote": "EcoFlow е сред технологичните стартъпи с особена сила, която може да ги направи конкурентни на световната сцена.",
+          "image": "za-ecoflow-medii-bloomberg.jpg"
+        }
+      ]
+    },
+    {
+      "blockType": "textSection",
+      "theme": "dark",
+      "headingLevel": "h2",
+      "heading": "EcoFlow в България",
+      "body": "ДИ СИ 2008 ООД е официален представител на марката EcoFlow за България. Предлагаме оригинални продукти EcoFlow с търговска гаранция и гаранционно обслужване в България, както и индивидуални оферти за фирми, общини и институции.",
+      "buttons": [
+        {
+          "label": "Гаранционни условия",
+          "link": "/garanciya"
+        },
+        {
+          "label": "Оферта за фирми",
+          "link": "/oferta-za-firmi"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": [
+    {
+      "url": "https://websiteoss.ecoflow.com/figma-uploads/1787644454293-jklcma-compressed-home-carousel-banner.webp",
+      "file": "za-ecoflow-energiya-za-nov-svyat.webp"
+    },
+    {
+      "url": "https://websiteoss.ecoflow.com/figma-uploads/1787644657178-3k2dcc-compressed-mob.webp",
+      "file": "za-ecoflow-energiya-za-nov-svyat-2.webp"
+    },
+    {
+      "url": "https://websiteoss.ecoflow.com/figma-uploads/1767864590779-276srw-compressed-Frame%202094654947.jpg",
+      "file": "za-ecoflow-kak-zapochna-1.jpg"
+    },
+    {
+      "url": "https://websiteoss.ecoflow.com/figma-uploads/1767864568381-dzj9bw-compressed-Frame%202094654649.jpg",
+      "file": "za-ecoflow-kak-zapochna-1-2.jpg"
+    },
+    {
+      "url": "https://websiteoss.ecoflow.com/figma-uploads/1767866187193-94kxsu-compressed-Frame%20693.png",
+      "file": "za-ecoflow-karta-ofisi.png"
+    },
+    {
+      "url": "https://websiteoss.ecoflow.com/figma-uploads/1767866240932-52wb30-compressed-Frame%202094654997.png",
+      "file": "za-ecoflow-karta-ofisi-2.png"
+    },
+    {
+      "url": "https://ecoflow-service-eu-cdn.ecoflow.com/configurable/images/1772703555584/3-%E8%81%9A%E5%90%88%E9%A1%B5%E5%85%A5%E5%8F%A3_Power%20Station_pc.webp",
+      "file": "za-ecoflow-elektrocentrali.webp"
+    },
+    {
+      "url": "https://ecoflow-service-eu-cdn.ecoflow.com/configurable/images/1772704359787/3-%E8%81%9A%E5%90%88%E9%A1%B5%E5%85%A5%E5%8F%A3_Power%20Station_mob.webp",
+      "file": "za-ecoflow-elektrocentrali-2.webp"
+    },
+    {
+      "url": "https://ecoflow-service-us-cdn.ecoflow.com/configurable/images/1764584559584/%E4%BA%A7%E5%93%81%E7%9F%A9%E9%98%B5%E5%A4%A7%E5%9B%BE02.webp",
+      "file": "za-ecoflow-umen-zhivot.webp"
+    },
+    {
+      "url": "https://ecoflow-service-us-cdn.ecoflow.com/configurable/images/1764584565787/03%E4%BA%A7%E5%93%81%E7%9F%A9%E9%98%B5%E5%A4%A7%E5%9B%BE.webp",
+      "file": "za-ecoflow-umen-zhivot-2.webp"
+    },
+    {
+      "url": "https://websiteoss.ecoflow.com/figma-uploads/1768561409015-ixym9u-compressed-PC%E7%AB%AF.jpg",
+      "file": "za-ecoflow-nomer-1.jpg"
+    },
+    {
+      "url": "https://websiteoss.ecoflow.com/figma-uploads/1768561431463-6jswnt-compressed-Frame%201612707934.jpg",
+      "file": "za-ecoflow-nomer-1-2.jpg"
+    },
+    {
+      "url": "https://websiteoss.ecoflow.com/upload/image/1766054442483/1_best.png",
+      "file": "za-ecoflow-otlichie-time.png"
+    },
+    {
+      "url": "https://websiteoss.ecoflow.com/upload/image/1766054442646/2_if.png",
+      "file": "za-ecoflow-otlichie-if.png"
+    },
+    {
+      "url": "https://websiteoss.ecoflow.com/upload/image/1766054442860/3_ces.png",
+      "file": "za-ecoflow-otlichie-ces.png"
+    },
+    {
+      "url": "https://websiteoss.ecoflow.com/upload/image/1766054443136/4_reddot.png",
+      "file": "za-ecoflow-otlichie-red-dot.png"
+    },
+    {
+      "url": "https://websiteoss.ecoflow.com/upload/image/1766054443366/5_ux.png",
+      "file": "za-ecoflow-otlichie-ux.png"
+    },
+    {
+      "url": "https://websiteoss.ecoflow.com/upload/image/1766054443415/6_yd.png",
+      "file": "za-ecoflow-otlichie-yanko.png"
+    },
+    {
+      "url": "https://websiteoss.ecoflow.com/upload/image/1766054443797/7_tech.png",
+      "file": "za-ecoflow-otlichie-time-greentech.png"
+    },
+    {
+      "url": "https://websiteoss.ecoflow.com/figma-uploads/1768464822155-3eazkq-compressed-%E7%94%9F%E6%80%81%E5%88%87%E5%9B%BE1.6.png",
+      "file": "za-ecoflow-alians.png"
+    },
+    {
+      "url": "https://websiteoss.ecoflow.com/figma-uploads/1768464868735-vhagz7-compressed-%E7%94%9F%E6%80%81%E5%88%87%E5%9B%BE1.6.png",
+      "file": "za-ecoflow-alians-2.png"
+    },
+    {
+      "url": "https://websiteoss.ecoflow.com/figma-uploads/1767701692850-ww8mup-compressed-1-image.jpg",
+      "file": "za-ecoflow-medii-forbes.jpg"
+    },
+    {
+      "url": "https://websiteoss.ecoflow.com/figma-uploads/1767701732366-yuwo8e-compressed-2-image.jpg",
+      "file": "za-ecoflow-medii-bloomberg.jpg"
+    }
+  ],
+  "_neyasni": [
+    "Картата в „Как започна всичко“: на EU надписите САЩ / Германия / Япония са HTML върху картата. Ако mapImage вече съдържа надписите на английски — кажи ми; иначе ги сложи като HTML на същите места като в EU.",
+    "Ако някоя снимка от _svali_snimki не се сваля (403 и т.н.) — пиши ми коя."
+  ]
+}

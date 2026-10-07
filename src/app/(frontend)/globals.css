@@ -247,6 +247,16 @@
   .fade-in {
     animation: poyavyavane 200ms ease-out both;
   }
+
+  /* „Лента с отличия": съдържанието е два пъти — на −50 % второто копие е точно на мястото на първото. */
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 /* Уважаваме системната настройка за намалено движение. */

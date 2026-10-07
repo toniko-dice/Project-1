@@ -137,13 +137,16 @@ const намериЛокално = (file: string): { path: string; source: Из�
   return null
 }
 
+/** Полетата със снимка — на всяко ниво (секция, слайд, таб, отличие, цитат). */
+const SNIMKA_KLYUCHOVE = ['image', 'imageMobile', 'mapImage', 'mapImageMobile']
+
 /** Имената на всички снимки в секциите и мета снимката. */
 const нужни = new Set<string>()
 const събери = (node: unknown): void => {
   if (Array.isArray(node)) return node.forEach(събери)
   if (!node || typeof node !== 'object') return
   for (const [k, v] of Object.entries(node)) {
-    if ((k === 'image' || k === 'imageMobile') && typeof v === 'string' && v.trim()) нужни.add(v)
+    if (SNIMKA_KLYUCHOVE.includes(k) && typeof v === 'string' && v.trim()) нужни.add(v)
     else събери(v)
   }
 }
@@ -285,10 +288,21 @@ const чисто = (o: Обект): Обект => Object.fromEntries(Object.entr
 
 const снимкаНа = async (o: Обект, alt: string): Promise<Обект> => {
   const out: Обект = { ...o }
-  for (const k of ['image', 'imageMobile'] as const) {
+  for (const k of SNIMKA_KLYUCHOVE) {
     if (typeof o[k] === 'string') out[k] = o[k] ? await mediaIdFor(o[k] as string, alt) : null
   }
   return out
+}
+
+/*
+  Позициите на офисите върху картата на EcoFlow (`za-ecoflow-karta-ofisi`,
+  1440×950; мобилната е същата карта в по-малък размер) — в проценти, по
+  надписите на ecoflow.com/eu/about-us.
+*/
+const MESTA_NA_KARTATA: Record<string, [number, number]> = {
+  САЩ: [13.5, 41.5],
+  Германия: [57.5, 46.5],
+  Япония: [88, 54],
 }
 
 const layout: Обект[] = []
@@ -307,6 +321,38 @@ for (const [i, суров] of content.sekcii!.entries()) {
   }
 
   if (typeof b.product === 'string') b.product = await productIdFor(b.product)
+
+  // „Лента с отличия", „Цитати от медии" — снимка на всеки елемент.
+  if (вид === 'awardsMarquee' || вид === 'pressQuotes') {
+    b.items = await Promise.all(
+      ((b.items as Обект[]) ?? []).map((it) => снимкаНа(чисто(it), String(it.title ?? it.source ?? ''))),
+    )
+  }
+
+  // „Табове с продукти": снимката на банера и продуктите по slug (ненамереният отпада).
+  if (вид === 'productTabs') {
+    b.tabs = await Promise.all(
+      ((b.tabs as Обект[]) ?? []).map(async (t) => {
+        const tab = await снимкаНа(чисто(t), String(t.imageAlt ?? t.heading ?? ''))
+        const редове = await Promise.all(
+          ((t.products as Обект[]) ?? []).map(async (r) => ({ ...чисто(r), product: await productIdFor(String(r.product ?? '')) })),
+        )
+        tab.products = редове.filter((r) => r.product !== null)
+        return tab
+      }),
+    )
+  }
+
+  // „История и числа": местата могат да са само имена — позицията идва от таблицата.
+  if (вид === 'companyStats') {
+    b.locations = ((b.locations as unknown[]) ?? []).map((l) => {
+      if (l && typeof l === 'object') return l
+      const име = String(l)
+      const място = MESTA_NA_KARTATA[име]
+      if (!място) предупреждения.push(`място „${име}" на картата: няма позиция — попълнете я от админа`)
+      return { label: име, x: място?.[0] ?? null, y: място?.[1] ?? null }
+    })
+  }
 
   // „Заглавна снимка" без снимка (`variant: simple`) — само H1 и абзац: това е „Заглавие на страницата (H1)".
   if (вид === 'pageHero' && b.variant === 'simple') {

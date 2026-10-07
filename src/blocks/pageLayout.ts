@@ -11,6 +11,7 @@ import {
   RuntimeCompare,
   SplitBanner,
 } from './guide'
+import { AwardsMarquee, CompanyStats, PressQuotes, ProductTabs, TextSection } from './about'
 import { hiddenField } from './shared'
 import { PageIntro } from './PageIntro'
 import { QuoteForm } from './QuoteForm'
@@ -87,6 +88,11 @@ export const pageBlocks: Block[] = [
   QuoteForm,
   RichTextBlock,
   SimpleTable,
+  CompanyStats,
+  ProductTabs,
+  AwardsMarquee,
+  TextSection,
+  PressQuotes,
 ].map(withHidden)
 
 /** Полето „Секции на страницата" — еднакво навсякъде, където се ползва. */

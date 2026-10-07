@@ -10,6 +10,13 @@ import {
   WideBannerBlock,
 } from './blocks/banners'
 import { BenefitsGridBlock, LogoWallBlock, TestimonialsBlockRenderer } from './blocks/content'
+import {
+  AwardsMarqueeBlock,
+  CompanyStatsBlock,
+  PressQuotesBlock,
+  ProductTabsBlock,
+  TextSectionBlock,
+} from './blocks/about'
 import { PageIntroBlock, QuoteFormBlock } from './blocks/quote'
 import { RichTextSection, SimpleTableSection } from './blocks/text'
 import {
@@ -161,6 +168,16 @@ const рендер = (
       return <RichTextSection key={key} block={block} />
     case 'simpleTable':
       return <SimpleTableSection key={key} block={block} />
+    case 'companyStats':
+      return <CompanyStatsBlock key={key} block={block} />
+    case 'productTabs':
+      return <ProductTabsBlock key={key} block={block} />
+    case 'awardsMarquee':
+      return <AwardsMarqueeBlock key={key} block={block} />
+    case 'textSection':
+      return <TextSectionBlock key={key} block={block} />
+    case 'pressQuotes':
+      return <PressQuotesBlock key={key} block={block} />
     default:
       return null
   }

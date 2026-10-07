@@ -48,6 +48,8 @@ export const HeroBannerBlock = ({ block }: { block: BlockOf<'heroBanner'> }) => 
 export const WideBannerBlock = ({ block }: { block: BlockOf<'wideBanner'> }) => {
   // Webp размерите, изрязани от CSS — виж `bannerImage`.
   const img = bannerImage(block.image)
+  // Снимка за телефон — по избор; на компютър пак е `image`.
+  const mobile = bannerImage(block.imageMobile)
   // Без снимка текстът е тъмен и бутонът черен — бял върху светлия фон не се чете.
   const dark = block.theme !== 'light' && Boolean(img)
 
@@ -57,7 +59,20 @@ export const WideBannerBlock = ({ block }: { block: BlockOf<'wideBanner'> }) => 
 
       <div className="relative overflow-hidden rounded-2xl">
         <div className="relative aspect-[16/9] w-full sm:aspect-[3/1]">
-          {img ? (
+          {img && mobile ? (
+            <>
+              <SectionImage
+                image={mobile}
+                sizes="(min-width: 640px) 1px, 100vw"
+                className="absolute inset-0 size-full object-cover sm:hidden"
+              />
+              <SectionImage
+                image={img}
+                sizes="(max-width: 639px) 1px, 100vw"
+                className="absolute inset-0 size-full object-cover max-sm:hidden"
+              />
+            </>
+          ) : img ? (
             <SectionImage
               image={img}
               sizes="100vw"

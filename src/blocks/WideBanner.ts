@@ -41,6 +41,13 @@ export const WideBanner: Block = {
       label: 'Изображение',
       admin: { description: 'По избор. Без снимка банерът е текст върху фона на страницата.' },
     },
+    {
+      name: 'imageMobile',
+      type: 'upload',
+      relationTo: 'media',
+      label: 'Изображение за телефон',
+      admin: { description: 'По желание. Празно — същото като за компютър.' },
+    },
     linkField(),
     {
       type: 'row',

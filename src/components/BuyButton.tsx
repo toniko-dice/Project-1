@@ -15,7 +15,7 @@ import type { Product } from '@/payload-types'
  *
  * Покупката е в dice.bg, затова адресът е `externalUrl`, в нов раздел.
  */
-type Size = 'lg' | 'md' | 'sm'
+type Size = 'lg' | 'md' | 'sm' | 'pill'
 
 /*
   Цветът — по мястото. Зеленото е бутонът на магазина навсякъде; черният и
@@ -23,12 +23,14 @@ type Size = 'lg' | 'md' | 'sm'
   времената — черен, „снимка + текст" — син, овален). Правилото за
   наличност и адресът са едни и същи — затова е опция тук, не нов бутон.
 */
-type Tone = 'brand' | 'dark' | 'blue'
+type Tone = 'brand' | 'dark' | 'blue' | 'outline'
 
 const TONE: Record<Tone, string> = {
   brand: 'rounded-md bg-brand text-white hover:bg-brand-dark',
   dark: 'rounded-md bg-night text-white hover:bg-ink',
   blue: 'rounded-full bg-[#2164ff] text-white hover:bg-[#1a50d6]',
+  // „За EcoFlow": до черния „Научете повече", овален контур, както на ecoflow.com/eu/about-us.
+  outline: 'rounded-full border border-black bg-white text-black hover:bg-black hover:text-white',
 }
 
 const SIZE: Record<Size, string> = {
@@ -42,6 +44,8 @@ const SIZE: Record<Size, string> = {
   md: 'h-11 w-full px-2 text-[13px] sm:px-4 sm:text-sm',
   // Ръководствата: 40 px, по съдържанието.
   sm: 'min-h-10 px-6 text-sm',
+  // Два бутона един до друг в тясна карта — малък отстъп, за да се събере „Заяви в dice.bg".
+  pill: 'h-10 px-2 text-[13px] sm:px-3 sm:text-sm',
 }
 
 const BASE = 'inline-flex items-center justify-center whitespace-nowrap font-semibold'

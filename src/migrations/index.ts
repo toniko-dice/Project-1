@@ -44,6 +44,8 @@ import * as migration_20261007_112559_quote_edit_versions from './20261007_11255
 import * as migration_20261007_122953_offers from './20261007_122953_offers';
 import * as migration_20261007_125539_text_table_blocks from './20261007_125539_text_table_blocks';
 import * as migration_20261007_145207_offer_general_discount from './20261007_145207_offer_general_discount';
+import * as migration_20261007_152614_about_blocks from './20261007_152614_about_blocks';
+import * as migration_20261007_153730_about_hidden_items from './20261007_153730_about_hidden_items';
 
 export const migrations = [
   {
@@ -274,6 +276,16 @@ export const migrations = [
   {
     up: migration_20261007_145207_offer_general_discount.up,
     down: migration_20261007_145207_offer_general_discount.down,
-    name: '20261007_145207_offer_general_discount'
+    name: '20261007_145207_offer_general_discount',
+  },
+  {
+    up: migration_20261007_152614_about_blocks.up,
+    down: migration_20261007_152614_about_blocks.down,
+    name: '20261007_152614_about_blocks',
+  },
+  {
+    up: migration_20261007_153730_about_hidden_items.up,
+    down: migration_20261007_153730_about_hidden_items.down,
+    name: '20261007_153730_about_hidden_items'
   },
 ];
