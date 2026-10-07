@@ -67,7 +67,8 @@ const Label = ({ htmlFor, children, req }: { htmlFor?: string; children: ReactNo
 )
 
 const Section = ({ title, children }: { title: string; children: ReactNode }) => (
-  <fieldset className="rounded-xl bg-surface p-5 sm:p-7">
+  // `min-w-0`: fieldset по подразбиране не се свива под съдържанието си и плочките го разпъваха извън телефона.
+  <fieldset className="min-w-0 rounded-xl bg-surface p-5 sm:p-7">
     <legend className="float-left mb-5 w-full text-lg font-semibold">{title}</legend>
     <div className="clear-both">{children}</div>
   </fieldset>
