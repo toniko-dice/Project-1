@@ -268,6 +268,7 @@ export interface Page {
              */
             fromCategory?: (number | null) | Category;
             cardStyle?: ('image' | 'price') | null;
+            cardTheme?: ('light' | 'dark') | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'productCarousel';
@@ -333,7 +334,11 @@ export interface Page {
               heading?: string | null;
               subheading?: string | null;
               /**
-               * Напр. "от 7 299 €" или "спестявате до 1 200 €".
+               * Избран — под подзаглавието излиза текущата цена на продукта (и старата, ако има). Чернова не дава цена.
+               */
+              product?: (number | null) | Product;
+              /**
+               * Напр. "спестявате до 1 200 €". За цена на продукт ползвайте „Цена от продукт".
                */
               priceNote?: string | null;
               /**
@@ -777,6 +782,11 @@ export interface Media {
    * Името на файла, преди да получи смислено име. Само за справка.
    */
   originalName?: string | null;
+  trimmed?: {
+    filename?: string | null;
+    width?: number | null;
+    height?: number | null;
+  };
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -1545,6 +1555,7 @@ export interface Category {
              */
             fromCategory?: (number | null) | Category;
             cardStyle?: ('image' | 'price') | null;
+            cardTheme?: ('light' | 'dark') | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'productCarousel';
@@ -1610,7 +1621,11 @@ export interface Category {
               heading?: string | null;
               subheading?: string | null;
               /**
-               * Напр. "от 7 299 €" или "спестявате до 1 200 €".
+               * Избран — под подзаглавието излиза текущата цена на продукта (и старата, ако има). Чернова не дава цена.
+               */
+              product?: (number | null) | Product;
+              /**
+               * Напр. "спестявате до 1 200 €". За цена на продукт ползвайте „Цена от продукт".
                */
               priceNote?: string | null;
               /**
@@ -2579,6 +2594,7 @@ export interface PagesSelect<T extends boolean = true> {
               products?: T;
               fromCategory?: T;
               cardStyle?: T;
+              cardTheme?: T;
               id?: T;
               blockName?: T;
             };
@@ -2623,6 +2639,7 @@ export interface PagesSelect<T extends boolean = true> {
                     eyebrowColor?: T;
                     heading?: T;
                     subheading?: T;
+                    product?: T;
                     priceNote?: T;
                     image?: T;
                     video?: T;
@@ -3255,6 +3272,7 @@ export interface CategoriesSelect<T extends boolean = true> {
               products?: T;
               fromCategory?: T;
               cardStyle?: T;
+              cardTheme?: T;
               id?: T;
               blockName?: T;
             };
@@ -3299,6 +3317,7 @@ export interface CategoriesSelect<T extends boolean = true> {
                     eyebrowColor?: T;
                     heading?: T;
                     subheading?: T;
+                    product?: T;
                     priceNote?: T;
                     image?: T;
                     video?: T;
@@ -3627,6 +3646,13 @@ export interface MenuPanelsSelect<T extends boolean = true> {
 export interface MediaSelect<T extends boolean = true> {
   alt?: T;
   originalName?: T;
+  trimmed?:
+    | T
+    | {
+        filename?: T;
+        width?: T;
+        height?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
   url?: T;
