@@ -54,7 +54,15 @@ export const offerEndpoints: Endpoint[] = [
     method: 'get',
     handler: async (req) => {
       if (!req.user) return forbidden()
-      const { offer, pdf } = await pdfFor(req, idOf(req))
+      let offer: OfferDoc
+      let pdf: Buffer
+      try {
+        ;({ offer, pdf } = await pdfFor(req, idOf(req)))
+      } catch (e) {
+        // Пълната грешка — в лога; на админа — ясен текст (не „Something went wrong.").
+        req.payload.logger.error({ err: e, msg: `PDF на оферта № ${idOf(req)} не се генерира` })
+        return json({ error: `PDF-ът не се генерира: ${(e as Error).message}` }, 500)
+      }
       const number = offer.number ?? String(offer.id)
       const download = new URL(req.url ?? 'http://x').searchParams.get('download') === '1'
       return new Response(new Uint8Array(pdf), {
