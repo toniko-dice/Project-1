@@ -467,6 +467,10 @@ export interface Page {
             };
             align?: ('left' | 'center' | 'right') | null;
             theme?: ('dark' | 'light') | null;
+            /**
+             * Само при снимка и тъмна тема (бял текст). Без затъмнение — когато снимката е тъмна сама.
+             */
+            overlay?: ('gradient' | 'none') | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'wideBanner';
@@ -1758,6 +1762,10 @@ export interface Category {
             };
             align?: ('left' | 'center' | 'right') | null;
             theme?: ('dark' | 'light') | null;
+            /**
+             * Само при снимка и тъмна тема (бял текст). Без затъмнение — когато снимката е тъмна сама.
+             */
+            overlay?: ('gradient' | 'none') | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'wideBanner';
@@ -2725,6 +2733,7 @@ export interface PagesSelect<T extends boolean = true> {
                   };
               align?: T;
               theme?: T;
+              overlay?: T;
               id?: T;
               blockName?: T;
             };
@@ -3404,6 +3413,7 @@ export interface CategoriesSelect<T extends boolean = true> {
                   };
               align?: T;
               theme?: T;
+              overlay?: T;
               id?: T;
               blockName?: T;
             };
