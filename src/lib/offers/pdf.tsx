@@ -245,9 +245,9 @@ const OfferDocument = ({
             <Text style={s.cImg}> </Text>
             <Text style={s.cName}>Продукт</Text>
             <Text style={s.cQty}>Кол.</Text>
-            <Text style={s.cPrice}>Ед. цена без ДДС</Text>
+            <Text style={s.cPrice}>Ед. цена с ДДС</Text>
             <Text style={s.cDisc}>Отст.</Text>
-            <Text style={s.cSum}>Сума без ДДС</Text>
+            <Text style={s.cSum}>Сума с ДДС</Text>
           </View>
           {items.map((it, i) => (
             <View key={i} style={s.tr} wrap={false}>
@@ -272,11 +272,11 @@ const OfferDocument = ({
         {/* 5. Общо */}
         <View style={s.totals} wrap={false}>
           <View style={s.totRow}>
-            <Text>Общо без ДДС</Text>
-            <Text>{eur(t.subtotal)}</Text>
+            <Text>Данъчна основа</Text>
+            <Text>{eur(t.base)}</Text>
           </View>
           <View style={s.totRow}>
-            <Text>ДДС {String(vatRate).replace('.', ',')}%</Text>
+            <Text>в т.ч. ДДС {String(vatRate).replace('.', ',')}%</Text>
             <Text>{eur(t.vat)}</Text>
           </View>
           <View style={s.totStrong}>

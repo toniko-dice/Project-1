@@ -31,9 +31,9 @@ export const OfferTotals = () => {
           <tr style={{ color: 'var(--theme-elevation-500)', textAlign: 'left' }}>
             <th style={cell}>Ред</th>
             <th style={num}>Кол.</th>
-            <th style={num}>Ед. цена без ДДС</th>
+            <th style={num}>Ед. цена с ДДС</th>
             <th style={num}>Отст.</th>
-            <th style={num}>Сума без ДДС</th>
+            <th style={num}>Сума с ДДС</th>
           </tr>
         </thead>
         <tbody>
@@ -51,11 +51,11 @@ export const OfferTotals = () => {
       <table style={{ marginLeft: 'auto', marginTop: 10, fontSize: 14, borderCollapse: 'collapse' }}>
         <tbody>
           <tr>
-            <td style={{ padding: '3px 16px 3px 0' }}>Общо без ДДС</td>
-            <td style={{ textAlign: 'right' }}>{eur(t.subtotal)}</td>
+            <td style={{ padding: '3px 16px 3px 0' }}>Данъчна основа</td>
+            <td style={{ textAlign: 'right' }}>{eur(t.base)}</td>
           </tr>
           <tr>
-            <td style={{ padding: '3px 16px 3px 0' }}>ДДС {vatRate}%</td>
+            <td style={{ padding: '3px 16px 3px 0' }}>в т.ч. ДДС {vatRate}%</td>
             <td style={{ textAlign: 'right' }}>{eur(t.vat)}</td>
           </tr>
           <tr style={{ fontWeight: 700, fontSize: 15 }}>

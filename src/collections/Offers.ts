@@ -1,6 +1,6 @@
 import type { CollectionBeforeChangeHook, CollectionConfig, Field, PayloadRequest } from 'payload'
 
-import { lineTotal, offerTotals, OFFER_STATUSES, PAYMENT_OPTIONS, priceWithoutVat } from '../lib/offers/calc'
+import { lineTotal, offerTotals, OFFER_STATUSES, PAYMENT_OPTIONS } from '../lib/offers/calc'
 import { offerEndpoints } from '../lib/offers/endpoints'
 
 type Settings = {
@@ -51,7 +51,7 @@ type Item = {
  * При всеки запис:
  * - номер `ОФ-ГГГГ-NNNN` (само при създаване), дата, „Валидна до";
  * - ред с продукт, но без име/SKU/EAN/снимка/цена → попълва се от продукта
- *   (цената — без ДДС: цената на сайта ÷ 1,20). Попълненото не се пипа:
+ *   (цената — с ДДС, както е на сайта). Попълненото не се пипа:
  *   това е мястото на отстъпката;
  * - сумите на редовете и общите — `src/lib/offers/calc.ts`;
  * - „Изготвил" — потребителят, ако е празно;
@@ -108,12 +108,14 @@ const prepare: CollectionBeforeChangeHook = async ({ data, req, operation, origi
         ean: i.ean ?? p?.ean ?? null,
         image: i.image ?? (p?.image as number | null | undefined) ?? null,
         quantity: Math.max(1, Math.round(Number(i.quantity) || 1)),
-        unitPrice: typeof i.unitPrice === 'number' ? i.unitPrice : priceWithoutVat(p?.price, vatRate),
+        unitPrice: typeof i.unitPrice === 'number' ? i.unitPrice : (p?.price ?? null),
       }
       return { ...filled, lineTotal: lineTotal(filled) }
     })
   }
-  data.totals = offerTotals((data.items as Item[]) ?? [], vatRate)
+  // В базата `totals.subtotal` е данъчната основа (колоната е от времето на цените без ДДС).
+  const t = offerTotals((data.items as Item[]) ?? [], vatRate)
+  data.totals = { subtotal: t.base, vat: t.vat, total: t.total }
 
   if (!data.preparedBy?.name && req.user) {
     const u = req.user as { name?: string | null; position?: string | null; email?: string }
@@ -267,12 +269,12 @@ export const Offers: CollectionConfig = {
                     {
                       name: 'unitPrice',
                       type: 'number',
-                      label: 'Ед. цена без ДДС (€)',
+                      label: 'Ед. цена с ДДС (€)',
                       min: 0,
-                      admin: { width: '25%', step: 0.01, description: 'Празно — цената от сайта ÷ 1,20.' },
+                      admin: { width: '25%', step: 0.01, description: 'Празно — цената от сайта (с ДДС).' },
                     },
                     { name: 'discount', type: 'number', label: 'Отстъпка %', min: 0, max: 100, admin: { width: '25%', step: 0.5 } },
-                    ro({ name: 'lineTotal', type: 'number', label: 'Сума без ДДС (€)', admin: { width: '25%' } } as Field),
+                    ro({ name: 'lineTotal', type: 'number', label: 'Сума с ДДС (€)', admin: { width: '25%' } } as Field),
                   ],
                 },
               ],
@@ -346,9 +348,9 @@ export const Offers: CollectionConfig = {
       label: 'Общо (при последния запис)',
       admin: { position: 'sidebar' },
       fields: [
-        { name: 'subtotal', type: 'number', label: 'Общо без ДДС (€)' },
-        { name: 'vat', type: 'number', label: 'ДДС (€)' },
         { name: 'total', type: 'number', label: 'Общо с ДДС (€)' },
+        { name: 'subtotal', type: 'number', label: 'Данъчна основа (без ДДС) (€)' },
+        { name: 'vat', type: 'number', label: 'в т.ч. ДДС (€)' },
       ],
     } as Field),
     {

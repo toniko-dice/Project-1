@@ -116,7 +116,7 @@ export const OfferSettings: GlobalConfig = {
           name: 'note',
           type: 'textarea',
           label: 'Бележка в края',
-          defaultValue: 'Настоящата оферта не е данъчен документ. Цените са в евро.',
+          defaultValue: 'Настоящата оферта не е данъчен документ. Цените са в евро с включен ДДС.',
         },
       ],
     },

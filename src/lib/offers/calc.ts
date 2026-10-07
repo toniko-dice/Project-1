@@ -2,8 +2,11 @@
  * Сметката на офертата — едно място за админа (на живо, `OfferTotals`),
  * сървъра (кука `beforeChange` в `Offers.ts`) и PDF-а.
  *
- * Сума на реда без ДДС = количество × единична цена × (1 − отстъпка %),
- * закръглена до 0,01 €. Общо без ДДС — сборът на редовете; ДДС — от
+ * ЦЕНИТЕ СА С ДДС (от 7 октомври 2026; преди бяха без ДДС).
+ * Сума на реда с ДДС = количество × единична цена × (1 − отстъпка %),
+ * закръглена до 0,01 €. Общо с ДДС — сборът на редовете (главната сума);
+ * данъчна основа = общо ÷ (1 + ДДС/100), закръглена; ДДС = общо − основа
+ * (връзва се до стотинка). Беше: общо без ДДС — сборът на редовете; ДДС — от
  * общото, закръглено; общо с ДДС — сборът на двете.
  */
 
@@ -19,14 +22,10 @@ export const lineTotal = (l: OfferLine): number => {
 }
 
 export const offerTotals = (lines: OfferLine[], vatRate: number) => {
-  const subtotal = round2(lines.reduce((s, l) => s + lineTotal(l), 0))
-  const vat = round2((subtotal * (Number(vatRate) || 0)) / 100)
-  return { subtotal, vat, total: round2(subtotal + vat) }
+  const total = round2(lines.reduce((s, l) => s + lineTotal(l), 0))
+  const base = round2(total / (1 + (Number(vatRate) || 0) / 100))
+  return { total, base, vat: round2(total - base) }
 }
-
-/** Цената от сайта е с ДДС — единичната без ДДС се предлага като цена ÷ (1 + ДДС). */
-export const priceWithoutVat = (priceWithVat: number | null | undefined, vatRate = 20): number | null =>
-  typeof priceWithVat === 'number' ? round2(priceWithVat / (1 + vatRate / 100)) : null
 
 /** „1 234,56 €" — както на сайта. */
 export const eur = (n: number): string =>

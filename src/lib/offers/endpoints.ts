@@ -11,7 +11,6 @@
  */
 import type { Endpoint, PayloadRequest } from 'payload'
 
-import { priceWithoutVat } from './calc'
 
 const json = (body: unknown, status = 200) => Response.json(body, { status, headers: { 'Cache-Control': 'no-store' } })
 const forbidden = () => json({ error: 'Нужен е вход в админа.' }, 403)
@@ -211,7 +210,7 @@ export const offerEndpoints: Endpoint[] = [
             ean: i.ean ?? null,
             image: i.image ?? null,
             quantity: i.quantity ?? 1,
-            unitPrice: i.product ? priceWithoutVat(priceOf.get(i.product), vatRate) : null,
+            unitPrice: i.product ? (priceOf.get(i.product) ?? null) : null,
           })),
           terms: {
             payment: d.payment ?? 'advance100',

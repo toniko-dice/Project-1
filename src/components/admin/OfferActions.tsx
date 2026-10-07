@@ -57,6 +57,37 @@ export const OfferActions = () => {
     )
   }
 
+  /*
+    PDF-ът първо се тегли: ако сървърът върне грешка, тя излиза тук, вместо
+    празен таб с JSON. После — отваряне в нов таб или сваляне.
+  */
+  const pdf = async (download: boolean) => {
+    setError('')
+    // Табът се отваря веднага (в отговор на клика) — иначе браузърът го спира като изскачащ прозорец.
+    const tab = download ? null : window.open('', '_blank')
+    try {
+      const r = await fetch(`${api}/offers/${id}/pdf`, { credentials: 'include' })
+      if (!r.ok || !r.headers.get('content-type')?.includes('application/pdf')) {
+        const j = (await r.json().catch(() => ({}))) as { error?: string }
+        tab?.close()
+        return setError(j.error ?? `PDF-ът не се генерира (код ${r.status}).`)
+      }
+      const name = /filename="([^"]+)"/.exec(r.headers.get('content-disposition') ?? '')?.[1] ?? 'oferta.pdf'
+      const url = URL.createObjectURL(await r.blob())
+      if (tab) tab.location.href = url
+      else {
+        const a = document.createElement('a')
+        a.href = url
+        a.download = name
+        a.click()
+      }
+      setTimeout(() => URL.revokeObjectURL(url), 60_000)
+    } catch {
+      tab?.close()
+      setError('Няма връзка със сървъра — PDF-ът не се зареди.')
+    }
+  }
+
   const open = async () => {
     setError('')
     const r = await fetch(`${api}/offers/${id}/send-preview`, { credentials: 'include' })
@@ -104,10 +135,10 @@ export const OfferActions = () => {
   return (
     <div style={box}>
       <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-        <Button el="anchor" url={`${api}/offers/${id}/pdf`} newTab buttonStyle="secondary" size="small" margin={false}>
+        <Button buttonStyle="secondary" size="small" margin={false} onClick={() => void pdf(false)} disabled={busy}>
           Преглед
         </Button>
-        <Button el="anchor" url={`${api}/offers/${id}/pdf?download=1`} buttonStyle="secondary" size="small" margin={false}>
+        <Button buttonStyle="secondary" size="small" margin={false} onClick={() => void pdf(true)} disabled={busy}>
           Свали PDF
         </Button>
       </div>
@@ -116,7 +147,7 @@ export const OfferActions = () => {
       </Button>
       {modified ? (
         <p style={{ margin: 0, fontSize: 12, color: 'var(--theme-elevation-500)' }}>
-          Има незаписани промени — PDF-ът и писмото са от последния запис. Натиснете „Запази" преди изпращане.
+          PDF-ът е от последния запис — натиснете „Запази", за да влязат промените.
         </p>
       ) : null}
       {error ? <p style={{ margin: 0, fontSize: 13, color: 'var(--theme-error-500)' }}>{error}</p> : null}
