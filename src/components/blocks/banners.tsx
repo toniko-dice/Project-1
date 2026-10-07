@@ -69,8 +69,8 @@ export const WideBannerBlock = ({ block }: { block: BlockOf<'wideBanner'> }) => 
 
           {/*
             Затъмнение под белия текст: отляво (там е текстът) и отдолу (на
-            телефон текстът стига до долния ръб). Дясната половина остава
-            чиста — там е продуктът на снимката.
+            телефон текстът стига до долния ръб). На компютър дясната
+            половина остава чиста — там е продуктът на снимката.
           */}
           {dark && block.overlay !== 'none' ? (
             <div
@@ -78,6 +78,8 @@ export const WideBannerBlock = ({ block }: { block: BlockOf<'wideBanner'> }) => 
               className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent"
             >
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+              {/* На телефон текстът минава през цялата ширина — и дясната част се затъмнява. */}
+              <div className="absolute inset-0 bg-black/30 sm:hidden" />
             </div>
           ) : null}
 
