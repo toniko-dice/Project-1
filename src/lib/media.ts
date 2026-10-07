@@ -50,12 +50,23 @@ export const mediaUrl = (value: MaybeMedia, size?: MediaSize): string | null => 
  * такъв (не е изрез). Файлът стои до оригинала, затова адресът е неговият
  * с друго име; `?v=` е същото като на `mediaUrl`.
  */
-export const trimmedUrl = (value: MaybeMedia): string | null => {
+export const trimmedUrl = (value: MaybeMedia, which: 'filename' | 'small' = 'filename'): string | null => {
   if (!value || typeof value === 'number') return null
-  const name = value.trimmed?.filename
+  const name = value.trimmed?.[which]
   const original = mediaUrl(value)
   if (!name || !original) return null
   return original.replace(/\/[^/?]*(\?|$)/, `/${encodeURIComponent(name)}$1`)
+}
+
+/**
+ * Малка снимка за плочка (~96 CSS px) — готов файл, не оптимизаторът на Next:
+ * малкото изрязано копие (до 240 px), иначе `thumbnail` (400 px, webp).
+ * `trimmed` казва дали е изрез — плочката го показва с еднакво отстояние.
+ */
+export const tileImage = (value: MaybeMedia): { url: string | null; trimmed: boolean } => {
+  const small = trimmedUrl(value, 'small')
+  if (small) return { url: small, trimmed: true }
+  return { url: mediaUrl(value, 'thumbnail'), trimmed: false }
 }
 
 export const mediaAlt = (value: MaybeMedia): string => {

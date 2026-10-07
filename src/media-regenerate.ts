@@ -134,8 +134,10 @@ for (const doc of docs.docs) {
   }
 
   let trimmed: Awaited<ReturnType<typeof makeTrimmed>> = null
-  const trimmedNow = (doc.trimmed as { filename?: string | null } | null)?.filename
-  if (force || !trimmedNow) {
+  const trimmedDoc = doc.trimmed as { filename?: string | null; small?: string | null } | null
+  const trimmedNow = trimmedDoc?.filename
+  // Няма вариант — или има, но без малкото копие (направено преди 7 октомври 2026).
+  if (force || !trimmedNow || !trimmedDoc?.small) {
     try {
       const stem = path.basename(doc.filename, path.extname(doc.filename))
       trimmed = await makeTrimmed(original, stem, MEDIA_DIR)
@@ -162,6 +164,9 @@ for (const doc of docs.docs) {
   // Вариант с други размери от предишно пускане (--force) — старият файл е излишен.
   if (trimmed && trimmedNow && trimmedNow !== trimmed.filename) {
     await fs.rm(path.join(MEDIA_DIR, trimmedNow), { force: true })
+  }
+  if (trimmed && trimmedDoc?.small && trimmedDoc.small !== trimmed.small) {
+    await fs.rm(path.join(MEDIA_DIR, trimmedDoc.small), { force: true })
   }
   touched += 1
   if (trimmed) trimmedMade += 1

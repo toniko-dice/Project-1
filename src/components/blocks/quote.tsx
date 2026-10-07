@@ -2,7 +2,7 @@ import type { ReactNode } from 'react'
 
 import type { Category, Page } from '@/payload-types'
 import { parentId } from '@/lib/tree'
-import { productCardData } from '@/lib/media'
+import { productCardData, tileImage } from '@/lib/media'
 import { getCatalog, getGlobal, getProductsByIds } from '@/lib/payload'
 import { QuoteFormClient, type QuoteProduct, type QuoteTab } from '../QuoteForm'
 
@@ -101,11 +101,13 @@ export const QuoteFormBlock = async ({ block }: { block: BlockOf<'quoteForm'> })
     .map((id) => {
       const p = cards[id]!
       const d = productCardData(p)
+      // Готов малък файл (до 240 px) — без оптимизатора на Next.
+      const img = tileImage(p.image)
       return {
         id,
         title: d.title,
-        image: d.imageUrl,
-        trimmed: d.imageTrimmed,
+        image: img.url,
+        trimmed: img.trimmed,
         // Търсенето е в браузъра: име, ред със спецификации, адрес, SKU — с малки букви.
         search: [d.title, p.tagline, p.slug, p.sku].filter(Boolean).join(' ').toLowerCase(),
       }

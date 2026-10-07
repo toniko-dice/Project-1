@@ -1,7 +1,6 @@
 'use client'
 
 import { ArrowClockwise, Check, MagnifyingGlass, Minus, Paperclip, Plus, X } from '@phosphor-icons/react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { useCallback, useEffect, useId, useMemo, useRef, useState, type ReactNode } from 'react'
 
@@ -11,6 +10,7 @@ import {
   DOCUMENTS,
   FILE_ACCEPT,
   fileError,
+  MAX_QTY,
   PROCUREMENT,
   PURPOSES,
   TIMEFRAMES,
@@ -74,42 +74,85 @@ const Section = ({ title, children }: { title: string; children: ReactNode }) =>
   </fieldset>
 )
 
-/** Количество, в което може временно да е празно, докато се пише. */
-const QtyInput = ({ value, onChange, label }: { value: number; onChange: (n: number) => void; label: string }) => {
+/**
+ * Количеството — поле между − и + на плочката и в списъка (едно и също
+ * число и на двете места: стойността е в общия списък).
+ *
+ * Само цифри (буквите се изхвърлят), от 1 до 9999; докато се пише, може да
+ * е празно. При излизане от полето празно или 0 маха продукта. `type="text"`
+ * с `inputMode="numeric"`, не `type="number"`: числовото поле приема „e",
+ * „-" и „," и се върти с колелото на мишката.
+ */
+const QtyInput = ({
+  value,
+  onChange,
+  label,
+  compact = false,
+}: {
+  value: number
+  onChange: (n: number) => void
+  label: string
+  compact?: boolean
+}) => {
   const [text, setText] = useState(String(value))
   useEffect(() => setText(String(value)), [value])
   return (
     <input
-      type="number"
+      type="text"
       inputMode="numeric"
-      min={1}
-      step={1}
+      pattern="[0-9]*"
+      maxLength={4}
+      autoComplete="off"
       aria-label={label}
       value={text}
       onChange={(e) => {
-        setText(e.target.value)
-        const n = Number(e.target.value)
-        if (Number.isInteger(n) && n >= 1) onChange(Math.min(n, 99999))
+        const digits = e.target.value.replace(/\D/g, '').slice(0, 4)
+        setText(digits)
+        const n = Number(digits)
+        if (digits && n >= 1) onChange(Math.min(n, MAX_QTY))
       }}
-      onBlur={() => setText(String(value))}
-      className="h-9 w-20 rounded-lg border border-line-strong bg-surface px-2 text-center text-[15px] tabular outline-none focus:border-ink"
+      onBlur={() => {
+        const n = Number(text)
+        if (!text || n < 1) onChange(0)
+        else setText(String(value))
+      }}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault()
+          ;(e.target as HTMLInputElement).blur()
+        }
+      }}
+      className={`rounded-md border border-line-strong bg-surface text-center tabular outline-none focus:border-ink ${
+        compact ? 'h-8 w-12 px-1 text-sm font-semibold' : 'h-9 w-20 px-2 text-[15px]'
+      }`}
     />
   )
 }
 
-const Thumb = ({ p, size }: { p: QuoteProduct; size: number }) => (
+/**
+ * Снимката на плочка/ред — готовият малък файл (до 240 px, webp) като
+ * обикновен `<img>`: без оптимизатора на Next, който в режим за разработка
+ * оразмеряваше всяка снимка при първото поискване.
+ */
+const Thumb = ({ p, size, eager = false }: { p: QuoteProduct; size: number; eager?: boolean }) => (
   <span className="relative block shrink-0" style={{ width: size, height: size }}>
     {p.image ? (
-      <Image
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
         src={p.image}
         alt=""
-        fill
-        sizes={`${size}px`}
-        className={`object-contain ${p.trimmed ? 'p-[12%]' : ''}`}
+        width={size}
+        height={size}
+        loading={eager ? 'eager' : 'lazy'}
+        decoding="async"
+        className={`absolute inset-0 size-full object-contain ${p.trimmed ? 'p-[12%]' : ''}`}
       />
     ) : null}
   </span>
 )
+
+/** Толкова плочки се зареждат веднага; останалите — при скрол. */
+const EAGER_TILES = 12
 
 /* ─────────── формата ─────────── */
 
@@ -380,8 +423,8 @@ export const QuoteFormClient = ({
             <FieldError id={`${uid}-organization-err`} msg={err('organization')} />
           </div>
           <div data-field="eik">
-            <Label htmlFor={`${uid}-eik`} req>ЕИК / БУЛСТАТ</Label>
-            <input id={`${uid}-eik`} inputMode="numeric" className={inputCls(!!err('eik'))} value={f.eik} onChange={(e) => set('eik', e.target.value)} placeholder="9 или 13 цифри" {...aria('eik')} />
+            <Label htmlFor={`${uid}-eik`}>ЕИК / БУЛСТАТ (по желание)</Label>
+            <input id={`${uid}-eik`} className={inputCls(!!err('eik'))} value={f.eik} onChange={(e) => set('eik', e.target.value)} autoComplete="off" {...aria('eik')} />
             <FieldError id={`${uid}-eik-err`} msg={err('eik')} />
           </div>
           <div data-field="city" className="sm:col-span-2">
@@ -511,7 +554,7 @@ export const QuoteFormClient = ({
           {/* Плочки */}
           <div role="tabpanel" className="max-h-[440px] overflow-y-auto rounded-lg border border-line bg-canvas p-2 sm:max-h-[520px]">
             <ul className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
-              {(текущ?.ids ?? []).map((id) => {
+              {(текущ?.ids ?? []).map((id, index) => {
                 const p = byId.get(id)
                 if (!p) return null
                 const n = qtyOf(id)
@@ -528,7 +571,7 @@ export const QuoteFormClient = ({
                       onClick={() => toggle(id)}
                       className="flex flex-1 cursor-pointer flex-col items-center gap-1.5 p-2 text-center"
                     >
-                      <Thumb p={p} size={96} />
+                      <Thumb p={p} size={96} eager={index < EAGER_TILES} />
                       <span className="line-clamp-3 text-[12px] leading-tight">{p.title}</span>
                     </button>
                     {n ? (
@@ -540,8 +583,8 @@ export const QuoteFormClient = ({
                           <button type="button" onClick={() => setQty(id, n - 1)} aria-label={`По-малко — ${p.title}`} className="flex size-8 cursor-pointer items-center justify-center rounded-full hover:bg-tile">
                             <Minus size={14} weight="bold" aria-hidden="true" />
                           </button>
-                          <span className="tabular text-sm font-semibold" aria-live="polite">{n}</span>
-                          <button type="button" onClick={() => setQty(id, n + 1)} aria-label={`Повече — ${p.title}`} className="flex size-8 cursor-pointer items-center justify-center rounded-full hover:bg-tile">
+                          <QtyInput compact value={n} onChange={(q) => setQty(id, q)} label={`Количество — ${p.title}`} />
+                          <button type="button" onClick={() => setQty(id, Math.min(n + 1, MAX_QTY))} aria-label={`Повече — ${p.title}`} className="flex size-8 cursor-pointer items-center justify-center rounded-full hover:bg-tile">
                             <Plus size={14} weight="bold" aria-hidden="true" />
                           </button>
                         </div>

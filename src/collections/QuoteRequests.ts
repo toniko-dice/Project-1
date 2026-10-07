@@ -1,4 +1,7 @@
-import type { CollectionConfig, Field } from 'payload'
+import type { CollectionBeforeChangeHook, CollectionConfig, Field } from 'payload'
+
+import { absoluteUrl } from '../lib/site-url'
+import { productPath } from '../lib/urls'
 
 import {
   CLIENT_TYPES,
@@ -6,17 +9,79 @@ import {
   DOCUMENTS,
   PROCUREMENT,
   PURPOSES,
+  MAX_QTY,
   STATUSES,
   TIMEFRAMES,
 } from '../lib/quote/options'
 
-/** Всичко, което е дошло от формата, е само за четене — редактират се статусът и бележките. */
+/** Само за четене: номерът, IP, браузърът и това, което се пресмята. Всичко друго се редактира. */
 const ro = <T extends Field>(f: T): T => ({ ...f, admin: { ...(f.admin ?? {}), readOnly: true } }) as T
+
+type Item = { product?: number | { id: number } | null; quantity?: number | null; title?: string | null; url?: string | null }
+
+/**
+ * При редакция от админа:
+ * - името и адресът на всеки продукт се взимат наново (сменен или добавен
+ *   продукт), количеството — между 1 и 9999, редът без продукт отпада;
+ * - „Продукти / бройки" се пресмята;
+ * - „Последна промяна от {потребител} на {дата}" — само при запис от
+ *   влязъл потребител (записът от формата е без потребител).
+ *
+ * Имейли НЕ се пращат: пращат се само от `POST /api/oferta`, при
+ * създаването — тук няма нищо, което да ги вика.
+ */
+const onEdit: CollectionBeforeChangeHook = async ({ data, req, operation }) => {
+  if (operation !== 'update') return data
+
+  if (Array.isArray(data.items)) {
+    const items = (data.items as Item[]).filter((i) => i.product)
+    const ids = items.map((i) => (typeof i.product === 'object' ? i.product!.id : i.product!))
+    const found = ids.length
+      ? await req.payload.find({
+          collection: 'products',
+          where: { id: { in: ids } },
+          depth: 0,
+          pagination: false,
+          // Виртуалните полета за адреса се четат от `category` — виж CLAUDE.md, т. 22.
+          select: {
+            title: true,
+            slug: true,
+            category: true,
+            categorySlug: true,
+            categoryParentSlug: true,
+            categoryGrandparentSlug: true,
+          },
+          req,
+        })
+      : { docs: [] }
+    const byId = new Map(found.docs.map((p) => [p.id, p]))
+    data.items = items.map((i, n) => {
+      const p = byId.get(ids[n]!)
+      const q = Math.round(Number(i.quantity) || 1)
+      return {
+        ...i,
+        quantity: Math.min(Math.max(q, 1), MAX_QTY),
+        title: p?.title ?? i.title,
+        url: p ? absoluteUrl(productPath(p as never)) : i.url,
+      }
+    })
+    const total = (data.items as Item[]).reduce((s, i) => s + Number(i.quantity), 0)
+    data.itemsSummary = `${(data.items as Item[]).length} / ${total}`
+  }
+
+  if (req.user) {
+    const кога = new Date().toLocaleString('bg-BG', { timeZone: 'Europe/Sofia', dateStyle: 'short', timeStyle: 'short' })
+    data.lastChange = `Последна промяна от ${(req.user as { email?: string }).email ?? 'админ'} на ${кога}`
+  }
+  return data
+}
 
 const opts = (o: { value: string; label: string }[]) => o.map(({ value, label }) => ({ value, label }))
 
 /**
  * „Нови заявки" — заявките за оферта от `/oferta-za-firmi`.
+ *
+ * Редактира се всичко освен номера, датата, IP и браузъра (`onEdit`).
  *
  * ДОСТЪПЪТ Е ЗАТВОРЕН ЗА ВСИЧКИ ОСВЕН ВЛЕЗЛИЯ АДМИН — и за четене.
  * `/api/quote-requests` без вход връща 403. Формата пише през
@@ -34,9 +99,12 @@ export const QuoteRequests: CollectionConfig = {
     defaultColumns: ['number', 'createdAt', 'organization', 'clientType', 'city', 'itemsSummary', 'status'],
     listSearchableFields: ['organization', 'eik', 'email'],
     description:
-      'Заявките от страницата „Оферта за фирми". Статусът и бележките се редактират; останалото е както го е изпратил клиентът.',
+      'Заявките от страницата „Оферта за фирми". Всичко се редактира (клиентът може да е сбъркал) — освен номера, датата, IP и браузъра. Промените не пращат имейли.',
   },
   defaultSort: '-createdAt',
+  // История на промените — „Версии" в записа; всяка носи и „Последна промяна от…".
+  versions: { maxPerDoc: 100 },
+  hooks: { beforeChange: [onEdit] },
   access: {
     read: ({ req }) => Boolean(req.user),
     create: () => false,
@@ -74,20 +142,29 @@ export const QuoteRequests: CollectionConfig = {
         description: 'Вътрешни — не се пращат на клиента.',
       },
     },
+    ro({
+      name: 'lastChange',
+      type: 'text',
+      label: 'Последна промяна',
+      admin: {
+        position: 'sidebar',
+        description: 'Попълва се сам при запис от админа. Промените не пращат имейли.',
+      },
+    } as Field),
     {
       type: 'tabs',
       tabs: [
         {
           label: 'Организация и контакт',
           fields: [
-            ro({ name: 'clientType', type: 'select', label: 'Тип клиент', options: opts(CLIENT_TYPES) } as Field),
-            ro({ name: 'organization', type: 'text', label: 'Организация', index: true } as Field),
-            ro({ name: 'eik', type: 'text', label: 'ЕИК / БУЛСТАТ', index: true } as Field),
-            ro({ name: 'city', type: 'text', label: 'Град / община' } as Field),
-            ro({ name: 'contactName', type: 'text', label: 'Име и фамилия' } as Field),
-            ro({ name: 'position', type: 'text', label: 'Длъжност' } as Field),
-            ro({ name: 'email', type: 'email', label: 'Имейл', index: true } as Field),
-            ro({ name: 'phone', type: 'text', label: 'Телефон' } as Field),
+            { name: 'clientType', type: 'select', label: 'Тип клиент', options: opts(CLIENT_TYPES) },
+            { name: 'organization', type: 'text', label: 'Организация', index: true },
+            { name: 'eik', type: 'text', label: 'ЕИК / БУЛСТАТ', index: true },
+            { name: 'city', type: 'text', label: 'Град / община' },
+            { name: 'contactName', type: 'text', label: 'Име и фамилия' },
+            { name: 'position', type: 'text', label: 'Длъжност' },
+            { name: 'email', type: 'email', label: 'Имейл', index: true },
+            { name: 'phone', type: 'text', label: 'Телефон' },
           ],
         },
         {
@@ -98,7 +175,7 @@ export const QuoteRequests: CollectionConfig = {
               type: 'ui',
               admin: { components: { Field: '@/components/admin/QuoteItemsTable#QuoteItemsTable' } },
             },
-            ro({
+            {
               name: 'items',
               type: 'array',
               label: 'Продукти и количества',
@@ -113,34 +190,39 @@ export const QuoteRequests: CollectionConfig = {
                 },
               },
               fields: [
-                { name: 'product', type: 'relationship', relationTo: 'products', label: 'Продукт' },
-                { name: 'title', type: 'text', label: 'Име (към момента на заявката)' },
-                { name: 'url', type: 'text', label: 'Адрес' },
-                { name: 'quantity', type: 'number', label: 'Количество' },
+                {
+                  type: 'row',
+                  fields: [
+                    { name: 'product', type: 'relationship', relationTo: 'products', label: 'Продукт', admin: { width: '70%' } },
+                    { name: 'quantity', type: 'number', label: 'Количество', min: 1, max: MAX_QTY, admin: { width: '30%', step: 1 } },
+                  ],
+                },
+                ro({ name: 'title', type: 'text', label: 'Име (попълва се от продукта при запис)' } as Field),
+                ro({ name: 'url', type: 'text', label: 'Адрес на продукта' } as Field),
               ],
-            } as Field),
+            },
             ro({
               name: 'itemsSummary',
               type: 'text',
               label: 'Продукти / бройки',
               admin: { description: 'Брой продукти / общо бройки — за колоната в списъка.' },
             } as Field),
-            ro({ name: 'otherProducts', type: 'textarea', label: 'Други продукти или изисквания' } as Field),
+            { name: 'otherProducts', type: 'textarea', label: 'Други продукти или изисквания' },
           ],
         },
         {
           label: 'Подробности',
           fields: [
-            ro({ name: 'purposes', type: 'select', hasMany: true, label: 'За какво ще се ползват', options: opts(PURPOSES) } as Field),
-            ro({ name: 'timeframe', type: 'select', label: 'Кога ви трябват', options: opts(TIMEFRAMES) } as Field),
-            ro({ name: 'budget', type: 'text', label: 'Ориентировъчен бюджет' } as Field),
-            ro({ name: 'procurement', type: 'select', label: 'Начин на възлагане', options: opts(PROCUREMENT) } as Field),
-            ro({ name: 'documents', type: 'select', hasMany: true, label: 'Нужни документи', options: opts(DOCUMENTS) } as Field),
-            ro({ name: 'deliveryTo', type: 'text', label: 'Доставка до' } as Field),
-            ro({ name: 'consultation', type: 'select', label: 'Консултация или монтаж', options: opts(CONSULTATION) } as Field),
-            ro({ name: 'attachment', type: 'upload', relationTo: 'quote-files', label: 'Прикачен файл' } as Field),
-            ro({ name: 'details', type: 'textarea', label: 'Допълнителна информация' } as Field),
-            ro({ name: 'consent', type: 'checkbox', label: 'Дал е съгласие за обработка на данните' } as Field),
+            { name: 'purposes', type: 'select', hasMany: true, label: 'За какво ще се ползват', options: opts(PURPOSES) },
+            { name: 'timeframe', type: 'select', label: 'Кога ви трябват', options: opts(TIMEFRAMES) },
+            { name: 'budget', type: 'text', label: 'Ориентировъчен бюджет' },
+            { name: 'procurement', type: 'select', label: 'Начин на възлагане', options: opts(PROCUREMENT) },
+            { name: 'documents', type: 'select', hasMany: true, label: 'Нужни документи', options: opts(DOCUMENTS) },
+            { name: 'deliveryTo', type: 'text', label: 'Доставка до' },
+            { name: 'consultation', type: 'select', label: 'Консултация или монтаж', options: opts(CONSULTATION) },
+            { name: 'attachment', type: 'upload', relationTo: 'quote-files', label: 'Прикачен файл' },
+            { name: 'details', type: 'textarea', label: 'Допълнителна информация' },
+            { name: 'consent', type: 'checkbox', label: 'Дал е съгласие за обработка на данните' },
           ],
         },
         {

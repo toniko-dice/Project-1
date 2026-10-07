@@ -64,6 +64,9 @@ export const labelOf = (options: Option[], value: string | null | undefined): st
 
 /* ─────────── прикаченият файл ─────────── */
 
+/** Количество на продукт: цяло число от 1 до 9999. */
+export const MAX_QTY = 9999
+
 export const MAX_FILE_BYTES = 10 * 1024 * 1024
 
 /** Разширение → mime тип, който се приема. */
@@ -85,12 +88,20 @@ export const FILE_ACCEPT = Object.keys(FILE_TYPES)
 /* ─────────── проверки — едни и същи в браузъра и на сървъра ─────────── */
 
 /**
- * ЕИК (9 или 13 цифри) / БУЛСТАТ — с контролната цифра по алгоритъма на
- * Агенцията по вписванията (Наредба № 1 от 2007 г., тегла 1…8, после 3…10;
- * за 13-те цифри — 2,7,3,5, после 4,9,5,7). Остатък 10 → контролната е 0.
+ * ЕИК / БУЛСТАТ — полето е по желание; попълнено се проверява така:
+ *
+ * - 9 цифри — ЕИК, с контролната цифра по алгоритъма на Агенцията по
+ *   вписванията (тегла 1…8, после 3…10; остатък 10 → 0);
+ * - 13 цифри — ЕИК на клон/поделение: първите 9 като горе, после 2,7,3,5 /
+ *   4,9,5,7;
+ * - 10 цифри — БУЛСТАТ на физическо лице (ЕГН-формат): само цифри;
+ * - 11 символа — БУЛСТАТ на свободни професии: латински букви и цифри, без
+ *   контролна цифра.
  */
 export const validEik = (raw: string): boolean => {
   const eik = raw.replace(/\s/g, '')
+  if (/^\d{10}$/.test(eik)) return true
+  if (/^[A-Za-z0-9]{11}$/.test(eik)) return true
   if (!/^(\d{9}|\d{13})$/.test(eik)) return false
   // Само нули минават контролата формално, но не са ЕИК.
   if (/^0+$/.test(eik)) return false
@@ -157,8 +168,8 @@ export const validateQuote = (p: QuotePayload): Record<string, string> => {
 
   if (!has(CLIENT_TYPES, p.clientType)) e.clientType = 'Изберете тип клиент.'
   req('organization', 'Въведете името на организацията.')
-  if (!p.eik.trim()) e.eik = 'Въведете ЕИК / БУЛСТАТ.'
-  else if (!validEik(p.eik)) e.eik = 'ЕИК / БУЛСТАТ трябва да е 9 или 13 цифри с вярна контролна цифра.'
+  // По желание; попълнено — проверено (`validEik`).
+  if (p.eik.trim() && !validEik(p.eik)) e.eik = 'Невалиден ЕИК/БУЛСТАТ. Проверете цифрите или оставете полето празно.'
   req('city', 'Въведете град или община.')
   req('contactName', 'Въведете име и фамилия.')
   if (!p.email.trim()) e.email = 'Въведете имейл.'
@@ -166,8 +177,8 @@ export const validateQuote = (p: QuotePayload): Record<string, string> => {
   if (!p.phone.trim()) e.phone = 'Въведете телефон.'
   else if (!validPhone(p.phone)) e.phone = 'Телефонът трябва да съдържа поне 9 цифри, напр. +359 88 123 4567.'
 
-  const items = p.items.filter((i) => Number.isInteger(i.quantity) && i.quantity >= 1)
-  if (items.length !== p.items.length) e.items = 'Количеството трябва да е цяло число, поне 1.'
+  const items = p.items.filter((i) => Number.isInteger(i.quantity) && i.quantity >= 1 && i.quantity <= MAX_QTY)
+  if (items.length !== p.items.length) e.items = `Количеството трябва да е цяло число от 1 до ${MAX_QTY}.`
   else if (!items.length && !p.otherProducts.trim()) {
     e.items = 'Изберете поне един продукт или опишете нужното в „Други продукти или изисквания".'
   }

@@ -210,7 +210,7 @@ export const mediaFileStem = (filename: string): string => path.basename(filenam
 type MediaNames = {
   filename?: string | null
   sizes?: unknown
-  trimmed?: { filename?: string | null } | null
+  trimmed?: { filename?: string | null; small?: string | null } | null
 }
 
 /** Всички файлове на запис — оригиналът, размерите и изрязаният вариант за картите. */
@@ -218,6 +218,7 @@ export const mediaFileNames = (doc: MediaNames): string[] =>
   [
     doc.filename,
     doc.trimmed?.filename,
+    doc.trimmed?.small,
     ...Object.values((doc.sizes ?? {}) as Record<string, { filename?: string | null } | null>).map(
       (s) => s?.filename,
     ),
@@ -387,7 +388,7 @@ export const replaceMediaContent = async (
   const мета = await sharp(данни).metadata()
   const размери = await writeImageSizes(payload, stem, данни)
   // Изрязаният вариант за картите — от новия файл; без прозрачност няма такъв.
-  const trimmed: { filename: string | null } =
+  const trimmed: { filename: string | null; small: string | null } =
     (await makeTrimmed(данни, stem, MEDIA_DIR).catch(() => null)) ?? NO_TRIMMED
   /*
     Размер, който НЕ е направен наново (по-малка снимка), се чисти изрично.
@@ -434,6 +435,7 @@ export const replaceMediaContent = async (
       .map((р) => (р as { filename: string | null }).filename)
       .filter((f): f is string => Boolean(f)),
     ...(trimmed.filename ? [trimmed.filename] : []),
+    ...(trimmed.small ? [trimmed.small] : []),
   ])
   for (const f of mediaFileNames(doc)) {
     if (!пазени.has(f) && !чужди.has(f.toLowerCase())) {

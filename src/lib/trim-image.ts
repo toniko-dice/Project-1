@@ -26,6 +26,8 @@ export type TrimmedImage = {
   filename: string
   width: number
   height: number
+  /** Малкото копие — плочките на формата за оферта (96 px, ×2 за ретина). */
+  small: string
 }
 
 /** Пиксел с по-ниска непрозрачност е „празно поле" (сенки под 6 % не местят рамката). */
@@ -36,6 +38,9 @@ const MIN_TRANSPARENT_SHARE = 0.05
 
 /** По-дългата страна на варианта — картите и голямата карта в менюто са до ~400 CSS px. */
 const MAX_SIDE = 900
+
+/** По-дългата страна на малкото копие: плочка 96 px × 2 (ретина) с малко запас. */
+export const SMALL_SIDE = 240
 
 /** Името на варианта до оригинала: `delta-pro-3-1-trimmed-900x863.webp`. */
 const trimmedName = (stem: string, w: number, h: number) => `${stem}-trimmed-${w}x${h}.webp`
@@ -93,7 +98,16 @@ export const makeTrimmed = async (
 
   const filename = trimmedName(stem, out.width, out.height)
   await fs.writeFile(path.join(dir, filename), data)
-  return { filename, width: out.width, height: out.height }
+
+  // Малкото копие — от готовия вариант, не от оригинала: рамката е същата.
+  const { data: sm, info: so } = await sharp(data)
+    .resize({ width: SMALL_SIDE, height: SMALL_SIDE, fit: 'inside', withoutEnlargement: true })
+    .webp({ quality: 80, alphaQuality: 90 })
+    .toBuffer({ resolveWithObject: true })
+  const small = trimmedName(stem, so.width, so.height)
+  if (small !== filename) await fs.writeFile(path.join(dir, small), sm)
+
+  return { filename, width: out.width, height: out.height, small }
 }
 
 /**
@@ -106,4 +120,4 @@ export const removeTrimmedFile = async (dir: string, name: string | null | undef
 }
 
 /** Празното поле — за запис, когато вариант няма (иначе `update` би оставил стария). */
-export const NO_TRIMMED = { filename: null, width: null, height: null } as const
+export const NO_TRIMMED = { filename: null, width: null, height: null, small: null } as const

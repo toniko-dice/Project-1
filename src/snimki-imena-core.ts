@@ -71,7 +71,7 @@ type MediaDoc = {
   originalName?: string | null
   sizes?: Record<string, Размер | null> | null
   /** Изрязаният вариант за картите (`src/lib/trim-image.ts`) — мести се заедно с размерите. */
-  trimmed?: { filename?: string | null; width?: number | null; height?: number | null } | null
+  trimmed?: { filename?: string | null; width?: number | null; height?: number | null; small?: string | null } | null
 }
 
 /** Една снимка в Медия и новото ѝ име. */
@@ -714,7 +714,17 @@ export const приложиПлана = async (
       if (н !== т.filename) {
         от.push(т.filename)
         до.push(н)
-        trimmed = { filename: н, width: т.width, height: т.height }
+        trimmed = { filename: н, width: т.width, height: т.height, small: т.small }
+      }
+      // Малкото копие (`<основа>-trimmed-WxH.webp`, до 240 px) — същото правило.
+      if (т.small && т.small !== т.filename && (await exists(path.join(MEDIA_DIR, т.small)))) {
+        const размер = /-trimmed-(\d+x\d+)\.[^.]+$/.exec(т.small)?.[1]
+        const нс = размер ? `${новаОсн}-trimmed-${размер}${path.extname(т.small)}` : т.small
+        if (нс !== т.small) {
+          от.push(т.small)
+          до.push(нс)
+          trimmed = { ...(trimmed ?? { filename: т.filename, width: т.width, height: т.height }), small: нс }
+        }
       }
     }
     ходове.push({

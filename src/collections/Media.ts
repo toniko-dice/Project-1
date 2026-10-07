@@ -10,7 +10,7 @@ import { makeTrimmed, NO_TRIMMED, removeTrimmedFile } from '../lib/trim-image'
 
 const MEDIA_DIR = path.resolve(process.cwd(), 'media')
 
-type Trimmed = { filename?: string | null } | null | undefined
+type Trimmed = { filename?: string | null; small?: string | null } | null | undefined
 
 /**
  * Изрязаният вариант за картите (`src/lib/trim-image.ts`) — при всяко
@@ -38,13 +38,16 @@ const removeFile = (name: string | null | undefined) => removeTrimmedFile(MEDIA_
 
 /** Новият файл е с нов вариант — старият се трие, щом записът е минал. */
 const dropOldTrimmed: CollectionAfterChangeHook = async ({ doc, previousDoc }) => {
-  const old = (previousDoc?.trimmed as Trimmed)?.filename
-  if (old && old !== (doc.trimmed as Trimmed)?.filename) await removeFile(old)
+  const prev = previousDoc?.trimmed as Trimmed
+  const now = doc.trimmed as Trimmed
+  const keep = new Set([now?.filename, now?.small].filter(Boolean))
+  for (const old of [prev?.filename, prev?.small]) if (old && !keep.has(old)) await removeFile(old)
   return doc
 }
 
 const dropTrimmedOnDelete: CollectionAfterDeleteHook = async ({ doc }) => {
   await removeFile((doc.trimmed as Trimmed)?.filename)
+  await removeFile((doc.trimmed as Trimmed)?.small)
 }
 
 export const Media: CollectionConfig = {
@@ -200,6 +203,8 @@ export const Media: CollectionConfig = {
         { name: 'filename', type: 'text' },
         { name: 'width', type: 'number' },
         { name: 'height', type: 'number' },
+        // Малкото копие (до 240 px) — плочките на формата за оферта.
+        { name: 'small', type: 'text' },
       ],
     },
   ],
