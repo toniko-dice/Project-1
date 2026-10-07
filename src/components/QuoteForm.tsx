@@ -234,7 +234,12 @@ export const QuoteFormClient = ({
     setMessage('')
     try {
       const r = await fetch('/api/oferta', { method: 'POST', body })
-      const j = (await r.json()) as {
+      // Отговор без JSON — грешка на сървъра, не на връзката.
+      const j = (await r.json().catch(() => ({
+        ok: false,
+        message: 'Заявката не беше приета поради грешка на сървъра. Попълненото е запазено — опитайте отново или се обадете.',
+        newCaptcha: true,
+      }))) as {
         ok: boolean
         number?: string | null
         email?: string

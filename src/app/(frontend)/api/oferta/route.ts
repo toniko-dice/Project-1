@@ -139,12 +139,23 @@ export const POST = async (request: Request): Promise<Response> => {
   let attachmentId: number | null = null
   if (upload) {
     const buf = Buffer.from(await upload.arrayBuffer())
-    const doc = await payload.create({
-      collection: 'quote-files',
-      data: {},
-      file: { data: buf, mimetype: upload.type || 'application/octet-stream', name: upload.name, size: buf.length },
-      depth: 0,
-    })
+    let doc
+    try {
+      doc = await payload.create({
+        collection: 'quote-files',
+        data: {},
+        file: { data: buf, mimetype: upload.type || 'application/octet-stream', name: upload.name, size: buf.length },
+        depth: 0,
+      })
+    } catch {
+      /*
+        Payload проверява съдържанието (повреден PDF, файл с чуждо
+        разширение) — грешката е на файла, не на сървъра: казва се на
+        полето и попълненото остава. CAPTCHA-та вече е изгорена — нов код.
+      */
+      const message = 'Файлът не може да бъде прочетен — проверете дали не е повреден или изберете друг.'
+      return json({ ok: false, errors: { attachment: message }, message, newCaptcha: true }, 422)
+    }
     attachmentId = doc.id
     attachment = {
       filename: doc.filename ?? upload.name,
