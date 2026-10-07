@@ -190,7 +190,8 @@ const OfferDocument = ({
   ]
     .filter(Boolean)
     .join(', ')
-  const footer = [co.name, co.website, co.email, co.phone].filter(Boolean).join(' · ')
+  // Долу — без телефона и без МОЛ (по желание на собственика, 7 октомври 2026).
+  const footer = [co.name, co.website, co.email].filter(Boolean).join(' · ')
 
   return (
     <Document title={`Оферта ${offer.number ?? ''}`} author={co.name ?? 'EcoFlow България'} language="bg">
@@ -304,7 +305,6 @@ const OfferDocument = ({
           <Text>
             Изготвил: {[offer.preparedBy?.name, offer.preparedBy?.position].filter(Boolean).join(', ') || '—'}
           </Text>
-          {co.mol ? <Text>МОЛ: {co.mol}</Text> : null}
         </View>
 
         {/* 9. Футър на всяка страница */}
