@@ -27,6 +27,7 @@
  * публикуването не мине проверките, остава чернова и се изписва защо.
  */
 import config from '@payload-config'
+import { convertMarkdownToLexical, editorConfigFactory } from '@payloadcms/richtext-lexical'
 import fs from 'fs/promises'
 import path from 'path'
 import { getPayload } from 'payload'
@@ -83,6 +84,8 @@ if (стр.slug !== slug) die(`stranica.slug („${String(стр.slug)}") не �
 if (!Array.isArray(content.sekcii) || !content.sekcii.length) die('В sadarzhanie.json няма секции (sekcii).')
 
 const payload = await getPayload({ config })
+// Markdown → rich text, както при текстовете на категориите (`import:seo`).
+const editorConfig = await editorConfigFactory.default({ config: payload.config })
 const log = (m: string) => console.log(m)
 const предупреждения: string[] = []
 const DRY_ID = -1
@@ -304,6 +307,25 @@ for (const [i, суров] of content.sekcii!.entries()) {
   }
 
   if (typeof b.product === 'string') b.product = await productIdFor(b.product)
+
+  // „Заглавна снимка" без снимка (`variant: simple`) — само H1 и абзац: това е „Заглавие на страницата (H1)".
+  if (вид === 'pageHero' && b.variant === 'simple') {
+    b = { blockType: 'pageIntro', heading: b.heading, body: b.body }
+  }
+
+  // „Текст": Markdown (`##` → H2, `**` → удебелено, `- ` → списък) → rich text.
+  if (вид === 'richText' && typeof b.markdown === 'string') {
+    b.content = convertMarkdownToLexical({ editorConfig, markdown: b.markdown })
+    delete b.markdown
+  }
+
+  // „Таблица": колони и клетки като прости низове във файла.
+  if (вид === 'simpleTable') {
+    b.columns = ((b.columns as unknown[]) ?? []).map((c) => ({ label: String(c) }))
+    b.rows = ((b.rows as Обект[]) ?? []).map((r) => ({
+      cells: ((r.cells as unknown[]) ?? []).map((v) => ({ value: String(v) })),
+    }))
+  }
 
   // „Форма за оферта": табовете — надпис + категория по slug.
   if (вид === 'quoteForm') {

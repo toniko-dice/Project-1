@@ -11,6 +11,7 @@ import {
 } from './blocks/banners'
 import { BenefitsGridBlock, LogoWallBlock, TestimonialsBlockRenderer } from './blocks/content'
 import { PageIntroBlock, QuoteFormBlock } from './blocks/quote'
+import { RichTextSection, SimpleTableSection } from './blocks/text'
 import {
   AccordionImageBlock,
   ContentSliderBlock,
@@ -156,6 +157,10 @@ const рендер = (
       return <PageIntroBlock key={key} block={block} />
     case 'quoteForm':
       return <QuoteFormBlock key={key} block={block} />
+    case 'richText':
+      return <RichTextSection key={key} block={block} />
+    case 'simpleTable':
+      return <SimpleTableSection key={key} block={block} />
     default:
       return null
   }

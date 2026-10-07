@@ -14,6 +14,8 @@ import {
 import { hiddenField } from './shared'
 import { PageIntro } from './PageIntro'
 import { QuoteForm } from './QuoteForm'
+import { RichTextBlock } from './RichTextBlock'
+import { SimpleTable } from './SimpleTable'
 import {
   BannerCarousel,
   BannerProductRow,
@@ -83,6 +85,8 @@ export const pageBlocks: Block[] = [
   GuideLegalText,
   PageIntro,
   QuoteForm,
+  RichTextBlock,
+  SimpleTable,
 ].map(withHidden)
 
 /** Полето „Секции на страницата" — еднакво навсякъде, където се ползва. */

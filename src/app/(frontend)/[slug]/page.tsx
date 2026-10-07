@@ -27,7 +27,11 @@ export const generateMetadata = async ({ params }: Args): Promise<Metadata> => {
   const description = page.metaDescription ?? undefined
   const url = absoluteUrl(`/${slug}`)
   // Мета снимката — webp размерът `large` (до 2000 px), не JPEG оригиналът.
-  const ogImage = mediaUrl(page.metaImage, 'large') ?? mediaUrl(page.metaImage)
+  const ogImage =
+    mediaUrl(page.metaImage, 'large') ??
+    mediaUrl(page.metaImage) ??
+    // Без мета снимка (правни страници) — логото от „Меню (хедър)".
+    mediaUrl(((await getGlobal('header')) as { logo?: unknown }).logo as never)
 
   return {
     // Наставката — само ако се събира в 60 знака (`pageTitle`).
