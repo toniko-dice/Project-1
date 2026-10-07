@@ -151,8 +151,12 @@ const Thumb = ({ p, size, eager = false }: { p: QuoteProduct; size: number; eage
   </span>
 )
 
-/** Толкова плочки се зареждат веднага; останалите — при скрол. */
-const EAGER_TILES = 12
+/*
+  Всички плочки се зареждат мързеливо: те са под първия екран — над тях
+  стоят въведението и трите реда с предимства. До 7 октомври 2026 първите
+  12 се теглеха веднага, заедно с първото зареждане
+  (`task-mobilna-optimizaciya.md`, т. 1).
+*/
 
 /* ─────────── формата ─────────── */
 
@@ -372,8 +376,17 @@ export const QuoteFormClient = ({
 
   const текущ = tabs[tab] ?? tabs[0]
 
+  /*
+    Полето на фокус не застава под лепнещия хедър горе, нито под лентата
+    „Избрани (N)" долу на телефон (`task-mobilna-optimizaciya.md`, т. 5).
+  */
   return (
-    <form ref={formRef} onSubmit={submit} noValidate className="mt-6 flex flex-col gap-5">
+    <form
+      ref={formRef}
+      onSubmit={submit}
+      noValidate
+      className="mt-6 flex flex-col gap-5 max-md:[&_input]:scroll-mb-20 max-md:[&_input]:scroll-mt-20 max-md:[&_select]:scroll-mb-20 max-md:[&_textarea]:scroll-mb-20 max-md:[&_textarea]:scroll-mt-20"
+    >
       <div ref={topRef} className="scroll-mt-24" />
 
       {/* Капан за роботи — невидим за човек и за екранни четци. */}
@@ -399,7 +412,7 @@ export const QuoteFormClient = ({
               {CLIENT_TYPES.map((o) => (
                 <label
                   key={o.value}
-                  className={`flex min-h-10 cursor-pointer items-center rounded-full border px-4 text-sm transition-colors ${
+                  className={`flex min-h-10 cursor-pointer items-center rounded-full border px-4 text-sm transition-colors max-md:min-h-11 max-md:text-[15px] ${
                     f.clientType === o.value ? 'border-ink bg-ink text-white' : 'border-line-strong bg-surface hover:border-ink'
                   }`}
                 >
@@ -424,7 +437,7 @@ export const QuoteFormClient = ({
           </div>
           <div data-field="eik">
             <Label htmlFor={`${uid}-eik`}>ЕИК / БУЛСТАТ (по желание)</Label>
-            <input id={`${uid}-eik`} className={inputCls(!!err('eik'))} value={f.eik} onChange={(e) => set('eik', e.target.value)} autoComplete="off" {...aria('eik')} />
+            <input id={`${uid}-eik`} inputMode="numeric" className={inputCls(!!err('eik'))} value={f.eik} onChange={(e) => set('eik', e.target.value)} autoComplete="off" {...aria('eik')} />
             <FieldError id={`${uid}-eik-err`} msg={err('eik')} />
           </div>
           <div data-field="city" className="sm:col-span-2">
@@ -450,7 +463,7 @@ export const QuoteFormClient = ({
           </div>
           <div data-field="email">
             <Label htmlFor={`${uid}-email`} req>Имейл</Label>
-            <input id={`${uid}-email`} type="email" className={inputCls(!!err('email'))} value={f.email} onChange={(e) => set('email', e.target.value)} autoComplete="email" {...aria('email')} />
+            <input id={`${uid}-email`} type="email" inputMode="email" className={inputCls(!!err('email'))} value={f.email} onChange={(e) => set('email', e.target.value)} autoComplete="email" {...aria('email')} />
             <FieldError id={`${uid}-email-err`} msg={err('email')} />
           </div>
           <div data-field="phone">
@@ -554,7 +567,7 @@ export const QuoteFormClient = ({
           {/* Плочки */}
           <div role="tabpanel" className="max-h-[440px] overflow-y-auto rounded-lg border border-line bg-canvas p-2 sm:max-h-[520px]">
             <ul className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
-              {(текущ?.ids ?? []).map((id, index) => {
+              {(текущ?.ids ?? []).map((id) => {
                 const p = byId.get(id)
                 if (!p) return null
                 const n = qtyOf(id)
@@ -571,7 +584,7 @@ export const QuoteFormClient = ({
                       onClick={() => toggle(id)}
                       className="flex flex-1 cursor-pointer flex-col items-center gap-1.5 p-2 text-center"
                     >
-                      <Thumb p={p} size={96} eager={index < EAGER_TILES} />
+                      <Thumb p={p} size={96} />
                       <span className="line-clamp-3 text-[12px] leading-tight">{p.title}</span>
                     </button>
                     {n ? (
@@ -641,8 +654,8 @@ export const QuoteFormClient = ({
             <Label>За какво ще се ползват</Label>
             <div className="grid gap-2 sm:grid-cols-2">
               {PURPOSES.map((o) => (
-                <label key={o.value} className="flex cursor-pointer items-center gap-2.5 text-sm">
-                  <input type="checkbox" className="size-4 accent-[#1a1a1a]" checked={f.purposes.includes(o.value)} onChange={() => toggleIn('purposes', o.value)} />
+                <label key={o.value} className="flex cursor-pointer items-center gap-2.5 text-sm max-md:min-h-11">
+                  <input type="checkbox" className="size-4 accent-[#1a1a1a] max-md:size-5" checked={f.purposes.includes(o.value)} onChange={() => toggleIn('purposes', o.value)} />
                   {o.label}
                 </label>
               ))}
@@ -676,8 +689,8 @@ export const QuoteFormClient = ({
             <Label>Нужни документи</Label>
             <div className="flex flex-wrap gap-x-6 gap-y-2">
               {DOCUMENTS.map((o) => (
-                <label key={o.value} className="flex cursor-pointer items-center gap-2.5 text-sm">
-                  <input type="checkbox" className="size-4 accent-[#1a1a1a]" checked={f.documents.includes(o.value)} onChange={() => toggleIn('documents', o.value)} />
+                <label key={o.value} className="flex cursor-pointer items-center gap-2.5 text-sm max-md:min-h-11">
+                  <input type="checkbox" className="size-4 accent-[#1a1a1a] max-md:size-5" checked={f.documents.includes(o.value)} onChange={() => toggleIn('documents', o.value)} />
                   {o.label}
                 </label>
               ))}
@@ -687,8 +700,8 @@ export const QuoteFormClient = ({
             <Label>Нужна ли е консултация или монтаж</Label>
             <div className="flex gap-6">
               {CONSULTATION.map((o) => (
-                <label key={o.value} className="flex cursor-pointer items-center gap-2.5 text-sm">
-                  <input type="radio" name="consultation" className="size-4 accent-[#1a1a1a]" checked={f.consultation === o.value} onChange={() => set('consultation', o.value)} />
+                <label key={o.value} className="flex cursor-pointer items-center gap-2.5 text-sm max-md:min-h-11">
+                  <input type="radio" name="consultation" className="size-4 accent-[#1a1a1a] max-md:size-5" checked={f.consultation === o.value} onChange={() => set('consultation', o.value)} />
                   {o.label}
                 </label>
               ))}
@@ -749,8 +762,8 @@ export const QuoteFormClient = ({
       {/* ─────────── Д. Съгласие, CAPTCHA, изпращане ─────────── */}
       <div className="rounded-xl bg-surface p-5 sm:p-7">
         <div data-field="consent">
-          <label className="flex cursor-pointer items-start gap-3 text-sm leading-snug">
-            <input type="checkbox" className="mt-0.5 size-4 shrink-0 accent-[#1a1a1a]" checked={f.consent} onChange={(e) => set('consent', e.target.checked)} {...aria('consent')} />
+          <label className="flex cursor-pointer items-start gap-3 text-sm leading-snug max-md:min-h-11 max-md:py-1">
+            <input type="checkbox" className="mt-0.5 size-4 shrink-0 accent-[#1a1a1a] max-md:size-5" checked={f.consent} onChange={(e) => set('consent', e.target.checked)} {...aria('consent')} />
             <span>
               Съгласен съм данните ми да бъдат обработени, за да получа оферта.{' '}
               <Link href={privacyUrl} target="_blank" className="underline underline-offset-4">

@@ -4,6 +4,7 @@ import { notFound, permanentRedirect } from 'next/navigation'
 
 import { RenderProductSections } from '@/components/blocks/product'
 import { BuyButton } from '@/components/BuyButton'
+import { StickyBuyBar } from '@/components/StickyBuyBar'
 import { productBadges, ProductBadges } from '@/components/ProductBadges'
 import { ProductCard } from '@/components/ProductCard'
 import { ProductAnchorNav, type Anchor } from '@/components/ProductAnchorNav'
@@ -253,7 +254,7 @@ export default async function ProductPage({ params }: Args) {
 
         <div className="flex flex-col gap-4">
           {product.badge && product.badge !== 'none' ? (
-            <span className="w-fit rounded bg-ink px-2 py-1 text-[11px] font-semibold tracking-wide text-white">
+            <span className="w-fit rounded bg-ink px-2 py-1 text-[11px] font-semibold tracking-wide text-white max-md:text-xs">
               {BADGE_LABELS[product.badge]}
             </span>
           ) : null}
@@ -301,9 +302,16 @@ export default async function ProductPage({ params }: Args) {
             </p>
           ) : null}
 
-          {/* Продукт без акценти не оставя празно място — блокът изчезва изцяло. */}
+          {/*
+            Продукт без акценти не оставя празно място — блокът изчезва изцяло.
+
+            На телефон акцентите и описанието отиват СЛЕД бутона (`order`):
+            там сивият блок стоеше между цената и „Купи сега" и бутонът
+            беше далеч надолу (`task-mobilna-optimizaciya.md`, т. 4). На
+            компютър редът е както досега.
+          */}
           {highlights.length ? (
-            <ul className="rounded-lg bg-tile p-4 text-sm leading-relaxed">
+            <ul className="rounded-lg bg-tile p-4 text-sm leading-relaxed max-md:order-1">
               {highlights.map((h, i) => (
                 <li key={i} className={i > 0 ? 'mt-2' : ''}>
                   <strong className="font-semibold">{h.title}</strong>
@@ -314,11 +322,17 @@ export default async function ProductPage({ params }: Args) {
             </ul>
           ) : null}
 
-          {/* Същият бутон като на картите — надписът следва наличността. */}
-          <BuyButton product={product} size="lg" />
+          {/*
+            Същият бутон като на картите — надписът следва наличността.
+            `id` — лепнещата лента долу на телефон се показва, щом той
+            излезе от екрана (`StickyBuyBar`).
+          */}
+          <div id="kupi" className="flex flex-col">
+            <BuyButton product={product} size="lg" />
+          </div>
 
           {product.description ? (
-            <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-ink-muted">
+            <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-ink-muted max-md:order-2">
               {product.description}
             </p>
           ) : null}
@@ -340,6 +354,19 @@ export default async function ProductPage({ params }: Args) {
         product={product}
         showBgn={showBgn}
         accessories={accessories.length ? [] : accessories}
+      />
+
+      {/* ── Лепнеща лента с цената и бутона — само на телефон ── */}
+      <StickyBuyBar
+        title={product.title}
+        imageUrl={mediaUrl(product.image, 'thumbnail')}
+        price={product.price}
+        comparePrice={product.compareAtPrice}
+        product={{
+          availability: product.availability,
+          externalUrl: product.externalUrl,
+          ctaLabel: product.ctaLabel,
+        }}
       />
 
       {/* ── Съвместими аксесоари ── */}

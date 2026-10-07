@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import type { ResponsiveImage } from '@/lib/media'
-import { SectionImage } from './SectionImage'
+import { ДО_SM, ОТ_SM, SectionImage } from './SectionImage'
 import { useEffect, useRef, useState } from 'react'
 
 import { BannerButton, BannerEyebrow } from './blocks/section'
@@ -144,8 +144,8 @@ export const HeroSlider = ({
               „image is not rendered at full viewport width" и точно това
               излизаше като „1 Issue" в разработка. По-важното: с
               `sizes="100vw"` и на двете браузърът теглеше И ДВЕТЕ в пълен
-              размер. Тесният `sizes` за скритата казва на браузъра да вземе
-              най-малкия вариант, вместо да дърпа банер от 2400px напразно.
+              размер. Скритата е в `<picture>` с празен източник за своя
+              екран (`hideAt`) и изобщо не се тегли.
             */}
             {slide.desktop ? (
               slide.mobile ? (
@@ -154,14 +154,16 @@ export const HeroSlider = ({
                     image={slide.mobile}
                     alt={slide.alt}
                     priority={i === 0}
-                    sizes="(min-width: 640px) 1px, 100vw"
+                    sizes="100vw"
+                    hideAt={ОТ_SM}
                     className="absolute inset-0 size-full object-cover sm:hidden"
                   />
                   <SectionImage
                     image={slide.desktop}
                     alt={slide.alt}
                     priority={i === 0}
-                    sizes="(max-width: 639px) 1px, 100vw"
+                    sizes="100vw"
+                    hideAt={ДО_SM}
                     className="absolute inset-0 hidden size-full object-cover sm:block"
                   />
                 </>
@@ -253,7 +255,7 @@ export const HeroSlider = ({
               onClick={() => go(i)}
               aria-label={`Слайд ${i + 1} от ${slides.length}`}
               aria-current={i === index ? 'true' : undefined}
-              className="group flex h-8 cursor-pointer items-center px-1"
+              className="group flex h-8 cursor-pointer items-center px-1 max-md:h-11"
             >
               <span
                 className={`block h-0.5 rounded-full transition-all duration-300 ${

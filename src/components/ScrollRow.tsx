@@ -167,7 +167,9 @@ export const ScrollRow = ({
         // Иначе мишката „хваща" снимката и влачи нея вместо лентата.
         onDragStart={(e) => e.preventDefault()}
         style={dragging ? { scrollSnapType: 'none', userSelect: 'none' } : undefined}
-        className={`${className} ${dragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+        // На телефон стрелки няма — краят, зад който има още, избледнява (globals.css).
+        data-edge={canBack && canNext ? 'both' : canBack ? 'start' : canNext ? 'end' : 'none'}
+        className={`${className} edge-fade ${dragging ? 'cursor-grabbing' : 'cursor-grab'}`}
       >
         {children}
       </div>

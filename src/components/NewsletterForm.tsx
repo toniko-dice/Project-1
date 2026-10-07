@@ -75,6 +75,7 @@ export const NewsletterForm = ({ consentText }: { consentText: string }) => {
             id="newsletter-email"
             name="email"
             type="email"
+            inputMode="email"
             autoComplete="email"
             required
             value={email}
@@ -112,13 +113,13 @@ export const NewsletterForm = ({ consentText }: { consentText: string }) => {
         />
       </div>
 
-      <label className="mt-3 flex cursor-pointer items-start gap-2 text-xs leading-relaxed">
+      <label className="mt-3 flex cursor-pointer items-start gap-2 text-xs leading-relaxed max-md:min-h-11 max-md:py-1">
         <input
           type="checkbox"
           required
           checked={consent}
           onChange={(e) => setConsent(e.target.checked)}
-          className="mt-0.5 size-4 shrink-0 cursor-pointer"
+          className="mt-0.5 size-4 shrink-0 cursor-pointer max-md:size-5"
         />
         <span className="text-ink-muted">{consentText}</span>
       </label>

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import type { Product } from '@/payload-types'
 import { discountPercent, formatEur } from '@/lib/format'
 import { mediaAlt, mediaUrl, productCardData, sectionImage } from '@/lib/media'
+import { CompareScroll } from '../CompareScroll'
 import { SectionImage } from '../SectionImage'
 import { ProductCard } from '../ProductCard'
 import { BoxTabs } from './BoxTabs'
@@ -368,7 +369,7 @@ const BundleOptionsBlock = ({
                 ) : null}
                 <span className="tabular text-base font-semibold">{formatEur(o.price)}</span>
                 {off ? (
-                  <span className="rounded bg-accent px-1.5 py-0.5 text-[11px] font-semibold text-white">
+                  <span className="rounded bg-accent px-1.5 py-0.5 text-[11px] font-semibold text-white max-md:text-xs">
                     −{off}%
                   </span>
                 ) : null}
@@ -492,13 +493,24 @@ const ComparisonTableBlock = ({
           Широката таблица се скролва вътре в себе си, а колоната с
           показателите остава залепена вляво, за да се вижда кой ред се чете.
         */}
-        <div className="overflow-x-auto rounded-2xl bg-shade py-8">
-          <table className="w-full min-w-[46rem] border-collapse">
+        {/*
+          На телефон (`task-mobilna-optimizaciya.md`, т. 4): таблицата стига
+          до ръбовете на екрана, етикетите са 104 px, моделите по 134 px —
+          на 375 px се виждат два модела, не един (110 + 2 × 140 от задачата
+          не се събират в 343 px между полетата). Снимката до 72 px,
+          подзаглавието на един ред, бутонът 36 px.
+        */}
+        <CompareScroll className="overflow-x-auto rounded-2xl bg-shade py-8 max-md:-mx-4 max-md:rounded-none max-md:py-5">
+          <table className="w-full min-w-[46rem] border-collapse max-md:w-auto max-md:min-w-0">
             <thead>
               <tr>
-                <th className="sticky left-0 z-10 w-48 bg-shade px-4 text-left align-bottom" />
+                <th className="sticky left-0 z-10 w-48 bg-shade px-4 text-left align-bottom max-md:w-[104px] max-md:min-w-[104px] max-md:max-w-[104px] max-md:px-3" />
                 {cols.map((c, i) => (
-                  <th key={i} scope="col" className="px-4 text-center align-top">
+                  <th
+                    key={i}
+                    scope="col"
+                    className="px-4 text-center align-top max-md:w-[134px] max-md:min-w-[134px] max-md:max-w-[134px] max-md:px-2"
+                  >
                     {/*
                       Мястото за снимката е с постоянна височина и когато
                       снимка няма. Иначе колоната без снимка вдига името си
@@ -510,7 +522,7 @@ const ComparisonTableBlock = ({
                       закъснее.
                     */}
                     {anyImage ? (
-                      <span className="mb-4 flex h-44 items-end justify-center">
+                      <span className="mb-4 flex h-44 items-end justify-center max-md:mb-2 max-md:h-[72px]">
                         {c.imageUrl ? (
                           <Image
                             src={c.imageUrl}
@@ -519,7 +531,7 @@ const ComparisonTableBlock = ({
                             height={360}
                             sizes="240px"
                             loading="lazy"
-                            className="h-44 w-auto max-w-full object-contain"
+                            className="h-44 w-auto max-w-full object-contain max-md:h-[72px]"
                           />
                         ) : null}
                       </span>
@@ -530,7 +542,7 @@ const ComparisonTableBlock = ({
                       името. Толкова стига, за да се хване с поглед.
                     */}
                     <span
-                      className={`block text-xl sm:text-2xl ${
+                      className={`block text-xl max-md:text-[15px] max-md:leading-snug sm:text-2xl ${
                         c.highlight ? 'font-bold' : 'font-semibold'
                       }`}
                     >
@@ -538,14 +550,14 @@ const ComparisonTableBlock = ({
                     </span>
 
                     {c.tagline ? (
-                      <span className="mx-auto mt-2 block max-w-64 text-sm font-normal">
+                      <span className="mx-auto mt-2 block max-w-64 text-sm font-normal max-md:mt-1 max-md:line-clamp-1 max-md:text-xs max-md:text-ink-muted">
                         {c.tagline}
                       </span>
                     ) : null}
 
                     {c.price !== null ? (
                       <span className="mt-3 flex flex-wrap items-baseline justify-center gap-2">
-                        <span className="tabular text-lg font-bold text-alert">
+                        <span className="tabular text-lg font-bold text-alert max-md:text-base">
                           {formatEur(c.price)}
                         </span>
                       </span>
@@ -561,7 +573,7 @@ const ComparisonTableBlock = ({
                         href={c.ctaUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mx-auto mt-4 flex min-h-12 w-full max-w-60 cursor-pointer items-center justify-center rounded-lg bg-ink px-4 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand"
+                        className="mx-auto mt-4 flex min-h-12 w-full max-w-60 cursor-pointer items-center justify-center rounded-lg bg-ink px-4 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand max-md:mt-2 max-md:min-h-9 max-md:px-2 max-md:text-[13px]"
                       >
                         {c.ctaLabel}
                       </Link>
@@ -576,7 +588,7 @@ const ComparisonTableBlock = ({
                 <tr key={ri} className="border-t border-line">
                   <th
                     scope="row"
-                    className="sticky left-0 z-10 bg-shade px-4 py-6 text-left align-middle text-sm font-normal text-ink-muted"
+                    className="sticky left-0 z-10 bg-shade px-4 py-6 text-left align-middle text-sm font-normal text-ink-muted max-md:w-[104px] max-md:max-w-[104px] max-md:px-3 max-md:py-4 max-md:text-[13px] max-md:leading-snug max-md:[overflow-wrap:anywhere]"
                   >
                     {row.label}
                   </th>
@@ -588,7 +600,7 @@ const ComparisonTableBlock = ({
                     */
                     <td
                       key={ci}
-                      className="whitespace-pre-line px-4 py-6 text-center align-middle text-base font-semibold"
+                      className="whitespace-pre-line px-4 py-6 text-center align-middle text-base font-semibold max-md:px-2 max-md:py-4 max-md:text-sm"
                     >
                       {(row.values ?? [])[ci]?.value ?? '—'}
                     </td>
@@ -597,7 +609,7 @@ const ComparisonTableBlock = ({
               ))}
             </tbody>
           </table>
-        </div>
+        </CompareScroll>
       </div>
     </Section>
   )

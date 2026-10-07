@@ -5,7 +5,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 
 import type { ResponsiveImage } from '@/lib/media'
 import { ImagePlaceholder } from './ImagePlaceholder'
-import { SectionImage } from './SectionImage'
+import { ДО_MD, ОТ_MD, SectionImage } from './SectionImage'
 
 export type GuideSlide = {
   label?: string | null
@@ -66,13 +66,15 @@ export const GuideSlider = ({ slides, label }: { slides: GuideSlide[]; label: st
                     <SectionImage
                       image={s.mobile}
                       alt={s.alt}
-                      sizes="(min-width: 768px) 1px, 100vw"
+                      sizes="100vw"
+                      hideAt={ОТ_MD}
                       className="h-auto w-full md:hidden"
                     />
                     <SectionImage
                       image={s.desktop}
                       alt={s.alt}
-                      sizes="(max-width: 767px) 1px, (max-width: 1264px) 100vw, 1200px"
+                      sizes="(max-width: 1264px) 100vw, 1200px"
+                      hideAt={ДО_MD}
                       className="hidden aspect-[20/7] w-full object-cover md:block"
                     />
                   </>
@@ -130,7 +132,8 @@ export const GuideSlider = ({ slides, label }: { slides: GuideSlide[]; label: st
               onClick={() => go(i)}
               aria-label={`Слайд ${i + 1}${s.label ? `: ${s.label}` : ''}`}
               aria-current={i === index ? 'true' : undefined}
-              className="flex size-6 cursor-pointer items-center justify-center"
+              // 24 px на компютър, 44 px за пръста (`task-mobilna-optimizaciya.md`, т. 6).
+              className="flex size-6 cursor-pointer items-center justify-center max-md:size-11"
             >
               <span
                 className={`block size-2 rounded-full transition-colors duration-200 ${

@@ -1984,6 +1984,14 @@ export interface Media {
       filesize?: number | null;
       filename?: string | null;
     };
+    mobile?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
     content?: {
       url?: string | null;
       width?: number | null;
@@ -5209,6 +5217,16 @@ export interface MediaSelect<T extends boolean = true> {
               filesize?: T;
               filename?: T;
             };
+        mobile?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+            };
         content?:
           | T
           | {
@@ -5485,6 +5503,16 @@ export interface Header {
   searchEnabled?: boolean | null;
   ctaLabel?: string | null;
   ctaUrl?: string | null;
+  /**
+   * Показват се под точките в менюто на телефон. Под тях излизат телефонът и имейлът от „Общи настройки".
+   */
+  mobileLinks?:
+    | {
+        label: string;
+        url: string;
+        id?: string | null;
+      }[]
+    | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -5819,6 +5847,13 @@ export interface HeaderSelect<T extends boolean = true> {
   searchEnabled?: T;
   ctaLabel?: T;
   ctaUrl?: T;
+  mobileLinks?:
+    | T
+    | {
+        label?: T;
+        url?: T;
+        id?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

@@ -135,7 +135,7 @@ export const ProductCarouselBlock = async ({
         <div className={`p-4 ${dark ? 'text-white' : 'text-ink'}`}>
           <h3 className="text-sm font-medium">{p.title}</h3>
           {p.tagline ? (
-            <p className={`mt-0.5 text-[11px] ${dark ? 'opacity-75' : 'text-ink-muted'}`}>
+            <p className={`mt-0.5 text-[11px] max-md:text-xs ${dark ? 'opacity-75' : 'text-ink-muted'}`}>
               {p.tagline}
             </p>
           ) : null}

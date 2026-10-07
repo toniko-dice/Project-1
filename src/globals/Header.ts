@@ -215,6 +215,35 @@ export const Header: GlobalConfig = {
             },
           ],
         },
+        {
+          label: 'Мобилно меню',
+          fields: [
+            {
+              /*
+                Бързите линкове най-долу в менюто на телефон
+                (`task-mobilna-optimizaciya.md`, т. 3). Телефонът и имейлът
+                под тях са от „Общи настройки" — същите като във футъра.
+              */
+              name: 'mobileLinks',
+              type: 'array',
+              label: 'Бързи линкове най-долу',
+              labels: { singular: 'Линк', plural: 'Линкове' },
+              admin: {
+                description:
+                  'Показват се под точките в менюто на телефон. Под тях излизат телефонът и имейлът от „Общи настройки".',
+              },
+              fields: [
+                {
+                  type: 'row',
+                  fields: [
+                    { name: 'label', type: 'text', required: true, label: 'Текст', admin: { width: '50%' } },
+                    { name: 'url', type: 'text', required: true, label: 'Адрес', admin: { width: '50%' } },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
       ],
     },
   ],

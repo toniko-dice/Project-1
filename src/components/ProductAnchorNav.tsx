@@ -1,6 +1,8 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+
+import { useScrollEdges } from './useScrollEdges'
 
 export type Anchor = { id: string; label: string }
 
@@ -26,6 +28,22 @@ export type Anchor = { id: string; label: string }
  */
 export const ProductAnchorNav = ({ anchors }: { anchors: Anchor[] }) => {
   const [active, setActive] = useState<string>(anchors[0]?.id ?? '')
+  const rowRef = useRef<HTMLUListElement>(null)
+  const edge = useScrollEdges(rowRef)
+
+  /*
+    Активната точка се вижда винаги: на телефон лентата е по-широка от
+    екрана и без това активната оставаше отрязана вдясно. Мести се САМО
+    лентата (`scrollTo` на нея), не страницата — `scrollIntoView` би
+    дръпнал и прозореца по средата на скрола.
+  */
+  useEffect(() => {
+    const row = rowRef.current
+    const link = row?.querySelector<HTMLElement>(`a[href="#${CSS.escape(active)}"]`)
+    if (!row || !link || row.scrollWidth <= row.clientWidth) return
+    const център = link.offsetLeft + link.offsetWidth / 2 - row.clientWidth / 2
+    row.scrollTo({ left: Math.max(0, център), behavior: 'smooth' })
+  }, [active])
 
   useEffect(() => {
     if (!anchors.length) return
@@ -78,7 +96,11 @@ export const ProductAnchorNav = ({ anchors }: { anchors: Anchor[] }) => {
   return (
     <nav
       aria-label="Съдържание на страницата"
-      className="sticky top-0 z-30 border-y border-line bg-surface/95 backdrop-blur"
+      /*
+        Лепне под хедъра: на телефон хедърът също лепне и пише височината
+        си в `--header-offset` (0, когато е прибран или на компютър).
+      */
+      className="sticky top-[var(--header-offset,0px)] z-30 border-y border-line bg-surface/95 backdrop-blur transition-[top] duration-200"
     >
       <div className="container-site">
         {/*
@@ -86,7 +108,7 @@ export const ProductAnchorNav = ({ anchors }: { anchors: Anchor[] }) => {
           препълване „safe center" се отказва от центрирането и лентата се
           скролва отляво — виж scroll-row-center в globals.css.
         */}
-        <ul className="scroll-row scroll-row-center py-0">
+        <ul ref={rowRef} data-edge={edge} className="scroll-row scroll-row-center edge-fade py-0">
           {anchors.map((a) => (
             <li key={a.id}>
               <a

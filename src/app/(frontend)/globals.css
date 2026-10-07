@@ -126,16 +126,46 @@
 }
 
 @layer utilities {
+  /*
+    `env(safe-area-inset-*)` — iPhone с изрез, хоризонтално: страницата е с
+    `viewport-fit=cover` (layout.tsx), фоновете стигат до ръба, а текстът
+    стои встрани от изреза. Без изрез стойността е 0 и отстъпът е както
+    досега.
+  */
   .container-site {
     width: 100%;
     max-width: 88rem;
     margin-inline: auto;
-    padding-inline: 1rem;
+    padding-inline: max(1rem, env(safe-area-inset-left)) max(1rem, env(safe-area-inset-right));
   }
 
   @media (min-width: 768px) {
     .container-site {
-      padding-inline: 2rem;
+      padding-inline: max(2rem, env(safe-area-inset-left)) max(2rem, env(safe-area-inset-right));
+    }
+  }
+
+  /*
+    Хоризонтална лента, зад чийто край има още (`data-edge` от
+    `useScrollEdges` / `ScrollRow`): краят избледнява. Само на телефон —
+    там стрелки няма и лентата иначе изглежда просто отрязана.
+    Маската избледнява самото съдържание, затова работи върху всеки фон.
+  */
+  @media (max-width: 767.98px) {
+    .edge-fade[data-edge='end'] {
+      mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent);
+    }
+    .edge-fade[data-edge='start'] {
+      mask-image: linear-gradient(to left, #000 calc(100% - 2.5rem), transparent);
+    }
+    .edge-fade[data-edge='both'] {
+      mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 2.5rem,
+        #000 calc(100% - 2.5rem),
+        transparent
+      );
     }
   }
 
@@ -280,4 +310,36 @@
   .motion-video {
     display: none;
   }
+}
+
+/*
+  ─── Телефон (`task-mobilna-optimizaciya.md`) ───
+
+  Извън слоевете нарочно: правило без слой побеждава класовете на
+  Tailwind (`text-sm` в полето), без `!important`.
+*/
+
+/*
+  Поле с шрифт под 16 px кара iPhone да увеличи страницата при докосване —
+  и тя остава увеличена. На телефон всички полета са 16 px; на компютър —
+  както са в компонента.
+*/
+@media (max-width: 767.98px) {
+  input:not([type='checkbox']):not([type='radio']):not([type='range']):not([type='hidden']),
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+/* Без забавянето за двойно докосване — докосването е клик веднага. */
+a,
+button,
+label,
+summary,
+input,
+select,
+textarea,
+[role='button'] {
+  touch-action: manipulation;
 }

@@ -124,6 +124,19 @@ export const Media: CollectionConfig = {
         снимки е разрушително: портретен колаж 1680×2037, свит до 1920×900,
         губи две трети от съдържанието си.
       */
+      /*
+        За телефон (`task-mobilna-optimizaciya.md`): 828 px е ширината на
+        екрана 414 px при плътност 2. Без него най-малкият кандидат в
+        `srcSet` беше `content` (1600 px) и телефонът теглеше банер,
+        четири пъти по-широк от екрана си. Без увеличаване — тясна снимка
+        просто няма такъв размер.
+      */
+      {
+        name: 'mobile',
+        width: 828,
+        withoutEnlargement: true,
+        formatOptions: { format: 'webp', options: { quality: 80 } },
+      },
       {
         name: 'content',
         width: 1600,

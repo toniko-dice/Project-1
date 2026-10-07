@@ -19,20 +19,33 @@ export const Breadcrumbs = ({ items }: { items: Crumb[] }) => {
   if (items.length < 2) return null
 
   return (
-    <nav aria-label="Път до страницата" className="text-xs text-ink-muted">
-      <ol className="flex flex-wrap items-center gap-1">
+    /*
+      На телефон трохите са на един ред и се скролват хоризонтално, вместо
+      да се пренасят на два (`task-mobilna-optimizaciya.md`, т. 4); всяка е
+      висока 44 px за пръста. Отрицателното поле връща реда на мястото му.
+    */
+    <nav aria-label="Път до страницата" className="text-xs text-ink-muted max-md:-my-3">
+      <ol className="flex flex-wrap items-center gap-1 max-md:flex-nowrap max-md:overflow-x-auto max-md:whitespace-nowrap max-md:[scrollbar-width:none] max-md:[&::-webkit-scrollbar]:hidden">
         {items.map((item, i) => (
-          <li key={i} className="flex items-center gap-1">
+          <li key={i} className="flex shrink-0 items-center gap-1">
             {i > 0 ? (
               <CaretRight size={11} aria-hidden="true" className="shrink-0 opacity-60" />
             ) : null}
 
             {item.url && i < items.length - 1 ? (
-              <Link href={item.url} className="cursor-pointer hover:text-ink hover:underline">
+              <Link
+                href={item.url}
+                className="cursor-pointer hover:text-ink hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
+              >
                 {item.label}
               </Link>
             ) : (
-              <span aria-current={i === items.length - 1 ? 'page' : undefined}>{item.label}</span>
+              <span
+                aria-current={i === items.length - 1 ? 'page' : undefined}
+                className="max-md:inline-flex max-md:min-h-11 max-md:items-center"
+              >
+                {item.label}
+              </span>
             )}
           </li>
         ))}

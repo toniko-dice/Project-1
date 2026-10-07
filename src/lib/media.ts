@@ -11,7 +11,7 @@ type MaybeProduct = number | Product | null | undefined
  * Първите четири изрязват до точно съотношение; `content` и `large` пазят
  * пропорцията и се ползват там, където снимката не бива да се реже.
  */
-export type MediaSize = 'thumbnail' | 'card' | 'banner' | 'wide' | 'content' | 'large' | 'full'
+export type MediaSize = 'thumbnail' | 'card' | 'banner' | 'wide' | 'mobile' | 'content' | 'large' | 'full'
 
 /**
  * Размерът на снимка в продуктова карта: изрязаният вариант (`trimmed`),
@@ -194,7 +194,12 @@ export type ResponsiveImage = {
 }
 
 /** Размерите без изрязване, от малък към голям. Всички са webp. */
-const WIDE_SIZES = ['content', 'large', 'full'] as const
+/*
+  `mobile` (828 px) е за телефона — без него най-малкият кандидат беше
+  `content` (1600 px). Снимка, качена преди него и непреминала през
+  `npm run media:regenerate`, просто го няма и започва от `content`.
+*/
+const WIDE_SIZES = ['mobile', 'content', 'large', 'full'] as const
 
 /**
  * Снимка на пълна или половин ширина — секции, банери.

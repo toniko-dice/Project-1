@@ -1,10 +1,10 @@
 'use client'
 
-import { ArrowRight, CaretDown, CaretUp, List, MagnifyingGlass, X } from '@phosphor-icons/react/dist/ssr'
+import { ArrowRight, CaretDown, CaretUp, EnvelopeSimple, List, MagnifyingGlass, Phone, X } from '@phosphor-icons/react/dist/ssr'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { type PointerEvent, useEffect, useMemo, useRef, useState } from 'react'
+import { type KeyboardEvent as ReactKeyboardEvent, type PointerEvent, useEffect, useMemo, useRef, useState } from 'react'
 import { formatEur } from '@/lib/format'
 import { CardImage } from './CardImage'
 import { ImagePlaceholder } from './ImagePlaceholder'
@@ -237,10 +237,13 @@ const PanelSections = ({
 const MegaMenu = ({
   item,
   index,
+  loading,
   onClose,
   onNavigate,
 }: {
   item: NavItem
+  /** Картите още идват от `/api/menyu`. */
+  loading: boolean
   /** Номерът на главната точка — за връщане на фокуса при Esc. */
   index: number
   onClose: () => void
@@ -384,6 +387,8 @@ const MegaMenu = ({
         <div className="min-w-0 flex-1">
           {active?.sections?.length ? (
             <PanelSections sections={active.sections} onNavigate={onNavigate} />
+          ) : loading ? (
+            <p className="text-sm text-ink-muted">Зареждане…</p>
           ) : (
             /*
               Панел без показваем продукт — категория, която още няма
@@ -423,6 +428,9 @@ export const HeaderNav = ({
   ctaLabel,
   ctaUrl,
   searchEnabled,
+  mobileLinks = [],
+  phone,
+  email,
 }: {
   items: NavItem[]
   logoUrl: string | null
@@ -434,13 +442,97 @@ export const HeaderNav = ({
   ctaLabel?: string | null
   ctaUrl?: string | null
   searchEnabled?: boolean | null
+  /** Бързите линкове най-долу в менюто на телефон. */
+  mobileLinks?: { label: string; url: string }[]
+  phone?: string | null
+  email?: string | null
 }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [mobileExpanded, setMobileExpanded] = useState<number | null>(null)
   const [searchOpen, setSearchOpen] = useState(false)
-  const navRef = useRef<HTMLDivElement>(null)
+  const navRef = useRef<HTMLElement>(null)
   const barRef = useRef<HTMLUListElement>(null)
+  const menuBtnRef = useRef<HTMLButtonElement>(null)
+
+  /*
+    Картите в панелите идват отделно — от `/api/menyu`, не с HTML-а на
+    страницата (виж `Header.tsx`). Теглят се веднъж: на компютър, когато
+    браузърът е свободен след зареждането, или при първото посочване на
+    точка от менюто — каквото дойде първо. На телефон не трябват.
+  */
+  const [карти, setКарти] = useState<Record<string, MenuSection[]> | null>(null)
+  const тегли = useRef(false)
+  const заредиКарти = () => {
+    if (тегли.current) return
+    тегли.current = true
+    fetch('/api/menyu')
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+      .then((j: Record<string, MenuSection[]>) => setКарти(j))
+      .catch(() => {
+        // Следващото посочване опитва пак.
+        тегли.current = false
+      })
+  }
+  useEffect(() => {
+    if (!window.matchMedia('(min-width: 1024px)').matches) return
+    if ('requestIdleCallback' in window) {
+      const id = window.requestIdleCallback(заредиКарти, { timeout: 4000 })
+      return () => window.cancelIdleCallback(id)
+    }
+    // Safari няма requestIdleCallback.
+    const t = setTimeout(заредиКарти, 2000)
+    return () => clearTimeout(t)
+  }, [])
+
+  /** Точката на менюто с картите ѝ, щом са дошли. */
+  const сКарти = (item: NavItem): NavItem =>
+    карти
+      ? {
+          ...item,
+          groups: item.groups.map((g) => ({
+            ...g,
+            entries: g.entries.map((e) => ({ ...e, sections: карти[e.key] ?? e.sections })),
+          })),
+        }
+      : item
+  const overlayRef = useRef<HTMLDivElement>(null)
+
+  /*
+    Лепнещ хедър на телефон и таблет (`< lg`, където е и бутонът „Меню"):
+    при скрол надолу се прибира, при скрол нагоре се показва
+    (`task-mobilna-optimizaciya.md`, т. 2). На компютър — както досега,
+    не лепне. Отворено търсене или меню го държат видим.
+
+    Височината на видимия хедър отива в `--header-offset` на `<html>` —
+    лентата с котвите на продукта лепне ПОД него и се качва горе, когато
+    той се прибере. Няма две ленти една върху друга.
+  */
+  const [прибран, setПрибран] = useState(false)
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 1023.98px)')
+    let последно = window.scrollY
+    let кадър = 0
+    const обнови = () => {
+      кадър = 0
+      const y = window.scrollY
+      const dy = y - последно
+      // Трептене на пръста и отскок на iOS в края не местят хедъра.
+      if (Math.abs(dy) < 8 && y > 0) return
+      последно = y
+      setПрибран(mq.matches && dy > 0 && y > (navRef.current?.offsetHeight ?? 56))
+    }
+    const onScroll = () => {
+      if (!кадър) кадър = requestAnimationFrame(обнови)
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    mq.addEventListener('change', обнови)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      mq.removeEventListener('change', обнови)
+      if (кадър) cancelAnimationFrame(кадър)
+    }
+  }, [])
 
   /*
     След клик по линк менюто се затваря — и НЕ се отваря отново само защото
@@ -514,20 +606,72 @@ export const HeaderNav = ({
     return () => document.removeEventListener('mousedown', onClick)
   }, [])
 
-  /* Отвореното мобилно меню спира скрола на страницата; затварянето го пуска. */
+  /*
+    Отвореното мобилно меню спира скрола на страницата; затварянето го
+    пуска и връща фокуса на бутона „Меню" — иначе той пада на `body` и
+    следващият Tab тръгва от началото на страницата.
+  */
   useEffect(() => {
     if (!mobileOpen) return
     const стар = document.body.style.overflow
+    const старHtml = document.documentElement.style.overflow
     document.body.style.overflow = 'hidden'
+    document.documentElement.style.overflow = 'hidden'
+    const бутон = menuBtnRef.current
     return () => {
       document.body.style.overflow = стар
+      document.documentElement.style.overflow = старHtml
+      бутон?.focus({ preventScroll: true })
     }
   }, [mobileOpen])
 
+  const скрит = прибран && !mobileOpen && !searchOpen && openIndex === null
+  useEffect(() => {
+    const el = navRef.current
+    const задай = () => {
+      const лепне = window.matchMedia('(max-width: 1023.98px)').matches
+      document.documentElement.style.setProperty(
+        '--header-offset',
+        лепне && !скрит && el ? `${el.offsetHeight}px` : '0px',
+      )
+    }
+    задай()
+    window.addEventListener('resize', задай)
+    return () => window.removeEventListener('resize', задай)
+  }, [скрит, searchOpen])
+
+  /* Tab не излиза от отвореното меню на цял екран. */
+  const пазиФокуса = (e: ReactKeyboardEvent) => {
+    if (e.key !== 'Tab' || !overlayRef.current) return
+    const цели = overlayRef.current.querySelectorAll<HTMLElement>('a[href], button:not([disabled])')
+    if (!цели.length) return
+    const първа = цели[0]!
+    const последна = цели[цели.length - 1]!
+    if (e.shiftKey && document.activeElement === първа) {
+      e.preventDefault()
+      последна.focus()
+    } else if (!e.shiftKey && document.activeElement === последна) {
+      e.preventDefault()
+      първа.focus()
+    }
+  }
+
   return (
-    <div ref={navRef} className="relative border-b border-line bg-surface">
-      <div className="container-site flex h-16 items-center gap-6">
-        <Link href="/" className="flex shrink-0 flex-col justify-center" aria-label="Начална страница">
+    <header
+      ref={navRef}
+      className={`relative z-40 border-b border-line bg-surface max-lg:sticky max-lg:top-0 max-lg:transition-transform max-lg:duration-200 ${
+        скрит ? 'max-lg:-translate-y-full' : ''
+      }`}
+    >
+      {/* 55 + линията = 56 px на телефон; на компютър 64 + линията, както досега. */}
+      <div className="container-site flex h-[55px] items-center gap-3 lg:h-16 lg:gap-6">
+        {/*
+          Без `aria-label`: името на линка е видимият текст (alt на логото,
+          „МАГАЗИН", редът отдолу) + „начална страница" за екранния четец.
+          `aria-label`, различен от видимото, пречи на гласовото управление
+          („натисни МАГАЗИН" не намира линка).
+        */}
+        <Link href="/" className="flex shrink-0 flex-col justify-center">
           <span className="flex items-center gap-2">
             {logoUrl ? (
               /*
@@ -552,19 +696,27 @@ export const HeaderNav = ({
                 ECOFLOW
               </span>
             )}
+            {/* Под 360 px лого, „МАГАЗИН", търсене и меню не се събират на един ред. */}
             {logoSuffix ? (
-              <span className="border-l border-line pl-2 text-sm font-medium text-ink-muted">
+              <span className="border-l border-line pl-2 text-sm font-medium text-ink-muted max-[359px]:hidden">
                 {logoSuffix}
               </span>
             ) : null}
           </span>
+          {/*
+            На телефон 10 px не се чете — там редът е в менюто
+            (`task-mobilna-optimizaciya.md`, т. 2); на таблет е 11 px.
+          */}
           {logoTagline ? (
-            <span className="text-[10px] leading-tight text-ink-muted">{logoTagline}</span>
+            <span className="text-[11px] leading-tight text-ink-muted max-md:hidden lg:text-[10px]">
+              {logoTagline}
+            </span>
           ) : null}
+          <span className="sr-only"> — начална страница</span>
         </Link>
 
         <nav aria-label="Основна навигация" className="hidden min-w-0 flex-1 justify-center lg:flex">
-          <ul ref={barRef} className="flex items-center">
+          <ul ref={barRef} className="flex items-center" onPointerEnter={заредиКарти} onFocus={заредиКарти}>
             {items.map((item, i) => {
               const hasMenu = item.groups.length > 0
               const isOpen = openIndex === i
@@ -697,10 +849,15 @@ export const HeaderNav = ({
           ) : null}
 
           <button
+            ref={menuBtnRef}
             type="button"
             aria-label={mobileOpen ? 'Затваряне на менюто' : 'Отваряне на менюто'}
             aria-expanded={mobileOpen}
-            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-controls="mobilno-menyu"
+            onClick={() => {
+              setMobileOpen(!mobileOpen)
+              setSearchOpen(false)
+            }}
             className="inline-flex size-11 cursor-pointer items-center justify-center rounded transition-colors duration-200 hover:bg-nav-hover lg:hidden"
           >
             {mobileOpen ? <X size={22} aria-hidden="true" /> : <List size={22} aria-hidden="true" />}
@@ -719,96 +876,165 @@ export const HeaderNav = ({
       {!searchOpen && openIndex !== null && items[openIndex]?.groups.length ? (
         <MegaMenu
           key={openIndex}
-          item={items[openIndex]}
+          item={сКарти(items[openIndex])}
           index={openIndex}
+          loading={!карти}
           onClose={() => setOpenIndex(null)}
           onNavigate={следКлик}
         />
       ) : null}
 
       {/*
-        Мобилно меню. Името води към страницата, стрелката до него отваря
-        подменюто — две отделни цели, за да не би едно докосване и да
-        отвори, и да навигира.
+        Мобилно меню — на цял екран, над страницата (`task-mobilna-
+        optimizaciya.md`, т. 3). Преди беше блок под хедъра, който избутваше
+        страницата, а отдолу съдържанието се скролваше. Името води към
+        страницата, стрелката до него отваря подменюто — две отделни цели,
+        за да не би едно докосване и да отвори, и да навигира. Редовете са
+        48 px. Затваря се с X, с Esc и с избор на линк; фокусът се връща на
+        бутона „Меню".
       */}
       {mobileOpen ? (
-        <div className="max-h-[70vh] overflow-y-auto overscroll-contain border-t border-line bg-surface lg:hidden">
-          <nav aria-label="Мобилна навигация" className="container-site py-4">
-            <ul className="space-y-1">
-              {items.map((item, i) => {
-                const разгънат = mobileExpanded === i
-                const превключи = () => setMobileExpanded(разгънат ? null : i)
-                return (
-                  <li key={i}>
-                    <div className="flex items-center">
-                      {item.url ? (
-                        <Link
-                          href={item.url}
-                          onClick={следКлик}
-                          className="flex min-h-11 flex-1 cursor-pointer items-center rounded px-2 font-medium transition-colors duration-200 hover:bg-nav-hover"
-                        >
-                          {item.label}
-                        </Link>
-                      ) : (
-                        <button
-                          type="button"
-                          onClick={превключи}
-                          className="flex min-h-11 flex-1 cursor-pointer items-center rounded px-2 text-left font-medium transition-colors duration-200 hover:bg-nav-hover"
-                        >
-                          {item.label}
-                        </button>
-                      )}
-                      {item.groups.length ? (
-                        <button
-                          type="button"
-                          aria-expanded={разгънат}
-                          aria-label={разгънат ? `Затвори „${item.label}"` : `Отвори „${item.label}"`}
-                          onClick={превключи}
-                          className="flex size-11 shrink-0 cursor-pointer items-center justify-center rounded transition-colors duration-200 hover:bg-nav-hover"
-                        >
-                          <CaretDown
-                            size={16}
-                            aria-hidden="true"
-                            className={`transition-transform duration-200 ${разгънат ? 'rotate-180' : ''}`}
-                          />
-                        </button>
-                      ) : null}
-                    </div>
-                    {разгънат
-                      ? item.groups.map((group) => (
-                          <div key={group.heading} className="ml-2 border-l border-line pl-3">
-                            <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-ink-muted">
-                              {group.heading}
-                            </p>
-                            <ul>
-                              {group.entries.map((entry) => (
-                                <li key={entry.key}>
-                                  {entry.url ? (
-                                    <Link
-                                      href={entry.url}
-                                      onClick={следКлик}
-                                      className="flex min-h-11 cursor-pointer items-center rounded px-2 text-sm text-ink-muted transition-colors duration-200 hover:bg-nav-hover"
-                                    >
-                                      {entry.label}
-                                    </Link>
-                                  ) : (
-                                    <span className="flex min-h-11 items-center px-2 text-sm text-ink-muted">
-                                      {entry.label}
-                                    </span>
-                                  )}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))
-                      : null}
-                  </li>
-                )
-              })}
-            </ul>
-          </nav>
+        <div
+          ref={overlayRef}
+          id="mobilno-menyu"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Меню"
+          onKeyDown={пазиФокуса}
+          className="fade-in fixed inset-0 z-50 flex h-dvh flex-col bg-surface pb-[env(safe-area-inset-bottom)] pt-[env(safe-area-inset-top)] lg:hidden"
+        >
+          <div className="container-site flex h-14 shrink-0 items-center justify-between border-b border-line">
+            <span className="text-base font-semibold">Меню</span>
+            <button
+              type="button"
+              autoFocus
+              aria-label="Затваряне на менюто"
+              onClick={() => setMobileOpen(false)}
+              className="-mr-2 inline-flex size-12 cursor-pointer items-center justify-center rounded transition-colors duration-200 hover:bg-nav-hover"
+            >
+              <X size={22} aria-hidden="true" />
+            </button>
+          </div>
+
+          <div className="flex min-h-0 flex-1 flex-col overflow-y-auto overscroll-contain">
+            <nav aria-label="Мобилна навигация" className="container-site py-3">
+              <ul>
+                {items.map((item, i) => {
+                  const разгънат = mobileExpanded === i
+                  const превключи = () => setMobileExpanded(разгънат ? null : i)
+                  return (
+                    <li key={i} className="border-b border-line last:border-b-0">
+                      <div className="flex items-center">
+                        {item.url ? (
+                          <Link
+                            href={item.url}
+                            onClick={следКлик}
+                            className="flex min-h-12 flex-1 cursor-pointer items-center rounded px-2 text-base font-medium transition-colors duration-200 hover:bg-nav-hover"
+                          >
+                            {item.label}
+                          </Link>
+                        ) : (
+                          <button
+                            type="button"
+                            onClick={превключи}
+                            className="flex min-h-12 flex-1 cursor-pointer items-center rounded px-2 text-left text-base font-medium transition-colors duration-200 hover:bg-nav-hover"
+                          >
+                            {item.label}
+                          </button>
+                        )}
+                        {item.groups.length ? (
+                          <button
+                            type="button"
+                            aria-expanded={разгънат}
+                            aria-label={разгънат ? `Затвори „${item.label}"` : `Отвори „${item.label}"`}
+                            onClick={превключи}
+                            className="flex size-12 shrink-0 cursor-pointer items-center justify-center rounded transition-colors duration-200 hover:bg-nav-hover"
+                          >
+                            <CaretDown
+                              size={16}
+                              aria-hidden="true"
+                              className={`transition-transform duration-200 ${разгънат ? 'rotate-180' : ''}`}
+                            />
+                          </button>
+                        ) : null}
+                      </div>
+                      {разгънат
+                        ? item.groups.map((group) => (
+                            <div key={group.heading} className="mb-2 ml-2 border-l border-line pl-3">
+                              <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-ink-muted">
+                                {group.heading}
+                              </p>
+                              <ul>
+                                {group.entries.map((entry) => (
+                                  <li key={entry.key}>
+                                    {entry.url ? (
+                                      <Link
+                                        href={entry.url}
+                                        onClick={следКлик}
+                                        className="flex min-h-12 cursor-pointer items-center rounded px-2 text-[15px] text-ink-muted transition-colors duration-200 hover:bg-nav-hover"
+                                      >
+                                        {entry.label}
+                                      </Link>
+                                    ) : (
+                                      <span className="flex min-h-12 items-center px-2 text-[15px] text-ink-muted">
+                                        {entry.label}
+                                      </span>
+                                    )}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))
+                        : null}
+                    </li>
+                  )
+                })}
+              </ul>
+            </nav>
+
+            {mobileLinks.length || phone || email ? (
+              <div className="container-site flex-1 border-t border-line bg-canvas py-3">
+                <ul>
+                  {mobileLinks.map((l, i) => (
+                    <li key={i}>
+                      <Link
+                        href={l.url}
+                        onClick={следКлик}
+                        className="flex min-h-12 cursor-pointer items-center rounded px-2 text-[15px] transition-colors duration-200 hover:bg-nav-hover"
+                      >
+                        {l.label}
+                      </Link>
+                    </li>
+                  ))}
+                  {phone ? (
+                    <li>
+                      <a
+                        href={`tel:${phone.replace(/[^\d+]/g, '')}`}
+                        className="tabular flex min-h-12 cursor-pointer items-center gap-3 rounded px-2 text-[15px] transition-colors duration-200 hover:bg-nav-hover"
+                      >
+                        <Phone size={18} aria-hidden="true" className="text-ink-muted" />
+                        {phone}
+                      </a>
+                    </li>
+                  ) : null}
+                  {email ? (
+                    <li>
+                      <a
+                        href={`mailto:${email}`}
+                        className="flex min-h-12 cursor-pointer items-center gap-3 rounded px-2 text-[15px] transition-colors duration-200 hover:bg-nav-hover"
+                      >
+                        <EnvelopeSimple size={18} aria-hidden="true" className="text-ink-muted" />
+                        {email}
+                      </a>
+                    </li>
+                  ) : null}
+                </ul>
+                {logoTagline ? <p className="mt-2 px-2 text-xs text-ink-muted">{logoTagline}</p> : null}
+              </div>
+            ) : null}
+          </div>
         </div>
       ) : null}
-    </div>
+    </header>
   )
 }

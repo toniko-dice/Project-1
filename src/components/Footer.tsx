@@ -65,7 +65,7 @@ export const Footer = async () => {
                 <li key={li}>
                   <Link
                     href={l.url}
-                    className="inline-flex min-h-9 cursor-pointer items-center text-sm text-ink-muted transition-colors duration-150 hover:text-brand"
+                    className="inline-flex min-h-9 cursor-pointer items-center text-sm text-ink-muted transition-colors duration-150 hover:text-brand max-md:min-h-11"
                   >
                     {l.label}
                   </Link>
@@ -82,14 +82,20 @@ export const Footer = async () => {
             {settings.address ? <p className="whitespace-pre-line">{settings.address}</p> : null}
             {settings.phone ? (
               <p>
-                <a href={`tel:${settings.phone.replace(/\s/g, '')}`} className="cursor-pointer hover:text-brand">
+                <a
+                  href={`tel:${settings.phone.replace(/\s/g, '')}`}
+                  className="cursor-pointer hover:text-brand max-md:inline-flex max-md:min-h-11 max-md:items-center"
+                >
                   {settings.phone}
                 </a>
               </p>
             ) : null}
             {settings.email ? (
               <p>
-                <a href={`mailto:${settings.email}`} className="cursor-pointer hover:text-brand">
+                <a
+                  href={`mailto:${settings.email}`}
+                  className="cursor-pointer hover:text-brand max-md:inline-flex max-md:min-h-11 max-md:items-center"
+                >
                   {settings.email}
                 </a>
               </p>
@@ -136,12 +142,13 @@ export const Footer = async () => {
             ) : null}
 
             {footer.legalLinks?.length ? (
-              <ul className="flex flex-wrap gap-x-4 gap-y-1">
+              <ul className="flex flex-wrap gap-x-4 gap-y-1 max-md:gap-y-0">
                 {footer.legalLinks.map((l, i) => (
                   <li key={i}>
+                    {/* На телефон — 44 px за пръста, видът е същият. */}
                     <Link
                       href={l.url}
-                      className="cursor-pointer underline-offset-2 transition-colors duration-150 hover:text-brand hover:underline"
+                      className="cursor-pointer underline-offset-2 transition-colors duration-150 hover:text-brand hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
                     >
                       {l.label}
                     </Link>

@@ -26,7 +26,7 @@ export const productBadges = (p: BadgeInput): ProductBadge[] => {
 }
 
 export const BADGE_CLASS =
-  'inline-flex w-fit items-center gap-1.5 whitespace-nowrap rounded bg-ink px-2 py-1 text-[11px] font-semibold leading-none tracking-wide text-white'
+  'inline-flex w-fit items-center gap-1.5 whitespace-nowrap rounded bg-ink px-2 py-1 text-[11px] font-semibold leading-none tracking-wide text-white max-md:text-xs'
 
 export const Badge = ({ badge }: { badge: ProductBadge }) => (
   <span className={BADGE_CLASS}>

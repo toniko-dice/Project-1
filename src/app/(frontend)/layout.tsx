@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 
 import { DesignTokens } from '@/components/DesignTokens'
@@ -44,6 +44,18 @@ export const metadata: Metadata = {
   },
   description:
     'Официален вносител на EcoFlow за България. Портативни електроцентрали, домашни батерии, соларни панели и аксесоари.',
+}
+
+/*
+  `viewport-fit=cover` — на iPhone с изрез страницата стига до ръбовете;
+  лепнещите ленти и менюто пазят отстъп с `env(safe-area-inset-*)`, а
+  текстът — през `.container-site` (globals.css). Мащабирането с пръсти
+  остава разрешено.
+*/
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
 }
 
 export default function FrontendLayout({ children }: { children: React.ReactNode }) {

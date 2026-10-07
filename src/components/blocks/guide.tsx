@@ -11,7 +11,7 @@ import { BuyButton } from '../BuyButton'
 import { CardImage } from '../CardImage'
 import { GuideSlider } from '../GuideSlider'
 import { ImagePlaceholder } from '../ImagePlaceholder'
-import { SectionImage } from '../SectionImage'
+import { ДО_MD, ОТ_MD, SectionImage } from '../SectionImage'
 import { FaqList } from './product'
 
 /*
@@ -79,14 +79,16 @@ export const DualImage = ({
           image={m}
           alt={altText}
           priority={priority}
-          sizes={`(min-width: 768px) 1px, 100vw`}
+          sizes="100vw"
+          hideAt={ОТ_MD}
           className={`${mobileClassName} md:hidden`}
         />
         <SectionImage
           image={d}
           alt={altText}
           priority={priority}
-          sizes={`(max-width: 767px) 1px, ${sizes}`}
+          sizes={sizes}
+          hideAt={ДО_MD}
           className={`${className} max-md:hidden`}
         />
       </>
@@ -138,7 +140,7 @@ export const PageHeroBlock = ({ block }: { block: BlockOf<'pageHero'> }) =>
 /** Бял текст отдолу върху затъмнение — за тъмна снимка (`tone: light-bottom`). */
 const PageHeroLight = ({ block }: { block: BlockOf<'pageHero'> }) => (
   <section className="relative overflow-hidden bg-black">
-    <div className="relative aspect-[375/600] w-full md:aspect-auto md:h-[min(760px,calc(100vh-60px))] md:min-h-[560px]">
+    <div className="relative aspect-[375/600] w-full md:aspect-auto md:h-[min(760px,calc(100svh-60px))] md:min-h-[560px]">
       <DualImage
         image={block.image}
         mobile={block.imageMobile}
@@ -365,7 +367,7 @@ export const RuntimeCompareBlock = ({ block, showBgn }: { block: BlockOf<'runtim
                     {card.url ? (
                       <Link
                         href={card.url}
-                        className="mt-3 text-sm font-medium text-[#3f68e0] underline-offset-4 hover:underline"
+                        className="mt-3 text-sm font-medium text-[#3f68e0] underline-offset-4 hover:underline max-md:mt-1 max-md:inline-flex max-md:min-h-11 max-md:items-center"
                       >
                         Научете повече &gt;
                       </Link>

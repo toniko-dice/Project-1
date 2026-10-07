@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 import type { Page } from '@/payload-types'
 import { bannerImage, mediaAlt, mediaUrl } from '@/lib/media'
-import { SectionImage } from '../SectionImage'
+import { ДО_SM, ОТ_SM, SectionImage } from '../SectionImage'
 import { HeroSlider, type HeroSlide } from '../HeroSlider'
 import { ScrollRow } from '../ScrollRow'
 import { BannerButton, BannerEyebrow, PageSection, SectionHeading } from './section'
@@ -63,12 +63,14 @@ export const WideBannerBlock = ({ block }: { block: BlockOf<'wideBanner'> }) => 
             <>
               <SectionImage
                 image={mobile}
-                sizes="(min-width: 640px) 1px, 100vw"
+                sizes="100vw"
+                hideAt={ОТ_SM}
                 className="absolute inset-0 size-full object-cover sm:hidden"
               />
               <SectionImage
                 image={img}
-                sizes="(max-width: 639px) 1px, 100vw"
+                sizes="100vw"
+                hideAt={ДО_SM}
                 className="absolute inset-0 size-full object-cover max-sm:hidden"
               />
             </>

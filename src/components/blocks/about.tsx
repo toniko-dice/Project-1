@@ -88,7 +88,7 @@ export const CompanyStatsBlock = ({ block }: { block: BlockOf<'companyStats'> })
                   <span className="absolute inline-flex size-full rounded-full bg-white/70 motion-safe:animate-ping" />
                   <span className="relative inline-flex size-2.5 rounded-full bg-white" />
                 </span>
-                <span className="whitespace-nowrap text-[11px] font-medium leading-none md:text-xs">{l.label}</span>
+                <span className="whitespace-nowrap text-xs font-medium leading-none">{l.label}</span>
               </span>
             ))}
           </div>
@@ -153,7 +153,7 @@ const TabPanel = ({ tab, products }: { tab: Tab; products: { product: Product; s
         {tab.ctaLink ? (
           <Link
             href={tab.ctaLink}
-            className="inline-flex shrink-0 items-center gap-1 text-sm font-medium underline-offset-4 hover:underline"
+            className="inline-flex shrink-0 items-center gap-1 text-sm font-medium underline-offset-4 hover:underline max-md:min-h-11"
           >
             {tab.ctaLabel?.trim() || 'Научете повече'}
             <CaretRight size={12} weight="bold" aria-hidden="true" />
