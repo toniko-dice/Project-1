@@ -9,6 +9,7 @@ import { BuyButton } from '../BuyButton'
 import { CardImage } from '../CardImage'
 import { CountUp } from '../CountUp'
 import { ImagePlaceholder } from '../ImagePlaceholder'
+import { productBadges, ProductBadges } from '../ProductBadges'
 import { ScrollRow } from '../ScrollRow'
 import { DualImage } from './guide'
 
@@ -112,7 +113,8 @@ const ProductTile = ({ product, specLine }: { product: Product; specLine?: strin
           <ImagePlaceholder className="absolute inset-0" />
         )}
       </Link>
-      <h3 className="mt-4 text-lg font-medium leading-tight text-black">
+      <ProductBadges badges={productBadges(product).slice(0, 2)} className="mt-4" />
+      <h3 className="mt-3 text-lg font-medium leading-tight text-black">
         <Link href={card.url ?? '#'}>{card.title}</Link>
       </h3>
       <p className="mt-2 text-sm leading-[1.35] text-[#898989]">{specLine?.trim() || card.tagline}</p>

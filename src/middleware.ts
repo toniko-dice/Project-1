@@ -76,6 +76,18 @@ export async function middleware(request: NextRequest) {
     (без бисквитка) би получил 401 и пренасочванията биха спрели.
   */
   if (pathname === '/api/zaklyuchvane' || pathname === '/api/kanon') return NextResponse.next()
+  /*
+    Опресняването на кеша от скриптовете (внос, синхронизация с dice.bg) —
+    заявка от сървъра без бисквитка, но с ключа от `.env`. Без това при
+    заключен сайт вносът получаваше 401 и сайтът оставаше със старото.
+  */
+  if (
+    pathname === '/api/products/revalidate' &&
+    process.env.PAYLOAD_SECRET &&
+    request.headers.get('x-revalidate-key') === process.env.PAYLOAD_SECRET
+  ) {
+    return NextResponse.next()
+  }
   if (!(await заключен(request))) return пренасочвания(request)
 
   // robots.txt докато е заключено — нищо за обхождане.

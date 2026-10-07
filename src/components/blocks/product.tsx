@@ -548,11 +548,6 @@ const ComparisonTableBlock = ({
                         <span className="tabular text-lg font-bold text-alert">
                           {formatEur(c.price)}
                         </span>
-                        {c.comparePrice ? (
-                          <s className="tabular text-sm font-normal text-ink-muted">
-                            {formatEur(c.comparePrice)}
-                          </s>
-                        ) : null}
                       </span>
                     ) : null}
 

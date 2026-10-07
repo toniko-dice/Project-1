@@ -38,6 +38,7 @@ import { CardProductSync as CardProductSync_2c34e42dc48f416e3c9f939f31801f86 } f
 import { ExportSubscribersButton as ExportSubscribersButton_632306c2f6e18467206191256b3c5c1e } from '@/components/admin/ExportSubscribersButton'
 import { RestoreBackupButton as RestoreBackupButton_0345d6ca4f322b3259326bda5a60e48f } from '@/components/admin/RestoreBackupButton'
 import { CreateBackupButton as CreateBackupButton_059b6108dfec089e6701e6ed8dc0e80b } from '@/components/admin/CreateBackupButton'
+import { DiceSyncActions as DiceSyncActions_33adee0f93a42f8a50b524b4d270d945 } from '@/components/admin/DiceSyncActions'
 import { QuoteNavBadge as QuoteNavBadge_f76fdb011cf13b0ac1a4a344af4012d1 } from '@/components/admin/QuoteNavBadge'
 import { CollectionCards as CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1 } from '@payloadcms/next/rsc'
 
@@ -83,6 +84,7 @@ export const importMap = {
   "@/components/admin/ExportSubscribersButton#ExportSubscribersButton": ExportSubscribersButton_632306c2f6e18467206191256b3c5c1e,
   "@/components/admin/RestoreBackupButton#RestoreBackupButton": RestoreBackupButton_0345d6ca4f322b3259326bda5a60e48f,
   "@/components/admin/CreateBackupButton#CreateBackupButton": CreateBackupButton_059b6108dfec089e6701e6ed8dc0e80b,
+  "@/components/admin/DiceSyncActions#DiceSyncActions": DiceSyncActions_33adee0f93a42f8a50b524b4d270d945,
   "@/components/admin/QuoteNavBadge#QuoteNavBadge": QuoteNavBadge_f76fdb011cf13b0ac1a4a344af4012d1,
   "@payloadcms/next/rsc#CollectionCards": CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1
 }

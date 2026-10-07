@@ -69,6 +69,7 @@ export interface Config {
   collections: {
     'quote-requests': QuoteRequest;
     offers: Offer;
+    'dice-syncs': DiceSync;
     'quote-files': QuoteFile;
     pages: Page;
     products: Product;
@@ -96,6 +97,7 @@ export interface Config {
   collectionsSelect: {
     'quote-requests': QuoteRequestsSelect<false> | QuoteRequestsSelect<true>;
     offers: OffersSelect<false> | OffersSelect<true>;
+    'dice-syncs': DiceSyncsSelect<false> | DiceSyncsSelect<true>;
     'quote-files': QuoteFilesSelect<false> | QuoteFilesSelect<true>;
     pages: PagesSelect<false> | PagesSelect<true>;
     products: ProductsSelect<false> | ProductsSelect<true>;
@@ -126,6 +128,7 @@ export interface Config {
     'site-settings': SiteSetting;
     'filter-order': FilterOrder;
     'offer-settings': OfferSetting;
+    'dice-sync': DiceSync1;
     'payload-jobs-stats': PayloadJobsStat;
   };
   globalsSelect: {
@@ -135,6 +138,7 @@ export interface Config {
     'site-settings': SiteSettingsSelect<false> | SiteSettingsSelect<true>;
     'filter-order': FilterOrderSelect<false> | FilterOrderSelect<true>;
     'offer-settings': OfferSettingsSelect<false> | OfferSettingsSelect<true>;
+    'dice-sync': DiceSyncSelect<false> | DiceSyncSelect<true>;
     'payload-jobs-stats': PayloadJobsStatsSelect<false> | PayloadJobsStatsSelect<true>;
   };
   locale: null;
@@ -145,6 +149,7 @@ export interface Config {
   jobs: {
     tasks: {
       dailyBackup: TaskDailyBackup;
+      diceSync: TaskDiceSync;
       inline: {
         input: unknown;
         output: unknown;
@@ -397,11 +402,11 @@ export interface Product {
    */
   productType?: ('hero' | 'accessory') | null;
   /**
-   * Цената в евро. Левовата равностойност се изчислява автоматично по фиксирания курс 1.95583.
+   * Цената в евро, с ДДС. При включена връзка с dice.bg се презаписва при всяка синхронизация — освен ако е отметнато „Не синхронизирай" (по-долу).
    */
   price: number;
   /**
-   * Ако е попълнена, се показва зачертана до текущата цена.
+   * По-висока от цената → показва се зачертана, с „−N%". Синхронизацията с dice.bg я попълва или изчиства по файла (освен при „Не синхронизирай").
    */
   compareAtPrice?: number | null;
   /**
@@ -410,9 +415,22 @@ export interface Product {
   externalUrl: string;
   ctaLabel?: string | null;
   /**
-   * „По заявка" — бутонът става „Заяви в dice.bg" (същият линк), под цената излиза ред, че може да се заяви. „Изчерпан" — бутонът е неактивен.
+   * „По заявка" — бутонът става „Заяви в dice.bg" (същият линк), под цената излиза ред, че може да се заяви. „Изчерпан" — бутонът е неактивен. Синхронизацията с dice.bg я презаписва (освен при „Не синхронизирай").
    */
   availability?: ('in-stock' | 'on-request' | 'out-of-stock') | null;
+  /**
+   * Попълва се от синхронизацията с dice.bg.
+   */
+  stockQty?: number | null;
+  /**
+   * За изключения — етикетът не излиза при малък брой.
+   */
+  hideLastPiece?: boolean | null;
+  lastPiece?: boolean | null;
+  /**
+   * Включено — синхронизацията с dice.bg пропуска продукта изцяло: цената, старата цена, наличността и броят се управляват ръчно.
+   */
+  noSync?: boolean | null;
   image: number | Media;
   gallery?:
     | {
@@ -3037,6 +3055,28 @@ export interface QuoteFile {
   sizes?: {};
 }
 /**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "dice-syncs".
+ */
+export interface DiceSync {
+  id: number;
+  title?: string | null;
+  trigger?: string | null;
+  user?: string | null;
+  result?: ('ok' | 'partial' | 'aborted' | 'error') | null;
+  summary?: string | null;
+  updated?: number | null;
+  unchanged?: number | null;
+  notFoundCount?: number | null;
+  errorCount?: number | null;
+  changes?: string | null;
+  errors?: string | null;
+  notFound?: string | null;
+  missingInFile?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
  * Всеки панел е това, което се показва вдясно в мега менюто, когато потребителят посочи подточка от сайдбара. Секциите му са списъци с продукти — сайтът показва точно тях, в този ред.
  *
  * This interface was referenced by `Config`'s JSON-Schema
@@ -3281,7 +3321,7 @@ export interface PayloadJob {
     | {
         executedAt: string;
         completedAt: string;
-        taskSlug: 'inline' | 'dailyBackup';
+        taskSlug: 'inline' | 'dailyBackup' | 'diceSync';
         taskID: string;
         input?:
           | {
@@ -3314,7 +3354,7 @@ export interface PayloadJob {
         id?: string | null;
       }[]
     | null;
-  taskSlug?: ('inline' | 'dailyBackup') | null;
+  taskSlug?: ('inline' | 'dailyBackup' | 'diceSync') | null;
   queue?: string | null;
   waitUntil?: string | null;
   processing?: boolean | null;
@@ -3344,6 +3384,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'offers';
         value: number | Offer;
+      } | null)
+    | ({
+        relationTo: 'dice-syncs';
+        value: number | DiceSync;
       } | null)
     | ({
         relationTo: 'quote-files';
@@ -3553,6 +3597,27 @@ export interface OffersSelect<T extends boolean = true> {
         vat?: T;
       };
   internalNotes?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "dice-syncs_select".
+ */
+export interface DiceSyncsSelect<T extends boolean = true> {
+  title?: T;
+  trigger?: T;
+  user?: T;
+  result?: T;
+  summary?: T;
+  updated?: T;
+  unchanged?: T;
+  notFoundCount?: T;
+  errorCount?: T;
+  changes?: T;
+  errors?: T;
+  notFound?: T;
+  missingInFile?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -4179,6 +4244,10 @@ export interface ProductsSelect<T extends boolean = true> {
   externalUrl?: T;
   ctaLabel?: T;
   availability?: T;
+  stockQty?: T;
+  hideLastPiece?: T;
+  lastPiece?: T;
+  noSync?: T;
   image?: T;
   gallery?:
     | T
@@ -5657,6 +5726,43 @@ export interface OfferSetting {
   createdAt?: string | null;
 }
 /**
+ * Всеки ден в избрания час сайтът тегли XML файла на dice.bg и обновява цената, старата цена, наличността и броя на продуктите (по SKU, после по баркод). Нищо друго не се пипа; продукти не се създават и не се трият.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "dice-sync".
+ */
+export interface DiceSync1 {
+  id: number;
+  /**
+   * Автоматичното пускане по график. Бутоните работят и без нея.
+   */
+  enabled?: boolean | null;
+  /**
+   * По българско време. След нощното опресняване на файла.
+   */
+  hour?: number | null;
+  /**
+   * 0 — етикетът е изключен.
+   */
+  lastPieceThreshold?: number | null;
+  /**
+   * Пълният адрес, който дава dice.bg.
+   */
+  url?: string | null;
+  updatePrice?: boolean | null;
+  updateAvailability?: boolean | null;
+  /**
+   * Отчет след всяко пускане с промени или грешки. Празно — без имейл.
+   */
+  reportEmail?: string | null;
+  lastRun?: string | null;
+  lastMatched?: number | null;
+  lastAutoDate?: string | null;
+  backupDone?: boolean | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-jobs-stats".
  */
@@ -5876,6 +5982,26 @@ export interface OfferSettingsSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "dice-sync_select".
+ */
+export interface DiceSyncSelect<T extends boolean = true> {
+  enabled?: T;
+  hour?: T;
+  lastPieceThreshold?: T;
+  url?: T;
+  updatePrice?: T;
+  updateAvailability?: T;
+  reportEmail?: T;
+  lastRun?: T;
+  lastMatched?: T;
+  lastAutoDate?: T;
+  backupDone?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-jobs-stats_select".
  */
 export interface PayloadJobsStatsSelect<T extends boolean = true> {
@@ -5899,6 +6025,14 @@ export interface CollectionsWidget {
  * via the `definition` "TaskDailyBackup".
  */
 export interface TaskDailyBackup {
+  input?: unknown;
+  output?: unknown;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "TaskDiceSync".
+ */
+export interface TaskDiceSync {
   input?: unknown;
   output?: unknown;
 }

@@ -8,6 +8,7 @@ import { productPath } from '@/lib/urls'
 import { BuyButton } from './BuyButton'
 import { CardImage } from './CardImage'
 import { ImagePlaceholder } from './ImagePlaceholder'
+import { productBadges, ProductBadges } from './ProductBadges'
 
 /**
  * Звездички с брой отзиви.
@@ -71,6 +72,7 @@ export const ProductCard = ({
 }) => {
   // Всичко идва от продукта през общия помощник — същото като в менюто.
   const data = productCardData(product)
+  const badges = productBadges(product).slice(0, 2)
 
   const rating = typeof product.rating === 'number' ? product.rating : null
   const reviews = typeof product.reviewCount === 'number' ? product.reviewCount : null
@@ -99,9 +101,13 @@ export const ProductCard = ({
         </div>
 
         <div className="mt-4 flex flex-1 flex-col gap-1">
-          {/* Етикетът е НАД името, в оранжево — не в ъгъла върху снимката. */}
-          {/* Собствената карта на продукта показва неговия етикет. */}
-          {data.badge ? <p className="text-sm text-flame">{data.badge}</p> : null}
+          {/*
+            „−N%“ и „Последна бройка“ — черни етикети над името (до два).
+            Етикетът на самия продукт („НОВО“) е оранжев текст; „Последна
+            бройка“ има предимство пред него.
+          */}
+          <ProductBadges badges={badges} />
+          {data.badge && !data.lastPiece ? <p className="text-sm text-flame">{data.badge}</p> : null}
 
           <h3 className="text-[17px] font-medium leading-snug">{data.title}</h3>
 

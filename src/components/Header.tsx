@@ -46,7 +46,8 @@ const productCard = (card: PanelCard | null, p: Product): MenuCard => {
     specLine: data.tagline,
     url: data.url,
     label: null,
-    ribbon: card?.label?.trim() || null,
+    // Ръчният етикет на реда; без него — „Последна бройка“ от продукта.
+    ribbon: card?.label?.trim() || (data.lastPiece ? 'Последна бройка' : null),
     price: data.price,
     comparePrice: data.comparePrice,
   }

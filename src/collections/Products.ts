@@ -13,6 +13,7 @@ import { expireEverything, revalidateProduct, revalidateProductDelete } from '..
 import { fillSearchText } from '../lib/search'
 import { metaDescriptionCounter, metaTitleCounter } from '../fields/seo'
 import { contentAccess } from '../lib/access'
+import { fillLastPiece } from '../lib/dice/last-piece'
 
 /**
  * Основната категория = първата от „Категории".
@@ -142,6 +143,8 @@ export const Products: CollectionConfig = {
     price: true,
     compareAtPrice: true,
     badge: true,
+    // Етикетът „Последна бройка" — пресметнат при запис (`fillLastPiece`).
+    lastPiece: true,
     availability: true,
     rating: true,
     reviewCount: true,
@@ -160,7 +163,7 @@ export const Products: CollectionConfig = {
   hooks: {
     /* Слепва полетата за търсене в `searchText` преди всеки запис. */
     beforeValidate: [syncPrimaryCategory],
-    beforeChange: [fillSearchText, normalizeAttributes],
+    beforeChange: [fillSearchText, normalizeAttributes, fillLastPiece],
     afterChange: [revalidateProduct],
     afterDelete: [revalidateProductDelete],
   },
@@ -513,7 +516,7 @@ export const Products: CollectionConfig = {
               label: 'Цена (EUR)',
               admin: {
                 description:
-                  'Цената в евро. Левовата равностойност се изчислява автоматично по фиксирания курс 1.95583.',
+                  'Цената в евро, с ДДС. При включена връзка с dice.bg се презаписва при всяка синхронизация — освен ако е отметнато „Не синхронизирай" (по-долу).',
               },
             },
             {
@@ -521,7 +524,8 @@ export const Products: CollectionConfig = {
               type: 'number',
               label: 'Стара цена (EUR)',
               admin: {
-                description: 'Ако е попълнена, се показва зачертана до текущата цена.',
+                description:
+                  'По-висока от цената → показва се зачертана, с „−N%". Синхронизацията с dice.bg я попълва или изчиства по файла (освен при „Не синхронизирай").',
               },
             },
             {
@@ -548,8 +552,52 @@ export const Products: CollectionConfig = {
               options: AVAILABILITY_OPTIONS,
               admin: {
                 description:
-                  '„По заявка" — бутонът става „Заяви в dice.bg" (същият линк), под цената излиза ред, че може да се заяви. „Изчерпан" — бутонът е неактивен.',
+                  '„По заявка" — бутонът става „Заяви в dice.bg" (същият линк), под цената излиза ред, че може да се заяви. „Изчерпан" — бутонът е неактивен. Синхронизацията с dice.bg я презаписва (освен при „Не синхронизирай").',
               },
+            },
+            {
+              type: 'row',
+              fields: [
+                {
+                  name: 'stockQty',
+                  type: 'number',
+                  label: 'Брой в наличност',
+                  admin: {
+                    width: '50%',
+                    readOnly: true,
+                    description: 'Попълва се от синхронизацията с dice.bg.',
+                  },
+                },
+                {
+                  name: 'hideLastPiece',
+                  type: 'checkbox',
+                  label: 'Скрий етикета „Последна бройка"',
+                  admin: { width: '50%', description: 'За изключения — етикетът не излиза при малък брой.' },
+                },
+              ],
+            },
+            {
+              // Пресмята се при запис (`fillLastPiece`) — картите не четат настройките.
+              name: 'lastPiece',
+              type: 'checkbox',
+              label: 'Последна бройка',
+              admin: { hidden: true },
+            },
+            {
+              type: 'collapsible',
+              label: 'dice.bg',
+              admin: { initCollapsed: true },
+              fields: [
+                {
+                  name: 'noSync',
+                  type: 'checkbox',
+                  label: 'Не синхронизирай',
+                  admin: {
+                    description:
+                      'Включено — синхронизацията с dice.bg пропуска продукта изцяло: цената, старата цена, наличността и броят се управляват ръчно.',
+                  },
+                },
+              ],
             },
           ],
         },

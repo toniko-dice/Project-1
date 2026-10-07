@@ -25,6 +25,9 @@ import { Subscribers } from './collections/Subscribers'
 import { Testimonials } from './collections/Testimonials'
 import { Users } from './collections/Users'
 import { dailyBackupTask } from './jobs/backupTask'
+import { diceSyncTask } from './jobs/diceSyncTask'
+import { DiceSyncs } from './collections/DiceSyncs'
+import { DiceSync } from './globals/DiceSync'
 import { Design } from './globals/Design'
 import { FilterOrder } from './globals/FilterOrder'
 import { Footer } from './globals/Footer'
@@ -89,6 +92,7 @@ export default buildConfig({
   collections: [
     QuoteRequests,
     Offers,
+    DiceSyncs,
     QuoteFiles,
     Pages,
     Products,
@@ -103,11 +107,11 @@ export default buildConfig({
     Users,
     Redirects,
   ],
-  globals: [Header, Footer, Design, SiteSettings, FilterOrder, OfferSettings],
+  globals: [Header, Footer, Design, SiteSettings, FilterOrder, OfferSettings, DiceSync],
   // Архивирането по график минава през опашката за задачи на Payload.
   // Работи само докато сървърът върви — при спряна машина архив не се прави.
   jobs: {
-    tasks: [dailyBackupTask],
+    tasks: [dailyBackupTask, diceSyncTask],
     autoRun: [{ cron: '0 */5 * * * *', queue: 'nightly', limit: 5 }],
     shouldAutoRun: () => true,
     deleteJobOnComplete: true,

@@ -4,12 +4,13 @@ import { notFound, permanentRedirect } from 'next/navigation'
 
 import { RenderProductSections } from '@/components/blocks/product'
 import { BuyButton } from '@/components/BuyButton'
+import { productBadges, ProductBadges } from '@/components/ProductBadges'
 import { ProductCard } from '@/components/ProductCard'
 import { ProductAnchorNav, type Anchor } from '@/components/ProductAnchorNav'
 import { ProductGallery, type GalleryImage } from '@/components/ProductGallery'
 import { uniqueAnchor } from '@/lib/anchors'
 import { availabilityOf } from '@/lib/availability'
-import { BADGE_LABELS, discountPercent, formatBgn, formatEur } from '@/lib/format'
+import { BADGE_LABELS, formatBgn, formatEur } from '@/lib/format'
 import { mediaAlt, mediaUrl } from '@/lib/media'
 import {
   accessoriesForCategory,
@@ -183,7 +184,7 @@ export default async function ProductPage({ params }: Args) {
     }))
     .filter((img) => img.url)
 
-  const discount = discountPercent(product.price, product.compareAtPrice)
+  const badges = productBadges(product)
   const availability = availabilityOf(product.availability)
   const highlights = product.highlights ?? []
 
@@ -266,11 +267,8 @@ export default async function ProductPage({ params }: Args) {
             {product.compareAtPrice ? (
               <s className="tabular text-lg text-ink-muted">{formatEur(product.compareAtPrice)}</s>
             ) : null}
-            {discount ? (
-              <span className="rounded bg-accent px-2 py-1 text-xs font-semibold text-white">
-                −{discount}%
-              </span>
-            ) : null}
+            {/* „−N%“ и „Последна бройка“ — черните етикети на сайта (`ProductBadges`). */}
+            <ProductBadges badges={badges} className="self-center" />
           </div>
 
           {showBgn ? (
@@ -279,6 +277,11 @@ export default async function ProductPage({ params }: Args) {
 
           <p className="text-sm text-ink-muted">
             {availability.line}
+            {badges.some((x) => x.key === 'last') && typeof product.stockQty === 'number' ? (
+              <span className="block">
+                Остава {product.stockQty} {product.stockQty === 1 ? 'брой' : 'броя'} в наличност
+              </span>
+            ) : null}
           </p>
 
           {съвместимСЪс.length ? (

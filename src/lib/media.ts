@@ -135,6 +135,8 @@ export type ProductCardData = {
   label: string | null
   /** Етикетът на самия продукт („НОВО", „ПРОМОЦИЯ"…) — за собствената му карта. */
   badge: string | null
+  /** „Последна бройка" — пресметнато при запис на продукта (`lastPiece`). */
+  lastPiece: boolean
 }
 
 const filled = (v: string | null | undefined): string | null => (v && v.trim() ? v : null)
@@ -175,6 +177,7 @@ export const productCardData = (
     comparePrice: overrides.comparePrice ?? doc?.compareAtPrice ?? null,
     label: filled(overrides.label),
     badge,
+    lastPiece: Boolean(doc?.lastPiece) && (doc?.availability ?? 'in-stock') === 'in-stock',
   }
 }
 

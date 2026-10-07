@@ -356,9 +356,6 @@ export const RuntimeCompareBlock = ({ block, showBgn }: { block: BlockOf<'runtim
                     {card.price !== null ? (
                       <p className="mt-4 flex flex-wrap items-baseline justify-center gap-2">
                         <span className="tabular text-base font-semibold">{formatEur(card.price)}</span>
-                        {card.comparePrice ? (
-                          <s className="tabular text-sm text-ink-muted">{formatEur(card.comparePrice)}</s>
-                        ) : null}
                       </p>
                     ) : null}
                     {showBgn && card.price !== null ? (
