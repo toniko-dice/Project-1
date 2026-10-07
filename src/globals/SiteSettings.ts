@@ -1,14 +1,58 @@
-import type { GlobalConfig } from 'payload'
-import { revalidateGlobal } from '../lib/revalidate'
+import type { GlobalAfterChangeHook, GlobalBeforeChangeHook, GlobalConfig } from 'payload'
+import { expireTags, revalidateGlobal } from '../lib/revalidate'
 import { HOME_H1_DEFAULT } from '../lib/title'
+import { adminField, hiddenFor, isEditor, publicRead } from '../lib/access'
+
+/** „Последна промяна" на заключването — кой и кога, само при смяна на отметката. */
+const отбележиЗаключването: GlobalBeforeChangeHook = ({ data, originalDoc, req }) => {
+  const преди = (originalDoc as { gate?: { locked?: boolean | null } } | undefined)?.gate?.locked
+  const сега = (data as { gate?: { locked?: boolean | null } }).gate?.locked
+  if (сега !== undefined && сега !== преди) {
+    const кой = (req.user as { email?: string } | null)?.email ?? 'системата'
+    const кога = new Date().toLocaleString('bg-BG', { timeZone: 'Europe/Sofia' })
+    data.gate = { ...data.gate, lastChange: `${сега ? 'Заключен' : 'Отключен'} от ${кой} на ${кога}` }
+  }
+  return data
+}
+
+/** Middleware пази състоянието до 10 s (таг `site-gate`) — изчиства се веднага. */
+const изчистиЗаключването: GlobalAfterChangeHook = ({ doc }) => {
+  expireTags(['site-gate'])
+  return doc
+}
 
 export const SiteSettings: GlobalConfig = {
   slug: 'site-settings',
   label: 'Общи настройки',
-  admin: { group: 'Настройки' },
-  access: { read: () => true },
-  hooks: { afterChange: [revalidateGlobal] },
+  admin: { hidden: hiddenFor('admin', 'editor'), group: 'Настройки' },
+  access: { read: publicRead, update: isEditor },
+  hooks: { beforeChange: [отбележиЗаключването], afterChange: [изчистиЗаключването, revalidateGlobal] },
   fields: [
+    {
+      /*
+        Заключен достъп (`task-zaklyuchen-dostap.md`): вход с акаунта на админа.
+        Само администраторът го вижда и сменя — и в админа, и през API-то
+        (публичното четене на настройките не го показва). Middleware го чете
+        през `/api/zaklyuchvane`.
+      */
+      name: 'gate',
+      type: 'group',
+      label: 'Заключен достъп',
+      access: { read: adminField, update: adminField, create: adminField },
+      fields: [
+        {
+          name: 'locked',
+          type: 'checkbox',
+          label: 'Сайтът е заключен — виждат го само влезлите потребители',
+          defaultValue: true,
+          admin: {
+            description:
+              'Включено — посетителите виждат само страницата за вход; влизате с имейла и паролата си за админа. Изключено — сайтът е отворен за всички.',
+          },
+        },
+        { name: 'lastChange', type: 'text', label: 'Последна промяна', admin: { readOnly: true } },
+      ],
+    },
     {
       type: 'collapsible',
       label: 'Промо лента най-отгоре',

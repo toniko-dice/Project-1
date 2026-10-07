@@ -3167,6 +3167,10 @@ export interface Backup {
  */
 export interface User {
   id: number;
+  /**
+   * Администратор — всичко, вкл. потребители, архиви и изтриване. Редактор — продукти, страници, менюта, медия, настройки; без продажби, без изтриване. Продажби — заявки и оферти; продуктите само ги вижда.
+   */
+  role: 'admin' | 'editor' | 'sales';
   name?: string | null;
   position?: string | null;
   updatedAt: string;
@@ -5237,6 +5241,7 @@ export interface BackupsSelect<T extends boolean = true> {
  * via the `definition` "users_select".
  */
 export interface UsersSelect<T extends boolean = true> {
+  role?: T;
   name?: T;
   position?: T;
   updatedAt?: T;
@@ -5543,6 +5548,13 @@ export interface Design {
  */
 export interface SiteSetting {
   id: number;
+  gate?: {
+    /**
+     * Включено — посетителите виждат само страницата за вход; влизате с имейла и паролата си за админа. Изключено — сайтът е отворен за всички.
+     */
+    locked?: boolean | null;
+    lastChange?: string | null;
+  };
   announcementEnabled?: boolean | null;
   announcementText?: string | null;
   announcementUrl?: string | null;
@@ -5777,6 +5789,12 @@ export interface DesignSelect<T extends boolean = true> {
  * via the `definition` "site-settings_select".
  */
 export interface SiteSettingsSelect<T extends boolean = true> {
+  gate?:
+    | T
+    | {
+        locked?: T;
+        lastChange?: T;
+      };
   announcementEnabled?: T;
   announcementText?: T;
   announcementUrl?: T;

@@ -1,5 +1,6 @@
 import type { CollectionConfig } from 'payload'
 import { expireEverything } from '../lib/revalidate'
+import { contentAccess, hiddenFor } from '../lib/access'
 
 /**
  * Постоянни пренасочвания (308).
@@ -17,13 +18,14 @@ export const Redirects: CollectionConfig = {
   slug: 'redirects',
   labels: { singular: 'Пренасочване', plural: 'Пренасочвания' },
   admin: {
+    hidden: hiddenFor('admin', 'editor'),
     useAsTitle: 'from',
     defaultColumns: ['from', 'to', 'reason', 'createdAt'],
     group: 'Настройки',
     description:
       'Стари адреси, които водят към новите. Попълва се само — при смяна на категория или на адрес на продукт. Ред се трие само ако старият адрес вече не трябва да работи.',
   },
-  access: { read: () => true },
+  access: { ...contentAccess },
   // Ред, добавен или изтрит от админа, важи веднага — не след 5 минути кеш.
   hooks: {
     afterChange: [({ doc }) => (expireEverything(), doc)],

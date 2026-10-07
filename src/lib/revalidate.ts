@@ -57,7 +57,7 @@ const safeRevalidate = (path: string, type?: 'layout' | 'page') => {
   }
 }
 
-const expireTags = (tags: readonly string[]) => {
+export const expireTags = (tags: readonly string[]) => {
   for (const tag of tags) {
     try {
       revalidateTag(tag, { expire: 0 })

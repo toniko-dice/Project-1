@@ -3,6 +3,7 @@ import { cleanSlug } from '../lib/slug'
 import { layoutField } from '../blocks/pageLayout'
 import { revalidateAllOnDelete, revalidateCategory } from '../lib/revalidate'
 import { metaDescriptionCounter, metaTitleCounter } from '../fields/seo'
+import { contentAccess } from '../lib/access'
 
 const parentId = (p: unknown): number | null =>
   typeof p === 'number' ? p : ((p as { id?: number } | null)?.id ?? null)
@@ -65,7 +66,7 @@ export const Categories: CollectionConfig = {
     description:
       'Категориите са на три нива: главна категория („Портативни електроцентрали") → серия („DELTA серия") → подсерия („DELTA 3 серия"). Всяко ниво се закача към горното с полето „Подкатегория на". Продуктът се слага в най-долното ниво, което го описва.',
   },
-  access: { read: () => true },
+  access: { ...contentAccess },
   hooks: {
     beforeChange: [fillFullTitle],
     afterChange: [cascadeFullTitle, revalidateCategory],

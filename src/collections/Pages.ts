@@ -2,6 +2,7 @@ import type { CollectionConfig } from 'payload'
 import { cleanSlug } from '../lib/slug'
 import { revalidatePage, revalidatePageDelete } from '../lib/revalidate'
 import { layoutField } from '../blocks/pageLayout'
+import { contentAccess, hiddenFor } from '../lib/access'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -11,13 +12,14 @@ export const Pages: CollectionConfig = {
   defaultSort: '_order',
   labels: { singular: 'Страница', plural: 'Страници' },
   admin: {
+    hidden: hiddenFor('admin', 'editor'),
     useAsTitle: 'title',
     defaultColumns: ['title', 'slug', 'updatedAt'],
     group: 'Съдържание',
     description:
       'Всяка страница се сглобява от секции. Добавяйте, местете (с дръжката вляво) и триете секции свободно.',
   },
-  access: { read: () => true },
+  access: { ...contentAccess },
   versions: { drafts: true },
   /*
     Страница като ВРЪЗКА (линкът към ръководство в категорията) носи само

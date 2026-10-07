@@ -99,7 +99,7 @@ const adminPassword = 'EcoFlow2026!'
 try {
   await payload.create({
     collection: 'users',
-    data: { email: adminEmail, password: adminPassword, name: 'Администратор' },
+    data: { email: adminEmail, password: adminPassword, name: 'Администратор', role: 'admin' },
   })
   console.log(`  ✓ ${adminEmail} / ${adminPassword}`)
 } catch {

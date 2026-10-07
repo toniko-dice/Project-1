@@ -2,6 +2,7 @@ import type { CollectionBeforeChangeHook, CollectionConfig, Field, PayloadReques
 
 import { lineTotal, offerTotals, OFFER_STATUSES, PAYMENT_OPTIONS } from '../lib/offers/calc'
 import { offerEndpoints } from '../lib/offers/endpoints'
+import { hiddenFor, salesAccess } from '../lib/access'
 
 type Settings = {
   defaults?: {
@@ -145,6 +146,7 @@ export const Offers: CollectionConfig = {
   slug: 'offers',
   labels: { singular: 'Оферта', plural: 'Оферти' },
   admin: {
+    hidden: hiddenFor('admin', 'sales'),
     group: 'Продажби',
     useAsTitle: 'number',
     defaultColumns: ['number', 'date', 'client.organization', 'totals.total', 'status', 'requestNumber'],
@@ -152,12 +154,7 @@ export const Offers: CollectionConfig = {
   },
   defaultSort: '-createdAt',
   versions: { maxPerDoc: 50 },
-  access: {
-    read: ({ req }) => Boolean(req.user),
-    create: ({ req }) => Boolean(req.user),
-    update: ({ req }) => Boolean(req.user),
-    delete: ({ req }) => Boolean(req.user),
-  },
+  access: { ...salesAccess },
   hooks: { beforeChange: [prepare] },
   endpoints: offerEndpoints,
   fields: [

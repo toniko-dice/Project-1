@@ -11,9 +11,11 @@
  */
 import type { Endpoint, PayloadRequest } from 'payload'
 
+import { reqHasRole } from '../access'
+
 
 const json = (body: unknown, status = 200) => Response.json(body, { status, headers: { 'Cache-Control': 'no-store' } })
-const forbidden = () => json({ error: 'Нужен е вход в админа.' }, 403)
+const forbidden = () => json({ error: 'Нужен е вход като администратор или продажби.' }, 403)
 const idOf = (req: PayloadRequest) => Number(req.routeParams?.id)
 
 type OfferDoc = {
@@ -52,7 +54,7 @@ export const offerEndpoints: Endpoint[] = [
     path: '/:id/pdf',
     method: 'get',
     handler: async (req) => {
-      if (!req.user) return forbidden()
+      if (!reqHasRole(req, 'admin', 'sales')) return forbidden()
       let offer: OfferDoc
       let pdf: Buffer
       try {
@@ -77,7 +79,7 @@ export const offerEndpoints: Endpoint[] = [
     path: '/:id/send-preview',
     method: 'get',
     handler: async (req) => {
-      if (!req.user) return forbidden()
+      if (!reqHasRole(req, 'admin', 'sales')) return forbidden()
       const offer = (await req.payload.findByID({ collection: 'offers', id: idOf(req), depth: 0, req })) as unknown as OfferDoc
       const company = await companyOf(req)
       const { defaultOfferText } = await import('./mail')
@@ -101,7 +103,7 @@ export const offerEndpoints: Endpoint[] = [
     path: '/:id/send',
     method: 'post',
     handler: async (req) => {
-      if (!req.user) return forbidden()
+      if (!reqHasRole(req, 'admin', 'sales')) return forbidden()
       const body = ((await req.json?.().catch(() => ({}))) ?? {}) as { to?: string; subject?: string; text?: string; force?: boolean }
       const to = (body.to ?? '').trim()
       if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(to)) return json({ error: 'Невалиден имейл на получателя.' }, 422)
@@ -164,7 +166,7 @@ export const offerEndpoints: Endpoint[] = [
     path: '/from-request/:id',
     method: 'post',
     handler: async (req) => {
-      if (!req.user) return forbidden()
+      if (!reqHasRole(req, 'admin', 'sales')) return forbidden()
       const qr = (await req.payload.findByID({ collection: 'quote-requests', id: idOf(req), depth: 0, req })) as unknown as {
         id: number
         organization?: string

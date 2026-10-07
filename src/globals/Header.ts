@@ -1,15 +1,17 @@
 import type { GlobalConfig } from 'payload'
 import { revalidateGlobal } from '../lib/revalidate'
+import { hiddenFor, isEditor, publicRead } from '../lib/access'
 
 export const Header: GlobalConfig = {
   slug: 'header',
   label: 'Меню (хедър)',
   admin: {
+    hidden: hiddenFor('admin', 'editor'),
     group: 'Меню',
     description:
       'Тук се подрежда скелетът на менюто. Самите снимки и карти в мега менюто се редактират в раздел „Панели в менюто".',
   },
-  access: { read: () => true },
+  access: { read: publicRead, update: isEditor },
   hooks: { afterChange: [revalidateGlobal] },
   fields: [
     {

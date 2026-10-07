@@ -1,5 +1,6 @@
 import type { CollectionConfig } from 'payload'
 import { revalidateAll, revalidateAllOnDelete } from '../lib/revalidate'
+import { contentAccess, hiddenFor } from '../lib/access'
 
 export const Testimonials: CollectionConfig = {
   slug: 'testimonials',
@@ -9,11 +10,12 @@ export const Testimonials: CollectionConfig = {
   defaultSort: '_order',
   labels: { singular: 'Отзив', plural: 'Отзиви' },
   admin: {
+    hidden: hiddenFor('admin', 'editor'),
     useAsTitle: 'author',
     defaultColumns: ['author', 'location'],
     group: 'Съдържание',
   },
-  access: { read: () => true },
+  access: { ...contentAccess },
   hooks: {
     afterChange: [revalidateAll],
     afterDelete: [revalidateAllOnDelete],

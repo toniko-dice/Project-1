@@ -12,6 +12,7 @@ import { productBlocks } from '../blocks/product'
 import { expireEverything, revalidateProduct, revalidateProductDelete } from '../lib/revalidate'
 import { fillSearchText } from '../lib/search'
 import { metaDescriptionCounter, metaTitleCounter } from '../fields/seo'
+import { contentAccess } from '../lib/access'
 
 /**
  * Основната категория = първата от „Категории".
@@ -99,7 +100,7 @@ export const Products: CollectionConfig = {
     description:
       'Продуктовата страница се сглобява от секции, също като обикновените страници. Продукт без добавени секции показва галерия, цена, бутон и описание.',
   },
-  access: { read: () => true },
+  access: { ...contentAccess },
   /*
     Какво носи продуктът, когато е ВРЪЗКА в друг документ — карта в
     карусел, колона в сравнителна таблица, свързан продукт.

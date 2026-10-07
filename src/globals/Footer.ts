@@ -1,11 +1,12 @@
 import type { GlobalConfig } from 'payload'
 import { revalidateGlobal } from '../lib/revalidate'
+import { hiddenFor, isEditor, publicRead } from '../lib/access'
 
 export const Footer: GlobalConfig = {
   slug: 'footer',
   label: 'Футър',
-  admin: { group: 'Настройки' },
-  access: { read: () => true },
+  admin: { hidden: hiddenFor('admin', 'editor'), group: 'Настройки' },
+  access: { read: publicRead, update: isEditor },
   hooks: { afterChange: [revalidateGlobal] },
   fields: [
     {

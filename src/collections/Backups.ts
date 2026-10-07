@@ -2,11 +2,13 @@ import path from 'path'
 import type { CollectionConfig } from 'payload'
 
 import { createBackup, stageRestore, STORE_DIR } from '../lib/backup'
+import { adminOnlyAccess, hiddenFor, reqHasRole } from '../lib/access'
 
 export const Backups: CollectionConfig = {
   slug: 'backups',
   labels: { singular: 'Архив', plural: 'Архиви' },
   admin: {
+    hidden: hiddenFor('admin'),
     useAsTitle: 'label',
     defaultColumns: ['label', 'trigger', 'protected', 'includesMedia', 'filesize', 'createdAt'],
     group: 'Настройки',
@@ -17,12 +19,7 @@ export const Backups: CollectionConfig = {
     },
   },
   // Достъпът е само за влезли потребители — архивът съдържа цялата база.
-  access: {
-    read: ({ req }) => Boolean(req.user),
-    create: ({ req }) => Boolean(req.user),
-    update: ({ req }) => Boolean(req.user),
-    delete: ({ req }) => Boolean(req.user),
-  },
+  access: { ...adminOnlyAccess },
   upload: {
     staticDir: STORE_DIR,
     mimeTypes: ['application/zip', 'application/x-zip-compressed'],
@@ -96,6 +93,9 @@ export const Backups: CollectionConfig = {
         if (!req.user) {
           return Response.json({ error: 'Нужен е вход.' }, { status: 401 })
         }
+        if (!reqHasRole(req, 'admin')) {
+          return Response.json({ error: 'Само за администратор.' }, { status: 403 })
+        }
 
         let body: { label?: string; includeMedia?: boolean } = {}
         try {
@@ -128,6 +128,9 @@ export const Backups: CollectionConfig = {
       handler: async (req) => {
         if (!req.user) {
           return Response.json({ error: 'Нужен е вход.' }, { status: 401 })
+        }
+        if (!reqHasRole(req, 'admin')) {
+          return Response.json({ error: 'Само за администратор.' }, { status: 403 })
         }
 
         const id = req.routeParams?.id as string

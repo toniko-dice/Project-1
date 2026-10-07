@@ -46,6 +46,7 @@ import * as migration_20261007_125539_text_table_blocks from './20261007_125539_
 import * as migration_20261007_145207_offer_general_discount from './20261007_145207_offer_general_discount';
 import * as migration_20261007_152614_about_blocks from './20261007_152614_about_blocks';
 import * as migration_20261007_153730_about_hidden_items from './20261007_153730_about_hidden_items';
+import * as migration_20261007_191305_roles_gate from './20261007_191305_roles_gate';
 
 export const migrations = [
   {
@@ -286,6 +287,11 @@ export const migrations = [
   {
     up: migration_20261007_153730_about_hidden_items.up,
     down: migration_20261007_153730_about_hidden_items.down,
-    name: '20261007_153730_about_hidden_items'
+    name: '20261007_153730_about_hidden_items',
+  },
+  {
+    up: migration_20261007_191305_roles_gate.up,
+    down: migration_20261007_191305_roles_gate.down,
+    name: '20261007_191305_roles_gate'
   },
 ];

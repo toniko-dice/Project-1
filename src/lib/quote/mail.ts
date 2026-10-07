@@ -27,6 +27,7 @@ import {
   PURPOSES,
   TIMEFRAMES,
 } from './options'
+import { gateMode } from '../gate'
 
 export type MailItem = { title: string; url: string; image: string | null; quantity: number }
 
@@ -349,8 +350,14 @@ export const loadMailContacts = async (payload: Payload): Promise<MailContacts> 
     payload.findGlobal({ slug: 'header', depth: 1 }),
   ])
   const logo = mediaUrl((header as { logo?: unknown }).logo as never)
+  /*
+    Докато сайтът е заключен, снимките от Медия искат вход и пощенската
+    програма не би заредила логото — тогава е копието в `public/vhod/`,
+    което е отворено (`task-zaklyuchen-dostap.md`).
+  */
+  const заключен = gateMode() !== 'off' && (settings as { gate?: { locked?: boolean | null } }).gate?.locked !== false
   return {
-    logoUrl: logo ? absoluteUrl(logo) : null,
+    logoUrl: заключен ? absoluteUrl('/vhod/ecoflow-logo.png') : logo ? absoluteUrl(logo) : null,
     companyName: settings.companyName ?? '',
     address: settings.address ?? '',
     phone: settings.phone ?? '',

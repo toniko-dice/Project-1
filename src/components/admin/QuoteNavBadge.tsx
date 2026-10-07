@@ -1,6 +1,6 @@
 'use client'
 
-import { useConfig, useDocumentEvents } from '@payloadcms/ui'
+import { useAuth, useConfig, useDocumentEvents } from '@payloadcms/ui'
 import { usePathname } from 'next/navigation'
 import { useCallback, useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
@@ -23,6 +23,9 @@ const POLL_MS = 60_000
  */
 export const QuoteNavBadge = () => {
   const { config } = useConfig()
+  // Само администраторът и продажбите виждат заявките; за редактора не се пита изобщо.
+  const { user } = useAuth<{ role?: string | null }>()
+  const вижда = user?.role === 'admin' || user?.role === 'sales'
   const pathname = usePathname()
   const { mostRecentUpdate } = useDocumentEvents()
   const [count, setCount] = useState(0)
@@ -31,6 +34,7 @@ export const QuoteNavBadge = () => {
   const api = `${config.serverURL ?? ''}${config.routes.api}`
 
   const refresh = useCallback(async () => {
+    if (!вижда) return setCount(0)
     try {
       const r = await fetch(`${api}/${SLUG}?where[status][equals]=new&limit=0&depth=0`, {
         credentials: 'include',
@@ -41,7 +45,7 @@ export const QuoteNavBadge = () => {
     } catch {
       // Без връзка — оставяме последната стойност.
     }
-  }, [api])
+  }, [api, вижда])
 
   useEffect(() => {
     void refresh()

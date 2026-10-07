@@ -1,5 +1,6 @@
 import type { CollectionConfig } from 'payload'
 import { revalidateAll, revalidateAllOnDelete } from '../lib/revalidate'
+import { contentAccess, hiddenFor } from '../lib/access'
 
 export const Awards: CollectionConfig = {
   slug: 'awards',
@@ -9,11 +10,12 @@ export const Awards: CollectionConfig = {
   defaultSort: '_order',
   labels: { singular: 'Отличие', plural: 'Отличия и медии' },
   admin: {
+    hidden: hiddenFor('admin', 'editor'),
     useAsTitle: 'name',
     defaultColumns: ['name', 'url'],
     group: 'Съдържание',
   },
-  access: { read: () => true },
+  access: { ...contentAccess },
   hooks: {
     afterChange: [revalidateAll],
     afterDelete: [revalidateAllOnDelete],

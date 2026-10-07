@@ -1,6 +1,7 @@
 import type { CollectionBeforeValidateHook, CollectionConfig } from 'payload'
 import { cleanSlug } from '../lib/slug'
 import { revalidateAll, revalidateAllOnDelete } from '../lib/revalidate'
+import { contentAccess, hiddenFor } from '../lib/access'
 
 /**
  * Панел в мега менюто — това, което се показва вдясно, когато потребителят
@@ -75,13 +76,14 @@ export const MenuPanels: CollectionConfig = {
   defaultSort: '_order',
   labels: { singular: 'Панел в менюто', plural: 'Панели в менюто' },
   admin: {
+    hidden: hiddenFor('admin', 'editor'),
     useAsTitle: 'title',
     defaultColumns: ['title', 'menu', 'slug', 'updatedAt'],
     group: 'Меню',
     description:
       'Всеки панел е това, което се показва вдясно в мега менюто, когато потребителят посочи подточка от сайдбара. Секциите му са списъци с продукти — сайтът показва точно тях, в този ред.',
   },
-  access: { read: () => true },
+  access: { ...contentAccess },
   hooks: {
     beforeValidate: [fillCardsFromProducts],
     afterChange: [revalidateAll],

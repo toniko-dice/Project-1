@@ -1,5 +1,6 @@
 import type { Field, GlobalConfig } from 'payload'
 import { revalidateGlobal } from '../lib/revalidate'
+import { hiddenFor, isEditor, publicRead } from '../lib/access'
 
 /** Приема #rgb, #rrggbb или празно (= ползва се стойността по подразбиране от кода). */
 const hex = (name: string, label: string, fallback: string, description?: string): Field => ({
@@ -23,11 +24,12 @@ export const Design: GlobalConfig = {
   slug: 'design',
   label: 'Дизайн',
   admin: {
+    hidden: hiddenFor('admin', 'editor'),
     group: 'Настройки',
     description:
       'Цветовете на целия сайт. Празно поле означава „ползвай стойността по подразбиране“. Промяната се вижда веднага след запис — не е нужен нов билд.',
   },
-  access: { read: () => true },
+  access: { read: publicRead, update: isEditor },
   hooks: { afterChange: [revalidateGlobal] },
   fields: [
     {

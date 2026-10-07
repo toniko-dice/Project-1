@@ -1,6 +1,7 @@
 import type { GlobalBeforeChangeHook, GlobalConfig } from 'payload'
 import { BUILTIN_FILTERS } from '../lib/filter-order'
 import { revalidateGlobal } from '../lib/revalidate'
+import { hiddenFor, isEditor, publicRead } from '../lib/access'
 
 /**
  * Надписът на реда в админа — „Наличност", „Дължина (м)".
@@ -42,11 +43,12 @@ export const FilterOrder: GlobalConfig = {
   slug: 'filter-order',
   label: 'Подредба на филтрите',
   admin: {
+    hidden: hiddenFor('admin', 'editor'),
     group: 'Каталог',
     description:
       'Редът на филтрите отстрани в категориите с аксесоари и на страниците „Аксесоари за …". Подрежда се с влачене. Филтър без стойности в дадена категория не се показва.',
   },
-  access: { read: () => true },
+  access: { read: publicRead, update: isEditor },
   hooks: { beforeChange: [fillLabels], afterChange: [revalidateGlobal] },
   fields: [
     {

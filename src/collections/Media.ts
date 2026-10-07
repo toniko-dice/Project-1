@@ -7,6 +7,7 @@ import type {
 } from 'payload'
 import { revalidateAll, revalidateAllOnDelete } from '../lib/revalidate'
 import { makeTrimmed, NO_TRIMMED, removeTrimmedFile } from '../lib/trim-image'
+import { contentAccess } from '../lib/access'
 
 const MEDIA_DIR = path.resolve(process.cwd(), 'media')
 
@@ -54,7 +55,7 @@ export const Media: CollectionConfig = {
   slug: 'media',
   labels: { singular: 'Файл', plural: 'Медия' },
   admin: { group: 'Съдържание' },
-  access: { read: () => true },
+  access: { ...contentAccess },
   /*
     Снимката се показва навсякъде, а адресът ѝ носи `?v=<време на промяна>`.
     Без тези куки презаписана или изрязана снимка остава със стария адрес в

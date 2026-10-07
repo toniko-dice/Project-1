@@ -1,6 +1,7 @@
 import type { GlobalConfig } from 'payload'
 
 import { PAYMENT_OPTIONS } from '../lib/offers/calc'
+import { hiddenFor, isAdmin, isSales } from '../lib/access'
 
 /**
  * „Данни за офертите" — продавачът, банковата сметка и условията по
@@ -12,8 +13,8 @@ import { PAYMENT_OPTIONS } from '../lib/offers/calc'
 export const OfferSettings: GlobalConfig = {
   slug: 'offer-settings',
   label: 'Данни за офертите',
-  admin: { group: 'Продажби' },
-  access: { read: ({ req }) => Boolean(req.user), update: ({ req }) => Boolean(req.user) },
+  admin: { hidden: hiddenFor('admin', 'sales'), group: 'Продажби' },
+  access: { read: isSales, update: isAdmin },
   fields: [
     {
       name: 'company',

@@ -1,6 +1,7 @@
 import type { CollectionConfig } from 'payload'
 import { cleanSlug, slugify } from '../lib/slug'
 import { revalidateAll, revalidateAllOnDelete } from '../lib/revalidate'
+import { contentAccess } from '../lib/access'
 
 /**
  * Атрибутите за филтрите в категориите — „Дължина", „Капацитет",
@@ -26,7 +27,7 @@ export const Attributes: CollectionConfig = {
     description:
       'Атрибутите са филтрите отстрани в категориите („Дължина", „Капацитет"). Подредбата на филтрите се сменя с влачене. Стойностите се попълват в продукта, таб „Атрибути".',
   },
-  access: { read: () => true },
+  access: { ...contentAccess },
   hooks: {
     afterChange: [revalidateAll],
     afterDelete: [revalidateAllOnDelete],

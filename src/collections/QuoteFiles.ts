@@ -1,6 +1,7 @@
 import type { CollectionConfig } from 'payload'
 
 import { FILE_TYPES } from '../lib/quote/options'
+import { isAdmin, isSales } from '../lib/access'
 
 /**
  * Прикачените файлове към заявките за оферта.
@@ -21,12 +22,7 @@ export const QuoteFiles: CollectionConfig = {
     group: 'Продажби',
     hidden: true,
   },
-  access: {
-    read: ({ req }) => Boolean(req.user),
-    create: () => false,
-    update: () => false,
-    delete: ({ req }) => Boolean(req.user),
-  },
+  access: { read: isSales, create: () => false, update: () => false, delete: isAdmin },
   upload: {
     staticDir: 'quote-files',
     mimeTypes: [...new Set(Object.values(FILE_TYPES).flat())],

@@ -1,4 +1,5 @@
 import type { CollectionConfig } from 'payload'
+import { adminOnlyAccess, hiddenFor } from '../lib/access'
 
 /**
  * Абонати за бюлетина.
@@ -55,6 +56,7 @@ export const Subscribers: CollectionConfig = {
   slug: 'subscribers',
   labels: { singular: 'Абонат', plural: 'Абонати' },
   admin: {
+    hidden: hiddenFor('admin'),
     useAsTitle: 'email',
     defaultColumns: ['email', 'subscribedAt', 'status', 'source'],
     group: 'Маркетинг',
@@ -66,12 +68,7 @@ export const Subscribers: CollectionConfig = {
   },
   // Най-новите отгоре.
   defaultSort: '-subscribedAt',
-  access: {
-    read: ({ req }) => Boolean(req.user),
-    create: ({ req }) => Boolean(req.user),
-    update: ({ req }) => Boolean(req.user),
-    delete: ({ req }) => Boolean(req.user),
-  },
+  access: { ...adminOnlyAccess },
   fields: [
     {
       name: 'email',

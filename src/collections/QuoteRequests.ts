@@ -13,6 +13,7 @@ import {
   STATUSES,
   TIMEFRAMES,
 } from '../lib/quote/options'
+import { hiddenFor, isAdmin, isSales } from '../lib/access'
 
 /** Само за четене: номерът, IP, браузърът и това, което се пресмята. Всичко друго се редактира. */
 const ro = <T extends Field>(f: T): T => ({ ...f, admin: { ...(f.admin ?? {}), readOnly: true } }) as T
@@ -117,6 +118,7 @@ export const QuoteRequests: CollectionConfig = {
   slug: 'quote-requests',
   labels: { singular: 'Заявка за оферта', plural: 'Нови заявки' },
   admin: {
+    hidden: hiddenFor('admin', 'sales'),
     group: 'Продажби',
     useAsTitle: 'number',
     defaultColumns: ['number', 'createdAt', 'organization', 'clientType', 'city', 'itemsSummary', 'status'],
@@ -128,12 +130,7 @@ export const QuoteRequests: CollectionConfig = {
   // История на промените — „Версии" в записа; всяка носи и „Последна промяна от…".
   versions: { maxPerDoc: 100 },
   hooks: { beforeChange: [onEdit] },
-  access: {
-    read: ({ req }) => Boolean(req.user),
-    create: () => false,
-    update: ({ req }) => Boolean(req.user),
-    delete: ({ req }) => Boolean(req.user),
-  },
+  access: { read: isSales, create: () => false, update: isSales, delete: isAdmin },
   fields: [
     ro({
       name: 'number',
