@@ -43,6 +43,7 @@ import * as migration_20261007_104241_quote_requests from './20261007_104241_quo
 import * as migration_20261007_112559_quote_edit_versions from './20261007_112559_quote_edit_versions';
 import * as migration_20261007_122953_offers from './20261007_122953_offers';
 import * as migration_20261007_125539_text_table_blocks from './20261007_125539_text_table_blocks';
+import * as migration_20261007_145207_offer_general_discount from './20261007_145207_offer_general_discount';
 
 export const migrations = [
   {
@@ -268,6 +269,11 @@ export const migrations = [
   {
     up: migration_20261007_125539_text_table_blocks.up,
     down: migration_20261007_125539_text_table_blocks.down,
-    name: '20261007_125539_text_table_blocks'
+    name: '20261007_125539_text_table_blocks',
+  },
+  {
+    up: migration_20261007_145207_offer_general_discount.up,
+    down: migration_20261007_145207_offer_general_discount.down,
+    name: '20261007_145207_offer_general_discount'
   },
 ];

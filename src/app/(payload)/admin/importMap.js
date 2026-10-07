@@ -5,6 +5,8 @@ import { RowLabel as RowLabel_7f4fa5fc68fb5a0a92393f6444a57fbd } from '@/compone
 import { OfferActions as OfferActions_516e5252b2cea7af8808925ab7755b81 } from '@/components/admin/OfferActions'
 import { OfferStatusCell as OfferStatusCell_9823563d31c638539afc242672ac175b } from '@/components/admin/OfferStatusCell'
 import { OfferDraftGuard as OfferDraftGuard_b17ed467a746e983cee853e10440a529 } from '@/components/admin/OfferDraftGuard'
+import { OfferGeneralDiscount as OfferGeneralDiscount_b9698518c371d2768111e0ed4179a6bc } from '@/components/admin/OfferGeneralDiscount'
+import { OfferItemProductSync as OfferItemProductSync_9d4bd0c20061326405e6cd7b2523dfd1 } from '@/components/admin/OfferItemProductSync'
 import { OfferTotals as OfferTotals_fcf641b6175e776be14af5ff5d1f19fd } from '@/components/admin/OfferTotals'
 import { Note as Note_b1f9a6b9bae36f5ee25cc75b578bb654 } from '@/components/admin/Note'
 import { BlockLabel as BlockLabel_65d5559e4024d0730eedfbb5dfb037d8 } from '@/components/admin/BlockLabel'
@@ -48,6 +50,8 @@ export const importMap = {
   "@/components/admin/OfferActions#OfferActions": OfferActions_516e5252b2cea7af8808925ab7755b81,
   "@/components/admin/OfferStatusCell#OfferStatusCell": OfferStatusCell_9823563d31c638539afc242672ac175b,
   "@/components/admin/OfferDraftGuard#OfferDraftGuard": OfferDraftGuard_b17ed467a746e983cee853e10440a529,
+  "@/components/admin/OfferGeneralDiscount#OfferGeneralDiscount": OfferGeneralDiscount_b9698518c371d2768111e0ed4179a6bc,
+  "@/components/admin/OfferItemProductSync#OfferItemProductSync": OfferItemProductSync_9d4bd0c20061326405e6cd7b2523dfd1,
   "@/components/admin/OfferTotals#OfferTotals": OfferTotals_fcf641b6175e776be14af5ff5d1f19fd,
   "@/components/admin/Note#Note": Note_b1f9a6b9bae36f5ee25cc75b578bb654,
   "@/components/admin/BlockLabel#BlockLabel": BlockLabel_65d5559e4024d0730eedfbb5dfb037d8,

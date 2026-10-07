@@ -3,7 +3,9 @@
 import { useDocumentInfo, useForm, useFormFields, useFormModified } from '@payloadcms/ui'
 import { useEffect, useRef, useState } from 'react'
 
-const FIELDS = ['quantity', 'unitPrice', 'discount', 'title', 'sku', 'ean'] as const
+import { restoredProductPaths } from '@/lib/offers/draft-restore'
+
+const FIELDS = ['product', 'quantity', 'unitPrice', 'discount', 'title', 'sku', 'ean', 'image'] as const
 
 /**
  * Резервно копие на незаписаните редове на офертата (`sessionStorage`, по
@@ -29,7 +31,7 @@ export const OfferDraftGuard = () => {
   const [notice, setNotice] = useState(false)
 
   const count = Number(fields.items?.value ?? 0)
-  const snapshot: Record<string, unknown> = {}
+  const snapshot: Record<string, unknown> = { generalDiscount: fields.generalDiscount?.value ?? null }
   for (let i = 0; i < count; i++) for (const f of FIELDS) snapshot[`items.${i}.${f}`] = fields[`items.${i}.${f}`]?.value ?? null
 
   // Връщане — веднъж, при отваряне.
@@ -45,6 +47,7 @@ export const OfferDraftGuard = () => {
     if (!saved || saved.count !== count) return
     const diff = Object.entries(saved.values).filter(([p, v]) => fields[p] && (fields[p]?.value ?? null) !== v)
     if (!diff.length) return
+    for (const [path] of diff) if (path.endsWith('.product')) restoredProductPaths.add(path)
     for (const [path, value] of diff) dispatchFields({ type: 'UPDATE', path, value })
     setModified(true)
     setNotice(true)

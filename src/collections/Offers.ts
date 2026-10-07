@@ -237,13 +237,23 @@ export const Offers: CollectionConfig = {
               admin: { components: { Field: '@/components/admin/OfferDraftGuard#OfferDraftGuard' } },
             },
             {
+              // Само стойност по подразбиране за редовете — прилага се В ФОРМАТА
+              // (`OfferGeneralDiscount`), сървърът не я разнася. Не излиза в PDF-а.
+              name: 'generalDiscount',
+              type: 'number',
+              label: 'Обща отстъпка %',
+              min: 0,
+              max: 100,
+              admin: { components: { Field: '@/components/admin/OfferGeneralDiscount#OfferGeneralDiscount' } },
+            },
+            {
               name: 'items',
               type: 'array',
               label: 'Редове',
               labels: { singular: 'Ред', plural: 'Редове' },
               admin: {
                 description:
-                  'Продукт от сайта или свободен ред (само име). Име, SKU, EAN, снимка и цена се попълват от продукта при запис, ако са празни — после се редактират.',
+                  'Продукт от сайта или свободен ред (само име). При избор на продукт име, SKU, EAN, снимка и цена се попълват веднага — после се редактират.',
                 components: {
                   RowLabel: {
                     path: '@/components/admin/RowLabel#RowLabel',
@@ -258,6 +268,11 @@ export const Offers: CollectionConfig = {
                     { name: 'product', type: 'relationship', relationTo: 'products', label: 'Продукт', admin: { width: '50%' } },
                     { name: 'title', type: 'text', label: 'Име', admin: { width: '50%' } },
                   ],
+                },
+                {
+                  name: 'productSync',
+                  type: 'ui',
+                  admin: { components: { Field: '@/components/admin/OfferItemProductSync#OfferItemProductSync' } },
                 },
                 {
                   type: 'row',

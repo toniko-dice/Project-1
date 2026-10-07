@@ -266,8 +266,9 @@ export interface Offer {
     email?: string | null;
     phone?: string | null;
   };
+  generalDiscount?: number | null;
   /**
-   * Продукт от сайта или свободен ред (само име). Име, SKU, EAN, снимка и цена се попълват от продукта при запис, ако са празни — после се редактират.
+   * Продукт от сайта или свободен ред (само име). При избор на продукт име, SKU, EAN, снимка и цена се попълват веднага — после се редактират.
    */
   items?:
     | {
@@ -3100,6 +3101,7 @@ export interface OffersSelect<T extends boolean = true> {
         email?: T;
         phone?: T;
       };
+  generalDiscount?: T;
   items?:
     | T
     | {
