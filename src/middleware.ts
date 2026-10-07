@@ -53,7 +53,13 @@ export async function middleware(request: NextRequest) {
     if (малки !== pathname) return пренасочи(request, малки, search)
   }
 
-  if (!ВЪЗМОЖНИ.some((p) => pathname === p || pathname.startsWith(p))) return NextResponse.next()
+  /*
+    Адрес с един сегмент (`/biznes`) — също пита каталога: записано в
+    „Пренасочвания" отива с 301. Отговорът се кешира по адрес (5 минути),
+    затова страниците `/oferta-za-firmi`, `/rakovodstvo-…` питат веднъж.
+  */
+  const единСегмент = !служебен && /^\/[^/]+$/.test(pathname)
+  if (!единСегмент && !ВЪЗМОЖНИ.some((p) => pathname === p || pathname.startsWith(p))) return NextResponse.next()
 
   /*
     Каталогът има предимство: той знае, че

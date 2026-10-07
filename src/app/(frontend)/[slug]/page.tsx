@@ -52,10 +52,10 @@ export default async function DynamicPage({ params }: Args) {
 
   if (!page) {
     /*
-      Пренасочване от „Пренасочвания" за адрес с един сегмент (`/biznes` →
-      `/oferta-za-firmi`). Middleware-ът гледа само `/kategorii/…`,
-      `/products/…` и сие — за всеки друг адрес би било заявка на всяко
-      зареждане; тук се стига само когато страница няма.
+      Резерва, ако middleware-ът не е пренасочил (той го прави с 301 —
+      `src/middleware.ts`, адрес с един сегмент): записаното в
+      „Пренасочвания" не бива да дава 404. Оттук излиза 308 — Next не
+      позволява 301 от страница.
     */
     const to = (await getRedirectMap())[`/${slug}`]
     if (to) permanentRedirect(to)
