@@ -5,7 +5,12 @@
  * Например:    npm run import:product delta-3-classic
  *
  * С `--no-download` не сваля нищо — ползва само файловете на диска и вече
- * качените в Медия.
+ * качените в Медия. С `--dry-run` само казва какво би направил.
+ *
+ * Непознат флаг спира скрипта. До 7 октомври 2026 `--dry-run` го нямаше
+ * тук (само в `import:all`) и флагът се пренебрегваше мълчаливо:
+ * „проверката" на калъфа за GLACIER Classic 35L го създаде, качи снимките
+ * и преименува 35 записа в Медия.
  *
  * Логиката е в `src/import-product-core.ts` — същата, която ползва и
  * `npm run import:all`. Тук са само аргументът, обобщението и изходният
@@ -20,6 +25,7 @@ import { getPayload } from 'payload'
 
 import {
   ImportError,
+  actionLabel,
   checkDownloadNameConflicts,
   importProduct,
   productFolders,
@@ -43,10 +49,19 @@ if (!slug) {
   die('Липсва адрес на продукта.\n  Пример: npm run import:product delta-3-classic')
 }
 
+const FLAGS = ['--no-download', '--draft', '--dry-run']
+const непознати = process.argv.slice(2).filter((a) => a.startsWith('-') && a !== '--' && !FLAGS.includes(a))
+if (непознати.length) {
+  die(`Непознат флаг: ${непознати.join(', ')}. Познати: ${FLAGS.join(', ')}`)
+}
+
 // Изключва свалянето: ползват се само файловете на диска и вече качените.
 const noDownload = process.argv.includes('--no-download')
 // Новият продукт става чернова вместо публикуван.
 const draft = process.argv.includes('--draft')
+// Само проверка — нищо не се записва, не се сваля и не се преименува.
+const dryRun = process.argv.includes('--dry-run')
+if (dryRun) console.log('ПРОВЕРКА (--dry-run) — нищо няма да се записва.', '\n')
 
 const payload = await getPayload({ config })
 
@@ -64,7 +79,7 @@ try {
 
 let result
 try {
-  result = await importProduct(payload, slug!, { noDownload, draft })
+  result = await importProduct(payload, slug!, { noDownload, draft, dryRun })
 } catch (err) {
   if (err instanceof ImportError) die(err.message)
   throw err
@@ -77,7 +92,7 @@ if (result.downloaded) console.log(`✓ Свалени снимки: ${result.do
 console.log(
   `✓ Качени нови изображения: ${result.uploadedNew} (пропуснати вече съществуващи: ${result.reusedExisting})`,
 )
-console.log(`✓ Продукт: ${result.title} — ${result.action}`)
+console.log(`✓ Продукт: ${result.title} — ${actionLabel(result.action, dryRun)}`)
 if (result.publishError) console.log(`  ✗ ${result.publishError.split('\n')[0]}`)
 for (const ред of result.menu) console.log(`✓ Меню: ${ред}`)
 console.log(`✓ Галерия: ${result.gallery} снимки (първата е основната)`)
@@ -112,7 +127,9 @@ if (result.missingFiles.length) {
 }
 
 console.log('')
-if (result.published) {
+if (dryRun) {
+  console.log('Нищо не е записано. Пуснете без --dry-run, за да се извърши вносът.')
+} else if (result.published) {
   console.log(`Продуктът е публикуван; ${await revalidateServer()}`)
 } else {
   console.log('Продуктът е ЧЕРНОВА и още не се вижда на сайта.')
@@ -120,10 +137,10 @@ if (result.published) {
 }
 
 // Смислените имена на новите снимки — преди „за превод" (`task-snimki-imena.md`, т. 4).
-for (const ред of await именаСледВнос(payload)) console.log(ред)
+for (const ред of await именаСледВнос(payload, { dryRun })) console.log(ред)
 
 // Пресмята се от ВСИЧКИ продукти — иначе списъкът би изгубил чакащите на другите.
-for (const ред of translationQueueSummary(await updateTranslationQueue(), false)) {
+for (const ред of translationQueueSummary(await updateTranslationQueue({ dryRun }), dryRun)) {
   console.log(ред)
 }
 console.log('')

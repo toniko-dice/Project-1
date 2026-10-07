@@ -6,15 +6,15 @@
     "slug": "rakovodstvo-portativni-elektrocentrali",
     "metaTitle": "Как да изберете портативна електроцентрала | EcoFlow",
     "metaDescription": "Какво е портативна електроцентрала, как работи и коя да изберете: EcoFlow DELTA за дома и RIVER за навън. Сравнение на времето за работа и въпроси.",
-    "metaImage": "rakovodstvo-portativni-elektrocentrali-pregled-1.jpg"
+    "metaImage": "portativni-elektrocentrali-ecoflow-na-kamping-sred-prirodata.jpg"
   },
   "sekcii": [
     {
       "blockType": "pageHero",
       "heading": "Портативни електроцентрали: как да изберете",
       "body": "Портативните електроцентрали EcoFlow са генератори на батерия, които захранват техниката ви навсякъде. С различен капацитет, мощност и портове има подходяща за всяка нужда — резервно захранване за дома, къмпинг, пътуване с кемпер, работа с инструменти или авария. Надеждна енергия от EcoFlow, винаги с вас.",
-      "image": "rakovodstvo-portativni-elektrocentrali-pregled-1.jpg",
-      "imageMobile": "rakovodstvo-portativni-elektrocentrali-pregled-2.jpg",
+      "image": "portativni-elektrocentrali-ecoflow-na-kamping-sred-prirodata.jpg",
+      "imageMobile": "portativni-elektrocentrali-ecoflow-na-kamping-sred-prirodata-2.jpg",
       "imageAlt": "Портативни електроцентрали EcoFlow на къмпинг сред природата"
     },
     {
@@ -28,26 +28,26 @@
       "slides": [
         {
           "label": "Как работи",
-          "image": "rakovodstvo-portativni-elektrocentrali-kak-raboti-1.png",
-          "imageMobile": "rakovodstvo-portativni-elektrocentrali-kak-raboti-2.png",
+          "image": "kak-portativnata-elektrocentrala-zahranva-doma-sas-solarni.png",
+          "imageMobile": "kak-portativnata-elektrocentrala-zahranva-doma-sas-solarni-2.png",
           "imageAlt": "Как портативната електроцентрала захранва дома със соларни панели"
         },
         {
           "label": "На открито",
-          "image": "rakovodstvo-portativni-elektrocentrali-na-otkrito-1.webp",
-          "imageMobile": "rakovodstvo-portativni-elektrocentrali-na-otkrito-2.webp",
+          "image": "piknik-sred-prirodata-s-portativna-elektrocentrala-ecoflow.webp",
+          "imageMobile": "piknik-sred-prirodata-s-portativna-elektrocentrala-ecoflow-2.webp",
           "imageAlt": "Пикник сред природата с портативна електроцентрала EcoFlow"
         },
         {
           "label": "Вкъщи",
-          "image": "rakovodstvo-portativni-elektrocentrali-vkashti-1.webp",
-          "imageMobile": "rakovodstvo-portativni-elektrocentrali-vkashti-2.webp",
+          "image": "zarezhdane-na-tablet-ot-portativna-elektrocentrala-vkashti.webp",
+          "imageMobile": "zarezhdane-na-tablet-ot-portativna-elektrocentrala-vkashti-2.webp",
           "imageAlt": "Зареждане на таблет от портативна електроцентрала вкъщи"
         },
         {
           "label": "Мобилно и извън мрежата",
-          "image": "rakovodstvo-portativni-elektrocentrali-izvan-mrezhata-1.webp",
-          "imageMobile": "rakovodstvo-portativni-elektrocentrali-izvan-mrezhata-2.webp",
+          "image": "portativna-elektrocentrala-kray-lageren-ogan.webp",
+          "imageMobile": "portativna-elektrocentrala-kray-lageren-ogan-2.webp",
           "imageAlt": "Портативна електроцентрала край лагерен огън"
         }
       ]
@@ -55,8 +55,8 @@
     {
       "blockType": "accordionImage",
       "heading": "Защо да изберете портативна електроцентрала EcoFlow?",
-      "image": "rakovodstvo-portativni-elektrocentrali-zashto-ecoflow-1.webp",
-      "imageMobile": "rakovodstvo-portativni-elektrocentrali-zashto-ecoflow-2.webp",
+      "image": "zarezhdane-na-ustroystva-ot-portativna-elektrocentrala.webp",
+      "imageMobile": "zarezhdane-na-ustroystva-ot-portativna-elektrocentrala-2.webp",
       "imageAlt": "Зареждане на устройства от портативна електроцентрала EcoFlow",
       "items": [
         {
@@ -86,8 +86,8 @@
       "anchorLabel": "Вкъщи",
       "heading": "Портативни електроцентрали EcoFlow — надеждно резервно захранване за дома",
       "body": "Портативните електроцентрали EcoFlow DELTA са отлично решение за по-ниска сметка за ток. С капацитет от 1 до 21,5 kWh и до 7200W изход серията DELTA ви дава устойчив и изгоден източник на енергия. Спестявайте и захранвайте мощни уреди като отоплителни уреди и централен климатик, без да се тревожите от растящите цени на тока.",
-      "image": "rakovodstvo-portativni-elektrocentrali-rezervno-zahranvane-1.webp",
-      "imageMobile": "rakovodstvo-portativni-elektrocentrali-rezervno-zahranvane-2.webp",
+      "image": "portativna-elektrocentrala-ecoflow-delta-do-legloto-po.webp",
+      "imageMobile": "portativna-elektrocentrala-ecoflow-delta-do-legloto-po-2.webp",
       "imageAlt": "Портативна електроцентрала EcoFlow DELTA до леглото по време на спиране на тока",
       "ctaLabel": "Разгледайте",
       "ctaLink": "/kategorii/delta-seriya"
@@ -180,8 +180,8 @@
     },
     {
       "blockType": "imageWithText",
-      "image": "rakovodstvo-portativni-elektrocentrali-delta-3-classic-1.jpg",
-      "imageMobile": "rakovodstvo-portativni-elektrocentrali-delta-3-classic-2.jpg",
+      "image": "semeystvo-na-kamping-s-ecoflow-delta-3-classic.jpg",
+      "imageMobile": "semeystvo-na-kamping-s-ecoflow-delta-3-classic-2.jpg",
       "imageAlt": "Семейство на къмпинг с EcoFlow DELTA 3 Classic",
       "heading": "EcoFlow DELTA 3 Classic",
       "subheading": "Най-изгодната портативна електроцентрала на EcoFlow с 1 kWh",
@@ -194,8 +194,8 @@
       "anchorLabel": "На открито",
       "heading": "Портативни електроцентрали EcoFlow — надежден спътник навън",
       "body": "Създадени за хората, които обичат природата, портативните електроцентрали EcoFlow дават от 300 до 800W изход и от 256 до 858Wh енергия — при тегло едва от 3,5 до 10,8 кг. Захранват всичко нужно на къмпинга — от LED лампи и телефони до хладилни чанти и медицински уреди. Независимо дали пътувате с кемпер, работите от гората или просто почивате извън мрежата — в дъжд и слънце те ви дават чиста енергия, където и да ви отведе пътят.",
-      "image": "rakovodstvo-portativni-elektrocentrali-na-otkrito-3.png",
-      "imageMobile": "rakovodstvo-portativni-elektrocentrali-na-otkrito-4.png",
+      "image": "portativna-elektrocentrala-ecoflow-river-na-kamping.png",
+      "imageMobile": "portativna-elektrocentrala-ecoflow-river-na-kamping-2.png",
       "imageAlt": "Портативна електроцентрала EcoFlow RIVER на къмпинг",
       "ctaLabel": "Разгледайте",
       "ctaLink": "/kategorii/river-seriya"
@@ -314,75 +314,75 @@
   "_svali_snimki": [
     {
       "url": "https://eu.ecoflow.com/cdn/shop/files/07_KV_PC.jpg",
-      "file": "rakovodstvo-portativni-elektrocentrali-pregled-1.jpg"
+      "file": "portativni-elektrocentrali-ecoflow-na-kamping-sred-prirodata.jpg"
     },
     {
       "url": "https://eu.ecoflow.com/cdn/shop/files/07_KV_M.jpg",
-      "file": "rakovodstvo-portativni-elektrocentrali-pregled-2.jpg"
+      "file": "portativni-elektrocentrali-ecoflow-na-kamping-sred-prirodata-2.jpg"
     },
     {
       "url": "https://eu.ecoflow.com/cdn/shop/files/Frame_161269079_0ceb9271-05f1-49e7-91b9-043ab9fcbd7a.png",
-      "file": "rakovodstvo-portativni-elektrocentrali-kak-raboti-1.png"
+      "file": "kak-portativnata-elektrocentrala-zahranva-doma-sas-solarni.png"
     },
     {
       "url": "https://eu.ecoflow.com/cdn/shop/files/Frame_128720240_e100bb11-2636-4476-ac0e-4f7f2ae90231.png",
-      "file": "rakovodstvo-portativni-elektrocentrali-kak-raboti-2.png"
+      "file": "kak-portativnata-elektrocentrala-zahranva-doma-sas-solarni-2.png"
     },
     {
       "url": "https://eu.ecoflow.com/cdn/shop/files/01_PC_EU_UK.webp",
-      "file": "rakovodstvo-portativni-elektrocentrali-na-otkrito-1.webp"
+      "file": "piknik-sred-prirodata-s-portativna-elektrocentrala-ecoflow.webp"
     },
     {
       "url": "https://eu.ecoflow.com/cdn/shop/files/01_M_EU_UK.webp",
-      "file": "rakovodstvo-portativni-elektrocentrali-na-otkrito-2.webp"
+      "file": "piknik-sred-prirodata-s-portativna-elektrocentrala-ecoflow-2.webp"
     },
     {
       "url": "https://eu.ecoflow.com/cdn/shop/files/02_PC_UK.webp",
-      "file": "rakovodstvo-portativni-elektrocentrali-vkashti-1.webp"
+      "file": "zarezhdane-na-tablet-ot-portativna-elektrocentrala-vkashti.webp"
     },
     {
       "url": "https://eu.ecoflow.com/cdn/shop/files/02_M_UK.webp",
-      "file": "rakovodstvo-portativni-elektrocentrali-vkashti-2.webp"
+      "file": "zarezhdane-na-tablet-ot-portativna-elektrocentrala-vkashti-2.webp"
     },
     {
       "url": "https://eu.ecoflow.com/cdn/shop/files/03_PC_EU_UK.webp",
-      "file": "rakovodstvo-portativni-elektrocentrali-izvan-mrezhata-1.webp"
+      "file": "portativna-elektrocentrala-kray-lageren-ogan.webp"
     },
     {
       "url": "https://eu.ecoflow.com/cdn/shop/files/03_M_EU_UK.webp",
-      "file": "rakovodstvo-portativni-elektrocentrali-izvan-mrezhata-2.webp"
+      "file": "portativna-elektrocentrala-kray-lageren-ogan-2.webp"
     },
     {
       "url": "https://eu.ecoflow.com/cdn/shop/files/04_PC_EU_UK.webp",
-      "file": "rakovodstvo-portativni-elektrocentrali-zashto-ecoflow-1.webp"
+      "file": "zarezhdane-na-ustroystva-ot-portativna-elektrocentrala.webp"
     },
     {
       "url": "https://eu.ecoflow.com/cdn/shop/files/04_M_EU_UK.webp",
-      "file": "rakovodstvo-portativni-elektrocentrali-zashto-ecoflow-2.webp"
+      "file": "zarezhdane-na-ustroystva-ot-portativna-elektrocentrala-2.webp"
     },
     {
       "url": "https://eu.ecoflow.com/cdn/shop/files/05_PC_UK.webp",
-      "file": "rakovodstvo-portativni-elektrocentrali-rezervno-zahranvane-1.webp"
+      "file": "portativna-elektrocentrala-ecoflow-delta-do-legloto-po.webp"
     },
     {
       "url": "https://eu.ecoflow.com/cdn/shop/files/05_M_UK.webp",
-      "file": "rakovodstvo-portativni-elektrocentrali-rezervno-zahranvane-2.webp"
+      "file": "portativna-elektrocentrala-ecoflow-delta-do-legloto-po-2.webp"
     },
     {
       "url": "https://eu.ecoflow.com/cdn/shop/files/delta-3-classic-portable-power-station-eu-pc.jpg",
-      "file": "rakovodstvo-portativni-elektrocentrali-delta-3-classic-1.jpg"
+      "file": "semeystvo-na-kamping-s-ecoflow-delta-3-classic.jpg"
     },
     {
       "url": "https://eu.ecoflow.com/cdn/shop/files/delta-3-classic-portable-power-station-eu-m.jpg",
-      "file": "rakovodstvo-portativni-elektrocentrali-delta-3-classic-2.jpg"
+      "file": "semeystvo-na-kamping-s-ecoflow-delta-3-classic-2.jpg"
     },
     {
       "url": "https://eu.ecoflow.com/cdn/shop/files/EU_bbeff9b3-57d3-4dd7-bdfd-991ee13a6195.png",
-      "file": "rakovodstvo-portativni-elektrocentrali-na-otkrito-3.png"
+      "file": "portativna-elektrocentrala-ecoflow-river-na-kamping.png"
     },
     {
       "url": "https://eu.ecoflow.com/cdn/shop/files/EU-M_99f468d9-c4c5-4372-b01b-fb8686766fb1.png",
-      "file": "rakovodstvo-portativni-elektrocentrali-na-otkrito-4.png"
+      "file": "portativna-elektrocentrala-ecoflow-river-na-kamping-2.png"
     }
   ],
   "_neyasni": [
