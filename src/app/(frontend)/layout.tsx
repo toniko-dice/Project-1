@@ -48,7 +48,12 @@ export const metadata: Metadata = {
 
 export default function FrontendLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="bg" className={inter.variable}>
+    /*
+      `data-scroll-behavior` — Next 16 иначе не изключва плавния скрол
+      (globals.css) при смяна на страницата и предупреждава в конзолата;
+      с него новата страница започва отгоре веднага, а котвите остават плавни.
+    */
+    <html lang="bg" className={inter.variable} data-scroll-behavior="smooth">
       <head>
         <DesignTokens />
       </head>

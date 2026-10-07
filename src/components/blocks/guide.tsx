@@ -313,7 +313,14 @@ export const RuntimeCompareBlock = ({ block, showBgn }: { block: BlockOf<'runtim
                       )}
                     </Link>
                     <h3 className="mb-3 mt-2.5 text-base font-medium leading-[1.15] text-black md:text-xl">{card.title}</h3>
-                    <p className="text-sm leading-[1.2] text-[#898989]">{specLine?.trim() || card.tagline}</p>
+                    {/*
+                      На широк екран на един ред: „2048Wh | 3000W | 3900W X-Boost"
+                      е 237 px при 14 px, а клетката — 223 px; 13 px дава 220.
+                      Под 1280 px колоните са по-тесни и редът се пренася.
+                    */}
+                    <p className="text-sm leading-[1.2] text-[#898989] xl:whitespace-nowrap xl:text-[13px]">
+                      {specLine?.trim() || card.tagline}
+                    </p>
                     {/* Цената и бутоните — в дъното, на една линия във всички колони. */}
                     <div className="mt-auto" />
                     {card.price !== null ? (
