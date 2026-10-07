@@ -11,6 +11,11 @@ const nextConfig: NextConfig = {
     изключено тук.
   */
   skipTrailingSlashRedirect: true,
+  /*
+    `svg-captcha` чете шрифта си по път до файла в собствената си папка
+    (`__dirname`) — пакетиран от Turbopack, пътят не съществува.
+  */
+  serverExternalPackages: ['svg-captcha'],
   images: {
     formats: ['image/avif', 'image/webp'],
 
@@ -45,7 +50,7 @@ const провериАдреса = () => {
   if (!isLocalSiteUrl(url) || process.env.ALLOW_LOCAL_SITE_URL === '1') return
   throw new Error(
     `NEXT_PUBLIC_SITE_URL е ${url ? `„${url}"` : 'празен'} — за продукция трябва истинският адрес ` +
-      '(напр. https://ecoflow.bg). Задайте го в .env. За проверка на локалната машина: npm run build:local.',
+      '(напр. https://bg-ecoflow.com). Задайте го в .env. За проверка на локалната машина: npm run build:local.',
   )
 }
 

@@ -1,12 +1,21 @@
 import {
   ArrowCounterClockwise,
+  Bank,
+  Buildings,
   Certificate,
+  CursorClick,
   CreditCard,
+  EnvelopeSimple,
   Globe,
+  GraduationCap,
   Headset,
   Lightning,
+  ListChecks,
+  PaperPlaneTilt,
   ShieldCheck,
+  Tag,
   Truck,
+  Wrench,
 } from '@phosphor-icons/react/dist/ssr'
 
 /**
@@ -22,6 +31,15 @@ const MAP = {
   truck: Truck,
   bolt: Lightning,
   certificate: Certificate,
+  tag: Tag,
+  checklist: ListChecks,
+  cursor: CursorClick,
+  send: PaperPlaneTilt,
+  envelope: EnvelopeSimple,
+  buildings: Buildings,
+  bank: Bank,
+  school: GraduationCap,
+  wrench: Wrench,
 } as const
 
 export type IconName = keyof typeof MAP

@@ -20,7 +20,12 @@ export const BenefitsGridBlock = ({ block }: { block: BlockOf<'benefitsGrid'> })
         <h2 className="mb-6 text-xl font-medium tracking-tight sm:text-2xl lg:text-[28px]">{block.sectionTitle}</h2>
       ) : null}
 
-      <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
+      {/* Колоните следват броя: 3 плочки са три колони, не три от пет с празно място. */}
+      <ul
+        className={`grid gap-6 sm:grid-cols-2 ${
+          items.length === 3 ? 'lg:grid-cols-3' : items.length === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-4 xl:grid-cols-5'
+        }`}
+      >
         {items.map((item, i) => (
           <li key={i} className="flex flex-col gap-2 border-l border-line pl-4">
             <Icon name={item.icon ?? 'shield'} size={28} className="text-brand" />

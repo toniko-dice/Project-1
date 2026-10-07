@@ -12,7 +12,8 @@
  * - `_svali_snimki` — `[{url, file}]`, както при продуктите.
  *
  * Връзките са по slug: `product` (и `products[].product` в таблицата с
- * времената) — продукт; `fromCategory` — категория. Ненамереният се
+ * времената) — продукт; `fromCategory` и `tabs[].category` („Форма за
+ * оферта") — категория. Ненамереният се
  * изписва; колоната на таблицата без продукт отпада заедно със
  * стойностите си, за да не се разместят останалите.
  *
@@ -303,6 +304,16 @@ for (const [i, суров] of content.sekcii!.entries()) {
   }
 
   if (typeof b.product === 'string') b.product = await productIdFor(b.product)
+
+  // „Форма за оферта": табовете — надпис + категория по slug.
+  if (вид === 'quoteForm') {
+    b.tabs = await Promise.all(
+      ((b.tabs as Обект[]) ?? []).map(async (t) => ({
+        label: t.label,
+        category: typeof t.category === 'string' ? await categoryIdFor(t.category) : null,
+      })),
+    )
+  }
 
   if (typeof b.fromCategory === 'string') {
     b.fromCategory = await categoryIdFor(b.fromCategory)

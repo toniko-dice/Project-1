@@ -2,6 +2,7 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 
 import { sqliteAdapter } from '@payloadcms/db-sqlite'
+import { nodemailerAdapter } from '@payloadcms/email-nodemailer'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { bg } from '@payloadcms/translations/languages/bg'
 import { en } from '@payloadcms/translations/languages/en'
@@ -16,6 +17,8 @@ import { Media } from './collections/Media'
 import { MenuPanels } from './collections/MenuPanels'
 import { Pages } from './collections/Pages'
 import { Products } from './collections/Products'
+import { QuoteFiles } from './collections/QuoteFiles'
+import { QuoteRequests } from './collections/QuoteRequests'
 import { Redirects } from './collections/Redirects'
 import { Subscribers } from './collections/Subscribers'
 import { Testimonials } from './collections/Testimonials'
@@ -46,6 +49,31 @@ const dirname = path.dirname(filename)
 const sharpForUploads = ((input?: Parameters<typeof sharp>[0], options?: SharpOptions) =>
   sharp(input, { limitInputPixels: 1_000_000_000, ...options })) as typeof sharp
 
+/**
+ * Пощата — SMTP през nodemailer, ако `SMTP_HOST` е зададен (виж
+ * `.env.example` и README „Имейли"). Без него Payload пише имейлите в
+ * конзолата и нищо не изпраща. `skipVerify`: скриптовете (`payload run`) и
+ * билдът не бива да чакат или падат, ако пощенският сървър не отговаря.
+ */
+function mailAdapter() {
+  if (!process.env.SMTP_HOST) return undefined
+  const from = process.env.MAIL_FROM || 'EcoFlow България <noreply@bg-ecoflow.com>'
+  const m = /^(.*)<([^>]+)>\s*$/.exec(from)
+  return nodemailerAdapter({
+    defaultFromName: (m?.[1] ?? 'EcoFlow България').trim().replace(/^"|"$/g, ''),
+    defaultFromAddress: (m?.[2] ?? from).trim(),
+    skipVerify: true,
+    transportOptions: {
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT || 587),
+      secure: process.env.SMTP_SECURE === 'true',
+      ...(process.env.SMTP_USER
+        ? { auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS ?? '' } }
+        : {}),
+    },
+  })
+}
+
 export default buildConfig({
   admin: {
     user: Users.slug,
@@ -53,8 +81,12 @@ export default buildConfig({
     meta: {
       titleSuffix: '— EcoFlow България',
     },
+    // Кръгчето с броя на заявките „Нова" до „Нови заявки" в менюто.
+    components: { afterNavLinks: ['@/components/admin/QuoteNavBadge#QuoteNavBadge'] },
   },
   collections: [
+    QuoteRequests,
+    QuoteFiles,
     Pages,
     Products,
     Categories,
@@ -77,6 +109,7 @@ export default buildConfig({
     shouldAutoRun: () => true,
     deleteJobOnComplete: true,
   },
+  email: mailAdapter(),
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: { outputFile: path.resolve(dirname, 'payload-types.ts') },

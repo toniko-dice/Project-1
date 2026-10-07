@@ -10,6 +10,7 @@ import {
   WideBannerBlock,
 } from './blocks/banners'
 import { BenefitsGridBlock, LogoWallBlock, TestimonialsBlockRenderer } from './blocks/content'
+import { PageIntroBlock, QuoteFormBlock } from './blocks/quote'
 import {
   AccordionImageBlock,
   ContentSliderBlock,
@@ -151,6 +152,10 @@ const рендер = (
       return <GuideFaqBlock key={key} block={block} index={index} />
     case 'legalText':
       return <GuideLegalTextBlock key={key} block={block} />
+    case 'pageIntro':
+      return <PageIntroBlock key={key} block={block} />
+    case 'quoteForm':
+      return <QuoteFormBlock key={key} block={block} />
     default:
       return null
   }

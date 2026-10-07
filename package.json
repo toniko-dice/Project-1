@@ -33,10 +33,12 @@
     "snimki:zameni": "payload run src/snimki-zameni.ts --",
     "snimki:imena": "payload run src/snimki-imena.ts --",
     "snimki:proverka": "node scripts/snimki-proverka.mjs",
+    "mail:catcher": "node scripts/mail-catcher.mjs",
     "health": "payload run src/health-check.ts"
   },
   "dependencies": {
     "@payloadcms/db-sqlite": "^3.88.0",
+    "@payloadcms/email-nodemailer": "^3.88.0",
     "@payloadcms/next": "^3.88.0",
     "@payloadcms/richtext-lexical": "^3.88.0",
     "@payloadcms/ui": "^3.88.0",
@@ -49,7 +51,8 @@
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "sass": "^1.103.0",
-    "sharp": "^0.35.3"
+    "sharp": "^0.35.3",
+    "svg-captcha": "^1.4.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

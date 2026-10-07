@@ -43,6 +43,10 @@ next-env.d.ts
 
 # Payload
 /media
+# Прикачените файлове към заявките за оферта — лични данни, извън git (както media)
+/quote-files
+# Писмата, уловени от scripts/mail-catcher.mjs
+/tmp-mail
 *.db
 *.db-journal
 

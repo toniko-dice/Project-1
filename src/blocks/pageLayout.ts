@@ -12,6 +12,8 @@ import {
   SplitBanner,
 } from './guide'
 import { hiddenField } from './shared'
+import { PageIntro } from './PageIntro'
+import { QuoteForm } from './QuoteForm'
 import {
   BannerCarousel,
   BannerProductRow,
@@ -79,6 +81,8 @@ export const pageBlocks: Block[] = [
   ImageWithText,
   GuideFaq,
   GuideLegalText,
+  PageIntro,
+  QuoteForm,
 ].map(withHidden)
 
 /** Полето „Секции на страницата" — еднакво навсякъде, където се ползва. */
