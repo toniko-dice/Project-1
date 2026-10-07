@@ -278,7 +278,7 @@ export interface Offer {
         image?: (number | null) | Media;
         quantity?: number | null;
         /**
-         * Празно — цената от сайта ÷ 1,20.
+         * Празно — цената от сайта (с ДДС).
          */
         unitPrice?: number | null;
         discount?: number | null;
@@ -307,9 +307,9 @@ export interface Offer {
   sentTo?: string | null;
   sendLog?: string | null;
   totals?: {
+    total?: number | null;
     subtotal?: number | null;
     vat?: number | null;
-    total?: number | null;
   };
   /**
    * Не излизат в PDF-а и в имейла.
@@ -3138,9 +3138,9 @@ export interface OffersSelect<T extends boolean = true> {
   totals?:
     | T
     | {
+        total?: T;
         subtotal?: T;
         vat?: T;
-        total?: T;
       };
   internalNotes?: T;
   updatedAt?: T;
