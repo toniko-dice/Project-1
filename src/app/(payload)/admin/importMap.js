@@ -7,7 +7,6 @@ import { OfferStatusCell as OfferStatusCell_9823563d31c638539afc242672ac175b } f
 import { OfferTotals as OfferTotals_fcf641b6175e776be14af5ff5d1f19fd } from '@/components/admin/OfferTotals'
 import { Note as Note_b1f9a6b9bae36f5ee25cc75b578bb654 } from '@/components/admin/Note'
 import { BlockLabel as BlockLabel_65d5559e4024d0730eedfbb5dfb037d8 } from '@/components/admin/BlockLabel'
-import { CharCounter as CharCounter_df79ae1a509e474e617a96ef4417adcd } from '@/components/admin/CharCounter'
 import { RscEntryLexicalCell as RscEntryLexicalCell_44fe37237e0ebf4470c9990d8cb7b07e } from '@payloadcms/richtext-lexical/rsc'
 import { RscEntryLexicalField as RscEntryLexicalField_44fe37237e0ebf4470c9990d8cb7b07e } from '@payloadcms/richtext-lexical/rsc'
 import { LexicalDiffComponent as LexicalDiffComponent_44fe37237e0ebf4470c9990d8cb7b07e } from '@payloadcms/richtext-lexical/rsc'
@@ -31,6 +30,7 @@ import { StrikethroughFeatureClient as StrikethroughFeatureClient_e70f5e05f09f93
 import { UnderlineFeatureClient as UnderlineFeatureClient_e70f5e05f09f93e00b997edb1ef0c864 } from '@payloadcms/richtext-lexical/client'
 import { BoldFeatureClient as BoldFeatureClient_e70f5e05f09f93e00b997edb1ef0c864 } from '@payloadcms/richtext-lexical/client'
 import { ItalicFeatureClient as ItalicFeatureClient_e70f5e05f09f93e00b997edb1ef0c864 } from '@payloadcms/richtext-lexical/client'
+import { CharCounter as CharCounter_df79ae1a509e474e617a96ef4417adcd } from '@/components/admin/CharCounter'
 import { CardProductSync as CardProductSync_2c34e42dc48f416e3c9f939f31801f86 } from '@/components/admin/CardProductSync'
 import { ExportSubscribersButton as ExportSubscribersButton_632306c2f6e18467206191256b3c5c1e } from '@/components/admin/ExportSubscribersButton'
 import { RestoreBackupButton as RestoreBackupButton_0345d6ca4f322b3259326bda5a60e48f } from '@/components/admin/RestoreBackupButton'
@@ -49,7 +49,6 @@ export const importMap = {
   "@/components/admin/OfferTotals#OfferTotals": OfferTotals_fcf641b6175e776be14af5ff5d1f19fd,
   "@/components/admin/Note#Note": Note_b1f9a6b9bae36f5ee25cc75b578bb654,
   "@/components/admin/BlockLabel#BlockLabel": BlockLabel_65d5559e4024d0730eedfbb5dfb037d8,
-  "@/components/admin/CharCounter#CharCounter": CharCounter_df79ae1a509e474e617a96ef4417adcd,
   "@payloadcms/richtext-lexical/rsc#RscEntryLexicalCell": RscEntryLexicalCell_44fe37237e0ebf4470c9990d8cb7b07e,
   "@payloadcms/richtext-lexical/rsc#RscEntryLexicalField": RscEntryLexicalField_44fe37237e0ebf4470c9990d8cb7b07e,
   "@payloadcms/richtext-lexical/rsc#LexicalDiffComponent": LexicalDiffComponent_44fe37237e0ebf4470c9990d8cb7b07e,
@@ -73,6 +72,7 @@ export const importMap = {
   "@payloadcms/richtext-lexical/client#UnderlineFeatureClient": UnderlineFeatureClient_e70f5e05f09f93e00b997edb1ef0c864,
   "@payloadcms/richtext-lexical/client#BoldFeatureClient": BoldFeatureClient_e70f5e05f09f93e00b997edb1ef0c864,
   "@payloadcms/richtext-lexical/client#ItalicFeatureClient": ItalicFeatureClient_e70f5e05f09f93e00b997edb1ef0c864,
+  "@/components/admin/CharCounter#CharCounter": CharCounter_df79ae1a509e474e617a96ef4417adcd,
   "@/components/admin/CardProductSync#CardProductSync": CardProductSync_2c34e42dc48f416e3c9f939f31801f86,
   "@/components/admin/ExportSubscribersButton#ExportSubscribersButton": ExportSubscribersButton_632306c2f6e18467206191256b3c5c1e,
   "@/components/admin/RestoreBackupButton#RestoreBackupButton": RestoreBackupButton_0345d6ca4f322b3259326bda5a60e48f,

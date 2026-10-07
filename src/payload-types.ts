@@ -1599,6 +1599,67 @@ export interface Category {
             blockName?: string | null;
             blockType: 'quoteForm';
           }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            heading?: string | null;
+            content?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'richText';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            heading?: string | null;
+            columns?:
+              | {
+                  label?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            rows?:
+              | {
+                  cells?:
+                    | {
+                        value?: string | null;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            note?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'simpleTable';
+          }
       )[]
     | null;
   accessoriesPage?: {
@@ -2419,6 +2480,67 @@ export interface Page {
             id?: string | null;
             blockName?: string | null;
             blockType: 'quoteForm';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            heading?: string | null;
+            content?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'richText';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            heading?: string | null;
+            columns?:
+              | {
+                  label?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            rows?:
+              | {
+                  cells?:
+                    | {
+                        value?: string | null;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            note?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'simpleTable';
           }
       )[]
     | null;
@@ -3445,6 +3567,43 @@ export interface PagesSelect<T extends boolean = true> {
               id?: T;
               blockName?: T;
             };
+        richText?:
+          | T
+          | {
+              hidden?: T;
+              anchorLabel?: T;
+              heading?: T;
+              content?: T;
+              id?: T;
+              blockName?: T;
+            };
+        simpleTable?:
+          | T
+          | {
+              hidden?: T;
+              anchorLabel?: T;
+              heading?: T;
+              columns?:
+                | T
+                | {
+                    label?: T;
+                    id?: T;
+                  };
+              rows?:
+                | T
+                | {
+                    cells?:
+                      | T
+                      | {
+                          value?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              note?: T;
+              id?: T;
+              blockName?: T;
+            };
       };
   metaTitle?: T;
   metaDescription?: T;
@@ -4158,6 +4317,43 @@ export interface CategoriesSelect<T extends boolean = true> {
               successText?: T;
               successCopy?: T;
               successButton?: T;
+              id?: T;
+              blockName?: T;
+            };
+        richText?:
+          | T
+          | {
+              hidden?: T;
+              anchorLabel?: T;
+              heading?: T;
+              content?: T;
+              id?: T;
+              blockName?: T;
+            };
+        simpleTable?:
+          | T
+          | {
+              hidden?: T;
+              anchorLabel?: T;
+              heading?: T;
+              columns?:
+                | T
+                | {
+                    label?: T;
+                    id?: T;
+                  };
+              rows?:
+                | T
+                | {
+                    cells?:
+                      | T
+                      | {
+                          value?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              note?: T;
               id?: T;
               blockName?: T;
             };
