@@ -91,7 +91,7 @@ export const OfferActions = () => {
         setError(j.error ?? 'Изпращането не мина.')
         return
       }
-      if (j.requestId) reportUpdate({ entitySlug: 'quote-requests', id: j.requestId, updatedAt: j.sentAt ?? new Date().toISOString() })
+      if (j.requestId) reportUpdate({ entitySlug: 'quote-requests', id: j.requestId, operation: 'update', updatedAt: j.sentAt ?? new Date().toISOString() })
       setPreview(null)
       // Статусът и „Изпратена на" са сменени на сървъра — формата се зарежда наново.
       window.location.reload()
