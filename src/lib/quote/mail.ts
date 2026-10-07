@@ -16,6 +16,7 @@
  */
 import type { Payload } from 'payload'
 
+import { mediaUrl } from '../media'
 import { absoluteUrl, SITE_URL } from '../site-url'
 import {
   CLIENT_TYPES,
@@ -72,10 +73,10 @@ export const siteHost = (): string => {
   }
 }
 
-const esc = (s: string) =>
+export const esc = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 
-const nl2br = (s: string) => esc(s).replace(/\r?\n/g, '<br>')
+export const nl2br = (s: string) => esc(s).replace(/\r?\n/g, '<br>')
 
 const FONT = "Inter, 'Segoe UI', Arial, Helvetica, sans-serif"
 const INK = '#1a1a1a'
@@ -84,14 +85,14 @@ const LINE = '#e3e3e3'
 
 /* ─────────── части на шаблона ─────────── */
 
-const button = (label: string, href: string) => `
+export const button = (label: string, href: string) => `
 <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:8px 0 4px">
   <tr><td bgcolor="#262626" style="border-radius:8px">
     <a href="${esc(href)}" target="_blank" style="display:inline-block;padding:12px 24px;font-family:${FONT};font-size:15px;font-weight:600;color:#ffffff;text-decoration:none;border-radius:8px">${esc(label)}</a>
   </td></tr>
 </table>`
 
-const heading = (text: string) =>
+export const heading = (text: string) =>
   `<h2 style="margin:28px 0 10px;font-family:${FONT};font-size:17px;line-height:1.3;font-weight:700;color:#000000">${esc(text)}</h2>`
 
 /** Ред „етикет — стойност"; празната стойност не дава ред. */
@@ -136,7 +137,8 @@ ${items
 </table>`
 }
 
-const layout = (c: MailContacts, preheader: string, body: string) => {
+/** Общият шаблон — и за офертите (`src/lib/offers/mail.ts`). */
+export const layout = (c: MailContacts, preheader: string, body: string) => {
   const host = siteHost()
   return `<!doctype html>
 <html lang="bg">
@@ -227,7 +229,7 @@ const textItems = (items: MailItem[]) =>
     ? `ПРОДУКТИ\n${items.map((i) => `- ${i.title} — ${i.quantity} бр.\n  ${i.url}`).join('\n')}\nОбщо: ${items.length} продукта, ${items.reduce((s, i) => s + i.quantity, 0)} бр.\n`
     : 'ПРОДУКТИ\nНяма избрани продукти от списъка.\n'
 
-const textFooter = (c: MailContacts) =>
+export const textFooter = (c: MailContacts) =>
   [
     '—',
     c.companyName || 'EcoFlow България',
@@ -333,6 +335,22 @@ ${button('Към сайта', SITE_URL)}`,
     .join('\n')
 
   return { subject, html, text }
+}
+
+/** Контактите за имейлите — „Общи настройки" (както във футъра) и логото от „Меню (хедър)". */
+export const loadMailContacts = async (payload: Payload): Promise<MailContacts> => {
+  const [settings, header] = await Promise.all([
+    payload.findGlobal({ slug: 'site-settings', depth: 0 }),
+    payload.findGlobal({ slug: 'header', depth: 1 }),
+  ])
+  const logo = mediaUrl((header as { logo?: unknown }).logo as never)
+  return {
+    logoUrl: logo ? absoluteUrl(logo) : null,
+    companyName: settings.companyName ?? '',
+    address: settings.address ?? '',
+    phone: settings.phone ?? '',
+    email: settings.email ?? '',
+  }
 }
 
 /** Изпраща двата имейла; връща ред за дневника на заявката. Грешка не спира заявката. */

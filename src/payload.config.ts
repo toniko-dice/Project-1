@@ -15,6 +15,7 @@ import { Backups } from './collections/Backups'
 import { Categories } from './collections/Categories'
 import { Media } from './collections/Media'
 import { MenuPanels } from './collections/MenuPanels'
+import { Offers } from './collections/Offers'
 import { Pages } from './collections/Pages'
 import { Products } from './collections/Products'
 import { QuoteFiles } from './collections/QuoteFiles'
@@ -27,6 +28,7 @@ import { dailyBackupTask } from './jobs/backupTask'
 import { Design } from './globals/Design'
 import { FilterOrder } from './globals/FilterOrder'
 import { Footer } from './globals/Footer'
+import { OfferSettings } from './globals/OfferSettings'
 import { Header } from './globals/Header'
 import { SiteSettings } from './globals/SiteSettings'
 
@@ -86,6 +88,7 @@ export default buildConfig({
   },
   collections: [
     QuoteRequests,
+    Offers,
     QuoteFiles,
     Pages,
     Products,
@@ -100,7 +103,7 @@ export default buildConfig({
     Users,
     Redirects,
   ],
-  globals: [Header, Footer, Design, SiteSettings, FilterOrder],
+  globals: [Header, Footer, Design, SiteSettings, FilterOrder, OfferSettings],
   // Архивирането по график минава през опашката за задачи на Payload.
   // Работи само докато сървърът върви — при спряна машина архив не се прави.
   jobs: {

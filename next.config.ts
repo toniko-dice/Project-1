@@ -15,7 +15,7 @@ const nextConfig: NextConfig = {
     `svg-captcha` чете шрифта си по път до файла в собствената си папка
     (`__dirname`) — пакетиран от Turbopack, пътят не съществува.
   */
-  serverExternalPackages: ['svg-captcha'],
+  serverExternalPackages: ['svg-captcha', '@react-pdf/renderer'],
   images: {
     formats: ['image/avif', 'image/webp'],
 

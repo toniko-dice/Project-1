@@ -43,6 +43,7 @@
     "@payloadcms/richtext-lexical": "^3.88.0",
     "@payloadcms/ui": "^3.88.0",
     "@phosphor-icons/react": "^2.1.10",
+    "@react-pdf/renderer": "^4.3.0",
     "archiver": "^7.0.1",
     "extract-zip": "^2.0.1",
     "graphql": "^16.14.2",

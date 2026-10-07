@@ -1,7 +1,7 @@
-import { getGlobal, getPayloadClient, getProductsByIds } from '@/lib/payload'
+import { getPayloadClient, getProductsByIds } from '@/lib/payload'
 import { mediaUrl, productCardData } from '@/lib/media'
 import { checkCaptcha } from '@/lib/quote/captcha'
-import { sendQuoteMails, type MailRequest } from '@/lib/quote/mail'
+import { loadMailContacts, sendQuoteMails, type MailRequest } from '@/lib/quote/mail'
 import { fileError, validateQuote, type QuotePayload } from '@/lib/quote/options'
 import { absoluteUrl } from '@/lib/site-url'
 
@@ -166,7 +166,25 @@ export const POST = async (request: Request): Promise<Response> => {
     }
   }
 
-  /* ─────────── продуктите към момента на заявката ─────────── */
+  /*
+    ─────────── продуктите към момента на заявката ───────────
+    Името, адресът, SKU, EAN и снимката се записват към реда — заявката пази
+    какво е поискал клиентът, дори продуктът после да се промени или скрие.
+  */
+  const codes = new Map(
+    (ids.length
+      ? (
+          await payload.find({
+            collection: 'products',
+            where: { id: { in: ids } },
+            depth: 0,
+            pagination: false,
+            select: { sku: true, ean: true },
+          })
+        ).docs
+      : []
+    ).map((p) => [p.id, p as { sku?: string | null; ean?: string | null }]),
+  )
   const mailItems = items.map((i) => {
     const p = products[i.product]!
     const card = productCardData(p)
@@ -176,6 +194,9 @@ export const POST = async (request: Request): Promise<Response> => {
       title: card.title,
       url: absoluteUrl(card.url ?? '/'),
       image: image ? absoluteUrl(image) : null,
+      imageId: typeof p.image === 'object' ? (p.image?.id ?? null) : (p.image ?? null),
+      sku: codes.get(p.id)?.sku ?? null,
+      ean: codes.get(p.id)?.ean ?? null,
       quantity: i.quantity,
     }
   })
@@ -210,7 +231,15 @@ export const POST = async (request: Request): Promise<Response> => {
           position: data.position,
           email: data.email,
           phone: data.phone,
-          items: mailItems.map(({ product, title, url, quantity }) => ({ product, title, url, quantity })),
+          items: mailItems.map(({ product, title, url, quantity, sku, ean, imageId }) => ({
+            product,
+            title,
+            url,
+            quantity,
+            sku,
+            ean,
+            image: imageId,
+          })),
           itemsSummary: `${items.length} / ${totalQty}`,
           otherProducts: data.otherProducts,
           purposes: data.purposes as never,
@@ -237,8 +266,6 @@ export const POST = async (request: Request): Promise<Response> => {
   recentFrom(ip).push(Date.now())
 
   /* ─────────── имейлите ─────────── */
-  const [settings, header] = await Promise.all([getGlobal('site-settings'), getGlobal('header')])
-  const logo = mediaUrl((header as { logo?: unknown }).logo as never)
   const mailLog = await sendQuoteMails(
     payload,
     {
@@ -248,13 +275,7 @@ export const POST = async (request: Request): Promise<Response> => {
       items: mailItems,
       attachment,
     },
-    {
-      logoUrl: logo ? absoluteUrl(logo) : null,
-      companyName: settings.companyName ?? '',
-      address: settings.address ?? '',
-      phone: settings.phone ?? '',
-      email: settings.email ?? '',
-    },
+    await loadMailContacts(payload),
   )
   await payload.update({ collection: 'quote-requests', id: created.id, data: { mailLog }, depth: 0 })
 

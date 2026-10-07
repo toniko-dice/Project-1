@@ -7,5 +7,7 @@ export const Users: CollectionConfig = {
   auth: true,
   fields: [
     { name: 'name', type: 'text', label: 'Име' },
+    // „Изготвил: {име}, {длъжност}" в офертите — по подразбиране от потребителя, който ги създава.
+    { name: 'position', type: 'text', label: 'Длъжност' },
   ],
 }

@@ -17,12 +17,25 @@ import {
 /** Само за четене: номерът, IP, браузърът и това, което се пресмята. Всичко друго се редактира. */
 const ro = <T extends Field>(f: T): T => ({ ...f, admin: { ...(f.admin ?? {}), readOnly: true } }) as T
 
-type Item = { product?: number | { id: number } | null; quantity?: number | null; title?: string | null; url?: string | null }
+type Item = {
+  id?: string | null
+  product?: number | { id: number } | null
+  quantity?: number | null
+  title?: string | null
+  url?: string | null
+  sku?: string | null
+  ean?: string | null
+  image?: number | { id: number } | null
+}
+
+const productId = (p: Item['product']) => (typeof p === 'object' ? p?.id : p) ?? null
 
 /**
  * При редакция от админа:
- * - името и адресът на всеки продукт се взимат наново (сменен или добавен
- *   продукт), количеството — между 1 и 9999, редът без продукт отпада;
+ * - редът пази СНИМКАТА НА ДАННИТЕ от заявката — име, адрес, SKU, EAN,
+ *   снимка — каквото е поискал клиентът, дори продуктът после да се
+ *   промени или скрие. Наново се взимат само за добавен ред или за ред със
+ *   сменен продукт; количеството — между 1 и 9999; ред без продукт отпада;
  * - „Продукти / бройки" се пресмята;
  * - „Последна промяна от {потребител} на {дата}" — само при запис от
  *   влязъл потребител (записът от формата е без потребител).
@@ -30,12 +43,15 @@ type Item = { product?: number | { id: number } | null; quantity?: number | null
  * Имейли НЕ се пращат: пращат се само от `POST /api/oferta`, при
  * създаването — тук няма нищо, което да ги вика.
  */
-const onEdit: CollectionBeforeChangeHook = async ({ data, req, operation }) => {
+const onEdit: CollectionBeforeChangeHook = async ({ data, req, operation, originalDoc }) => {
   if (operation !== 'update') return data
 
   if (Array.isArray(data.items)) {
     const items = (data.items as Item[]).filter((i) => i.product)
-    const ids = items.map((i) => (typeof i.product === 'object' ? i.product!.id : i.product!))
+    // Предишният продукт на всеки ред (по id на реда) — непроменен ред пази снимката си.
+    const before = new Map(((originalDoc?.items ?? []) as Item[]).map((i) => [i.id, productId(i.product)]))
+    const нови = items.filter((i) => !i.id || before.get(i.id) !== productId(i.product))
+    const ids = нови.map((i) => productId(i.product)!)
     const found = ids.length
       ? await req.payload.find({
           collection: 'products',
@@ -46,6 +62,9 @@ const onEdit: CollectionBeforeChangeHook = async ({ data, req, operation }) => {
           select: {
             title: true,
             slug: true,
+            sku: true,
+            ean: true,
+            image: true,
             category: true,
             categorySlug: true,
             categoryParentSlug: true,
@@ -55,14 +74,18 @@ const onEdit: CollectionBeforeChangeHook = async ({ data, req, operation }) => {
         })
       : { docs: [] }
     const byId = new Map(found.docs.map((p) => [p.id, p]))
-    data.items = items.map((i, n) => {
-      const p = byId.get(ids[n]!)
-      const q = Math.round(Number(i.quantity) || 1)
+    data.items = items.map((i) => {
+      const q = Math.min(Math.max(Math.round(Number(i.quantity) || 1), 1), MAX_QTY)
+      const p = нови.includes(i) ? byId.get(productId(i.product)!) : undefined
+      if (!p) return { ...i, quantity: q }
       return {
         ...i,
-        quantity: Math.min(Math.max(q, 1), MAX_QTY),
-        title: p?.title ?? i.title,
-        url: p ? absoluteUrl(productPath(p as never)) : i.url,
+        quantity: q,
+        title: p.title,
+        url: absoluteUrl(productPath(p as never)),
+        sku: p.sku ?? null,
+        ean: p.ean ?? null,
+        image: (p.image as number | null | undefined) ?? null,
       }
     })
     const total = (data.items as Item[]).reduce((s, i) => s + Number(i.quantity), 0)
@@ -152,6 +175,19 @@ export const QuoteRequests: CollectionConfig = {
       },
     } as Field),
     {
+      name: 'createOffer',
+      type: 'ui',
+      admin: { position: 'sidebar', components: { Field: '@/components/admin/CreateOfferButton#CreateOfferButton' } },
+    },
+    {
+      name: 'offers',
+      type: 'join',
+      collection: 'offers',
+      on: 'quoteRequest',
+      label: 'Оферти',
+      admin: { position: 'sidebar', defaultColumns: ['number', 'status', 'date'] },
+    },
+    {
       type: 'tabs',
       tabs: [
         {
@@ -197,7 +233,15 @@ export const QuoteRequests: CollectionConfig = {
                     { name: 'quantity', type: 'number', label: 'Количество', min: 1, max: MAX_QTY, admin: { width: '30%', step: 1 } },
                   ],
                 },
-                ro({ name: 'title', type: 'text', label: 'Име (попълва се от продукта при запис)' } as Field),
+                ro({ name: 'title', type: 'text', label: 'Име (към момента на заявката)' } as Field),
+                {
+                  type: 'row',
+                  fields: [
+                    ro({ name: 'sku', type: 'text', label: 'SKU', admin: { width: '33%' } } as Field),
+                    ro({ name: 'ean', type: 'text', label: 'EAN', admin: { width: '33%' } } as Field),
+                    ro({ name: 'image', type: 'upload', relationTo: 'media', label: 'Снимка', admin: { width: '34%' } } as Field),
+                  ],
+                },
                 ro({ name: 'url', type: 'text', label: 'Адрес на продукта' } as Field),
               ],
             },
