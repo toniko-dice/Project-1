@@ -1,4 +1,3 @@
-import fs from 'fs/promises'
 import path from 'path'
 import type {
   CollectionAfterChangeHook,
@@ -7,7 +6,7 @@ import type {
   CollectionConfig,
 } from 'payload'
 import { revalidateAll, revalidateAllOnDelete } from '../lib/revalidate'
-import { makeTrimmed, NO_TRIMMED } from '../lib/trim-image'
+import { makeTrimmed, NO_TRIMMED, removeTrimmedFile } from '../lib/trim-image'
 
 const MEDIA_DIR = path.resolve(process.cwd(), 'media')
 
@@ -35,8 +34,7 @@ const fillTrimmed: CollectionBeforeChangeHook = async ({ data, req }) => {
   return data
 }
 
-const removeFile = (name: string | null | undefined) =>
-  name ? fs.rm(path.join(MEDIA_DIR, name), { force: true }) : undefined
+const removeFile = (name: string | null | undefined) => removeTrimmedFile(MEDIA_DIR, name)
 
 /** Новият файл е с нов вариант — старият се трие, щом записът е минал. */
 const dropOldTrimmed: CollectionAfterChangeHook = async ({ doc, previousDoc }) => {

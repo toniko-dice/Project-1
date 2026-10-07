@@ -96,5 +96,14 @@ export const makeTrimmed = async (
   return { filename, width: out.width, height: out.height }
 }
 
+/**
+ * Трие файла на вариант. Папката идва като параметър нарочно: с
+ * `path.join(<константа>, name)` в `Media.ts` Turbopack приема, че кодът
+ * чете цялата `media/` (16 806 файла), и го пише като предупреждение при билд.
+ */
+export const removeTrimmedFile = async (dir: string, name: string | null | undefined) => {
+  if (name) await fs.rm(path.join(dir, name), { force: true })
+}
+
 /** Празното поле — за запис, когато вариант няма (иначе `update` би оставил стария). */
 export const NO_TRIMMED = { filename: null, width: null, height: null } as const
