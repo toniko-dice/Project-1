@@ -34,7 +34,7 @@ const clientIp = (h: Headers): string =>
 
 const recentFrom = (ip: string) => {
   const now = Date.now()
-  const list = (hits.get(ip) ?? []).filter((t) => now - t < WINDOW_MS)
+  const list = (hits.get(ip) ?? []).filter((t: number) => now - t < WINDOW_MS)
   hits.set(ip, list)
   return list
 }
