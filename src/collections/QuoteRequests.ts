@@ -102,7 +102,16 @@ export const QuoteRequests: CollectionConfig = {
               name: 'items',
               type: 'array',
               label: 'Продукти и количества',
-              admin: { initCollapsed: true },
+              labels: { singular: 'Продукт', plural: 'Продукти' },
+              admin: {
+                initCollapsed: true,
+                components: {
+                  RowLabel: {
+                    path: '@/components/admin/RowLabel#RowLabel',
+                    clientProps: { field: 'title', fallback: 'Продукт' },
+                  },
+                },
+              },
               fields: [
                 { name: 'product', type: 'relationship', relationTo: 'products', label: 'Продукт' },
                 { name: 'title', type: 'text', label: 'Име (към момента на заявката)' },
