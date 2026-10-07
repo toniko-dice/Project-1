@@ -11,7 +11,7 @@ export const Backups: CollectionConfig = {
     defaultColumns: ['label', 'trigger', 'protected', 'includesMedia', 'filesize', 'createdAt'],
     group: 'Настройки',
     description:
-      'Всеки архив съдържа базата и качените снимки. Бутонът „Създай архив сега“ е над списъка. Свалете копие на компютъра си — архивите тук лежат на същия диск и не пазят от отказ на хардуера.',
+      'Пазят се последните 5 обикновени и последните 3 преди миграция. Защитените остават винаги. Бутонът „Създай архив сега“ е над списъка. Свалете копие на компютъра си — архивите тук лежат на същия диск и не пазят от отказ на хардуера.',
     components: {
       beforeListTable: ['@/components/admin/CreateBackupButton#CreateBackupButton'],
     },
@@ -49,6 +49,7 @@ export const Backups: CollectionConfig = {
             { label: 'Ръчно', value: 'ръчно' },
             { label: 'По график', value: 'по график' },
             { label: 'Качен файл', value: 'качен' },
+            { label: 'Преди миграция', value: 'преди миграция' },
           ],
         },
         {
@@ -73,7 +74,7 @@ export const Backups: CollectionConfig = {
       defaultValue: false,
       admin: {
         description:
-          'Защитените архиви не се трият от автоматичното чистене, което пази последните 10. Архивите преди миграция се отбелязват така сами.',
+          'Пазят се последните 5 обикновени и последните 3 преди миграция. Защитените остават винаги.',
       },
     },
     { name: 'note', type: 'textarea', label: 'Бележка' },

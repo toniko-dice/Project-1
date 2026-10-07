@@ -23,11 +23,12 @@ try {
   const { doc } = await createBackup(payload, {
     label: `Автоматично преди миграция ${stamp}`,
     includeMedia: false,
-    protected: true,
+    // Не „защитен": пазят се последните 3 такива (`pruneOldBackups`).
+    trigger: 'преди миграция',
   })
 
   const kb = Math.round((doc.filesize ?? 0) / 1024)
-  console.log(`✓ Архив преди миграция: ${doc.label} (${kb} KB, защитен)`)
+  console.log(`✓ Архив преди миграция: ${doc.label} (${kb} KB; пазят се последните 3)`)
   process.exit(0)
 } catch (err) {
   console.error('')

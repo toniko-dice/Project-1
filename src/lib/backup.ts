@@ -16,8 +16,14 @@ type ArchiverFactory = (
 export const createArchiver = ((archiverNS as unknown as { default?: ArchiverFactory }).default ??
   (archiverNS as unknown as ArchiverFactory)) as ArchiverFactory
 
-/** Колко архива се пазят. По-старите се трият автоматично след успешен нов архив. */
-export const KEEP_LAST = 10
+/**
+ * Колко архива се пазят — по вид, отделно. Обикновените (ръчни, по
+ * график, качени) — последните 5; „преди миграция" — последните 3.
+ * Защитените (ръчно сложена отметка) не се броят и не се трият никога.
+ */
+export const KEEP_LAST = 5
+export const KEEP_PRE_MIGRATION = 3
+export const PRE_MIGRATION = 'преди миграция'
 
 const ROOT = process.cwd()
 export const DB_FILE = path.join(ROOT, 'ecoflow.db')
@@ -187,12 +193,42 @@ export const stageRestore = async (
   )
 }
 
-/** Трие най-старите архиви, за да останат последните `KEEP_LAST`. */
+/**
+ * Еднократно (и безвредно при всяко пускане): архивите преди миграция от
+ * времето, когато се отбелязваха „защитени" сами (до 7 октомври 2026),
+ * стават обикновени „преди миграция" — иначе никога не се трият. Познават
+ * се по името, което им даваше `pre-migrate.ts`; ръчно защитените
+ * (собственикът) имат друго име и не се пипат.
+ */
+const unprotectOldPreMigration = async (payload: Payload) => {
+  const old = await payload.find({
+    collection: 'backups',
+    where: {
+      and: [
+        { label: { like: 'Автоматично преди миграция' } },
+        { or: [{ protected: { equals: true } }, { trigger: { not_equals: PRE_MIGRATION } }] },
+      ],
+    },
+    depth: 0,
+    pagination: false,
+  })
+  for (const doc of old.docs) {
+    await payload.update({ collection: 'backups', id: doc.id, depth: 0, data: { protected: false, trigger: PRE_MIGRATION } as never })
+  }
+  return old.docs.length
+}
+
+/**
+ * Трие най-старите незащитени архиви: остават последните `KEEP_LAST`
+ * обикновени и последните `KEEP_PRE_MIGRATION` „преди миграция".
+ *
+ * Трие се през `payload.delete` — така се маха и файлът от `backups/`.
+ * Запис, чийто файл вече го няма, се трие пак, с ред в лога.
+ */
 export const pruneOldBackups = async (payload: Payload): Promise<number> => {
-  /*
-    Защитените архиви изобщо не влизат в сметката. Такъв е архивът преди
-    миграция — той е точно този, който трябва да оцелее най-дълго.
-  */
+  const unprotected = await unprotectOldPreMigration(payload)
+  if (unprotected) payload.logger.info(`Архиви: ${unprotected} стари „преди миграция" вече не са защитени`)
+
   const all = await payload.find({
     collection: 'backups',
     where: { protected: { not_equals: true } },
@@ -200,10 +236,21 @@ export const pruneOldBackups = async (payload: Payload): Promise<number> => {
     depth: 0,
     pagination: false,
   })
+  const pre = all.docs.filter((d) => d.trigger === PRE_MIGRATION)
+  const other = all.docs.filter((d) => d.trigger !== PRE_MIGRATION)
+  const extra = [...other.slice(KEEP_LAST), ...pre.slice(KEEP_PRE_MIGRATION)]
 
-  const extra = all.docs.slice(KEEP_LAST)
   for (const doc of extra) {
-    await payload.delete({ collection: 'backups', id: doc.id })
+    if (doc.filename) {
+      const exists = await fs.access(path.join(STORE_DIR, doc.filename)).then(() => true, () => false)
+      if (!exists) payload.logger.warn(`Архив № ${doc.id} („${doc.label}"): файлът ${doc.filename} липсва — записът се трие`)
+    }
+    try {
+      await payload.delete({ collection: 'backups', id: doc.id })
+    } catch (e) {
+      payload.logger.warn(`Архив № ${doc.id}: ${(e as Error).message} — записът се трие без файла`)
+      await payload.db.deleteOne({ collection: 'backups', where: { id: { equals: doc.id } } })
+    }
   }
   return extra.length
 }
@@ -214,7 +261,7 @@ export const createBackup = async (
   opts: {
     includeMedia?: boolean
     label?: string
-    trigger?: 'ръчно' | 'по график'
+    trigger?: 'ръчно' | 'по график' | typeof PRE_MIGRATION
     protected?: boolean
   } = {},
 ) => {
