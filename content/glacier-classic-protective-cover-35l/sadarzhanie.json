@@ -1,0 +1,154 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:product glacier-classic-protective-cover-35l. Снимките се свалят по _svali_snimki.",
+  "_iztochnik": "dice.bg (текст, цена, наличност, код, EAN); снимките — eu.ecoflow.com/products/glacier-classic-protective-cover (вариант 35L, EAN 4895251639880 съвпада).",
+  "produkt": {
+    "title": "EcoFlow GLACIER Classic Protective Cover (35L)",
+    "slug": "glacier-classic-protective-cover-35l",
+    "categorySlug": "chanti-i-kalafi",
+    "productType": "accessory",
+    "tagline": "Защитна чанта за хладилника GLACIER Classic 35L",
+    "badge": "none",
+    "price": 109,
+    "externalUrl": "https://dice.bg/ustojchiva-chanta-za-prenasjane-na-ecoflow-glacier-classic-35l-portable-fridge-ecoflow-glacier-classic-35l-protection-bag-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "78038",
+    "ean": "4895251639880",
+    "description": "Защитна чанта за преносимия хладилник EcoFlow GLACIER Classic 35L — лека, водоустойчива и износоустойчива, с достъп до дръжката и капака и допълнителни джобове.",
+    "highlights": [
+      {
+        "text": "Водоустойчив и износоустойчив материал"
+      },
+      {
+        "text": "Достъп до дръжката и капака"
+      },
+      {
+        "text": "Допълнителни джобове"
+      },
+      {
+        "text": "За GLACIER Classic 35L"
+      }
+    ],
+    "metaTitle": "Защитна чанта EcoFlow GLACIER Classic 35L",
+    "metaDescription": "Защитна чанта за хладилника EcoFlow GLACIER Classic 35L: лека, водоустойчива и износоустойчива, с достъп до дръжката и капака и с допълнителни джобове.",
+    "compatibleWith": [
+      "glacier-classic-35l"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "glacier-classic-protective-cover-35l-1.png",
+      "alt": "EcoFlow GLACIER Classic Protective Cover (35L) — изглед отпред"
+    },
+    {
+      "file": "glacier-classic-protective-cover-35l-2.png",
+      "alt": "EcoFlow GLACIER Classic Protective Cover (35L) — изглед отстрани"
+    },
+    {
+      "file": "glacier-classic-protective-cover-35l-3.png",
+      "alt": "EcoFlow GLACIER Classic Protective Cover (35L) — изглед отгоре"
+    },
+    {
+      "file": "glacier-classic-protective-cover-35l-4.png",
+      "alt": "EcoFlow GLACIER Classic Protective Cover (35L) — изглед отзад"
+    },
+    {
+      "file": "glacier-classic-protective-cover-35l-5.png",
+      "alt": "EcoFlow GLACIER Classic Protective Cover (35L) — изглед от другата страна"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Защита за GLACIER Classic навсякъде",
+      "body": "Защитната чанта EcoFlow GLACIER Classic 35L пази хладилника от прах, мръсотия, драскотини, удари и лек дъжд, без да пречи на ползването му. Изработена е от лек, водоустойчив и износоустойчив материал. Дръжката и капакът на хладилника остават достъпни, а допълнителните джобове събират дребни вещи и аксесоари.\n\n*Хладилникът не е включен.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow GLACIER Classic Protective Cover (35L)",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "GLACIER Classic Protective Cover (35L)"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFB-GLACIERClassic-35L"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow GLACIER Classic 35L"
+        },
+        {
+          "label": "Материал",
+          "value": "лек, водоустойчив и износоустойчив"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "atributi": {
+    "vid": [
+      "Чанта"
+    ]
+  },
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-glacier-classic-protective-cover-1169747450.png",
+      "file": "glacier-classic-protective-cover-35l-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-glacier-classic-protective-cover-1169747451.png",
+      "file": "glacier-classic-protective-cover-35l-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-glacier-classic-protective-cover-1169747452.png",
+      "file": "glacier-classic-protective-cover-35l-3.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-glacier-classic-protective-cover-1169747449.png",
+      "file": "glacier-classic-protective-cover-35l-4.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-glacier-classic-protective-cover-1169747453.png",
+      "file": "glacier-classic-protective-cover-35l-5.png"
+    }
+  ],
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Страницата в eu.ecoflow.com е кратка (без секции) — съдържанието е по dice.bg, снимките са от EU (прозрачни PNG; в dice.bg са същите кадри, но на бял фон и от варианта 55L).",
+    "Името е официалното от EcoFlow („GLACIER Classic Protective Cover“), dice.bg го нарича „Protection Bag“.",
+    "В dice.bg: Налично на склад, 109,00 € (проверено 07.10.2026).",
+    "Има и варианти 45L и 55L — внасят се отделно (glacier-classic-protective-cover-45l и -55l)."
+  ]
+}
