@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
+import { notFound, permanentRedirect } from 'next/navigation'
 
 import { breadcrumbSchema } from '@/components/Breadcrumbs'
 import { RenderBlocks } from '@/components/RenderBlocks'
-import { getGlobal, getPage, getPayloadClient } from '@/lib/payload'
+import { getGlobal, getPage, getPayloadClient, getRedirectMap } from '@/lib/payload'
 import { mediaUrl } from '@/lib/media'
 import { pageListProducts } from '@/lib/page-products'
 import { absoluteUrl } from '@/lib/site-url'
@@ -50,7 +50,17 @@ export default async function DynamicPage({ params }: Args) {
   const { slug } = await params
   const [page, settings] = await Promise.all([getPage(slug), getGlobal('site-settings')])
 
-  if (!page) notFound()
+  if (!page) {
+    /*
+      Пренасочване от „Пренасочвания" за адрес с един сегмент (`/biznes` →
+      `/oferta-za-firmi`). Middleware-ът гледа само `/kategorii/…`,
+      `/products/…` и сие — за всеки друг адрес би било заявка на всяко
+      зареждане; тук се стига само когато страница няма.
+    */
+    const to = (await getRedirectMap())[`/${slug}`]
+    if (to) permanentRedirect(to)
+    notFound()
+  }
 
   const layout = page.layout ?? []
   const продукти = await pageListProducts(layout)
