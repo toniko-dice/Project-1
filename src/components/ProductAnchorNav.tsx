@@ -8,8 +8,14 @@ export type Anchor = { id: string; label: string }
  * Закачено меню по секциите на продукта.
  *
  * Точките са истински линкове към котви, не бутони с JavaScript — работят
- * при отваряне в нов таб и при изключен скрипт. Активната се следи с
- * IntersectionObserver, а не със слушане на всяко скролване.
+ * при отваряне в нов таб и при изключен скрипт.
+ *
+ * Активна е последната секция, чийто връх е минал под лентата — тоест
+ * най-горната във видимата част; в края на страницата — последната.
+ * Пресмята се при скролване (веднъж на кадър), не с IntersectionObserver:
+ * той съобщава само секциите, които току-що са влезли или излезли, и на
+ * ръководството „Въпроси" никога не светваше — активен оставаше
+ * „Продукти", а последната секция не стигаше до горната зона изобщо.
  *
  * Плавното скролване и уважението към prefers-reduced-motion идват от
  * globals.css и не се дублират тук.
@@ -30,25 +36,41 @@ export const ProductAnchorNav = ({ anchors }: { anchors: Anchor[] }) => {
 
     if (!sections.length) return
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        // От пресичащите се секции взимаме най-горната — тя е тази, която се чете.
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
+    /*
+      Линията е малко под лентата (56 px висока, котвите спират на 56 —
+      `scroll-mt-14`): секция, до която е скочил линк, вече е активна.
+    */
+    const LINE = 96
+    let frame = 0
 
-        if (visible[0]) setActive(visible[0].target.id)
-      },
-      {
-        // Горната граница е под залепените ленти, за да не се активира
-        // секция, която още е скрита зад тях.
-        rootMargin: '-160px 0px -55% 0px',
-        threshold: 0,
-      },
-    )
+    const update = () => {
+      frame = 0
+      const doc = document.documentElement
+      // В края на страницата последната секция може никога да не стигне линията.
+      if (window.innerHeight + window.scrollY >= doc.scrollHeight - 2) {
+        setActive(sections[sections.length - 1]!.id)
+        return
+      }
+      let current = sections[0]!.id
+      for (const el of sections) {
+        if (el.getBoundingClientRect().top <= LINE) current = el.id
+        else break
+      }
+      setActive(current)
+    }
 
-    sections.forEach((el) => observer.observe(el))
-    return () => observer.disconnect()
+    const onScroll = () => {
+      if (!frame) frame = requestAnimationFrame(update)
+    }
+
+    update()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize', onScroll)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onScroll)
+      if (frame) cancelAnimationFrame(frame)
+    }
   }, [anchors])
 
   if (!anchors.length) return null

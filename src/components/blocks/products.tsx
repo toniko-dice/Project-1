@@ -115,6 +115,58 @@ export const ProductCarouselBlock = async ({
   const products = await carouselProducts(block)
   if (!products.length) return null
 
+  const imageStyle = block.cardStyle === 'image'
+  /*
+    „Фон на картите": светлият е бялата карта на класическите (текст ink /
+    ink-muted — 17:1 и 5,5:1 върху бяло), бутонът е с тъмен контур и се
+    запълва при посочване; тъмният е черната карта отпреди, без промяна.
+  */
+  const dark = block.cardTheme === 'dark'
+  const card = (p: Product) => {
+    if (!imageStyle) return <ProductCard product={p} showBgn={showBgn} className="h-full" />
+    const image = productImage(p, 'trimmed')
+    return (
+      <Link
+        href={productPath(p)}
+        className={`group block h-full cursor-pointer overflow-hidden rounded-xl ${
+          dark ? 'bg-night' : 'bg-surface transition-shadow duration-200 hover:shadow-md'
+        }`}
+      >
+        <div className={`p-4 ${dark ? 'text-white' : 'text-ink'}`}>
+          <h3 className="text-sm font-medium">{p.title}</h3>
+          {p.tagline ? (
+            <p className={`mt-0.5 text-[11px] ${dark ? 'opacity-75' : 'text-ink-muted'}`}>
+              {p.tagline}
+            </p>
+          ) : null}
+          <span
+            className={`mt-3 inline-flex min-h-9 items-center gap-1 rounded-full px-3 text-xs font-medium transition-colors duration-200 ${
+              dark
+                ? 'bg-white/15 group-hover:bg-white/25'
+                : 'border border-ink group-hover:bg-ink group-hover:text-white'
+            }`}
+          >
+            Научете повече
+            <ArrowRight size={12} weight="bold" aria-hidden="true" />
+          </span>
+        </div>
+        <div className="relative aspect-[4/3] w-full">
+          {image.url ? (
+            <CardImage
+              src={image.url}
+              alt={image.alt}
+              trimmed={image.trimmed}
+              sizes="300px"
+              className="p-3"
+            />
+          ) : (
+            <ImagePlaceholder className="absolute inset-0" />
+          )}
+        </div>
+      </Link>
+    )
+  }
+
   return (
     <PageSection className={guide ? '!max-w-[1264px]' : ''}>
       {guide ? (
@@ -131,75 +183,31 @@ export const ProductCarouselBlock = async ({
       ) : null}
 
       {/*
-        Лентата е същата като при категориите и банерите — влачи се с мишка,
-        има стрелки и се управлява със стрелките на клавиатурата.
+        „Подредба": лентата е същата като при категориите и банерите —
+        влачи се с мишка, има стрелки и се управлява от клавиатурата;
+        решетката е по 4 на ред, като в категориите, и показва всичко
+        наведнъж (ръководството — 16 електроцентрали, петата в лентата
+        излизаше отрязана на края на контейнера).
       */}
-      {block.cardStyle === 'image' ? (
-        <ScrollRow
-          label={block.sectionTitle ?? 'Продукти'}
-          className="flex snap-x gap-3 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-        >
-          {products.map((p) => {
-            const image = productImage(p, 'trimmed')
-            /*
-              „Фон на картите": светлият е бялата карта на класическите
-              (текст ink / ink-muted — 17:1 и 5,5:1 върху бяло), бутонът е
-              с тъмен контур и се запълва при посочване; тъмният е черната
-              карта отпреди, без промяна.
-            */
-            const dark = block.cardTheme === 'dark'
-            return (
-              <div key={p.id} className="w-[248px] shrink-0 snap-start sm:w-[300px]">
-                <Link
-                  href={productPath(p)}
-                  className={`group block cursor-pointer overflow-hidden rounded-xl ${
-                    dark ? 'bg-night' : 'bg-surface transition-shadow duration-200 hover:shadow-md'
-                  }`}
-                >
-                  <div className={`p-4 ${dark ? 'text-white' : 'text-ink'}`}>
-                    <h3 className="text-sm font-medium">{p.title}</h3>
-                    {p.tagline ? (
-                      <p className={`mt-0.5 text-[11px] ${dark ? 'opacity-75' : 'text-ink-muted'}`}>
-                        {p.tagline}
-                      </p>
-                    ) : null}
-                    <span
-                      className={`mt-3 inline-flex min-h-9 items-center gap-1 rounded-full px-3 text-xs font-medium transition-colors duration-200 ${
-                        dark
-                          ? 'bg-white/15 group-hover:bg-white/25'
-                          : 'border border-ink group-hover:bg-ink group-hover:text-white'
-                      }`}
-                    >
-                      Научете повече
-                      <ArrowRight size={12} weight="bold" aria-hidden="true" />
-                    </span>
-                  </div>
-                  <div className="relative aspect-[4/3] w-full">
-                    {image.url ? (
-                      <CardImage
-                        src={image.url}
-                        alt={image.alt}
-                        trimmed={image.trimmed}
-                        sizes="300px"
-                        className="p-3"
-                      />
-                    ) : (
-                      <ImagePlaceholder className="absolute inset-0" />
-                    )}
-                  </div>
-                </Link>
-              </div>
-            )
-          })}
-        </ScrollRow>
+      {block.arrangement === 'grid' ? (
+        <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+          {products.map((p) => (
+            <li key={p.id}>{card(p)}</li>
+          ))}
+        </ul>
       ) : (
         <ScrollRow
           label={block.sectionTitle ?? 'Продукти'}
           className="flex snap-x gap-3 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {products.map((p) => (
-            <div key={p.id} className="w-[220px] shrink-0 snap-start sm:w-[248px]">
-              <ProductCard product={p} showBgn={showBgn} className="h-full" />
+            <div
+              key={p.id}
+              className={`shrink-0 snap-start ${
+                imageStyle ? 'w-[248px] sm:w-[300px]' : 'w-[220px] sm:w-[248px]'
+              }`}
+            >
+              {card(p)}
             </div>
           ))}
         </ScrollRow>

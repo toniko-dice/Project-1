@@ -1,5 +1,6 @@
 import { CaretDown } from '@phosphor-icons/react/dist/ssr'
 import Link from 'next/link'
+import type { CSSProperties } from 'react'
 
 import type { Media, Page, Product } from '@/payload-types'
 import { formatBgn, formatEur } from '@/lib/format'
@@ -278,15 +279,20 @@ export const RuntimeCompareBlock = ({ block, showBgn }: { block: BlockOf<'runtim
   /*
     Първата колона са етикетите; на телефон лентата се скролва и тя стои
     закачена вляво (`sticky`), за да се вижда кой уред е на кой ред.
+    На компютър етикетът е на един ред — колоната е поне 180 px и колкото
+    най-дългия етикет („Хладилна кутия 60W:" се чупеше на 120 px).
   */
-  const grid = { gridTemplateColumns: `minmax(104px, 120px) repeat(${cols.length}, minmax(168px, 1fr))` }
+  const grid = { '--cols': cols.length } as CSSProperties
 
   return (
     <section className="py-10 md:py-[60px]">
       <Wrap>
         <div className="overflow-hidden rounded-lg bg-[#f4f4f4] pb-10 pt-5 md:pb-[50px]">
           <div className="overflow-x-auto [scrollbar-width:thin]">
-            <div className="grid min-w-max px-4 md:min-w-0 md:px-[21px]" style={grid}>
+            <div
+              className="grid min-w-max grid-cols-[minmax(104px,120px)_repeat(var(--cols),minmax(168px,1fr))] px-4 md:min-w-0 md:grid-cols-[minmax(180px,max-content)_repeat(var(--cols),minmax(168px,1fr))] md:px-[21px]"
+              style={grid}
+            >
               <div className="sticky left-0 z-10 bg-[#f4f4f4]" />
               {cols.map(({ product, specLine }) => {
                 // Изрязаната снимка с еднакво отстояние — като в картите (`CardImage`).
@@ -336,7 +342,7 @@ export const RuntimeCompareBlock = ({ block, showBgn }: { block: BlockOf<'runtim
 
               {rows.map((row, r) => (
                 <div key={r} className="contents">
-                  <div className="sticky left-0 z-10 flex items-center border-t border-[#dddddd] bg-[#f4f4f4] py-4 pr-3 text-sm leading-[1.4] text-[#757575] md:text-base">
+                  <div className="sticky left-0 z-10 flex items-center border-t border-[#dddddd] bg-[#f4f4f4] py-4 pr-3 text-sm leading-[1.4] text-[#757575] md:whitespace-nowrap md:pr-6 md:text-base">
                     {row.label}
                   </div>
                   {cols.map(({ product, index }) => (

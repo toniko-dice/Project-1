@@ -254,6 +254,7 @@
       "blockType": "productCarousel",
       "anchorLabel": "Продукти",
       "cardStyle": "price",
+      "arrangement": "grid",
       "sectionTitle": "Всички портативни електроцентрали",
       "fromCategory": "portativni-elektrocentrali",
       "_bележка": "Всички публикувани продукти от категорията, по реда на категорията. Без ръчен списък."
