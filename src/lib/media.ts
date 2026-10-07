@@ -14,6 +14,13 @@ type MaybeProduct = number | Product | null | undefined
 export type MediaSize = 'thumbnail' | 'card' | 'banner' | 'wide' | 'content' | 'large' | 'full'
 
 /**
+ * Размерът на снимка в продуктова карта: изрязаният вариант (`trimmed`),
+ * ако снимката е изрез с прозрачен фон, иначе `card` — както досега.
+ * Виж `src/lib/trim-image.ts` и `CardImage`.
+ */
+export type CardImageSize = MediaSize | 'trimmed'
+
+/**
  * Payload връща или ID, или пълния обект според дълбочината на заявката.
  *
  * Ако исканият размер липсва — например при снимка, качена преди той да
@@ -36,6 +43,19 @@ export const mediaUrl = (value: MaybeMedia, size?: MediaSize): string | null => 
   const stamp = value.updatedAt ? Date.parse(value.updatedAt) : 0
   // Date.parse дава NaN при негоден запис — тогава адресът остава чист.
   return Number.isFinite(stamp) && stamp > 0 ? `${base}?v=${stamp}` : base
+}
+
+/**
+ * Адресът на изрязания вариант за картите или `null`, ако снимката няма
+ * такъв (не е изрез). Файлът стои до оригинала, затова адресът е неговият
+ * с друго име; `?v=` е същото като на `mediaUrl`.
+ */
+export const trimmedUrl = (value: MaybeMedia): string | null => {
+  if (!value || typeof value === 'number') return null
+  const name = value.trimmed?.filename
+  const original = mediaUrl(value)
+  if (!name || !original) return null
+  return original.replace(/\/[^/?]*(\?|$)/, `/${encodeURIComponent(name)}$1`)
 }
 
 export const mediaAlt = (value: MaybeMedia): string => {
@@ -64,15 +84,17 @@ export const mediaDims = (value: MaybeMedia): { width: number; height: number } 
  */
 export const productImage = (
   product: MaybeProduct,
-  size: MediaSize,
+  size: CardImageSize,
   override?: MaybeMedia,
-): { url: string | null; alt: string } => {
+): { url: string | null; alt: string; trimmed: boolean } => {
   const doc = product && typeof product !== 'number' ? product : null
   // Незаредена замяна (само номер) не може да се покаже — пада се на продукта.
   const media = override && typeof override !== 'number' ? override : doc?.image
+  const trimmed = size === 'trimmed' ? trimmedUrl(media) : null
   return {
-    url: mediaUrl(media, size),
+    url: trimmed ?? mediaUrl(media, size === 'trimmed' ? 'card' : size),
     alt: mediaAlt(media) || doc?.title || '',
+    trimmed: Boolean(trimmed),
   }
 }
 
@@ -91,6 +113,8 @@ export type ProductCardOverrides = {
 export type ProductCardData = {
   imageUrl: string | null
   imageAlt: string
+  /** Снимката е изрязаният вариант — картата я показва с еднакво отстояние (`CardImage`). */
+  imageTrimmed: boolean
   title: string
   tagline: string | null
   url: string | null
@@ -122,7 +146,7 @@ const filled = (v: string | null | undefined): string | null => (v && v.trim() ?
 export const productCardData = (
   product: MaybeProduct,
   overrides: ProductCardOverrides = {},
-  size: MediaSize = 'card',
+  size: CardImageSize = 'trimmed',
 ): ProductCardData => {
   const doc = product && typeof product !== 'number' ? product : null
   const image = productImage(doc, size, overrides.image)
@@ -132,6 +156,7 @@ export const productCardData = (
   return {
     imageUrl: image.url,
     imageAlt: image.alt || title,
+    imageTrimmed: image.trimmed,
     title,
     tagline: filled(overrides.tagline) ?? filled(doc?.tagline) ?? null,
     url: filled(overrides.url) ?? (doc ? productPath(doc) : null),

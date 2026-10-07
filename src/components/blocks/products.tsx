@@ -5,6 +5,8 @@ import Link from 'next/link'
 import type { Category, Page, Product } from '@/payload-types'
 import { formatEur } from '@/lib/format'
 import { bannerImage, mediaUrl, productImage } from '@/lib/media'
+import { publishedRelation } from '@/lib/relations'
+import { CardImage } from '../CardImage'
 import { getStripCategories } from '@/lib/payload'
 import { categoryPath, productPath } from '@/lib/urls'
 import { SectionImage } from '../SectionImage'
@@ -138,30 +140,48 @@ export const ProductCarouselBlock = async ({
           className="flex snap-x gap-3 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {products.map((p) => {
-            const image = productImage(p, 'card')
+            const image = productImage(p, 'trimmed')
+            /*
+              „Фон на картите": светлият е бялата карта на класическите
+              (текст ink / ink-muted — 17:1 и 5,5:1 върху бяло), бутонът е
+              с тъмен контур и се запълва при посочване; тъмният е черната
+              карта отпреди, без промяна.
+            */
+            const dark = block.cardTheme === 'dark'
             return (
               <div key={p.id} className="w-[248px] shrink-0 snap-start sm:w-[300px]">
                 <Link
                   href={productPath(p)}
-                  className="group block cursor-pointer overflow-hidden rounded-xl bg-night"
+                  className={`group block cursor-pointer overflow-hidden rounded-xl ${
+                    dark ? 'bg-night' : 'bg-surface transition-shadow duration-200 hover:shadow-md'
+                  }`}
                 >
-                  <div className="p-4 text-white">
+                  <div className={`p-4 ${dark ? 'text-white' : 'text-ink'}`}>
                     <h3 className="text-sm font-medium">{p.title}</h3>
-                    {p.tagline ? <p className="mt-0.5 text-[11px] opacity-75">{p.tagline}</p> : null}
-                    <span className="mt-3 inline-flex min-h-9 items-center gap-1 rounded-full bg-white/15 px-3 text-xs font-medium transition-colors duration-200 group-hover:bg-white/25">
+                    {p.tagline ? (
+                      <p className={`mt-0.5 text-[11px] ${dark ? 'opacity-75' : 'text-ink-muted'}`}>
+                        {p.tagline}
+                      </p>
+                    ) : null}
+                    <span
+                      className={`mt-3 inline-flex min-h-9 items-center gap-1 rounded-full px-3 text-xs font-medium transition-colors duration-200 ${
+                        dark
+                          ? 'bg-white/15 group-hover:bg-white/25'
+                          : 'border border-ink group-hover:bg-ink group-hover:text-white'
+                      }`}
+                    >
                       Научете повече
                       <ArrowRight size={12} weight="bold" aria-hidden="true" />
                     </span>
                   </div>
                   <div className="relative aspect-[4/3] w-full">
                     {image.url ? (
-                      <Image
+                      <CardImage
                         src={image.url}
                         alt={image.alt}
-                        fill
+                        trimmed={image.trimmed}
                         sizes="300px"
-                        loading="lazy"
-                        className="object-contain p-3 transition-transform duration-300 group-hover:scale-105"
+                        className="p-3"
                       />
                     ) : (
                       <ImagePlaceholder className="absolute inset-0" />
@@ -212,7 +232,11 @@ export const BannerProductRowBlock = ({
   // Webp размерите, изрязани от CSS — виж `bannerImage`.
   const bannerImg = bannerImage(banner?.image)
   const videoUrl = mediaUrl(banner?.video)
-  const dark = banner?.theme !== 'light'
+  // Без снимка текстът е тъмен и бутонът черен, каквато и да е темата — бял върху сивия фон не се чете.
+  const noImage = !bannerImg && !videoUrl
+  const dark = banner?.theme !== 'light' && !noImage
+  // Цената от продукта има предимство пред ръчния текст; чернова — без цена.
+  const priceProduct = publishedRelation<Product>(banner?.product)
 
   const more = block.moreTile
   const moreImg = mediaUrl(more?.image, 'content')
@@ -276,7 +300,16 @@ export const BannerProductRowBlock = ({
                     <p className="text-[15px] leading-snug sm:text-base">{banner.subheading}</p>
                   ) : null}
 
-                  {banner.priceNote ? (
+                  {priceProduct ? (
+                    <p className="flex flex-wrap items-baseline gap-2 text-base font-medium">
+                      <span className="tabular">{formatEur(priceProduct.price)}</span>
+                      {priceProduct.compareAtPrice ? (
+                        <s className="tabular text-sm font-normal opacity-75">
+                          {formatEur(priceProduct.compareAtPrice)}
+                        </s>
+                      ) : null}
+                    </p>
+                  ) : banner.priceNote ? (
                     <p className="tabular text-base font-medium">{banner.priceNote}</p>
                   ) : null}
 
@@ -285,7 +318,7 @@ export const BannerProductRowBlock = ({
                       label={banner.cta?.label}
                       url={banner.cta?.url}
                       newTab={banner.cta?.newTab}
-                      style={banner.cta?.style}
+                      style={noImage ? 'dark' : banner.cta?.style}
                     />
                   </div>
                 </div>

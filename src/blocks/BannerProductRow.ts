@@ -43,11 +43,30 @@ export const BannerProductRow: Block = {
         },
         { name: 'heading', type: 'text', label: 'Заглавие' },
         { name: 'subheading', type: 'text', label: 'Подзаглавие' },
+        /*
+          Цената на банера от продукта, не на ръка: „от 1 549 €" стоеше на
+          банера на DELTA 3 Max, а продуктът беше 1 149 € (7 октомври 2026).
+          Ръчният текст остава за неща, които не са цена на един продукт
+          („спестявате до 1 200 €") — и се скрива, щом е избран продукт.
+        */
+        {
+          name: 'product',
+          type: 'relationship',
+          relationTo: 'products',
+          label: 'Цена от продукт',
+          admin: {
+            description:
+              'Избран — под подзаглавието излиза текущата цена на продукта (и старата, ако има). Чернова не дава цена.',
+          },
+        },
         {
           name: 'priceNote',
           type: 'text',
           label: 'Ценови текст',
-          admin: { description: 'Напр. "от 7 299 €" или "спестявате до 1 200 €".' },
+          admin: {
+            description: 'Напр. "спестявате до 1 200 €". За цена на продукт ползвайте „Цена от продукт".',
+            condition: (_, siblingData) => !siblingData?.product,
+          },
         },
         {
           name: 'image',

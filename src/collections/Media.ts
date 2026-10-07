@@ -1,5 +1,53 @@
-import type { CollectionConfig } from 'payload'
+import fs from 'fs/promises'
+import path from 'path'
+import type {
+  CollectionAfterChangeHook,
+  CollectionAfterDeleteHook,
+  CollectionBeforeChangeHook,
+  CollectionConfig,
+} from 'payload'
 import { revalidateAll, revalidateAllOnDelete } from '../lib/revalidate'
+import { makeTrimmed, NO_TRIMMED } from '../lib/trim-image'
+
+const MEDIA_DIR = path.resolve(process.cwd(), 'media')
+
+type Trimmed = { filename?: string | null } | null | undefined
+
+/**
+ * Изрязаният вариант за картите (`src/lib/trim-image.ts`) — при всяко
+ * качване на файл. Запис без файл (alt, име) не го пипа.
+ *
+ * НЕ е размер в `imageSizes`: Payload би го направил за ВСЯКА снимка, а
+ * снимка без прозрачен фон не бива да има такъв. Подмяната на файла от
+ * вноса (`replaceMediaContent`) и `media:regenerate` го правят сами.
+ */
+const fillTrimmed: CollectionBeforeChangeHook = async ({ data, req }) => {
+  const file = req.file
+  if (!file || !data.filename || !String(file.mimetype ?? '').startsWith('image/')) return data
+  try {
+    const stem = path.parse(data.filename).name
+    data.trimmed = (await makeTrimmed(file.tempFilePath || file.data, stem, MEDIA_DIR)) ?? NO_TRIMMED
+  } catch (e) {
+    // Без вариант картата показва снимката както досега — качването не се отказва.
+    req.payload.logger.warn(`Изрязан вариант на ${data.filename}: ${e instanceof Error ? e.message : e}`)
+    data.trimmed = NO_TRIMMED
+  }
+  return data
+}
+
+const removeFile = (name: string | null | undefined) =>
+  name ? fs.rm(path.join(MEDIA_DIR, name), { force: true }) : undefined
+
+/** Новият файл е с нов вариант — старият се трие, щом записът е минал. */
+const dropOldTrimmed: CollectionAfterChangeHook = async ({ doc, previousDoc }) => {
+  const old = (previousDoc?.trimmed as Trimmed)?.filename
+  if (old && old !== (doc.trimmed as Trimmed)?.filename) await removeFile(old)
+  return doc
+}
+
+const dropTrimmedOnDelete: CollectionAfterDeleteHook = async ({ doc }) => {
+  await removeFile((doc.trimmed as Trimmed)?.filename)
+}
 
 export const Media: CollectionConfig = {
   slug: 'media',
@@ -12,8 +60,9 @@ export const Media: CollectionConfig = {
     кешираните страници и не се сменя до следващия билд.
   */
   hooks: {
-    afterChange: [revalidateAll],
-    afterDelete: [revalidateAllOnDelete],
+    beforeChange: [fillTrimmed],
+    afterChange: [dropOldTrimmed, revalidateAll],
+    afterDelete: [dropTrimmedOnDelete, revalidateAllOnDelete],
   },
   upload: {
     staticDir: 'media',
@@ -137,6 +186,23 @@ export const Media: CollectionConfig = {
         readOnly: true,
         description: 'Името на файла, преди да получи смислено име. Само за справка.',
       },
+    },
+    /*
+      Изрязаният вариант за продуктовите карти — само видимата част на
+      снимка с прозрачен фон (`src/lib/trim-image.ts`). Празен при снимка
+      без прозрачност: тогава картата показва снимката както досега.
+      Пише се само от кода — при качване, от вноса и от `media:regenerate`.
+    */
+    {
+      name: 'trimmed',
+      type: 'group',
+      label: 'Изрязан вариант за картите',
+      admin: { hidden: true },
+      fields: [
+        { name: 'filename', type: 'text' },
+        { name: 'width', type: 'number' },
+        { name: 'height', type: 'number' },
+      ],
     },
   ],
 }

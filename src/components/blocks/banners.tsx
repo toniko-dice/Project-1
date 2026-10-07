@@ -30,11 +30,12 @@ export const HeroBannerBlock = ({ block }: { block: BlockOf<'heroBanner'> }) => 
     note: slide.note,
     overlay: slide.overlay,
     align: slide.align,
-    dark: slide.theme !== 'light',
+    // Без снимка текстът е тъмен, каквато и да е темата — бял върху светлия фон не се чете.
+    dark: slide.theme !== 'light' && Boolean(slide.image || slide.imageMobile),
     ctaLabel: slide.cta?.label,
     ctaUrl: slide.cta?.url,
     ctaNewTab: slide.cta?.newTab,
-    ctaStyle: slide.cta?.style,
+    ctaStyle: slide.image || slide.imageMobile ? slide.cta?.style : 'dark',
   }))
 
   if (!slides.length) return null
@@ -47,7 +48,8 @@ export const HeroBannerBlock = ({ block }: { block: BlockOf<'heroBanner'> }) => 
 export const WideBannerBlock = ({ block }: { block: BlockOf<'wideBanner'> }) => {
   // Webp размерите, изрязани от CSS — виж `bannerImage`.
   const img = bannerImage(block.image)
-  const dark = block.theme !== 'light'
+  // Без снимка текстът е тъмен и бутонът черен — бял върху светлия фон не се чете.
+  const dark = block.theme !== 'light' && Boolean(img)
 
   return (
     <PageSection>
@@ -94,7 +96,7 @@ export const WideBannerBlock = ({ block }: { block: BlockOf<'wideBanner'> }) => 
                     label={block.cta?.label}
                     url={block.cta?.url}
                     newTab={block.cta?.newTab}
-                    style={block.cta?.style}
+                    style={img ? block.cta?.style : 'dark'}
                   />
                 </div>
               </div>
@@ -119,7 +121,8 @@ export const PromoCardsBlock = ({ block }: { block: BlockOf<'promoCards'> }) => 
       <div className={`grid gap-4 ${cards.length >= 3 ? 'md:grid-cols-3' : 'md:grid-cols-2'}`}>
         {cards.map((card, i) => {
           const img = mediaUrl(card.image, 'content')
-          const dark = card.theme !== 'light'
+          // Без снимка — тъмен текст (виж „Липсващи снимки" в CLAUDE.md).
+          const dark = card.theme !== 'light' && Boolean(img)
           return (
             <div key={i} className="relative overflow-hidden rounded-2xl">
               {/*
@@ -208,7 +211,8 @@ export const BannerCarouselBlock = ({ block }: { block: BlockOf<'bannerCarousel'
       >
         {cards.map((card, i) => {
           const img = mediaUrl(card.image, 'content')
-          const dark = card.textTheme !== 'dark'
+          // Без снимка — тъмен текст (виж „Липсващи снимки" в CLAUDE.md).
+          const dark = card.textTheme !== 'dark' && Boolean(img)
           const buttons = card.buttons ?? []
 
           return (

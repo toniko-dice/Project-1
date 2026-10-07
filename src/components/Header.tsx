@@ -41,6 +41,7 @@ const productCard = (card: PanelCard | null, p: Product): MenuCard => {
   return {
     imageUrl: data.imageUrl,
     imageAlt: data.imageAlt,
+    imageTrimmed: data.imageTrimmed,
     title: data.title,
     specLine: data.tagline,
     url: data.url,

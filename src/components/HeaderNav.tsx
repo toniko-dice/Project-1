@@ -6,12 +6,15 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { type PointerEvent, useEffect, useMemo, useRef, useState } from 'react'
 import { formatEur } from '@/lib/format'
+import { CardImage } from './CardImage'
 import { ImagePlaceholder } from './ImagePlaceholder'
 import { SearchBar } from './SearchBar'
 
 export type MenuCard = {
   imageUrl: string | null
   imageAlt: string
+  /** Изрязаният вариант на снимката — виж `CardImage`. */
+  imageTrimmed?: boolean
   title: string
   specLine?: string | null
   url?: string | null
@@ -70,12 +73,13 @@ const Card = ({
     <>
       <div className={`relative w-full ${large ? 'aspect-square' : 'aspect-[4/3]'}`}>
         {card.imageUrl ? (
-          <Image
+          <CardImage
             src={card.imageUrl}
             alt={card.imageAlt}
-            fill
+            trimmed={Boolean(card.imageTrimmed)}
             sizes={large ? '360px' : '200px'}
-            className="object-contain p-3"
+            className="p-3"
+            hover={false}
           />
         ) : (
           <ImagePlaceholder className="absolute inset-0" />

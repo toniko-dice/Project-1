@@ -36,6 +36,7 @@ import fs from 'fs/promises'
 import path from 'path'
 import type { Payload } from 'payload'
 import sharp from 'sharp'
+import { makeTrimmed, NO_TRIMMED } from './lib/trim-image'
 import { AVAILABILITY_VALUES, isAvailability } from './lib/availability'
 import {
   адресиЗаСваляне,
@@ -206,12 +207,17 @@ export const caseSafeStem = (stem: string): string =>
 /** Основата на име от Медия (без `bareStem`: Payload вече е махнал точките). */
 export const mediaFileStem = (filename: string): string => path.basename(filename, path.extname(filename))
 
-type MediaNames = { filename?: string | null; sizes?: unknown }
+type MediaNames = {
+  filename?: string | null
+  sizes?: unknown
+  trimmed?: { filename?: string | null } | null
+}
 
-/** Всички файлове на запис — оригиналът и размерите. */
+/** Всички файлове на запис — оригиналът, размерите и изрязаният вариант за картите. */
 export const mediaFileNames = (doc: MediaNames): string[] =>
   [
     doc.filename,
+    doc.trimmed?.filename,
     ...Object.values((doc.sizes ?? {}) as Record<string, { filename?: string | null } | null>).map(
       (s) => s?.filename,
     ),
@@ -326,6 +332,7 @@ export const replaceMediaContent = async (
     id: number
     filename?: string | null
     sizes?: Record<string, { filename?: string | null } | null> | null
+    trimmed?: { filename?: string | null } | null
   },
   данни: Buffer,
   realExt: string,
@@ -379,6 +386,9 @@ export const replaceMediaContent = async (
 
   const мета = await sharp(данни).metadata()
   const размери = await writeImageSizes(payload, stem, данни)
+  // Изрязаният вариант за картите — от новия файл; без прозрачност няма такъв.
+  const trimmed: { filename: string | null } =
+    (await makeTrimmed(данни, stem, MEDIA_DIR).catch(() => null)) ?? NO_TRIMMED
   /*
     Размер, който НЕ е направен наново (по-малка снимка), се чисти изрично.
     `payload.update` слива групата `sizes` със старата: на 5 октомври 2026
@@ -407,6 +417,7 @@ export const replaceMediaContent = async (
       width: мета.width,
       height: мета.height,
       sizes: размери,
+      trimmed,
     } as never,
     depth: 0,
   })
@@ -422,6 +433,7 @@ export const replaceMediaContent = async (
     ...Object.values(размери)
       .map((р) => (р as { filename: string | null }).filename)
       .filter((f): f is string => Boolean(f)),
+    ...(trimmed.filename ? [trimmed.filename] : []),
   ])
   for (const f of mediaFileNames(doc)) {
     if (!пазени.has(f) && !чужди.has(f.toLowerCase())) {

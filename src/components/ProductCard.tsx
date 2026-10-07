@@ -1,5 +1,4 @@
 import { Star, StarHalf } from '@phosphor-icons/react/dist/ssr'
-import Image from 'next/image'
 import Link from 'next/link'
 
 import type { Product } from '@/payload-types'
@@ -7,6 +6,7 @@ import { formatBgn, formatEur } from '@/lib/format'
 import { productCardData } from '@/lib/media'
 import { productPath } from '@/lib/urls'
 import { BuyButton } from './BuyButton'
+import { CardImage } from './CardImage'
 import { ImagePlaceholder } from './ImagePlaceholder'
 
 /**
@@ -80,16 +80,18 @@ export const ProductCard = ({
       className={`group flex flex-col overflow-hidden rounded-xl bg-surface p-4 transition-shadow duration-200 hover:shadow-md ${className}`}
     >
       <Link href={productPath(product)} className="flex flex-1 cursor-pointer flex-col">
-        {/* Снимката стои на бял фон, центрирана, без изрязване. */}
+        {/*
+          Снимката стои на бял фон, центрирана. Изрез с прозрачен фон е без
+          празното си поле и с еднакво отстояние — `CardImage`.
+        */}
         <div className="relative h-48 w-full sm:h-60">
           {data.imageUrl ? (
-            <Image
+            <CardImage
               src={data.imageUrl}
               alt={data.imageAlt}
-              fill
+              trimmed={data.imageTrimmed}
               sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 18vw"
-              loading={eager ? 'eager' : 'lazy'}
-              className="object-contain transition-transform duration-300 group-hover:scale-105"
+              eager={eager}
             />
           ) : (
             <ImagePlaceholder className="absolute inset-0 rounded-lg" />

@@ -1,5 +1,4 @@
 import { CaretDown } from '@phosphor-icons/react/dist/ssr'
-import Image from 'next/image'
 import Link from 'next/link'
 
 import type { Media, Page, Product } from '@/payload-types'
@@ -8,6 +7,7 @@ import { mediaAlt, productCardData, sectionImage } from '@/lib/media'
 import { runtimeColumns } from '@/lib/page-products'
 import { publishedRelation } from '@/lib/relations'
 import { BuyButton } from '../BuyButton'
+import { CardImage } from '../CardImage'
 import { GuideSlider } from '../GuideSlider'
 import { ImagePlaceholder } from '../ImagePlaceholder'
 import { SectionImage } from '../SectionImage'
@@ -289,18 +289,18 @@ export const RuntimeCompareBlock = ({ block, showBgn }: { block: BlockOf<'runtim
             <div className="grid min-w-max px-4 md:min-w-0 md:px-[21px]" style={grid}>
               <div className="sticky left-0 z-10 bg-[#f4f4f4]" />
               {cols.map(({ product, specLine }) => {
-                const card = productCardData(product, {}, 'card')
+                // Изрязаната снимка с еднакво отстояние — като в картите (`CardImage`).
+                const card = productCardData(product)
                 return (
                   <div key={product.id} className="flex flex-col items-center px-2 pb-6 pt-6 text-center">
                     <Link href={card.url ?? '#'} className="relative block aspect-square w-full max-w-[217px]">
                       {card.imageUrl ? (
-                        <Image
+                        <CardImage
                           src={card.imageUrl}
                           alt={card.imageAlt}
-                          fill
+                          trimmed={card.imageTrimmed}
                           sizes="217px"
-                          loading="lazy"
-                          className="object-contain"
+                          hover={false}
                         />
                       ) : (
                         <ImagePlaceholder className="absolute inset-0" />

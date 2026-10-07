@@ -49,5 +49,22 @@ export const ProductCarousel: Block = {
         { label: 'Класическа карта с цена', value: 'price' },
       ],
     },
+    /*
+      Само за „Голяма снимка с надпис върху нея". Светлият е бялата карта
+      на класическите по-долу; тъмният е черната от началото (до 7 октомври
+      2026 — единствената, зашита в кода). Миграцията сложи „Светъл" на
+      всички съществуващи блокове.
+    */
+    {
+      name: 'cardTheme',
+      type: 'select',
+      label: 'Фон на картите',
+      defaultValue: 'light',
+      options: [
+        { label: 'Светъл (бял)', value: 'light' },
+        { label: 'Тъмен (черен)', value: 'dark' },
+      ],
+      admin: { condition: (_, siblingData) => siblingData?.cardStyle !== 'price' },
+    },
   ],
 }

@@ -12,12 +12,18 @@
  *
  * Повторяем: втори път не прави нищо. С `--force` пресъздава и наличните
  * (например след смяна на качеството на размер).
+ *
+ * Прави и изрязания вариант за картите (`trimmed`, `src/lib/trim-image.ts`)
+ * на снимките с прозрачен фон, които го нямат. Снимка без прозрачност
+ * просто не получава такъв — затова тя се проверява наново при всяко
+ * пускане (бързо: повечето нямат алфа канал и отпадат още по описанието).
  */
 import config from '@payload-config'
 import fs from 'fs/promises'
 import path from 'path'
 import { getPayload } from 'payload'
 import sharp from 'sharp'
+import { makeTrimmed } from './lib/trim-image'
 
 const payload = await getPayload({ config })
 
@@ -52,6 +58,7 @@ const docs = await payload.find({ collection: 'media', depth: 0, pagination: fal
 
 let touched = 0
 let created = 0
+let trimmedMade = 0
 let skippedNoFile = 0
 const failures: string[] = []
 
@@ -126,7 +133,18 @@ for (const doc of docs.docs) {
     }
   }
 
-  if (!Object.keys(добавени).length) continue
+  let trimmed: Awaited<ReturnType<typeof makeTrimmed>> = null
+  const trimmedNow = (doc.trimmed as { filename?: string | null } | null)?.filename
+  if (force || !trimmedNow) {
+    try {
+      const stem = path.basename(doc.filename, path.extname(doc.filename))
+      trimmed = await makeTrimmed(original, stem, MEDIA_DIR)
+    } catch (e) {
+      failures.push(`${doc.filename} → trimmed: ${e instanceof Error ? e.message : String(e)}`)
+    }
+  }
+
+  if (!Object.keys(добавени).length && !trimmed) continue
 
   /*
     Записва се САМО картата на размерите. Файлът не се подава — иначе
@@ -135,16 +153,26 @@ for (const doc of docs.docs) {
   await payload.update({
     collection: 'media',
     id: doc.id,
-    data: { sizes: { ...(doc.sizes ?? {}), ...добавени } } as never,
+    data: {
+      ...(Object.keys(добавени).length ? { sizes: { ...(doc.sizes ?? {}), ...добавени } } : {}),
+      ...(trimmed ? { trimmed } : {}),
+    } as never,
     depth: 0,
   })
+  // Вариант с други размери от предишно пускане (--force) — старият файл е излишен.
+  if (trimmed && trimmedNow && trimmedNow !== trimmed.filename) {
+    await fs.rm(path.join(MEDIA_DIR, trimmedNow), { force: true })
+  }
   touched += 1
-  console.log(`  · ${doc.filename}: ${Object.keys(добавени).join(', ')}`)
+  if (trimmed) trimmedMade += 1
+  console.log(
+    `  · ${doc.filename}: ${[...Object.keys(добавени), ...(trimmed ? ['trimmed'] : [])].join(', ')}`,
+  )
 }
 
 console.log('')
 console.log(`✓ Прегледани файлове: ${docs.docs.length}`)
-console.log(`✓ Обновени записи: ${touched} (нови размери: ${created})`)
+console.log(`✓ Обновени записи: ${touched} (нови размери: ${created}, изрязани за картите: ${trimmedMade})`)
 if (skippedNoFile) console.log(`⚠ Без файл на диска: ${skippedNoFile}`)
 if (failures.length) {
   console.log(`⚠ Неуспешни: ${failures.length}`)
