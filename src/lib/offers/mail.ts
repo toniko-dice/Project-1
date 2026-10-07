@@ -5,8 +5,11 @@
  *
  * Сървърен модул.
  */
-import { button, esc, heading, layout, nl2br, textFooter, type MailContacts } from '../quote/mail'
+import { button, esc, heading, layout, nl2br, siteHost, textFooter, type MailContacts } from '../quote/mail'
 import { SITE_URL } from '../site-url'
+
+/** Долният ред — офертата не е от формата на сайта. */
+const FOOTER_NOTE = () => `Офертата е изпратена от EcoFlow България — ${siteHost()}.`
 import { bgDate, eur } from './calc'
 
 export type OfferMailData = {
@@ -50,6 +53,7 @@ ${heading(`Оферта № ${d.number}`)}
 </table>
 <p style="margin:16px 0 0;font-size:14px;color:#6b6b6b">Офертата е приложена като PDF.</p>
 ${button('Към сайта', SITE_URL)}`,
+    FOOTER_NOTE(),
   )
   const text = [
     d.text,
@@ -60,7 +64,7 @@ ${button('Към сайта', SITE_URL)}`,
     `Общо с ДДС: ${eur(d.total)}`,
     'Офертата е приложена като PDF.',
     '',
-    textFooter(c),
+    textFooter(c, FOOTER_NOTE()),
   ].join('\n')
   return { html, text }
 }

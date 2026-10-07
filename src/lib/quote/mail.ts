@@ -138,7 +138,12 @@ ${items
 }
 
 /** Общият шаблон — и за офертите (`src/lib/offers/mail.ts`). */
-export const layout = (c: MailContacts, preheader: string, body: string) => {
+export const layout = (
+  c: MailContacts,
+  preheader: string,
+  body: string,
+  footerNote = `Този имейл е изпратен от формата за оферти на ${siteHost()}.`,
+) => {
   const host = siteHost()
   return `<!doctype html>
 <html lang="bg">
@@ -182,7 +187,7 @@ ${body}
         ${c.phone ? `Тел.: <a href="tel:${esc(c.phone.replace(/\s/g, ''))}" style="color:#ffffff;text-decoration:none">${esc(c.phone)}</a><br>` : ''}
         ${c.email ? `Имейл: <a href="mailto:${esc(c.email)}" style="color:#ffffff;text-decoration:none">${esc(c.email)}</a><br>` : ''}
         <a href="${esc(SITE_URL)}" target="_blank" style="color:#ffffff">${esc(host)}</a>
-        <div style="margin-top:14px;font-size:12px;color:#9a9a9a">Този имейл е изпратен от формата за оферти на ${esc(host)}.</div>
+        <div style="margin-top:14px;font-size:12px;color:#9a9a9a">${esc(footerNote)}</div>
       </td></tr>
     </table>
   </td></tr>
@@ -229,7 +234,7 @@ const textItems = (items: MailItem[]) =>
     ? `ПРОДУКТИ\n${items.map((i) => `- ${i.title} — ${i.quantity} бр.\n  ${i.url}`).join('\n')}\nОбщо: ${items.length} продукта, ${items.reduce((s, i) => s + i.quantity, 0)} бр.\n`
     : 'ПРОДУКТИ\nНяма избрани продукти от списъка.\n'
 
-export const textFooter = (c: MailContacts) =>
+export const textFooter = (c: MailContacts, footerNote = `Този имейл е изпратен от формата за оферти на ${siteHost()}.`) =>
   [
     '—',
     c.companyName || 'EcoFlow България',
@@ -237,7 +242,7 @@ export const textFooter = (c: MailContacts) =>
     c.phone ? `Тел.: ${c.phone}` : '',
     c.email ? `Имейл: ${c.email}` : '',
     SITE_URL,
-    `Този имейл е изпратен от формата за оферти на ${siteHost()}.`,
+    footerNote,
   ]
     .filter(Boolean)
     .join('\n')

@@ -2,6 +2,7 @@
 
 import { Button, useConfig, useDocumentEvents, useDocumentInfo, useFormModified } from '@payloadcms/ui'
 import { useState } from 'react'
+import { createPortal } from 'react-dom'
 
 type Preview = { to: string; cc: string; subject: string; text: string; sentAt: string | null }
 
@@ -120,12 +121,16 @@ export const OfferActions = () => {
       ) : null}
       {error ? <p style={{ margin: 0, fontSize: 13, color: 'var(--theme-error-500)' }}>{error}</p> : null}
 
-      {preview ? (
+      {/*
+        Прозорецът — в `body`, над всичко: залепената лента на записа и
+        иконите на полетата за дата иначе излизат отгоре.
+      */}
+      {preview && typeof document !== 'undefined' ? createPortal(
         <div
           role="dialog"
           aria-modal="true"
           aria-label="Изпращане на офертата"
-          style={{ position: 'fixed', inset: 0, zIndex: 1000, background: 'rgba(0,0,0,0.45)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 16 }}
+          style={{ position: 'fixed', inset: 0, zIndex: 100000, background: 'rgba(0,0,0,0.45)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 16 }}
           onClick={(e) => {
             if (e.target === e.currentTarget && !busy) setPreview(null)
           }}
@@ -164,7 +169,8 @@ export const OfferActions = () => {
               </Button>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body,
       ) : null}
     </div>
   )
