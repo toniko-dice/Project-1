@@ -82,7 +82,7 @@ export const SimpleTableSection = ({ block }: { block: BlockOf<'simpleTable'> })
                       </th>
                     ) : null
                   ) : (
-                    <td key={j} className={`border border-line px-4 py-2.5 ${j === r.length - 1 ? 'whitespace-nowrap font-medium text-ink' : 'text-ink-muted'}`}>
+                    <td key={j} className={`border border-line px-4 py-2.5 ${j === r.length - 1 ? 'w-[30%] font-medium text-ink' : 'text-ink-muted'}`}>
                       {cell}
                     </td>
                   ),
@@ -100,7 +100,7 @@ export const SimpleTableSection = ({ block }: { block: BlockOf<'simpleTable'> })
                 {g.rows.map((r, ri) => (
                   <li key={ri} className="flex items-start justify-between gap-3 px-4 py-2.5 text-[14px]">
                     <span className="text-ink-muted">{r.slice(1, -1).join(' · ')}</span>
-                    <span className="shrink-0 font-medium">{r[r.length - 1]}</span>
+                    <span className="max-w-[45%] text-right font-medium">{r[r.length - 1]}</span>
                   </li>
                 ))}
               </ul>
