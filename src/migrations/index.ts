@@ -37,6 +37,7 @@ import * as migration_20261005_152225_media_original_name from './20261005_15222
 import * as migration_20261006_090159_seo_category_text_home_h1 from './20261006_090159_seo_category_text_home_h1';
 import * as migration_20261006_200019_guide_blocks from './20261006_200019_guide_blocks';
 import * as migration_20261007_083826_karti_trimmed from './20261007_083826_karti_trimmed';
+import * as migration_20261007_090942_carousel_arrangement from './20261007_090942_carousel_arrangement';
 
 export const migrations = [
   {
@@ -232,6 +233,11 @@ export const migrations = [
   {
     up: migration_20261007_083826_karti_trimmed.up,
     down: migration_20261007_083826_karti_trimmed.down,
-    name: '20261007_083826_karti_trimmed'
+    name: '20261007_083826_karti_trimmed',
+  },
+  {
+    up: migration_20261007_090942_carousel_arrangement.up,
+    down: migration_20261007_090942_carousel_arrangement.down,
+    name: '20261007_090942_carousel_arrangement'
   },
 ];

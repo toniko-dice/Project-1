@@ -268,6 +268,10 @@ export interface Page {
              */
             fromCategory?: (number | null) | Category;
             cardStyle?: ('image' | 'price') | null;
+            /**
+             * Решетката е за дълги списъци (напр. всички продукти от категория) — в лентата крайната карта стои отрязана.
+             */
+            arrangement?: ('row' | 'grid') | null;
             cardTheme?: ('light' | 'dark') | null;
             id?: string | null;
             blockName?: string | null;
@@ -1555,6 +1559,10 @@ export interface Category {
              */
             fromCategory?: (number | null) | Category;
             cardStyle?: ('image' | 'price') | null;
+            /**
+             * Решетката е за дълги списъци (напр. всички продукти от категория) — в лентата крайната карта стои отрязана.
+             */
+            arrangement?: ('row' | 'grid') | null;
             cardTheme?: ('light' | 'dark') | null;
             id?: string | null;
             blockName?: string | null;
@@ -2594,6 +2602,7 @@ export interface PagesSelect<T extends boolean = true> {
               products?: T;
               fromCategory?: T;
               cardStyle?: T;
+              arrangement?: T;
               cardTheme?: T;
               id?: T;
               blockName?: T;
@@ -3272,6 +3281,7 @@ export interface CategoriesSelect<T extends boolean = true> {
               products?: T;
               fromCategory?: T;
               cardStyle?: T;
+              arrangement?: T;
               cardTheme?: T;
               id?: T;
               blockName?: T;
