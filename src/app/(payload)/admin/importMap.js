@@ -1,3 +1,5 @@
+import { QuoteStatusCell as QuoteStatusCell_c7ed968cdd7b1d32526e78b157b6089d } from '@/components/admin/QuoteStatusCell'
+import { QuoteItemsTable as QuoteItemsTable_bf176bac9e3eb29de09246a1033d4811 } from '@/components/admin/QuoteItemsTable'
 import { RowLabel as RowLabel_7f4fa5fc68fb5a0a92393f6444a57fbd } from '@/components/admin/RowLabel'
 import { Note as Note_b1f9a6b9bae36f5ee25cc75b578bb654 } from '@/components/admin/Note'
 import { BlockLabel as BlockLabel_65d5559e4024d0730eedfbb5dfb037d8 } from '@/components/admin/BlockLabel'
@@ -29,10 +31,13 @@ import { CardProductSync as CardProductSync_2c34e42dc48f416e3c9f939f31801f86 } f
 import { ExportSubscribersButton as ExportSubscribersButton_632306c2f6e18467206191256b3c5c1e } from '@/components/admin/ExportSubscribersButton'
 import { RestoreBackupButton as RestoreBackupButton_0345d6ca4f322b3259326bda5a60e48f } from '@/components/admin/RestoreBackupButton'
 import { CreateBackupButton as CreateBackupButton_059b6108dfec089e6701e6ed8dc0e80b } from '@/components/admin/CreateBackupButton'
+import { QuoteNavBadge as QuoteNavBadge_f76fdb011cf13b0ac1a4a344af4012d1 } from '@/components/admin/QuoteNavBadge'
 import { CollectionCards as CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1 } from '@payloadcms/next/rsc'
 
 /** @type import('payload').ImportMap */
 export const importMap = {
+  "@/components/admin/QuoteStatusCell#QuoteStatusCell": QuoteStatusCell_c7ed968cdd7b1d32526e78b157b6089d,
+  "@/components/admin/QuoteItemsTable#QuoteItemsTable": QuoteItemsTable_bf176bac9e3eb29de09246a1033d4811,
   "@/components/admin/RowLabel#RowLabel": RowLabel_7f4fa5fc68fb5a0a92393f6444a57fbd,
   "@/components/admin/Note#Note": Note_b1f9a6b9bae36f5ee25cc75b578bb654,
   "@/components/admin/BlockLabel#BlockLabel": BlockLabel_65d5559e4024d0730eedfbb5dfb037d8,
@@ -64,5 +69,6 @@ export const importMap = {
   "@/components/admin/ExportSubscribersButton#ExportSubscribersButton": ExportSubscribersButton_632306c2f6e18467206191256b3c5c1e,
   "@/components/admin/RestoreBackupButton#RestoreBackupButton": RestoreBackupButton_0345d6ca4f322b3259326bda5a60e48f,
   "@/components/admin/CreateBackupButton#CreateBackupButton": CreateBackupButton_059b6108dfec089e6701e6ed8dc0e80b,
+  "@/components/admin/QuoteNavBadge#QuoteNavBadge": QuoteNavBadge_f76fdb011cf13b0ac1a4a344af4012d1,
   "@payloadcms/next/rsc#CollectionCards": CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1
 }

@@ -67,6 +67,8 @@ export interface Config {
   };
   blocks: {};
   collections: {
+    'quote-requests': QuoteRequest;
+    'quote-files': QuoteFile;
     pages: Page;
     products: Product;
     categories: Category;
@@ -87,6 +89,8 @@ export interface Config {
   };
   collectionsJoins: {};
   collectionsSelect: {
+    'quote-requests': QuoteRequestsSelect<false> | QuoteRequestsSelect<true>;
+    'quote-files': QuoteFilesSelect<false> | QuoteFilesSelect<true>;
     pages: PagesSelect<false> | PagesSelect<true>;
     products: ProductsSelect<false> | ProductsSelect<true>;
     categories: CategoriesSelect<false> | CategoriesSelect<true>;
@@ -160,710 +164,60 @@ export interface UserAuthOperations {
   };
 }
 /**
- * Всяка страница се сглобява от секции. Добавяйте, местете (с дръжката вляво) и триете секции свободно.
+ * Заявките от страницата „Оферта за фирми". Статусът и бележките се редактират; останалото е както го е изпратил клиентът.
  *
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "pages".
+ * via the `definition` "quote-requests".
  */
-export interface Page {
+export interface QuoteRequest {
   id: number;
-  _order?: string | null;
-  title: string;
   /**
-   * Само малки латински букви, цифри и тирета. Кирилицата се транслитерира, интервалите стават тирета, представки като „products/" се махат. Не е нужно да пишете пътя — само името.
+   * Пореден за годината: ГГГГ-NNNN.
    */
-  slug: string;
-  layout?:
-    | (
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            /**
-             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
-             */
-            anchorLabel?: string | null;
-            /**
-             * Нула спира автоматичната смяна. Важи само при повече от един слайд.
-             */
-            autoplaySeconds?: number | null;
-            slides?:
-              | {
-                  /**
-                   * По избор. Малка картинка — в оригинала това е „30 дни гаранция за цената". Показва се с истинската си височина, до 40px.
-                   */
-                  badgeImage?: (number | null) | Media;
-                  /**
-                   * Малкият текст над заглавието. Напр. „Серия EcoFlow STREAM".
-                   */
-                  eyebrow?: string | null;
-                  eyebrowColor?: ('white' | 'orange') | null;
-                  heading?: string | null;
-                  subheading?: string | null;
-                  /**
-                   * Напр. срок на промоцията: „5 – 31 август".
-                   */
-                  note?: string | null;
-                  /**
-                   * Препоръчително 2400×1000px. Текстът ляга върху него.
-                   */
-                  image?: (number | null) | Media;
-                  /**
-                   * По желание. Ако е празно, се ползва основното.
-                   */
-                  imageMobile?: (number | null) | Media;
-                  cta?: {
-                    label?: string | null;
-                    /**
-                     * Вътрешен път (/products) или пълен адрес към външния магазин.
-                     */
-                    url?: string | null;
-                    newTab?: boolean | null;
-                    /**
-                     * Зависи от снимката отдолу. В оригинала бутоните върху банери са бели.
-                     */
-                    style?: ('light' | 'dark') | null;
-                  };
-                  align?: ('left' | 'center' | 'right') | null;
-                  theme?: ('dark' | 'light') | null;
-                  /**
-                   * Увеличете, ако текстът не се чете добре върху снимката.
-                   */
-                  overlay?: ('none' | 'light' | 'medium' | 'strong') | null;
-                  id?: string | null;
-                }[]
-              | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'heroBanner';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            /**
-             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
-             */
-            anchorLabel?: string | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'categoryStrip';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            /**
-             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
-             */
-            anchorLabel?: string | null;
-            sectionTitle?: string | null;
-            subtitle?: string | null;
-            products?: (number | Product)[] | null;
-            /**
-             * Избрана — показват се ВСИЧКИ публикувани продукти от категорията и подкатегориите ѝ, по реда им, и ръчният списък не се ползва.
-             */
-            fromCategory?: (number | null) | Category;
-            cardStyle?: ('image' | 'price') | null;
-            /**
-             * Решетката е за дълги списъци (напр. всички продукти от категория) — в лентата крайната карта стои отрязана.
-             */
-            arrangement?: ('row' | 'grid') | null;
-            cardTheme?: ('light' | 'dark') | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'productCarousel';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            /**
-             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
-             */
-            anchorLabel?: string | null;
-            heading?: string | null;
-            cards?:
-              | {
-                  /**
-                   * Запълва цялата карта. Препоръчително 800×1000px (портрет).
-                   */
-                  image?: (number | null) | Media;
-                  /**
-                   * Малкият оранжев текст най-отгоре. Напр. „Ново" или „Горещо 🔥".
-                   */
-                  tag?: string | null;
-                  heading?: string | null;
-                  subheading?: string | null;
-                  textTheme?: ('light' | 'dark') | null;
-                  /**
-                   * До два бутона на един ред под текста. Може и без нито един.
-                   */
-                  buttons?:
-                    | {
-                        label?: string | null;
-                        url?: string | null;
-                        style?: ('white' | 'outline' | 'black') | null;
-                        id?: string | null;
-                      }[]
-                    | null;
-                  id?: string | null;
-                }[]
-              | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'bannerCarousel';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            /**
-             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
-             */
-            anchorLabel?: string | null;
-            /**
-             * Напр. "Домашно резервно захранване".
-             */
-            sectionTitle?: string | null;
-            showBanner?: boolean | null;
-            banner?: {
-              eyebrow?: string | null;
-              eyebrowColor?: ('white' | 'orange') | null;
-              heading?: string | null;
-              subheading?: string | null;
-              /**
-               * Избран — под подзаглавието излиза текущата цена на продукта (и старата, ако има). Чернова не дава цена.
-               */
-              product?: (number | null) | Product;
-              /**
-               * Напр. "спестявате до 1 200 €". За цена на продукт ползвайте „Цена от продукт".
-               */
-              priceNote?: string | null;
-              /**
-               * Препоръчително 2400×800px. Остава задължително и при видео — показва се, докато то се зареди.
-               */
-              image?: (number | null) | Media;
-              /**
-               * По избор. MP4 (H.264), 1920px широчина, без звук, до 20 MB. Върти се само, без бутони. При включена системна настройка за намалено движение се показва снимката.
-               */
-              video?: (number | null) | Media;
-              cta?: {
-                label?: string | null;
-                /**
-                 * Вътрешен път (/products) или пълен адрес към външния магазин.
-                 */
-                url?: string | null;
-                newTab?: boolean | null;
-                /**
-                 * Зависи от снимката отдолу. В оригинала бутоните върху банери са бели.
-                 */
-                style?: ('light' | 'dark') | null;
-              };
-              theme?: ('dark' | 'light') | null;
-            };
-            /**
-             * Подредбата тук определя реда на екрана. Препоръчително 4–5 броя — на широк екран се показват пет колони.
-             */
-            products?: (number | Product)[] | null;
-            showMoreTile?: boolean | null;
-            moreTile?: {
-              /**
-               * Напр. „Вижте всички електроцентрали »".
-               */
-              label?: string | null;
-              /**
-               * Напр. /rakovodstvo-portativni-elektrocentrali. Без линк плочката не се показва.
-               */
-              url?: string | null;
-              /**
-               * Групова снимка на продуктите — стои в долната част на картата.
-               */
-              image?: (number | null) | Media;
-              description?: string | null;
-              secondaryLabel?: string | null;
-              secondaryUrl?: string | null;
-            };
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'bannerProductRow';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            /**
-             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
-             */
-            anchorLabel?: string | null;
-            sectionTitle?: string | null;
-            cards?:
-              | {
-                  heading?: string | null;
-                  description?: string | null;
-                  image?: (number | null) | Media;
-                  cta?: {
-                    label?: string | null;
-                    /**
-                     * Вътрешен път (/products) или пълен адрес към външния магазин.
-                     */
-                    url?: string | null;
-                    newTab?: boolean | null;
-                    /**
-                     * Зависи от снимката отдолу. В оригинала бутоните върху банери са бели.
-                     */
-                    style?: ('light' | 'dark') | null;
-                  };
-                  theme?: ('dark' | 'light') | null;
-                  id?: string | null;
-                }[]
-              | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'promoCards';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            /**
-             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
-             */
-            anchorLabel?: string | null;
-            /**
-             * По избор. В оригинала някои банери са без заглавие над тях.
-             */
-            sectionTitle?: string | null;
-            eyebrow?: string | null;
-            eyebrowColor?: ('white' | 'orange') | null;
-            heading?: string | null;
-            subheading?: string | null;
-            /**
-             * По избор. Напр. „от 1199 €". Празно поле не показва нищо.
-             */
-            priceNote?: string | null;
-            /**
-             * По избор. Без снимка банерът е текст върху фона на страницата.
-             */
-            image?: (number | null) | Media;
-            cta?: {
-              label?: string | null;
-              /**
-               * Вътрешен път (/products) или пълен адрес към външния магазин.
-               */
-              url?: string | null;
-              newTab?: boolean | null;
-              /**
-               * Зависи от снимката отдолу. В оригинала бутоните върху банери са бели.
-               */
-              style?: ('light' | 'dark') | null;
-            };
-            align?: ('left' | 'center' | 'right') | null;
-            theme?: ('dark' | 'light') | null;
-            /**
-             * Само при снимка и тъмна тема (бял текст). Без затъмнение — когато снимката е тъмна сама.
-             */
-            overlay?: ('gradient' | 'none') | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'wideBanner';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            /**
-             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
-             */
-            anchorLabel?: string | null;
-            sectionTitle?: string | null;
-            items?:
-              | {
-                  icon?: ('shield' | 'globe' | 'card' | 'support' | 'return' | 'truck' | 'bolt' | 'certificate') | null;
-                  title?: string | null;
-                  description?: string | null;
-                  id?: string | null;
-                }[]
-              | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'benefitsGrid';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            /**
-             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
-             */
-            anchorLabel?: string | null;
-            sectionTitle?: string | null;
-            testimonials?: (number | Testimonial)[] | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'testimonialsBlock';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            /**
-             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
-             */
-            anchorLabel?: string | null;
-            sectionTitle?: string | null;
-            awards?: (number | Award)[] | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'logoWall';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            /**
-             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
-             */
-            anchorLabel?: string | null;
-            /**
-             * Главното заглавие на страницата. Една такава секция на страница.
-             */
-            heading?: string | null;
-            body?: string | null;
-            image?: (number | null) | Media;
-            /**
-             * По желание. Празно — същата като за компютър.
-             */
-            imageMobile?: (number | null) | Media;
-            /**
-             * За незрящи и за търсачките. Празно — описанието от Медия.
-             */
-            imageAlt?: string | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'pageHero';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'anchorNav';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            /**
-             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
-             */
-            anchorLabel?: string | null;
-            heading?: string | null;
-            body?: string | null;
-            slides?:
-              | {
-                  /**
-                   * Малкият надпис горе вдясно на снимката, напр. „Как работи".
-                   */
-                  label?: string | null;
-                  image?: (number | null) | Media;
-                  /**
-                   * По желание. Празно — същата като за компютър.
-                   */
-                  imageMobile?: (number | null) | Media;
-                  /**
-                   * За незрящи и за търсачките. Празно — описанието от Медия.
-                   */
-                  imageAlt?: string | null;
-                  id?: string | null;
-                }[]
-              | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'contentSlider';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            /**
-             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
-             */
-            anchorLabel?: string | null;
-            heading?: string | null;
-            items?:
-              | {
-                  title?: string | null;
-                  text?: string | null;
-                  id?: string | null;
-                }[]
-              | null;
-            image?: (number | null) | Media;
-            /**
-             * По желание. Празно — същата като за компютър.
-             */
-            imageMobile?: (number | null) | Media;
-            /**
-             * За незрящи и за търсачките. Празно — описанието от Медия.
-             */
-            imageAlt?: string | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'accordionImage';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            /**
-             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
-             */
-            anchorLabel?: string | null;
-            heading?: string | null;
-            body?: string | null;
-            image?: (number | null) | Media;
-            /**
-             * По желание. Празно — същата като за компютър.
-             */
-            imageMobile?: (number | null) | Media;
-            /**
-             * За незрящи и за търсачките. Празно — описанието от Медия.
-             */
-            imageAlt?: string | null;
-            ctaLabel?: string | null;
-            /**
-             * Напр. /kategorii/delta-seriya. Празно — без бутон.
-             */
-            ctaLink?: string | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'splitBanner';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            /**
-             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
-             */
-            anchorLabel?: string | null;
-            /**
-             * Колоните са колкото продуктите — 2 до 4.
-             */
-            products?:
-              | {
-                  product?: (number | null) | Product;
-                  /**
-                   * Напр. „2048Wh | 3000W | 3900W X-Boost". Празно — кратката спецификация на продукта.
-                   */
-                  specLine?: string | null;
-                  id?: string | null;
-                }[]
-              | null;
-            rows?:
-              | {
-                  /**
-                   * Напр. „Лампа 10W:".
-                   */
-                  label?: string | null;
-                  /**
-                   * В реда на колоните отгоре.
-                   */
-                  values?:
-                    | {
-                        value?: string | null;
-                        id?: string | null;
-                      }[]
-                    | null;
-                  id?: string | null;
-                }[]
-              | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'runtimeCompare';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            /**
-             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
-             */
-            anchorLabel?: string | null;
-            image?: (number | null) | Media;
-            /**
-             * По желание. Празно — същата като за компютър.
-             */
-            imageMobile?: (number | null) | Media;
-            /**
-             * За незрящи и за търсачките. Празно — описанието от Медия.
-             */
-            imageAlt?: string | null;
-            heading?: string | null;
-            subheading?: string | null;
-            body?: string | null;
-            /**
-             * Бутонът води към магазина на този продукт.
-             */
-            product?: (number | null) | Product;
-            /**
-             * При „по заявка" и „изчерпан" надписът следва наличността.
-             */
-            ctaLabel?: string | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'imageWithText';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            /**
-             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
-             */
-            anchorLabel?: string | null;
-            heading?: string | null;
-            items?:
-              | {
-                  question?: string | null;
-                  answer?: string | null;
-                  id?: string | null;
-                }[]
-              | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'faqBlock';
-          }
-        | {
-            /**
-             * Секцията остава тук, но не се показва на сайта.
-             */
-            hidden?: boolean | null;
-            /**
-             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
-             */
-            anchorLabel?: string | null;
-            text?: string | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'legalText';
-          }
-      )[]
+  number?: string | null;
+  status: 'new' | 'in-progress' | 'offer-sent' | 'won' | 'lost';
+  /**
+   * Вътрешни — не се пращат на клиента.
+   */
+  notes?: string | null;
+  clientType?: ('company' | 'municipality' | 'institution' | 'school' | 'hospital' | 'other') | null;
+  organization?: string | null;
+  eik?: string | null;
+  city?: string | null;
+  contactName?: string | null;
+  position?: string | null;
+  email?: string | null;
+  phone?: string | null;
+  items?:
+    | {
+        product?: (number | null) | Product;
+        title?: string | null;
+        url?: string | null;
+        quantity?: number | null;
+        id?: string | null;
+      }[]
     | null;
-  metaTitle?: string | null;
-  metaDescription?: string | null;
-  metaImage?: (number | null) | Media;
+  /**
+   * Брой продукти / общо бройки — за колоната в списъка.
+   */
+  itemsSummary?: string | null;
+  otherProducts?: string | null;
+  purposes?:
+    ('building-backup' | 'emergency-teams' | 'off-grid' | 'events' | 'schools' | 'healthcare' | 'other')[] | null;
+  timeframe?: ('within-month' | '1-3-months' | 'later' | 'unknown') | null;
+  budget?: string | null;
+  procurement?: ('direct' | 'public-procurement' | 'framework' | 'unknown') | null;
+  documents?: ('offer' | 'proforma')[] | null;
+  deliveryTo?: string | null;
+  consultation?: ('yes' | 'no') | null;
+  attachment?: (number | null) | QuoteFile;
+  details?: string | null;
+  consent?: boolean | null;
+  ip?: string | null;
+  userAgent?: string | null;
+  mailLog?: string | null;
   updatedAt: string;
   createdAt: string;
-  _status?: ('draft' | 'published') | null;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "media".
- */
-export interface Media {
-  id: number;
-  /**
-   * Описание на изображението за екранни четци и SEO. Задължително.
-   */
-  alt: string;
-  /**
-   * Името на файла, преди да получи смислено име. Само за справка.
-   */
-  originalName?: string | null;
-  trimmed?: {
-    filename?: string | null;
-    width?: number | null;
-    height?: number | null;
-  };
-  updatedAt: string;
-  createdAt: string;
-  url?: string | null;
-  thumbnailURL?: string | null;
-  filename?: string | null;
-  mimeType?: string | null;
-  filesize?: number | null;
-  width?: number | null;
-  height?: number | null;
-  focalX?: number | null;
-  focalY?: number | null;
-  sizes?: {
-    thumbnail?: {
-      url?: string | null;
-      width?: number | null;
-      height?: number | null;
-      mimeType?: string | null;
-      filesize?: number | null;
-      filename?: string | null;
-    };
-    card?: {
-      url?: string | null;
-      width?: number | null;
-      height?: number | null;
-      mimeType?: string | null;
-      filesize?: number | null;
-      filename?: string | null;
-    };
-    banner?: {
-      url?: string | null;
-      width?: number | null;
-      height?: number | null;
-      mimeType?: string | null;
-      filesize?: number | null;
-      filename?: string | null;
-    };
-    wide?: {
-      url?: string | null;
-      width?: number | null;
-      height?: number | null;
-      mimeType?: string | null;
-      filesize?: number | null;
-      filename?: string | null;
-    };
-    content?: {
-      url?: string | null;
-      width?: number | null;
-      height?: number | null;
-      mimeType?: string | null;
-      filesize?: number | null;
-      filename?: string | null;
-    };
-    large?: {
-      url?: string | null;
-      width?: number | null;
-      height?: number | null;
-      mimeType?: string | null;
-      filesize?: number | null;
-      filename?: string | null;
-    };
-    full?: {
-      url?: string | null;
-      width?: number | null;
-      height?: number | null;
-      mimeType?: string | null;
-      filesize?: number | null;
-      filename?: string | null;
-    };
-  };
 }
 /**
  * Продуктовата страница се сглобява от секции, също като обикновените страници. Продукт без добавени секции показва галерия, цена, бутон и описание.
@@ -1782,7 +1136,27 @@ export interface Category {
             sectionTitle?: string | null;
             items?:
               | {
-                  icon?: ('shield' | 'globe' | 'card' | 'support' | 'return' | 'truck' | 'bolt' | 'certificate') | null;
+                  icon?:
+                    | (
+                        | 'shield'
+                        | 'globe'
+                        | 'card'
+                        | 'support'
+                        | 'return'
+                        | 'truck'
+                        | 'bolt'
+                        | 'certificate'
+                        | 'tag'
+                        | 'checklist'
+                        | 'cursor'
+                        | 'send'
+                        | 'envelope'
+                        | 'buildings'
+                        | 'bank'
+                        | 'school'
+                        | 'wrench'
+                      )
+                    | null;
                   title?: string | null;
                   description?: string | null;
                   id?: string | null;
@@ -2062,6 +1436,70 @@ export interface Category {
             blockName?: string | null;
             blockType: 'legalText';
           }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            /**
+             * Главното заглавие на страницата. Една такава секция на страница.
+             */
+            heading?: string | null;
+            body?: string | null;
+            ctaLabel?: string | null;
+            /**
+             * Напр. „#zayavka" — скролва до секцията с тази котва.
+             */
+            ctaUrl?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'pageIntro';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            /**
+             * Адресът „#zayavka" скролва дотук — напр. от бутона в заглавието.
+             */
+            formAnchor?: string | null;
+            heading?: string | null;
+            intro?: string | null;
+            /**
+             * Всеки таб показва публикуваните продукти от категорията и подкатегориите ѝ. Празно — табовете са главните категории с продукти.
+             */
+            tabs?:
+              | {
+                  label?: string | null;
+                  category?: (number | null) | Category;
+                  id?: string | null;
+                }[]
+              | null;
+            /**
+             * Линкът в отметката за съгласие.
+             */
+            privacyUrl?: string | null;
+            /**
+             * {телефон} и {имейл} се заместват с тези от „Общи настройки" (същите като във футъра) — като линкове.
+             */
+            below?: string | null;
+            successTitle?: string | null;
+            successText?: string | null;
+            successCopy?: string | null;
+            successButton?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'quoteForm';
+          }
       )[]
     | null;
   accessoriesPage?: {
@@ -2100,6 +1538,796 @@ export interface Category {
   noindex?: boolean | null;
   updatedAt: string;
   createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "media".
+ */
+export interface Media {
+  id: number;
+  /**
+   * Описание на изображението за екранни четци и SEO. Задължително.
+   */
+  alt: string;
+  /**
+   * Името на файла, преди да получи смислено име. Само за справка.
+   */
+  originalName?: string | null;
+  trimmed?: {
+    filename?: string | null;
+    width?: number | null;
+    height?: number | null;
+  };
+  updatedAt: string;
+  createdAt: string;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  focalX?: number | null;
+  focalY?: number | null;
+  sizes?: {
+    thumbnail?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    card?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    banner?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    wide?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    content?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    large?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    full?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+  };
+}
+/**
+ * Всяка страница се сглобява от секции. Добавяйте, местете (с дръжката вляво) и триете секции свободно.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "pages".
+ */
+export interface Page {
+  id: number;
+  _order?: string | null;
+  title: string;
+  /**
+   * Само малки латински букви, цифри и тирета. Кирилицата се транслитерира, интервалите стават тирета, представки като „products/" се махат. Не е нужно да пишете пътя — само името.
+   */
+  slug: string;
+  layout?:
+    | (
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            /**
+             * Нула спира автоматичната смяна. Важи само при повече от един слайд.
+             */
+            autoplaySeconds?: number | null;
+            slides?:
+              | {
+                  /**
+                   * По избор. Малка картинка — в оригинала това е „30 дни гаранция за цената". Показва се с истинската си височина, до 40px.
+                   */
+                  badgeImage?: (number | null) | Media;
+                  /**
+                   * Малкият текст над заглавието. Напр. „Серия EcoFlow STREAM".
+                   */
+                  eyebrow?: string | null;
+                  eyebrowColor?: ('white' | 'orange') | null;
+                  heading?: string | null;
+                  subheading?: string | null;
+                  /**
+                   * Напр. срок на промоцията: „5 – 31 август".
+                   */
+                  note?: string | null;
+                  /**
+                   * Препоръчително 2400×1000px. Текстът ляга върху него.
+                   */
+                  image?: (number | null) | Media;
+                  /**
+                   * По желание. Ако е празно, се ползва основното.
+                   */
+                  imageMobile?: (number | null) | Media;
+                  cta?: {
+                    label?: string | null;
+                    /**
+                     * Вътрешен път (/products) или пълен адрес към външния магазин.
+                     */
+                    url?: string | null;
+                    newTab?: boolean | null;
+                    /**
+                     * Зависи от снимката отдолу. В оригинала бутоните върху банери са бели.
+                     */
+                    style?: ('light' | 'dark') | null;
+                  };
+                  align?: ('left' | 'center' | 'right') | null;
+                  theme?: ('dark' | 'light') | null;
+                  /**
+                   * Увеличете, ако текстът не се чете добре върху снимката.
+                   */
+                  overlay?: ('none' | 'light' | 'medium' | 'strong') | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'heroBanner';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'categoryStrip';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            sectionTitle?: string | null;
+            subtitle?: string | null;
+            products?: (number | Product)[] | null;
+            /**
+             * Избрана — показват се ВСИЧКИ публикувани продукти от категорията и подкатегориите ѝ, по реда им, и ръчният списък не се ползва.
+             */
+            fromCategory?: (number | null) | Category;
+            cardStyle?: ('image' | 'price') | null;
+            /**
+             * Решетката е за дълги списъци (напр. всички продукти от категория) — в лентата крайната карта стои отрязана.
+             */
+            arrangement?: ('row' | 'grid') | null;
+            cardTheme?: ('light' | 'dark') | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'productCarousel';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            heading?: string | null;
+            cards?:
+              | {
+                  /**
+                   * Запълва цялата карта. Препоръчително 800×1000px (портрет).
+                   */
+                  image?: (number | null) | Media;
+                  /**
+                   * Малкият оранжев текст най-отгоре. Напр. „Ново" или „Горещо 🔥".
+                   */
+                  tag?: string | null;
+                  heading?: string | null;
+                  subheading?: string | null;
+                  textTheme?: ('light' | 'dark') | null;
+                  /**
+                   * До два бутона на един ред под текста. Може и без нито един.
+                   */
+                  buttons?:
+                    | {
+                        label?: string | null;
+                        url?: string | null;
+                        style?: ('white' | 'outline' | 'black') | null;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'bannerCarousel';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            /**
+             * Напр. "Домашно резервно захранване".
+             */
+            sectionTitle?: string | null;
+            showBanner?: boolean | null;
+            banner?: {
+              eyebrow?: string | null;
+              eyebrowColor?: ('white' | 'orange') | null;
+              heading?: string | null;
+              subheading?: string | null;
+              /**
+               * Избран — под подзаглавието излиза текущата цена на продукта (и старата, ако има). Чернова не дава цена.
+               */
+              product?: (number | null) | Product;
+              /**
+               * Напр. "спестявате до 1 200 €". За цена на продукт ползвайте „Цена от продукт".
+               */
+              priceNote?: string | null;
+              /**
+               * Препоръчително 2400×800px. Остава задължително и при видео — показва се, докато то се зареди.
+               */
+              image?: (number | null) | Media;
+              /**
+               * По избор. MP4 (H.264), 1920px широчина, без звук, до 20 MB. Върти се само, без бутони. При включена системна настройка за намалено движение се показва снимката.
+               */
+              video?: (number | null) | Media;
+              cta?: {
+                label?: string | null;
+                /**
+                 * Вътрешен път (/products) или пълен адрес към външния магазин.
+                 */
+                url?: string | null;
+                newTab?: boolean | null;
+                /**
+                 * Зависи от снимката отдолу. В оригинала бутоните върху банери са бели.
+                 */
+                style?: ('light' | 'dark') | null;
+              };
+              theme?: ('dark' | 'light') | null;
+            };
+            /**
+             * Подредбата тук определя реда на екрана. Препоръчително 4–5 броя — на широк екран се показват пет колони.
+             */
+            products?: (number | Product)[] | null;
+            showMoreTile?: boolean | null;
+            moreTile?: {
+              /**
+               * Напр. „Вижте всички електроцентрали »".
+               */
+              label?: string | null;
+              /**
+               * Напр. /rakovodstvo-portativni-elektrocentrali. Без линк плочката не се показва.
+               */
+              url?: string | null;
+              /**
+               * Групова снимка на продуктите — стои в долната част на картата.
+               */
+              image?: (number | null) | Media;
+              description?: string | null;
+              secondaryLabel?: string | null;
+              secondaryUrl?: string | null;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'bannerProductRow';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            sectionTitle?: string | null;
+            cards?:
+              | {
+                  heading?: string | null;
+                  description?: string | null;
+                  image?: (number | null) | Media;
+                  cta?: {
+                    label?: string | null;
+                    /**
+                     * Вътрешен път (/products) или пълен адрес към външния магазин.
+                     */
+                    url?: string | null;
+                    newTab?: boolean | null;
+                    /**
+                     * Зависи от снимката отдолу. В оригинала бутоните върху банери са бели.
+                     */
+                    style?: ('light' | 'dark') | null;
+                  };
+                  theme?: ('dark' | 'light') | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'promoCards';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            /**
+             * По избор. В оригинала някои банери са без заглавие над тях.
+             */
+            sectionTitle?: string | null;
+            eyebrow?: string | null;
+            eyebrowColor?: ('white' | 'orange') | null;
+            heading?: string | null;
+            subheading?: string | null;
+            /**
+             * По избор. Напр. „от 1199 €". Празно поле не показва нищо.
+             */
+            priceNote?: string | null;
+            /**
+             * По избор. Без снимка банерът е текст върху фона на страницата.
+             */
+            image?: (number | null) | Media;
+            cta?: {
+              label?: string | null;
+              /**
+               * Вътрешен път (/products) или пълен адрес към външния магазин.
+               */
+              url?: string | null;
+              newTab?: boolean | null;
+              /**
+               * Зависи от снимката отдолу. В оригинала бутоните върху банери са бели.
+               */
+              style?: ('light' | 'dark') | null;
+            };
+            align?: ('left' | 'center' | 'right') | null;
+            theme?: ('dark' | 'light') | null;
+            /**
+             * Само при снимка и тъмна тема (бял текст). Без затъмнение — когато снимката е тъмна сама.
+             */
+            overlay?: ('gradient' | 'none') | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'wideBanner';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            sectionTitle?: string | null;
+            items?:
+              | {
+                  icon?:
+                    | (
+                        | 'shield'
+                        | 'globe'
+                        | 'card'
+                        | 'support'
+                        | 'return'
+                        | 'truck'
+                        | 'bolt'
+                        | 'certificate'
+                        | 'tag'
+                        | 'checklist'
+                        | 'cursor'
+                        | 'send'
+                        | 'envelope'
+                        | 'buildings'
+                        | 'bank'
+                        | 'school'
+                        | 'wrench'
+                      )
+                    | null;
+                  title?: string | null;
+                  description?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'benefitsGrid';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            sectionTitle?: string | null;
+            testimonials?: (number | Testimonial)[] | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'testimonialsBlock';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            sectionTitle?: string | null;
+            awards?: (number | Award)[] | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'logoWall';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            /**
+             * Главното заглавие на страницата. Една такава секция на страница.
+             */
+            heading?: string | null;
+            body?: string | null;
+            image?: (number | null) | Media;
+            /**
+             * По желание. Празно — същата като за компютър.
+             */
+            imageMobile?: (number | null) | Media;
+            /**
+             * За незрящи и за търсачките. Празно — описанието от Медия.
+             */
+            imageAlt?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'pageHero';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'anchorNav';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            heading?: string | null;
+            body?: string | null;
+            slides?:
+              | {
+                  /**
+                   * Малкият надпис горе вдясно на снимката, напр. „Как работи".
+                   */
+                  label?: string | null;
+                  image?: (number | null) | Media;
+                  /**
+                   * По желание. Празно — същата като за компютър.
+                   */
+                  imageMobile?: (number | null) | Media;
+                  /**
+                   * За незрящи и за търсачките. Празно — описанието от Медия.
+                   */
+                  imageAlt?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'contentSlider';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            heading?: string | null;
+            items?:
+              | {
+                  title?: string | null;
+                  text?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            image?: (number | null) | Media;
+            /**
+             * По желание. Празно — същата като за компютър.
+             */
+            imageMobile?: (number | null) | Media;
+            /**
+             * За незрящи и за търсачките. Празно — описанието от Медия.
+             */
+            imageAlt?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'accordionImage';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            heading?: string | null;
+            body?: string | null;
+            image?: (number | null) | Media;
+            /**
+             * По желание. Празно — същата като за компютър.
+             */
+            imageMobile?: (number | null) | Media;
+            /**
+             * За незрящи и за търсачките. Празно — описанието от Медия.
+             */
+            imageAlt?: string | null;
+            ctaLabel?: string | null;
+            /**
+             * Напр. /kategorii/delta-seriya. Празно — без бутон.
+             */
+            ctaLink?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'splitBanner';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            /**
+             * Колоните са колкото продуктите — 2 до 4.
+             */
+            products?:
+              | {
+                  product?: (number | null) | Product;
+                  /**
+                   * Напр. „2048Wh | 3000W | 3900W X-Boost". Празно — кратката спецификация на продукта.
+                   */
+                  specLine?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            rows?:
+              | {
+                  /**
+                   * Напр. „Лампа 10W:".
+                   */
+                  label?: string | null;
+                  /**
+                   * В реда на колоните отгоре.
+                   */
+                  values?:
+                    | {
+                        value?: string | null;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'runtimeCompare';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            image?: (number | null) | Media;
+            /**
+             * По желание. Празно — същата като за компютър.
+             */
+            imageMobile?: (number | null) | Media;
+            /**
+             * За незрящи и за търсачките. Празно — описанието от Медия.
+             */
+            imageAlt?: string | null;
+            heading?: string | null;
+            subheading?: string | null;
+            body?: string | null;
+            /**
+             * Бутонът води към магазина на този продукт.
+             */
+            product?: (number | null) | Product;
+            /**
+             * При „по заявка" и „изчерпан" надписът следва наличността.
+             */
+            ctaLabel?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'imageWithText';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            heading?: string | null;
+            items?:
+              | {
+                  question?: string | null;
+                  answer?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'faqBlock';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            text?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'legalText';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            /**
+             * Главното заглавие на страницата. Една такава секция на страница.
+             */
+            heading?: string | null;
+            body?: string | null;
+            ctaLabel?: string | null;
+            /**
+             * Напр. „#zayavka" — скролва до секцията с тази котва.
+             */
+            ctaUrl?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'pageIntro';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            /**
+             * Адресът „#zayavka" скролва дотук — напр. от бутона в заглавието.
+             */
+            formAnchor?: string | null;
+            heading?: string | null;
+            intro?: string | null;
+            /**
+             * Всеки таб показва публикуваните продукти от категорията и подкатегориите ѝ. Празно — табовете са главните категории с продукти.
+             */
+            tabs?:
+              | {
+                  label?: string | null;
+                  category?: (number | null) | Category;
+                  id?: string | null;
+                }[]
+              | null;
+            /**
+             * Линкът в отметката за съгласие.
+             */
+            privacyUrl?: string | null;
+            /**
+             * {телефон} и {имейл} се заместват с тези от „Общи настройки" (същите като във футъра) — като линкове.
+             */
+            below?: string | null;
+            successTitle?: string | null;
+            successText?: string | null;
+            successCopy?: string | null;
+            successButton?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'quoteForm';
+          }
+      )[]
+    | null;
+  metaTitle?: string | null;
+  metaDescription?: string | null;
+  metaImage?: (number | null) | Media;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -2161,6 +2389,25 @@ export interface Attribute {
   categories?: (number | Category)[] | null;
   updatedAt: string;
   createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "quote-files".
+ */
+export interface QuoteFile {
+  id: number;
+  updatedAt: string;
+  createdAt: string;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  focalX?: number | null;
+  focalY?: number | null;
+  sizes?: {};
 }
 /**
  * Всеки панел е това, което се показва вдясно в мега менюто, когато потребителят посочи подточка от сайдбара. Секциите му са списъци с продукти — сайтът показва точно тях, в този ред.
@@ -2459,6 +2706,14 @@ export interface PayloadLockedDocument {
   id: number;
   document?:
     | ({
+        relationTo: 'quote-requests';
+        value: number | QuoteRequest;
+      } | null)
+    | ({
+        relationTo: 'quote-files';
+        value: number | QuoteFile;
+      } | null)
+    | ({
         relationTo: 'pages';
         value: number | Page;
       } | null)
@@ -2547,6 +2802,67 @@ export interface PayloadMigration {
   batch?: number | null;
   updatedAt: string;
   createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "quote-requests_select".
+ */
+export interface QuoteRequestsSelect<T extends boolean = true> {
+  number?: T;
+  status?: T;
+  notes?: T;
+  clientType?: T;
+  organization?: T;
+  eik?: T;
+  city?: T;
+  contactName?: T;
+  position?: T;
+  email?: T;
+  phone?: T;
+  items?:
+    | T
+    | {
+        product?: T;
+        title?: T;
+        url?: T;
+        quantity?: T;
+        id?: T;
+      };
+  itemsSummary?: T;
+  otherProducts?: T;
+  purposes?: T;
+  timeframe?: T;
+  budget?: T;
+  procurement?: T;
+  documents?: T;
+  deliveryTo?: T;
+  consultation?: T;
+  attachment?: T;
+  details?: T;
+  consent?: T;
+  ip?: T;
+  userAgent?: T;
+  mailLog?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "quote-files_select".
+ */
+export interface QuoteFilesSelect<T extends boolean = true> {
+  updatedAt?: T;
+  createdAt?: T;
+  url?: T;
+  thumbnailURL?: T;
+  filename?: T;
+  mimeType?: T;
+  filesize?: T;
+  width?: T;
+  height?: T;
+  focalX?: T;
+  focalY?: T;
+  sizes?: T | {};
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -2912,6 +3228,42 @@ export interface PagesSelect<T extends boolean = true> {
               hidden?: T;
               anchorLabel?: T;
               text?: T;
+              id?: T;
+              blockName?: T;
+            };
+        pageIntro?:
+          | T
+          | {
+              hidden?: T;
+              anchorLabel?: T;
+              heading?: T;
+              body?: T;
+              ctaLabel?: T;
+              ctaUrl?: T;
+              id?: T;
+              blockName?: T;
+            };
+        quoteForm?:
+          | T
+          | {
+              hidden?: T;
+              anchorLabel?: T;
+              formAnchor?: T;
+              heading?: T;
+              intro?: T;
+              tabs?:
+                | T
+                | {
+                    label?: T;
+                    category?: T;
+                    id?: T;
+                  };
+              privacyUrl?: T;
+              below?: T;
+              successTitle?: T;
+              successText?: T;
+              successCopy?: T;
+              successButton?: T;
               id?: T;
               blockName?: T;
             };
@@ -3592,6 +3944,42 @@ export interface CategoriesSelect<T extends boolean = true> {
               hidden?: T;
               anchorLabel?: T;
               text?: T;
+              id?: T;
+              blockName?: T;
+            };
+        pageIntro?:
+          | T
+          | {
+              hidden?: T;
+              anchorLabel?: T;
+              heading?: T;
+              body?: T;
+              ctaLabel?: T;
+              ctaUrl?: T;
+              id?: T;
+              blockName?: T;
+            };
+        quoteForm?:
+          | T
+          | {
+              hidden?: T;
+              anchorLabel?: T;
+              formAnchor?: T;
+              heading?: T;
+              intro?: T;
+              tabs?:
+                | T
+                | {
+                    label?: T;
+                    category?: T;
+                    id?: T;
+                  };
+              privacyUrl?: T;
+              below?: T;
+              successTitle?: T;
+              successText?: T;
+              successCopy?: T;
+              successButton?: T;
               id?: T;
               blockName?: T;
             };
