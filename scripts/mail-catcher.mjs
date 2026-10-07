@@ -26,17 +26,24 @@ fs.mkdirSync(DIR, { recursive: true })
 
 const unfold = (h) => h.replace(/\r?\n[ \t]+/g, ' ')
 
+/**
+ * Кодираните думи (RFC 2047) се събират по байтове и чак после се
+ * разкодират: nodemailer реже дългата тема насред буква на кирилицата.
+ */
 const decodeWords = (s) =>
-  s.replace(/=\?([^?]+)\?([BQbq])\?([^?]*)\?=/g, (_, cs, enc, text) => {
-    const buf =
-      enc.toUpperCase() === 'B'
-        ? Buffer.from(text, 'base64')
-        : Buffer.from(
-            text.replace(/_/g, ' ').replace(/=([0-9A-F]{2})/gi, (_, h) => String.fromCharCode(parseInt(h, 16))),
-            'latin1',
-          )
-    return new TextDecoder(cs).decode(buf)
-  }).replace(/\?=\s+=\?/g, '')
+  s.replace(/(=\?[^?]+\?[BQbq]\?[^?]*\?=)(\s+(?==\?))?/g, '$1').replace(/(?:=\?([^?]+)\?([BQbq])\?([^?]*)\?=)+/g, (run) => {
+    let cs = 'utf-8'
+    const bytes = []
+    for (const m of run.matchAll(/=\?([^?]+)\?([BQbq])\?([^?]*)\?=/g)) {
+      cs = m[1]
+      const buf =
+        m[2].toUpperCase() === 'B'
+          ? Buffer.from(m[3], 'base64')
+          : Buffer.from(m[3].replace(/_/g, ' ').replace(/=([0-9A-F]{2})/gi, (_, h) => String.fromCharCode(parseInt(h, 16))), 'latin1')
+      bytes.push(buf)
+    }
+    return new TextDecoder(cs).decode(Buffer.concat(bytes))
+  })
 
 const parseHeaders = (raw) => {
   const out = {}

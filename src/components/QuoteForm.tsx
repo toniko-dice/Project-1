@@ -47,8 +47,8 @@ const EMPTY: Fields = {
 
 /* ─────────── дребни части ─────────── */
 
-const inputCls = (bad: boolean) =>
-  `h-11 w-full rounded-lg border bg-surface px-3 text-[15px] text-ink outline-none transition-colors placeholder:text-ink-muted/70 focus:border-ink ${
+const inputCls = (bad: boolean, width = 'w-full') =>
+  `h-11 ${width} rounded-lg border bg-surface px-3 text-[15px] text-ink outline-none transition-colors placeholder:text-ink-muted/70 focus:border-ink ${
     bad ? 'border-alert' : 'border-line-strong'
   }`
 
@@ -733,7 +733,7 @@ export const QuoteFormClient = ({
             </button>
             <input
               id={`${uid}-captcha`}
-              className={`${inputCls(!!err('captcha'))} w-44`}
+              className={inputCls(!!err('captcha'), 'w-44')}
               value={captchaAnswer}
               onChange={(e) => setCaptchaAnswer(e.target.value)}
               autoComplete="off"
