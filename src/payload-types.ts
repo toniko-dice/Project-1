@@ -164,7 +164,7 @@ export interface UserAuthOperations {
   };
 }
 /**
- * Заявките от страницата „Оферта за фирми". Статусът и бележките се редактират; останалото е както го е изпратил клиентът.
+ * Заявките от страницата „Оферта за фирми". Всичко се редактира (клиентът може да е сбъркал) — освен номера, датата, IP и браузъра. Промените не пращат имейли.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "quote-requests".
@@ -180,6 +180,10 @@ export interface QuoteRequest {
    * Вътрешни — не се пращат на клиента.
    */
   notes?: string | null;
+  /**
+   * Попълва се сам при запис от админа. Промените не пращат имейли.
+   */
+  lastChange?: string | null;
   clientType?: ('company' | 'municipality' | 'institution' | 'school' | 'hospital' | 'other') | null;
   organization?: string | null;
   eik?: string | null;
@@ -191,9 +195,9 @@ export interface QuoteRequest {
   items?:
     | {
         product?: (number | null) | Product;
+        quantity?: number | null;
         title?: string | null;
         url?: string | null;
-        quantity?: number | null;
         id?: string | null;
       }[]
     | null;
@@ -1489,7 +1493,7 @@ export interface Category {
              */
             privacyUrl?: string | null;
             /**
-             * {телефон} и {имейл} се заместват с тези от „Общи настройки" (същите като във футъра) — като линкове.
+             * По избор; празно — нищо. {телефон} и {имейл} се заместват с тези от „Общи настройки" (същите като във футъра) — като линкове.
              */
             below?: string | null;
             successTitle?: string | null;
@@ -1557,6 +1561,7 @@ export interface Media {
     filename?: string | null;
     width?: number | null;
     height?: number | null;
+    small?: string | null;
   };
   updatedAt: string;
   createdAt: string;
@@ -2309,7 +2314,7 @@ export interface Page {
              */
             privacyUrl?: string | null;
             /**
-             * {телефон} и {имейл} се заместват с тези от „Общи настройки" (същите като във футъра) — като линкове.
+             * По избор; празно — нищо. {телефон} и {имейл} се заместват с тези от „Общи настройки" (същите като във футъра) — като линкове.
              */
             below?: string | null;
             successTitle?: string | null;
@@ -2811,6 +2816,7 @@ export interface QuoteRequestsSelect<T extends boolean = true> {
   number?: T;
   status?: T;
   notes?: T;
+  lastChange?: T;
   clientType?: T;
   organization?: T;
   eik?: T;
@@ -2823,9 +2829,9 @@ export interface QuoteRequestsSelect<T extends boolean = true> {
     | T
     | {
         product?: T;
+        quantity?: T;
         title?: T;
         url?: T;
-        quantity?: T;
         id?: T;
       };
   itemsSummary?: T;
@@ -4060,6 +4066,7 @@ export interface MediaSelect<T extends boolean = true> {
         filename?: T;
         width?: T;
         height?: T;
+        small?: T;
       };
   updatedAt?: T;
   createdAt?: T;

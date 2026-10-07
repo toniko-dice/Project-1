@@ -40,6 +40,7 @@ import * as migration_20261007_083826_karti_trimmed from './20261007_083826_kart
 import * as migration_20261007_090942_carousel_arrangement from './20261007_090942_carousel_arrangement';
 import * as migration_20261007_094656_wide_banner_overlay from './20261007_094656_wide_banner_overlay';
 import * as migration_20261007_104241_quote_requests from './20261007_104241_quote_requests';
+import * as migration_20261007_112559_quote_edit_versions from './20261007_112559_quote_edit_versions';
 
 export const migrations = [
   {
@@ -250,6 +251,11 @@ export const migrations = [
   {
     up: migration_20261007_104241_quote_requests.up,
     down: migration_20261007_104241_quote_requests.down,
-    name: '20261007_104241_quote_requests'
+    name: '20261007_104241_quote_requests',
+  },
+  {
+    up: migration_20261007_112559_quote_edit_versions.up,
+    down: migration_20261007_112559_quote_edit_versions.down,
+    name: '20261007_112559_quote_edit_versions'
   },
 ];
