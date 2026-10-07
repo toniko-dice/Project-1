@@ -1,6 +1,10 @@
 import { QuoteStatusCell as QuoteStatusCell_c7ed968cdd7b1d32526e78b157b6089d } from '@/components/admin/QuoteStatusCell'
+import { CreateOfferButton as CreateOfferButton_4c9623afcf8f24e7a4c58847cf8756e8 } from '@/components/admin/CreateOfferButton'
 import { QuoteItemsTable as QuoteItemsTable_bf176bac9e3eb29de09246a1033d4811 } from '@/components/admin/QuoteItemsTable'
 import { RowLabel as RowLabel_7f4fa5fc68fb5a0a92393f6444a57fbd } from '@/components/admin/RowLabel'
+import { OfferActions as OfferActions_516e5252b2cea7af8808925ab7755b81 } from '@/components/admin/OfferActions'
+import { OfferStatusCell as OfferStatusCell_9823563d31c638539afc242672ac175b } from '@/components/admin/OfferStatusCell'
+import { OfferTotals as OfferTotals_fcf641b6175e776be14af5ff5d1f19fd } from '@/components/admin/OfferTotals'
 import { Note as Note_b1f9a6b9bae36f5ee25cc75b578bb654 } from '@/components/admin/Note'
 import { BlockLabel as BlockLabel_65d5559e4024d0730eedfbb5dfb037d8 } from '@/components/admin/BlockLabel'
 import { CharCounter as CharCounter_df79ae1a509e474e617a96ef4417adcd } from '@/components/admin/CharCounter'
@@ -37,8 +41,12 @@ import { CollectionCards as CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1 } f
 /** @type import('payload').ImportMap */
 export const importMap = {
   "@/components/admin/QuoteStatusCell#QuoteStatusCell": QuoteStatusCell_c7ed968cdd7b1d32526e78b157b6089d,
+  "@/components/admin/CreateOfferButton#CreateOfferButton": CreateOfferButton_4c9623afcf8f24e7a4c58847cf8756e8,
   "@/components/admin/QuoteItemsTable#QuoteItemsTable": QuoteItemsTable_bf176bac9e3eb29de09246a1033d4811,
   "@/components/admin/RowLabel#RowLabel": RowLabel_7f4fa5fc68fb5a0a92393f6444a57fbd,
+  "@/components/admin/OfferActions#OfferActions": OfferActions_516e5252b2cea7af8808925ab7755b81,
+  "@/components/admin/OfferStatusCell#OfferStatusCell": OfferStatusCell_9823563d31c638539afc242672ac175b,
+  "@/components/admin/OfferTotals#OfferTotals": OfferTotals_fcf641b6175e776be14af5ff5d1f19fd,
   "@/components/admin/Note#Note": Note_b1f9a6b9bae36f5ee25cc75b578bb654,
   "@/components/admin/BlockLabel#BlockLabel": BlockLabel_65d5559e4024d0730eedfbb5dfb037d8,
   "@/components/admin/CharCounter#CharCounter": CharCounter_df79ae1a509e474e617a96ef4417adcd,

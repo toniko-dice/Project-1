@@ -68,6 +68,7 @@ export interface Config {
   blocks: {};
   collections: {
     'quote-requests': QuoteRequest;
+    offers: Offer;
     'quote-files': QuoteFile;
     pages: Page;
     products: Product;
@@ -87,9 +88,14 @@ export interface Config {
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
   };
-  collectionsJoins: {};
+  collectionsJoins: {
+    'quote-requests': {
+      offers: 'offers';
+    };
+  };
   collectionsSelect: {
     'quote-requests': QuoteRequestsSelect<false> | QuoteRequestsSelect<true>;
+    offers: OffersSelect<false> | OffersSelect<true>;
     'quote-files': QuoteFilesSelect<false> | QuoteFilesSelect<true>;
     pages: PagesSelect<false> | PagesSelect<true>;
     products: ProductsSelect<false> | ProductsSelect<true>;
@@ -119,6 +125,7 @@ export interface Config {
     design: Design;
     'site-settings': SiteSetting;
     'filter-order': FilterOrder;
+    'offer-settings': OfferSetting;
     'payload-jobs-stats': PayloadJobsStat;
   };
   globalsSelect: {
@@ -127,6 +134,7 @@ export interface Config {
     design: DesignSelect<false> | DesignSelect<true>;
     'site-settings': SiteSettingsSelect<false> | SiteSettingsSelect<true>;
     'filter-order': FilterOrderSelect<false> | FilterOrderSelect<true>;
+    'offer-settings': OfferSettingsSelect<false> | OfferSettingsSelect<true>;
     'payload-jobs-stats': PayloadJobsStatsSelect<false> | PayloadJobsStatsSelect<true>;
   };
   locale: null;
@@ -184,6 +192,11 @@ export interface QuoteRequest {
    * Попълва се сам при запис от админа. Промените не пращат имейли.
    */
   lastChange?: string | null;
+  offers?: {
+    docs?: (number | Offer)[];
+    hasNextPage?: boolean;
+    totalDocs?: number;
+  };
   clientType?: ('company' | 'municipality' | 'institution' | 'school' | 'hospital' | 'other') | null;
   organization?: string | null;
   eik?: string | null;
@@ -197,6 +210,9 @@ export interface QuoteRequest {
         product?: (number | null) | Product;
         quantity?: number | null;
         title?: string | null;
+        sku?: string | null;
+        ean?: string | null;
+        image?: (number | null) | Media;
         url?: string | null;
         id?: string | null;
       }[]
@@ -220,6 +236,85 @@ export interface QuoteRequest {
   ip?: string | null;
   userAgent?: string | null;
   mailLog?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "offers".
+ */
+export interface Offer {
+  id: number;
+  /**
+   * ОФ-ГГГГ-NNNN — дава се при първия запис.
+   */
+  number?: string | null;
+  status: 'draft' | 'sent' | 'accepted' | 'rejected';
+  quoteRequest?: (number | null) | QuoteRequest;
+  requestNumber?: string | null;
+  date?: string | null;
+  /**
+   * Празно — датата + валидността.
+   */
+  validUntil?: string | null;
+  client?: {
+    organization?: string | null;
+    eik?: string | null;
+    vatNumber?: string | null;
+    address?: string | null;
+    contactPerson?: string | null;
+    email?: string | null;
+    phone?: string | null;
+  };
+  /**
+   * Продукт от сайта или свободен ред (само име). Име, SKU, EAN, снимка и цена се попълват от продукта при запис, ако са празни — после се редактират.
+   */
+  items?:
+    | {
+        product?: (number | null) | Product;
+        title?: string | null;
+        sku?: string | null;
+        ean?: string | null;
+        image?: (number | null) | Media;
+        quantity?: number | null;
+        /**
+         * Празно — цената от сайта ÷ 1,20.
+         */
+        unitPrice?: number | null;
+        discount?: number | null;
+        lineTotal?: number | null;
+        id?: string | null;
+      }[]
+    | null;
+  terms?: {
+    payment?: ('advance100' | 'split50' | 'other') | null;
+    paymentOther?: string | null;
+    deliveryTime?: string | null;
+    deliveryTerms?: string | null;
+    warranty?: string | null;
+    validityDays?: number | null;
+    vatRate?: number | null;
+    note?: string | null;
+  };
+  /**
+   * Празно — потребителят, който записва офертата (име и длъжност от „Потребители").
+   */
+  preparedBy?: {
+    name?: string | null;
+    position?: string | null;
+  };
+  sentAt?: string | null;
+  sentTo?: string | null;
+  sendLog?: string | null;
+  totals?: {
+    subtotal?: number | null;
+    vat?: number | null;
+    total?: number | null;
+  };
+  /**
+   * Не излизат в PDF-а и в имейла.
+   */
+  internalNotes?: string | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -2546,6 +2641,7 @@ export interface Backup {
 export interface User {
   id: number;
   name?: string | null;
+  position?: string | null;
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -2715,6 +2811,10 @@ export interface PayloadLockedDocument {
         value: number | QuoteRequest;
       } | null)
     | ({
+        relationTo: 'offers';
+        value: number | Offer;
+      } | null)
+    | ({
         relationTo: 'quote-files';
         value: number | QuoteFile;
       } | null)
@@ -2817,6 +2917,7 @@ export interface QuoteRequestsSelect<T extends boolean = true> {
   status?: T;
   notes?: T;
   lastChange?: T;
+  offers?: T;
   clientType?: T;
   organization?: T;
   eik?: T;
@@ -2831,6 +2932,9 @@ export interface QuoteRequestsSelect<T extends boolean = true> {
         product?: T;
         quantity?: T;
         title?: T;
+        sku?: T;
+        ean?: T;
+        image?: T;
         url?: T;
         id?: T;
       };
@@ -2849,6 +2953,74 @@ export interface QuoteRequestsSelect<T extends boolean = true> {
   ip?: T;
   userAgent?: T;
   mailLog?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "offers_select".
+ */
+export interface OffersSelect<T extends boolean = true> {
+  number?: T;
+  status?: T;
+  quoteRequest?: T;
+  requestNumber?: T;
+  date?: T;
+  validUntil?: T;
+  client?:
+    | T
+    | {
+        organization?: T;
+        eik?: T;
+        vatNumber?: T;
+        address?: T;
+        contactPerson?: T;
+        email?: T;
+        phone?: T;
+      };
+  items?:
+    | T
+    | {
+        product?: T;
+        title?: T;
+        sku?: T;
+        ean?: T;
+        image?: T;
+        quantity?: T;
+        unitPrice?: T;
+        discount?: T;
+        lineTotal?: T;
+        id?: T;
+      };
+  terms?:
+    | T
+    | {
+        payment?: T;
+        paymentOther?: T;
+        deliveryTime?: T;
+        deliveryTerms?: T;
+        warranty?: T;
+        validityDays?: T;
+        vatRate?: T;
+        note?: T;
+      };
+  preparedBy?:
+    | T
+    | {
+        name?: T;
+        position?: T;
+      };
+  sentAt?: T;
+  sentTo?: T;
+  sendLog?: T;
+  totals?:
+    | T
+    | {
+        subtotal?: T;
+        vat?: T;
+        total?: T;
+      };
+  internalNotes?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -4224,6 +4396,7 @@ export interface BackupsSelect<T extends boolean = true> {
  */
 export interface UsersSelect<T extends boolean = true> {
   name?: T;
+  position?: T;
   updatedAt?: T;
   createdAt?: T;
   email?: T;
@@ -4591,6 +4764,46 @@ export interface FilterOrder {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "offer-settings".
+ */
+export interface OfferSetting {
+  id: number;
+  company?: {
+    name?: string | null;
+    eik?: string | null;
+    vatNumber?: string | null;
+    address?: string | null;
+    mol?: string | null;
+    phone?: string | null;
+    email?: string | null;
+    website?: string | null;
+  };
+  /**
+   * Излиза в „Условия" на офертата; празно — не излиза.
+   */
+  bank?: {
+    iban?: string | null;
+    bic?: string | null;
+    bankName?: string | null;
+  };
+  /**
+   * Копират се в новата оферта; там се редактират поотделно.
+   */
+  defaults?: {
+    validityDays?: number | null;
+    vatRate?: number | null;
+    payment?: ('advance100' | 'split50' | 'other') | null;
+    paymentOther?: string | null;
+    deliveryTime?: string | null;
+    deliveryTerms?: string | null;
+    warranty?: string | null;
+    note?: string | null;
+  };
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-jobs-stats".
  */
 export interface PayloadJobsStat {
@@ -4756,6 +4969,46 @@ export interface FilterOrderSelect<T extends boolean = true> {
         open?: T;
         label?: T;
         id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "offer-settings_select".
+ */
+export interface OfferSettingsSelect<T extends boolean = true> {
+  company?:
+    | T
+    | {
+        name?: T;
+        eik?: T;
+        vatNumber?: T;
+        address?: T;
+        mol?: T;
+        phone?: T;
+        email?: T;
+        website?: T;
+      };
+  bank?:
+    | T
+    | {
+        iban?: T;
+        bic?: T;
+        bankName?: T;
+      };
+  defaults?:
+    | T
+    | {
+        validityDays?: T;
+        vatRate?: T;
+        payment?: T;
+        paymentOther?: T;
+        deliveryTime?: T;
+        deliveryTerms?: T;
+        warranty?: T;
+        note?: T;
       };
   updatedAt?: T;
   createdAt?: T;
