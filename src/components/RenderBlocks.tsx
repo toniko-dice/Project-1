@@ -15,6 +15,7 @@ import {
   CompanyStatsBlock,
   PressQuotesBlock,
   ProductTabsBlock,
+  StoresBlock,
   TextSectionBlock,
 } from './blocks/about'
 import { PageIntroBlock, QuoteFormBlock } from './blocks/quote'
@@ -178,6 +179,8 @@ const рендер = (
       return <TextSectionBlock key={key} block={block} />
     case 'pressQuotes':
       return <PressQuotesBlock key={key} block={block} />
+    case 'stores':
+      return <StoresBlock key={key} block={block} />
     default:
       return null
   }

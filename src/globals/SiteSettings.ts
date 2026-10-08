@@ -149,6 +149,41 @@ export const SiteSettings: GlobalConfig = {
         { name: 'companyName', type: 'text', label: 'Фирма' },
         { name: 'vatNumber', type: 'text', label: 'ЕИК / ДДС номер' },
         { name: 'address', type: 'textarea', label: 'Адрес' },
+        {
+          /*
+            За данните за търсачките (`Organization` на началната и на „За ДИ
+            СИ 2008", `task-stranica-za-di-si-2008.md`). Празно поле не влиза.
+          */
+          type: 'collapsible',
+          label: 'Фирмата за търсачките',
+          admin: {
+            initCollapsed: true,
+            description: 'Описанието на фирмата в Google (Organization). Не се показва на страниците.',
+          },
+          fields: [
+            {
+              type: 'row',
+              fields: [
+                { name: 'legalName', type: 'text', label: 'Пълно име', admin: { width: '50%', placeholder: 'ДИ СИ 2008 ООД' } },
+                { name: 'alternateName', type: 'text', label: 'Познато още като', admin: { width: '50%', placeholder: 'Dice.bg' } },
+              ],
+            },
+            {
+              type: 'row',
+              fields: [
+                { name: 'vatId', type: 'text', label: 'ДДС №', admin: { width: '50%', placeholder: 'BG200110465' } },
+                { name: 'foundingYear', type: 'number', label: 'Основана (година)', admin: { width: '50%' } },
+              ],
+            },
+            {
+              type: 'row',
+              fields: [
+                { name: 'addressStreet', type: 'text', label: 'Улица и номер', admin: { width: '60%' } },
+                { name: 'addressCity', type: 'text', label: 'Град', admin: { width: '40%' } },
+              ],
+            },
+          ],
+        },
         { name: 'phone', type: 'text', label: 'Телефон' },
         { name: 'email', type: 'email', label: 'Имейл' },
         {

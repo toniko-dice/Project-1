@@ -26,6 +26,7 @@
     "import:all": "payload run src/import-all.ts --",
     "import:seo": "payload run src/import-seo.ts --",
     "import:page": "payload run src/import-page.ts --",
+    "links:za-di-si": "payload run src/links-za-di-si.ts --",
     "seo:check": "payload run src/seo-check.ts --",
     "import:attributes": "payload run src/import-attributes.ts --",
     "seed:attributes": "payload run src/seed-attributes.ts --",

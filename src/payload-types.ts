@@ -1693,6 +1693,11 @@ export interface Category {
              * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
              */
             anchorLabel?: string | null;
+            variant?: ('story' | 'numbers') | null;
+            /**
+             * Само за „Само числа". „История" е винаги тъмна.
+             */
+            theme?: ('dark' | 'light') | null;
             heading?: string | null;
             body?: string | null;
             stats?:
@@ -1839,7 +1844,7 @@ export interface Category {
              */
             imageAlt?: string | null;
             /**
-             * До два. Първият е основният (запълнен).
+             * До три. Първият е основният (запълнен).
              */
             buttons?:
               | {
@@ -1880,6 +1885,74 @@ export interface Category {
             id?: string | null;
             blockName?: string | null;
             blockType: 'pressQuotes';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            heading?: string | null;
+            stores?:
+              | {
+                  name: string;
+                  /**
+                   * Без града: „кв. Младост 4, бл. 426А".
+                   */
+                  street: string;
+                  city: string;
+                  /**
+                   * По желание. Празно — търсене в Google Maps по името и адреса.
+                   */
+                  mapUrl?: string | null;
+                  /**
+                   * По желание.
+                   */
+                  phone?: string | null;
+                  /**
+                   * Ред за всеки период с еднакво време („Понеделник" – „Петък"). Ден без ред не се показва.
+                   */
+                  hours?:
+                    | {
+                        fromDay: 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday' | 'Sunday';
+                        /**
+                         * Празно — само един ден.
+                         */
+                        toDay?:
+                          ('Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday' | 'Sunday') | null;
+                        opens?: string | null;
+                        closes?: string | null;
+                        closed?: boolean | null;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            /**
+             * По желание — напр. „Онлайн — на dice.bg".
+             */
+            note?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'stores';
           }
       )[]
     | null;
@@ -2790,6 +2863,11 @@ export interface Page {
              * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
              */
             anchorLabel?: string | null;
+            variant?: ('story' | 'numbers') | null;
+            /**
+             * Само за „Само числа". „История" е винаги тъмна.
+             */
+            theme?: ('dark' | 'light') | null;
             heading?: string | null;
             body?: string | null;
             stats?:
@@ -2936,7 +3014,7 @@ export interface Page {
              */
             imageAlt?: string | null;
             /**
-             * До два. Първият е основният (запълнен).
+             * До три. Първият е основният (запълнен).
              */
             buttons?:
               | {
@@ -2977,6 +3055,74 @@ export interface Page {
             id?: string | null;
             blockName?: string | null;
             blockType: 'pressQuotes';
+          }
+        | {
+            /**
+             * Секцията остава тук, но не се показва на сайта.
+             */
+            hidden?: boolean | null;
+            /**
+             * Попълнено — секцията е точка в „Лента с котви" на страницата. Празно — не участва.
+             */
+            anchorLabel?: string | null;
+            heading?: string | null;
+            stores?:
+              | {
+                  name: string;
+                  /**
+                   * Без града: „кв. Младост 4, бл. 426А".
+                   */
+                  street: string;
+                  city: string;
+                  /**
+                   * По желание. Празно — търсене в Google Maps по името и адреса.
+                   */
+                  mapUrl?: string | null;
+                  /**
+                   * По желание.
+                   */
+                  phone?: string | null;
+                  /**
+                   * Ред за всеки период с еднакво време („Понеделник" – „Петък"). Ден без ред не се показва.
+                   */
+                  hours?:
+                    | {
+                        fromDay: 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday' | 'Sunday';
+                        /**
+                         * Празно — само един ден.
+                         */
+                        toDay?:
+                          ('Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday' | 'Sunday') | null;
+                        opens?: string | null;
+                        closes?: string | null;
+                        closed?: boolean | null;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            /**
+             * По желание — напр. „Онлайн — на dice.bg".
+             */
+            note?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'stores';
           }
       )[]
     | null;
@@ -4105,6 +4251,8 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               hidden?: T;
               anchorLabel?: T;
+              variant?: T;
+              theme?: T;
               heading?: T;
               body?: T;
               stats?:
@@ -4215,6 +4363,36 @@ export interface PagesSelect<T extends boolean = true> {
                     source?: T;
                     id?: T;
                   };
+              id?: T;
+              blockName?: T;
+            };
+        stores?:
+          | T
+          | {
+              hidden?: T;
+              anchorLabel?: T;
+              heading?: T;
+              stores?:
+                | T
+                | {
+                    name?: T;
+                    street?: T;
+                    city?: T;
+                    mapUrl?: T;
+                    phone?: T;
+                    hours?:
+                      | T
+                      | {
+                          fromDay?: T;
+                          toDay?: T;
+                          opens?: T;
+                          closes?: T;
+                          closed?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              note?: T;
               id?: T;
               blockName?: T;
             };
@@ -4983,6 +5161,8 @@ export interface CategoriesSelect<T extends boolean = true> {
           | {
               hidden?: T;
               anchorLabel?: T;
+              variant?: T;
+              theme?: T;
               heading?: T;
               body?: T;
               stats?:
@@ -5093,6 +5273,36 @@ export interface CategoriesSelect<T extends boolean = true> {
                     source?: T;
                     id?: T;
                   };
+              id?: T;
+              blockName?: T;
+            };
+        stores?:
+          | T
+          | {
+              hidden?: T;
+              anchorLabel?: T;
+              heading?: T;
+              stores?:
+                | T
+                | {
+                    name?: T;
+                    street?: T;
+                    city?: T;
+                    mapUrl?: T;
+                    phone?: T;
+                    hours?:
+                      | T
+                      | {
+                          fromDay?: T;
+                          toDay?: T;
+                          opens?: T;
+                          closes?: T;
+                          closed?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              note?: T;
               id?: T;
               blockName?: T;
             };
@@ -5692,6 +5902,12 @@ export interface SiteSetting {
   companyName?: string | null;
   vatNumber?: string | null;
   address?: string | null;
+  legalName?: string | null;
+  alternateName?: string | null;
+  vatId?: string | null;
+  foundingYear?: number | null;
+  addressStreet?: string | null;
+  addressCity?: string | null;
   phone?: string | null;
   email?: string | null;
   distributorNotice?: string | null;
@@ -5961,6 +6177,12 @@ export interface SiteSettingsSelect<T extends boolean = true> {
   companyName?: T;
   vatNumber?: T;
   address?: T;
+  legalName?: T;
+  alternateName?: T;
+  vatId?: T;
+  foundingYear?: T;
+  addressStreet?: T;
+  addressCity?: T;
   phone?: T;
   email?: T;
   distributorNotice?: T;

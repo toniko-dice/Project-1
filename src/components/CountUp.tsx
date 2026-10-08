@@ -19,8 +19,17 @@ export const CountUp = ({ value, countTo }: { value: string; countTo?: number | 
     if (!el || !countTo || countTo <= 0) return
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
+    /*
+      Числото в стойността може да е с разделител за хилядите — „60 000+"
+      (интервал, неразделящ интервал или точка). Намира се по цифрите му и
+      по време на броенето се пише със същия разделител: „37 421+", не
+      „37421". Без съвпадение — само числото, както преди.
+    */
     const marker = String(countTo)
-    const text = (n: number) => (value.includes(marker) ? value.replace(marker, String(n)) : String(n))
+    const намерено = (value.match(/\d(?:[\d\s\u00a0.]*\d)?/g) ?? []).find((m) => m.replace(/\D/g, '') === marker)
+    const разделител = намерено?.match(/[\s\u00a0.]/)?.[0] ?? ''
+    const формат = (n: number) => (разделител ? String(n).replace(/\B(?=(\d{3})+(?!\d))/g, разделител) : String(n))
+    const text = (n: number) => (намерено ? value.replace(намерено, формат(n)) : String(n))
     let frame = 0
 
     const observer = new IntersectionObserver(

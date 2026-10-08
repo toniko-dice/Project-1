@@ -5,6 +5,7 @@ import type { Page } from '@/payload-types'
 import { RenderBlocks } from '@/components/RenderBlocks'
 import { getGlobal, getPage } from '@/lib/payload'
 import { mediaUrl } from '@/lib/media'
+import { ORGANIZATION_ID, organizationSchema } from '@/lib/organization'
 import { absoluteUrl } from '@/lib/site-url'
 import { finalTitle, HOME_H1_DEFAULT, pageTitle, SITE_NAME } from '@/lib/title'
 
@@ -136,27 +137,9 @@ const схемаНаСайта = (
   const url = absoluteUrl('/')
   const logo = mediaUrl(settings.logo) ?? mediaUrl(headerLogo)
   const sameAs = (footer.social ?? []).map((s) => s.url).filter(истинскиПрофил)
-  const contactPoint =
-    settings.phone || settings.email
-      ? {
-          '@type': 'ContactPoint',
-          contactType: 'customer service',
-          areaServed: 'BG',
-          availableLanguage: ['bg'],
-          ...(settings.phone ? { telephone: settings.phone } : {}),
-          ...(settings.email ? { email: settings.email } : {}),
-        }
-      : null
   return [
-    { '@context': 'https://schema.org', '@type': 'WebSite', name: SITE_NAME, url },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: SITE_NAME,
-      url,
-      ...(logo ? { logo: absoluteUrl(logo) } : {}),
-      ...(contactPoint ? { contactPoint } : {}),
-      ...(sameAs.length ? { sameAs } : {}),
-    },
+    { '@context': 'https://schema.org', '@type': 'WebSite', name: SITE_NAME, url, publisher: { '@id': ORGANIZATION_ID } },
+    // Същата организация като на „За ДИ СИ 2008" — едно `@id` (`src/lib/organization.ts`).
+    organizationSchema(settings, { logo, sameAs }),
   ]
 }

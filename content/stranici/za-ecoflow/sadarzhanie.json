@@ -230,6 +230,10 @@
         {
           "label": "Оферта за фирми",
           "link": "/oferta-za-firmi"
+        },
+        {
+          "label": "За ДИ СИ 2008",
+          "link": "/za-di-si-2008"
         }
       ]
     }

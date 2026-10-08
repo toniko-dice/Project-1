@@ -8,7 +8,7 @@ type Layout = NonNullable<Page['layout']>
 type BlockOf<T extends string> = Extract<Layout[number], { blockType: T }>
 
 /** Стилът на текстовете — като „Текст под списъка" в категориите. */
-const PROSE =
+export const PROSE =
   'text-[15px] leading-relaxed text-ink-muted [&_a]:text-ink [&_a]:underline [&_a]:underline-offset-4 [&_h2]:mb-2 [&_h2]:mt-8 [&_h2]:scroll-mt-24 [&_h2]:text-xl [&_h2]:font-semibold [&_h2]:text-ink [&_h3]:mb-1 [&_h3]:mt-5 [&_h3]:font-semibold [&_h3]:text-ink [&_li]:mt-1 [&_ol]:mt-2 [&_ol]:list-decimal [&_ol]:pl-6 [&_p]:mt-3 [&_strong]:font-semibold [&_strong]:text-ink [&_ul]:mt-2 [&_ul]:list-disc [&_ul]:pl-6 [&>*:first-child]:mt-0'
 
 /* ─────────── Текст ─────────── */
@@ -116,10 +116,76 @@ export const LegalMeta = ({ layout, updatedAt }: { layout: Layout; updatedAt: st
  * картички по първата колона (серия → редове „продукти — срок"): широка
  * таблица с дълги имена там се чете трудно дори със скрол.
  */
+/**
+ * Клетка, която е имейл или телефон, става линк (`mailto:` / `tel:`) —
+ * „Фирмени данни" на „За ДИ СИ 2008". Телефонът е със „+" отпред, за да
+ * не стане линк ЕИК или друго число.
+ */
+const Клетка = ({ value }: { value: string }) => {
+  const v = value.trim()
+  if (/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(v)) {
+    return (
+      <a href={`mailto:${v}`} className="underline underline-offset-4">
+        {v}
+      </a>
+    )
+  }
+  if (/^\+[\d\s()-]{7,}$/.test(v)) {
+    return (
+      <a href={`tel:${v.replace(/[^\d+]/g, '')}`} className="tabular underline underline-offset-4">
+        {v}
+      </a>
+    )
+  }
+  return <>{value}</>
+}
+
 export const SimpleTableSection = ({ block }: { block: BlockOf<'simpleTable'> }) => {
   const cols = (block.columns ?? []).map((c) => c.label ?? '')
   const rows = (block.rows ?? []).map((r) => (r.cells ?? []).map((c) => c.value ?? ''))
   if (!rows.length) return null
+
+  /*
+    Две колони („етикет | стойност") — проста таблица и на телефон, без
+    горен ред, когато колоните са без имена. Картичките по първата колона
+    са за таблици с групи (гаранцията); тук всеки ред би бил своя картичка.
+  */
+  if (rows.every((r) => r.length <= 2)) {
+    const сГорен = cols.some((c) => c.trim())
+    return (
+      <section className="container-site py-6 lg:py-8">
+        <div className="mx-auto max-w-[760px]">
+          {block.heading ? <h2 className="mb-4 text-xl font-semibold">{block.heading}</h2> : null}
+          <table className="w-full border-collapse bg-surface text-[15px]">
+            {сГорен ? (
+              <thead>
+                <tr className="bg-tile text-left text-ink">
+                  {cols.map((c, i) => (
+                    <th key={i} className="border border-line px-4 py-2.5 font-semibold">
+                      {c}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+            ) : null}
+            <tbody>
+              {rows.map((r, i) => (
+                <tr key={i} className="align-top">
+                  <th scope="row" className="w-[38%] border border-line px-4 py-2.5 text-left font-normal text-ink-muted md:w-[30%]">
+                    {r[0]}
+                  </th>
+                  <td className="border border-line px-4 py-2.5 font-medium text-ink [overflow-wrap:anywhere]">
+                    <Клетка value={r[1] ?? ''} />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          {block.note ? <p className="mt-3 text-[13px] text-ink-muted">{block.note}</p> : null}
+        </div>
+      </section>
+    )
+  }
 
   // Колко реда обхваща всяка група с еднаква първа клетка.
   const span = rows.map((r, i) => {
@@ -164,7 +230,7 @@ export const SimpleTableSection = ({ block }: { block: BlockOf<'simpleTable'> })
                     ) : null
                   ) : (
                     <td key={j} className={`border border-line px-4 py-2.5 ${j === r.length - 1 ? 'w-[30%] font-medium text-ink' : 'text-ink-muted'}`}>
-                      {cell}
+                      <Клетка value={cell} />
                     </td>
                   ),
                 )}

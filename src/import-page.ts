@@ -398,11 +398,18 @@ for (const [i, суров] of content.sekcii!.entries()) {
     delete b.markdown
   }
 
+  // „Магазини": текстът под картите — Markdown, както в „Текст".
+  if (вид === 'stores' && typeof b.noteMarkdown === 'string') {
+    b.note = convertMarkdownToLexical({ editorConfig, markdown: b.noteMarkdown })
+    delete b.noteMarkdown
+  }
+
   // „Таблица": колони и клетки като прости низове във файла.
   if (вид === 'simpleTable') {
     b.columns = ((b.columns as unknown[]) ?? []).map((c) => ({ label: String(c) }))
-    b.rows = ((b.rows as Обект[]) ?? []).map((r) => ({
-      cells: ((r.cells as unknown[]) ?? []).map((v) => ({ value: String(v) })),
+    // Ред — `{cells: [...]}` или направо масив от клетки (`["ЕИК", "200110465"]`).
+    b.rows = ((b.rows as unknown[]) ?? []).map((r) => ({
+      cells: ((Array.isArray(r) ? r : ((r as Обект).cells as unknown[])) ?? []).map((v) => ({ value: String(v) })),
     }))
   }
 

@@ -50,6 +50,8 @@ import * as migration_20261007_191305_roles_gate from './20261007_191305_roles_g
 import * as migration_20261007_201410_dice_sync from './20261007_201410_dice_sync';
 import * as migration_20261007_210720_mobile_optimizaciya from './20261007_210720_mobile_optimizaciya';
 import * as migration_20261008_090718_pages_legal_noindex from './20261008_090718_pages_legal_noindex';
+import * as migration_20261008_094838_za_di_si_stores from './20261008_094838_za_di_si_stores';
+import * as migration_20261008_095412_stores_day_range from './20261008_095412_stores_day_range';
 
 export const migrations = [
   {
@@ -310,6 +312,16 @@ export const migrations = [
   {
     up: migration_20261008_090718_pages_legal_noindex.up,
     down: migration_20261008_090718_pages_legal_noindex.down,
-    name: '20261008_090718_pages_legal_noindex'
+    name: '20261008_090718_pages_legal_noindex',
+  },
+  {
+    up: migration_20261008_094838_za_di_si_stores.up,
+    down: migration_20261008_094838_za_di_si_stores.down,
+    name: '20261008_094838_za_di_si_stores',
+  },
+  {
+    up: migration_20261008_095412_stores_day_range.up,
+    down: migration_20261008_095412_stores_day_range.down,
+    name: '20261008_095412_stores_day_range'
   },
 ];

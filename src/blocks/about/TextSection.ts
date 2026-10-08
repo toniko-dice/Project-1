@@ -57,8 +57,8 @@ export const TextSection: Block = {
       type: 'array',
       label: 'Бутони',
       labels: { singular: 'Бутон', plural: 'Бутони' },
-      maxRows: 2,
-      admin: { ...rowLabel('label', 'Бутон'), description: 'До два. Първият е основният (запълнен).' },
+      maxRows: 3,
+      admin: { ...rowLabel('label', 'Бутон'), description: 'До три. Първият е основният (запълнен).' },
       fields: [
         {
           type: 'row',

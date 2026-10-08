@@ -6,6 +6,8 @@ import { LegalMeta } from '@/components/blocks/text'
 import { RenderBlocks } from '@/components/RenderBlocks'
 import { getGlobal, getPage, getPayloadClient, getRedirectMap } from '@/lib/payload'
 import { mediaUrl } from '@/lib/media'
+import { ORGANIZATION_ID, organizationSchema } from '@/lib/organization'
+import { storeSchema } from '@/lib/stores'
 import { pageListProducts } from '@/lib/page-products'
 import { absoluteUrl } from '@/lib/site-url'
 import { finalTitle, pageTitle, SITE_NAME } from '@/lib/title'
@@ -71,6 +73,12 @@ export default async function DynamicPage({ params }: Args) {
 
   const layout = page.layout ?? []
   const продукти = await pageListProducts(layout)
+  /*
+    Магазините (блок „Магазини") — `Store` за всеки, под организацията;
+    самата организация е същата като на началната (едно `@id`).
+  */
+  const магазини = layout.flatMap((b) => (b.blockType === 'stores' && !b.hidden ? (b.stores ?? []) : []))
+  const логоНаХедъра = магазини.length ? mediaUrl(((await getGlobal('header')) as { logo?: unknown }).logo as never) : null
   const въпроси = layout.flatMap((b) =>
     b.blockType === 'faqBlock' && !b.hidden ? (b.items ?? []).filter((q) => q.question && q.answer) : [],
   )
@@ -112,6 +120,12 @@ export default async function DynamicPage({ params }: Args) {
               name: p.title,
             })),
           },
+        ]
+      : []),
+    ...(магазини.length
+      ? [
+          organizationSchema(settings, { logo: mediaUrl(settings.logo) ?? логоНаХедъра }),
+          ...магазини.map((m) => storeSchema(m, ORGANIZATION_ID)),
         ]
       : []),
   ]

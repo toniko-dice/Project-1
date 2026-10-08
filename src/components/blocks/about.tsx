@@ -1,9 +1,11 @@
-import { CaretRight, Quotes } from '@phosphor-icons/react/dist/ssr'
+import { CaretRight, MapPin, Quotes } from '@phosphor-icons/react/dist/ssr'
+import { RichText } from '@payloadcms/richtext-lexical/react'
 import Link from 'next/link'
 
 import type { Media, Page, Product } from '@/payload-types'
 import { mediaAlt, mediaUrl, productCardData } from '@/lib/media'
 import { resolvedRelations } from '@/lib/relations'
+import { картаНа, редовеЧасове } from '@/lib/stores'
 import { AboutTabs } from '../AboutTabs'
 import { BuyButton } from '../BuyButton'
 import { CardImage } from '../CardImage'
@@ -12,6 +14,7 @@ import { ImagePlaceholder } from '../ImagePlaceholder'
 import { productBadges, ProductBadges } from '../ProductBadges'
 import { ScrollRow } from '../ScrollRow'
 import { DualImage } from './guide'
+import { PROSE } from './text'
 
 /*
   Блоковете на „За EcoFlow" (`task-stranica-za-ecoflow.md`), по
@@ -32,7 +35,49 @@ const H2 = ({ children, className = '' }: { children?: React.ReactNode; classNam
 
 /* ─────────── История и числа ─────────── */
 
+/**
+ * „Само числа" — редът с числата на цялата ширина (`task-stranica-za-di-si-2008.md`).
+ * Светъл — върху фона на страницата; тъмен — черен, с фонова снимка, ако
+ * има. Броенето е същото като в „История" (`CountUp`).
+ */
+const StatsOnly = ({ block }: { block: BlockOf<'companyStats'> }) => {
+  const stats = block.stats ?? []
+  const dark = block.theme !== 'light'
+  return (
+    <section className={`relative overflow-hidden ${dark ? 'bg-black text-white' : 'text-ink'}`}>
+      {dark ? (
+        <DualImage image={block.image} mobile={block.imageMobile} alt="" sizes="100vw" className="absolute inset-0 size-full object-cover" />
+      ) : null}
+      <Wrap className="relative py-10 md:py-14">
+        {block.heading || block.body ? (
+          <div className="mb-8 max-w-[760px] md:mb-10">
+            <H2>{block.heading}</H2>
+            {block.body ? <p className={`mt-4 text-base leading-[1.45] ${dark ? 'text-white/75' : 'text-ink-muted'}`}>{block.body}</p> : null}
+          </div>
+        ) : null}
+        <dl className="grid grid-cols-2 gap-y-8 md:grid-cols-4">
+          {stats.map((s, i) => (
+            <div
+              key={i}
+              className={`pr-4 max-md:[&:nth-child(even)]:border-l max-md:[&:nth-child(even)]:pl-5 md:border-l md:pl-6 md:first:border-l-0 md:first:pl-0 ${
+                dark ? 'border-white/25' : 'border-line'
+              }`}
+            >
+              <dt className="sr-only">{s.label}</dt>
+              <dd className="text-[28px] font-semibold leading-none md:text-[40px]">
+                <CountUp value={s.value ?? ''} countTo={s.countTo} />
+              </dd>
+              <dd className={`mt-2 text-sm leading-[1.35] ${dark ? 'text-white/65' : 'text-ink-muted'}`}>{s.label}</dd>
+            </div>
+          ))}
+        </dl>
+      </Wrap>
+    </section>
+  )
+}
+
 export const CompanyStatsBlock = ({ block }: { block: BlockOf<'companyStats'> }) => {
+  if (block.variant === 'numbers') return <StatsOnly block={block} />
   const stats = block.stats ?? []
   const locations = (block.locations ?? []).filter((l) => l.label && typeof l.x === 'number' && typeof l.y === 'number')
 
@@ -347,6 +392,62 @@ export const PressQuotesBlock = ({ block }: { block: BlockOf<'pressQuotes'> }) =
           })}
         </ul>
       </Wrap>
+    </section>
+  )
+}
+
+/* ─────────── Магазини ─────────── */
+
+/**
+ * Картите на магазините (`task-stranica-za-di-si-2008.md`) — в колоната на
+ * текста (760 px), две една до друга на компютър, една под друга на
+ * телефон. Адресът води към Google Maps в нов раздел. Същите данни дават и
+ * `Store` в JSON-LD на страницата (`storeSchema`).
+ */
+export const StoresBlock = ({ block }: { block: BlockOf<'stores'> }) => {
+  const stores = (block.stores ?? []).filter((s) => s.name && s.street && s.city)
+  if (!stores.length) return null
+  return (
+    <section className="container-site py-6 lg:py-8">
+      <div className="mx-auto max-w-[760px]">
+        {block.heading ? <h2 className="mb-4 text-xl font-semibold">{block.heading}</h2> : null}
+        <ul className="grid gap-4 md:grid-cols-2">
+          {stores.map((s, i) => (
+            <li key={i} className="rounded-xl bg-tile p-5">
+              <h3 className="text-base font-semibold">{s.name}</h3>
+              <a
+                href={картаНа(s)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-flex min-h-11 items-start gap-2 py-1 text-[15px] underline underline-offset-4 hover:text-ink-muted"
+              >
+                <MapPin size={18} aria-hidden="true" className="mt-0.5 shrink-0" />
+                <span>
+                  {s.street}, {s.city}
+                  <span className="sr-only"> (отваря Google Maps в нов раздел)</span>
+                </span>
+              </a>
+              {s.phone ? (
+                <a href={`tel:${s.phone.replace(/[^\d+]/g, '')}`} className="tabular mt-1 block text-[15px] underline-offset-4 hover:underline">
+                  {s.phone}
+                </a>
+              ) : null}
+              {редовеЧасове(s.hours).length ? (
+                <ul className="mt-3 space-y-1 text-[15px] text-ink-muted">
+                  {редовеЧасове(s.hours).map((р) => (
+                    <li key={р}>{р}</li>
+                  ))}
+                </ul>
+              ) : null}
+            </li>
+          ))}
+        </ul>
+        {block.note ? (
+          <div className={`mt-4 ${PROSE}`}>
+            <RichText data={block.note} disableContainer />
+          </div>
+        ) : null}
+      </div>
     </section>
   )
 }

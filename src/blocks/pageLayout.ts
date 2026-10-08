@@ -17,6 +17,7 @@ import { PageIntro } from './PageIntro'
 import { QuoteForm } from './QuoteForm'
 import { RichTextBlock } from './RichTextBlock'
 import { SimpleTable } from './SimpleTable'
+import { Stores } from './Stores'
 import {
   BannerCarousel,
   BannerProductRow,
@@ -93,6 +94,7 @@ export const pageBlocks: Block[] = [
   AwardsMarquee,
   TextSection,
   PressQuotes,
+  Stores,
 ].map(withHidden)
 
 /** Полето „Секции на страницата" — еднакво навсякъде, където се ползва. */
