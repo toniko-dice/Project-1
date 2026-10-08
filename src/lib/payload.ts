@@ -563,7 +563,12 @@ export const getGlobal = cache(async <T extends GlobalSlug>(slug: T) =>
  */
 export const getFaqGroups = cache(async (): Promise<FaqGroup[]> =>
   timed('getFaqGroups', () =>
-    cached(['faq-groups'], ['product', 'page', 'category'], async () => {
+    /*
+      Ключът носи версия на формата: при смяна на формата (8 октомври 2026 —
+      групи с подгрупи) старият запис в кеша на работещия сървър иначе би
+      се чел с новия код до първото опресняване.
+    */
+    cached(['faq-groups-v2'], ['product', 'page', 'category'], async () => {
       const payload = await getPayloadClient()
       const [tree, products, pages, categories] = await Promise.all([
         getCategoryTree(),

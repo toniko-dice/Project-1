@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { breadcrumbSchema } from '@/components/Breadcrumbs'
 import { FaqExplorer } from '@/components/FaqExplorer'
 import { InlineLinks } from '@/components/InlineLinks'
-import { нормален, текстЗаСхема } from '@/lib/faq'
+import { въпросиНа, нормален, текстЗаСхема } from '@/lib/faq'
 import { FAQ_PATH } from '@/lib/legal'
 import { mediaUrl } from '@/lib/media'
 import { getFaqGroups, getGlobal } from '@/lib/payload'
@@ -41,13 +41,12 @@ export default async function FaqPage() {
   const [info, groups] = await Promise.all([getGlobal('info-pages'), getFaqGroups()])
   const h1 = info.faqTitle?.trim() || 'Често задавани въпроси'
   /*
-    В `FAQPage` всеки въпрос е веднъж: същият въпрос в две серии (зарядните
-    RAPID са и във „Външни батерии Rapid") остава на страницата и в двете
-    групи, в схемата — само първият.
+    В `FAQPage` всеки въпрос е веднъж — и на страницата е веднъж
+    (`сглобиВъпроси`); проверката тук е предпазна.
   */
   const видяни = new Set<string>()
   const items = groups
-    .flatMap((g) => g.items)
+    .flatMap(въпросиНа)
     .filter((i) => !видяни.has(нормален(i.question)) && Boolean(видяни.add(нормален(i.question))))
 
   const schema = [

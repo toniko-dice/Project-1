@@ -7,7 +7,7 @@ import { Fragment, useEffect, useMemo, useState } from 'react'
 import type { FaqGroup, FaqItem } from '@/lib/faq'
 import { CONTACT_PATH } from '@/lib/legal'
 import { FaqAnswer } from './FaqAnswer'
-import { ProductAnchorNav } from './ProductAnchorNav'
+import { FaqGroupNav } from './FaqGroupNav'
 
 const DEBOUNCE_MS = 150
 
@@ -41,7 +41,8 @@ const съвпада = (item: FaqItem, q: string) => {
 const ВИЖ = { product: 'Виж продукта', page: 'Виж страницата', category: 'Виж категорията' } as const
 
 /**
- * Търсачката, лентата с котви и акордеоните на `/vaprosi`.
+ * Търсачката, лентата с групите и акордеоните на `/vaprosi`. Групите и
+ * подгрупите идват от `src/lib/faq-groups.ts`; при търсене празните се скриват.
  *
  * Всички въпроси и отговори са в HTML-а от сървъра (затворени `details`) —
  * търсачките ги виждат, а търсенето тук само скрива несъвпадащите.
@@ -91,16 +92,24 @@ export const FaqExplorer = ({ groups }: { groups: FaqGroup[] }) => {
     return () => window.removeEventListener('hashchange', отвори)
   }, [])
 
-  const видими = useMemo(
-    () => groups.map((g) => ({ ...g, items: g.items.filter((i) => съвпада(i, q)) })),
+  /* Съвпаденията по групи и подгрупи; празните се скриват. */
+  const видимиИд = useMemo(
+    () => new Set(groups.flatMap((g) => g.subgroups.flatMap((sg) => sg.items.filter((i) => съвпада(i, q)).map((i) => i.id)))),
     [groups, q],
   )
-  const брой = видими.reduce((s, g) => s + g.items.length, 0)
-  const anchors = useMemo(
-    () => видими.filter((g) => g.items.length).map((g) => ({ id: g.id, label: g.title })),
-    [видими],
+  const бройНа = (items: FaqItem[]) => items.filter((i) => видимиИд.has(i.id)).length
+  const брой = видимиИд.size
+  const лента = useMemo(
+    () =>
+      groups
+        .map((g) => ({
+          id: g.id,
+          label: g.title,
+          count: g.subgroups.reduce((s, sg) => s + sg.items.filter((i) => видимиИд.has(i.id)).length, 0),
+        }))
+        .filter((g) => g.count > 0),
+    [groups, видимиИд],
   )
-  const видимиИд = useMemo(() => new Set(видими.flatMap((g) => g.items.map((i) => i.id))), [видими])
 
   return (
     <>
@@ -146,60 +155,70 @@ export const FaqExplorer = ({ groups }: { groups: FaqGroup[] }) => {
         </div>
       </div>
 
-      <div className="mt-4">
-        <ProductAnchorNav anchors={anchors} />
-      </div>
+      {/* Без обвивка: лепнещият елемент лепне само в рамките на родителя си. */}
+      <FaqGroupNav items={лента} />
 
       <div className="container-site pb-16">
         <div className="mx-auto max-w-[56rem]">
           {groups.map((g) => {
-            const има = видими.find((v) => v.id === g.id)!.items.length > 0
+            const има = g.subgroups.some((sg) => бройНа(sg.items) > 0)
             return (
-              <section key={g.id} id={g.id} hidden={!има} className="scroll-mt-28 pt-10">
+              <section key={g.id} id={g.id} hidden={!има} className="scroll-mt-24 pt-10 md:scroll-mt-40">
                 <h2 className="mb-4 text-xl font-semibold tracking-tight sm:text-2xl">{g.title}</h2>
-                <div className="divide-y divide-line border-y border-line">
-                  {g.items.map((item) => (
-                    <details
-                      key={item.id}
-                      id={item.id}
-                      hidden={!видимиИд.has(item.id)}
-                      open={q && видимиИд.has(item.id) ? true : undefined}
-                      className="group scroll-mt-32"
-                    >
-                      <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 py-4 [&::-webkit-details-marker]:hidden">
-                        <h3 className="text-sm font-medium">
-                          <Маркиран text={item.question} q={q} />
-                        </h3>
-                        <span aria-hidden="true" className="shrink-0 text-ink-muted transition-transform duration-200 group-open:rotate-45">
-                          +
-                        </span>
-                      </summary>
-                      <div className="space-y-4 pb-4">
-                        {item.answers.map((a, i) => (
-                          <div key={i}>
-                            <FaqAnswer
-                              text={a.text}
-                              mark={(t) => <Маркиран text={t} q={q} />}
-                              prefix={
-                                item.answers.length > 1 ? (
-                                  <strong className="font-semibold text-ink">{a.sources.map((s) => s.title).join(', ')}: </strong>
-                                ) : undefined
-                              }
-                            />
-                            {a.sources[0] ? (
-                              <Link
-                                href={a.sources[0].url}
-                                className="mt-1 inline-flex min-h-9 items-center text-xs font-medium text-ink underline-offset-4 hover:underline max-md:min-h-11"
-                              >
-                                {ВИЖ[a.sources[0].kind]} →
-                              </Link>
-                            ) : null}
+                {g.subgroups.map((sg) => (
+                  <div
+                    key={sg.id || g.id}
+                    id={sg.id || undefined}
+                    hidden={!бройНа(sg.items)}
+                    className={sg.title ? 'scroll-mt-24 pt-6 first:pt-0 md:scroll-mt-40' : undefined}
+                  >
+                    {/* H2 група → H3 подгрупа → въпрос (без заглавен таг). */}
+                    {sg.title ? <h3 className="mb-2 text-base font-semibold text-ink">{sg.title}</h3> : null}
+                    <div className="divide-y divide-line border-y border-line">
+                      {sg.items.map((item) => (
+                        <details
+                          key={item.id}
+                          id={item.id}
+                          hidden={!видимиИд.has(item.id)}
+                          open={q && видимиИд.has(item.id) ? true : undefined}
+                          className="group scroll-mt-32 md:scroll-mt-44"
+                        >
+                          <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 py-4 [&::-webkit-details-marker]:hidden">
+                            <span className="text-sm font-medium">
+                              <Маркиран text={item.question} q={q} />
+                            </span>
+                            <span aria-hidden="true" className="shrink-0 text-ink-muted transition-transform duration-200 group-open:rotate-45">
+                              +
+                            </span>
+                          </summary>
+                          <div className="space-y-4 pb-4">
+                            {item.answers.map((a, i) => (
+                              <div key={i}>
+                                <FaqAnswer
+                                  text={a.text}
+                                  mark={(t) => <Маркиран text={t} q={q} />}
+                                  prefix={
+                                    item.answers.length > 1 ? (
+                                      <strong className="font-semibold text-ink">{a.sources.map((s) => s.title).join(', ')}: </strong>
+                                    ) : undefined
+                                  }
+                                />
+                                {a.sources[0] ? (
+                                  <Link
+                                    href={a.sources[0].url}
+                                    className="mt-1 inline-flex min-h-9 items-center text-xs font-medium text-ink underline-offset-4 hover:underline max-md:min-h-11"
+                                  >
+                                    {ВИЖ[a.sources[0].kind]} →
+                                  </Link>
+                                ) : null}
+                              </div>
+                            ))}
                           </div>
-                        ))}
-                      </div>
-                    </details>
-                  ))}
-                </div>
+                        </details>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </section>
             )
           })}
