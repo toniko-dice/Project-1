@@ -239,8 +239,16 @@ const блокЗа = (
  * останало — и първият, който ползва снимката, ѝ дава името. Заетите
  * имена се пазят без регистъра: на Windows `A.webp` и `a.webp` са един файл.
  */
+/**
+ * `обхват` — slug-ове на продукти (вносът): преименуват се САМО снимките,
+ * които се ползват единствено от тези продукти; всички други пазят името
+ * си. Без обхват — цялата Медия (`snimki:imena`, `import:all` без `--only`).
+ */
+export type ОбхватНаИмената = { обхват?: string[] }
+
 export const новиИмена = async (
   payload: Payload,
+  { обхват }: ОбхватНаИмената = {},
 ): Promise<{ поЗапис: Map<number, { основа: string; място: string }>; медия: MediaDoc[] }> => {
   const blocksById = new Map(
     (payload.config.blocks ?? []).map((b) => [b.slug, b as unknown as { fields?: Поле[]; flattenedFields?: Поле[] }]),
@@ -368,6 +376,31 @@ export const новиИмена = async (
     поЗапис.set(m.id, { основа: основа(m.filename), място: 'не се ползва — остава със старото име' })
   }
 
+  /*
+    Пазят името си (и то е заето за останалите):
+    - снимка, ползвана от страница („Страници", и началната) — името ѝ идва
+      от `content/stranici/<slug>/sadarzhanie.json` и трябва да съвпада с него,
+      иначе `import:page` не я намира и я сваля наново (8 октомври 2026:
+      внос на два продукта щеше да преименува 24 снимки на началната и на
+      „За EcoFlow");
+    - при `обхват` — всичко, което не се ползва САМО от тези продукти.
+  */
+  const местаНа = new Map<number, string[]>()
+  for (const з of заявки) местаНа.set(з.id, [...(местаНа.get(з.id) ?? []), з.място])
+  const вОбхвата = (място: string) => обхват!.some((slug) => място.startsWith(`продукт ${slug} — `))
+  for (const m of медия) {
+    if (!m.filename || поЗапис.has(m.id)) continue
+    const места = местаНа.get(m.id) ?? []
+    const отСтраница = места.some((м) => м.startsWith('pages '))
+    const извънОбхвата = обхват ? !места.every(вОбхвата) : false
+    if (!отСтраница && !извънОбхвата) continue
+    заети.add(основа(m.filename).toLowerCase())
+    поЗапис.set(m.id, {
+      основа: основа(m.filename),
+      място: отСтраница ? 'ползва се от страница — името е от content/stranici' : 'извън обхвата на вноса — остава',
+    })
+  }
+
   for (const { id, желано, място } of заявки) {
     if (поЗапис.has(id)) continue
     let нова = желано
@@ -436,8 +469,8 @@ const смениВТекст = (текст: string, карта: Map<string, stri
   return редове.join('')
 }
 
-export const планЗаИмена = async (payload: Payload): Promise<ПланЗаИмена> => {
-  const { поЗапис, медия } = await новиИмена(payload)
+export const планЗаИмена = async (payload: Payload, opts: ОбхватНаИмената = {}): Promise<ПланЗаИмена> => {
+  const { поЗапис, медия } = await новиИмена(payload, opts)
 
   const проблеми: string[] = []
   const безСъвпадение: ПланЗаИмена['безСъвпадение'] = []
@@ -583,6 +616,15 @@ export const планЗаИмена = async (payload: Payload): Promise<План
     const тук = await fs.readdir(dir)
     const ниски = new Set(тук.map((f) => f.toLowerCase()))
     const цели = new Set<string>()
+    /*
+      Две минавания: първо кой файл накъде, после проверката за заето име.
+      Име, чийто файл и той се мести, НЕ е заето — иначе верига
+      („-9" → „-5", а „-5" → „-1-2") спира мълчаливо по средата: на
+      8 октомври 2026 в `_originali/` три снимки на RAPID Magnetic останаха
+      със старите имена и следващият внос искаше да ги свали наново.
+      Самото местене минава през временни имена (`приложиПлана`).
+    */
+    const кандидати: { f: string; крайно: string }[] = []
     for (const f of тук.sort()) {
       if (!ИЗОБРАЖЕНИЕ.test(f)) continue
       const ext = path.extname(f).toLowerCase()
@@ -598,14 +640,19 @@ export const планЗаИмена = async (payload: Payload): Promise<План
       }
       // Същата основа, друго разширение — `PC_02.jpg` (превод) до `PC_02.png` (прозрачен).
       const крайно = `${bareStem(нов)}${ext}`
-      if (крайно === f) continue
-      if (цели.has(крайно.toLowerCase()) || (ниски.has(крайно.toLowerCase()) && крайно.toLowerCase() !== f.toLowerCase())) {
+      if (крайно !== f) кандидати.push({ f, крайно })
+    }
+    const тръгват = new Set(кандидати.map((к) => к.f.toLowerCase()))
+    for (const { f, крайно } of кандидати) {
+      const к = крайно.toLowerCase()
+      const заето = ниски.has(к) && к !== f.toLowerCase() && !тръгват.has(к)
+      if (цели.has(к) || заето) {
         проблеми.push(`${path.basename(dir)}/${f} → ${крайно}: името вече е заето — не е преименуван`)
         continue
       }
       цели.add(крайно.toLowerCase())
       файлове.push({ dir, от: f, до: крайно })
-      const m = поОснова.get(s) ?? [...поОснова.values()].find((x) => x.filename && новаОснова(x.id) === bareStem(нов))
+      const m = поОснова.get(bareStem(f)) ?? [...поОснова.values()].find((x) => x.filename && новаОснова(x.id) === bareStem(крайно))
       if (m) отбележи(m.id, `${path.basename(dir)}/`)
     }
     // spisak.md в „за превод"
@@ -814,15 +861,27 @@ export const приложиПлана = async (
 
   /* съдържанието */
   for (const [p, т] of план.текстове) await fs.writeFile(p, т, 'utf-8')
-  for (const ф of план.файлове) {
+  /*
+    Файловете — през временни имена: първо всички тръгват, после пристигат.
+    Иначе във верига („-9" → „-5", „-5" → „-1-2") първото местене намира
+    целта още заета.
+  */
+  const тръгнали: { ф: Преименуване; врем: string }[] = []
+  for (const [i, ф] of план.файлове.entries()) {
     const от = path.join(ф.dir, ф.от)
-    const до = path.join(ф.dir, ф.до)
     if (!(await exists(от))) continue
-    if (ф.от.toLowerCase() !== ф.до.toLowerCase() && (await exists(до))) {
+    const врем = path.join(ф.dir, `__ime-${i}-${ф.от}`)
+    await fs.rename(от, врем)
+    тръгнали.push({ ф, врем })
+  }
+  for (const { ф, врем } of тръгнали) {
+    const до = path.join(ф.dir, ф.до)
+    if (await exists(до)) {
       неуспешни.push(`${path.relative(CONTENT_ROOT, до)}: вече съществува — ${ф.от} не е преименуван`)
+      await fs.rename(врем, path.join(ф.dir, ф.от))
       continue
     }
-    await fs.rename(от, до)
+    await fs.rename(врем, до)
   }
 
   return { медия: готови, неуспешни }
@@ -842,19 +901,22 @@ export const приложиПлана = async (
  */
 export const именаСледВнос = async (
   payload: Payload,
-  opts: { dryRun?: boolean; log?: (m: string) => void } = {},
+  opts: { dryRun?: boolean; log?: (m: string) => void } & ОбхватНаИмената = {},
 ): Promise<string[]> => {
-  const план = await планЗаИмена(payload)
+  const план = await планЗаИмена(payload, { обхват: opts.обхват })
   const редове: string[] = []
   const има = план.записи.length || план.текстове.size || план.файлове.length
 
   if (има && opts.dryRun) {
     редове.push(`Нови имена на снимки: ${план.записи.length} биха се сменили в Медия`)
+    for (const з of план.записи) редове.push(`  ${з.стар} → ${з.нов}`)
+    for (const п of план.проблеми) редове.push(`  ⚠ ${п}`)
   } else if (има) {
     const { медия, неуспешни } = await приложиПлана(payload, план, opts.log ?? (() => {}))
     редове.push(`Нови имена на снимки: ${медия} в Медия, ${план.файлове.length} файла в content/`)
     for (const з of план.записи) редове.push(`  ${з.стар} → ${з.нов}`)
     for (const н of неуспешни) редове.push(`  ✗ ${н}`)
+    for (const п of план.проблеми) редове.push(`  ⚠ ${п}`)
     // Таблицата в git расте с всяка смяна — за справка кое откъде е дошло.
     if (план.записи.length) await допишиТаблицата({ ...план, файлове: [], безСъвпадение: [] })
   }

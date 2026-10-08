@@ -137,7 +137,8 @@ if (dryRun) {
 }
 
 // Смислените имена на новите снимки — преди „за превод" (`task-snimki-imena.md`, т. 4).
-for (const ред of await именаСледВнос(payload, { dryRun })) console.log(ред)
+// Само снимките, ползвани единствено от този продукт; снимките на страниците — никога.
+for (const ред of await именаСледВнос(payload, { dryRun, обхват: [slug!] })) console.log(ред)
 
 // Пресмята се от ВСИЧКИ продукти — иначе списъкът би изгубил чакащите на другите.
 for (const ред of translationQueueSummary(await updateTranslationQueue({ dryRun }), dryRun)) {
