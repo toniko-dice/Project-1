@@ -9,7 +9,6 @@ import Link from 'next/link'
 
 import { FooterColumn } from './FooterColumn'
 import { NewsletterForm } from './NewsletterForm'
-import { CONTACT_PATH } from '@/lib/legal'
 import { getGlobal } from '@/lib/payload'
 
 const SOCIAL_ICONS = {
@@ -83,8 +82,9 @@ export const Footer = async () => {
         <div className="pt-6 md:pt-0">
           <h3 className="mb-3 text-sm font-semibold">Контакти</h3>
           {/*
-            Без телефон (`task-futar.md`) — имейлът и формата на /kontakti са
-            единственият начин за връзка. Полето в „Общи настройки" остава.
+            Без телефон (`task-futar.md`) и без линк към формата — тя е в
+            колона „Поддръжка" → „Контакти". Полето за телефон в „Общи
+            настройки" остава.
           */}
           <address className="space-y-1 text-sm not-italic text-ink-muted">
             {settings.companyName ? <p className="font-medium">{settings.companyName}</p> : null}
@@ -99,14 +99,6 @@ export const Footer = async () => {
                 </a>
               </p>
             ) : null}
-            <p>
-              <Link
-                href={CONTACT_PATH}
-                className="inline-flex min-h-9 cursor-pointer items-center font-medium text-ink hover:text-brand max-md:min-h-11"
-              >
-                Форма за контакт →
-              </Link>
-            </p>
             {settings.vatNumber ? <p>ЕИК: {settings.vatNumber}</p> : null}
           </address>
 
