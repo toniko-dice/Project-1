@@ -765,9 +765,9 @@ export const QuoteFormClient = ({
           <label className="flex cursor-pointer items-start gap-3 text-sm leading-snug max-md:min-h-11 max-md:py-1">
             <input type="checkbox" className="mt-0.5 size-4 shrink-0 accent-[#1a1a1a] max-md:size-5" checked={f.consent} onChange={(e) => set('consent', e.target.checked)} {...aria('consent')} />
             <span>
-              Съгласен съм данните ми да бъдат обработени, за да получа оферта.{' '}
+              Съгласен/на съм с{' '}
               <Link href={privacyUrl} target="_blank" className="underline underline-offset-4">
-                Политика за поверителност
+                Политиката за поверителност
               </Link>
               <span className="text-alert"> *</span>
             </span>

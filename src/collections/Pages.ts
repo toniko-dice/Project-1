@@ -49,6 +49,32 @@ export const Pages: CollectionConfig = {
         ],
       },
     },
+    {
+      /*
+        Правните страници (`task-stranici-pravni.md`): над текста —
+        „Последна актуализация: 08.10.2026" (от `updatedAt`) и съдържание от
+        заглавията H2 на блоковете „Текст".
+      */
+      name: 'legal',
+      type: 'checkbox',
+      label: 'Правна страница — дата на актуализация и съдържание',
+      defaultValue: false,
+      admin: {
+        position: 'sidebar',
+        description:
+          'Над текста излизат „Последна актуализация" (датата на последното записване) и съдържание с линкове към заглавията H2.',
+      },
+    },
+    {
+      /*
+        Кога `import:page` е записал страницата за последно. Запис след това
+        (от админа) значи, че текстът е редактиран — повторният внос го
+        пропуска без `--force`. Пише го само вносът.
+      */
+      name: 'importedAt',
+      type: 'date',
+      admin: { hidden: true },
+    },
     layoutField(),
     {
       type: 'collapsible',
@@ -62,6 +88,16 @@ export const Pages: CollectionConfig = {
           type: 'upload',
           relationTo: 'media',
           label: 'Изображение при споделяне',
+        },
+        {
+          name: 'noindex',
+          type: 'checkbox',
+          label: 'Скрий от търсачките (noindex)',
+          defaultValue: false,
+          admin: {
+            description:
+              'Страницата получава „noindex, follow" и не е в sitemap.xml. При временен текст — махнете отметката, когато сложите окончателния текст.',
+          },
         },
       ],
     },

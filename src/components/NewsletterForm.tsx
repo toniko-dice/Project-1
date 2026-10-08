@@ -1,6 +1,9 @@
 'use client'
 
+import Link from 'next/link'
 import { useState } from 'react'
+
+import { PRIVACY_PATH } from '@/lib/legal'
 
 /**
  * Форма за абониране за бюлетина.
@@ -121,7 +124,12 @@ export const NewsletterForm = ({ consentText }: { consentText: string }) => {
           onChange={(e) => setConsent(e.target.checked)}
           className="mt-0.5 size-4 shrink-0 cursor-pointer max-md:size-5"
         />
-        <span className="text-ink-muted">{consentText}</span>
+        <span className="text-ink-muted">
+          {consentText}{' '}
+          <Link href={PRIVACY_PATH} target="_blank" className="text-ink underline underline-offset-2">
+            Политика за поверителност
+          </Link>
+        </span>
       </label>
 
       {error ? (

@@ -1,5 +1,7 @@
-import { RichText } from '@payloadcms/richtext-lexical/react'
+import { CaretDown } from '@phosphor-icons/react/dist/ssr'
+import { type JSXConvertersFunction, RichText } from '@payloadcms/richtext-lexical/react'
 
+import { заглавияH2 } from '@/lib/lexical-headings'
 import type { Page } from '@/payload-types'
 
 type Layout = NonNullable<Page['layout']>
@@ -7,20 +9,99 @@ type BlockOf<T extends string> = Extract<Layout[number], { blockType: T }>
 
 /** Стилът на текстовете — като „Текст под списъка" в категориите. */
 const PROSE =
-  'text-[15px] leading-relaxed text-ink-muted [&_a]:text-ink [&_a]:underline [&_a]:underline-offset-4 [&_h2]:mb-2 [&_h2]:mt-8 [&_h2]:text-xl [&_h2]:font-semibold [&_h2]:text-ink [&_h3]:mb-1 [&_h3]:mt-5 [&_h3]:font-semibold [&_h3]:text-ink [&_li]:mt-1 [&_ol]:mt-2 [&_ol]:list-decimal [&_ol]:pl-6 [&_p]:mt-3 [&_strong]:font-semibold [&_strong]:text-ink [&_ul]:mt-2 [&_ul]:list-disc [&_ul]:pl-6 [&>*:first-child]:mt-0'
+  'text-[15px] leading-relaxed text-ink-muted [&_a]:text-ink [&_a]:underline [&_a]:underline-offset-4 [&_h2]:mb-2 [&_h2]:mt-8 [&_h2]:scroll-mt-24 [&_h2]:text-xl [&_h2]:font-semibold [&_h2]:text-ink [&_h3]:mb-1 [&_h3]:mt-5 [&_h3]:font-semibold [&_h3]:text-ink [&_li]:mt-1 [&_ol]:mt-2 [&_ol]:list-decimal [&_ol]:pl-6 [&_p]:mt-3 [&_strong]:font-semibold [&_strong]:text-ink [&_ul]:mt-2 [&_ul]:list-disc [&_ul]:pl-6 [&>*:first-child]:mt-0'
 
 /* ─────────── Текст ─────────── */
 
 export const RichTextSection = ({ block }: { block: BlockOf<'richText'> }) => {
   if (!block.content?.root?.children?.length && !block.heading) return null
+
+  /*
+    Заглавията H2 получават котва (`id`) — за съдържанието на правните
+    страници и за линк към раздел. Котвите са от `заглавияH2`, по реда им —
+    същият списък, който ползва и съдържанието.
+  */
+  const котви = заглавияH2(block.content)
+  let н = 0
+  const converters: JSXConvertersFunction = ({ defaultConverters }) => ({
+    ...defaultConverters,
+    heading: ({ node, nodesToJSX }) => {
+      const Tag = node.tag
+      const id = Tag === 'h2' ? котви[н++]?.id : undefined
+      return <Tag id={id}>{nodesToJSX({ nodes: node.children })}</Tag>
+    },
+  })
   return (
     <section className="container-site py-6 lg:py-8">
       <div className="mx-auto max-w-[760px]">
         {block.heading ? <h2 className="mb-3 text-xl font-semibold sm:text-2xl">{block.heading}</h2> : null}
         {block.content ? (
           <div className={PROSE}>
-            <RichText data={block.content} disableContainer />
+            <RichText data={block.content} converters={converters} disableContainer />
           </div>
+        ) : null}
+      </div>
+    </section>
+  )
+}
+
+/* ─────────── Правна страница: дата и съдържание ─────────── */
+
+/** 2026-10-08T… → „08.10.2026" (българско време). */
+const датаНа = (iso: string) =>
+  new Intl.DateTimeFormat('bg-BG', { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'Europe/Sofia' })
+    .format(new Date(iso))
+    .replace(/\s*г\.?$/, '')
+
+/**
+ * Над текста на правните страници (отметката „Правна страница" —
+ * `task-stranici-pravni.md`): „Последна актуализация: 08.10.2026" от
+ * `updatedAt` и съдържание от заглавията H2 на видимите блокове „Текст".
+ * На компютър съдържанието е отворено; на телефон — сгъваемо
+ * „Съдържание ▾", за да не избутва текста с цял екран линкове.
+ */
+export const LegalMeta = ({ layout, updatedAt }: { layout: Layout; updatedAt: string }) => {
+  const заглавия = layout
+    .flatMap((b) => (b.blockType === 'richText' && !b.hidden ? заглавияH2(b.content) : []))
+    .filter((h) => h.text)
+
+  const списък = (
+    <ol className="space-y-0.5 text-[15px] md:columns-2 md:gap-8">
+      {заглавия.map((h) => (
+        <li key={h.id} className="break-inside-avoid">
+          <a
+            href={`#${h.id}`}
+            className="inline-flex min-h-9 items-center text-ink underline-offset-4 hover:underline max-md:min-h-11"
+          >
+            {h.text}
+          </a>
+        </li>
+      ))}
+    </ol>
+  )
+
+  return (
+    <section className="container-site pb-2 pt-2">
+      <div className="mx-auto max-w-[760px]">
+        <p className="text-sm text-ink-muted">
+          Последна актуализация: <time dateTime={updatedAt}>{датаНа(updatedAt)}</time>
+        </p>
+        {заглавия.length ? (
+          <>
+            <nav aria-label="Съдържание" className="mt-5 rounded-lg bg-surface px-5 py-4 max-md:hidden">
+              <p className="mb-2 text-sm font-semibold">Съдържание</p>
+              {списък}
+            </nav>
+            <details className="group mt-4 rounded-lg bg-surface md:hidden">
+              <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between px-4 text-[15px] font-semibold [&::-webkit-details-marker]:hidden">
+                Съдържание
+                <CaretDown size={16} aria-hidden="true" className="transition-transform duration-200 group-open:rotate-180" />
+              </summary>
+              <nav aria-label="Съдържание" className="px-4 pb-3">
+                {списък}
+              </nav>
+            </details>
+          </>
         ) : null}
       </div>
     </section>

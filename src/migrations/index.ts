@@ -49,6 +49,7 @@ import * as migration_20261007_153730_about_hidden_items from './20261007_153730
 import * as migration_20261007_191305_roles_gate from './20261007_191305_roles_gate';
 import * as migration_20261007_201410_dice_sync from './20261007_201410_dice_sync';
 import * as migration_20261007_210720_mobile_optimizaciya from './20261007_210720_mobile_optimizaciya';
+import * as migration_20261008_090718_pages_legal_noindex from './20261008_090718_pages_legal_noindex';
 
 export const migrations = [
   {
@@ -304,6 +305,11 @@ export const migrations = [
   {
     up: migration_20261007_210720_mobile_optimizaciya.up,
     down: migration_20261007_210720_mobile_optimizaciya.down,
-    name: '20261007_210720_mobile_optimizaciya'
+    name: '20261007_210720_mobile_optimizaciya',
+  },
+  {
+    up: migration_20261008_090718_pages_legal_noindex.up,
+    down: migration_20261008_090718_pages_legal_noindex.down,
+    name: '20261008_090718_pages_legal_noindex'
   },
 ];

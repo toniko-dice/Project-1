@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
 
 import { breadcrumbSchema } from '@/components/Breadcrumbs'
+import { LegalMeta } from '@/components/blocks/text'
 import { RenderBlocks } from '@/components/RenderBlocks'
 import { getGlobal, getPage, getPayloadClient, getRedirectMap } from '@/lib/payload'
 import { mediaUrl } from '@/lib/media'
@@ -38,6 +39,8 @@ export const generateMetadata = async ({ params }: Args): Promise<Metadata> => {
     title: pageTitle(title),
     description,
     alternates: { canonical: url },
+    // „Скрий от търсачките" — и извън sitemap.xml (`sitemap.ts`).
+    ...(page.noindex ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       title: finalTitle(title),
       description,
@@ -126,7 +129,12 @@ export default async function DynamicPage({ params }: Args) {
   return (
     <div className={ръководство ? 'bg-surface' : 'bg-canvas'}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <RenderBlocks layout={layout} showBgn={Boolean(settings.showBgnPrices)} />
+      <RenderBlocks
+        layout={layout}
+        showBgn={Boolean(settings.showBgnPrices)}
+        // Правна страница: датата и съдържанието — под H1, над текста.
+        heading={page.legal ? <LegalMeta layout={layout} updatedAt={page.updatedAt} /> : undefined}
+      />
     </div>
   )
 }

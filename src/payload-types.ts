@@ -2032,6 +2032,11 @@ export interface Page {
    * Само малки латински букви, цифри и тирета. Кирилицата се транслитерира, интервалите стават тирета, представки като „products/" се махат. Не е нужно да пишете пътя — само името.
    */
   slug: string;
+  /**
+   * Над текста излизат „Последна актуализация" (датата на последното записване) и съдържание с линкове към заглавията H2.
+   */
+  legal?: boolean | null;
+  importedAt?: string | null;
   layout?:
     | (
         | {
@@ -2978,6 +2983,10 @@ export interface Page {
   metaTitle?: string | null;
   metaDescription?: string | null;
   metaImage?: (number | null) | Media;
+  /**
+   * Страницата получава „noindex, follow" и не е в sitemap.xml. При временен текст — махнете отметката, когато сложите окончателния текст.
+   */
+  noindex?: boolean | null;
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
@@ -3655,6 +3664,8 @@ export interface PagesSelect<T extends boolean = true> {
   _order?: T;
   title?: T;
   slug?: T;
+  legal?: T;
+  importedAt?: T;
   layout?:
     | T
     | {
@@ -4211,6 +4222,7 @@ export interface PagesSelect<T extends boolean = true> {
   metaTitle?: T;
   metaDescription?: T;
   metaImage?: T;
+  noindex?: T;
   updatedAt?: T;
   createdAt?: T;
   _status?: T;

@@ -17,6 +17,7 @@
 import type { Payload } from 'payload'
 
 import { mediaUrl } from '../media'
+import { PRIVACY_PATH } from '../legal'
 import { absoluteUrl, SITE_URL } from '../site-url'
 import {
   CLIENT_TYPES,
@@ -188,7 +189,7 @@ ${body}
         ${c.phone ? `Тел.: <a href="tel:${esc(c.phone.replace(/\s/g, ''))}" style="color:#ffffff;text-decoration:none">${esc(c.phone)}</a><br>` : ''}
         ${c.email ? `Имейл: <a href="mailto:${esc(c.email)}" style="color:#ffffff;text-decoration:none">${esc(c.email)}</a><br>` : ''}
         <a href="${esc(SITE_URL)}" target="_blank" style="color:#ffffff">${esc(host)}</a>
-        <div style="margin-top:14px;font-size:12px;color:#9a9a9a">${esc(footerNote)}</div>
+        <div style="margin-top:14px;font-size:12px;color:#9a9a9a">${esc(footerNote)}<br><a href="${esc(absoluteUrl(PRIVACY_PATH))}" target="_blank" style="color:#9a9a9a">Политика за поверителност</a></div>
       </td></tr>
     </table>
   </td></tr>
@@ -244,6 +245,7 @@ export const textFooter = (c: MailContacts, footerNote = `Този имейл е
     c.email ? `Имейл: ${c.email}` : '',
     SITE_URL,
     footerNote,
+    `Политика за поверителност: ${absoluteUrl(PRIVACY_PATH)}`,
   ]
     .filter(Boolean)
     .join('\n')

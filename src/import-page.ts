@@ -5,6 +5,7 @@
  *   npm run import:page <slug>                 запис + публикуване + опресняване
  *   npm run import:page <slug> -- --dry-run    само какво би направил
  *   npm run import:page <slug> -- --no-download
+ *   npm run import:page <slug> -- --force      и страница, редактирана в админа
  *
  * Файлът има три части:
  * - `stranica` — title, slug, metaTitle, metaDescription, metaImage;
@@ -25,6 +26,12 @@
  * Повторното пускане обновява СЪЩАТА страница (по slug) — секциите се
  * записват наново изцяло. Страницата излиза публикувана; ако
  * публикуването не мине проверките, остава чернова и се изписва защо.
+ *
+ * **Редактираната в админа не се презаписва** (`task-stranici-pravni.md`,
+ * т. 2): вносът пише `importedAt`; запис след него значи редакция и
+ * страницата се пропуска без `--force`. Страница без `importedAt` (внесена
+ * преди защитата или създадена в админа) също се пропуска — не се знае
+ * дали е пипана.
  */
 import config from '@payload-config'
 import { convertMarkdownToLexical, editorConfigFactory } from '@payloadcms/richtext-lexical'
@@ -61,6 +68,10 @@ if (!slug) die('Липсва адрес на страницата.\n  Приме
 
 const dryRun = process.argv.includes('--dry-run')
 const noDownload = process.argv.includes('--no-download')
+const force = process.argv.includes('--force')
+
+/** Запис до толкова след вноса е самият внос (Payload слага `updatedAt` малко след `importedAt`). */
+const ДОПУСК_MS = 10_000
 
 type Обект = Record<string, unknown>
 type Съдържание = {
@@ -84,6 +95,28 @@ if (стр.slug !== slug) die(`stranica.slug („${String(стр.slug)}") не �
 if (!Array.isArray(content.sekcii) || !content.sekcii.length) die('В sadarzhanie.json няма секции (sekcii).')
 
 const payload = await getPayload({ config })
+
+/* ─────────── защита на редакциите от админа ─────────── */
+
+const съществуваща = (
+  await payload.find({ collection: 'pages', where: { slug: { equals: slug } }, limit: 1, depth: 0, draft: true })
+).docs[0]
+
+if (съществуваща && !force) {
+  const внос = съществуваща.importedAt ? Date.parse(съществуваща.importedAt) : NaN
+  const запис = Date.parse(съществуваща.updatedAt)
+  const редактирана = Number.isNaN(внос) || запис - внос > ДОПУСК_MS
+  if (редактирана) {
+    console.log(`
+/${slug}: Страницата е редактирана в админа — пропусната. Ползвайте --force, ако искате да я замените.`)
+    console.log(
+      Number.isNaN(внос)
+        ? '  (няма отбелязан внос — страницата е внесена преди защитата или е създадена в админа)'
+        : `  внос: ${new Date(внос).toLocaleString('bg-BG', { timeZone: 'Europe/Sofia' })}, последен запис: ${new Date(запис).toLocaleString('bg-BG', { timeZone: 'Europe/Sofia' })}`,
+    )
+    process.exit(0)
+  }
+}
 // Markdown → rich text, както при текстовете на категориите (`import:seo`).
 const editorConfig = await editorConfigFactory.default({ config: payload.config })
 const log = (m: string) => console.log(m)
@@ -415,10 +448,6 @@ const metaImage =
 
 /* ─────────── запис ─────────── */
 
-const съществуваща = (
-  await payload.find({ collection: 'pages', where: { slug: { equals: slug } }, limit: 1, depth: 0, draft: true })
-).docs[0]
-
 const data = {
   title: String(стр.title ?? slug),
   slug: slug!,
@@ -426,6 +455,10 @@ const data = {
   metaDescription: (стр.metaDescription as string) ?? null,
   metaImage,
   layout,
+  // Без ключа във файла отметката остава каквато е в админа.
+  ...(typeof стр.noindex === 'boolean' ? { noindex: стр.noindex } : {}),
+  ...(typeof стр.pravna === 'boolean' ? { legal: стр.pravna } : {}),
+  importedAt: new Date().toISOString(),
 } as Обект
 
 log(`\nСТРАНИЦА /${slug}${dryRun ? ' — ПРОВЕРКА, нищо не е записано' : ''}`)
@@ -433,6 +466,9 @@ log(`  ${съществуваща ? `съществува (№ ${съществ�
 log(`  заглавие: ${data.title}`)
 log(`  мета заглавие: ${data.metaTitle} (${String(data.metaTitle ?? '').length} знака)`)
 log(`  мета описание: ${String(data.metaDescription ?? '').length} знака`)
+if ('noindex' in data) log(`  скрита от търсачките: ${data.noindex ? 'да' : 'не'}`)
+if ('legal' in data) log(`  правна (дата и съдържание): ${data.legal ? 'да' : 'не'}`)
+if (съществуваща && force) log('  --force: замества и редакциите от админа')
 log(`\nСЕКЦИИ (${layout.length})`)
 for (const р of редове) log(`  ${р}`)
 log(`\nСНИМКИ (${отчетСнимки.length})`)

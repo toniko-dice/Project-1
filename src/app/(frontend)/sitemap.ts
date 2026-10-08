@@ -16,7 +16,8 @@ import { accessoriesPath, categoryPath, productPath } from '@/lib/urls'
  *
  * - подсериите — те нямат собствена страница, а са раздели на серията
  *   (`?sub=`), и canonical им сочи серията;
- * - категориите с `noindex` — смисълът на отметката е точно този;
+ * - категориите с `noindex` и страниците със „Скрий от търсачките" —
+ *   смисълът на отметката е точно този;
  * - празните категории — без нито един публикуван продукт в разклонението
  *   (`isEmptyCategory`); връщат се сами с първия продукт;
  * - черновите — те не се виждат и на сайта.
@@ -37,7 +38,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       pagination: false,
       // Дълбочина 1 — снимките в секциите идват като записи от Медия (за `<image:image>`).
       depth: 1,
-      select: { slug: true, updatedAt: true, metaImage: true, layout: true },
+      select: { slug: true, updatedAt: true, metaImage: true, layout: true, noindex: true },
     }),
     getCatalog(),
   ])
@@ -53,7 +54,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ]
 
   for (const page of pages.docs) {
-    if (page.slug === 'home') continue
+    // „Скрий от търсачките" — правните страници с временен текст.
+    if (page.slug === 'home' || page.noindex) continue
     const снимки = pageImages(page.metaImage, page.layout)
     записи.push({
       url: absoluteUrl(`/${page.slug}`),
