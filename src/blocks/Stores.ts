@@ -62,7 +62,7 @@ export const Stores: Block = {
           label: 'Линк към картата',
           admin: { description: 'По желание. Празно — търсене в Google Maps по името и адреса.' },
         },
-        { name: 'phone', type: 'text', label: 'Телефон', admin: { description: 'По желание.' } },
+        { name: 'phone', type: 'text', label: 'Телефон', admin: { description: 'Не се показва на сайта.' } },
         {
           name: 'hours',
           type: 'array',

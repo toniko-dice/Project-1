@@ -184,7 +184,13 @@ export const SiteSettings: GlobalConfig = {
             },
           ],
         },
-        { name: 'phone', type: 'text', label: 'Телефон' },
+        {
+          name: 'phone',
+          type: 'text',
+          label: 'Телефон',
+          // `task-futar.md`: номерът не се показва никъде — само имейлът и формата на /kontakti.
+          admin: { description: 'Не се показва на сайта.' },
+        },
         { name: 'email', type: 'email', label: 'Имейл' },
         {
           name: 'distributorNotice',

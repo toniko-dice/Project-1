@@ -5,11 +5,12 @@ import { usePathname } from 'next/navigation'
 import { useCallback, useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 
-const SLUG = 'quote-requests'
 const POLL_MS = 60_000
 
 /**
- * Броячът до „Нови заявки" в лявото меню — заявките със статус „Нова".
+ * Броячът до „Нови заявки" и „Съобщения" в лявото меню — записите със
+ * статус `new` („Нова" / „Ново"). Колекцията и думата идват като
+ * `clientProps` от `payload.config.ts` — един компонент за двете.
  *
  * Payload не дава динамичен надпис на колекция в менюто, затова този
  * компонент (в `admin.components.afterNavLinks`) намира линка на колекцията
@@ -21,7 +22,14 @@ const POLL_MS = 60_000
  * всеки 60 секунди и веднага след запис на заявка (`useDocumentEvents`) —
  * смяната на статуса от „Нова" маха цифрата без чакане. Нула — нищо.
  */
-export const QuoteNavBadge = () => {
+export const CollectionNavBadge = ({
+  slug = 'quote-requests',
+  noun = 'нови заявки',
+}: {
+  slug?: string
+  noun?: string
+}) => {
+  const SLUG = slug
   const { config } = useConfig()
   // Само администраторът и продажбите виждат заявките; за редактора не се пита изобщо.
   const { user } = useAuth<{ role?: string | null }>()
@@ -45,7 +53,7 @@ export const QuoteNavBadge = () => {
     } catch {
       // Без връзка — оставяме последната стойност.
     }
-  }, [api, вижда])
+  }, [api, вижда, SLUG])
 
   useEffect(() => {
     void refresh()
@@ -55,7 +63,7 @@ export const QuoteNavBadge = () => {
 
   useEffect(() => {
     if (mostRecentUpdate?.entitySlug === SLUG) void refresh()
-  }, [mostRecentUpdate, refresh])
+  }, [mostRecentUpdate, refresh, SLUG])
 
   /*
     Линкът се търси при всяка промяна в DOM-а: менюто се рендерира наново
@@ -77,14 +85,14 @@ export const QuoteNavBadge = () => {
     const mo = new MutationObserver(find)
     mo.observe(document.body, { childList: true, subtree: true })
     return () => mo.disconnect()
-  }, [])
+  }, [SLUG])
 
   if (!host || count < 1) return null
 
   return createPortal(
     <span
-      aria-label={`${count} нови заявки`}
-      title={`${count} нови заявки`}
+      aria-label={`${count} ${noun}`}
+      title={`${count} ${noun}`}
       style={{
         display: 'inline-flex',
         alignItems: 'center',
@@ -107,3 +115,6 @@ export const QuoteNavBadge = () => {
     host,
   )
 }
+
+/** Старото име — „Нови заявки". */
+export const QuoteNavBadge = () => <CollectionNavBadge />

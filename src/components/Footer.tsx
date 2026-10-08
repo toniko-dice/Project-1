@@ -7,7 +7,9 @@ import {
 } from '@phosphor-icons/react/dist/ssr'
 import Link from 'next/link'
 
+import { FooterColumn } from './FooterColumn'
 import { NewsletterForm } from './NewsletterForm'
+import { CONTACT_PATH } from '@/lib/legal'
 import { getGlobal } from '@/lib/payload'
 
 const SOCIAL_ICONS = {
@@ -56,11 +58,14 @@ export const Footer = async () => {
         </div>
       ) : null}
 
-      <div className="container-site grid gap-8 py-12 sm:grid-cols-2 lg:grid-cols-5">
+      {/*
+        На телефон колоните са акордеони (`FooterColumn`), контактите — отворени
+        отдолу. От 768 px — колони една до друга.
+      */}
+      <div className="container-site grid gap-x-8 py-8 md:grid-cols-2 md:gap-y-8 md:py-12 lg:grid-cols-5">
         {(footer.columns ?? []).map((col, i) => (
-          <div key={i}>
-            <h3 className="mb-3 text-sm font-semibold">{col.heading}</h3>
-            <ul className="space-y-1">
+          <FooterColumn key={i} heading={col.heading}>
+            <ul className="pb-3 md:space-y-1 md:pb-0">
               {(col.links ?? []).map((l, li) => (
                 <li key={li}>
                   <Link
@@ -72,24 +77,18 @@ export const Footer = async () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </FooterColumn>
         ))}
 
-        <div>
+        <div className="pt-6 md:pt-0">
           <h3 className="mb-3 text-sm font-semibold">Контакти</h3>
+          {/*
+            Без телефон (`task-futar.md`) — имейлът и формата на /kontakti са
+            единственият начин за връзка. Полето в „Общи настройки" остава.
+          */}
           <address className="space-y-1 text-sm not-italic text-ink-muted">
             {settings.companyName ? <p className="font-medium">{settings.companyName}</p> : null}
             {settings.address ? <p className="whitespace-pre-line">{settings.address}</p> : null}
-            {settings.phone ? (
-              <p>
-                <a
-                  href={`tel:${settings.phone.replace(/\s/g, '')}`}
-                  className="cursor-pointer hover:text-brand max-md:inline-flex max-md:min-h-11 max-md:items-center"
-                >
-                  {settings.phone}
-                </a>
-              </p>
-            ) : null}
             {settings.email ? (
               <p>
                 <a
@@ -100,6 +99,14 @@ export const Footer = async () => {
                 </a>
               </p>
             ) : null}
+            <p>
+              <Link
+                href={CONTACT_PATH}
+                className="inline-flex min-h-9 cursor-pointer items-center font-medium text-ink hover:text-brand max-md:min-h-11"
+              >
+                Форма за контакт →
+              </Link>
+            </p>
             {settings.vatNumber ? <p>ЕИК: {settings.vatNumber}</p> : null}
           </address>
 

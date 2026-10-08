@@ -8,6 +8,7 @@ import { Products } from '@/collections/Products'
 import { type Catalog, type CatalogEntry, makeCatalog } from './catalog'
 import { rankSearchResults, searchWhere, searchWords } from './search'
 import { productPath } from './urls'
+import { type FaqGroup, сглобиВъпроси } from './faq'
 
 export const getPayloadClient = cache(async () => getPayload({ config }))
 
@@ -543,13 +544,67 @@ export const getLatestProducts = cache(async (limit = 4): Promise<Product[]> =>
   }),
 )
 
-type GlobalSlug = 'header' | 'footer' | 'site-settings' | 'design' | 'filter-order'
+type GlobalSlug = 'header' | 'footer' | 'site-settings' | 'design' | 'filter-order' | 'info-pages'
 
 export const getGlobal = cache(async <T extends GlobalSlug>(slug: T) =>
   timed(`getGlobal(${slug})`, () =>
     cached(['global', slug], ['global', `global:${slug}`], async () => {
       const payload = await getPayloadClient()
       return payload.findGlobal({ slug, depth: 2 })
+    }),
+  ),
+)
+
+/**
+ * Въпросите за `/vaprosi` — от продуктите, категориите и страниците,
+ * групирани по серии (`src/lib/faq.ts`). Кешира се само готовият резултат
+ * (малък); таговете са на трите колекции — нов въпрос в продукт се вижда
+ * след записа, скрит продукт изчезва.
+ */
+export const getFaqGroups = cache(async (): Promise<FaqGroup[]> =>
+  timed('getFaqGroups', () =>
+    cached(['faq-groups'], ['product', 'page', 'category'], async () => {
+      const payload = await getPayloadClient()
+      const [tree, products, pages, categories] = await Promise.all([
+        getCategoryTree(),
+        payload.find({
+          collection: 'products',
+          where: { _status: { equals: 'published' } },
+          sort: '_order',
+          depth: 0,
+          pagination: false,
+          select: {
+            title: true,
+            slug: true,
+            category: true,
+            categorySlug: true,
+            categoryParentSlug: true,
+            categoryGrandparentSlug: true,
+            sections: true,
+          },
+        }),
+        payload.find({
+          collection: 'pages',
+          where: { _status: { equals: 'published' } },
+          sort: '_order',
+          depth: 0,
+          pagination: false,
+          select: { title: true, slug: true, layout: true },
+        }),
+        payload.find({
+          collection: 'categories',
+          sort: '_order',
+          depth: 0,
+          pagination: false,
+          select: { title: true, slug: true, layout: true },
+        }),
+      ])
+      return сглобиВъпроси({
+        tree,
+        products: products.docs as never,
+        pages: pages.docs as never,
+        categories: categories.docs as never,
+      })
     }),
   ),
 )

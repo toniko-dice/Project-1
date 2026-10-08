@@ -3,6 +3,7 @@ import type { MetadataRoute } from 'next'
 import { accessoriesForCategory, canHaveAccessoriesPage } from '@/lib/catalog'
 import { getCatalog, getCategoryTree, getPayloadClient, getPublishedProducts } from '@/lib/payload'
 import { mediaUrl } from '@/lib/media'
+import { CONTACT_PATH, FAQ_PATH } from '@/lib/legal'
 import { categoryNoindex } from '@/lib/seo'
 import { absoluteUrl } from '@/lib/site-url'
 import { levelOf } from '@/lib/tree'
@@ -12,7 +13,8 @@ import { accessoriesPath, categoryPath, productPath } from '@/lib/urls'
  * Картата на сайта.
  *
  * Влизат: публикуваните продукти (със снимките си), категориите без
- * отметка „Да не се индексира" и публикуваните страници. НЕ влизат:
+ * отметка „Да не се индексира", публикуваните страници и `/vaprosi`,
+ * `/kontakti`. НЕ влизат:
  *
  * - подсериите — те нямат собствена страница, а са раздели на серията
  *   (`?sub=`), и canonical им сочи серията;
@@ -64,6 +66,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       ...(снимки.length ? { images: снимки } : {}),
     })
   }
+
+  /*
+    Страниците-код (`task-futar.md`): въпросите — с датата на най-новия
+    продукт (оттам идват повечето въпроси), контактите — без дата.
+  */
+  const последенПродукт = products.reduce<string | null>(
+    (m, p) => (p.updatedAt && (!m || p.updatedAt > m) ? p.updatedAt : m),
+    null,
+  )
+  записи.push(
+    {
+      url: absoluteUrl(FAQ_PATH),
+      lastModified: последенПродукт ? new Date(последенПродукт) : undefined,
+      changeFrequency: 'weekly',
+    },
+    { url: absoluteUrl(CONTACT_PATH), changeFrequency: 'yearly' },
+  )
 
   for (const category of tree) {
     // Отметката „Да не се индексира" ИЛИ празна категория (т. 3 — връща се сама).

@@ -110,7 +110,6 @@ export const Header = async () => {
         ctaUrl={header.ctaUrl}
         searchEnabled={header.searchEnabled}
         mobileLinks={(header.mobileLinks ?? []).map((l) => ({ label: l.label, url: l.url }))}
-        phone={settings.phone}
         email={settings.email}
       />
     </>

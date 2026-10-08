@@ -1,11 +1,10 @@
-import { CaretRight, MapPin, Quotes } from '@phosphor-icons/react/dist/ssr'
+import { CaretRight, Quotes } from '@phosphor-icons/react/dist/ssr'
 import { RichText } from '@payloadcms/richtext-lexical/react'
 import Link from 'next/link'
 
 import type { Media, Page, Product } from '@/payload-types'
 import { mediaAlt, mediaUrl, productCardData } from '@/lib/media'
 import { resolvedRelations } from '@/lib/relations'
-import { картаНа, редовеЧасове } from '@/lib/stores'
 import { AboutTabs } from '../AboutTabs'
 import { BuyButton } from '../BuyButton'
 import { CardImage } from '../CardImage'
@@ -13,6 +12,7 @@ import { CountUp } from '../CountUp'
 import { ImagePlaceholder } from '../ImagePlaceholder'
 import { productBadges, ProductBadges } from '../ProductBadges'
 import { ScrollRow } from '../ScrollRow'
+import { StoreCards, валидниМагазини } from '../StoreCards'
 import { DualImage } from './guide'
 import { PROSE } from './text'
 
@@ -405,43 +405,13 @@ export const PressQuotesBlock = ({ block }: { block: BlockOf<'pressQuotes'> }) =
  * `Store` в JSON-LD на страницата (`storeSchema`).
  */
 export const StoresBlock = ({ block }: { block: BlockOf<'stores'> }) => {
-  const stores = (block.stores ?? []).filter((s) => s.name && s.street && s.city)
+  const stores = валидниМагазини(block.stores)
   if (!stores.length) return null
   return (
     <section className="container-site py-6 lg:py-8">
       <div className="mx-auto max-w-[760px]">
         {block.heading ? <h2 className="mb-4 text-xl font-semibold">{block.heading}</h2> : null}
-        <ul className="grid gap-4 md:grid-cols-2">
-          {stores.map((s, i) => (
-            <li key={i} className="rounded-xl bg-tile p-5">
-              <h3 className="text-base font-semibold">{s.name}</h3>
-              <a
-                href={картаНа(s)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 inline-flex min-h-11 items-start gap-2 py-1 text-[15px] underline underline-offset-4 hover:text-ink-muted"
-              >
-                <MapPin size={18} aria-hidden="true" className="mt-0.5 shrink-0" />
-                <span>
-                  {s.street}, {s.city}
-                  <span className="sr-only"> (отваря Google Maps в нов раздел)</span>
-                </span>
-              </a>
-              {s.phone ? (
-                <a href={`tel:${s.phone.replace(/[^\d+]/g, '')}`} className="tabular mt-1 block text-[15px] underline-offset-4 hover:underline">
-                  {s.phone}
-                </a>
-              ) : null}
-              {редовеЧасове(s.hours).length ? (
-                <ul className="mt-3 space-y-1 text-[15px] text-ink-muted">
-                  {редовеЧасове(s.hours).map((р) => (
-                    <li key={р}>{р}</li>
-                  ))}
-                </ul>
-              ) : null}
-            </li>
-          ))}
-        </ul>
+        <StoreCards stores={stores} />
         {block.note ? (
           <div className={`mt-4 ${PROSE}`}>
             <RichText data={block.note} disableContainer />

@@ -45,7 +45,7 @@ export const картаНа = (m: Магазин): string =>
   m.mapUrl?.trim() ||
   `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${m.name}, ${m.street}, ${m.city}`)}`
 
-/** `Store` за JSON-LD — с адреса, работното време и фирмата над него. */
+/** `Store` за JSON-LD — с адреса, работното време и фирмата над него, без телефон. */
 export const storeSchema = (m: Магазин, organizationId: string) => {
   const отворени = (m.hours ?? []).filter((h) => дниНа(h).length && !h.closed && h.opens && h.closes)
   return {
@@ -54,7 +54,7 @@ export const storeSchema = (m: Магазин, organizationId: string) => {
     name: m.name,
     address: { '@type': 'PostalAddress', streetAddress: m.street, addressLocality: m.city, addressCountry: 'BG' },
     hasMap: картаНа(m),
-    ...(m.phone?.trim() ? { telephone: m.phone.trim() } : {}),
+    // Без `telephone` — полето в блока остава, но не се показва (`task-futar.md`).
     ...(отворени.length
       ? {
           openingHoursSpecification: отворени.map((h) => ({

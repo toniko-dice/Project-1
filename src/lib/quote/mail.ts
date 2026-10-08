@@ -17,7 +17,7 @@
 import type { Payload } from 'payload'
 
 import { mediaUrl } from '../media'
-import { PRIVACY_PATH } from '../legal'
+import { CONTACT_PATH, PRIVACY_PATH } from '../legal'
 import { absoluteUrl, SITE_URL } from '../site-url'
 import {
   CLIENT_TYPES,
@@ -56,11 +56,11 @@ export type MailRequest = {
   attachment: { filename: string; url: string; size: number; mimeType: string; path: string } | null
 }
 
+/** Без телефон — номерът на фирмата не се показва никъде (`task-futar.md`). */
 export type MailContacts = {
   logoUrl: string | null
   companyName: string
   address: string
-  phone: string
   email: string
 }
 
@@ -80,9 +80,9 @@ export const esc = (s: string) =>
 
 export const nl2br = (s: string) => esc(s).replace(/\r?\n/g, '<br>')
 
-const FONT = "Inter, 'Segoe UI', Arial, Helvetica, sans-serif"
-const INK = '#1a1a1a'
-const MUTED = '#6b6b6b'
+export const FONT = "Inter, 'Segoe UI', Arial, Helvetica, sans-serif"
+export const INK = '#1a1a1a'
+export const MUTED = '#6b6b6b'
 const LINE = '#e3e3e3'
 
 /* ─────────── части на шаблона ─────────── */
@@ -98,7 +98,7 @@ export const heading = (text: string) =>
   `<h2 style="margin:28px 0 10px;font-family:${FONT};font-size:17px;line-height:1.3;font-weight:700;color:#000000">${esc(text)}</h2>`
 
 /** Ред „етикет — стойност"; празната стойност не дава ред. */
-const rows = (pairs: [string, string][]) => {
+export const rows = (pairs: [string, string][]) => {
   const filled = pairs.filter(([, v]) => v && v.trim())
   if (!filled.length) return ''
   return `
@@ -186,8 +186,8 @@ ${body}
       <tr><td style="font-family:${FONT};font-size:13px;line-height:1.7;color:#d9d9d9">
         <strong style="color:#ffffff">${esc(c.companyName || 'EcoFlow България')}</strong><br>
         ${c.address ? `${nl2br(c.address).replace(/<br>/g, ', ')}<br>` : ''}
-        ${c.phone ? `Тел.: <a href="tel:${esc(c.phone.replace(/\s/g, ''))}" style="color:#ffffff;text-decoration:none">${esc(c.phone)}</a><br>` : ''}
         ${c.email ? `Имейл: <a href="mailto:${esc(c.email)}" style="color:#ffffff;text-decoration:none">${esc(c.email)}</a><br>` : ''}
+        Форма за контакт: <a href="${esc(absoluteUrl(CONTACT_PATH))}" target="_blank" style="color:#ffffff">${esc(host)}${CONTACT_PATH}</a><br>
         <a href="${esc(SITE_URL)}" target="_blank" style="color:#ffffff">${esc(host)}</a>
         <div style="margin-top:14px;font-size:12px;color:#9a9a9a">${esc(footerNote)}<br><a href="${esc(absoluteUrl(PRIVACY_PATH))}" target="_blank" style="color:#9a9a9a">Политика за поверителност</a></div>
       </td></tr>
@@ -241,8 +241,8 @@ export const textFooter = (c: MailContacts, footerNote = `Този имейл е
     '—',
     c.companyName || 'EcoFlow България',
     c.address.replace(/\r?\n/g, ', '),
-    c.phone ? `Тел.: ${c.phone}` : '',
     c.email ? `Имейл: ${c.email}` : '',
+    `Форма за контакт: ${absoluteUrl(CONTACT_PATH)}`,
     SITE_URL,
     footerNote,
     `Политика за поверителност: ${absoluteUrl(PRIVACY_PATH)}`,
@@ -317,13 +317,13 @@ export const customerMail = (r: MailRequest, c: MailContacts) => {
     'Ще ви изпратим оферта в максимално кратък срок.',
     `<h1 style="margin:0 0 14px;font-family:${FONT};font-size:22px;line-height:1.3;font-weight:700;color:#000000">Здравейте, ${esc(r.contactName)}!</h1>
 <p style="margin:0 0 12px">Получихме вашата заявка № <strong>${esc(r.number)}</strong>. Ще ви изпратим оферта в максимално кратък срок. Благодарим ви за доверието!</p>
-<p style="margin:0;color:${MUTED};font-size:14px">По-долу е копие на заявката. Ако нещо трябва да се промени, просто отговорете на този имейл или се обадете${c.phone ? ` на ${esc(c.phone)}` : ''}.</p>
+<p style="margin:0;color:${MUTED};font-size:14px">По-долу е копие на заявката. Ако нещо трябва да се промени, просто отговорете на този имейл.</p>
 ${heading('Организация')}${rows([...orgPairs(r), ...contactPairs(r)])}
 ${heading('Продукти и количества')}${productsTable(r.items)}
 ${r.otherProducts.trim() ? `${heading('Други продукти или изисквания')}<p style="margin:0;font-size:14px">${nl2br(r.otherProducts)}</p>` : ''}
 ${rows(detailPairs(r)) ? `${heading('Подробности')}${rows(detailPairs(r))}` : ''}
 ${heading('Контакти')}
-<p style="margin:0;font-size:14px">${c.phone ? `Телефон: <a href="tel:${esc(c.phone.replace(/\s/g, ''))}" style="color:${INK}">${esc(c.phone)}</a><br>` : ''}${c.email ? `Имейл: <a href="mailto:${esc(c.email)}" style="color:${INK}">${esc(c.email)}</a>` : ''}</p>
+<p style="margin:0;font-size:14px">${c.email ? `Имейл: <a href="mailto:${esc(c.email)}" style="color:${INK}">${esc(c.email)}</a><br>` : ''}Форма за контакт: <a href="${esc(absoluteUrl(CONTACT_PATH))}" style="color:${INK}">${esc(absoluteUrl(CONTACT_PATH))}</a></p>
 ${button('Към сайта', SITE_URL)}`,
   )
 
@@ -336,7 +336,7 @@ ${button('Към сайта', SITE_URL)}`,
     textItems(r.items),
     r.otherProducts.trim() ? `ДРУГИ ПРОДУКТИ ИЛИ ИЗИСКВАНИЯ\n${r.otherProducts}\n` : '',
     textBlock('Подробности', detailPairs(r)),
-    `КОНТАКТИ\n${c.phone ? `Телефон: ${c.phone}\n` : ''}${c.email ? `Имейл: ${c.email}\n` : ''}`,
+    `КОНТАКТИ\n${c.email ? `Имейл: ${c.email}\n` : ''}Форма за контакт: ${absoluteUrl(CONTACT_PATH)}\n`,
     textFooter(c),
   ]
     .filter((s) => s !== '')
@@ -362,7 +362,6 @@ export const loadMailContacts = async (payload: Payload): Promise<MailContacts> 
     logoUrl: заключен ? absoluteUrl('/vhod/ecoflow-logo.png') : logo ? absoluteUrl(logo) : null,
     companyName: settings.companyName ?? '',
     address: settings.address ?? '',
-    phone: settings.phone ?? '',
     email: settings.email ?? '',
   }
 }

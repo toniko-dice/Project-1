@@ -4,3 +4,9 @@
  * Формата за оферта има свое поле („Адрес на поверителността" в блока).
  */
 export const PRIVACY_PATH = '/poveritelnost'
+
+/** Страницата с формата за контакт — единственият начин за връзка освен имейла (`task-futar.md`). */
+export const CONTACT_PATH = '/kontakti'
+
+/** Често задавани въпроси — събрани от продуктите и страниците. */
+export const FAQ_PATH = '/vaprosi'

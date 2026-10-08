@@ -34,7 +34,7 @@ export const OfferSettings: GlobalConfig = {
         {
           type: 'row',
           fields: [
-            { name: 'phone', type: 'text', label: 'Телефон', defaultValue: '+359 879 437 744', admin: { width: '33%' } },
+            { name: 'phone', type: 'text', label: 'Телефон', admin: { width: '33%', description: 'Не се показва в PDF-а.' } },
             { name: 'email', type: 'email', label: 'Имейл', defaultValue: 'support@dice.bg', admin: { width: '33%' } },
             { name: 'website', type: 'text', label: 'Сайт', defaultValue: 'bg-ecoflow.com', admin: { width: '34%' } },
           ],

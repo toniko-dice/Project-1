@@ -13,6 +13,7 @@
 import config from '@payload-config'
 import { getPayload } from 'payload'
 import sharp from 'sharp'
+import { FOOTER_COLUMNS } from './lib/footer-columns'
 import { slugify } from './lib/slug'
 
 const payload = await getPayload({ config })
@@ -412,55 +413,15 @@ await payload.updateGlobal({
     newsletterEnabled: true,
     newsletterHeading: 'Бъдете в течение',
     newsletterText: 'Промоции, нови продукти и съвети за резервно захранване. Без спам.',
-    columns: [
-      {
-        heading: 'Продукти',
-        links: [
-          { label: 'Портативни електроцентрали', url: '/categories/portativni-elektrocentrali' },
-          { label: 'Домашни батерии', url: '/categories/domashni-baterii' },
-          { label: 'Соларни панели', url: '/categories/solarni-paneli' },
-          { label: 'Аксесоари', url: '/categories/aksesoari' },
-        ],
-      },
-      {
-        heading: 'Поддръжка',
-        links: [
-          { label: 'Гаранция', url: '/garanciya' },
-          { label: 'Ръководства', url: '/rakovodstva' },
-          { label: 'Сервиз', url: '/serviz' },
-          { label: 'Често задавани въпроси', url: '/vaprosi' },
-        ],
-      },
-      {
-        heading: 'Фирма',
-        links: [
-          { label: 'За EcoFlow', url: '/za-ecoflow' },
-          { label: 'За ДИ СИ 2008', url: '/za-di-si-2008' },
-          { label: 'Контакти', url: '/kontakti' },
-          { label: 'Кариери', url: '/karieri' },
-          { label: 'Новини', url: '/novini' },
-        ],
-      },
-      {
-        heading: 'Програми',
-        links: [
-          { label: 'Замени и спести', url: '/programi/zamiana' },
-          { label: 'Клуб EcoFlow', url: '/chlenstvo' },
-          { label: 'За бизнеса', url: '/biznes' },
-        ],
-      },
-    ],
+    columns: FOOTER_COLUMNS,
     social: [
       { platform: 'facebook', url: 'https://facebook.com' },
       { platform: 'instagram', url: 'https://instagram.com' },
       { platform: 'youtube', url: 'https://youtube.com' },
     ],
     copyright: `© ${new Date().getFullYear()} EcoFlow България. Всички права запазени.`,
-    legalLinks: [
-      { label: 'Общи условия', url: '/obshti-usloviya' },
-      { label: 'Поверителност', url: '/poveritelnost' },
-      { label: 'Бисквитки', url: '/biskvitki' },
-    ],
+    // Правните линкове са колона „Правна информация" — долната лента е без тях.
+    legalLinks: [],
   },
 })
 

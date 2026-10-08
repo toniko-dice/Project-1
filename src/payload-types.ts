@@ -68,6 +68,7 @@ export interface Config {
   blocks: {};
   collections: {
     'quote-requests': QuoteRequest;
+    'contact-messages': ContactMessage;
     offers: Offer;
     'dice-syncs': DiceSync;
     'quote-files': QuoteFile;
@@ -96,6 +97,7 @@ export interface Config {
   };
   collectionsSelect: {
     'quote-requests': QuoteRequestsSelect<false> | QuoteRequestsSelect<true>;
+    'contact-messages': ContactMessagesSelect<false> | ContactMessagesSelect<true>;
     offers: OffersSelect<false> | OffersSelect<true>;
     'dice-syncs': DiceSyncsSelect<false> | DiceSyncsSelect<true>;
     'quote-files': QuoteFilesSelect<false> | QuoteFilesSelect<true>;
@@ -129,6 +131,7 @@ export interface Config {
     'filter-order': FilterOrder;
     'offer-settings': OfferSetting;
     'dice-sync': DiceSync1;
+    'info-pages': InfoPage;
     'payload-jobs-stats': PayloadJobsStat;
   };
   globalsSelect: {
@@ -139,6 +142,7 @@ export interface Config {
     'filter-order': FilterOrderSelect<false> | FilterOrderSelect<true>;
     'offer-settings': OfferSettingsSelect<false> | OfferSettingsSelect<true>;
     'dice-sync': DiceSyncSelect<false> | DiceSyncSelect<true>;
+    'info-pages': InfoPagesSelect<false> | InfoPagesSelect<true>;
     'payload-jobs-stats': PayloadJobsStatsSelect<false> | PayloadJobsStatsSelect<true>;
   };
   locale: null;
@@ -1612,7 +1616,7 @@ export interface Category {
              */
             privacyUrl?: string | null;
             /**
-             * По избор; празно — нищо. {телефон} и {имейл} се заместват с тези от „Общи настройки" (същите като във футъра) — като линкове.
+             * По избор; празно — нищо. {имейл} се заменя с имейла от „Общи настройки" (като линк), {телефон} — с линк „формата за контакт" към /kontakti (номерът не се показва).
              */
             below?: string | null;
             successTitle?: string | null;
@@ -1909,7 +1913,7 @@ export interface Category {
                    */
                   mapUrl?: string | null;
                   /**
-                   * По желание.
+                   * Не се показва на сайта.
                    */
                   phone?: string | null;
                   /**
@@ -2782,7 +2786,7 @@ export interface Page {
              */
             privacyUrl?: string | null;
             /**
-             * По избор; празно — нищо. {телефон} и {имейл} се заместват с тези от „Общи настройки" (същите като във футъра) — като линкове.
+             * По избор; празно — нищо. {имейл} се заменя с имейла от „Общи настройки" (като линк), {телефон} — с линк „формата за контакт" към /kontakti (номерът не се показва).
              */
             below?: string | null;
             successTitle?: string | null;
@@ -3079,7 +3083,7 @@ export interface Page {
                    */
                   mapUrl?: string | null;
                   /**
-                   * По желание.
+                   * Не се показва на сайта.
                    */
                   phone?: string | null;
                   /**
@@ -3216,6 +3220,31 @@ export interface QuoteFile {
   focalX?: number | null;
   focalY?: number | null;
   sizes?: {};
+}
+/**
+ * Съобщенията от формата на страницата „Контакти". „Отговор" на писмото до support@dice.bg отива направо при клиента.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "contact-messages".
+ */
+export interface ContactMessage {
+  id: number;
+  status: 'new' | 'answered' | 'archived';
+  /**
+   * Вътрешни — не се пращат на клиента.
+   */
+  notes?: string | null;
+  name: string;
+  phone?: string | null;
+  email: string;
+  message: string;
+  consent?: boolean | null;
+  page?: string | null;
+  ip?: string | null;
+  userAgent?: string | null;
+  mailLog?: string | null;
+  updatedAt: string;
+  createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -3545,6 +3574,10 @@ export interface PayloadLockedDocument {
         value: number | QuoteRequest;
       } | null)
     | ({
+        relationTo: 'contact-messages';
+        value: number | ContactMessage;
+      } | null)
+    | ({
         relationTo: 'offers';
         value: number | Offer;
       } | null)
@@ -3688,6 +3721,25 @@ export interface QuoteRequestsSelect<T extends boolean = true> {
   attachment?: T;
   details?: T;
   consent?: T;
+  ip?: T;
+  userAgent?: T;
+  mailLog?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "contact-messages_select".
+ */
+export interface ContactMessagesSelect<T extends boolean = true> {
+  status?: T;
+  notes?: T;
+  name?: T;
+  phone?: T;
+  email?: T;
+  message?: T;
+  consent?: T;
+  page?: T;
   ip?: T;
   userAgent?: T;
   mailLog?: T;
@@ -5908,6 +5960,9 @@ export interface SiteSetting {
   foundingYear?: number | null;
   addressStreet?: string | null;
   addressCity?: string | null;
+  /**
+   * Не се показва на сайта.
+   */
   phone?: string | null;
   email?: string | null;
   distributorNotice?: string | null;
@@ -5953,6 +6008,9 @@ export interface OfferSetting {
     vatNumber?: string | null;
     address?: string | null;
     mol?: string | null;
+    /**
+     * Не се показва в PDF-а.
+     */
     phone?: string | null;
     email?: string | null;
     website?: string | null;
@@ -6015,6 +6073,33 @@ export interface DiceSync1 {
   lastMatched?: number | null;
   lastAutoDate?: string | null;
   backupDone?: boolean | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "info-pages".
+ */
+export interface InfoPage {
+  id: number;
+  faqTitle?: string | null;
+  /**
+   * Линк в текста: [текст](/adres), напр. [Пишете ни](/kontakti).
+   */
+  faqIntro?: string | null;
+  faqMetaTitle?: string | null;
+  faqMetaDescription?: string | null;
+  contactTitle?: string | null;
+  /**
+   * Линк в текста: [текст](/adres), напр. [Пишете ни](/kontakti).
+   */
+  contactIntro?: string | null;
+  /**
+   * {имейл} се заменя с имейла от формата. Без конкретен срок.
+   */
+  contactSuccess?: string | null;
+  contactMetaTitle?: string | null;
+  contactMetaDescription?: string | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -6265,6 +6350,24 @@ export interface DiceSyncSelect<T extends boolean = true> {
   lastMatched?: T;
   lastAutoDate?: T;
   backupDone?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "info-pages_select".
+ */
+export interface InfoPagesSelect<T extends boolean = true> {
+  faqTitle?: T;
+  faqIntro?: T;
+  faqMetaTitle?: T;
+  faqMetaDescription?: T;
+  contactTitle?: T;
+  contactIntro?: T;
+  contactSuccess?: T;
+  contactMetaTitle?: T;
+  contactMetaDescription?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

@@ -1,4 +1,5 @@
 import type { SiteSetting } from '@/payload-types'
+import { CONTACT_PATH } from './legal'
 import { absoluteUrl } from './site-url'
 import { SITE_NAME } from './title'
 
@@ -6,7 +7,7 @@ import { SITE_NAME } from './title'
  * ЕДНА организация за целия сайт — ДИ СИ 2008 ООД, която стои зад него.
  * Началната и „За ДИ СИ 2008" я описват със същото `@id`, затова за
  * Google това е един запис, не два; магазините сочат към него
- * (`parentOrganization`). Данните са от „Общи настройки" → „Контакти".
+ * (`parentOrganization`). Данните са от „Общи настройки" → „Контакти" — без телефона.
  */
 export const ORGANIZATION_ID = absoluteUrl('/#organization')
 
@@ -33,22 +34,21 @@ export const organizationSchema = (
     url: absoluteUrl('/'),
     ...(extra.logo ? { logo: absoluteUrl(extra.logo) } : {}),
     ...(settings.email ? { email: settings.email } : {}),
-    ...(settings.phone ? { telephone: settings.phone } : {}),
     ...(адрес ? { address: адрес } : {}),
     ...(settings.vatId?.trim() ? { vatID: settings.vatId.trim() } : {}),
     ...(settings.foundingYear ? { foundingDate: String(settings.foundingYear) } : {}),
-    ...(settings.phone || settings.email
-      ? {
-          contactPoint: {
-            '@type': 'ContactPoint',
-            contactType: 'customer service',
-            areaServed: 'BG',
-            availableLanguage: ['bg'],
-            ...(settings.phone ? { telephone: settings.phone } : {}),
-            ...(settings.email ? { email: settings.email } : {}),
-          },
-        }
-      : {}),
+    /*
+      Без `telephone` — тук и в `ContactPoint` (`task-futar.md`): номерът не се
+      показва никъде, връзката е имейлът и формата на /kontakti.
+    */
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer service',
+      areaServed: 'BG',
+      availableLanguage: ['bg'],
+      ...(settings.email ? { email: settings.email } : {}),
+      url: absoluteUrl(CONTACT_PATH),
+    },
     ...(extra.sameAs?.length ? { sameAs: extra.sameAs } : {}),
   }
 }

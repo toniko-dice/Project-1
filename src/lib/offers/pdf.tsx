@@ -221,7 +221,7 @@ const OfferDocument = ({
             <Line k="ДДС №" v={co.vatNumber} />
             <Line k="Адрес" v={co.address} />
             <Line k="МОЛ" v={co.mol} />
-            <Line k="Телефон" v={co.phone} />
+            {/* Без телефона на фирмата (`task-futar.md`) — полето в „Данни за офертите" остава. */}
             <Line k="Имейл" v={co.email} />
           </View>
           <View style={s.party}>

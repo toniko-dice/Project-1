@@ -343,3 +343,15 @@ textarea,
 [role='button'] {
   touch-action: manipulation;
 }
+
+/*
+  Колоните на футъра (`FooterColumn`) — акордеони само на телефон. От 768 px
+  съдържанието на затворения `details` се показва още от CSS-а, преди
+  скриптът да сложи `open` (браузър без `::details-content` чака скрипта).
+*/
+@media (min-width: 768px) {
+  .footer-col::details-content {
+    content-visibility: visible;
+    display: contents;
+  }
+}

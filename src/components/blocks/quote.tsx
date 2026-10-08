@@ -1,6 +1,8 @@
+import Link from 'next/link'
 import type { ReactNode } from 'react'
 
 import type { Category, Page } from '@/payload-types'
+import { CONTACT_PATH } from '@/lib/legal'
 import { parentId } from '@/lib/tree'
 import { productCardData, tileImage } from '@/lib/media'
 import { getCatalog, getGlobal, getProductsByIds } from '@/lib/payload'
@@ -34,15 +36,19 @@ export const PageIntroBlock = ({ block }: { block: BlockOf<'pageIntro'> }) => (
 
 /* ─────────── Форма за оферта ─────────── */
 
-/** „{телефон}" и „{имейл}" → линкове с данните от „Общи настройки" (същите като във футъра). */
-const withContacts = (text: string, phone: string, email: string): ReactNode[] =>
+/**
+ * „{имейл}" → линк с имейла от „Общи настройки" (същия като във футъра).
+ * „{телефон}" вече дава линк към формата на /kontakti — номерът не се
+ * показва никъде (`task-futar.md`).
+ */
+const withContacts = (text: string, email: string): ReactNode[] =>
   text.split(/(\{телефон\}|\{имейл\})/).map((part, i) => {
     if (part === '{телефон}') {
-      return phone ? (
-        <a key={i} href={`tel:${phone.replace(/\s/g, '')}`} className="font-medium text-ink underline underline-offset-4">
-          {phone}
-        </a>
-      ) : null
+      return (
+        <Link key={i} href={CONTACT_PATH} className="font-medium text-ink underline underline-offset-4">
+          формата за контакт
+        </Link>
+      )
     }
     if (part === '{имейл}') {
       return email ? (
@@ -114,7 +120,6 @@ export const QuoteFormBlock = async ({ block }: { block: BlockOf<'quoteForm'> })
     })
   const налични = new Set(products.map((p) => p.id))
 
-  const phone = settings.phone ?? ''
   const email = settings.email ?? ''
   const anchor = block.formAnchor?.trim() || 'zayavka'
 
@@ -139,7 +144,7 @@ export const QuoteFormBlock = async ({ block }: { block: BlockOf<'quoteForm'> })
         />
 
         {block.below ? (
-          <p className="mt-6 text-center text-[15px] text-ink-muted">{withContacts(block.below, phone, email)}</p>
+          <p className="mt-6 text-center text-[15px] text-ink-muted">{withContacts(block.below, email)}</p>
         ) : null}
       </div>
     </section>

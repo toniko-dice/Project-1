@@ -20,6 +20,7 @@ import { Pages } from './collections/Pages'
 import { Products } from './collections/Products'
 import { QuoteFiles } from './collections/QuoteFiles'
 import { QuoteRequests } from './collections/QuoteRequests'
+import { ContactMessages } from './collections/ContactMessages'
 import { Redirects } from './collections/Redirects'
 import { Subscribers } from './collections/Subscribers'
 import { Testimonials } from './collections/Testimonials'
@@ -33,6 +34,7 @@ import { FilterOrder } from './globals/FilterOrder'
 import { Footer } from './globals/Footer'
 import { OfferSettings } from './globals/OfferSettings'
 import { Header } from './globals/Header'
+import { InfoPages } from './globals/InfoPages'
 import { SiteSettings } from './globals/SiteSettings'
 
 const filename = fileURLToPath(import.meta.url)
@@ -87,10 +89,19 @@ export default buildConfig({
       titleSuffix: '— EcoFlow България',
     },
     // Кръгчето с броя на заявките „Нова" до „Нови заявки" в менюто.
-    components: { afterNavLinks: ['@/components/admin/QuoteNavBadge#QuoteNavBadge'] },
+    components: {
+      afterNavLinks: [
+        '@/components/admin/QuoteNavBadge#QuoteNavBadge',
+        {
+          path: '@/components/admin/QuoteNavBadge#CollectionNavBadge',
+          clientProps: { slug: 'contact-messages', noun: 'нови съобщения' },
+        },
+      ],
+    },
   },
   collections: [
     QuoteRequests,
+    ContactMessages,
     Offers,
     DiceSyncs,
     QuoteFiles,
@@ -107,7 +118,7 @@ export default buildConfig({
     Users,
     Redirects,
   ],
-  globals: [Header, Footer, Design, SiteSettings, FilterOrder, OfferSettings, DiceSync],
+  globals: [Header, Footer, Design, SiteSettings, FilterOrder, OfferSettings, DiceSync, InfoPages],
   // Архивирането по график минава през опашката за задачи на Payload.
   // Работи само докато сървърът върви — при спряна машина архив не се прави.
   jobs: {

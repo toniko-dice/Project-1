@@ -2,6 +2,7 @@ import { QuoteStatusCell as QuoteStatusCell_c7ed968cdd7b1d32526e78b157b6089d } f
 import { CreateOfferButton as CreateOfferButton_4c9623afcf8f24e7a4c58847cf8756e8 } from '@/components/admin/CreateOfferButton'
 import { QuoteItemsTable as QuoteItemsTable_bf176bac9e3eb29de09246a1033d4811 } from '@/components/admin/QuoteItemsTable'
 import { RowLabel as RowLabel_7f4fa5fc68fb5a0a92393f6444a57fbd } from '@/components/admin/RowLabel'
+import { MessageStatusCell as MessageStatusCell_24208d951741f38803f094a34fe9e669 } from '@/components/admin/MessageStatusCell'
 import { OfferActions as OfferActions_516e5252b2cea7af8808925ab7755b81 } from '@/components/admin/OfferActions'
 import { OfferStatusCell as OfferStatusCell_9823563d31c638539afc242672ac175b } from '@/components/admin/OfferStatusCell'
 import { OfferDraftGuard as OfferDraftGuard_b17ed467a746e983cee853e10440a529 } from '@/components/admin/OfferDraftGuard'
@@ -40,6 +41,7 @@ import { RestoreBackupButton as RestoreBackupButton_0345d6ca4f322b3259326bda5a60
 import { CreateBackupButton as CreateBackupButton_059b6108dfec089e6701e6ed8dc0e80b } from '@/components/admin/CreateBackupButton'
 import { DiceSyncActions as DiceSyncActions_33adee0f93a42f8a50b524b4d270d945 } from '@/components/admin/DiceSyncActions'
 import { QuoteNavBadge as QuoteNavBadge_f76fdb011cf13b0ac1a4a344af4012d1 } from '@/components/admin/QuoteNavBadge'
+import { CollectionNavBadge as CollectionNavBadge_f76fdb011cf13b0ac1a4a344af4012d1 } from '@/components/admin/QuoteNavBadge'
 import { CollectionCards as CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1 } from '@payloadcms/next/rsc'
 
 /** @type import('payload').ImportMap */
@@ -48,6 +50,7 @@ export const importMap = {
   "@/components/admin/CreateOfferButton#CreateOfferButton": CreateOfferButton_4c9623afcf8f24e7a4c58847cf8756e8,
   "@/components/admin/QuoteItemsTable#QuoteItemsTable": QuoteItemsTable_bf176bac9e3eb29de09246a1033d4811,
   "@/components/admin/RowLabel#RowLabel": RowLabel_7f4fa5fc68fb5a0a92393f6444a57fbd,
+  "@/components/admin/MessageStatusCell#MessageStatusCell": MessageStatusCell_24208d951741f38803f094a34fe9e669,
   "@/components/admin/OfferActions#OfferActions": OfferActions_516e5252b2cea7af8808925ab7755b81,
   "@/components/admin/OfferStatusCell#OfferStatusCell": OfferStatusCell_9823563d31c638539afc242672ac175b,
   "@/components/admin/OfferDraftGuard#OfferDraftGuard": OfferDraftGuard_b17ed467a746e983cee853e10440a529,
@@ -86,5 +89,6 @@ export const importMap = {
   "@/components/admin/CreateBackupButton#CreateBackupButton": CreateBackupButton_059b6108dfec089e6701e6ed8dc0e80b,
   "@/components/admin/DiceSyncActions#DiceSyncActions": DiceSyncActions_33adee0f93a42f8a50b524b4d270d945,
   "@/components/admin/QuoteNavBadge#QuoteNavBadge": QuoteNavBadge_f76fdb011cf13b0ac1a4a344af4012d1,
+  "@/components/admin/QuoteNavBadge#CollectionNavBadge": CollectionNavBadge_f76fdb011cf13b0ac1a4a344af4012d1,
   "@payloadcms/next/rsc#CollectionCards": CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1
 }

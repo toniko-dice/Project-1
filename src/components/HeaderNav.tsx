@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowRight, CaretDown, CaretUp, EnvelopeSimple, List, MagnifyingGlass, Phone, X } from '@phosphor-icons/react/dist/ssr'
+import { ArrowRight, CaretDown, CaretUp, EnvelopeSimple, List, MagnifyingGlass, X } from '@phosphor-icons/react/dist/ssr'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -429,7 +429,6 @@ export const HeaderNav = ({
   ctaUrl,
   searchEnabled,
   mobileLinks = [],
-  phone,
   email,
 }: {
   items: NavItem[]
@@ -444,7 +443,7 @@ export const HeaderNav = ({
   searchEnabled?: boolean | null
   /** Бързите линкове най-долу в менюто на телефон. */
   mobileLinks?: { label: string; url: string }[]
-  phone?: string | null
+  /** Без телефон — `task-futar.md`: само имейлът и формата на /kontakti. */
   email?: string | null
 }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
@@ -992,7 +991,7 @@ export const HeaderNav = ({
               </ul>
             </nav>
 
-            {mobileLinks.length || phone || email ? (
+            {mobileLinks.length || email ? (
               <div className="container-site flex-1 border-t border-line bg-canvas py-3">
                 <ul>
                   {mobileLinks.map((l, i) => (
@@ -1006,17 +1005,6 @@ export const HeaderNav = ({
                       </Link>
                     </li>
                   ))}
-                  {phone ? (
-                    <li>
-                      <a
-                        href={`tel:${phone.replace(/[^\d+]/g, '')}`}
-                        className="tabular flex min-h-12 cursor-pointer items-center gap-3 rounded px-2 text-[15px] transition-colors duration-200 hover:bg-nav-hover"
-                      >
-                        <Phone size={18} aria-hidden="true" className="text-ink-muted" />
-                        {phone}
-                      </a>
-                    </li>
-                  ) : null}
                   {email ? (
                     <li>
                       <a

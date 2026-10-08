@@ -52,6 +52,7 @@ import * as migration_20261007_210720_mobile_optimizaciya from './20261007_21072
 import * as migration_20261008_090718_pages_legal_noindex from './20261008_090718_pages_legal_noindex';
 import * as migration_20261008_094838_za_di_si_stores from './20261008_094838_za_di_si_stores';
 import * as migration_20261008_095412_stores_day_range from './20261008_095412_stores_day_range';
+import * as migration_20261008_115939_futar_kontakti from './20261008_115939_futar_kontakti';
 
 export const migrations = [
   {
@@ -322,6 +323,11 @@ export const migrations = [
   {
     up: migration_20261008_095412_stores_day_range.up,
     down: migration_20261008_095412_stores_day_range.down,
-    name: '20261008_095412_stores_day_range'
+    name: '20261008_095412_stores_day_range',
+  },
+  {
+    up: migration_20261008_115939_futar_kontakti.up,
+    down: migration_20261008_115939_futar_kontakti.down,
+    name: '20261008_115939_futar_kontakti'
   },
 ];
