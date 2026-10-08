@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import type { Award, Page, Testimonial } from '@/payload-types'
-import { mediaAlt, mediaUrl } from '@/lib/media'
+import { mediaAlt, mediaDims, mediaUrl } from '@/lib/media'
 import { Icon } from '../Icon'
 import { resolvedRelations } from '@/lib/relations'
 
@@ -120,41 +120,54 @@ export const LogoWallBlock = ({ block }: { block: BlockOf<'logoWall'> }) => {
   if (!awards.length) return null
 
   return (
-    <section className="container-site py-8 lg:py-12">
+    <section className="container-site py-12 lg:py-20">
       {block.sectionTitle ? (
         <h2 className="mb-6 text-xl font-medium tracking-tight sm:text-2xl lg:text-[28px]">{block.sectionTitle}</h2>
       ) : null}
 
-      <ul className="flex flex-wrap items-center gap-x-10 gap-y-6">
+      {/*
+        Бяла карта, логата — цветни, както в „Endorsed By" на eu.ecoflow.com.
+        Всяко лого има еднакво място: 3 на ред на телефон, 6 от таблет нагоре.
+        Седмото минава на втори ред, по-малко от шест са центрирани
+        (`justify-center`) — без празни места отстрани.
+      */}
+      <ul className="flex flex-wrap items-center justify-center gap-x-4 gap-y-6 rounded-2xl bg-surface px-4 py-8 md:gap-x-6 md:gap-y-10 md:px-8 md:py-14 lg:gap-x-12 lg:px-12 lg:py-[88px]">
         {awards.map((a) => {
-          const logo = mediaUrl(a.logo, 'thumbnail')
+          /*
+            `mobile` (828 px, без увеличаване) — за да не тегли огромен PNG;
+            при по-малък оригинал размерът липсва и идва оригиналът.
+            Не `thumbnail`: той е квадратна изрезка и реже широките лога.
+          */
+          const logo = mediaUrl(a.logo, 'mobile')
+          const { width, height } = mediaDims(a.logo)
           /*
             Отличие без лого не изчезва от реда — излиза името му като текст,
             на височината на логата. Заместител („Няма снимка") посетителят
             не вижда; липсващото лого личи в админа.
           */
           const img = logo ? (
-            <Image
+            // eslint-disable-next-line @next/next/no-img-element -- малък файл направо от Медия, без прекодиране
+            <img
               src={logo}
-              alt={a.name}
-              width={120}
-              height={48}
-              className="h-10 w-auto object-contain opacity-70 transition-opacity duration-200 hover:opacity-100"
+              alt={mediaAlt(a.logo) || a.name}
+              width={width}
+              height={height}
+              loading="lazy"
+              decoding="async"
+              className="h-[68px] w-auto max-w-full object-contain md:h-20 lg:h-[100px]"
             />
           ) : (
-            <span className="flex h-10 items-center text-sm font-medium text-ink-muted">
+            <span className="flex h-[68px] items-center text-center text-sm font-medium text-ink-muted md:h-20 lg:h-[100px]">
               {a.name}
             </span>
           )
           return (
-            <li key={a.id}>
+            <li
+              key={a.id}
+              className="flex w-[calc((100%-2rem)/3)] justify-center md:w-[calc((100%-7.5rem)/6)] lg:w-[calc((100%-15rem)/6)]"
+            >
               {a.url ? (
-                <a
-                  href={a.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex cursor-pointer items-center"
-                >
+                <a href={a.url} target="_blank" rel="noopener noreferrer" className="inline-flex max-w-full items-center">
                   {img}
                 </a>
               ) : (

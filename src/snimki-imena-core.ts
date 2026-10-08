@@ -319,7 +319,18 @@ export const новиИмена = async (
 
   /* Всичко останало: alt, иначе мястото. */
   const altНа = new Map(медия.map((m) => [m.id, m.alt ?? '']))
+  const файлНа = new Map(медия.map((m) => [m.id, m.filename ?? '']))
   const позАлт = (id: number, резерв: string, място: string) => дай(id, име(altНа.get(id) ?? '') || резерв, място)
+  /*
+    Логата на отличията са кръстени `otlichie-…` по задачата
+    (`task-otlicheni-ot.md`) — alt-ът им е дълъг („Computer Bild Testsieger
+    — EcoFlow STREAM, оценка 1,4"). Такова име остава; другите — по alt.
+  */
+  const позОтличие = (id: number, резерв: string, място: string) => {
+    const сега = основа(файлНа.get(id) ?? '')
+    if (сега.startsWith('otlichie-')) дай(id, сега, място)
+    else позАлт(id, резерв, място)
+  }
 
   for (const c of payload.config.collections) {
     if (c.slug === 'products' || БЕЗ.has(c.slug) || c.slug.startsWith('payload-')) continue
@@ -334,7 +345,8 @@ export const новиИмена = async (
     for (const doc of docs) {
       const кой = String(doc.slug ?? doc.title ?? doc.name ?? doc.id)
       for (const { id, поле } of снимкиВ(полетаНа(c as never), doc, blocksById)) {
-        позАлт(id, име(`${c.slug}-${кой}-${поле}`), `${c.slug} ${кой} — ${поле}`)
+        if (c.slug === 'awards') позОтличие(id, име(`${c.slug}-${кой}-${поле}`), `${c.slug} ${кой} — ${поле}`)
+        else позАлт(id, име(`${c.slug}-${кой}-${поле}`), `${c.slug} ${кой} — ${поле}`)
       }
     }
   }
