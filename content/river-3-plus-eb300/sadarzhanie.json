@@ -116,6 +116,21 @@
       "heading": "Спецификации"
     },
     {
+      "blockType": "faqBlock",
+      "anchorLabel": "Въпроси",
+      "heading": "Често задавани въпроси",
+      "items": [
+        {
+          "question": "Каква е връзката между EcoFlow RIVER 3 Max, RIVER 3 Max Plus и RIVER 3 Plus?",
+          "answer": "EcoFlow RIVER 3 Max е EcoFlow RIVER 3 Plus, свързан с допълнителната батерия EcoFlow RIVER 3 Plus Smart Extra Battery EB300 (286Wh).\nEcoFlow RIVER 3 Max Plus е EcoFlow RIVER 3 Plus, свързан с допълнителната батерия EcoFlow RIVER 3 Plus Smart Extra Battery EB600 (572Wh)."
+        },
+        {
+          "question": "Могат ли EcoFlow RIVER 3 и RIVER 3 Plus да се зареждат през USB-C?",
+          "answer": "Не. EcoFlow RIVER 3 и RIVER 3 Plus имат USB-C изход до 100W, но не се зареждат през USB-C.\nДопълнителните батерии EcoFlow RIVER 3 Plus Smart Extra Battery EB300 (286Wh) и EB600 (572Wh) поддържат и зареждане, и захранване през USB-C до 140W."
+        }
+      ]
+    },
+    {
       "blockType": "inTheBox",
       "anchorLabel": "Какво има в кутията",
       "heading": "Какво има в кутията",

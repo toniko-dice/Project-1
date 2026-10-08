@@ -6,6 +6,7 @@ import { discountPercent, formatEur } from '@/lib/format'
 import { mediaAlt, mediaUrl, productCardData, sectionImage } from '@/lib/media'
 import { CompareScroll } from '../CompareScroll'
 import { SectionImage } from '../SectionImage'
+import { FaqAnswer } from '../FaqAnswer'
 import { ProductCard } from '../ProductCard'
 import { BoxTabs } from './BoxTabs'
 import { ProductTabs, type ShowcaseTab, type TabsLayout } from './ProductTabs'
@@ -791,7 +792,10 @@ export const FaqList = ({
             +
           </span>
         </summary>
-        <p className="pb-4 text-sm leading-relaxed text-ink-muted">{item.answer}</p>
+        {/* Редовете — абзаци, „1. …" — номериран списък (`FaqAnswer`). */}
+        <div className="pb-4">
+          <FaqAnswer text={item.answer ?? ''} />
+        </div>
       </details>
     ))}
   </div>

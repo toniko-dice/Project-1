@@ -6,6 +6,7 @@ import { Fragment, useEffect, useMemo, useState } from 'react'
 
 import type { FaqGroup, FaqItem } from '@/lib/faq'
 import { CONTACT_PATH } from '@/lib/legal'
+import { FaqAnswer } from './FaqAnswer'
 import { ProductAnchorNav } from './ProductAnchorNav'
 
 const DEBOUNCE_MS = 150
@@ -176,12 +177,15 @@ export const FaqExplorer = ({ groups }: { groups: FaqGroup[] }) => {
                       <div className="space-y-4 pb-4">
                         {item.answers.map((a, i) => (
                           <div key={i}>
-                            <p className="whitespace-pre-line text-sm leading-relaxed text-ink-muted">
-                              {item.answers.length > 1 ? (
-                                <strong className="font-semibold text-ink">{a.sources.map((s) => s.title).join(', ')}: </strong>
-                              ) : null}
-                              <Маркиран text={a.text} q={q} />
-                            </p>
+                            <FaqAnswer
+                              text={a.text}
+                              mark={(t) => <Маркиран text={t} q={q} />}
+                              prefix={
+                                item.answers.length > 1 ? (
+                                  <strong className="font-semibold text-ink">{a.sources.map((s) => s.title).join(', ')}: </strong>
+                                ) : undefined
+                              }
+                            />
                             {a.sources[0] ? (
                               <Link
                                 href={a.sources[0].url}

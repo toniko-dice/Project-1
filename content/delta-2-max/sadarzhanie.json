@@ -331,6 +331,21 @@
       "heading": "Спецификации"
     },
     {
+      "blockType": "faqBlock",
+      "anchorLabel": "Въпроси",
+      "heading": "Често задавани въпроси",
+      "items": [
+        {
+          "question": "Може ли към DELTA 2 Max да се свържат допълнителни батерии?",
+          "answer": "Да, до 2 допълнителни батерии. Съвместима е и с допълнителната батерия на DELTA Max. Максималният капацитет е 6144Wh."
+        },
+        {
+          "question": "Съвместима ли е допълнителната батерия на DELTA 2 Max с DELTA Max и DELTA 2?",
+          "answer": "Да — допълнителната батерия на DELTA 2 Max е съвместима с DELTA Max (2000) и DELTA 2."
+        }
+      ]
+    },
+    {
       "blockType": "footnotes",
       "items": [
         {

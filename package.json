@@ -30,6 +30,7 @@
     "otlichiya:eu": "payload run src/otlichiya-eu.ts --",
     "futar:kontakti": "payload run src/futar-kontakti.ts --",
     "za-di-si:popravki": "payload run src/za-di-si-popravki.ts --",
+    "faq:dobavi": "payload run src/faq-dobavi.ts --",
     "seo:check": "payload run src/seo-check.ts --",
     "import:attributes": "payload run src/import-attributes.ts --",
     "seed:attributes": "payload run src/seed-attributes.ts --",

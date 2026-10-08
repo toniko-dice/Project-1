@@ -421,6 +421,61 @@
       "heading": "Спецификации"
     },
     {
+      "blockType": "faqBlock",
+      "anchorLabel": "Въпроси",
+      "heading": "Често задавани въпроси",
+      "items": [
+        {
+          "question": "Каква е връзката между EcoFlow RIVER 3 Max, RIVER 3 Max Plus и RIVER 3 Plus?",
+          "answer": "EcoFlow RIVER 3 Max е EcoFlow RIVER 3 Plus, свързан с допълнителната батерия EcoFlow RIVER 3 Plus Smart Extra Battery EB300 (286Wh).\nEcoFlow RIVER 3 Max Plus е EcoFlow RIVER 3 Plus, свързан с допълнителната батерия EcoFlow RIVER 3 Plus Smart Extra Battery EB600 (572Wh)."
+        },
+        {
+          "question": "Водоустойчиви ли са EcoFlow RIVER 3 и RIVER 3 Plus?",
+          "answer": "Батерийните клетки и системата за управление на батерията (BMS) на EcoFlow RIVER 3 и RIVER 3 Plus са със защита IP54 — за допълнително спокойствие при употреба. Самото устройство като цяло обаче не е водоустойчиво."
+        },
+        {
+          "question": "Поддържат ли EcoFlow RIVER 3 и RIVER 3 Plus функция UPS?",
+          "answer": "Да. EcoFlow RIVER 3 превключва на резервно захранване (UPS) за под 20 ms, а EcoFlow RIVER 3 Plus — за под 10 ms."
+        },
+        {
+          "question": "Какви са основните разлики между EcoFlow RIVER 3 и RIVER 3 Plus?",
+          "answer": "1. Изходна мощност: EcoFlow RIVER 3 Plus дава 600W (с X-Boost до 1200W), а EcoFlow RIVER 3 — 300W (с X-Boost до 600W).\n2. Капацитет: EcoFlow RIVER 3 Plus е с 286Wh, а RIVER 3 — с 245Wh.\n3. Функции: EcoFlow RIVER 3 Plus може да се разшири с една допълнителна батерия — EB300 (286Wh) или EB600 (572Wh), до общо 572Wh или 858Wh, и има вградена лампа. EcoFlow RIVER 3 не поддържа допълнителни батерии и няма вградена лампа.\n4. UPS: EcoFlow RIVER 3 превключва за под 20 ms, а RIVER 3 Plus — за под 10 ms."
+        },
+        {
+          "question": "Може ли към EcoFlow RIVER 3 и RIVER 3 Plus да се свърже допълнителна батерия?",
+          "answer": "EcoFlow RIVER 3: не.\nEcoFlow RIVER 3 Plus: да — с EcoFlow RIVER 3 Plus Smart Extra Battery EB300 (286Wh) или EcoFlow RIVER 3 Plus Smart Extra Battery EB600 (572Wh)."
+        },
+        {
+          "question": "Какъв тип батерия използват EcoFlow RIVER 3 и RIVER 3 Plus?",
+          "answer": "EcoFlow RIVER 3 и RIVER 3 Plus използват литиево-железофосфатни клетки (LiFePO4, LFP), които запазват над 80% от капацитета си след 3000 цикъла."
+        },
+        {
+          "question": "Колко енергия консумират EcoFlow RIVER 3 и RIVER 3 Plus в режим на готовност?",
+          "answer": "EcoFlow RIVER 3: при включен AC изход — до 4W, при DC изход — до 2W.\nEcoFlow RIVER 3 Plus: при включен AC изход — до 5,5W, при DC изход — до 2,3W."
+        },
+        {
+          "question": "Поддържат ли EcoFlow RIVER 3 и RIVER 3 Plus захранване в режим bypass (докато се зареждат)?",
+          "answer": "Да. В режим bypass EcoFlow RIVER 3 дава AC изход до 300W, докато батерията се зарежда, а EcoFlow RIVER 3 Plus — до 600W."
+        },
+        {
+          "question": "Каква е мощността на зареждане в тих режим при EcoFlow RIVER 3 и RIVER 3 Plus?",
+          "answer": "Тихият режим се включва от приложението: Настройки → Настройки на входа/изхода → Скорост на AC зареждане. В този режим мощността на зареждане от контакта при EcoFlow RIVER 3 пада под 50W, а при RIVER 3 Plus — под 80W, за минимален шум."
+        },
+        {
+          "question": "Могат ли EcoFlow RIVER 3 и RIVER 3 Plus да се зареждат през USB-C?",
+          "answer": "Не. EcoFlow RIVER 3 и RIVER 3 Plus имат USB-C изход до 100W, но не се зареждат през USB-C.\nДопълнителните батерии EcoFlow RIVER 3 Plus Smart Extra Battery EB300 (286Wh) и EB600 (572Wh) поддържат и зареждане, и захранване през USB-C до 140W."
+        },
+        {
+          "question": "Колко време работи EcoFlow RIVER 3 Plus?",
+          "answer": "Зависи от уредите, които захранвате. При лабораторни тестове EcoFlow RIVER 3 Plus захранва Wi-Fi рутер 3W до 35 часа и компютър 600W до 21 минути. Стойностите са ориентировъчни."
+        },
+        {
+          "question": "Колко соларни панела могат да се свържат към EcoFlow RIVER 3 и RIVER 3 Plus?",
+          "answer": "Проверете параметрите на панелите — общата мощност трябва да е в границите на електроцентралата, иначе тя може да се повреди. Комбинацията от панели трябва да отговаря и на трите условия:\n1. Напрежение: напрежението на отворена верига на панелите е в диапазона на електроцентралата.\n2. Ток: максималният ток на панелите е ≤ максималния входен ток на електроцентралата.\n3. Мощност: максималната мощност на панелите е ≤ максималната соларна мощност на електроцентралата.\nПри последователно свързване напреженията се събират, а токът се ограничава от панела с най-малък ток. При паралелно свързване токовете се събират, а напрежението се ограничава от панела с най-ниско напрежение.\nEcoFlow RIVER 3: 11–30V, макс. 8A, макс. 110W. Панели 45W — до 1 последователно или до 3 паралелно; панели 60W — до 1 последователно или до 2 паралелно.\nEcoFlow RIVER 3 Plus: 11–50V, макс. 13A, макс. 220W. Панели 45W — до 2 последователно или до 4 паралелно; панели 60W — до 2 последователно или до 3 паралелно."
+        }
+      ]
+    },
+    {
       "blockType": "footnotes",
       "items": [
         {
