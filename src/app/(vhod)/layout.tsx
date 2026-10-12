@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function VhodLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="bg" className={inter.variable}>
-      <body className="bg-black">{children}</body>
+      <body className="bg-[#3a3d40]">{children}</body>
     </html>
   )
 }

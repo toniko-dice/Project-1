@@ -33,16 +33,16 @@ export const VhodForm = ({ next }: { next: string }) => {
     }
   }
 
-  const input =
-    'mt-1.5 h-11 w-full rounded-lg border border-[#d4d4d4] bg-white px-3 text-[15px] text-black outline-none transition-colors focus:border-black'
+  // Цветовете са в `.vhod-*` (globals.css) — стъклената карта и бялата резерва без `backdrop-filter`.
+  const input = 'vhod-input mt-1.5 h-[46px] w-full rounded-[10px] px-3 text-base text-black outline-none'
 
   return (
     <form onSubmit={onSubmit} className="mt-6 flex flex-col gap-4" noValidate>
-      <label className="block text-sm font-medium text-black">
+      <label className="vhod-label block text-[13px] font-medium">
         Имейл
         <input name="email" type="email" autoComplete="username" required className={input} />
       </label>
-      <label className="block text-sm font-medium text-black">
+      <label className="vhod-label block text-[13px] font-medium">
         Парола
         <span className="relative block">
           <input
@@ -63,18 +63,18 @@ export const VhodForm = ({ next }: { next: string }) => {
         </span>
       </label>
       {error ? (
-        <p role="alert" className="text-sm text-[#c62828]">
+        <p role="alert" className="vhod-error text-sm">
           {error}
         </p>
       ) : null}
       <button
         type="submit"
         disabled={busy}
-        className="mt-1 h-11 cursor-pointer rounded-lg bg-black text-sm font-semibold text-white transition-colors hover:bg-[#222] disabled:cursor-wait disabled:opacity-70"
+        className="vhod-button mt-1 h-[46px] cursor-pointer rounded-[10px] text-[15px] font-semibold transition-colors disabled:cursor-wait disabled:opacity-70"
       >
         {busy ? 'Влизане…' : 'Вход'}
       </button>
-      <Link href="/admin/forgot" className="text-center text-sm text-[#555] underline-offset-4 hover:text-black hover:underline">
+      <Link href="/admin/forgot" className="vhod-link text-center text-[13px] underline-offset-4 hover:underline">
         Забравена парола?
       </Link>
     </form>

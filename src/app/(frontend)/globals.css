@@ -355,3 +355,84 @@ textarea,
     display: contents;
   }
 }
+
+/*
+  Страницата за вход `/vhod` (`task-vhod-dizayn.md`) — стъклена карта върху
+  снимката: бял текст, светли полета, бял бутон. Браузър без
+  `backdrop-filter` получава бялата карта с черен текст (резервата долу) —
+  иначе бял текст върху полупрозрачно без размиване не се чете.
+*/
+.vhod-card {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.14);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+.vhod-muted {
+  color: rgba(255, 255, 255, 0.8);
+}
+.vhod-label {
+  color: #fff;
+}
+.vhod-input {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.vhod-input:focus {
+  border-color: #fff;
+  box-shadow: 0 0 0 1px #fff;
+}
+.vhod-button {
+  background: #fff;
+  color: #000;
+}
+.vhod-button:hover:not(:disabled) {
+  background: #f0f0f0;
+}
+.vhod-link {
+  color: rgba(255, 255, 255, 0.85);
+}
+.vhod-error {
+  color: #ffb4ab;
+}
+.vhod-foot {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .vhod-card {
+    color: #000;
+    background: rgba(255, 255, 255, 0.96);
+    border-color: transparent;
+  }
+  .vhod-muted {
+    color: #555;
+  }
+  .vhod-label {
+    color: #000;
+  }
+  .vhod-input {
+    background: #fff;
+    border-color: #d4d4d4;
+  }
+  .vhod-input:focus {
+    border-color: #000;
+    box-shadow: 0 0 0 1px #000;
+  }
+  .vhod-button {
+    background: #000;
+    color: #fff;
+  }
+  .vhod-button:hover:not(:disabled) {
+    background: #222;
+  }
+  .vhod-link {
+    color: #555;
+  }
+  .vhod-error {
+    color: #c62828;
+  }
+}

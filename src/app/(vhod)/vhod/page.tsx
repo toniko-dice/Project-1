@@ -33,19 +33,38 @@ export default async function VhodPage({ searchParams }: { searchParams: Promise
   if (await isValidToken((await cookies()).get('payload-token')?.value)) redirect(next)
 
   return (
-    <main className="relative flex min-h-dvh items-center justify-center px-4 py-10">
+    <main className="relative flex min-h-dvh items-center justify-center overflow-x-hidden bg-[#3a3d40] px-4 py-12">
+      {/*
+        Фонът (`task-vhod-dizayn.md`): наредените електроцентрали на EcoFlow —
+        широката снимка на компютър, вертикалната (около DELTA и RIVER) на
+        телефон; `scripts/vhod-snimki.mjs` ги прави от Медия.
+      */}
       <picture>
         <source media="(max-width: 767px)" srcSet="/vhod/ecoflow-vhod-mob.webp" />
-        <img src="/vhod/ecoflow-vhod.webp" alt="" className="absolute inset-0 size-full object-cover" />
+        <img src="/vhod/ecoflow-vhod.webp" alt="" className="absolute inset-0 size-full object-cover object-center" />
       </picture>
-      <div className="absolute inset-0 bg-black/45" aria-hidden="true" />
-      <div className="relative w-full max-w-[400px] rounded-2xl bg-white p-7 shadow-2xl sm:p-9">
+      {/* Затъмнение в два слоя — да се четат картата и текстът. */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0"
+        style={{
+          background:
+            'radial-gradient(ellipse at center, rgba(0,0,0,.25) 0%, rgba(0,0,0,.55) 100%), linear-gradient(to bottom, rgba(0,0,0,.35) 0%, rgba(0,0,0,.1) 50%, rgba(0,0,0,.45) 100%)',
+        }}
+      />
+      <div className="relative flex w-full max-w-[400px] flex-col items-center">
+        {/* Логото е тъмно — `brightness-0 invert` го прави чисто бяло. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/vhod/ecoflow-logo.png" alt="EcoFlow" width={190} height={23} className="h-[18px] w-auto" />
-        <h1 className="mt-6 text-2xl font-semibold leading-tight text-black">Сайтът е в подготовка</h1>
-        <p className="mt-2 text-sm leading-relaxed text-[#555]">Влезте с имейла и паролата си за админа.</p>
-        <VhodForm next={next} />
+        <img src="/vhod/ecoflow-logo.png" alt="EcoFlow" width={190} height={23} className="mb-[22px] h-[22px] w-auto brightness-0 invert" />
+        <div className="vhod-card w-full rounded-[20px] p-6 sm:p-8">
+          <h1 className="text-2xl font-semibold leading-tight">Сайтът е в подготовка</h1>
+          <p className="vhod-muted mt-2 text-sm leading-relaxed">Влезте с имейла и паролата си за админа.</p>
+          <VhodForm next={next} />
+        </div>
       </div>
+      <p className="vhod-foot absolute inset-x-4 bottom-[18px] text-center text-xs">
+        EcoFlow България · ДИ СИ 2008 ООД — официален дистрибутор
+      </p>
     </main>
   )
 }
