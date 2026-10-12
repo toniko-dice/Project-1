@@ -21,7 +21,7 @@ export const createArchiver = ((archiverNS as unknown as { default?: ArchiverFac
  * график, качени) — последните 5; „преди миграция" — последните 3.
  * Защитените (ръчно сложена отметка) не се броят и не се трият никога.
  */
-export const KEEP_LAST = 5
+export const KEEP_LAST = 7
 export const KEEP_PRE_MIGRATION = 3
 export const PRE_MIGRATION = 'преди миграция'
 

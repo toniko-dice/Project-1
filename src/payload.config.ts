@@ -26,6 +26,7 @@ import { Subscribers } from './collections/Subscribers'
 import { Testimonials } from './collections/Testimonials'
 import { Users } from './collections/Users'
 import { dailyBackupTask } from './jobs/backupTask'
+import { mailLogAdapter } from './lib/mail-log'
 import { diceSyncTask } from './jobs/diceSyncTask'
 import { DiceSyncs } from './collections/DiceSyncs'
 import { PriceApprovals } from './collections/PriceApprovals'
@@ -60,17 +61,21 @@ const sharpForUploads = ((input?: Parameters<typeof sharp>[0], options?: SharpOp
 
 /**
  * Пощата — SMTP през nodemailer, ако `SMTP_HOST` е зададен (виж
- * `.env.example` и README „Имейли"). Без него Payload пише имейлите в
- * конзолата и нищо не изпраща. `skipVerify`: скриптовете (`payload run`) и
- * билдът не бива да чакат или падат, ако пощенският сървър не отговаря.
+ * `.env.example` и README „Имейли"). Без него — или с `EMAIL_MODE=log` —
+ * писмата само се записват в `mail-log/` и в лога (`src/lib/mail-log.ts`):
+ * формите работят, нищо не се праща. `skipVerify`: скриптовете
+ * (`payload run`) и билдът не бива да чакат или падат, ако пощенският
+ * сървър не отговаря.
  */
 function mailAdapter() {
-  if (!process.env.SMTP_HOST) return undefined
-  const from = process.env.MAIL_FROM || 'EcoFlow България <noreply@bg-ecoflow.com>'
+  const from = process.env.MAIL_FROM || 'EcoFlow България <noreply@ecoflow.bg>'
   const m = /^(.*)<([^>]+)>\s*$/.exec(from)
+  const name = (m?.[1] ?? 'EcoFlow България').trim().replace(/^"|"$/g, '')
+  const address = (m?.[2] ?? from).trim()
+  if (!process.env.SMTP_HOST || process.env.EMAIL_MODE === 'log') return mailLogAdapter({ name, address })
   return nodemailerAdapter({
-    defaultFromName: (m?.[1] ?? 'EcoFlow България').trim().replace(/^"|"$/g, ''),
-    defaultFromAddress: (m?.[2] ?? from).trim(),
+    defaultFromName: name,
+    defaultFromAddress: address,
     skipVerify: true,
     transportOptions: {
       host: process.env.SMTP_HOST,
@@ -149,6 +154,12 @@ export default buildConfig({
   typescript: { outputFile: path.resolve(dirname, 'payload-types.ts') },
   db: sqliteAdapter({
     client: { url: process.env.DATABASE_URI || 'file:./ecoflow.db' },
+    /*
+      Втори процес (`payload run`, вносът на сървъра, синхронизацията)
+      чака заетата база до 15 s, вместо да падне със `SQLITE_BUSY` — на
+      12 октомври 2026 така се прекъсна синхронизацията с dice.bg по средата.
+    */
+    busyTimeout: 15_000,
     // Схемата се променя САМО чрез миграции. Автоматичното напасване (push)
     // е изключено, защото при промяна на поле то задава интерактивни въпроси
     // и рискува да загуби данни. Работният ред е:

@@ -6,6 +6,13 @@ import { isLocalSiteUrl } from './src/lib/site-url'
 
 const nextConfig: NextConfig = {
   /*
+    Билдът на сървъра отива в `.next-new` (`NEXT_DIST_DIR`, `scripts/deploy.sh`)
+    и се разменя с `.next` чак при успех — иначе `next build` изчиства
+    `.next` под работещия сайт и неуспешен билд оставя счупена стара версия.
+    `next start` (без променливата) чете `.next`.
+  */
+  distDir: process.env.NEXT_DIST_DIR || '.next',
+  /*
     Наклонената черта накрая се маха в `src/middleware.ts` с 301. Собственото
     пренасочване на Next е 308 и стига преди middleware-а — затова е
     изключено тук.
@@ -50,7 +57,7 @@ const провериАдреса = () => {
   if (!isLocalSiteUrl(url) || process.env.ALLOW_LOCAL_SITE_URL === '1') return
   throw new Error(
     `NEXT_PUBLIC_SITE_URL е ${url ? `„${url}"` : 'празен'} — за продукция трябва истинският адрес ` +
-      '(напр. https://bg-ecoflow.com). Задайте го в .env. За проверка на локалната машина: npm run build:local.',
+      '(напр. https://ecoflow.bg). Задайте го в .env. За проверка на локалната машина: npm run build:local.',
   )
 }
 

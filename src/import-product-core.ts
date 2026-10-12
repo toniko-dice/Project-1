@@ -1874,7 +1874,7 @@ export const addToMenuPanels = async (
  * тоест дванайсет заявки биха свършили същата работа дванайсет пъти.
  */
 export const revalidateServer = async (): Promise<string> => {
-  const server = process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000'
+  const server = process.env.INTERNAL_SERVER_URL || process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000'
   try {
     const r = await fetch(`${server}/api/products/revalidate`, {
       method: 'POST',

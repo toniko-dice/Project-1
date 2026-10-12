@@ -888,7 +888,7 @@ layout на страницата, `Pages` има `defaultPopulate` (заглав
   (Reply-To — клиентът; бутон „Отвори в админа"; файлът като приложение до
   5 MB, иначе линк) и копие до клиента. Един шаблон: таблици и inline
   стилове, снимки с пълен адрес, текстова версия. Адресът на сайта в
-  темата и в текста е `SITE_URL` — на сървъра bg-ecoflow.com. SMTP през
+  темата и в текста е `SITE_URL` — на сървъра ecoflow.bg. SMTP през
   `@payloadcms/email-nodemailer`, само ако има `SMTP_HOST`; грешка в пощата
   не губи заявката — пише се в „Изпращане на имейлите" на записа.
   Локално: `npm run mail:catcher` (свой SMTP приемник в
@@ -1087,7 +1087,7 @@ layout на страницата, `Pages` има `defaultPopulate` (заглав
   `CollectionNavBadge` с `clientProps`, общ с „Нови заявки"). Имейли
   (`src/lib/contact-mail.ts`, шаблонът на заявките): до
   `CONTACT_NOTIFY_TO` → `QUOTE_NOTIFY_TO` → support@dice.bg, Reply-To —
-  клиентът, тема `[bg-ecoflow.com] Контактна форма — {Име}`; копие до
+  клиентът, тема `[ecoflow.bg] Контактна форма — {Име}`; копие до
   клиента. Отдясно — имейлът, магазините (от блока „Магазини" на
   `za-di-si-2008` — `StoreCards`, общ компонент) и линкове. JSON-LD:
   `ContactPage` → същата `Organization`.
@@ -2626,6 +2626,39 @@ Payload работи най-добре на постоянен Node.js сърв�
 среда.
 
 ---
+
+## Сървърът — главната база е там (`task-kachvane-server.md`, 12 октомври 2026)
+
+`91.212.13.155`, `/srv/ecoflow-bg`, потребител `ecoflow`, услуга
+`ecoflow.service`; отвън само SSH, сайтът — през тунел
+(`scripts\otvori-sayta.bat`). Подробно — README „Сървър".
+
+- **Главната база е на сървъра.** Локалната е за тест на код.
+  **Внос за истинския сайт — само с `:server`** (`import:product:server`,
+  `import:page:server`, `faq:dobavi:server`, `na-sarvara <скрипт>`) —
+  `scripts/server.mjs`. Без `:server` командите пишат в локалната база.
+- `npm run deploy` → `scripts/deploy.sh` на сървъра: архив, pull, `npm ci`,
+  миграции, билд в `.next-new` (`NEXT_DIST_DIR`) и смяна с `.next` чак
+  при успех — `next build` иначе изчиства `.next` под работещия сайт.
+- `db:kachi-na-sarvara` — само с `ALLOW_DB_UPLOAD=true` в `.env` на
+  сървъра (махнат след първото качване); `db:svali-ot-sarvara` — обратно.
+- **`INTERNAL_SERVER_URL`** — middleware-ът пита `/api/zaklyuchvane` и
+  `/api/kanon` на него, не на адреса на заявката: през тунела той е
+  `localhost:8080`, който на сървъра не съществува. Същото — опресняването
+  след внос и синхронизация.
+- **`busyTimeout: 15_000`** в `sqliteAdapter` — втори процес чака заетата
+  база, вместо да падне със `SQLITE_BUSY` (синхронизацията с dice на
+  12.10.2026).
+- Поща без `SMTP_HOST` (или `EMAIL_MODE=log`) → `mail-log/`
+  (`src/lib/mail-log.ts`), нищо не се праща.
+- Локално `DICE_SYNC_DISABLED=true` — „Синхронизирай сега" отказва.
+- Домейнът е **ecoflow.bg** (не `bg-ecoflow.com`): сменен в кода, README,
+  `content/stranici/` и в базата (трите правни страници,
+  `npm run domein:ecoflow-bg`, архив № 160; миграцията
+  `20261012_131700_domein_ecoflow_bg` — стойностите по подразбиране в
+  „Данни за офертите"). Старите миграции, версиите и 6-те оферти пазят
+  стария текст — история.
+- Архивите: последните 7 обикновени (`KEEP_LAST`).
 
 ## Работен ред
 

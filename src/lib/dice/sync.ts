@@ -345,6 +345,18 @@ export const runSync = async (
   payload: Payload,
   opts: { trigger: 'автоматично' | 'ръчно'; user?: string | null; attempts?: number; useUpload?: boolean },
 ): Promise<RunResult> => {
+  /*
+    Главната база е на сървъра (`task-kachvane-server.md`, т. 10) — локално
+    синхронизацията е изключена с `DICE_SYNC_DISABLED=true` в `.env`, иначе
+    локалната база би имала други цени от сървърната. „Провери" работи.
+  */
+  if (process.env.DICE_SYNC_DISABLED === 'true') {
+    return {
+      result: 'aborted',
+      plan: null,
+      message: 'Синхронизацията с dice.bg е изключена на тази машина (DICE_SYNC_DISABLED=true) — пуска се само на сървъра.',
+    }
+  }
   if (g.__diceSyncRunning) return { result: 'aborted', plan: null, message: 'Предната синхронизация още върви — пропуснато.' }
   g.__diceSyncRunning = true
   const s = (await payload.findGlobal({ slug: 'dice-sync', depth: 0, overrideAccess: true })) as DiceSettings
@@ -511,7 +523,7 @@ const чистиРешени = async (payload: Payload) => {
  * върви извън заявка към Next и куките на продуктите там не опресняват нищо.
  */
 const опресниСайта = async (): Promise<string> => {
-  const server = process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000'
+  const server = process.env.INTERNAL_SERVER_URL || process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000'
   try {
     const r = await fetch(`${server}/api/products/revalidate`, {
       method: 'POST',

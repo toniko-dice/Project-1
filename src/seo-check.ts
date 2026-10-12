@@ -30,7 +30,7 @@ import { levelOf } from './lib/tree'
 import { DESCRIPTION_LIMIT, finalTitle, TITLE_LIMIT } from './lib/title'
 import { categoryPath } from './lib/urls'
 
-const SERVER = (process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000').replace(/\/+$/, '')
+const SERVER = (process.env.INTERNAL_SERVER_URL || process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000').replace(/\/+$/, '')
 const ОПИСАНИЕ_МИН = 110
 const ОПИСАНИЕ_МАКС = 158
 

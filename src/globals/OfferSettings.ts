@@ -36,7 +36,7 @@ export const OfferSettings: GlobalConfig = {
           fields: [
             { name: 'phone', type: 'text', label: 'Телефон', admin: { width: '33%', description: 'Не се показва в PDF-а.' } },
             { name: 'email', type: 'email', label: 'Имейл', defaultValue: 'support@dice.bg', admin: { width: '33%' } },
-            { name: 'website', type: 'text', label: 'Сайт', defaultValue: 'bg-ecoflow.com', admin: { width: '34%' } },
+            { name: 'website', type: 'text', label: 'Сайт', defaultValue: 'ecoflow.bg', admin: { width: '34%' } },
           ],
         },
       ],
@@ -111,7 +111,7 @@ export const OfferSettings: GlobalConfig = {
           name: 'warranty',
           type: 'text',
           label: 'Гаранция',
-          defaultValue: 'Съгласно гаранционните условия на производителя: bg-ecoflow.com/garanciya',
+          defaultValue: 'Съгласно гаранционните условия на производителя: ecoflow.bg/garanciya',
         },
         {
           name: 'note',

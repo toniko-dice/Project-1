@@ -1,0 +1,24 @@
+# systemd — сайтът (`task-kachvane-server.md`, т. 6).
+# На сървъра: /etc/systemd/system/ecoflow.service, после
+#   systemctl daemon-reload && systemctl enable --now ecoflow
+[Unit]
+Description=EcoFlow България (Next + Payload)
+After=network.target
+
+[Service]
+Type=simple
+User=ecoflow
+Group=ecoflow
+WorkingDirectory=/srv/ecoflow-bg
+Environment=NODE_ENV=production
+# Само локално — отвън се стига през nginx.
+ExecStart=/usr/bin/node node_modules/next/dist/bin/next start -H 127.0.0.1 -p 3000
+Restart=always
+RestartSec=5
+MemoryMax=3G
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=ecoflow
+
+[Install]
+WantedBy=multi-user.target

@@ -44,6 +44,14 @@ export const config = {
   matcher: ['/((?!_next/static/|_next/webpack-hmr|favicon\\.ico).*)'],
 }
 
+/**
+ * Адресът, на който middleware-ът пита сам себе си (`/api/zaklyuchvane`,
+ * `/api/kanon`). На сървъра — `INTERNAL_SERVER_URL` (`http://127.0.0.1:3000`):
+ * през SSH тунела адресът на заявката е `localhost:8080`, който на сървъра
+ * не съществува, а с домейна заявката би излизала навън и обратно.
+ */
+const вътрешен = (request: NextRequest) => process.env.INTERNAL_SERVER_URL || request.nextUrl.origin
+
 const пренасочи = (request: NextRequest, path: string, search: string, status = 301) =>
   NextResponse.redirect(new URL(path + (path.includes('?') ? '' : search), request.url), status)
 
@@ -58,7 +66,7 @@ const заключен = async (request: NextRequest): Promise<boolean> => {
   const mode = gateMode()
   if (mode !== 'setting') return mode === 'on'
   try {
-    const r = await fetch(new URL('/api/zaklyuchvane', request.nextUrl.origin), {
+    const r = await fetch(new URL('/api/zaklyuchvane', вътрешен(request)), {
       next: { revalidate: 10, tags: [GATE_TAG] },
     })
     if (!r.ok) return true
@@ -211,7 +219,7 @@ async function пренасочвания(request: NextRequest): Promise<NextRes
  */
 const каноничнияАдрес = async (request: NextRequest, pathname: string): Promise<string | null> => {
   try {
-    const url = new URL(`/api/kanon?path=${encodeURIComponent(pathname)}`, request.nextUrl.origin)
+    const url = new URL(`/api/kanon?path=${encodeURIComponent(pathname)}`, вътрешен(request))
     const r = await fetch(url, {
       next: { revalidate: 300, tags: ['redirects', 'product', 'category'] },
     })
