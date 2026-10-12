@@ -20,7 +20,7 @@ export const productBadges = (p: BadgeInput): ProductBadge[] => {
   const out: ProductBadge[] = []
   const off = typeof p.price === 'number' ? discountPercent(p.price, p.compareAtPrice) : null
   if (off) out.push({ key: 'discount', label: `−${off}%` })
-  // Само при наличен продукт; „Изчерпан" казва бутонът.
+  // Само при наличен продукт.
   if (p.lastPiece && (p.availability ?? 'in-stock') === 'in-stock') out.push({ key: 'last', label: 'Последна бройка' })
   return out
 }

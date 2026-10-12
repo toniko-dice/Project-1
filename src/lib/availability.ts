@@ -7,23 +7,28 @@
  * която полето не познава, и продуктът излиза като „в наличност", без
  * никой да е решил така.
  *
- * Надписът на бутона е в `BuyButton` — общ за страницата и картите.
+ * `button` — надписът на бутона към dice.bg (`BuyButton`, общ за страницата
+ * и картите); `null` = `ctaLabel` на продукта („Купи сега").
  */
 export const AVAILABILITY = {
   'in-stock': {
     admin: 'Налично',
     /** Редът под цената. */
     line: 'В наличност',
+    button: null,
     schema: 'https://schema.org/InStock',
   },
   'on-request': {
     admin: 'По заявка',
     line: 'Не е наличен в момента — може да се заяви в магазина',
+    button: 'Заяви в dice.bg',
     schema: 'https://schema.org/PreOrder',
   },
   'out-of-stock': {
     admin: 'Изчерпан',
     line: 'Изчерпан',
+    // Активен бутон към продукта в dice.bg — там клиентът го заявява (task-buton-zayavka.md).
+    button: 'Заявка за продукт',
     schema: 'https://schema.org/OutOfStock',
   },
 } as const

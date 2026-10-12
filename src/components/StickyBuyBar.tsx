@@ -64,7 +64,7 @@ export const StickyBuyBar = ({
             alt=""
             width={44}
             height={44}
-            className="size-11 shrink-0 rounded bg-tile object-contain"
+            className="size-11 shrink-0 rounded bg-tile object-contain max-[359px]:hidden"
           />
         ) : null}
         <div className="min-w-0 flex-1">
@@ -72,11 +72,21 @@ export const StickyBuyBar = ({
           <p className="tabular mt-0.5 text-sm leading-tight">
             <span className="font-semibold">{formatEur(price)}</span>
             {comparePrice ? (
-              <s className="ml-1.5 text-xs text-ink-muted">{formatEur(comparePrice)}</s>
+              <s className="ml-1.5 text-xs text-ink-muted max-[400px]:hidden">{formatEur(comparePrice)}</s>
             ) : null}
           </p>
         </div>
-        <BuyButton product={product} size="sm" label="Купи" className="shrink-0 px-4!" />
+        {/*
+          „Заявка за продукт" (изчерпан) и „Заяви в dice.bg" са дълги: на
+          телефон до 400 px бутонът е с 13 px, старата цена се скрива, под
+          360 px — и снимката. Иначе бутонът излизаше извън екрана (320 px).
+        */}
+        <BuyButton
+          product={product}
+          size="sm"
+          label="Купи"
+          className="shrink-0 px-4! max-[400px]:px-3! max-[400px]:text-[13px]"
+        />
       </div>
     </div>
   )

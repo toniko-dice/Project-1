@@ -1,3 +1,4 @@
+import { availabilityOf } from '@/lib/availability'
 import type { Product } from '@/payload-types'
 
 /**
@@ -11,7 +12,12 @@ import type { Product } from '@/payload-types'
  * - в наличност — `ctaLabel` на продукта („Купи сега");
  * - по заявка — „Заяви в dice.bg", същият адрес и същият вид: „Купи сега"
  *   би обещал нещо, което магазинът в момента няма;
- * - изчерпан — неактивен „Изчерпан", без линк.
+ * - изчерпан — „Заявка за продукт", същият адрес и вид: в dice.bg
+ *   клиентът го заявява. До 12 октомври 2026 беше сив неактивен
+ *   „Изчерпан" без линк; откакто наличността идва от `stock` в XML-а на
+ *   dice, такива са много. „Изчерпан" остава в реда под цената.
+ *
+ * Надписите са в `src/lib/availability.ts` (`button`).
  *
  * Покупката е в dice.bg, затова адресът е `externalUrl`, в нов раздел.
  */
@@ -64,30 +70,25 @@ export const BuyButton = ({
   label?: string | null
   className?: string
 }) => {
-  if (product.availability === 'out-of-stock') {
-    return (
-      <span
-        aria-disabled="true"
-        className={`${BASE} ${SIZE[size]} cursor-not-allowed rounded-md bg-tile text-ink-muted ${className}`}
-      >
-        Изчерпан
-      </span>
-    )
-  }
-
   // Свързан продукт без адрес (не би трябвало — полето е задължително) не дава мъртъв бутон.
   if (!product.externalUrl) return null
+
+  const текст = availabilityOf(product.availability).button ?? (label?.trim() || product.ctaLabel?.trim() || 'Купи сега')
+  /*
+    „Заявка за продукт" (17 знака) с 13 px е 120 px, а бутонът на картата на
+    телефон 320 px — 104 px: падаше извън бутона. Под 400 px — 11 px, само
+    за дълъг надпис в картата.
+  */
+  const тесен = (size === 'md' || size === 'pill') && текст.length > 15 ? 'max-[400px]:text-[11px]' : ''
 
   return (
     <a
       href={product.externalUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className={`${BASE} ${SIZE[size]} ${TONE[tone]} cursor-pointer transition-colors duration-200 ${className}`}
+      className={`${BASE} ${SIZE[size]} ${TONE[tone]} ${тесен} cursor-pointer transition-colors duration-200 ${className}`}
     >
-      {product.availability === 'on-request'
-        ? 'Заяви в dice.bg'
-        : label?.trim() || product.ctaLabel?.trim() || 'Купи сега'}
+      {текст}
     </a>
   )
 }

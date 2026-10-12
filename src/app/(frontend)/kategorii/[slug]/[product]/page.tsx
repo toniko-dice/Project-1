@@ -248,8 +248,11 @@ export default async function ProductPage({ params }: Args) {
 
         `items-start` пази колоната да не се разтяга до височината на
         галерията: по-късият текст стои горе, а не увисва центриран.
+        `grid-cols-[minmax(0,1fr)]` на телефон: без него колоната е колкото
+        най-широкото съдържание — точките на галерия с 11 снимки (412 px)
+        разпъваха страницата на DELTA 2 Max до 428 px.
       */}
-      <div className="container-site grid items-start gap-8 pb-8 pt-4 lg:grid-cols-2 lg:gap-12">
+      <div className="container-site grid grid-cols-[minmax(0,1fr)] items-start gap-8 pb-8 pt-4 lg:grid-cols-2 lg:gap-12">
         <ProductGallery images={images} />
 
         <div className="flex flex-col gap-4">

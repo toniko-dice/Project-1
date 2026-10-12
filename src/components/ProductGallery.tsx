@@ -166,6 +166,11 @@ export const ProductGallery = ({ images }: { images: GalleryImage[] }) => {
       </div>
 
       {!single ? (
+        /*
+          Точките се свиват (`w-8 min-w-0 shrink`): при 11 снимки редът е
+          412 px и на телефон под 428 px разпъваше цялата страница
+          (DELTA 2 Max, 12 октомври 2026).
+        */
         <div className="flex justify-center gap-1.5">
           {images.map((_, i) => (
             <button
@@ -174,10 +179,10 @@ export const ProductGallery = ({ images }: { images: GalleryImage[] }) => {
               onClick={() => go(i)}
               aria-label={`Снимка ${i + 1}`}
               aria-current={i === index ? 'true' : undefined}
-              className="group flex h-11 cursor-pointer items-center px-1"
+              className="group flex h-11 w-8 min-w-0 shrink cursor-pointer items-center px-1"
             >
               <span
-                className={`block h-0.5 w-6 rounded-full transition-colors duration-200 ${
+                className={`block h-0.5 w-full rounded-full transition-colors duration-200 ${
                   i === index ? 'bg-ink' : 'bg-line group-hover:bg-line-strong'
                 }`}
               />
