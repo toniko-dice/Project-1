@@ -29,7 +29,15 @@ npm run migrate
 step "5/7 билд (в .next-new — работещият сайт не се пипа)"
 rm -rf .next-new
 NEXT_DIST_DIR=.next-new npm run build
-# Кешът на четенията (fetch-cache) остава от новия билд.
+# Кешът на четенията (fetch-cache) остава от новия билд. Кешът на
+# оптимизатора на снимки (.next/cache/images) се пренася — иначе след всеки
+# deploy всички снимки се правят наново.
+if [ -d .next/cache/images ]; then
+  mkdir -p .next-new/cache
+  rm -rf .next-new/cache/images
+  cp -a .next/cache/images .next-new/cache/images
+  echo "кешът на снимките е пренесен: $(du -sh .next-new/cache/images | cut -f1)"
+fi
 rm -rf .next-old
 [ -d .next ] && mv .next .next-old
 mv .next-new .next
