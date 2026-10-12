@@ -323,6 +323,8 @@ SMTP — попълнете `SMTP_*` в `.env` на сървъра, махнет
   sitemap — сайтът е заключен и с `noindex`), `NEXT_PUBLIC_SERVER_URL=http://localhost:8080`
   (тунелът), `INTERNAL_SERVER_URL=http://127.0.0.1:3000`.
 
+Сайтът е качен на 12 октомври 2026 (`npm run db:kachi-na-sarvara`, после флагът е махнат).
+
 **Когато домейнът дойде** (отделна задача): Cloudflare, SSL, `ufw allow
 80,443/tcp`, `NEXT_PUBLIC_SERVER_URL=https://ecoflow.bg`, `npm run deploy`.
 
