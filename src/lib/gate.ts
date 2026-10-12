@@ -31,6 +31,8 @@ const ОТВОРЕНИ = [
   /^\/_next\/static\//,
   /^\/_next\/webpack-hmr/,
   /^\/favicon\.ico$/,
+  // Иконите на сайта и манифестът — и екранът за вход ги показва.
+  /^\/(icon\.svg|apple-icon\.png|icon-(192|512)\.png|manifest\.webmanifest)$/,
   /^\/api\/zaklyuchvane$/,
   // Каноничният адрес — пита го middleware-ът; казва само накъде води адрес.
   /^\/api\/kanon$/,

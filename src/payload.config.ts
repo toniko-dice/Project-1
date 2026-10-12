@@ -87,6 +87,14 @@ export default buildConfig({
     importMap: { baseDir: path.resolve(dirname) },
     meta: {
       titleSuffix: '— EcoFlow България',
+      /*
+        Иконата „EF" като на сайта — файловете са в `src/app/`. `favicon.ico`
+        Next слага сам на всяка страница (и тук), затова го няма в списъка.
+      */
+      icons: [
+        { rel: 'icon', type: 'image/svg+xml', url: '/icon.svg' },
+        { rel: 'apple-touch-icon', url: '/apple-icon.png', sizes: '180x180' },
+      ],
     },
     // Кръгчето с броя на заявките „Нова" до „Нови заявки" в менюто.
     components: {
