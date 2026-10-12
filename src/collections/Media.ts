@@ -9,7 +9,7 @@ import { revalidateAll, revalidateAllOnDelete } from '../lib/revalidate'
 import { makeTrimmed, NO_TRIMMED, removeTrimmedFile } from '../lib/trim-image'
 import { contentAccess } from '../lib/access'
 
-const MEDIA_DIR = path.resolve(process.cwd(), 'media')
+const MEDIA_DIR = path.resolve(/* turbopackIgnore: true */ process.cwd(), 'media')
 
 type Trimmed = { filename?: string | null; small?: string | null } | null | undefined
 

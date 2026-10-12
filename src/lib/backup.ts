@@ -26,13 +26,13 @@ export const KEEP_PRE_MIGRATION = 3
 export const PRE_MIGRATION = 'преди миграция'
 
 const ROOT = process.cwd()
-export const DB_FILE = path.join(ROOT, 'ecoflow.db')
-export const MEDIA_DIR = path.join(ROOT, 'media')
+export const DB_FILE = path.join(/* turbopackIgnore: true */ ROOT, 'ecoflow.db')
+export const MEDIA_DIR = path.join(/* turbopackIgnore: true */ ROOT, 'media')
 /** Където Payload пази готовите архиви (хранилището на колекцията). */
-export const STORE_DIR = path.join(ROOT, 'backups')
+export const STORE_DIR = path.join(/* turbopackIgnore: true */ ROOT, 'backups')
 /** Временна папка, в която архивът се сглобява преди да бъде записан. */
-export const BUILD_DIR = path.join(ROOT, '.backup-tmp')
-export const STAGING_DIR = path.join(ROOT, '.restore-staging')
+export const BUILD_DIR = path.join(/* turbopackIgnore: true */ ROOT, '.backup-tmp')
+export const STAGING_DIR = path.join(/* turbopackIgnore: true */ ROOT, '.restore-staging')
 
 const exists = async (p: string) => {
   try {
@@ -184,7 +184,7 @@ export const stageRestore = async (
         подготвен: new Date().toISOString(),
         архив: meta.label,
         id: meta.id,
-        съдържа_снимки: await exists(path.join(STAGING_DIR, 'media')),
+        съдържа_снимки: await exists(path.join(/* turbopackIgnore: true */ STAGING_DIR, 'media')),
       },
       null,
       2,

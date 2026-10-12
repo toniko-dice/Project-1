@@ -97,8 +97,22 @@ const опресни = () =>
   наСървъра(`cd ${q(DIR)} && curl -s -o /dev/null -w 'опресняване: %{http_code}\\n' -X POST -H "x-revalidate-key: $(grep -E '^PAYLOAD_SECRET=' .env | cut -d= -f2-)" http://127.0.0.1:3000/api/products/revalidate`)
 
 const КОМАНДИ = {
+  /*
+    Откачено от SSH сесията (`setsid nohup`): прекъсната връзка не убива
+    билда по средата. Тук само се следи логът (`deploy-log/<време>.log` на
+    сървъра); ако връзката падне, обновяването продължава — логът и кодът
+    на изхода (`.exit`) остават там. `flock` — два deploy-а наведнъж не
+    тръгват. `NODE_OPTIONS` — таван на JS паметта на билда.
+  */
   async deploy() {
-    const r = наСървъра(`bash ${q(`${DIR}/scripts/deploy.sh`)}`)
+    const лог = `deploy-log/${new Date().toISOString().replace(/[:.]/g, '-')}.log`
+    const r = наСървъра(
+      `cd ${q(DIR)} && mkdir -p deploy-log && ` +
+        `setsid nohup bash -c 'exec 9>deploy-log/.lock; flock -n 9 || { echo "Друг deploy още върви."; echo 75 > ${лог}.exit; exit 75; }; ` +
+        `NODE_OPTIONS=--max-old-space-size=4096 bash scripts/deploy.sh; echo $? > ${лог}.exit' > ${лог} 2>&1 < /dev/null & ` +
+        `echo "лог на сървъра: ${DIR}/${лог}"; tail -n +1 -f ${лог} & T=$!; ` +
+        `until [ -f ${лог}.exit ]; do sleep 2; done; sleep 1; kill $T; exit "$(cat ${лог}.exit)"`,
+    )
     if (r.status !== 0) стоп('Обновяването спря — старата версия продължава да работи. Виж изхода горе.')
   },
 

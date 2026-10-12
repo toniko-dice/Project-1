@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "dev:webpack": "next dev --webpack",
-    "prebuild": "node -e \"require('fs').rmSync('.next/cache/fetch-cache',{recursive:true,force:true})\"",
+    "prebuild": "node -e \"require('fs').rmSync((process.env.NEXT_DIST_DIR||'.next')+'/cache/fetch-cache',{recursive:true,force:true})\"",
     "build": "next build",
     "build:local": "node scripts/build-local.mjs",
     "start": "next start",

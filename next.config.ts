@@ -23,6 +23,31 @@ const nextConfig: NextConfig = {
     (`__dirname`) — пакетиран от Turbopack, пътят не съществува.
   */
   serverExternalPackages: ['svg-captcha', '@react-pdf/renderer'],
+  /*
+    Данните НЕ влизат в проследяването на файловете на билда. Кодът чете
+    `path.join(process.cwd(), 'media' | 'backups' | …)` с име, известно чак
+    при заявката, затова Turbopack включваше ЦЕЛИ папки: `media/` (~115 000
+    записа в .nft.json), всички архиви в `backups/`, базата. На 12 октомври
+    2026 билдът на сървъра (`backups/` 5,3 GB, расте с всеки deploy) изяде
+    7,2 GB и беше убит. Сайтът чете тези файлове от диска при работа — в
+    билда не трябват.
+  */
+  outputFileTracingExcludes: {
+    '*': [
+      'media/**',
+      'backups/**',
+      '.backup-tmp/**',
+      '.restore-staging/**',
+      'content/**',
+      'content-server/**',
+      'quote-files/**',
+      'mail-log/**',
+      'tmp-mail/**',
+      '.health/**',
+      '*.db',
+      '*.db-*',
+    ],
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
 

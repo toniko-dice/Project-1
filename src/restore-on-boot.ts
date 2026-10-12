@@ -14,7 +14,7 @@ import fs from 'fs/promises'
 import path from 'path'
 
 const ROOT = process.cwd()
-const STAGING = path.join(ROOT, '.restore-staging')
+const STAGING = path.join(/* turbopackIgnore: true */ ROOT, '.restore-staging')
 const MARKER = path.join(STAGING, 'restore.json')
 
 const exists = async (p: string) => {
@@ -38,7 +38,7 @@ const applyRestore = async () => {
     console.log(`\n[възстановяване] Прилага се архив: ${info.архив ?? 'без име'}`)
 
     const stagedDb = path.join(STAGING, 'ecoflow.db')
-    const liveDb = path.join(ROOT, 'ecoflow.db')
+    const liveDb = path.join(/* turbopackIgnore: true */ ROOT, 'ecoflow.db')
 
     if (!(await exists(stagedDb))) {
       throw new Error('липсва ecoflow.db в подготвената папка')
@@ -53,8 +53,8 @@ const applyRestore = async () => {
     console.log('[възстановяване] базата е заменена')
 
     if (info.съдържа_снимки) {
-      const stagedMedia = path.join(STAGING, 'media')
-      const liveMedia = path.join(ROOT, 'media')
+      const stagedMedia = path.join(/* turbopackIgnore: true */ STAGING, 'media')
+      const liveMedia = path.join(/* turbopackIgnore: true */ ROOT, 'media')
       if (await exists(stagedMedia)) {
         await fs.rm(liveMedia, { recursive: true, force: true })
         await fs.cp(stagedMedia, liveMedia, { recursive: true })

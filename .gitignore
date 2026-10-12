@@ -82,6 +82,7 @@ content/snimki-imena-proverka.csv
 /mail-log/
 /content-server/
 /content-server-upload/
+/deploy-log/
 /.next-new/
 /.next-old/
 /tmp-kachvane.db

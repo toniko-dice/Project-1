@@ -323,7 +323,7 @@ const OfferDocument = ({
  */
 export const renderOfferPdf = async (payload: Payload, offer: OfferForPdf): Promise<Buffer> => {
   registerFonts()
-  const mediaDir = path.resolve(process.cwd(), 'media')
+  const mediaDir = path.resolve(/* turbopackIgnore: true */ process.cwd(), 'media')
   const [settings, header] = await Promise.all([
     payload.findGlobal({ slug: 'offer-settings', depth: 0 }) as Promise<OfferSettingsForPdf>,
     payload.findGlobal({ slug: 'header', depth: 1 }) as Promise<{ logo?: MediaDoc | number | null }>,
