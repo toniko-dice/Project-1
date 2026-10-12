@@ -8,9 +8,10 @@ import { createPortal } from 'react-dom'
 const POLL_MS = 60_000
 
 /**
- * Броячът до „Нови заявки" и „Съобщения" в лявото меню — записите със
- * статус `new` („Нова" / „Ново"). Колекцията и думата идват като
- * `clientProps` от `payload.config.ts` — един компонент за двете.
+ * Броячът до „Нови заявки", „Съобщения" и „Цени за одобрение" в лявото
+ * меню — записите със статус `new` („Нова" / „Ново"; при цените — `pending`).
+ * Колекцията, статусът и думата идват като `clientProps` от
+ * `payload.config.ts` — един компонент за трите.
  *
  * Payload не дава динамичен надпис на колекция в менюто, затова този
  * компонент (в `admin.components.afterNavLinks`) намира линка на колекцията
@@ -25,9 +26,11 @@ const POLL_MS = 60_000
 export const CollectionNavBadge = ({
   slug = 'quote-requests',
   noun = 'нови заявки',
+  status = 'new',
 }: {
   slug?: string
   noun?: string
+  status?: string
 }) => {
   const SLUG = slug
   const { config } = useConfig()
@@ -44,7 +47,7 @@ export const CollectionNavBadge = ({
   const refresh = useCallback(async () => {
     if (!вижда) return setCount(0)
     try {
-      const r = await fetch(`${api}/${SLUG}?where[status][equals]=new&limit=0&depth=0`, {
+      const r = await fetch(`${api}/${SLUG}?where[status][equals]=${encodeURIComponent(status)}&limit=0&depth=0`, {
         credentials: 'include',
       })
       if (!r.ok) return setCount(0)
@@ -53,7 +56,7 @@ export const CollectionNavBadge = ({
     } catch {
       // Без връзка — оставяме последната стойност.
     }
-  }, [api, вижда, SLUG])
+  }, [api, вижда, SLUG, status])
 
   useEffect(() => {
     void refresh()

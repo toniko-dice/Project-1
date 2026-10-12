@@ -54,6 +54,7 @@ import * as migration_20261008_094838_za_di_si_stores from './20261008_094838_za
 import * as migration_20261008_095412_stores_day_range from './20261008_095412_stores_day_range';
 import * as migration_20261008_115939_futar_kontakti from './20261008_115939_futar_kontakti';
 import * as migration_20261012_093359_dice_xml_poleta from './20261012_093359_dice_xml_poleta';
+import * as migration_20261012_102150_dice_odobrenie_ceni from './20261012_102150_dice_odobrenie_ceni';
 
 export const migrations = [
   {
@@ -334,6 +335,11 @@ export const migrations = [
   {
     up: migration_20261012_093359_dice_xml_poleta.up,
     down: migration_20261012_093359_dice_xml_poleta.down,
-    name: '20261012_093359_dice_xml_poleta'
+    name: '20261012_093359_dice_xml_poleta',
+  },
+  {
+    up: migration_20261012_102150_dice_odobrenie_ceni.up,
+    down: migration_20261012_102150_dice_odobrenie_ceni.down,
+    name: '20261012_102150_dice_odobrenie_ceni'
   },
 ];

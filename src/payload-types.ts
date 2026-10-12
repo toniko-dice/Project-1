@@ -71,6 +71,8 @@ export interface Config {
     'contact-messages': ContactMessage;
     offers: Offer;
     'dice-syncs': DiceSync;
+    'price-approvals': PriceApproval;
+    'price-history': PriceHistory;
     'quote-files': QuoteFile;
     pages: Page;
     products: Product;
@@ -100,6 +102,8 @@ export interface Config {
     'contact-messages': ContactMessagesSelect<false> | ContactMessagesSelect<true>;
     offers: OffersSelect<false> | OffersSelect<true>;
     'dice-syncs': DiceSyncsSelect<false> | DiceSyncsSelect<true>;
+    'price-approvals': PriceApprovalsSelect<false> | PriceApprovalsSelect<true>;
+    'price-history': PriceHistorySelect<false> | PriceHistorySelect<true>;
     'quote-files': QuoteFilesSelect<false> | QuoteFilesSelect<true>;
     pages: PagesSelect<false> | PagesSelect<true>;
     products: ProductsSelect<false> | ProductsSelect<true>;
@@ -3268,6 +3272,65 @@ export interface DiceSync {
   irregular?: string | null;
   notFound?: string | null;
   missingInFile?: string | null;
+  /**
+   * Само в автоматичен режим — цените, сменени при това пускане.
+   */
+  priceBatch?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "price-approvals".
+ */
+export interface PriceApproval {
+  id: number;
+  productTitle?: string | null;
+  product?: (number | null) | Product;
+  sku?: string | null;
+  currentPrice?: number | null;
+  newPrice?: number | null;
+  currentCompare?: number | null;
+  newCompare?: number | null;
+  changePct?: number | null;
+  changeAbs?: number | null;
+  level?: ('ok' | 'orange' | 'red') | null;
+  xmlDate?: string | null;
+  changeAbsPct?: number | null;
+  warn?: boolean | null;
+  status?: ('pending' | 'approved' | 'rejected') | null;
+  decidedBy?: string | null;
+  decidedAt?: string | null;
+  batch?: string | null;
+  note?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Всяка смяна на цена или зачертана цена — откъдето и да идва. В записа: „Върни предишната цена" и „Върни целия пакет".
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "price-history".
+ */
+export interface PriceHistory {
+  id: number;
+  title?: string | null;
+  product?: (number | null) | Product;
+  productTitle?: string | null;
+  sku?: string | null;
+  priceOld?: number | null;
+  priceNew?: number | null;
+  compareOld?: number | null;
+  compareNew?: number | null;
+  changedPrice?: boolean | null;
+  changedCompare?: boolean | null;
+  source?: ('approval' | 'sync' | 'admin' | 'import' | 'revert') | null;
+  user?: string | null;
+  /**
+   * Общ за едно „Одобри избраните", едно пускане на синхронизацията или едно връщане.
+   */
+  batch?: string | null;
+  approval?: (number | null) | PriceApproval;
   updatedAt: string;
   createdAt: string;
 }
@@ -3589,6 +3652,14 @@ export interface PayloadLockedDocument {
         value: number | DiceSync;
       } | null)
     | ({
+        relationTo: 'price-approvals';
+        value: number | PriceApproval;
+      } | null)
+    | ({
+        relationTo: 'price-history';
+        value: number | PriceHistory;
+      } | null)
+    | ({
         relationTo: 'quote-files';
         value: number | QuoteFile;
       } | null)
@@ -3839,6 +3910,55 @@ export interface DiceSyncsSelect<T extends boolean = true> {
   irregular?: T;
   notFound?: T;
   missingInFile?: T;
+  priceBatch?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "price-approvals_select".
+ */
+export interface PriceApprovalsSelect<T extends boolean = true> {
+  productTitle?: T;
+  product?: T;
+  sku?: T;
+  currentPrice?: T;
+  newPrice?: T;
+  currentCompare?: T;
+  newCompare?: T;
+  changePct?: T;
+  changeAbs?: T;
+  level?: T;
+  xmlDate?: T;
+  changeAbsPct?: T;
+  warn?: T;
+  status?: T;
+  decidedBy?: T;
+  decidedAt?: T;
+  batch?: T;
+  note?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "price-history_select".
+ */
+export interface PriceHistorySelect<T extends boolean = true> {
+  title?: T;
+  product?: T;
+  productTitle?: T;
+  sku?: T;
+  priceOld?: T;
+  priceNew?: T;
+  compareOld?: T;
+  compareNew?: T;
+  changedPrice?: T;
+  changedCompare?: T;
+  source?: T;
+  user?: T;
+  batch?: T;
+  approval?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -6046,7 +6166,7 @@ export interface OfferSetting {
   createdAt?: string | null;
 }
 /**
- * Всеки ден в избрания час сайтът тегли XML файла на dice.bg и обновява цената, старата цена, наличността и броя на продуктите (по SKU, после по баркод). Нищо друго не се пипа; продукти не се създават и не се трият.
+ * XML файлът на dice.bg обновява цената, зачертаната цена, наличността и броя на продуктите (по код на dice = SKU, после по баркод). „Тестов" режим: цените чакат в „Цени за одобрение", наличностите се обновяват веднага, пуска се само с бутона. „Автоматичен": всеки ден в избрания час — всичко само.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "dice-sync".
@@ -6054,9 +6174,9 @@ export interface OfferSetting {
 export interface DiceSync1 {
   id: number;
   /**
-   * Автоматичното пускане по график. Бутоните работят и без нея.
+   * Тестов: без график, само с бутона. Автоматичен: иска адрес на XML и нула чакащи цени.
    */
-  enabled?: boolean | null;
+  mode?: ('test' | 'auto') | null;
   /**
    * По българско време. След нощното опресняване на файла.
    */
@@ -6065,6 +6185,7 @@ export interface DiceSync1 {
    * 0 — етикетът е изключен.
    */
   lastPieceThreshold?: number | null;
+  modeChanged?: string | null;
   /**
    * Пълният адрес, който дава dice.bg.
    */
@@ -6076,6 +6197,10 @@ export interface DiceSync1 {
    */
   reportEmail?: string | null;
   lastRun?: string | null;
+  testXml?: string | null;
+  testFileName?: string | null;
+  testFileAt?: string | null;
+  enabled?: boolean | null;
   lastMatched?: number | null;
   lastAutoDate?: string | null;
   backupDone?: boolean | null;
@@ -6345,14 +6470,19 @@ export interface OfferSettingsSelect<T extends boolean = true> {
  * via the `definition` "dice-sync_select".
  */
 export interface DiceSyncSelect<T extends boolean = true> {
-  enabled?: T;
+  mode?: T;
   hour?: T;
   lastPieceThreshold?: T;
+  modeChanged?: T;
   url?: T;
   updatePrice?: T;
   updateAvailability?: T;
   reportEmail?: T;
   lastRun?: T;
+  testXml?: T;
+  testFileName?: T;
+  testFileAt?: T;
+  enabled?: T;
   lastMatched?: T;
   lastAutoDate?: T;
   backupDone?: T;

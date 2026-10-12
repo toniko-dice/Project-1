@@ -4,25 +4,38 @@ import type { Availability } from '../availability'
 import { AVAILABILITY } from '../availability'
 import { createBackup } from '../backup'
 import { formatEur } from '../format'
+import { SITE_URL } from '../site-url'
 import { isLastPiece } from './last-piece'
 import { rowLabel, съпостави } from './match'
 import { DiceFileError, type DiceRow, eanНередност, finalPrice, isEcoFlow, mapAvailability, parseDiceXml } from './parse'
+import { ЦЕНОВИ_КОНТЕКСТ, новПакет, оценка, type Level } from './prices'
 
 /**
- * Синхронизация с dice.bg (`task-dice-xml-sinhronizaciya.md`).
+ * Синхронизация с dice.bg (`task-dice-xml-sinhronizaciya.md`,
+ * `task-dice-odobrenie-ceni.md`).
  *
- *   plan  — тегли файла и пресмята какво би се сменило (бутонът „Провери");
- *   run   — същото, плюс предпазителите, записа в една транзакция, лога,
- *           опресняването на сайта и отчета по имейл.
+ *   plan  — пресмята какво би се сменило (бутонът „Провери");
+ *   run   — същото, плюс предпазителите, записа, лога, опресняването на
+ *           сайта и отчета по имейл.
  *
- * Пипат се САМО цена, стара цена, наличност и брой. Продукти не се
+ * Два режима („Режим" в „Връзка с dice.bg"):
+ * - **Тестов** (по подразбиране) — наличност и брой се записват веднага;
+ *   новите цени отиват в „Цени за одобрение" и излизат на сайта чак след
+ *   одобрение. Без график — само с бутона.
+ * - **Автоматичен** — всичко се записва направо; цените от едно пускане
+ *   са един пакет в „История на цените" (`priceBatch` на лога), който се
+ *   връща с едно натискане.
+ *
+ * Пипат се САМО цена, зачертана цена, наличност и брой. Продукти не се
  * създават, не се трият, не се публикуват. Съвпадение — по `Identifier`
  * (= SKU), после по EAN (`ean`, `ean2`); по име никога — `match.ts`.
  * Цената и зачертаната — `finalPrice` в `parse.ts`.
  */
 
+export type DiceMode = 'test' | 'auto'
+
 export type DiceSettings = {
-  enabled?: boolean | null
+  mode?: DiceMode | null
   url?: string | null
   hour?: number | null
   updatePrice?: boolean | null
@@ -32,6 +45,9 @@ export type DiceSettings = {
   lastMatched?: number | null
   lastAutoDate?: string | null
   backupDone?: boolean | null
+  testXml?: string | null
+  testFileName?: string | null
+  testFileAt?: string | null
 }
 
 type Product = {
@@ -50,11 +66,38 @@ type Product = {
 }
 
 export type Change = { id: number; product: string; field: string; old: string; new: string }
+
+/** Нова цена от dice за един продукт — в тестов режим става „Цена за одобрение". */
+export type PriceProposal = {
+  id: number
+  title: string
+  sku: string
+  currentPrice: number | null
+  newPrice: number
+  currentCompare: number | null
+  newCompare: number | null
+  pct: number | null
+  abs: number | null
+  absPct: number
+  level: Level
+  warn: boolean
+  /** Същата стойност вече е отказана — не излиза отново. */
+  rejected: boolean
+}
+
 export type Plan = {
+  mode: DiceMode
+  /** Откъде е файлът: адресът или качения файл. */
+  source: string
   rows: number
   matched: number
+  /** Наличност и брой; в автоматичен режим — и цените. */
   changes: Change[]
   updates: { id: number; title: string; data: Record<string, unknown>; draftOnly: boolean }[]
+  /** Всички нови цени (и в двата режима) — за таблицата и предпазителя. */
+  prices: PriceProposal[]
+  /** Продукти, при които файлът дава цената, която вече е на сайта — чакащото им се маха. */
+  samePrice: number[]
   unchanged: number
   notFound: { sku: string; ean: string; name: string }[]
   missingInFile: { id: number; title: string }[]
@@ -75,6 +118,7 @@ const норм = (s: string | null | undefined) => (s ?? '').trim().toLowerCase(
 const цифри = (s: string | null | undefined) => (s ?? '').replace(/\D/g, '')
 const пари = (n: number | null | undefined) => (typeof n === 'number' ? formatEur(n) : '—')
 const наличност = (v: string | null | undefined) => (v ? (AVAILABILITY[v as Availability]?.admin ?? v) : '—')
+const ключЦена = (price: number, compare: number | null) => `${price}|${compare ?? ''}`
 
 /* ─────────── сваляне ─────────── */
 
@@ -94,6 +138,22 @@ export const fetchDiceXml = async (url: string, attempts = 1, pauseMs = 5 * 60_0
     }
   }
   throw new DiceFileError(`Файлът не се изтегли (${attempts} опит${attempts > 1 ? 'а' : ''}): ${last}`)
+}
+
+/**
+ * Файлът за пускането: качения („Качи XML файл за тест"), ако има такъв —
+ * иначе адреса. Автоматичното пускане ползва САМО адреса.
+ */
+export const readDiceXml = async (
+  s: DiceSettings,
+  opts: { useUpload?: boolean; attempts?: number } = {},
+): Promise<{ xml: string; source: string; upload: boolean }> => {
+  // Качен ли е файл — по името: и празен файл е тест (за предпазителите).
+  if (opts.useUpload !== false && s.testFileName) {
+    return { xml: s.testXml ?? '', source: `качен файл „${s.testFileName || 'XML'}" (${s.testFileAt || '—'})`, upload: true }
+  }
+  if (!s.url?.trim()) throw new DiceFileError('Няма адрес на XML и няма качен файл в „Връзка с dice.bg".')
+  return { xml: await fetchDiceXml(s.url.trim(), opts.attempts ?? 1), source: s.url.trim(), upload: false }
 }
 
 /* ─────────── план ─────────── */
@@ -128,17 +188,43 @@ const сНепубликувани = async (payload: Payload, ids: number[]): Pr
   return new Set(pub.docs.map((d) => d.id as number))
 }
 
-export const planSync = async (payload: Payload, rows: DiceRow[], s: DiceSettings): Promise<Plan> => {
+/** Отказаните стойности по продукт — „същата стойност не се показва отново". */
+const отказани = async (payload: Payload): Promise<Map<number, Set<string>>> => {
+  const r = await payload.find({
+    collection: 'price-approvals',
+    where: { status: { equals: 'rejected' } },
+    pagination: false,
+    depth: 0,
+    overrideAccess: true,
+    select: { product: true, newPrice: true, newCompare: true },
+  })
+  const m = new Map<number, Set<string>>()
+  for (const d of r.docs as unknown as { product?: number | null; newPrice?: number | null; newCompare?: number | null }[]) {
+    if (typeof d.product !== 'number' || typeof d.newPrice !== 'number') continue
+    m.set(d.product, (m.get(d.product) ?? new Set()).add(ключЦена(d.newPrice, d.newCompare ?? null)))
+  }
+  return m
+}
+
+export const planSync = async (
+  payload: Payload,
+  rows: DiceRow[],
+  s: DiceSettings,
+  source = '',
+  upload = false,
+): Promise<Plan> => {
+  const mode: DiceMode = s.mode === 'auto' ? 'auto' : 'test'
   const updatePrice = s.updatePrice !== false
   const updateAvailability = s.updateAvailability !== false
   const threshold = typeof s.lastPieceThreshold === 'number' ? s.lastPieceThreshold : 1
 
   const products = await всичкиПродукти(payload)
   const съвпадение = съпостави(rows, products)
+  const отказаниСтойности = mode === 'test' ? await отказани(payload) : new Map<number, Set<string>>()
 
   const plan: Plan = {
-    rows: rows.length, matched: 0, changes: [], updates: [], unchanged: 0, notFound: [],
-    missingInFile: [], withoutIds: [], skippedNoSync: 0,
+    mode, source, rows: rows.length, matched: 0, changes: [], updates: [], prices: [], samePrice: [], unchanged: 0,
+    notFound: [], missingInFile: [], withoutIds: [], skippedNoSync: 0,
     errors: [...съвпадение.errors], warnings: [...съвпадение.warnings], skipped: [...съвпадение.skipped],
     irregular: [], abort: null,
   }
@@ -150,7 +236,6 @@ export const planSync = async (payload: Payload, rows: DiceRow[], s: DiceSetting
     if (isEcoFlow(row)) plan.notFound.push({ sku: row.sku ?? '', ean: row.ean ?? '', name: row.name })
   }
   const видяни = new Set<number>(съвпадение.matches.map((m) => m.product.id))
-  const цени: { old: number; new: number }[] = []
 
   for (const { row, product: p } of съвпадение.matches) {
     plan.matched++
@@ -164,11 +249,24 @@ export const planSync = async (payload: Payload, rows: DiceRow[], s: DiceSetting
         continue
       }
       if (цена.warning) plan.warnings.push(`${p.title} (${rowLabel(row)}): ${цена.warning}`)
-      if (цена.price !== p.price) {
-        data.price = цена.price
-        if (typeof p.price === 'number' && p.price > 0) цени.push({ old: p.price, new: цена.price })
+      const сменена = цена.price !== (p.price ?? null)
+      const смененаЗачертана = (p.compareAtPrice ?? null) !== цена.compareAtPrice
+      if (сменена || смененаЗачертана) {
+        const о = оценка(p.price, цена.price, цена.compareAtPrice)
+        plan.prices.push({
+          id: p.id, title: p.title, sku: p.sku ?? '',
+          currentPrice: p.price ?? null, newPrice: цена.price,
+          currentCompare: p.compareAtPrice ?? null, newCompare: цена.compareAtPrice,
+          pct: о.pct, abs: о.abs, absPct: сменена ? о.absPct : 0, level: сменена ? о.level : о.warn ? 'red' : 'ok', warn: о.warn,
+          rejected: отказаниСтойности.get(p.id)?.has(ключЦена(цена.price, цена.compareAtPrice)) ?? false,
+        })
+        if (mode === 'auto') {
+          if (сменена) data.price = цена.price
+          if (смененаЗачертана) data.compareAtPrice = цена.compareAtPrice
+        }
+      } else {
+        plan.samePrice.push(p.id)
       }
-      if ((p.compareAtPrice ?? null) !== цена.compareAtPrice) data.compareAtPrice = цена.compareAtPrice
     }
     if (updateAvailability) {
       const a = mapAvailability(row)
@@ -178,7 +276,11 @@ export const planSync = async (payload: Payload, rows: DiceRow[], s: DiceSetting
     }
 
     const ключове = Object.keys(data) as (keyof typeof ПОЛЕ)[]
-    if (!ключове.length) { plan.unchanged++; continue }
+    const чакаЦена = plan.prices.at(-1)?.id === p.id && !plan.prices.at(-1)!.rejected
+    if (!ключове.length) {
+      if (!чакаЦена) plan.unchanged++
+      continue
+    }
     for (const k of ключове) {
       const стара = (p as Record<string, unknown>)[k]
       const нова = data[k]
@@ -207,12 +309,18 @@ export const planSync = async (payload: Payload, rows: DiceRow[], s: DiceSetting
     }
   }
 
-  /* Предпазители — при съмнение нищо не се записва. */
-  const предишни = s.lastMatched ?? 0
+  /*
+    Предпазители — и в двата режима; при съмнение нищо не се записва.
+    „По-малко от половината от предния път" — само за файла от адреса:
+    качен тестов файл с няколко продукта иначе винаги би спрял.
+  */
+  const предишни = upload ? 0 : (s.lastMatched ?? 0)
   if (предишни > 0 && plan.matched < предишни * 0.5) {
     plan.abort = `Съвпаднаха ${plan.matched} продукта, а предния път — ${предишни}. Вероятно файлът е непълен или с друг формат.`
   } else if (plan.matched > 0) {
-    const скокове = цени.filter((c) => Math.abs(c.new - c.old) / c.old > 0.4).length
+    const скокове = plan.prices.filter(
+      (c) => typeof c.currentPrice === 'number' && c.currentPrice > 0 && Math.abs(c.newPrice - c.currentPrice) / c.currentPrice > 0.4,
+    ).length
     if (скокове > plan.matched * 0.3) {
       plan.abort = `${скокове} от ${plan.matched} съвпаднали продукта биха сменили цената с над 40 %. Вероятно грешка във файла.`
     }
@@ -222,13 +330,20 @@ export const planSync = async (payload: Payload, rows: DiceRow[], s: DiceSetting
 
 /* ─────────── пускане ─────────── */
 
-export type RunResult = { result: 'ok' | 'partial' | 'aborted' | 'error'; plan: Plan | null; message: string; logId?: number }
+export type RunResult = {
+  result: 'ok' | 'partial' | 'aborted' | 'error'
+  plan: Plan | null
+  message: string
+  logId?: number
+  priceBatch?: string
+  pendingNew?: number
+}
 
 const g = globalThis as { __diceSyncRunning?: boolean }
 
 export const runSync = async (
   payload: Payload,
-  opts: { trigger: 'автоматично' | 'ръчно'; user?: string | null; attempts?: number },
+  opts: { trigger: 'автоматично' | 'ръчно'; user?: string | null; attempts?: number; useUpload?: boolean },
 ): Promise<RunResult> => {
   if (g.__diceSyncRunning) return { result: 'aborted', plan: null, message: 'Предната синхронизация още върви — пропуснато.' }
   g.__diceSyncRunning = true
@@ -237,25 +352,35 @@ export const runSync = async (
   let result: RunResult['result'] = 'ok'
   let message = ''
   let revalidated = ''
+  let priceBatch = ''
+  let чакащи = { нови: 0, махнати: 0 }
+  let отКачен = false
   try {
-    if (!s.url?.trim()) throw new DiceFileError('Няма адрес на XML файла в „Връзка с dice.bg".')
-    const rows = parseDiceXml(await fetchDiceXml(s.url.trim(), opts.attempts ?? 1))
-    plan = await planSync(payload, rows, s)
+    const { xml, source, upload } = await readDiceXml(s, { useUpload: opts.useUpload, attempts: opts.attempts })
+    отКачен = upload
+    plan = await planSync(payload, parseDiceXml(xml), s, source, upload)
 
     if (plan.abort) {
       result = 'aborted'
       message = `Спряна без промени: ${plan.abort}`
     } else {
-      if (plan.updates.length && !s.backupDone) {
+      if ((plan.updates.length || plan.prices.length) && !s.backupDone) {
         // Преди първата истинска синхронизация — архив на базата.
         await createBackup(payload, { includeMedia: false, label: 'Преди първата синхронизация с dice.bg', trigger: 'ръчно' })
         await payload.updateGlobal({ slug: 'dice-sync', data: { backupDone: true }, overrideAccess: true, depth: 0 })
       }
-      await записвай(payload, plan)
+      if (plan.mode === 'auto' && plan.prices.length) priceBatch = новПакет('С')
+      await записвай(payload, plan, priceBatch)
+      if (plan.mode === 'test') чакащи = await заОдобрение(payload, plan)
       result = plan.errors.length ? 'partial' : 'ok'
-      message = `Обновени ${new Set(plan.updates.map((u) => u.id)).size} продукта, без промяна ${plan.unchanged}, ненамерени ${plan.notFound.length}, грешки ${plan.errors.length}, предупреждения ${plan.warnings.length}.`
+      const обновени = new Set(plan.updates.map((u) => u.id)).size
+      message =
+        `Обновени ${обновени} продукта` +
+        (plan.mode === 'test' ? `, цени за одобрение: ${чакащи.нови} нови/сменени` : `, нови цени: ${plan.prices.length}`) +
+        `, без промяна ${plan.unchanged}, ненамерени ${plan.notFound.length}, грешки ${plan.errors.length}, предупреждения ${plan.warnings.length}.`
       if (plan.updates.length) revalidated = await опресниСайта()
     }
+    await чистиРешени(payload)
   } catch (e) {
     result = e instanceof DiceFileError ? 'aborted' : 'error'
     message = `${result === 'aborted' ? 'Спряна без промени' : 'Грешка'}: ${(e as Error).message}`
@@ -273,7 +398,7 @@ export const runSync = async (
       trigger: opts.trigger,
       user: opts.user ?? '',
       result,
-      summary: message + (revalidated ? `\nСайт: ${revalidated}` : ''),
+      summary: message + (plan?.source ? `\nФайл: ${plan.source}` : '') + (revalidated ? `\nСайт: ${revalidated}` : ''),
       updated: plan ? new Set(plan.updates.map((u) => u.id)).size : 0,
       unchanged: plan?.unchanged ?? 0,
       notFoundCount: plan?.notFound.length ?? 0,
@@ -285,6 +410,7 @@ export const runSync = async (
       warnings: plan?.warnings.join('\n') ?? '',
       skipped: plan?.skipped.join('\n') ?? '',
       irregular: plan?.irregular.map((r) => `${r.name || '(без име)'} — Identifier ${r.sku || '—'}, EAN „${r.ean}": ${r.problem}`).join('\n') ?? '',
+      priceBatch,
     } as never,
   })
   await пазиПоследните(payload, 90)
@@ -296,17 +422,88 @@ export const runSync = async (
     depth: 0,
     data: {
       lastRun,
-      ...(plan && !plan.abort && result !== 'error' ? { lastMatched: plan.matched } : {}),
+      // Броят за предпазителя — само от файла на адреса, не от качен тестов.
+      ...(plan && !plan.abort && result !== 'error' && !отКачен ? { lastMatched: plan.matched } : {}),
       ...(opts.trigger === 'автоматично' ? { lastAutoDate: днес() } : {}),
     },
   })
 
-  if (s.reportEmail?.trim() && (result !== 'ok' || (plan && (plan.changes.length || plan.errors.length)))) {
+  // Имейл: при нови чакащи цени, промени (наличност; в авт. режим — и цени), грешки или спиране.
+  const има = plan && (чакащи.нови > 0 || plan.changes.length > 0 || plan.errors.length > 0)
+  if (s.reportEmail?.trim() && (result !== 'ok' || има)) {
     await отчет(payload, s.reportEmail.trim(), result, message, plan, opts.trigger).catch((e) =>
       payload.logger.error(`dice.bg: отчетът не се изпрати — ${(e as Error).message}`),
     )
   }
-  return { result, plan, message, logId: log.id as number }
+  return { result, plan, message, logId: log.id as number, priceBatch, pendingNew: чакащи.нови }
+}
+
+/**
+ * Тестов режим: новите цени → „Цени за одобрение". Чакащ запис за същия
+ * продукт се обновява (не се трупат дубли); отказана стойност не излиза
+ * отново; файл с цената, която вече е на сайта, маха чакащото.
+ */
+const заОдобрение = async (payload: Payload, plan: Plan) => {
+  const сега = new Date().toISOString()
+  let нови = 0
+  let махнати = 0
+  const чакащи = new Map<number, { id: number; newPrice?: number | null; newCompare?: number | null }>()
+  const r = await payload.find({
+    collection: 'price-approvals', where: { status: { equals: 'pending' } }, pagination: false, depth: 0, overrideAccess: true,
+    select: { product: true, newPrice: true, newCompare: true },
+  })
+  for (const d of r.docs as unknown as { id: number; product?: number | null; newPrice?: number | null; newCompare?: number | null }[]) {
+    if (typeof d.product === 'number') чакащи.set(d.product, d)
+  }
+  for (const p of plan.prices) {
+    const стар = чакащи.get(p.id)
+    if (p.rejected) {
+      // Същата отказана стойност — чакащ запис (ако има стар с друга цена) остава какъвто е.
+      continue
+    }
+    const data = {
+      productTitle: p.title,
+      product: p.id,
+      sku: p.sku,
+      currentPrice: p.currentPrice,
+      newPrice: p.newPrice,
+      currentCompare: p.currentCompare,
+      newCompare: p.newCompare,
+      changePct: p.pct === null ? null : Math.round(p.pct * 10) / 10,
+      changeAbs: p.abs === null ? null : Math.round(p.abs * 100) / 100,
+      changeAbsPct: Math.round(p.absPct * 10) / 10,
+      level: p.level,
+      warn: p.warn,
+      xmlDate: сега,
+      status: 'pending' as const,
+    }
+    if (стар) {
+      if (стар.newPrice !== p.newPrice || (стар.newCompare ?? null) !== p.newCompare) нови++
+      await payload.update({ collection: 'price-approvals', id: стар.id, data, overrideAccess: true, depth: 0 })
+    } else {
+      await payload.create({ collection: 'price-approvals', data, overrideAccess: true, depth: 0 })
+      нови++
+    }
+  }
+  if (plan.samePrice.length) {
+    const del = await payload.delete({
+      collection: 'price-approvals',
+      where: { and: [{ status: { equals: 'pending' } }, { product: { in: plan.samePrice } }] },
+      overrideAccess: true,
+    })
+    махнати = del.docs.length
+  }
+  return { нови, махнати }
+}
+
+/** Решените одобрения се пазят 180 дни; чакащите — докато се решат. */
+const чистиРешени = async (payload: Payload) => {
+  const граница = new Date(Date.now() - 180 * 24 * 3600_000).toISOString()
+  await payload.delete({
+    collection: 'price-approvals',
+    where: { and: [{ status: { in: ['approved', 'rejected'] } }, { decidedAt: { less_than: граница } }] },
+    overrideAccess: true,
+  })
 }
 
 /**
@@ -336,10 +533,18 @@ const РЕЗУЛТАТ: Record<RunResult['result'], string> = {
 
 export const днес = () => new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Sofia' })
 
-/** Записът — в ЕДНА транзакция; при грешка нищо не остава наполовина. */
-const записвай = async (payload: Payload, plan: Plan) => {
+/**
+ * Записът — в една транзакция. ВНИМАНИЕ: при SQLite грешка по средата
+ * (`SQLITE_BUSY`) вече записаните продукти остават (12 октомври 2026) —
+ * пускай отвън само с `PRAGMA busy_timeout` (CLAUDE.md, „Връзка с dice.bg").
+ * Цените в автоматичен режим носят пакета за „История на цените".
+ */
+const записвай = async (payload: Payload, plan: Plan, priceBatch: string) => {
   if (!plan.updates.length) return
-  const req = await createLocalReq({ context: { diceSync: true } }, payload)
+  const req = await createLocalReq(
+    { context: { diceSync: true, [ЦЕНОВИ_КОНТЕКСТ]: { source: 'sync', batch: priceBatch, user: 'синхронизация' } } },
+    payload,
+  )
   const tx = await payload.db.beginTransaction()
   if (tx) req.transactionID = tx
   try {
@@ -357,7 +562,7 @@ const записвай = async (payload: Payload, plan: Plan) => {
     if (tx) await payload.db.commitTransaction(tx)
   } catch (e) {
     if (tx) await payload.db.rollbackTransaction(tx)
-    throw new Error(`записът е върнат изцяло: ${(e as Error).message}`)
+    throw new Error(`записът е прекъснат: ${(e as Error).message}`)
   }
 }
 
@@ -371,15 +576,47 @@ const пазиПоследните = async (payload: Payload, keep: number) => {
 
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!)
 
+const процент = (p: { pct: number | null; abs: number | null }) =>
+  p.pct === null ? '—' : `${p.pct > 0 ? '+' : ''}${p.pct.toFixed(1).replace('.', ',')} % (${p.abs! > 0 ? '+' : ''}${пари(p.abs)})`
+
 const отчет = async (payload: Payload, to: string, result: RunResult['result'], message: string, plan: Plan | null, trigger: string) => {
-  const ред = (cells: string[], th = false) =>
-    `<tr>${cells.map((c) => `<${th ? 'th' : 'td'} style="border:1px solid #ddd;padding:4px 8px;text-align:left;font-size:13px">${esc(c)}</${th ? 'th' : 'td'}>`).join('')}</tr>`
-  const таблица = (title: string, head: string[], rows: string[][]) =>
+  const ред = (cells: string[], th = false, bg = '') =>
+    `<tr${bg ? ` style="background:${bg}"` : ''}>${cells.map((c) => `<${th ? 'th' : 'td'} style="border:1px solid #ddd;padding:4px 8px;text-align:left;font-size:13px">${esc(c)}</${th ? 'th' : 'td'}>`).join('')}</tr>`
+  const таблица = (title: string, head: string[], rows: string[][], colors: string[] = []) =>
     rows.length
-      ? `<h3 style="font:600 15px Arial;margin:20px 0 6px">${esc(title)} (${rows.length})</h3><table style="border-collapse:collapse;font-family:Arial">${ред(head, true)}${rows.map((r) => ред(r)).join('')}</table>`
+      ? `<h3 style="font:600 15px Arial;margin:20px 0 6px">${esc(title)} (${rows.length})</h3><table style="border-collapse:collapse;font-family:Arial">${ред(head, true)}${rows.map((r, i) => ред(r, false, colors[i] ?? '')).join('')}</table>`
       : ''
+
+  // Всички чакащи сега — червените най-отгоре.
+  let чакащиHtml = ''
+  let чакащиText: string[] = []
+  if (plan?.mode === 'test') {
+    const r = await payload.find({
+      collection: 'price-approvals', where: { status: { equals: 'pending' } }, sort: '-changeAbsPct', pagination: false, depth: 0, overrideAccess: true,
+    })
+    const docs = (r.docs as unknown as { productTitle?: string; currentPrice?: number; newPrice?: number; changePct?: number; changeAbs?: number; level?: string }[])
+      .sort((a, b) => Number(b.level === 'red') - Number(a.level === 'red'))
+    if (docs.length) {
+      const линк = `${SITE_URL}/admin/collections/price-approvals`
+      чакащиHtml =
+        `<p style="font-size:15px;margin:12px 0"><strong>${docs.length} цени чакат одобрение</strong> — <a href="${линк}">Цени за одобрение</a></p>` +
+        таблица(
+          'Чакащи цени',
+          ['Продукт', 'Сега', 'Нова', 'Промяна'],
+          docs.map((d) => [
+            `${d.level === 'red' ? '⚠ ' : ''}${d.productTitle ?? ''}`,
+            пари(d.currentPrice), пари(d.newPrice),
+            процент({ pct: d.changePct ?? null, abs: d.changeAbs ?? null }),
+          ]),
+          docs.map((d) => (d.level === 'red' ? '#fde2e1' : d.level === 'orange' ? '#fff1db' : '')),
+        )
+      чакащиText = [`${docs.length} цени чакат одобрение: ${линк}`, '']
+    }
+  }
+
   const html = `<div style="font-family:Arial,sans-serif;color:#111">
-<p style="font-size:15px"><strong>Синхронизация с dice.bg — ${esc(РЕЗУЛТАТ[result])}</strong> (${esc(trigger)})</p>
+<p style="font-size:15px"><strong>Синхронизация с dice.bg — ${esc(РЕЗУЛТАТ[result])}</strong> (${esc(trigger)}, режим „${plan?.mode === 'auto' ? 'Автоматичен' : 'Тестов'}")</p>
+${чакащиHtml}
 <p style="font-size:14px">${esc(message)}</p>
 ${таблица('Промени', ['Продукт', 'Поле', 'Старо', 'Ново'], plan?.changes.map((c) => [c.product, c.field, c.old, c.new]) ?? [])}
 ${таблица('Грешки', ['Описание'], plan?.errors.map((e) => [e]) ?? [])}
@@ -388,6 +625,15 @@ ${таблица('Ненамерени в сайта (EcoFlow)', ['Име', 'Ide
 ${таблица('Пропуснати редове', ['Описание'], plan?.skipped.map((e) => [e]) ?? [])}
 ${таблица('Нередности във файла на dice', ['Име', 'Identifier', 'EAN', 'Нередност'], plan?.irregular.map((r) => [r.name, r.sku, r.ean, r.problem]) ?? [])}
 </div>`
-  const text = [`Синхронизация с dice.bg — ${РЕЗУЛТАТ[result]} (${trigger})`, message, '', ...(plan?.changes.map((c) => `${c.product} — ${c.field}: ${c.old} → ${c.new}`) ?? []), ...(plan?.errors ?? []), ...(plan?.warnings ?? []), ...(plan?.irregular.length ? ['', 'Нередности във файла на dice:', ...plan.irregular.map((r) => `${r.name} — Identifier ${r.sku || '—'}, EAN „${r.ean}": ${r.problem}`)] : [])].join('\n')
+  const text = [
+    `Синхронизация с dice.bg — ${РЕЗУЛТАТ[result]} (${trigger})`,
+    ...чакащиText,
+    message,
+    '',
+    ...(plan?.changes.map((c) => `${c.product} — ${c.field}: ${c.old} → ${c.new}`) ?? []),
+    ...(plan?.errors ?? []),
+    ...(plan?.warnings ?? []),
+    ...(plan?.irregular.length ? ['', 'Нередности във файла на dice:', ...plan.irregular.map((r) => `${r.name} — Identifier ${r.sku || '—'}, EAN „${r.ean}": ${r.problem}`)] : []),
+  ].join('\n')
   await payload.sendEmail({ to, subject: `dice.bg синхронизация: ${message.slice(0, 90)}`, html, text })
 }

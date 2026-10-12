@@ -9,7 +9,20 @@ import { useState } from 'react'
  * се сменило; нищо не записва.
  */
 type Change = { product: string; field: string; old: string; new: string }
+type Price = {
+  title: string
+  currentPrice: number | null
+  newPrice: number
+  currentCompare: number | null
+  newCompare: number | null
+  pct: number | null
+  level: 'ok' | 'orange' | 'red'
+  rejected: boolean
+}
 type Check = {
+  mode: 'test' | 'auto'
+  source: string
+  prices: Price[]
   rows: number
   matched: number
   toUpdate: number
@@ -25,6 +38,10 @@ type Check = {
   irregular: { sku: string; name: string; ean: string; problem: string }[]
   abort: string | null
 }
+
+const евро = new Intl.NumberFormat('bg-BG', { style: 'currency', currency: 'EUR', minimumFractionDigits: 2 })
+const пари = (n: number | null) => (typeof n === 'number' ? евро.format(n) : '—')
+const процент = (p: Price) => (p.pct === null ? '—' : `${p.pct > 0 ? '+' : ''}${p.pct.toFixed(1).replace('.', ',')} %`)
 
 const cell = { padding: '4px 8px', borderBottom: '1px solid var(--theme-elevation-100)', textAlign: 'left' as const, verticalAlign: 'top' as const }
 
@@ -122,6 +139,9 @@ export const DiceSyncActions = () => {
               Истинското пускане би спряло без промени: {check.abort}
             </p>
           ) : null}
+          <p style={{ margin: '0 0 6px', fontSize: 13, color: 'var(--theme-elevation-600)' }}>
+            Режим: <b>{check.mode === 'auto' ? 'Автоматичен' : 'Тестов'}</b> · файл: {check.source}
+          </p>
           <p style={{ margin: 0 }}>
             Редове във файла: <b>{check.rows}</b> · съвпаднали: <b>{check.matched}</b> · биха се обновили:{' '}
             <b>{check.toUpdate}</b> · без промяна: <b>{check.unchanged}</b>
@@ -132,7 +152,23 @@ export const DiceSyncActions = () => {
               </>
             ) : null}
           </p>
-          <Table title="Промени" head={['Продукт', 'Поле', 'Сега', 'Ще стане']} rows={check.changes.map((c) => [c.product, c.field, c.old, c.new])} />
+          <Table
+            title={check.mode === 'auto' ? 'Нови цени (записват се направо)' : 'Цени, които биха влезли за одобрение'}
+            head={['Продукт', 'Сега', 'Нова', 'Промяна', 'Зачертана: сега → нова', '']}
+            rows={check.prices.map((p) => [
+              p.title,
+              пари(p.currentPrice),
+              пари(p.newPrice),
+              процент(p),
+              `${пари(p.currentCompare)} → ${пари(p.newCompare)}`,
+              p.rejected ? 'вече отказана — няма да излезе' : p.level === 'red' ? '⚠ провери' : p.level === 'orange' ? 'над 10 %' : '',
+            ])}
+          />
+          <Table
+            title={check.mode === 'auto' ? 'Промени' : 'Наличност и брой (записват се веднага)'}
+            head={['Продукт', 'Поле', 'Сега', 'Ще стане']}
+            rows={check.changes.map((c) => [c.product, c.field, c.old, c.new])}
+          />
           <Table title="Грешки" head={['Описание']} rows={check.errors.map((e) => [e])} />
           <Table title="Предупреждения" head={['Описание']} rows={check.warnings.map((e) => [e])} />
           <Table title="Ненамерени в сайта (EcoFlow)" head={['Име', 'Identifier', 'EAN']} rows={check.notFound.map((r) => [r.name, r.sku, r.ean])} />

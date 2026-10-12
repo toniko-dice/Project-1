@@ -5,8 +5,10 @@ import { днес, runSync, type DiceSettings } from '../lib/dice/sync'
 /**
  * Синхронизация с dice.bg по график (`task-dice-xml-sinhronizaciya.md`, т. 6).
  *
- * Задачата се пуска всеки час и сама решава дали е моментът: включена
- * връзка, часът от настройките (българско време) и още не е пускана днес.
+ * Задачата се пуска всеки час и сама решава дали е моментът: режим
+ * „Автоматичен" (`task-dice-odobrenie-ceni.md`; в „Тестов" графикът е
+ * изключен), адрес на XML, часът от настройките (българско време) и още не
+ * е пускана днес. Ползва САМО адреса — качен файл за тест не се чете.
  * Така часът се сменя от админа, без нов график. Само на продукция —
  * локално се ползват бутоните. Три опита за файла, през 5 минути.
  */
@@ -20,8 +22,8 @@ export const diceSyncTask: TaskConfig<'diceSync'> = {
     const час = Number(
       new Date().toLocaleString('en-GB', { timeZone: 'Europe/Sofia', hour: '2-digit', hour12: false }),
     )
-    if (!s.enabled || !s.url || час !== (s.hour ?? 6) || s.lastAutoDate === днес()) return { output: {} }
-    const r = await runSync(req.payload, { trigger: 'автоматично', attempts: 3 })
+    if (s.mode !== 'auto' || !s.url || час !== (s.hour ?? 6) || s.lastAutoDate === днес()) return { output: {} }
+    const r = await runSync(req.payload, { trigger: 'автоматично', attempts: 3, useUpload: false })
     req.payload.logger.info(`dice.bg: ${r.message}`)
     return { output: {} }
   },

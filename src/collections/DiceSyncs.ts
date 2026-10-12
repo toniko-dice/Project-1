@@ -2,16 +2,22 @@ import type { CollectionConfig } from 'payload'
 
 import { hiddenFor, isAdmin, reqHasRole } from '../lib/access'
 import { DiceFileError, parseDiceXml } from '../lib/dice/parse'
-import { fetchDiceXml, planSync, runSync, type DiceSettings } from '../lib/dice/sync'
+import { planSync, readDiceXml, runSync, type DiceSettings } from '../lib/dice/sync'
 
 /**
  * „Синхронизации с dice" — лог на всяко пускане (`task-dice-xml-sinhronizaciya.md`).
  * Само за четене и само за администратора; пазят се последните 90.
  *
  * Пътищата на бутоните в „Връзка с dice.bg":
- *   POST /api/dice-syncs/check — какво БИ се сменило, без запис;
- *   POST /api/dice-syncs/run   — истинската синхронизация.
+ *   POST /api/dice-syncs/check        — какво БИ се сменило, без запис;
+ *   POST /api/dice-syncs/run          — истинската синхронизация;
+ *   POST /api/dice-syncs/upload       — качен XML за тест (тялото е файлът,
+ *                                       името — в `x-file-name`);
+ *   POST /api/dice-syncs/clear-upload — маха качения файл (пак адресът).
+ *
+ * „Провери" и „Синхронизирай сега" ползват качения файл, ако има такъв.
  */
+const ДО_MB = 10
 export const DiceSyncs: CollectionConfig = {
   slug: 'dice-syncs',
   labels: { singular: 'Синхронизация с dice', plural: 'Синхронизации с dice' },
@@ -30,16 +36,55 @@ export const DiceSyncs: CollectionConfig = {
       handler: async (req) => {
         if (!reqHasRole(req, 'admin')) return Response.json({ error: 'Само за администратор.' }, { status: 403 })
         const s = (await req.payload.findGlobal({ slug: 'dice-sync', depth: 0, overrideAccess: true })) as DiceSettings
-        if (!s.url?.trim()) {
-          return Response.json({ error: 'Няма адрес на XML. Попълнете го и натиснете „Запази".' }, { status: 400 })
-        }
         try {
-          const plan = await planSync(req.payload, parseDiceXml(await fetchDiceXml(s.url.trim())), s)
+          const { xml, source, upload } = await readDiceXml(s)
+          const plan = await planSync(req.payload, parseDiceXml(xml), s, source, upload)
           const { updates, ...rest } = plan
           return Response.json({ ...rest, toUpdate: new Set(updates.map((u) => u.id)).size })
         } catch (e) {
           return Response.json({ error: (e as Error).message }, { status: e instanceof DiceFileError ? 400 : 500 })
         }
+      },
+    },
+    {
+      path: '/upload',
+      method: 'post',
+      handler: async (req) => {
+        if (!reqHasRole(req, 'admin')) return Response.json({ error: 'Само за администратор.' }, { status: 403 })
+        const xml = (await req.text?.()) ?? ''
+        if (xml.length > ДО_MB * 1024 * 1024) return Response.json({ error: `Файлът е над ${ДО_MB} MB.` }, { status: 400 })
+        // Пази се и негоден файл (празен, счупен) — с него се проверяват предпазителите.
+        let warning = ''
+        try {
+          parseDiceXml(xml)
+        } catch (e) {
+          warning = (e as Error).message
+        }
+        const име = decodeURIComponent(req.headers.get('x-file-name') ?? 'dice.xml').slice(0, 200)
+        const кога = new Date().toLocaleString('bg-BG', { timeZone: 'Europe/Sofia' })
+        await req.payload.updateGlobal({
+          slug: 'dice-sync',
+          data: { testXml: xml, testFileName: име, testFileAt: кога },
+          overrideAccess: true,
+          depth: 0,
+          req,
+        })
+        return Response.json({ name: име, at: кога, size: xml.length, warning })
+      },
+    },
+    {
+      path: '/clear-upload',
+      method: 'post',
+      handler: async (req) => {
+        if (!reqHasRole(req, 'admin')) return Response.json({ error: 'Само за администратор.' }, { status: 403 })
+        await req.payload.updateGlobal({
+          slug: 'dice-sync',
+          data: { testXml: '', testFileName: '', testFileAt: '' },
+          overrideAccess: true,
+          depth: 0,
+          req,
+        })
+        return Response.json({ ok: true })
       },
     },
     {
@@ -56,6 +101,11 @@ export const DiceSyncs: CollectionConfig = {
     },
   ],
   fields: [
+    {
+      name: 'revertPrices',
+      type: 'ui',
+      admin: { components: { Field: '@/components/admin/PriceRevert#DiceSyncRevert' } },
+    },
     { name: 'title', type: 'text', label: 'Синхронизация' },
     {
       type: 'row',
@@ -93,5 +143,11 @@ export const DiceSyncs: CollectionConfig = {
     { name: 'irregular', type: 'textarea', label: 'Нередности във файла на dice (за оправяне там)' },
     { name: 'notFound', type: 'textarea', label: 'Ненамерени в сайта (редове от файла, само EcoFlow)' },
     { name: 'missingInFile', type: 'textarea', label: 'Наши продукти, които липсват във файла' },
+    {
+      name: 'priceBatch',
+      type: 'text',
+      label: 'Пакет в „История на цените"',
+      admin: { description: 'Само в автоматичен режим — цените, сменени при това пускане.' },
+    },
   ],
 }

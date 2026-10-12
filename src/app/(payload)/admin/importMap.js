@@ -9,6 +9,9 @@ import { OfferDraftGuard as OfferDraftGuard_b17ed467a746e983cee853e10440a529 } f
 import { OfferGeneralDiscount as OfferGeneralDiscount_b9698518c371d2768111e0ed4179a6bc } from '@/components/admin/OfferGeneralDiscount'
 import { OfferItemProductSync as OfferItemProductSync_9d4bd0c20061326405e6cd7b2523dfd1 } from '@/components/admin/OfferItemProductSync'
 import { OfferTotals as OfferTotals_fcf641b6175e776be14af5ff5d1f19fd } from '@/components/admin/OfferTotals'
+import { DiceSyncRevert as DiceSyncRevert_2689fb1f155567be4eb27ad4c6110afa } from '@/components/admin/PriceRevert'
+import { PriceApprovalsList as PriceApprovalsList_e7d6419aa59e7267a3fea10da7cca3b8 } from '@/components/admin/PriceApprovalsList'
+import { PriceHistoryRevert as PriceHistoryRevert_2689fb1f155567be4eb27ad4c6110afa } from '@/components/admin/PriceRevert'
 import { Note as Note_b1f9a6b9bae36f5ee25cc75b578bb654 } from '@/components/admin/Note'
 import { BlockLabel as BlockLabel_65d5559e4024d0730eedfbb5dfb037d8 } from '@/components/admin/BlockLabel'
 import { RscEntryLexicalCell as RscEntryLexicalCell_44fe37237e0ebf4470c9990d8cb7b07e } from '@payloadcms/richtext-lexical/rsc'
@@ -34,12 +37,14 @@ import { StrikethroughFeatureClient as StrikethroughFeatureClient_e70f5e05f09f93
 import { UnderlineFeatureClient as UnderlineFeatureClient_e70f5e05f09f93e00b997edb1ef0c864 } from '@payloadcms/richtext-lexical/client'
 import { BoldFeatureClient as BoldFeatureClient_e70f5e05f09f93e00b997edb1ef0c864 } from '@payloadcms/richtext-lexical/client'
 import { ItalicFeatureClient as ItalicFeatureClient_e70f5e05f09f93e00b997edb1ef0c864 } from '@payloadcms/richtext-lexical/client'
+import { ProductPriceHistory as ProductPriceHistory_66af3a61c0ed5808d5c20479365da2e4 } from '@/components/admin/ProductPriceHistory'
 import { CharCounter as CharCounter_df79ae1a509e474e617a96ef4417adcd } from '@/components/admin/CharCounter'
 import { CardProductSync as CardProductSync_2c34e42dc48f416e3c9f939f31801f86 } from '@/components/admin/CardProductSync'
 import { ExportSubscribersButton as ExportSubscribersButton_632306c2f6e18467206191256b3c5c1e } from '@/components/admin/ExportSubscribersButton'
 import { RestoreBackupButton as RestoreBackupButton_0345d6ca4f322b3259326bda5a60e48f } from '@/components/admin/RestoreBackupButton'
 import { CreateBackupButton as CreateBackupButton_059b6108dfec089e6701e6ed8dc0e80b } from '@/components/admin/CreateBackupButton'
 import { DiceSyncActions as DiceSyncActions_33adee0f93a42f8a50b524b4d270d945 } from '@/components/admin/DiceSyncActions'
+import { DiceTestFile as DiceTestFile_b8c24531687257ed295ca7bfa6dc56a5 } from '@/components/admin/DiceTestFile'
 import { QuoteNavBadge as QuoteNavBadge_f76fdb011cf13b0ac1a4a344af4012d1 } from '@/components/admin/QuoteNavBadge'
 import { CollectionNavBadge as CollectionNavBadge_f76fdb011cf13b0ac1a4a344af4012d1 } from '@/components/admin/QuoteNavBadge'
 import { CollectionCards as CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1 } from '@payloadcms/next/rsc'
@@ -57,6 +62,9 @@ export const importMap = {
   "@/components/admin/OfferGeneralDiscount#OfferGeneralDiscount": OfferGeneralDiscount_b9698518c371d2768111e0ed4179a6bc,
   "@/components/admin/OfferItemProductSync#OfferItemProductSync": OfferItemProductSync_9d4bd0c20061326405e6cd7b2523dfd1,
   "@/components/admin/OfferTotals#OfferTotals": OfferTotals_fcf641b6175e776be14af5ff5d1f19fd,
+  "@/components/admin/PriceRevert#DiceSyncRevert": DiceSyncRevert_2689fb1f155567be4eb27ad4c6110afa,
+  "@/components/admin/PriceApprovalsList#PriceApprovalsList": PriceApprovalsList_e7d6419aa59e7267a3fea10da7cca3b8,
+  "@/components/admin/PriceRevert#PriceHistoryRevert": PriceHistoryRevert_2689fb1f155567be4eb27ad4c6110afa,
   "@/components/admin/Note#Note": Note_b1f9a6b9bae36f5ee25cc75b578bb654,
   "@/components/admin/BlockLabel#BlockLabel": BlockLabel_65d5559e4024d0730eedfbb5dfb037d8,
   "@payloadcms/richtext-lexical/rsc#RscEntryLexicalCell": RscEntryLexicalCell_44fe37237e0ebf4470c9990d8cb7b07e,
@@ -82,12 +90,14 @@ export const importMap = {
   "@payloadcms/richtext-lexical/client#UnderlineFeatureClient": UnderlineFeatureClient_e70f5e05f09f93e00b997edb1ef0c864,
   "@payloadcms/richtext-lexical/client#BoldFeatureClient": BoldFeatureClient_e70f5e05f09f93e00b997edb1ef0c864,
   "@payloadcms/richtext-lexical/client#ItalicFeatureClient": ItalicFeatureClient_e70f5e05f09f93e00b997edb1ef0c864,
+  "@/components/admin/ProductPriceHistory#ProductPriceHistory": ProductPriceHistory_66af3a61c0ed5808d5c20479365da2e4,
   "@/components/admin/CharCounter#CharCounter": CharCounter_df79ae1a509e474e617a96ef4417adcd,
   "@/components/admin/CardProductSync#CardProductSync": CardProductSync_2c34e42dc48f416e3c9f939f31801f86,
   "@/components/admin/ExportSubscribersButton#ExportSubscribersButton": ExportSubscribersButton_632306c2f6e18467206191256b3c5c1e,
   "@/components/admin/RestoreBackupButton#RestoreBackupButton": RestoreBackupButton_0345d6ca4f322b3259326bda5a60e48f,
   "@/components/admin/CreateBackupButton#CreateBackupButton": CreateBackupButton_059b6108dfec089e6701e6ed8dc0e80b,
   "@/components/admin/DiceSyncActions#DiceSyncActions": DiceSyncActions_33adee0f93a42f8a50b524b4d270d945,
+  "@/components/admin/DiceTestFile#DiceTestFile": DiceTestFile_b8c24531687257ed295ca7bfa6dc56a5,
   "@/components/admin/QuoteNavBadge#QuoteNavBadge": QuoteNavBadge_f76fdb011cf13b0ac1a4a344af4012d1,
   "@/components/admin/QuoteNavBadge#CollectionNavBadge": CollectionNavBadge_f76fdb011cf13b0ac1a4a344af4012d1,
   "@payloadcms/next/rsc#CollectionCards": CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1

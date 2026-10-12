@@ -10,6 +10,7 @@ import { cleanSlug } from '../lib/slug'
 import { RESERVED_PRODUCT_SLUGS } from '../lib/urls'
 import { productBlocks } from '../blocks/product'
 import { expireEverything, revalidateProduct, revalidateProductDelete } from '../lib/revalidate'
+import { recordPriceHistory } from '../lib/dice/price-history'
 import { fillSearchText } from '../lib/search'
 import { metaDescriptionCounter, metaTitleCounter } from '../fields/seo'
 import { contentAccess } from '../lib/access'
@@ -164,7 +165,7 @@ export const Products: CollectionConfig = {
     /* Слепва полетата за търсене в `searchText` преди всеки запис. */
     beforeValidate: [syncPrimaryCategory],
     beforeChange: [fillSearchText, normalizeAttributes, fillLastPiece],
-    afterChange: [revalidateProduct],
+    afterChange: [revalidateProduct, recordPriceHistory],
     afterDelete: [revalidateProductDelete],
   },
   endpoints: [
@@ -596,6 +597,11 @@ export const Products: CollectionConfig = {
                     description:
                       'Включено — синхронизацията с dice.bg пропуска продукта изцяло: цената, старата цена, наличността и броят се управляват ръчно.',
                   },
+                },
+                {
+                  name: 'priceHistory',
+                  type: 'ui',
+                  admin: { components: { Field: '@/components/admin/ProductPriceHistory#ProductPriceHistory' } },
                 },
               ],
             },

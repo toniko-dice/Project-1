@@ -28,6 +28,8 @@ import { Users } from './collections/Users'
 import { dailyBackupTask } from './jobs/backupTask'
 import { diceSyncTask } from './jobs/diceSyncTask'
 import { DiceSyncs } from './collections/DiceSyncs'
+import { PriceApprovals } from './collections/PriceApprovals'
+import { PriceHistory } from './collections/PriceHistory'
 import { DiceSync } from './globals/DiceSync'
 import { Design } from './globals/Design'
 import { FilterOrder } from './globals/FilterOrder'
@@ -104,6 +106,10 @@ export default buildConfig({
           path: '@/components/admin/QuoteNavBadge#CollectionNavBadge',
           clientProps: { slug: 'contact-messages', noun: 'нови съобщения' },
         },
+        {
+          path: '@/components/admin/QuoteNavBadge#CollectionNavBadge',
+          clientProps: { slug: 'price-approvals', noun: 'цени чакат одобрение', status: 'pending' },
+        },
       ],
     },
   },
@@ -112,6 +118,8 @@ export default buildConfig({
     ContactMessages,
     Offers,
     DiceSyncs,
+    PriceApprovals,
+    PriceHistory,
     QuoteFiles,
     Pages,
     Products,
