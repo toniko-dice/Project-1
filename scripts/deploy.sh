@@ -46,12 +46,31 @@ step "6/7 рестарт"
 sudo /usr/bin/systemctl restart ecoflow
 
 step "7/7 проверка"
-for i in $(seq 1 30); do
-  code=$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:3000/vhod || true)
-  if [ "$code" = "200" ] || [ "$code" = "404" ] || [ "$code" = "307" ]; then
-    echo "сайтът отговаря ($code)"; git log --oneline -1; exit 0
+# Началната: 200, или 307 към /vhod при заключен сайт. До 12.10.2026 се
+# питаше /vhod — при отключен сайт той е 404 и изглеждаше като грешка.
+# До 60 s; после втора заявка към продукт (200, 301 или 307).
+fail() {
+  echo "⚠ $1"
+  journalctl -u ecoflow -n 100 --no-pager || true
+  exit 1
+}
+home=""
+end=$((SECONDS + 60))
+while [ $SECONDS -lt $end ]; do
+  out=$(curl -s -o /dev/null -m 5 -w '%{http_code} %{redirect_url}' http://127.0.0.1:3000/ || true)
+  code=${out%% *}; loc=${out#* }
+  if [ "$code" = "200" ]; then home="Сайтът отговаря (200)"; break; fi
+  if [ "$code" = "307" ] && [[ "$loc" == */vhod* ]]; then
+    home="Сайтът е заключен — отговаря с пренасочване към /vhod (307)"; break
   fi
   sleep 2
 done
-echo "⚠ сайтът не отговаря след рестарта — journalctl -u ecoflow -n 100"
-exit 1
+[ -n "$home" ] || fail "Сайтът не отговаря след рестарта (началната: ${code:-няма отговор}) — journalctl -u ecoflow -n 100:"
+pcode=$(curl -s -o /dev/null -m 30 -w '%{http_code}' http://127.0.0.1:3000/kategorii/produkt/delta-3 || true)
+case "$pcode" in
+  200|301|307) ;;
+  *) fail "Продуктът /kategorii/produkt/delta-3 отговаря с ${pcode:-нищо} — journalctl -u ecoflow -n 100:" ;;
+esac
+echo "$home"
+echo "продукт /kategorii/produkt/delta-3: $pcode"
+git log --oneline -1
