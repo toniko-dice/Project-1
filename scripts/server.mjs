@@ -106,12 +106,19 @@ const КОМАНДИ = {
   */
   async deploy() {
     const лог = `deploy-log/${new Date().toISOString().replace(/[:.]/g, '-')}.log`
+    /*
+      `cd` — отделна команда: в `cd … && setsid … &` знакът `&` пуска във
+      фона ЦЯЛАТА верига и чакането остава в домашната папка — не намира
+      лога и виси вечно (12 октомври 2026). Чака се процесът (`kill -0`),
+      не само файлът `.exit`: убит билд (памет) не би го написал.
+    */
     const r = наСървъра(
-      `cd ${q(DIR)} && mkdir -p deploy-log && ` +
+      `cd ${q(DIR)} || exit 1; mkdir -p deploy-log; ` +
         `setsid nohup bash -c 'exec 9>deploy-log/.lock; flock -n 9 || { echo "Друг deploy още върви."; echo 75 > ${лог}.exit; exit 75; }; ` +
-        `NODE_OPTIONS=--max-old-space-size=4096 bash scripts/deploy.sh; echo $? > ${лог}.exit' > ${лог} 2>&1 < /dev/null & ` +
+        `NODE_OPTIONS=--max-old-space-size=4096 bash scripts/deploy.sh; echo $? > ${лог}.exit' > ${лог} 2>&1 < /dev/null & P=$!; ` +
         `echo "лог на сървъра: ${DIR}/${лог}"; tail -n +1 -f ${лог} & T=$!; ` +
-        `until [ -f ${лог}.exit ]; do sleep 2; done; sleep 1; kill $T; exit "$(cat ${лог}.exit)"`,
+        `while kill -0 $P 2>/dev/null; do sleep 2; done; sleep 1; kill $T; ` +
+        `[ -f ${лог}.exit ] || { echo "Обновяването спря без код на изхода (убит процес?)."; exit 1; }; exit "$(cat ${лог}.exit)"`,
     )
     if (r.status !== 0) стоп('Обновяването спря — старата версия продължава да работи. Виж изхода горе.')
   },
