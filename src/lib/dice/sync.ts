@@ -343,7 +343,18 @@ const g = globalThis as { __diceSyncRunning?: boolean }
 
 export const runSync = async (
   payload: Payload,
-  opts: { trigger: 'автоматично' | 'ръчно'; user?: string | null; attempts?: number; useUpload?: boolean },
+  opts: {
+    trigger: 'автоматично' | 'ръчно'
+    user?: string | null
+    attempts?: number
+    useUpload?: boolean
+    /**
+     * Режим само за това пускане, без да се пипа настройката — за проверка на
+     * нощния път при „Тестов" (`src/dice-sync-test.ts`). Такова пускане не
+     * пише `lastAutoDate`: не е истинското нощно и не бива да го прескача.
+     */
+    forceMode?: DiceMode
+  },
 ): Promise<RunResult> => {
   /*
     Главната база е на сървъра (`task-kachvane-server.md`, т. 10) — локално
@@ -359,7 +370,8 @@ export const runSync = async (
   }
   if (g.__diceSyncRunning) return { result: 'aborted', plan: null, message: 'Предната синхронизация още върви — пропуснато.' }
   g.__diceSyncRunning = true
-  const s = (await payload.findGlobal({ slug: 'dice-sync', depth: 0, overrideAccess: true })) as DiceSettings
+  const записани = (await payload.findGlobal({ slug: 'dice-sync', depth: 0, overrideAccess: true })) as DiceSettings
+  const s: DiceSettings = opts.forceMode ? { ...записани, mode: opts.forceMode } : записани
   let plan: Plan | null = null
   let result: RunResult['result'] = 'ok'
   let message = ''
@@ -436,7 +448,7 @@ export const runSync = async (
       lastRun,
       // Броят за предпазителя — само от файла на адреса, не от качен тестов.
       ...(plan && !plan.abort && result !== 'error' && !отКачен ? { lastMatched: plan.matched } : {}),
-      ...(opts.trigger === 'автоматично' ? { lastAutoDate: днес() } : {}),
+      ...(opts.trigger === 'автоматично' && !opts.forceMode ? { lastAutoDate: днес() } : {}),
     },
   })
 
