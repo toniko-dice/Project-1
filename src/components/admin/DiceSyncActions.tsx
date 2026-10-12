@@ -20,6 +20,9 @@ type Check = {
   missingInFile: { title: string }[]
   withoutIds: { title: string }[]
   errors: string[]
+  warnings: string[]
+  skipped: string[]
+  irregular: { sku: string; name: string; ean: string; problem: string }[]
   abort: string | null
 }
 
@@ -131,7 +134,10 @@ export const DiceSyncActions = () => {
           </p>
           <Table title="Промени" head={['Продукт', 'Поле', 'Сега', 'Ще стане']} rows={check.changes.map((c) => [c.product, c.field, c.old, c.new])} />
           <Table title="Грешки" head={['Описание']} rows={check.errors.map((e) => [e])} />
-          <Table title="Ненамерени в сайта (EcoFlow)" head={['Име', 'SKU', 'EAN']} rows={check.notFound.map((r) => [r.name, r.sku, r.ean])} />
+          <Table title="Предупреждения" head={['Описание']} rows={check.warnings.map((e) => [e])} />
+          <Table title="Ненамерени в сайта (EcoFlow)" head={['Име', 'Identifier', 'EAN']} rows={check.notFound.map((r) => [r.name, r.sku, r.ean])} />
+          <Table title="Пропуснати редове (друг артикул в dice със същия EAN)" head={['Описание']} rows={check.skipped.map((e) => [e])} />
+          <Table title="Нередности във файла на dice" head={['Име', 'Identifier', 'EAN', 'Нередност']} rows={check.irregular.map((r) => [r.name, r.sku, r.ean, r.problem])} />
           <Table title="Наши продукти без SKU и EAN" head={['Продукт']} rows={check.withoutIds.map((p) => [p.title])} />
           <Table title="Наши продукти, които липсват във файла" head={['Продукт']} rows={check.missingInFile.map((p) => [p.title])} />
         </div>

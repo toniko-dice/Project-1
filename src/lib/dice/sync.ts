@@ -5,7 +5,8 @@ import { AVAILABILITY } from '../availability'
 import { createBackup } from '../backup'
 import { formatEur } from '../format'
 import { isLastPiece } from './last-piece'
-import { DiceFileError, type DiceRow, isEcoFlow, mapAvailability, parseDiceXml } from './parse'
+import { rowLabel, съпостави } from './match'
+import { DiceFileError, type DiceRow, eanНередност, finalPrice, isEcoFlow, mapAvailability, parseDiceXml } from './parse'
 
 /**
  * Синхронизация с dice.bg (`task-dice-xml-sinhronizaciya.md`).
@@ -15,8 +16,9 @@ import { DiceFileError, type DiceRow, isEcoFlow, mapAvailability, parseDiceXml }
  *           опресняването на сайта и отчета по имейл.
  *
  * Пипат се САМО цена, стара цена, наличност и брой. Продукти не се
- * създават, не се трият, не се публикуват. Съвпадение — по SKU, после по
- * EAN (`ean`, `ean2`); по име никога.
+ * създават, не се трият, не се публикуват. Съвпадение — по `Identifier`
+ * (= SKU), после по EAN (`ean`, `ean2`); по име никога — `match.ts`.
+ * Цената и зачертаната — `finalPrice` в `parse.ts`.
  */
 
 export type DiceSettings = {
@@ -59,6 +61,12 @@ export type Plan = {
   withoutIds: { id: number; title: string }[]
   skippedNoSync: number
   errors: string[]
+  /** Не спират продукта — например SpecialPrice ≥ Price. */
+  warnings: string[]
+  /** Редове, пропуснати без грешка (друг артикул в dice със същия EAN). */
+  skipped: string[]
+  /** „Нередности във файла на dice" — за оправяне там. */
+  irregular: { sku: string; name: string; ean: string; problem: string }[]
   abort: string | null
 }
 
@@ -126,56 +134,41 @@ export const planSync = async (payload: Payload, rows: DiceRow[], s: DiceSetting
   const threshold = typeof s.lastPieceThreshold === 'number' ? s.lastPieceThreshold : 1
 
   const products = await всичкиПродукти(payload)
-  const поSku = new Map<string, Product[]>()
-  const поEan = new Map<string, Product[]>()
-  const добави = (m: Map<string, Product[]>, k: string, p: Product) => k && m.set(k, [...(m.get(k) ?? []), p])
-  for (const p of products) {
-    добави(поSku, норм(p.sku), p)
-    добави(поEan, цифри(p.ean), p)
-    if (цифри(p.ean2) !== цифри(p.ean)) добави(поEan, цифри(p.ean2), p)
-  }
+  const съвпадение = съпостави(rows, products)
 
   const plan: Plan = {
     rows: rows.length, matched: 0, changes: [], updates: [], unchanged: 0, notFound: [],
-    missingInFile: [], withoutIds: [], skippedNoSync: 0, errors: [], abort: null,
+    missingInFile: [], withoutIds: [], skippedNoSync: 0,
+    errors: [...съвпадение.errors], warnings: [...съвпадение.warnings], skipped: [...съвпадение.skipped],
+    irregular: [], abort: null,
   }
-  const видяни = new Set<number>()
+  for (const row of rows) {
+    const problem = eanНередност(row.ean)
+    if (problem) plan.irregular.push({ sku: row.sku ?? '', name: row.name, ean: row.ean ?? '', problem })
+  }
+  for (const row of съвпадение.notFound) {
+    if (isEcoFlow(row)) plan.notFound.push({ sku: row.sku ?? '', ean: row.ean ?? '', name: row.name })
+  }
+  const видяни = new Set<number>(съвпадение.matches.map((m) => m.product.id))
   const цени: { old: number; new: number }[] = []
 
-  for (const row of rows) {
-    const етикет = `${row.name || '(без име)'} [SKU ${row.sku ?? '—'}, EAN ${row.ean ?? '—'}]`
-    const поКод = row.sku ? (поSku.get(норм(row.sku)) ?? []) : []
-    const поБаркод = row.ean ? (поEan.get(цифри(row.ean)) ?? []) : []
-
-    if (поКод.length > 1) { plan.errors.push(`${етикет}: SKU съвпада с ${поКод.length} продукта (${поКод.map((p) => p.title).join(', ')}) — не е пипнат`); continue }
-    if (!поКод.length && поБаркод.length > 1) { plan.errors.push(`${етикет}: EAN съвпада с ${поБаркод.length} продукта (${поБаркод.map((p) => p.title).join(', ')}) — не е пипнат`); continue }
-    if (поКод.length && поБаркод.length && !поБаркод.some((p) => p.id === поКод[0]!.id)) {
-      plan.errors.push(`${етикет}: SKU сочи „${поКод[0]!.title}", а EAN — „${поБаркод[0]!.title}" — не е пипнат`)
-      continue
-    }
-    const p = поКод[0] ?? поБаркод[0]
-    if (!p) {
-      if (isEcoFlow(row)) plan.notFound.push({ sku: row.sku ?? '', ean: row.ean ?? '', name: row.name })
-      continue
-    }
-    if (видяни.has(p.id)) { plan.errors.push(`${етикет}: „${p.title}" вече е съвпаднал с друг ред във файла — вторият не е пипнат`); continue }
-    видяни.add(p.id)
+  for (const { row, product: p } of съвпадение.matches) {
     plan.matched++
     if (p.noSync) { plan.skippedNoSync++; continue }
 
     const data: Record<string, unknown> = {}
     if (updatePrice) {
-      if (row.price === null || row.price <= 0) {
-        plan.errors.push(`${p.title}: невалидна цена във файла („${row.priceRaw}") — продуктът не е пипнат`)
+      const цена = finalPrice(row)
+      if (!цена.ok) {
+        plan.errors.push(`${p.title}: ${цена.error} — продуктът не е пипнат`)
         continue
       }
-      if (row.price !== p.price) {
-        data.price = row.price
-        if (typeof p.price === 'number' && p.price > 0) цени.push({ old: p.price, new: row.price })
+      if (цена.warning) plan.warnings.push(`${p.title} (${rowLabel(row)}): ${цена.warning}`)
+      if (цена.price !== p.price) {
+        data.price = цена.price
+        if (typeof p.price === 'number' && p.price > 0) цени.push({ old: p.price, new: цена.price })
       }
-      // Стара цена — само ако е по-висока от крайната; иначе намалението е отпаднало.
-      const стара = row.oldPrice !== null && row.oldPrice > row.price ? row.oldPrice : null
-      if ((p.compareAtPrice ?? null) !== стара) data.compareAtPrice = стара
+      if ((p.compareAtPrice ?? null) !== цена.compareAtPrice) data.compareAtPrice = цена.compareAtPrice
     }
     if (updateAvailability) {
       const a = mapAvailability(row)
@@ -260,7 +253,7 @@ export const runSync = async (
       }
       await записвай(payload, plan)
       result = plan.errors.length ? 'partial' : 'ok'
-      message = `Обновени ${new Set(plan.updates.map((u) => u.id)).size} продукта, без промяна ${plan.unchanged}, ненамерени ${plan.notFound.length}, грешки ${plan.errors.length}.`
+      message = `Обновени ${new Set(plan.updates.map((u) => u.id)).size} продукта, без промяна ${plan.unchanged}, ненамерени ${plan.notFound.length}, грешки ${plan.errors.length}, предупреждения ${plan.warnings.length}.`
       if (plan.updates.length) revalidated = await опресниСайта()
     }
   } catch (e) {
@@ -286,9 +279,12 @@ export const runSync = async (
       notFoundCount: plan?.notFound.length ?? 0,
       errorCount: plan?.errors.length ?? (result === 'ok' ? 0 : 1),
       changes: plan?.changes.map((c) => `${c.product} — ${c.field}: ${c.old} → ${c.new}`).join('\n') ?? '',
-      notFound: plan?.notFound.map((r) => `${r.name || '(без име)'} — SKU ${r.sku || '—'}, EAN ${r.ean || '—'}`).join('\n') ?? '',
+      notFound: plan?.notFound.map((r) => `${r.name || '(без име)'} — Identifier ${r.sku || '—'}, EAN ${r.ean || '—'}`).join('\n') ?? '',
       missingInFile: plan?.missingInFile.map((p) => p.title).join('\n') ?? '',
       errors: [...(plan?.errors ?? []), ...(result === 'aborted' || result === 'error' ? [message] : [])].join('\n'),
+      warnings: plan?.warnings.join('\n') ?? '',
+      skipped: plan?.skipped.join('\n') ?? '',
+      irregular: plan?.irregular.map((r) => `${r.name || '(без име)'} — Identifier ${r.sku || '—'}, EAN „${r.ean}": ${r.problem}`).join('\n') ?? '',
     } as never,
   })
   await пазиПоследните(payload, 90)
@@ -387,8 +383,11 @@ const отчет = async (payload: Payload, to: string, result: RunResult['resul
 <p style="font-size:14px">${esc(message)}</p>
 ${таблица('Промени', ['Продукт', 'Поле', 'Старо', 'Ново'], plan?.changes.map((c) => [c.product, c.field, c.old, c.new]) ?? [])}
 ${таблица('Грешки', ['Описание'], plan?.errors.map((e) => [e]) ?? [])}
-${таблица('Ненамерени в сайта (EcoFlow)', ['Име', 'SKU', 'EAN'], plan?.notFound.map((r) => [r.name, r.sku, r.ean]) ?? [])}
+${таблица('Предупреждения', ['Описание'], plan?.warnings.map((e) => [e]) ?? [])}
+${таблица('Ненамерени в сайта (EcoFlow)', ['Име', 'Identifier', 'EAN'], plan?.notFound.map((r) => [r.name, r.sku, r.ean]) ?? [])}
+${таблица('Пропуснати редове', ['Описание'], plan?.skipped.map((e) => [e]) ?? [])}
+${таблица('Нередности във файла на dice', ['Име', 'Identifier', 'EAN', 'Нередност'], plan?.irregular.map((r) => [r.name, r.sku, r.ean, r.problem]) ?? [])}
 </div>`
-  const text = [`Синхронизация с dice.bg — ${РЕЗУЛТАТ[result]} (${trigger})`, message, '', ...(plan?.changes.map((c) => `${c.product} — ${c.field}: ${c.old} → ${c.new}`) ?? []), ...(plan?.errors ?? [])].join('\n')
+  const text = [`Синхронизация с dice.bg — ${РЕЗУЛТАТ[result]} (${trigger})`, message, '', ...(plan?.changes.map((c) => `${c.product} — ${c.field}: ${c.old} → ${c.new}`) ?? []), ...(plan?.errors ?? []), ...(plan?.warnings ?? []), ...(plan?.irregular.length ? ['', 'Нередности във файла на dice:', ...plan.irregular.map((r) => `${r.name} — Identifier ${r.sku || '—'}, EAN „${r.ean}": ${r.problem}`)] : [])].join('\n')
   await payload.sendEmail({ to, subject: `dice.bg синхронизация: ${message.slice(0, 90)}`, html, text })
 }

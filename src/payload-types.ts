@@ -3263,6 +3263,9 @@ export interface DiceSync {
   errorCount?: number | null;
   changes?: string | null;
   errors?: string | null;
+  warnings?: string | null;
+  skipped?: string | null;
+  irregular?: string | null;
   notFound?: string | null;
   missingInFile?: string | null;
   updatedAt: string;
@@ -3831,6 +3834,9 @@ export interface DiceSyncsSelect<T extends boolean = true> {
   errorCount?: T;
   changes?: T;
   errors?: T;
+  warnings?: T;
+  skipped?: T;
+  irregular?: T;
   notFound?: T;
   missingInFile?: T;
   updatedAt?: T;
