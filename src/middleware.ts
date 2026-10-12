@@ -57,9 +57,6 @@ const пренасочи = (request: NextRequest, path: string, search: string, 
 
 const НЕ_ИНДЕКСИРАЙ = 'noindex, nofollow'
 
-/** Заглавие на вече подписаната заявка за `/_next/image` — второ подписване няма. */
-const ПОДПИСАНО = 'x-ecoflow-image-signed'
-
 /**
  * Заключено ли е — от `/api/zaklyuchvane`, кеширано 10 s (таг `site-gate`,
  * изчиства го записът на „Общи настройки"). Грешка при четене на продукция
@@ -116,30 +113,35 @@ export async function middleware(request: NextRequest) {
   const влязъл = await isValidToken(request.cookies.get('payload-token')?.value)
 
   /*
-    Влязъл иска оптимизирана снимка от Медия — подписва адреса за
-    вътрешното теглене. САМО ВЕДНЪЖ: на сървъра (`next start` зад nginx)
-    Next изпълнява пренасочването като нова HTTP заявка, която минава пак
-    през middleware-а. Без спирачка тя се подписваше отново и отново —
-    адресът растеше, nginx отказваше с „upstream sent too big header" (502),
-    а Next — със „socket hang up" (500); нито една снимка не излизаше
-    (12 октомври 2026). Спирачките: адрес, който вече носи `gk`, и
-    служебното заглавие от първото пренасочване.
+    Влязъл иска оптимизирана снимка от Медия — браузърът се пренасочва
+    (307) към същия адрес с подпис (`gk`) за вътрешното теглене. Адрес,
+    който вече носи `gk`, минава направо — второ подписване няма.
+
+    Пренасочване на браузъра, НЕ `NextResponse.rewrite` — rewrite се счупи
+    два пъти на сървъра (12 октомври 2026). Зад nginx/тунела Next го
+    изпълнява като нова HTTP заявка (proxy): първо тя минаваше пак оттук и
+    се подписваше отново — кръг, 502/500; после се видя, че при сглобяването
+    ѝ Next НЕ кодира новата стойност на `url` (`stringifyQuery` кодира само
+    стойностите от първоначалната заявка). `url=/api/media/file/x.png?v=1&gk=…`
+    се разпадаше: `gk` ставаше отделен параметър, снимката се теглеше без
+    подпис, стигаше до `/vhod` → 400 „isn't a valid image". Без `?v=` нямаше
+    `&` и минаваше — затова логото на 256 px излизаше, а другите не.
+
+    Браузърът пази пренасочването час (подписът важи до края на следващия
+    ден), затова допълнителната заявка е само първия път.
   */
   if (влязъл && pathname === '/_next/image') {
     const src = request.nextUrl.searchParams.get('url') ?? ''
     if (src.startsWith('/api/media/file/')) {
-      if (request.headers.get(ПОДПИСАНО) || new URL(src, request.url).searchParams.has('gk')) {
-        return NextResponse.next()
-      }
       const inner = new URL(src, request.url)
+      if (inner.searchParams.has('gk')) return NextResponse.next()
       inner.searchParams.set('gk', await signImagePath(inner.pathname))
       const url = request.nextUrl.clone()
       url.searchParams.set('url', inner.pathname + inner.search)
-      const headers = new Headers(request.headers)
-      headers.set(ПОДПИСАНО, '1')
-      const rewrite = NextResponse.rewrite(url, { request: { headers } })
-      rewrite.headers.set('X-Robots-Tag', НЕ_ИНДЕКСИРАЙ)
-      return rewrite
+      const redirect = NextResponse.redirect(url, 307)
+      redirect.headers.set('Cache-Control', 'private, max-age=3600')
+      redirect.headers.set('X-Robots-Tag', НЕ_ИНДЕКСИРАЙ)
+      return redirect
     }
   }
 
