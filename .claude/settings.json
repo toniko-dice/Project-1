@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "ask": [
+      "Bash(git reset --hard:*)", "Bash(git clean:*)", "Bash(git push --force:*)", "Bash(git push -f:*)",
+      "Bash(git checkout -- :*)", "Bash(git stash:*)",
+      "Bash(npm run db:kachi-na-sarvara:*)", "Bash(npm run seed -- --force:*)", "Bash(npx payload migrate:fresh:*)"
+    ]
+  }
+}

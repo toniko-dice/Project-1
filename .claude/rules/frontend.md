@@ -47,4 +47,4 @@ paths:
 ## Разни
 - „1 Issue" с `fdprocessedid` в dev — разширение на браузъра, не бъг. Логът `.next/dev/logs/next-development.log` е първото място за „N Issues".
 - `/vaprosi` и `/kontakti` са код (route), не записи в „Страници"; групите на въпросите — `src/lib/faq-groups.ts`.
-- Телефонът на фирмата НЕ се показва никъде (виж CLAUDE.md).
+- Телефонът на фирмата — САМО на `/kontakti`, никъде другаде (виж CLAUDE.md); засега там го няма — отделна задача (`docs/ostava.md`).
