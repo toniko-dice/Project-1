@@ -2743,7 +2743,9 @@ Payload работи най-добре на постоянен Node.js сърв�
   (профил `shortlived`, 6 дни, certbot 5.8 от snap, webroot), nginx от
   `deploy/` (80 → https; 443; `127.0.0.1:8081` за тунела — `otvori-sayta.bat`
   сочи 8081, защото 80 пренасочва навън), лимити и блокирани пътища в
-  nginx, fail2ban `ecoflow-login`/`ecoflow-scan`: **`backend = auto`** (в
+  nginx, fail2ban (от `task-fail2ban-bez-blokirane.md` само `ecoflow-login`
+  — 30 за 10 мин. → 15 мин. — и `sshd`; правило за сканиране НЯМА, банна
+  офиса): **`backend = auto`** (в
   Ubuntu по подразбиране е `systemd` и правила върху файл никога не
   сработват) и **датата в израза е `\[[^\]]*\]`** (fail2ban я изрязва
   преди проверката). Вход: 5 опита / 15 мин., `payload-token` `Secure`.

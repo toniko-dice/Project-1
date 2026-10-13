@@ -2,9 +2,9 @@
 
 > **Състояние към 13 октомври 2026** (`task-otvaryane-https-ip.md` — сайтът е на https://91.212.13.155, заключен, без домейн и без Cloudflare):
 > - ✅ т. 2: Node само на `127.0.0.1:3000`; UFW — само 22, 80, 443 (80/443 — от всички, не от Cloudflare: Cloudflare още няма).
-> - ✅ т. 3: само ключове, root само с ключ (`prohibit-password`), потребител `ecoflow`, fail2ban за SSH и nginx (`ecoflow-login`, `ecoflow-scan`, `nginx-limit-req`).
+> - ✅ т. 3: само ключове, root само с ключ (`prohibit-password`), потребител `ecoflow`, fail2ban — само `sshd` (10 → 15 мин.) и `ecoflow-login` (30 грешни входа за 10 мин. → 15 мин., само 80/443), без нарастване и без `recidive`. Правило за сканиране няма: банна офиса (динамични IP — бял списък не помага; `task-fail2ban-bez-blokirane.md`). Отблокиране: `npm run razblokirai`.
 > - ✅ т. 4: unattended-upgrades; `.env` 600; ClamAV инсталиран (не свързан).
-> - ✅ т. 5 (частично): reverse proxy, `client_max_body_size 12m`, `limit_req` (вход 5/мин., формите 5/мин., `/api/` 120/мин.), `server_tokens off`, блокирани пътища (444), заглавия без HSTS. Липсват: `real_ip` от Cloudflare (няма Cloudflare), таймаутите срещу slowloris, `/media/` направо от nginx (заключеният сайт не позволява).
+> - ✅ т. 5 (частично): reverse proxy, `client_max_body_size 12m`, `limit_req` (вход 10/мин., формите 10/мин., `/api/` 600/мин.; снимки и страници — без лимит; 429 на български, без бан), `server_tokens off`, блокирани пътища (444), заглавия без HSTS. Липсват: `real_ip` от Cloudflare (няма Cloudflare), таймаутите срещу slowloris, `/media/` направо от nginx (заключеният сайт не позволява).
 > - ✅ т. 6: systemd с `MemoryMax=3G`, `NODE_ENV=production`.
 > - ⏳ т. 1 (Cloudflare), т. 7 (бекъп извън сървъра), т. 8 (наблюдение — засега само проверката на сертификата в лога) — отделни задачи.
 

@@ -251,7 +251,7 @@ const КОМАНДИ = {
     if (ip && !/^[0-9a-fA-F.:]+$/.test(ip)) стоп(`„${ip}" не е IP адрес.`)
     const root = SERVER.replace(/^[^@]+@/, 'root@')
     const наСървъраКоманда = ip
-      ? `for j in $(fail2ban-client status | sed -n 's/.*Jail list:[[:space:]]*//p' | tr ',' ' '); do fail2ban-client set $j unbanip ${ip} >/dev/null 2>&1 && echo "$j: ${ip} — отблокиран"; done; echo готово`
+      ? `for j in $(fail2ban-client status | sed -n 's/.*Jail list:[[:space:]]*//p' | tr ',' ' '); do if fail2ban-client status $j | grep -qw "${ip}"; then fail2ban-client set $j unbanip ${ip} >/dev/null && echo "$j: ${ip} — отблокиран"; else echo "$j: ${ip} не е блокиран"; fi; done`
       : `echo "отблокирани: $(fail2ban-client unban --all)"`
     const r = spawnSync(SSH, ['-o', 'BatchMode=yes', root, `${наСървъраКоманда}; fail2ban-client status | tail -1`], { stdio: 'inherit', encoding: 'utf8' })
     if (r.status !== 0) стоп('Отблокирането не мина — виж изхода горе.')
