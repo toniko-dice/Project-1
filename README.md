@@ -315,8 +315,11 @@ npm run mail:catcher
   оферта и контакт — 5 изпращания в минута, `/api/` — 120 в минута.
 - **fail2ban:** `ecoflow-login` (10 грешни/ограничени входа за 10 мин. →
   бан 1 ч.), `ecoflow-scan` (3 опита за `/wp-*`, `/.env`, `/.git`… →
-  бан 1 ч.), `nginx-limit-req`, `sshd`. Адресът на собственика
-  (77.78.23.101) и 127.0.0.1 не се банват. Отбанване (root):
+  бан 1 ч.), `nginx-limit-req`, `sshd`. Банът за сайта спира само 80/443
+  (SSH има свое правило). Не се банват: 127.0.0.1, собственикът
+  (77.78.23.101) и офисът (90.154.206.1) — списъкът е в
+  `/etc/fail2ban/jail.local` и `jail.d/sshd.local` (образец —
+  `deploy/fail2ban/jail.local`). Отбанване (root):
   `fail2ban-client set ecoflow-login unbanip <IP>` (или `ecoflow-scan`).
 - **Блокирани пътища:** `/.env`, `/.git`, `/wp-*`, `/phpmyadmin`,
   `*.php`, `*.sql`, `*.bak`… — nginx затваря връзката без отговор (444).

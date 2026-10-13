@@ -1,11 +1,9 @@
 # fail2ban — сайтът (`task-otvaryane-https-ip.md`).
 # На сървъра: /etc/fail2ban/jail.d/ecoflow.local; филтрите — filter.d/.
-# 127.0.0.1 (тунелът) и адресът на собственика не се банват.
+# Кои адреси не се банват — /etc/fail2ban/jail.local (deploy/fail2ban/jail.local).
+# НЕ тук: jail.d/*.local се чете СЛЕД jail.local и би го презаписал.
 # `backend = auto` — в Ubuntu по подразбиране е `systemd` (журналът), а
 # nginx пише във файл: без него правилата никога не се задействат.
-
-[DEFAULT]
-ignoreip = 127.0.0.1/8 ::1 77.78.23.101
 
 # Много грешни входове / ограничени заявки към входа от един IP → 1 час.
 [ecoflow-login]
