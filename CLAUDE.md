@@ -2738,6 +2738,18 @@ Payload работи най-добре на постоянен Node.js сърв�
 - `npm run deploy` върви **откачено** на сървъра (`setsid nohup`, `flock`,
   `NODE_OPTIONS=--max-old-space-size=4096`): прекъсната връзка не спира
   билда; логът и кодът на изхода — `deploy-log/<време>.log` и `.exit`.
+- **https://91.212.13.155 от 13 октомври 2026** (`task-otvaryane-https-ip.md`,
+  подробно — README „Сървър"): сертификат на Let's Encrypt за IP адреса
+  (профил `shortlived`, 6 дни, certbot 5.8 от snap, webroot), nginx от
+  `deploy/` (80 → https; 443; `127.0.0.1:8081` за тунела — `otvori-sayta.bat`
+  сочи 8081, защото 80 пренасочва навън), лимити и блокирани пътища в
+  nginx, fail2ban `ecoflow-login`/`ecoflow-scan`: **`backend = auto`** (в
+  Ubuntu по подразбиране е `systemd` и правила върху файл никога не
+  сработват) и **датата в израза е `\[[^\]]*\]`** (fail2ban я изрязва
+  преди проверката). Вход: 5 опита / 15 мин., `payload-token` `Secure`.
+  `SITE_NOINDEX=true` → `noindex` и `Disallow: /` независимо от
+  заключването. Портове 80/443 бяха затворени и при хостинга — първо там,
+  ако отвън не отговарят. nginx 1.24: `listen 443 ssl http2`, не `http2 on`.
 - Проверката в края на deploy-а пита **началната** (200, или 307 към
   `/vhod` при заключен сайт; до 60 s) и `/kategorii/produkt/delta-3`
   (200/301/307). При грешка — `journalctl -u ecoflow -n 100` в изхода.

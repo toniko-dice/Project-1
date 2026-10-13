@@ -265,22 +265,74 @@ npm run mail:catcher
 ## Сървър
 
 Сървърът е `91.212.13.155` (Ubuntu 24.04, 4 CPU, 8 GB RAM, 99 GB диск).
-Домейнът ще е **ecoflow.bg** — още не е насочен, затова **сайтът не е
-публичен**: отвън е отворен само SSH (порт 22), а сайтът се отваря през
-криптиран SSH тунел.
+От 13 октомври 2026 сайтът е на **https://91.212.13.155** — от всяко
+устройство, без тунел. Сайтът е **заключен** (`/vhod`) и **не се индексира**.
+Домейнът **ecoflow.bg** идва после — тогава Cloudflare, нормален
+сертификат и HSTS (отделна задача).
 
 ### Как да отворите сайта
 
-1. Двоен клик на **`scripts\otvori-sayta.bat`**.
-2. Отваря се черен прозорец (това е тунелът) и след 3 секунди браузърът.
-3. Докато черният прозорец е отворен:
-   - сайтът е на **http://localhost:8080**;
-   - админът е на **http://localhost:8080/admin**.
-4. Сайтът е заключен — влизате на `/vhod` със своя имейл и парола за админа.
-5. Затваряте черния прозорец → тунелът спира.
+- **https://91.212.13.155** — входът е на `/vhod` (имейл и парола за админа);
+  админът — https://91.212.13.155/admin.
+- **Резервно — SSH тунелът** (ако https не работи): двоен клик на
+  **`scripts\otvori-sayta.bat`** → черен прозорец (тунелът) и след 3 секунди
+  браузърът на **http://localhost:8080** (`/admin` — админът). Затваряте
+  прозореца → тунелът спира. Тунелът води към отделен вход на nginx
+  (`127.0.0.1:8081`, без https — SSH вече е криптиран); бисквитката за вход
+  е `Secure`, но браузърите я приемат на `localhost`.
 
 Тунелът ползва SSH ключа ви (`id_ed25519`); ако ключът е с парола, Windows
 трябва да го е зареден в `ssh-agent` (`ssh-add`), иначе прозорецът ще я поиска.
+
+### Сертификатът (https на IP адреса)
+
+- **Let's Encrypt за самия IP адрес**, профил `shortlived` — важи **6 дни**
+  и се подновява сам. Издава го **certbot 5.8 (snap)**: Let's Encrypt
+  издава IP сертификати само с профила `shortlived`, а certbot ги поддържа
+  от 5.4 (`--ip-address`, `--preferred-profile`), само с webroot. Версията
+  в Ubuntu (2.9) не може — затова snap (официалният начин на EFF; обновява
+  се сам).
+- **Подновяване:** `snap.certbot.renew.timer` — два пъти на ден; certbot
+  подновява чак когато наближи краят (иначе „not yet due"). Проверката
+  минава през порт 80 (`/.well-known/acme-challenge/` → `/var/www/acme`).
+  След подновяване nginx се презарежда сам
+  (`/etc/letsencrypt/renewal-hooks/deploy/ecoflow-nginx-reload.sh`).
+- **Наблюдение:** `ecoflow-cert-check.timer` (07:15 и 19:15) — под 3 дни
+  остатък → предупреждение в лога (`journalctl -t ecoflow-cert`); писмо до
+  anton@dice.bg, когато има SMTP.
+- **Ръчно подновяване** (като root): `certbot renew --cert-name ecoflow-ip
+  --force-renewal && systemctl reload nginx`. Проба без издаване:
+  `certbot renew --dry-run`. Данните: `certbot certificates`.
+- **Портове 80 и 443 са отворени и при хостинга** (тяхна защитна стена пред
+  сървъра) — ако спрат да отговарят отвън, а на сървъра всичко е наред,
+  първо там.
+
+### Защити
+
+- **Вход:** 5 грешни пароли → профилът е заключен за 15 минути (важи и за
+  `/vhod`; отключва и друг администратор). nginx: вход и забравена парола —
+  5 опита в минута от IP (после 429), `/vhod` — 5 в минута, формите за
+  оферта и контакт — 5 изпращания в минута, `/api/` — 120 в минута.
+- **fail2ban:** `ecoflow-login` (10 грешни/ограничени входа за 10 мин. →
+  бан 1 ч.), `ecoflow-scan` (3 опита за `/wp-*`, `/.env`, `/.git`… →
+  бан 1 ч.), `nginx-limit-req`, `sshd`. Адресът на собственика
+  (77.78.23.101) и 127.0.0.1 не се банват. Отбанване (root):
+  `fail2ban-client set ecoflow-login unbanip <IP>` (или `ecoflow-scan`).
+- **Блокирани пътища:** `/.env`, `/.git`, `/wp-*`, `/phpmyadmin`,
+  `*.php`, `*.sql`, `*.bak`… — nginx затваря връзката без отговор (444).
+- **Заглавия:** `server_tokens off`, `X-Content-Type-Options`,
+  `X-Frame-Options`, `Referrer-Policy`. **Без HSTS** — идва с домейна.
+- **Отвън са отворени само 22, 80 и 443**; Node слуша само на `127.0.0.1:3000`.
+- Конфигурациите са в `deploy/` (nginx — 4 файла, fail2ban, systemd,
+  `cert-check.sh`); на сървъра са копия (виж първите редове на всеки файл).
+
+### `SITE_NOINDEX` — предпазител срещу индексиране
+
+`SITE_NOINDEX=true` в `.env` на сървъра: `robots.txt` е `Disallow: /` и
+всеки отговор носи `X-Robots-Tag: noindex, nofollow` — **дори ако някой
+отключи сайта**. nginx слага същото заглавие (`snippets/ecoflow-app.conf`).
+**Маха се само при официалното пускане** — и от `.env` (после
+`npm run deploy`), и редът в nginx.
 
 ### Главната база е на сървъра
 
@@ -326,18 +378,23 @@ SMTP — попълнете `SMTP_*` в `.env` на сървъра, махнет
   start|stop|restart|status ecoflow`); кодът в `/srv/ecoflow-bg`;
 - `ecoflow.service` (systemd) — `next start` на `127.0.0.1:3000`,
   тръгва сам след рестарт; логове: `journalctl -u ecoflow -f`;
-- nginx — `/etc/nginx/sites-available/ecoflow` (образецът е в `deploy/`),
-  слуша на 80, но **портът е затворен в UFW**, докато дойде домейнът;
-- SSH: без пароли, root само с ключ; UFW — само 22/tcp; fail2ban за SSH;
+- nginx — `/etc/nginx/sites-available/ecoflow` + `conf.d/ecoflow-limits.conf`
+  + `snippets/ecoflow-app.conf`, `snippets/ecoflow-proxy.conf` (образците —
+  в `deploy/`); 80 → https, 443, и `127.0.0.1:8081` за тунела;
+- SSH: без пароли, root само с ключ; UFW — 22, 80, 443; fail2ban;
   автоматични обновления за сигурност; ClamAV — инсталиран, не свързан;
-- в `.env`: `NEXT_PUBLIC_SITE_URL=https://ecoflow.bg` (canonical и
-  sitemap — сайтът е заключен и с `noindex`), `NEXT_PUBLIC_SERVER_URL=http://localhost:8080`
-  (тунелът), `INTERNAL_SERVER_URL=http://127.0.0.1:3000`.
+- в `.env`: `NEXT_PUBLIC_SITE_URL` и `NEXT_PUBLIC_SERVER_URL` =
+  `https://91.212.13.155` (при домейна → `https://ecoflow.bg`),
+  `INTERNAL_SERVER_URL=http://127.0.0.1:3000` (middleware-ът и опресняването
+  не минават през nginx и лимитите), `SITE_NOINDEX=true`. Старият `.env` —
+  `.env.bak-predi-https`.
 
 Сайтът е качен на 12 октомври 2026 (`npm run db:kachi-na-sarvara`, после флагът е махнат).
 
-**Когато домейнът дойде** (отделна задача): Cloudflare, SSL, `ufw allow
-80,443/tcp`, `NEXT_PUBLIC_SERVER_URL=https://ecoflow.bg`, `npm run deploy`.
+**Когато домейнът дойде** (отделна задача): Cloudflare (истинският IP на
+посетителя — `real_ip` от `CF-Connecting-IP`, иначе лимитите са общи),
+нормален сертификат, HSTS, адресите в `.env` → `https://ecoflow.bg`,
+`npm run deploy`.
 
 ## Какво още не е направено
 
