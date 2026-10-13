@@ -10,6 +10,7 @@
  *   npm run import:page:server <slug>       — внос на страница на сървъра (с архив)
  *   npm run faq:dobavi:server <файл>        — въпросите от файла на сървъра (с архив)
  *   npm run na-sarvara <npm скрипт> [арг.]  — който и да е npm скрипт на сървъра (с архив)
+ *   npm run razblokirai [-- <IP>]           — fail2ban: отблокира IP-то (без IP — всички)
  *
  * Връзката — SSH с ключа на собственика (на Windows — `ssh.exe` на системата,
  * за да ползва агента с отключения ключ). Сървърът и папката — от
@@ -236,6 +237,24 @@ const КОМАНДИ = {
     const r = наСървъра(`cd ${q(DIR)} && CONTENT_ROOT=content-server npm run faq:dobavi -- ${q(`content-server/${име}`)}`)
     if (r.status !== 0) стоп('Вносът на сървъра не мина.')
     опресни()
+  },
+
+  /*
+    fail2ban банва само при упорита атака срещу входа, но ако все пак
+    хване човек — оттук, от компютъра на собственика. Като root (sudo на
+    `ecoflow` е само за услугата); ключът е същият. Ако самият компютър е
+    блокиран — SSH (порт 22) не се спира от бановете за сайта; иначе —
+    телефонът като точка за достъп (друго IP). README „Сървър".
+  */
+  async razblokirai() {
+    const [ip] = арг
+    if (ip && !/^[0-9a-fA-F.:]+$/.test(ip)) стоп(`„${ip}" не е IP адрес.`)
+    const root = SERVER.replace(/^[^@]+@/, 'root@')
+    const наСървъраКоманда = ip
+      ? `for j in $(fail2ban-client status | sed -n 's/.*Jail list:[[:space:]]*//p' | tr ',' ' '); do fail2ban-client set $j unbanip ${ip} >/dev/null 2>&1 && echo "$j: ${ip} — отблокиран"; done; echo готово`
+      : `echo "отблокирани: $(fail2ban-client unban --all)"`
+    const r = spawnSync(SSH, ['-o', 'BatchMode=yes', root, `${наСървъраКоманда}; fail2ban-client status | tail -1`], { stdio: 'inherit', encoding: 'utf8' })
+    if (r.status !== 0) стоп('Отблокирането не мина — виж изхода горе.')
   },
 
   async 'na-sarvara'() {

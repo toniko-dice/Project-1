@@ -36,6 +36,7 @@
     "banner:biskvitki": "payload run src/banner-biskvitki.ts --",
     "domein:ecoflow-bg": "payload run src/domein-ecoflow-bg.ts --",
     "deploy": "node scripts/server.mjs deploy",
+    "razblokirai": "node scripts/server.mjs razblokirai",
     "db:kachi-na-sarvara": "node scripts/server.mjs db-kachi",
     "db:svali-ot-sarvara": "node scripts/server.mjs db-svali",
     "import:product:server": "node scripts/server.mjs import-product",

@@ -1,0 +1,7 @@
+[Unit]
+Description=EcoFlow — дневен отчет за fail2ban (колко IP са банати и защо)
+
+[Service]
+Type=oneshot
+# Копие, собственост на root (виж ecoflow-cert-check.service).
+ExecStart=/usr/local/sbin/ecoflow-fail2ban-report

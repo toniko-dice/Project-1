@@ -26,7 +26,7 @@ export const VhodForm = ({ next }: { next: string }) => {
         body: JSON.stringify({ email: form.get('email'), password: form.get('password') }),
       })
       if (r.status === 429) {
-        // Ограничението на nginx — 5 опита в минута от един адрес.
+        // Ограничението на nginx — 10 опита в минута от един адрес (без бан).
         setError('Твърде много опити за вход. Изчакайте минута и опитайте пак.')
         setBusy(false)
         return

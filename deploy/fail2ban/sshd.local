@@ -1,0 +1,11 @@
+# fail2ban — SSH (отделно от сайта). На сървъра: /etc/fail2ban/jail.d/sshd.local.
+# Входът е само с ключ — собственикът не греши парола; банват се само
+# ботове, които пробват пароли. 10 опита за 10 мин. → 15 мин., без нарастване.
+[sshd]
+enabled  = true
+port     = 22
+maxretry = 10
+findtime = 10m
+bantime  = 15m
+bantime.increment = false
+ignoreip = 127.0.0.1/8 ::1 77.78.23.101 90.154.206.1

@@ -1,38 +1,28 @@
-# fail2ban — сайтът (`task-otvaryane-https-ip.md`).
-# На сървъра: /etc/fail2ban/jail.d/ecoflow.local; филтрите — filter.d/.
-# Кои адреси не се банват — /etc/fail2ban/jail.local (deploy/fail2ban/jail.local).
-# НЕ тук: jail.d/*.local се чете СЛЕД jail.local и би го презаписал.
+# fail2ban — сайтът (`task-fail2ban-bez-blokirane.md`, 13 октомври 2026).
+# На сървъра: /etc/fail2ban/jail.d/ecoflow.local; филтърът — filter.d/.
+#
+# Принцип: лошите заявки се ОТКАЗВАТ от nginx (444 / 404 / 429), IP-то не се
+# банва — освен при упорита атака срещу входа. Посетителите и служителите
+# са с динамични адреси: бял списък не помага, нормален човек не бива да
+# бъде блокиран. Затова:
+#   - сканирането (/.env, /wp-*…) — БЕЗ правило: nginx затваря връзката (444);
+#     на 13.10.2026 правилото за сканиране банна офиса при проверка;
+#   - nginx-limit-req — махнато: 429 на nginx е достатъчно;
+#   - входът — само при 30 опита за 10 мин., бан 15 мин., без нарастване;
+#   - recidive — няма.
+# Банът спира САМО 80 и 443 (`port = http,https`) — SSH остава.
 # `backend = auto` — в Ubuntu по подразбиране е `systemd` (журналът), а
-# nginx пише във файл: без него правилата никога не се задействат.
+# nginx пише във файл.
+# Кои адреси никога не се банват — /etc/fail2ban/jail.local
+# (deploy/fail2ban/jail.local); НЕ тук: jail.d/*.local го презаписва.
 
-# Много грешни входове / ограничени заявки към входа от един IP → 1 час.
 [ecoflow-login]
 enabled  = true
 port     = http,https
 filter   = ecoflow-login
 logpath  = /var/log/nginx/access.log
 backend  = auto
-maxretry = 10
+maxretry = 30
 findtime = 10m
-bantime  = 1h
-
-# Сканиране за чужди системи (/wp-*, /.env, /.git…) → 1 час.
-[ecoflow-scan]
-enabled  = true
-port     = http,https
-filter   = ecoflow-scan
-logpath  = /var/log/nginx/access.log
-backend  = auto
-maxretry = 3
-findtime = 10m
-bantime  = 1h
-
-# Надхвърлен лимит на nginx (limit_req) — от error.log, вграденият филтър.
-[nginx-limit-req]
-enabled  = true
-port     = http,https
-logpath  = /var/log/nginx/error.log
-backend  = auto
-maxretry = 20
-findtime = 10m
-bantime  = 1h
+bantime  = 15m
+bantime.increment = false
