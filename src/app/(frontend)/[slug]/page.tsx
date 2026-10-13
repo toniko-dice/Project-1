@@ -3,6 +3,7 @@ import { notFound, permanentRedirect } from 'next/navigation'
 
 import { breadcrumbSchema } from '@/components/Breadcrumbs'
 import { LegalMeta } from '@/components/blocks/text'
+import { CookieTable } from '@/components/CookieTable'
 import { RenderBlocks } from '@/components/RenderBlocks'
 import { getGlobal, getPage, getPayloadClient, getRedirectMap } from '@/lib/payload'
 import { mediaUrl } from '@/lib/media'
@@ -149,6 +150,7 @@ export default async function DynamicPage({ params }: Args) {
         // Правна страница: датата и съдържанието — под H1, над текста.
         heading={page.legal ? <LegalMeta layout={layout} updatedAt={page.updatedAt} /> : undefined}
       />
+      {page.cookieTable ? <CookieTable /> : null}
     </div>
   )
 }

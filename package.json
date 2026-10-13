@@ -33,6 +33,7 @@
     "wave-2:bateriya": "payload run src/wave-2-bateriya.ts --",
     "test:dice": "tsx scripts/dice-parse-test.ts",
     "dice:test-po-grafik": "payload run src/dice-sync-test.ts --",
+    "banner:biskvitki": "payload run src/banner-biskvitki.ts --",
     "domein:ecoflow-bg": "payload run src/domein-ecoflow-bg.ts --",
     "deploy": "node scripts/server.mjs deploy",
     "db:kachi-na-sarvara": "node scripts/server.mjs db-kachi",

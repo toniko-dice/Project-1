@@ -465,6 +465,7 @@ const data = {
   // Без ключа във файла отметката остава каквато е в админа.
   ...(typeof стр.noindex === 'boolean' ? { noindex: стр.noindex } : {}),
   ...(typeof стр.pravna === 'boolean' ? { legal: стр.pravna } : {}),
+  ...(typeof стр.biskvitkiTablica === 'boolean' ? { cookieTable: стр.biskvitkiTablica } : {}),
   importedAt: new Date().toISOString(),
 } as Обект
 
@@ -475,6 +476,7 @@ log(`  мета заглавие: ${data.metaTitle} (${String(data.metaTitle ?? 
 log(`  мета описание: ${String(data.metaDescription ?? '').length} знака`)
 if ('noindex' in data) log(`  скрита от търсачките: ${data.noindex ? 'да' : 'не'}`)
 if ('legal' in data) log(`  правна (дата и съдържание): ${data.legal ? 'да' : 'не'}`)
+if ('cookieTable' in data) log(`  таблица с бисквитките: ${data.cookieTable ? 'да' : 'не'}`)
 if (съществуваща && force) log('  --force: замества и редакциите от админа')
 log(`\nСЕКЦИИ (${layout.length})`)
 for (const р of редове) log(`  ${р}`)

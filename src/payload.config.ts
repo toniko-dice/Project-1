@@ -22,6 +22,7 @@ import { QuoteFiles } from './collections/QuoteFiles'
 import { QuoteRequests } from './collections/QuoteRequests'
 import { ContactMessages } from './collections/ContactMessages'
 import { Redirects } from './collections/Redirects'
+import { CookieConsents } from './collections/CookieConsents'
 import { Subscribers } from './collections/Subscribers'
 import { Testimonials } from './collections/Testimonials'
 import { Users } from './collections/Users'
@@ -91,6 +92,12 @@ function mailAdapter() {
 export default buildConfig({
   admin: {
     user: Users.slug,
+    /*
+      Без Gravatar: по подразбиране Payload тегли снимката на профила от
+      gravatar.com — с хеш от имейла и IP адреса на служителя към трета
+      страна (`docs/biskvitki-inventar.md`). Стандартната иконка — без заявка.
+    */
+    avatar: 'default',
     importMap: { baseDir: path.resolve(dirname) },
     meta: {
       titleSuffix: '— EcoFlow България',
@@ -138,6 +145,7 @@ export default buildConfig({
     Backups,
     Users,
     Redirects,
+    CookieConsents,
   ],
   globals: [Header, Footer, Design, SiteSettings, FilterOrder, OfferSettings, DiceSync, InfoPages],
   // Архивирането по график минава през опашката за задачи на Payload.

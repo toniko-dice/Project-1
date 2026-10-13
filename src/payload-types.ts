@@ -86,6 +86,7 @@ export interface Config {
     backups: Backup;
     users: User;
     redirects: Redirect;
+    'cookie-consents': CookieConsent;
     'payload-kv': PayloadKv;
     'payload-jobs': PayloadJob;
     'payload-locked-documents': PayloadLockedDocument;
@@ -117,6 +118,7 @@ export interface Config {
     backups: BackupsSelect<false> | BackupsSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     redirects: RedirectsSelect<false> | RedirectsSelect<true>;
+    'cookie-consents': CookieConsentsSelect<false> | CookieConsentsSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-jobs': PayloadJobsSelect<false> | PayloadJobsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
@@ -423,7 +425,7 @@ export interface Product {
   externalUrl: string;
   ctaLabel?: string | null;
   /**
-   * „По заявка" — бутонът става „Заяви в dice.bg" (същият линк), под цената излиза ред, че може да се заяви. „Изчерпан" — бутонът е неактивен. Синхронизацията с dice.bg я презаписва (освен при „Не синхронизирай").
+   * „По заявка" — бутонът става „Заяви в dice.bg" (същият линк), под цената излиза ред, че може да се заяви. „Изчерпан" — бутонът е „Заявка за продукт" (същият линк), под цената пише „Изчерпан". Синхронизацията с dice.bg я презаписва (освен при „Не синхронизирай").
    */
   availability?: ('in-stock' | 'on-request' | 'out-of-stock') | null;
   /**
@@ -2117,6 +2119,10 @@ export interface Page {
    * Над текста излизат „Последна актуализация" (датата на последното записване) и съдържание с линкове към заглавията H2.
    */
   legal?: boolean | null;
+  /**
+   * Под текста излиза „Бисквитки, които използваме" — по категории, от настройките на сайта — и бутон „Настройки на бисквитките".
+   */
+  cookieTable?: boolean | null;
   importedAt?: string | null;
   layout?:
     | (
@@ -3511,6 +3517,22 @@ export interface Redirect {
   createdAt: string;
 }
 /**
+ * Доказателство за избора в банера за бисквитки — без IP и без лични данни. Само за четене; по-старите от 12 месеца се трият сами.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "cookie-consents".
+ */
+export interface CookieConsent {
+  id: number;
+  consentId: string;
+  version: number;
+  action: 'accept-all' | 'reject-all' | 'custom';
+  analytics?: boolean | null;
+  marketing?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
@@ -3710,6 +3732,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'redirects';
         value: number | Redirect;
+      } | null)
+    | ({
+        relationTo: 'cookie-consents';
+        value: number | CookieConsent;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -3989,6 +4015,7 @@ export interface PagesSelect<T extends boolean = true> {
   title?: T;
   slug?: T;
   legal?: T;
+  cookieTable?: T;
   importedAt?: T;
   layout?:
     | T
@@ -5756,6 +5783,19 @@ export interface RedirectsSelect<T extends boolean = true> {
   from?: T;
   to?: T;
   reason?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "cookie-consents_select".
+ */
+export interface CookieConsentsSelect<T extends boolean = true> {
+  consentId?: T;
+  version?: T;
+  action?: T;
+  analytics?: T;
+  marketing?: T;
   updatedAt?: T;
   createdAt?: T;
 }

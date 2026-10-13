@@ -2,7 +2,9 @@ import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 
 import { DesignTokens } from '@/components/DesignTokens'
+import { CookieConsent } from '@/components/CookieConsent'
 import { Footer } from '@/components/Footer'
+import { CONSENT_DEFAULT_SCRIPT, GA_ID } from '@/lib/track'
 import { Header } from '@/components/Header'
 import { SITE_URL } from '@/lib/site-url'
 import { TITLE_TEMPLATE } from '@/lib/title'
@@ -68,6 +70,12 @@ export default function FrontendLayout({ children }: { children: React.ReactNode
     <html lang="bg" className={inter.variable} data-scroll-behavior="smooth">
       <head>
         <DesignTokens />
+        {/*
+          Google Consent Mode v2 — „всичко отказано" преди всеки Google
+          скрипт. Само ако има ID на GA4; самият GA4 се зарежда едва след
+          съгласие (`src/lib/track.ts`).
+        */}
+        {GA_ID ? <script dangerouslySetInnerHTML={{ __html: CONSENT_DEFAULT_SCRIPT }} /> : null}
       </head>
       <body>
         {/* Прескачане на навигацията — първият елемент за клавиатурни потребители. */}
@@ -81,6 +89,7 @@ export default function FrontendLayout({ children }: { children: React.ReactNode
         <Header />
         <main id="main">{children}</main>
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   )

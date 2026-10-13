@@ -1,3 +1,4 @@
+import { CONSENT_SETTINGS_HASH } from './consent'
 import { CONTACT_PATH, FAQ_PATH } from './legal'
 
 /**
@@ -40,6 +41,8 @@ export const FOOTER_COLUMNS = [
       { label: 'Общи условия', url: '/obshti-usloviya' },
       { label: 'Поверителност', url: '/poveritelnost' },
       { label: 'Бисквитки', url: '/biskvitki' },
+      // Отваря настройките на банера — оттегляне на съгласието (`task-banner-biskvitki.md`).
+      { label: 'Настройки на бисквитките', url: CONSENT_SETTINGS_HASH },
     ],
   },
 ]

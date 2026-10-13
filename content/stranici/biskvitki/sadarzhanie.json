@@ -6,7 +6,8 @@
     "metaTitle": "Политика за бисквитките | EcoFlow България",
     "metaDescription": "Какви бисквитки използва сайтът ecoflow.bg, за какво служат, колко време се пазят и как можете да ги управлявате или изтриете от браузъра си.",
     "noindex": true,
-    "pravna": true
+    "pravna": true,
+    "biskvitkiTablica": true
   },
   "sekcii": [
     {
