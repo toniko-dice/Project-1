@@ -25,10 +25,26 @@ export const VhodForm = ({ next }: { next: string }) => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: form.get('email'), password: form.get('password') }),
       })
-      if (!r.ok) throw new Error()
+      if (r.status === 429) {
+        // Ограничението на nginx — 5 опита в минута от един адрес.
+        setError('Твърде много опити за вход. Изчакайте минута и опитайте пак.')
+        setBusy(false)
+        return
+      }
+      if (!r.ok) {
+        // Заключен профил (`maxLoginAttempts`) — Payload връща 401 със „…заключен" / „locked".
+        const msg = ((await r.json().catch(() => null)) as { errors?: { message?: string }[] } | null)?.errors?.[0]?.message ?? ''
+        setError(
+          /заключен|locked/i.test(msg)
+            ? 'Профилът е заключен за 15 минути след няколко грешни опита. Опитайте по-късно или помолете администратор да го отключи.'
+            : 'Грешен имейл или парола.',
+        )
+        setBusy(false)
+        return
+      }
       window.location.assign(next)
     } catch {
-      setError('Грешен имейл или парола.')
+      setError('Няма връзка със сървъра. Опитайте пак.')
       setBusy(false)
     }
   }

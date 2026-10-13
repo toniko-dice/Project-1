@@ -1,0 +1,35 @@
+# fail2ban — сайтът (`task-otvaryane-https-ip.md`).
+# На сървъра: /etc/fail2ban/jail.d/ecoflow.local; филтрите — filter.d/.
+# 127.0.0.1 (тунелът) и адресът на собственика не се банват.
+
+[DEFAULT]
+ignoreip = 127.0.0.1/8 ::1 77.78.23.101
+
+# Много грешни входове / ограничени заявки към входа от един IP → 1 час.
+[ecoflow-login]
+enabled  = true
+port     = http,https
+filter   = ecoflow-login
+logpath  = /var/log/nginx/access.log
+maxretry = 10
+findtime = 10m
+bantime  = 1h
+
+# Сканиране за чужди системи (/wp-*, /.env, /.git…) → 1 час.
+[ecoflow-scan]
+enabled  = true
+port     = http,https
+filter   = ecoflow-scan
+logpath  = /var/log/nginx/access.log
+maxretry = 3
+findtime = 10m
+bantime  = 1h
+
+# Надхвърлен лимит на nginx (limit_req) — от error.log, вграденият филтър.
+[nginx-limit-req]
+enabled  = true
+port     = http,https
+logpath  = /var/log/nginx/error.log
+maxretry = 20
+findtime = 10m
+bantime  = 1h

@@ -76,7 +76,28 @@ const заключен = async (request: NextRequest): Promise<boolean> => {
   }
 }
 
+/**
+ * Предпазител срещу индексиране, НЕЗАВИСИМ от заключването
+ * (`task-otvaryane-https-ip.md`): `SITE_NOINDEX=true` в `.env` → `robots.txt`
+ * е `Disallow: /` и всеки отговор носи `X-Robots-Tag: noindex, nofollow` —
+ * дори ако някой отключи сайта. Маха се само при официалното пускане.
+ * Чете се при билда и при старт — смяна иска `npm run deploy`. nginx слага
+ * същото заглавие и на статичните файлове (`deploy/nginx-ecoflow.conf`).
+ */
+const БЕЗ_ИНДЕКС = process.env.SITE_NOINDEX === 'true'
+
 export async function middleware(request: NextRequest) {
+  if (БЕЗ_ИНДЕКС && request.nextUrl.pathname === '/robots.txt') {
+    return new NextResponse('User-agent: *\nDisallow: /\n', {
+      headers: { 'Content-Type': 'text/plain; charset=utf-8', 'X-Robots-Tag': НЕ_ИНДЕКСИРАЙ },
+    })
+  }
+  const response = await основен(request)
+  if (БЕЗ_ИНДЕКС) response.headers.set('X-Robots-Tag', НЕ_ИНДЕКСИРАЙ)
+  return response
+}
+
+async function основен(request: NextRequest): Promise<NextResponse> {
   const { pathname, search } = request.nextUrl
   /*
     Вътрешните питания на самия middleware — без проверки, иначе питането

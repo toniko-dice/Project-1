@@ -1,0 +1,8 @@
+[Unit]
+Description=EcoFlow — колко дни остават на сертификата за IP адреса
+
+[Service]
+Type=oneshot
+# Копие, собственост на root — не скриптът в /srv (потребителят ecoflow
+# може да го пише, а таймерът тече като root).
+ExecStart=/usr/local/sbin/ecoflow-cert-check
