@@ -1,6 +1,6 @@
 import config from '@payload-config'
 import { unstable_cache } from 'next/cache'
-import { getPayload } from 'payload'
+import { getPayload, type Where } from 'payload'
 import { cache } from 'react'
 
 import type { Attribute, Category, Product, ProductsSelect } from '@/payload-types'
@@ -157,6 +157,14 @@ export const getPublishedProducts = cache(async (): Promise<ProductForUrl[]> => 
 })
 
 /**
+ * Скритите категории не съществуват за сайта (поле „Скрита" в категорията,
+ * `task-dostavka-i-trail.md`): всяко четене на категории тук ги изключва —
+ * дървото (меню, карта на сайта, филтри, трохи, „Съвместим с"), страницата,
+ * подкатегориите, лентата с икони, въпросите.
+ */
+const БЕЗ_СКРИТИ: Where = { hidden: { not_equals: true } }
+
+/**
  * Зарежда категория по адрес.
  *
  * Категориите нямат чернови — показват се веднага след създаване. Затова
@@ -168,7 +176,7 @@ export const getCategory = cache(async (slug: string) =>
       const payload = await getPayloadClient()
       const result = await payload.find({
         collection: 'categories',
-        where: { slug: { equals: slug } },
+        where: { and: [{ slug: { equals: slug } }, БЕЗ_СКРИТИ] },
         limit: 1,
         depth: 2,
       })
@@ -183,7 +191,7 @@ export const getSubcategories = cache(async (parentId: number) =>
     const payload = await getPayloadClient()
     const result = await payload.find({
       collection: 'categories',
-      where: { parent: { equals: parentId } },
+      where: { and: [{ parent: { equals: parentId } }, БЕЗ_СКРИТИ] },
       sort: '_order',
       pagination: false,
       depth: 1,
@@ -205,6 +213,7 @@ export const getCategoryTree = cache(async (): Promise<Category[]> =>
       const payload = await getPayloadClient()
       const result = await payload.find({
         collection: 'categories',
+        where: БЕЗ_СКРИТИ,
         sort: '_order',
         pagination: false,
         depth: 0,
@@ -232,7 +241,7 @@ export const getStripCategories = cache(async (): Promise<Category[]> =>
       const payload = await getPayloadClient()
       const result = await payload.find({
         collection: 'categories',
-        where: { showInStrip: { equals: true } },
+        where: { and: [{ showInStrip: { equals: true } }, БЕЗ_СКРИТИ] },
         sort: '_order',
         pagination: false,
         // Стига за иконата; адресът на лентата е само slug.
@@ -442,6 +451,7 @@ export const getCategorySlugs = cache(async (): Promise<string[]> => {
   const payload = await getPayloadClient()
   const result = await payload.find({
     collection: 'categories',
+    where: БЕЗ_СКРИТИ,
     depth: 0,
     pagination: false,
   })
@@ -598,6 +608,7 @@ export const getFaqGroups = cache(async (): Promise<FaqGroup[]> =>
         }),
         payload.find({
           collection: 'categories',
+          where: БЕЗ_СКРИТИ,
           sort: '_order',
           depth: 0,
           pagination: false,

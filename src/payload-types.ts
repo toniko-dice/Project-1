@@ -897,6 +897,10 @@ export interface Category {
    */
   parent?: (number | null) | Category;
   /**
+   * Категорията изчезва от сайта — меню, карта на сайта, филтри, трохи, „Съвместим с", своята страница (404). Добавете пренасочване от адреса ѝ в „Пренасочвания". Скрийте и подкатегориите ѝ.
+   */
+  hidden?: boolean | null;
+  /**
    * Отнася се за лентата с икони на началната страница.
    */
   showInStrip?: boolean | null;
@@ -4912,6 +4916,7 @@ export interface CategoriesSelect<T extends boolean = true> {
   title?: T;
   slug?: T;
   parent?: T;
+  hidden?: T;
   showInStrip?: T;
   stripBadge?: T;
   filters?: T;

@@ -430,7 +430,8 @@ await payload.updateGlobal({
   data: {
     announcementEnabled: true,
     announcementText: 'Безплатна доставка за поръчки над 200 € · Гаранция 5 години',
-    announcementUrl: '/dostavka',
+    // Без линк — страница за доставката няма (`task-dostavka-i-trail.md`); с адрес лентата става линк.
+    announcementUrl: '',
     logo: logoImg,
     brandColor: '#00A862',
     shopUrl: 'https://example.com/shop',

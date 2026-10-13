@@ -34,6 +34,7 @@
     "test:dice": "tsx scripts/dice-parse-test.ts",
     "dice:test-po-grafik": "payload run src/dice-sync-test.ts --",
     "banner:biskvitki": "payload run src/banner-biskvitki.ts --",
+    "trail:skrivane": "payload run src/trail-skrivane.ts --",
     "domein:ecoflow-bg": "payload run src/domein-ecoflow-bg.ts --",
     "deploy": "node scripts/server.mjs deploy",
     "razblokirai": "node scripts/server.mjs razblokirai",

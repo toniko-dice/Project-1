@@ -236,7 +236,12 @@ export const revalidateCategory: CollectionAfterChangeHook = async ({ doc, previ
       'Сменен адрес на категорията',
     )
   }
-  if (doc?.slug) await освободиАдреса(req as never, categoryPath(doc.slug))
+  /*
+    Скрита категория няма жива страница — пренасочването ОТ адреса ѝ е
+    нарочно (TRAIL → „Чанти и калъфи", `task-dostavka-i-trail.md`) и не
+    се трие при запис на категорията.
+  */
+  if (doc?.slug && !doc.hidden) await освободиАдреса(req as never, categoryPath(doc.slug))
 
   return doc
 }
