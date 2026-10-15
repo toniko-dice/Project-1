@@ -36,7 +36,8 @@ export const SimpleTable: Block = {
           type: 'array',
           label: 'Клетки (по реда на колоните)',
           labels: { singular: 'Клетка', plural: 'Клетки' },
-          fields: [{ name: 'value', type: 'text', label: 'Стойност' }],
+          // Многоредово: нов ред в клетката се показва като нов ред (продуктите един под друг).
+          fields: [{ name: 'value', type: 'textarea', label: 'Стойност' }],
         },
       ],
     },

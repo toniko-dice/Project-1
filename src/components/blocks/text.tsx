@@ -1,3 +1,4 @@
+import { Fragment } from 'react'
 import { CaretDown } from '@phosphor-icons/react/dist/ssr'
 import { type JSXConvertersFunction, RichText } from '@payloadcms/richtext-lexical/react'
 
@@ -122,6 +123,7 @@ export const LegalMeta = ({ layout, updatedAt }: { layout: Layout; updatedAt: st
  * не стане линк ЕИК или друго число.
  */
 const Клетка = ({ value }: { value: string }) => {
+  if (value.includes('\n')) return <Редове text={value} />
   const v = value.trim()
   if (/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(v)) {
     return (
@@ -139,6 +141,15 @@ const Клетка = ({ value }: { value: string }) => {
   }
   return <>{value}</>
 }
+
+/** Нов ред в клетката (`\n`) → `<br>` — продуктите един под друг („Гаранционни срокове"). */
+const Редове = ({ text }: { text: string }) =>
+  text.split('\n').map((ред, i) => (
+    <Fragment key={i}>
+      {i ? <br /> : null}
+      {ред}
+    </Fragment>
+  ))
 
 export const SimpleTableSection = ({ block }: { block: BlockOf<'simpleTable'> }) => {
   const cols = (block.columns ?? []).map((c) => c.label ?? '')
@@ -246,7 +257,9 @@ export const SimpleTableSection = ({ block }: { block: BlockOf<'simpleTable'> })
               <ul className="divide-y divide-line">
                 {g.rows.map((r, ri) => (
                   <li key={ri} className="flex items-start justify-between gap-3 px-4 py-2.5 text-[14px]">
-                    <span className="text-ink-muted">{r.slice(1, -1).join(' · ')}</span>
+                    <span className="text-ink-muted">
+                      <Редове text={r.slice(1, -1).join(' · ')} />
+                    </span>
                     <span className="max-w-[45%] text-right font-medium">{r[r.length - 1]}</span>
                   </li>
                 ))}

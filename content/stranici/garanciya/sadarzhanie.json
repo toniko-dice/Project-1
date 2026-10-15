@@ -30,28 +30,28 @@
         {
           "cells": [
             "RIVER",
-            "RIVER 3, RIVER 3 (UPS)",
+            "RIVER 3\nRIVER 3 (UPS)",
             "24 месеца"
           ]
         },
         {
           "cells": [
             "RIVER",
-            "RIVER 3 Plus, RIVER 3 Plus (Wireless), RIVER 3 Max, RIVER 3 Max Plus, RIVER 3 Max Plus (Wireless), RIVER 3 Series Smart Extra Battery",
+            "RIVER 3 Plus\nRIVER 3 Plus (Wireless)\nRIVER 3 Max\nRIVER 3 Max Plus\nRIVER 3 Max Plus (Wireless)\nRIVER 3 Series Smart Extra Battery",
             "5 години"
           ]
         },
         {
           "cells": [
             "DELTA",
-            "DELTA 3, DELTA 3 Plus, DELTA 3 Classic, DELTA 3 Smart Extra Battery",
+            "DELTA 3\nDELTA 3 Plus\nDELTA 3 Classic\nDELTA 3 Smart Extra Battery",
             "5 години"
           ]
         },
         {
           "cells": [
             "DELTA",
-            "DELTA 3 Max, DELTA 3 Max Plus, DELTA 3 Max Plus Smart Extra Battery",
+            "DELTA 3 Max\nDELTA 3 Max Plus\nDELTA 3 Max Plus Smart Extra Battery",
             "3 + 2 години (3 години стандартна гаранция и 2 години удължена гаранция при регистрация в приложението EcoFlow)"
           ]
         },
@@ -65,7 +65,7 @@
         {
           "cells": [
             "DELTA",
-            "DELTA Pro 3, DELTA Pro Ultra",
+            "DELTA Pro 3\nDELTA Pro Ultra",
             "5 години"
           ]
         },
@@ -79,7 +79,7 @@
         {
           "cells": [
             "Соларни панели",
-            "160W Solar Panel, 60W Portable Solar Panel (Type-C), 45W Portable Solar Panel (Type-C), NextGen 220W Solar Panel",
+            "160W Solar Panel\n60W Portable Solar Panel (Type-C)\n45W Portable Solar Panel (Type-C)\nNextGen 220W Solar Panel",
             "24 месеца"
           ]
         },
@@ -93,49 +93,63 @@
         {
           "cells": [
             "Соларни панели",
-            "250W Rigid Solar Panel, 400W / 220W / 160W / 110W Lightweight Portable Solar Panel",
+            "250W Rigid Solar Panel\n400W Lightweight Portable Solar Panel\n220W Lightweight Portable Solar Panel\n160W Lightweight Portable Solar Panel\n110W Lightweight Portable Solar Panel",
             "5 години"
           ]
         },
         {
           "cells": [
             "Соларни панели",
-            "450W Rigid Solar Panel, 400W Rigid Solar Panel, 175W Rigid Solar Panel, 130W RVMax Rigid Solar Panel, 100W Rigid Solar Panel",
+            "400W Rigid Solar Panel\n175W Rigid Solar Panel\n130W RVMax Rigid Solar Panel\n100W Rigid Solar Panel",
             "10 години"
           ]
         },
         {
           "cells": [
+            "Соларни панели",
+            "450W Rigid Solar Panel",
+            "12 години"
+          ]
+        },
+        {
+          "cells": [
+            "Соларни панели",
+            "500W Rigid Solar Panel",
+            "15 години"
+          ]
+        },
+        {
+          "cells": [
             "STREAM",
-            "STREAM Microinverter, STREAM Pro, STREAM Ultra, STREAM Ultra X",
+            "STREAM Microinverter\nSTREAM Pro\nSTREAM Ultra\nSTREAM Ultra X",
             "10 години"
           ]
         },
         {
           "cells": [
             "WAVE",
-            "WAVE 3, WAVE 3 Add-on Battery, WAVE 2 Add-on Battery",
+            "WAVE 3\nWAVE 3 Add-on Battery\nWAVE 2 Add-on Battery",
             "24 месеца"
           ]
         },
         {
           "cells": [
             "GLACIER",
-            "GLACIER Classic, GLACIER Plug-in Battery",
+            "GLACIER Classic\nGLACIER Plug-in Battery",
             "24 месеца"
           ]
         },
         {
           "cells": [
             "RAPID",
-            "RAPID 65W GaN Charger, RAPID Magnetic Power Bank",
+            "RAPID 65W GaN Charger\nRAPID Magnetic Power Bank",
             "18 месеца"
           ]
         },
         {
           "cells": [
             "RAPID",
-            "RAPID Pro Power Bank, RAPID Pro X Power Bank, RAPID Pro Charger, RAPID Pro Desktop Charger, RAPID Pro USB-C to USB-C Cable",
+            "RAPID Pro Power Bank\nRAPID Pro X Power Bank\nRAPID Pro Charger\nRAPID Pro Desktop Charger\nRAPID Pro USB-C to USB-C Cable",
             "2 години"
           ]
         },
@@ -149,21 +163,21 @@
         {
           "cells": [
             "Smart Home Panel",
-            "Relay Module (6A, 13A, 16A, 20A и 30A)",
+            "Relay Module 6A\nRelay Module 13A\nRelay Module 16A\nRelay Module 20A\nRelay Module 30A",
             "24 месеца"
           ]
         },
         {
           "cells": [
             "Power Kits",
-            "Power Hub, Power Hub 5kVA, Power Kits Console, AC/DC Smart Distribution Panel",
+            "Power Hub\nPower Hub 5kVA\nPower Kits Console\nAC/DC Smart Distribution Panel",
             "5 години"
           ]
         },
         {
           "cells": [
             "Power Kits",
-            "Power Dock, Power Link",
+            "Power Dock\nPower Link",
             "24 месеца"
           ]
         },
@@ -205,7 +219,7 @@
         {
           "cells": [
             "Други аксесоари",
-            "Smart Meter, Shelly Pro 3EM, Manual Transfer Switch, DELTA Pro Remote Control, RAPID Pro X Apple Watch Charger, чанти и калъфи, колички, стойки и монтажни комплекти, аксесоари за WAVE и GLACIER, къмпинг аксесоари",
+            "Smart Meter\nShelly Pro 3EM\nManual Transfer Switch\nDELTA Pro Remote Control\nRAPID Pro X Apple Watch Charger\nчанти и калъфи\nколички\nстойки и монтажни комплекти\nаксесоари за WAVE и GLACIER\nкъмпинг аксесоари",
             "24 месеца"
           ]
         }
@@ -221,9 +235,11 @@
   "_neyasni": [
     "Източник: https://eu.ecoflow.com/pages/warranty-policy (снето на 07.10.2026). Махнато по решение на собственика: всичко, което важи само за EU сайта — 36 месеца за Испания, Kickstarter, EcoCredits подаръци, удължаване 2022 г., регистрация на ecoflow.com, рефърбишд, правилото от 31.07.2026 за продажби от EcoFlow в ЕС, „Mail-in“ куриерът на EcoFlow.",
     "Рекламации — към dice.bg (support@dice.bg или формата на /kontakti); изпращане с Еконт до офис Асеновград, кв. Запад, комплекс „Сани“, за ДИ СИ 2008 ООД, за сметка на клиента; при гаранционен дефект връщането към клиента е за сметка на фирмата (по указание на собственика).",
-    "Сроковете в таблицата са от EcoFlow; за продуктите, които ги няма в таблицата на EcoFlow, са взети от dice.bg (07.10.2026): DELTA 3 Ultra Plus, RIVER 3 Max Plus (Wireless), Power Hub 5kVA — 60 месеца; 130W RVMax — 120 месеца; релейни модули 6A/20A/30A, Power Dock, Power Link, Smart Meter, Manual Transfer Switch и аксесоарите — 24 месеца. Shelly Pro 3EM и Cushion — в dice.bg не е посочено, сложени 24 месеца по решение на собственика.",
-    "450W Rigid: EcoFlow дава „12 години / 15 години“ в обща клетка с 500W; по решение на собственика е взет срокът от dice.bg — 120 месеца (10 години).",
-    "DELTA 2 Max Extra Battery и DELTA Pro 3 Smart Extra Battery не са в сайта — не са включени.",
+    "Сроковете в таблицата са от EcoFlow (таблицата е проверена отново на 15.10.2026); за продуктите, които ги няма в таблицата на EcoFlow, са взети от dice.bg (07.10.2026): DELTA 3 Ultra Plus, RIVER 3 Max Plus (Wireless), Power Hub 5kVA — 60 месеца; 130W RVMax — 120 месеца; релейни модули 6A/20A/30A, Power Dock, Power Link, Smart Meter, Manual Transfer Switch и аксесоарите — 24 месеца. Shelly Pro 3EM и Cushion — в dice.bg не е посочено, сложени 24 месеца по решение на собственика.",
+    "450W Rigid — 12 години, 500W Rigid — 15 години, по таблицата на EcoFlow (проверена от Cowork на 15.10.2026); старото решение 450W = 10 години по dice.bg отпада. 500W е добавен по решение на собственика, въпреки че го няма в сайта.",
+    "Нови модели в таблицата на EcoFlow (15.10.2026), проверени в базата на сървъра — НЕ са добавени, защото ги няма в сайта като видими продукти: DELTA 3 1500, DELTA 2 Max Extra Battery, DELTA Pro 3 Smart Extra Battery, 520W Rigid Solar Panel, 400W / 220W / 110W / 60W / 45W Solar Panel, 28W Portable Solar Panel, NextGen 160W Solar Panel (в сайта са други модели — 60W/45W Type-C, NextGen 220W Bifacial, 160W Solar Panel, Lightweight — те вече са в таблицата), STREAM AC Pro, STREAM Max, STREAM 5000, STREAM AC 5000, STREAM Expansion Battery 5000, STREAM Gateway, GLACIER (1-во пок.), BLADE Lawn Sweeper Kit, BLADE Smart Extra Battery, RAPID Power Bank (без Pro), Single Axis Solar Tracker 2, EcoFlow HeatGuard Solar Film, PowerInsight Home Energy Monitor. Добавени — няма.",
+    "Стойките за STREAM — 24 месеца (ред „Други аксесоари“) по решение на собственика; EcoFlow дава 1 година.",
+    "Продуктите в клетката са един под друг (нов ред в клетката), като в таблицата на EcoFlow — от 15.10.2026.",
     "Текстът е адаптиран: гарант и сервиз е ДИ СИ 2008 ООД, официален представител на EcoFlow за България. Частта „Ограничаване на отговорността“ е съкратена — махнат е общият отказ от подразбиращи се гаранции (ГЛАВНИ БУКВИ), който по българското право за потребители не е приложим. Добавено „прилага се българското законодателство“.",
     "Текстът е превод на правни условия. Препоръчително е юрист да го прегледа, преди сайтът да се пусне — особено частта „Ограничаване на отговорността“ спрямо българското законодателство за защита на потребителите."
   ]
