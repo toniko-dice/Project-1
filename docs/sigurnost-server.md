@@ -1,5 +1,13 @@
 # Сигурност на сървъра и мрежата — списък за качването (ecoflow.bg)
 
+> **Състояние към 16 октомври 2026** (`task-domein-ecoflow-bg.md` — сайтът е на **https://ecoflow.bg** през Cloudflare, заключен, `SITE_NOINDEX=true`):
+> - ✅ т. 1 (частично, от хостинга): DNS и прокси през Cloudflare, Origin сертификат на сървъра. **Cloudflare се управлява само от хостинга** — останалото от т. 1 (режим на SSL, WAF, правила, HSTS, известия) е при тях; препоръките — в отчета към собственика.
+> - ✅ т. 2: UFW — 80/443 **само от диапазоните на Cloudflare** (IPv4 + IPv6), 22 — от навсякъде; `deploy/cloudflare-ips.sh` + седмичен таймер обновява диапазоните (само публичните списъци; при грешка не пипа). Пряко по IP: порт 80 → 301 към домейна, https — `ssl_reject_handshake`; отвън по IP не се стига.
+> - ✅ т. 5: `real_ip` от `CF-Connecting-IP` за диапазоните на Cloudflare (`conf.d/cloudflare-realip.conf`) — логовете и `limit_req` виждат истинския IP. `www` → 301 към `https://ecoflow.bg`. Без HSTS засега.
+> - ✅ т. 3: fail2ban `ecoflow-login` — само запис (`banaction = dummy`; бан по IP зад Cloudflare не действа); `sshd` — истински бан.
+> - ✅ Сертификатът за IP (Let's Encrypt) — махнат; `snap.certbot.renew.timer` и `ecoflow-cert-check.timer` — изключени. Архиви: `/root/nginx-backup-2026-10-16-1524.tgz`, `/root/letsencrypt-backup-2026-10-16.tgz`, `/root/ufw-before-2026-10-16.txt`, `.env.bak-predi-domein`.
+> - ⏳ т. 7 (бекъп извън сървъра), т. 8 (наблюдение) — отделни задачи.
+
 > **Състояние към 13 октомври 2026** (`task-otvaryane-https-ip.md` — сайтът е на https://91.212.13.155, заключен, без домейн и без Cloudflare):
 > - ✅ т. 2: Node само на `127.0.0.1:3000`; UFW — само 22, 80, 443 (80/443 — от всички, не от Cloudflare: Cloudflare още няма).
 > - ✅ т. 3: само ключове, root само с ключ (`prohibit-password`), потребител `ecoflow`, fail2ban — само `sshd` (10 → 15 мин.) и `ecoflow-login` (30 грешни входа за 10 мин. → 15 мин., само 80/443), без нарастване и без `recidive`. Правило за сканиране няма: банна офиса (динамични IP — бял списък не помага; `task-fail2ban-bez-blokirane.md`). Отблокиране: `npm run razblokirai`.
