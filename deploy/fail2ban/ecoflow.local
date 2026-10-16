@@ -26,3 +26,9 @@ maxretry = 30
 findtime = 10m
 bantime  = 15m
 bantime.increment = false
+# Зад Cloudflare (ecoflow.bg, 16.10.2026): на 80/443 идват само IP-тата на
+# Cloudflare — бан в nftables по истинския IP не спира нищо, а по IP-то на
+# Cloudflare би спрял всички. Затова действието е само запис (`dummy`):
+# „Ban …" в /var/log/fail2ban.log и в дневния отчет. Входът се пази от
+# limit_req в nginx (10/мин.) и от заключването на акаунта (5 опита).
+banaction = dummy

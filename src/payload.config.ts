@@ -28,6 +28,7 @@ import { Testimonials } from './collections/Testimonials'
 import { Users } from './collections/Users'
 import { dailyBackupTask } from './jobs/backupTask'
 import { mailLogAdapter } from './lib/mail-log'
+import { SITE_URL } from './lib/site-url'
 import { diceSyncTask } from './jobs/diceSyncTask'
 import { DiceSyncs } from './collections/DiceSyncs'
 import { PriceApprovals } from './collections/PriceApprovals'
@@ -89,7 +90,20 @@ function mailAdapter() {
   })
 }
 
+/*
+  Откъде браузърът може да праща бисквитката за вход (CSRF) и CORS: адресът
+  на сайта (`NEXT_PUBLIC_SITE_URL` — https://ecoflow.bg) и SSH тунелът
+  (http://localhost:8080 — резервният вход). Заявка с бисквитка от друг
+  произход се приема като анонимна. `serverURL` НЕ се задава нарочно: с него
+  админът през тунела праща заявките към ecoflow.bg (друг произход, без
+  бисквитката) и тунелът спира да работи; без него адресите са относителни.
+  Пълните адреси в сайта и имейлите идват от `SITE_URL`, не от `serverURL`.
+*/
+const ПРОИЗХОДИ = [...new Set([SITE_URL, 'http://localhost:8080'])]
+
 export default buildConfig({
+  cors: ПРОИЗХОДИ,
+  csrf: ПРОИЗХОДИ,
   admin: {
     user: Users.slug,
     /*
