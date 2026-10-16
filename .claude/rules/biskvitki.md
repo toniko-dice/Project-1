@@ -17,5 +17,7 @@ paths:
 - **`ecoflow_consent`** — first-party, `Lax`, `Secure` на https, 6 месеца.
 - **Доказателство** — „Съгласия за бисквитки" през `POST /api/cookie-consents/record`, без IP; 12 месеца.
 - **GA4 — само с `NEXT_PUBLIC_GA_ID` и само след съгласие** (basic consent mode): в `<head>` само `consent default` (denied); `gtag/js` — след „Аналитични"; оттегляне → трие `_ga`, `_ga_*` и презарежда. `track()` праща само при съгласие. `NEXT_PUBLIC_*` се вгражда при билда.
+- **ID-то: `G-VSJG64NTJR`** — само в `.env` на сървъра (16.10.2026); локалният `.env` остава празен (разработката не праща данни). CSP няма (нито nginx, нито Next) — ако се добави: script `www.googletagmanager.com`, connect/img `*.google-analytics.com`, `*.analytics.google.com`.
+- **Проверка след промяна** (инкогнито, на сайта): преди избор и след „Отказвам" — нито заявка към `googletagmanager.com` / `google-analytics.com`, нито `_ga*`; след „Приемам" — `gtag/js?id=G-VSJG64NTJR`, `collect?v=2…tid=G-VSJG64NTJR`, бисквитки `_ga` и `_ga_VSJG64NTJR`; оттегляне от „Настройки на бисквитките" — `_ga*` изтрити, страницата се презарежда, без нови заявки. При заключен сайт — само след вход (на `/vhod` банер няма).
 - Настройките се отварят от линк `#nastroyki-biskvitki` или събитие `ecoflow:consent-open`. Банерът е само в `(frontend)` — не в `/admin` и не на `/vhod`.
 - Посетителят днес не получава нито една бисквитка; Gravatar в админа е изключен (`admin.avatar: 'default'`).

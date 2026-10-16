@@ -259,8 +259,11 @@ npm run mail:catcher
 при промяна на политиката вдигнете `CONSENT_VERSION` и банерът излиза пак на
 всички.
 
-**Google Analytics:** сложете ID-то (`G-…`) в `NEXT_PUBLIC_GA_ID` в `.env` на
-сървъра и `npm run deploy`. Без съгласие GA не се зарежда изобщо.
+**Google Analytics 4:** ID-то е **`G-VSJG64NTJR`** (не е тайно) —
+`NEXT_PUBLIC_GA_ID` в `.env` **на сървъра** (от 16.10.2026; предишният `.env` —
+`.env.bak-predi-ga4`). **Локално остава празно** — разработката не праща
+данни. Влиза в билда: смяна → `npm run deploy`. Без съгласие за
+„Аналитични" GA не се зарежда изобщо (нито заявка, нито бисквитка).
 
 ## Сървър
 
@@ -413,7 +416,8 @@ SMTP — попълнете `SMTP_*` в `.env` на сървъра, махнет
 - в `.env`: `NEXT_PUBLIC_SITE_URL` и `NEXT_PUBLIC_SERVER_URL` =
   `https://ecoflow.bg`, `INTERNAL_SERVER_URL=http://127.0.0.1:3000`
   (middleware-ът и опресняването не минават през nginx и лимитите),
-  `SITE_NOINDEX=true`. Предишните `.env` — `.env.bak-predi-domein`,
+  `SITE_NOINDEX=true`, `NEXT_PUBLIC_GA_ID=G-VSJG64NTJR` (локално — празно).
+  Предишните `.env` — `.env.bak-predi-ga4`, `.env.bak-predi-domein`,
   `.env.bak-predi-https`.
 - Payload: `cors` и `csrf` — адресът на сайта и `http://localhost:8080`
   (тунелът); `serverURL` нарочно не е зададен (иначе админът през тунела
