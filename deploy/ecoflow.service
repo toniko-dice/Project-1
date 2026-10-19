@@ -13,6 +13,10 @@ WorkingDirectory=/srv/ecoflow-bg
 Environment=NODE_ENV=production
 # Само локално — отвън се стига през nginx.
 ExecStart=/usr/bin/node node_modules/next/dist/bin/next start -H 127.0.0.1 -p 3000
+# След старта — опресняване на кеша: Next пази отметките „опресни" само в
+# паметта и рестарт без билд връщаше стария HTML (19.10.2026).
+# „-" — неуспех тук не спира сайта.
+ExecStartPost=-/srv/ecoflow-bg/scripts/opresni-sled-start.sh
 Restart=always
 RestartSec=5
 MemoryMax=3G
