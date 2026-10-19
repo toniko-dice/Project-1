@@ -387,12 +387,24 @@ IP не се отваря. (13–16.10.2026 сайтът беше на https://9
 
 ### Имейли на сървъра
 
-Докато няма SMTP, писмата **не се изпращат** — записват се в
-`/srv/ecoflow-bg/mail-log/` (HTML, текст и JSON с получателите) и ред в
-лога (`journalctl -u ecoflow`). Формите работят нормално. Режимът се
-включва сам без `SMTP_HOST`, или изрично с `EMAIL_MODE=log`. Когато има
-SMTP — попълнете `SMTP_*` в `.env` на сървъра, махнете `EMAIL_MODE` и
-рестартирайте (`sudo systemctl restart ecoflow`).
+**От 19 октомври 2026 писмата се изпращат** през SMTP на хостинга:
+`SMTP_HOST=mail.dice.bg`, `SMTP_PORT=587` (STARTTLS, `SMTP_SECURE=false`;
+465 от сървъра не е отворен), `SMTP_USER=office@ecoflow.bg`,
+`MAIL_FROM=EcoFlow България <office@ecoflow.bg>`,
+`QUOTE_NOTIFY_TO=office@ecoflow.bg` (заявки и контакти; пощата се
+пренасочва от хостинга). **Паролата (`SMTP_PASS`) е САМО в `.env` на
+сървъра** — никога в git, в чата или в логовете; въвежда я собственикът.
+Връзката от сървъра до `mail.dice.bg` е разрешена от хостинга.
+
+Грешка при пращане не губи заявката: тя е в админа, а редът „вътрешен →
+…: ГРЕШКА …" — в „Дневник на имейлите" на заявката (без паролата).
+Предишните `.env` — `.env.bak-predi-smtp`, `.env.bak-predi-office`,
+`.env.bak-predi-smtp-vkl`.
+
+**Временно без пращане** (напр. тест): `EMAIL_MODE=log` в `.env` →
+`sudo systemctl restart ecoflow`; писмата тогава отиват в
+`/srv/ecoflow-bg/mail-log/` (HTML, текст и JSON) и ред в
+`journalctl -u ecoflow`. Режимът се включва сам и без `SMTP_HOST`.
 
 ### Синхронизацията с dice.bg
 
