@@ -2,6 +2,13 @@
 
 <!-- Пренесено дословно от CLAUDE.md на 13.10.2026 (task-claude-md-prenarezhdane.md). -->
 
+> **Промяна 19.10.2026 (`task-imeil-office.md`):** имейлът за клиенти е
+> **`office@ecoflow.bg`** вместо `support@dice.bg` — „Общи настройки",
+> правните страници, „Гаранция", „За ДИ СИ 2008", PDF-ът на новите оферти,
+> получателят на формите и Reply-To на копията (`npm run imeil:office`,
+> `CONTACT_EMAIL` в `src/lib/contact.ts`). Текстът по-долу е историята —
+> където пише support@dice.bg, сега е office@ecoflow.bg.
+
 > **Промяна след 8.10.2026 (решение на собственика, законово изискване):**
 > телефонът на фирмата се показва **САМО на `/kontakti`**; никъде другаде
 > (футър, мобилно меню, имейли, PDF, `Organization`/`ContactPoint`/`Store`).

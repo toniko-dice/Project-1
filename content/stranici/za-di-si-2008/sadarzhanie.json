@@ -132,7 +132,7 @@
         ],
         [
           "Имейл",
-          "support@dice.bg"
+          "office@ecoflow.bg"
         ]
       ]
     },
@@ -141,7 +141,7 @@
       "theme": "dark",
       "headingLevel": "h2",
       "heading": "Имате въпрос?",
-      "body": "Пишете ни през формата за контакт или на support@dice.bg.",
+      "body": "Пишете ни през формата за контакт или на office@ecoflow.bg.",
       "buttons": [
         {
           "label": "Контакти",

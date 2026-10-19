@@ -197,7 +197,7 @@ npm run seed
 ## Имейли (заявките за оферта)
 
 Страницата `/oferta-za-firmi` праща два имейла за всяка заявка: вътрешен до
-`QUOTE_NOTIFY_TO` (по подразбиране support@dice.bg; „Отговор" отива при
+`QUOTE_NOTIFY_TO` (по подразбиране office@ecoflow.bg; „Отговор" отива при
 клиента) и копие до клиента. Изпращането е през SMTP (адаптерът на Payload
 за nodemailer). Настройките са в `.env` — виж `.env.example`.
 

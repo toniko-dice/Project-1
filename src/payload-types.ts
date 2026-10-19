@@ -3236,7 +3236,7 @@ export interface QuoteFile {
   sizes?: {};
 }
 /**
- * Съобщенията от формата на страницата „Контакти". „Отговор" на писмото до support@dice.bg отива направо при клиента.
+ * Съобщенията от формата на страницата „Контакти". „Отговор" на писмото до office@ecoflow.bg отива направо при клиента.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "contact-messages".

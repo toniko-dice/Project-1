@@ -32,3 +32,4 @@ paths:
 - **„Обща отстъпка %" се прилага само във формата** (`OfferGeneralDiscount`).
 - Броячите в менюто — `CollectionNavBadge` / `QuoteNavBadge`.
 - Имейлите — `src/lib/quote/mail.ts` (общ шаблон, без телефон); локално — `npm run mail:catcher`.
+- **Кой до кого пише** (19.10.2026): „От" — `MAIL_FROM` (`EcoFlow България <office@ecoflow.bg>`); заявка за оферта и контакт → **`office@ecoflow.bg`** (`QUOTE_NOTIFY_TO` / `CONTACT_NOTIFY_TO`, иначе `CONTACT_EMAIL`), Reply-To = клиентът; копието до клиента — Reply-To = „Общи настройки" → имейл (`office@ecoflow.bg`). `support@dice.bg` не се ползва. „Данни за офертите" → имейл — по подразбиране `CONTACT_EMAIL` (PDF-ът на новите оферти); старите оферти не се пипат.

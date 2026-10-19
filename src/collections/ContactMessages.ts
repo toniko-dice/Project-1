@@ -24,7 +24,7 @@ export const ContactMessages: CollectionConfig = {
     useAsTitle: 'name',
     defaultColumns: ['name', 'createdAt', 'email', 'phone', 'status'],
     listSearchableFields: ['name', 'email', 'phone', 'message'],
-    description: 'Съобщенията от формата на страницата „Контакти". „Отговор" на писмото до support@dice.bg отива направо при клиента.',
+    description: 'Съобщенията от формата на страницата „Контакти". „Отговор" на писмото до office@ecoflow.bg отива направо при клиента.',
   },
   defaultSort: '-createdAt',
   access: { read: isSales, create: () => false, update: isSales, delete: isAdmin },

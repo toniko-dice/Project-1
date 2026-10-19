@@ -1,7 +1,7 @@
 /**
  * Двата имейла от контактната форма (`/kontakti`, `task-futar.md`) —
- * вътрешният до support@dice.bg (`CONTACT_NOTIFY_TO`, иначе
- * `QUOTE_NOTIFY_TO`) с Reply-To на клиента и краткото потвърждение до
+ * вътрешният до office@ecoflow.bg (`CONTACT_NOTIFY_TO`, иначе
+ * `QUOTE_NOTIFY_TO`, иначе `CONTACT_EMAIL`) с Reply-To на клиента и краткото потвърждение до
  * клиента. Шаблонът е същият като на заявките за оферта (`layout`).
  * Без телефона на фирмата.
  *
@@ -9,6 +9,7 @@
  */
 import type { Payload } from 'payload'
 
+import { CONTACT_EMAIL } from './contact'
 import { absoluteUrl, SITE_URL } from './site-url'
 import { button, esc, FONT, INK, layout, type MailContacts, MUTED, nl2br, rows, siteHost, textFooter } from './quote/mail'
 
@@ -110,7 +111,7 @@ ${button('Към сайта', SITE_URL)}`,
 
 /** Изпраща двата имейла; връща ред за дневника. Грешка в пощата не губи съобщението. */
 export const sendContactMails = async (payload: Payload, m: ContactMail, c: MailContacts): Promise<string> => {
-  const notifyTo = process.env.CONTACT_NOTIFY_TO || process.env.QUOTE_NOTIFY_TO || 'support@dice.bg'
+  const notifyTo = process.env.CONTACT_NOTIFY_TO || process.env.QUOTE_NOTIFY_TO || CONTACT_EMAIL
   const log: string[] = []
   const internal = internalContactMail(m, c)
   try {

@@ -18,6 +18,7 @@ import type { Payload } from 'payload'
 
 import { mediaUrl } from '../media'
 import { CONTACT_PATH, PRIVACY_PATH } from '../legal'
+import { CONTACT_EMAIL } from '../contact'
 import { absoluteUrl, SITE_URL } from '../site-url'
 import {
   CLIENT_TYPES,
@@ -368,7 +369,7 @@ export const loadMailContacts = async (payload: Payload): Promise<MailContacts> 
 
 /** Изпраща двата имейла; връща ред за дневника на заявката. Грешка не спира заявката. */
 export const sendQuoteMails = async (payload: Payload, r: MailRequest, c: MailContacts): Promise<string> => {
-  const notifyTo = process.env.QUOTE_NOTIFY_TO || 'support@dice.bg'
+  const notifyTo = process.env.QUOTE_NOTIFY_TO || CONTACT_EMAIL
   const log: string[] = []
   const internal = internalMail(r, c)
   try {

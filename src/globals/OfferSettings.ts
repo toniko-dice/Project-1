@@ -2,6 +2,7 @@ import type { GlobalConfig } from 'payload'
 
 import { PAYMENT_OPTIONS } from '../lib/offers/calc'
 import { hiddenFor, isAdmin, isSales } from '../lib/access'
+import { CONTACT_EMAIL } from '../lib/contact'
 
 /**
  * „Данни за офертите" — продавачът, банковата сметка и условията по
@@ -35,7 +36,7 @@ export const OfferSettings: GlobalConfig = {
           type: 'row',
           fields: [
             { name: 'phone', type: 'text', label: 'Телефон', admin: { width: '33%', description: 'Не се показва в PDF-а.' } },
-            { name: 'email', type: 'email', label: 'Имейл', defaultValue: 'support@dice.bg', admin: { width: '33%' } },
+            { name: 'email', type: 'email', label: 'Имейл', defaultValue: CONTACT_EMAIL, admin: { width: '33%' } },
             { name: 'website', type: 'text', label: 'Сайт', defaultValue: 'ecoflow.bg', admin: { width: '34%' } },
           ],
         },

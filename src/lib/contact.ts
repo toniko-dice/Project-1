@@ -15,6 +15,14 @@ export type ContactPayload = {
 
 export type ContactErrors = Partial<Record<keyof ContactPayload | 'captcha', string>>
 
+/**
+ * Имейлът за клиенти — навсякъде, където клиентът вижда или получава адрес
+ * за връзка, и получателят на формите (решение на собственика, 19.10.2026;
+ * преди — support@dice.bg). Пощата се пренасочва от хостинга. На сайта
+ * адресът идва от „Общи настройки" → имейл; тук е резервата в кода.
+ */
+export const CONTACT_EMAIL = 'office@ecoflow.bg'
+
 export const MESSAGE_MIN = 10
 export const MESSAGE_MAX = 5000
 

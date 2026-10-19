@@ -58,6 +58,7 @@ import * as migration_20261012_102150_dice_odobrenie_ceni from './20261012_10215
 import * as migration_20261012_131700_domein_ecoflow_bg from './20261012_131700_domein_ecoflow_bg';
 import * as migration_20261013_052710_banner_biskvitki from './20261013_052710_banner_biskvitki';
 import * as migration_20261013_101202_kategoriya_skrita from './20261013_101202_kategoriya_skrita';
+import * as migration_20261019_095550_imeil_office from './20261019_095550_imeil_office';
 
 export const migrations = [
   {
@@ -358,6 +359,11 @@ export const migrations = [
   {
     up: migration_20261013_101202_kategoriya_skrita.up,
     down: migration_20261013_101202_kategoriya_skrita.down,
-    name: '20261013_101202_kategoriya_skrita'
+    name: '20261013_101202_kategoriya_skrita',
+  },
+  {
+    up: migration_20261019_095550_imeil_office.up,
+    down: migration_20261019_095550_imeil_office.down,
+    name: '20261019_095550_imeil_office'
   },
 ];
