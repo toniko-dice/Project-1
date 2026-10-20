@@ -5,7 +5,7 @@
     "slug": "obshti-usloviya",
     "metaTitle": "Общи условия за ползване | EcoFlow България",
     "metaDescription": "Общи условия за ползване на сайта ecoflow.bg на ДИ СИ 2008 ООД — официален дистрибутор на EcoFlow за България: продуктова информация, цени, препращане към dice.bg и гаранция.",
-    "noindex": true,
+    "noindex": false,
     "pravna": true
   },
   "sekcii": [

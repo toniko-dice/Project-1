@@ -5,7 +5,7 @@
     "slug": "poveritelnost",
     "metaTitle": "Политика за поверителност | EcoFlow България",
     "metaDescription": "Как ДИ СИ 2008 ООД обработва и защитава личните данни на посетителите на ecoflow.bg — заявки за оферти, абонамент за новини и вашите права.",
-    "noindex": true,
+    "noindex": false,
     "pravna": true
   },
   "sekcii": [

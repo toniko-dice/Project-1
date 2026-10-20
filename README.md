@@ -353,13 +353,22 @@ IP не се отваря. (13–16.10.2026 сайтът беше на https://9
 - Конфигурациите са в `deploy/` (nginx — 4 файла, fail2ban, systemd,
   `cloudflare-ips.sh`); на сървъра са копия (виж първите редове на всеки файл).
 
-### `SITE_NOINDEX` — предпазител срещу индексиране
+### Индексиране — сайтът е пуснат (20 октомври 2026)
 
-`SITE_NOINDEX=true` в `.env` на сървъра: `robots.txt` е `Disallow: /` и
-всеки отговор носи `X-Robots-Tag: noindex, nofollow` — **дори ако някой
-отключи сайта**. nginx слага същото заглавие (`snippets/ecoflow-app.conf`).
-**Маха се само при официалното пускане** — и от `.env` (после
-`npm run deploy`), и редът в nginx.
+**`SITE_NOINDEX=false`** в `.env` на сървъра — сайтът се индексира.
+`robots.txt`: `Allow: /`, `Allow: /api/media/`, `Disallow: /admin`,
+`Disallow: /api/`, `Sitemap: https://ecoflow.bg/sitemap.xml`. Флагът се
+чете при старт (middleware) — смяна → `sudo systemctl restart ecoflow`, без
+билд. С `SITE_NOINDEX=true` (авариен предпазител) — `robots.txt`
+`Disallow: /` и `X-Robots-Tag: noindex, nofollow` на всеки отговор.
+
+`noindex` остава само там, където трябва: `/admin` и `/api/` (без
+`/api/media/` — снимките) — `X-Robots-Tag` от nginx (`map $uri $ef_robots`
+в `conf.d/ecoflow-limits.conf`); `/admin` и `/tarsene` — и `<meta
+name="robots">` от сайта; адреси с параметри (филтри) — `noindex, follow`.
+Правните страници вече са без отметката „Скрита от търсачките".
+Cloudflare кешира снимките до 4 часа — смяна на заглавията им се вижда
+след изтичането (или след изчистване на кеша от хостинга).
 
 ### Главната база е на сървъра
 
