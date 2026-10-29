@@ -241,3 +241,21 @@
 | Total Harmonic Distortion | общо хармонично изкривяване |
 | wiring plan | схема на свързване |
 
+## Добавени от преводите (партида 5)
+
+| English | Български |
+|---|---|
+| add-on battery | допълнителна батерия |
+| Air Flow Volume | дебит на въздуха |
+| Car Vent Seal / Velcro Strap Handle / Shower Kit | уплътнение за прозореца на автомобила / дръжка с велкро лента / комплект за душ |
+| Cooling / Heating Capacity | охлаждащ / отоплителен капацитет |
+| Drainage button / drain hose | бутон за източване (Drainage) / маркуч за източване |
+| electrical panel / main panel | електрическо табло / главно електрическо табло |
+| Flow Rate | дебит |
+| ground lug | клема за заземяване |
+| local air conditioner | локален климатизатор |
+| Max / Sleep / Eco mode (WAVE) | режим Max / Sleep / Eco (с обяснение при първа поява) |
+| multimeter | мултицет |
+| Regulation (EU) 2023/1542 | Регламент (ЕС) 2023/1542 |
+| transfer switch / Manual Transfer Switch | превключвател на захранването / Manual Transfer Switch (ръчен превключвател на захранването) |
+
