@@ -97,7 +97,8 @@ const блокове = (t) => {
   for (const m of t.matchAll(/^:::(\w+)\s*$/gm)) c[m[1]] = (c[m[1]] ?? 0) + 1
   return c
 }
-const безБлоковеИКод = (t) => t.replace(/`[^`]*`/g, '').replace(/^:::\w*\s*$/gm, '')
+// Без кода, редовете на блоковете и мерните единици след число („59.1 in“ — инчове, не английско „in“).
+const безБлоковеИКод = (t) => t.replace(/`[^`]*`/g, '').replace(/^:::\w*\s*$/gm, '').replace(/(\d)\s?(in|ft|lbs?|oz)\b\.?/gi, '$1')
 
 function провери(x) {
   const грешки = []

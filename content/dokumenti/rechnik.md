@@ -181,3 +181,36 @@
 | standalone use | самостоятелна употреба |
 | UK PSTI regulation (2023 No. 1007) | Наредбата от 2023 г. за сигурността на продуктите и телекомуникационната инфраструктура (изисквания за сигурност към съответните свързваеми продукти) |
 
+## Добавени от преводите (партида 3)
+
+| English | Български |
+|---|---|
+| Bifaciality Coefficient | коефициент на двустранност |
+| cable pouch | джоб за кабела |
+| caster (with/without brake) | колелце (със/без спирачка) |
+| Cell Type / Connector Type | вид на клетките / вид на конектора |
+| control box | контролната кутия |
+| counterweight | противотежест |
+| crossbar | напречна греда |
+| Efficiency | ефективност |
+| expansion bolt | анкерен болт |
+| hook kit | комплект куки |
+| In series / In parallel | последователно / паралелно (свързване) |
+| load capacity | товароносимост |
+| Maximum System Voltage | максимално напрежение на системата |
+| Open Circuit Voltage (Voc) / Short Circuit Current (Isc) | напрежение на отворена верига (Voc) / ток на късо съединение (Isc) |
+| Optimal Operating Voltage / Current (Vmp / Imp) | оптимално работно напрежение / оптимален работен ток |
+| PV extension cable | PV удължителен кабел |
+| railing | парапет |
+| Recommended Ambient Temperature | препоръчителна околна температура |
+| Safety Guidelines | указания за безопасност |
+| Sleep (mode) | режим на сън (≠ hibernation → режим на заспиване) |
+| solar angle guide | указател за ъгъла спрямо слънцето |
+| spirit level | нивелир (либела) |
+| Standard Test Conditions (STC) / Bifacial (BSTC) | стандартни условия на изпитване (STC) / за двулицеви панели (BSTC) |
+| Temperature Coefficient of … | температурен коефициент на … |
+| tilt angle / Tilt Mount Bracket | ъгъл на наклона / стойка с регулируем наклон |
+| TOPCon monocrystalline silicon | монокристален силиций TOPCon |
+| Unfolded / Folded Dimensions | размери в разгънато / сгънато състояние |
+| WEEE | ОЕЕО (WEEE) |
+

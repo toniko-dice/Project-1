@@ -92,7 +92,7 @@ const общоИме = (заглавия: string[]) => {
   if (среди.some((x) => !x)) return имена.join(' / ')
   return [...думи[0]!.slice(0, нач), среди.join('/'), ...думи[0]!.slice(думи[0]!.length - край)].join(' ')
 }
-const версия = (t: string) => t.match(/\bV\s?(\d+(?:\.\d+)*)/i)?.[1] ?? null
+const версия = (t: string) => t.match(/(?<![A-Za-z0-9])V\s?(\d+(?:\.\d+)*)/i)?.[1] ?? null // не `\b`: „_V1.1“
 const sha = (f: string) => createHash('sha256').update(readFileSync(f)).digest('hex')
 
 const payload = await getPayload({ config })

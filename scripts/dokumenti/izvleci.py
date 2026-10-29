@@ -91,7 +91,7 @@ def versiya(zaglavie: str, tekst: str):
     """От заглавието; отпечатаната на първата страница („V1.1") печели, само ако е
     по-нова (EcoFlow понякога качва V1.1 под име „…_V1.0"; по-стара на страницата
     обикновено е друго число, не версията на документа)."""
-    t = re.search(r'\bV\s?(\d+(?:\.\d+)*)', zaglavie, re.I)
+    t = re.search(r'(?<![A-Za-z0-9])V\s?(\d+(?:\.\d+)*)', zaglavie, re.I)  # не `\b`: „_V1.1“
     parva = tekst.split('=== стр.')[1] if '=== стр.' in tekst else tekst
     p = re.search(r'(?<![\w.])V(\d+\.\d+(?:\.\d+)?)(?![\w.])', parva)
     if t and p:

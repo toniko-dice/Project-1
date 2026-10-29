@@ -1,5 +1,3 @@
-# Кратко ръководство
-
 EcoFlow GLACIER Classic: 35L, 45L, 55L.
 
 ## 1
