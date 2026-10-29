@@ -14,6 +14,7 @@
 import csv
 import json
 import re
+from urllib.parse import unquote
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -173,6 +174,18 @@ def main():
                            'data': '', 'tip': 'online-bg', 'adres': f'{PREFIX["$M"]}/eu/product/{s}?lang=bg_BG',
                            'pati_v_spisaka': 0})
 
+    # EcoFlow понякога сочи заглавие към чужд файл („DELTA Pro Ultra Inverter Safety Instructions"
+    # → файлът на краткото ръководство). Ако видът по името на файла е друг — важи файлът.
+    for z in zapisi:
+        if z['tip'] != 'pdf':
+            continue
+        fail = re.sub(r'\.pdf$', '', unquote(z['adres'].rsplit('/', 1)[-1]), flags=re.I)
+        vid_t = next((v for rx, v in VIDOVE if re.search(rx, z['zaglavie'])), None)
+        vid_f = next((v for rx, v in VIDOVE if re.search(rx, fail)), None)
+        if vid_f and vid_t and vid_f != vid_t:
+            z['zaglavie_ecoflow'] = z['zaglavie']
+            z['zaglavie'] = fail
+
     zaglavia_adresi = {}
     for z in zapisi:
         zaglavia_adresi.setdefault(z['zaglavie'], []).append(z['adres'])
@@ -210,6 +223,8 @@ def main():
                 bel = '; '.join(x for x in (bel, f'скрит: {prichina}') if x)
         z['bg_iztochnik'] = bg
         z['nesigurna_vrazka'] = nesig
+        if z.get('zaglavie_ecoflow'):
+            bel = '; '.join(x for x in (bel, f'заглавието при EcoFlow („{z["zaglavie_ecoflow"]}") сочи друг вид файл — името е по файла') if x)
         z['belezhka'] = bel
         z['dubli_po_zaglavie'] = len(zaglavia_adresi[t]) > 1
 

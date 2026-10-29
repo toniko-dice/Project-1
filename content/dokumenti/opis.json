@@ -363,30 +363,6 @@
     "dubli_po_zaglavie": false
   },
   {
-    "zaglavie": "EcoFlow DELTA Pro Ultra Inverter_Safety Instructions_V1.1_Global",
-    "drugi_zaglavia": [
-      "EcoFlow DELTA Pro Ultra Battery_Safety Instructions_V1.2_Global",
-      "EcoFlow DELTA Pro Ultra_Quick Start Guide_V1.1_Global"
-    ],
-    "data": "2026-04-17",
-    "tip": "pdf",
-    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1751449815317/EcoFlow%20DELTA%20Pro%20Ultra_Quick%20Start%20Guide_V1.1_Global.pdf",
-    "pati_v_spisaka": 5,
-    "vid": "Инструкции за безопасност",
-    "ezik": "многоезичен",
-    "produkti": [
-      "delta-pro-ultra"
-    ],
-    "produkti_imena": [
-      "EcoFlow DELTA Pro Ultra"
-    ],
-    "skrit": false,
-    "bg_iztochnik": "превод",
-    "nesigurna_vrazka": false,
-    "belezhka": "",
-    "dubli_po_zaglavie": false
-  },
-  {
     "zaglavie": "EcoFlow DELTA Pro Ultra Series Battery_Safety Instruction_V1.3",
     "drugi_zaglavia": [],
     "data": "2026-05-28",
@@ -426,6 +402,31 @@
     "bg_iztochnik": "превод",
     "nesigurna_vrazka": false,
     "belezhka": "",
+    "dubli_po_zaglavie": false
+  },
+  {
+    "zaglavie": "EcoFlow DELTA Pro Ultra_Quick Start Guide_V1.1_Global",
+    "drugi_zaglavia": [
+      "EcoFlow DELTA Pro Ultra Battery_Safety Instructions_V1.2_Global",
+      "EcoFlow DELTA Pro Ultra_Quick Start Guide_V1.1_Global"
+    ],
+    "data": "2026-04-17",
+    "tip": "pdf",
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1751449815317/EcoFlow%20DELTA%20Pro%20Ultra_Quick%20Start%20Guide_V1.1_Global.pdf",
+    "pati_v_spisaka": 5,
+    "zaglavie_ecoflow": "EcoFlow DELTA Pro Ultra Inverter_Safety Instructions_V1.1_Global",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "многоезичен",
+    "produkti": [
+      "delta-pro-ultra"
+    ],
+    "produkti_imena": [
+      "EcoFlow DELTA Pro Ultra"
+    ],
+    "skrit": false,
+    "bg_iztochnik": "превод",
+    "nesigurna_vrazka": false,
+    "belezhka": "заглавието при EcoFlow („EcoFlow DELTA Pro Ultra Inverter_Safety Instructions_V1.1_Global\") сочи друг вид файл — името е по файла",
     "dubli_po_zaglavie": false
   },
   {
@@ -2058,74 +2059,6 @@
     "dubli_po_zaglavie": false
   },
   {
-    "zaglavie": "EcoFlow Bracket - Facade Quick Start Guide V1.1",
-    "drugi_zaglavia": [],
-    "data": "2026-04-14",
-    "tip": "pdf",
-    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776155645927/EcoFlow%20Bracket%20-%20Facade_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
-    "pati_v_spisaka": 3,
-    "vid": "Кратко ръководство (Quick Start)",
-    "ezik": "многоезичен",
-    "produkti": [],
-    "produkti_imena": [],
-    "skrit": true,
-    "bg_iztochnik": "превод",
-    "nesigurna_vrazka": false,
-    "belezhka": "стойките Bracket (Facade, Balcony, Roof, Lightweight…) и PV Clamp Holder",
-    "dubli_po_zaglavie": false
-  },
-  {
-    "zaglavie": "EcoFlow Bracket - Facade_Quick Start Guide-V1.1",
-    "drugi_zaglavia": [],
-    "data": "2026-04-14",
-    "tip": "pdf",
-    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776154190461/EcoFlow%20Bracket%20-%20Facade_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
-    "pati_v_spisaka": 2,
-    "vid": "Кратко ръководство (Quick Start)",
-    "ezik": "многоезичен",
-    "produkti": [],
-    "produkti_imena": [],
-    "skrit": true,
-    "bg_iztochnik": "превод",
-    "nesigurna_vrazka": false,
-    "belezhka": "стойките Bracket (Facade, Balcony, Roof, Lightweight…) и PV Clamp Holder",
-    "dubli_po_zaglavie": false
-  },
-  {
-    "zaglavie": "EcoFlow Bracket - Pitched Roof Quick Start Guide_V1.1",
-    "drugi_zaglavia": [],
-    "data": "2026-04-14",
-    "tip": "pdf",
-    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776154848347/EcoFlow%20Bracket%20-%20Pitched%20Roof%20_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
-    "pati_v_spisaka": 2,
-    "vid": "Кратко ръководство (Quick Start)",
-    "ezik": "многоезичен",
-    "produkti": [],
-    "produkti_imena": [],
-    "skrit": true,
-    "bg_iztochnik": "превод",
-    "nesigurna_vrazka": false,
-    "belezhka": "стойките Bracket (Facade, Balcony, Roof, Lightweight…) и PV Clamp Holder",
-    "dubli_po_zaglavie": false
-  },
-  {
-    "zaglavie": "EcoFlow Bracket Lightweight - Facade_Quick Start Guide V1.2",
-    "drugi_zaglavia": [],
-    "data": "2026-04-14",
-    "tip": "pdf",
-    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776154596924/EcoFlow%20Bracket%20-%20Lightweight%20-%20Facade_Installation%20Guide-EN-DE-FR-V1.2--260410.pdf",
-    "pati_v_spisaka": 2,
-    "vid": "Кратко ръководство (Quick Start)",
-    "ezik": "многоезичен",
-    "produkti": [],
-    "produkti_imena": [],
-    "skrit": true,
-    "bg_iztochnik": "превод",
-    "nesigurna_vrazka": false,
-    "belezhka": "стойките Bracket (Facade, Balcony, Roof, Lightweight…) и PV Clamp Holder",
-    "dubli_po_zaglavie": false
-  },
-  {
     "zaglavie": "EcoFlow PV Clamp Holder_Quick Start Guide_V1.0",
     "drugi_zaglavia": [],
     "data": "2026-04-14",
@@ -2364,6 +2297,42 @@
     "dubli_po_zaglavie": true
   },
   {
+    "zaglavie": "EcoFlow Bracket - Facade_Installation Guide-EN-DE-FR-V1.1--260410",
+    "drugi_zaglavia": [],
+    "data": "2026-04-14",
+    "tip": "pdf",
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776155645927/EcoFlow%20Bracket%20-%20Facade_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+    "pati_v_spisaka": 3,
+    "zaglavie_ecoflow": "EcoFlow Bracket - Facade Quick Start Guide V1.1",
+    "vid": "Ръководство за монтаж",
+    "ezik": "многоезичен",
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "bg_iztochnik": "превод",
+    "nesigurna_vrazka": false,
+    "belezhka": "стойките Bracket (Facade, Balcony, Roof, Lightweight…) и PV Clamp Holder; заглавието при EcoFlow („EcoFlow Bracket - Facade Quick Start Guide V1.1\") сочи друг вид файл — името е по файла",
+    "dubli_po_zaglavie": true
+  },
+  {
+    "zaglavie": "EcoFlow Bracket - Facade_Installation Guide-EN-DE-FR-V1.1--260410",
+    "drugi_zaglavia": [],
+    "data": "2026-04-14",
+    "tip": "pdf",
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776154190461/EcoFlow%20Bracket%20-%20Facade_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+    "pati_v_spisaka": 2,
+    "zaglavie_ecoflow": "EcoFlow Bracket - Facade_Quick Start Guide-V1.1",
+    "vid": "Ръководство за монтаж",
+    "ezik": "многоезичен",
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "bg_iztochnik": "превод",
+    "nesigurna_vrazka": false,
+    "belezhka": "стойките Bracket (Facade, Balcony, Roof, Lightweight…) и PV Clamp Holder; заглавието при EcoFlow („EcoFlow Bracket - Facade_Quick Start Guide-V1.1\") сочи друг вид файл — името е по файла",
+    "dubli_po_zaglavie": true
+  },
+  {
     "zaglavie": "EcoFlow Bracket - Flat Roof_Installation Guide_V1.1",
     "drugi_zaglavia": [],
     "data": "2026-04-14",
@@ -2415,6 +2384,24 @@
     "dubli_po_zaglavie": false
   },
   {
+    "zaglavie": "EcoFlow Bracket - Lightweight - Facade_Installation Guide-EN-DE-FR-V1.2--260410",
+    "drugi_zaglavia": [],
+    "data": "2026-04-14",
+    "tip": "pdf",
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776154596924/EcoFlow%20Bracket%20-%20Lightweight%20-%20Facade_Installation%20Guide-EN-DE-FR-V1.2--260410.pdf",
+    "pati_v_spisaka": 2,
+    "zaglavie_ecoflow": "EcoFlow Bracket Lightweight - Facade_Quick Start Guide V1.2",
+    "vid": "Ръководство за монтаж",
+    "ezik": "многоезичен",
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "bg_iztochnik": "превод",
+    "nesigurna_vrazka": false,
+    "belezhka": "стойките Bracket (Facade, Balcony, Roof, Lightweight…) и PV Clamp Holder; заглавието при EcoFlow („EcoFlow Bracket Lightweight - Facade_Quick Start Guide V1.2\") сочи друг вид файл — името е по файла",
+    "dubli_po_zaglavie": false
+  },
+  {
     "zaglavie": "EcoFlow Bracket - Lightweight_Installation Guide_Multilingual V1.1",
     "drugi_zaglavia": [],
     "data": "2026-01-06",
@@ -2446,6 +2433,24 @@
     "bg_iztochnik": "превод",
     "nesigurna_vrazka": false,
     "belezhka": "стойките Bracket (Facade, Balcony, Roof, Lightweight…) и PV Clamp Holder",
+    "dubli_po_zaglavie": false
+  },
+  {
+    "zaglavie": "EcoFlow Bracket - Pitched Roof _Installation Guide-EN-DE-FR-V1.1--260410",
+    "drugi_zaglavia": [],
+    "data": "2026-04-14",
+    "tip": "pdf",
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776154848347/EcoFlow%20Bracket%20-%20Pitched%20Roof%20_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+    "pati_v_spisaka": 2,
+    "zaglavie_ecoflow": "EcoFlow Bracket - Pitched Roof Quick Start Guide_V1.1",
+    "vid": "Ръководство за монтаж",
+    "ezik": "многоезичен",
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "bg_iztochnik": "превод",
+    "nesigurna_vrazka": false,
+    "belezhka": "стойките Bracket (Facade, Balcony, Roof, Lightweight…) и PV Clamp Holder; заглавието при EcoFlow („EcoFlow Bracket - Pitched Roof Quick Start Guide_V1.1\") сочи друг вид файл — името е по файла",
     "dubli_po_zaglavie": false
   },
   {

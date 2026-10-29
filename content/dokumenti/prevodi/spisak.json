@@ -130,37 +130,6 @@
     "red": 4
   },
   {
-    "id": "ecoflow-delta-pro-ultra-quick-start-guide-v1-1-global",
-    "original": {
-      "sha256": "7e10550447499866e29a48179f2a81f22e9bdd6965544c19fa09a6c51c61d258"
-    },
-    "fail": "originali/delta-pro-ultra/ecoflow-delta-pro-ultra-quick-start-guide-v1-1-global.pdf",
-    "bg_fail": "bg-prevodi/delta-pro-ultra/ecoflow-delta-pro-ultra-quick-start-guide-v1-1-global-bg.pdf",
-    "zaglavia": [
-      "EcoFlow DELTA Pro Ultra Inverter_Safety Instructions_V1.1_Global"
-    ],
-    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1751449815317/EcoFlow%20DELTA%20Pro%20Ultra_Quick%20Start%20Guide_V1.1_Global.pdf",
-    "vid": "Инструкции за безопасност",
-    "ezik": "многоезичен",
-    "versiya": null,
-    "produkti": [
-      "delta-pro-ultra"
-    ],
-    "produkti_imena": [
-      "EcoFlow DELTA Pro Ultra"
-    ],
-    "skrit": false,
-    "stranici": 2,
-    "en_stranici": [
-      1,
-      2
-    ],
-    "znaci": 707,
-    "skaniran": false,
-    "prazni_stranici": 0,
-    "red": 5
-  },
-  {
     "id": "ecoflow-delta-pro-ultra-safety-instruction",
     "original": {
       "sha256": "4d94f0e94d3e959a4797ae83d12bb27e75b7b7be61b707a8425b0466e38e0e10"
@@ -194,7 +163,7 @@
     "znaci": 16389,
     "skaniran": false,
     "prazni_stranici": 0,
-    "red": 6
+    "red": 5
   },
   {
     "id": "ecoflow-delta-pro-ultra-series-battery-safety-instruction-v1-3",
@@ -223,6 +192,37 @@
       2
     ],
     "znaci": 7167,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 6
+  },
+  {
+    "id": "ecoflow-delta-pro-ultra-quick-start-guide-v1-1-global",
+    "original": {
+      "sha256": "7e10550447499866e29a48179f2a81f22e9bdd6965544c19fa09a6c51c61d258"
+    },
+    "fail": "originali/delta-pro-ultra/ecoflow-delta-pro-ultra-quick-start-guide-v1-1-global.pdf",
+    "bg_fail": "bg-prevodi/delta-pro-ultra/ecoflow-delta-pro-ultra-quick-start-guide-v1-1-global-bg.pdf",
+    "zaglavia": [
+      "EcoFlow DELTA Pro Ultra_Quick Start Guide_V1.1_Global"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1751449815317/EcoFlow%20DELTA%20Pro%20Ultra_Quick%20Start%20Guide_V1.1_Global.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "многоезичен",
+    "versiya": null,
+    "produkti": [
+      "delta-pro-ultra"
+    ],
+    "produkti_imena": [
+      "EcoFlow DELTA Pro Ultra"
+    ],
+    "skrit": false,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 707,
     "skaniran": false,
     "prazni_stranici": 0,
     "red": 7
@@ -2258,87 +2258,6 @@
     "red": 60
   },
   {
-    "id": "ecoflow-bracket-facade-installation-guide-en-de-fr-v1-1-260410",
-    "original": {
-      "sha256": "f34053dee52b70e8f61a4bf15dbd6754aeeb3f219894ece759a01baa91555974"
-    },
-    "fail": "originali/bez-produkt/ecoflow-bracket-facade-installation-guide-en-de-fr-v1-1-260410.pdf",
-    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-bracket-facade-installation-guide-en-de-fr-v1-1-260410-bg.pdf",
-    "zaglavia": [
-      "EcoFlow Bracket - Facade Quick Start Guide V1.1",
-      "EcoFlow Bracket - Facade_Quick Start Guide-V1.1"
-    ],
-    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776155645927/EcoFlow%20Bracket%20-%20Facade_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
-    "vid": "Кратко ръководство (Quick Start)",
-    "ezik": "многоезичен",
-    "versiya": "1.1",
-    "produkti": [],
-    "produkti_imena": [],
-    "skrit": true,
-    "stranici": 2,
-    "en_stranici": [
-      1,
-      2
-    ],
-    "znaci": 3625,
-    "skaniran": false,
-    "prazni_stranici": 0,
-    "red": 61
-  },
-  {
-    "id": "ecoflow-bracket-lightweight-facade-installation-guide-en-de-fr-v1-2-260410",
-    "original": {
-      "sha256": "7dd6a22996d2fa067126dff71f7b54e8fc6a867d49f55a81a86960ced7f99204"
-    },
-    "fail": "originali/bez-produkt/ecoflow-bracket-lightweight-facade-installation-guide-en-de-fr-v1-2-260410.pdf",
-    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-bracket-lightweight-facade-installation-guide-en-de-fr-v1-2-260410-bg.pdf",
-    "zaglavia": [
-      "EcoFlow Bracket Lightweight - Facade_Quick Start Guide V1.2"
-    ],
-    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776154596924/EcoFlow%20Bracket%20-%20Lightweight%20-%20Facade_Installation%20Guide-EN-DE-FR-V1.2--260410.pdf",
-    "vid": "Кратко ръководство (Quick Start)",
-    "ezik": "многоезичен",
-    "versiya": "1.2",
-    "produkti": [],
-    "produkti_imena": [],
-    "skrit": true,
-    "stranici": 2,
-    "en_stranici": [
-      1,
-      2
-    ],
-    "znaci": 3637,
-    "skaniran": false,
-    "prazni_stranici": 0,
-    "red": 62
-  },
-  {
-    "id": "ecoflow-bracket-pitched-roof-installation-guide-en-de-fr-v1-1-260410",
-    "original": {
-      "sha256": "2936c7f7159a49e1fe38d3fc5fb662f1c8136a20c4a004c0e25b518ef5a31d52"
-    },
-    "fail": "originali/bez-produkt/ecoflow-bracket-pitched-roof-installation-guide-en-de-fr-v1-1-260410.pdf",
-    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-bracket-pitched-roof-installation-guide-en-de-fr-v1-1-260410-bg.pdf",
-    "zaglavia": [
-      "EcoFlow Bracket - Pitched Roof Quick Start Guide_V1.1"
-    ],
-    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776154848347/EcoFlow%20Bracket%20-%20Pitched%20Roof%20_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
-    "vid": "Кратко ръководство (Quick Start)",
-    "ezik": "многоезичен",
-    "versiya": "1.1",
-    "produkti": [],
-    "produkti_imena": [],
-    "skrit": true,
-    "stranici": 2,
-    "en_stranici": [
-      1
-    ],
-    "znaci": 219,
-    "skaniran": false,
-    "prazni_stranici": 1,
-    "red": 63
-  },
-  {
     "id": "ecoflow-powerinsight-2-monitor-quick-start-guide-v1-0",
     "original": {
       "sha256": "01d6b79706657817d3376298d7ed576fa66667c5fcd64f45336d2899d76e0ec5"
@@ -2363,7 +2282,7 @@
     "znaci": 474,
     "skaniran": false,
     "prazni_stranici": 0,
-    "red": 64
+    "red": 61
   },
   {
     "id": "ecoflow-pv-clamp-holder-quick-start-guide-v1-0",
@@ -2389,7 +2308,7 @@
     "znaci": 173,
     "skaniran": false,
     "prazni_stranici": 0,
-    "red": 65
+    "red": 62
   },
   {
     "id": "ecoflow-rapid-3-in-1-power-bank-10-000mah-35w-quick-start-guide-v1-0-20250530",
@@ -2416,7 +2335,7 @@
     "znaci": 14497,
     "skaniran": false,
     "prazni_stranici": 0,
-    "red": 66
+    "red": 63
   },
   {
     "id": "ecoflow-rapid-mag-power-bank-10k-7-5w-magnetic-charging-quick-start-guide-v2-0",
@@ -2443,7 +2362,7 @@
     "znaci": 13296,
     "skaniran": false,
     "prazni_stranici": 0,
-    "red": 67
+    "red": 64
   },
   {
     "id": "ecoflow-rapid-power-bank-10k-45w-with-retractable-cable-quick-start-guide-v1-0",
@@ -2480,7 +2399,7 @@
     "znaci": 10419,
     "skaniran": false,
     "prazni_stranici": 1,
-    "red": 68
+    "red": 65
   },
   {
     "id": "ecoflow-rapid-power-bank-25-000mah-170w-100w-built-in-and-retractable-cables-quick-start-guide-v1-0",
@@ -2507,7 +2426,7 @@
     "znaci": 15819,
     "skaniran": false,
     "prazni_stranici": 0,
-    "red": 69
+    "red": 66
   },
   {
     "id": "ecoflow-rapid-power-bank-25-000mah-170w-quick-start-guide-v1-0",
@@ -2534,7 +2453,7 @@
     "znaci": 15490,
     "skaniran": false,
     "prazni_stranici": 0,
-    "red": 70
+    "red": 67
   },
   {
     "id": "ecoflow-rapid-pro-3-in-1-power-bank-quick-start-guide-v1-0-20250528",
@@ -2561,7 +2480,7 @@
     "znaci": 14478,
     "skaniran": false,
     "prazni_stranici": 0,
-    "red": 71
+    "red": 68
   },
   {
     "id": "ecoflow-smart-cooling-deck-quick-start-guide-v1-0-en-de-it-es-nl-ru",
@@ -2588,7 +2507,7 @@
     "znaci": 1220,
     "skaniran": false,
     "prazni_stranici": 0,
-    "red": 72
+    "red": 69
   },
   {
     "id": "ecoflow-stream-diy-front-case-for-ecoflow-streanultra-x-quick-start-guide-v-1-0",
@@ -2614,7 +2533,7 @@
     "znaci": 896,
     "skaniran": false,
     "prazni_stranici": 0,
-    "red": 73
+    "red": 70
   },
   {
     "id": "ecoflow-stream-gateway-quick-start-guide",
@@ -2640,7 +2559,7 @@
     "znaci": 5606,
     "skaniran": false,
     "prazni_stranici": 0,
-    "red": 74
+    "red": 71
   },
   {
     "id": "ecoflow-bracket-adjustable-facade-installation-guide-en-de-fr-v1-1-260410",
@@ -2666,7 +2585,7 @@
     "znaci": 134,
     "skaniran": false,
     "prazni_stranici": 0,
-    "red": 75
+    "red": 72
   },
   {
     "id": "ecoflow-bracket-concrete-balcony-installation-guide-en-de-fr-v1-1-260410",
@@ -2692,7 +2611,34 @@
     "znaci": 1810,
     "skaniran": false,
     "prazni_stranici": 0,
-    "red": 76
+    "red": 73
+  },
+  {
+    "id": "ecoflow-bracket-facade-installation-guide-en-de-fr-v1-1-260410",
+    "original": {
+      "sha256": "f34053dee52b70e8f61a4bf15dbd6754aeeb3f219894ece759a01baa91555974"
+    },
+    "fail": "originali/bez-produkt/ecoflow-bracket-facade-installation-guide-en-de-fr-v1-1-260410.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-bracket-facade-installation-guide-en-de-fr-v1-1-260410-bg.pdf",
+    "zaglavia": [
+      "EcoFlow Bracket - Facade_Installation Guide-EN-DE-FR-V1.1--260410"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776155645927/EcoFlow%20Bracket%20-%20Facade_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+    "vid": "Ръководство за монтаж",
+    "ezik": "многоезичен",
+    "versiya": "1.1",
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 3625,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 74
   },
   {
     "id": "ecoflow-bracket-flat-roof-installation-guide-en-de-fr-v1-1-260410",
@@ -2719,7 +2665,7 @@
     "znaci": 2001,
     "skaniran": false,
     "prazni_stranici": 0,
-    "red": 77
+    "red": 75
   },
   {
     "id": "ecoflow-bracket-lattice-balcony-installation-guide-en-de-fr-v1-1-260410",
@@ -2745,7 +2691,34 @@
     "znaci": 2209,
     "skaniran": false,
     "prazni_stranici": 0,
-    "red": 78
+    "red": 76
+  },
+  {
+    "id": "ecoflow-bracket-lightweight-facade-installation-guide-en-de-fr-v1-2-260410",
+    "original": {
+      "sha256": "7dd6a22996d2fa067126dff71f7b54e8fc6a867d49f55a81a86960ced7f99204"
+    },
+    "fail": "originali/bez-produkt/ecoflow-bracket-lightweight-facade-installation-guide-en-de-fr-v1-2-260410.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-bracket-lightweight-facade-installation-guide-en-de-fr-v1-2-260410-bg.pdf",
+    "zaglavia": [
+      "EcoFlow Bracket - Lightweight - Facade_Installation Guide-EN-DE-FR-V1.2--260410"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776154596924/EcoFlow%20Bracket%20-%20Lightweight%20-%20Facade_Installation%20Guide-EN-DE-FR-V1.2--260410.pdf",
+    "vid": "Ръководство за монтаж",
+    "ezik": "многоезичен",
+    "versiya": "1.2",
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 3637,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 77
   },
   {
     "id": "ecoflow-bracket-lightweight-installation-guide-multilingual-en-de-fr-it-es-nl-ru-jp-kr-cn-tw-v1-2-260410",
@@ -2772,7 +2745,7 @@
     "znaci": 6384,
     "skaniran": false,
     "prazni_stranici": 0,
-    "red": 79
+    "red": 78
   },
   {
     "id": "ecoflow-bracket-lightweight-installation-guide-multilingual-v1-1",
@@ -2800,6 +2773,32 @@
     "znaci": 6458,
     "skaniran": false,
     "prazni_stranici": 0,
+    "red": 79
+  },
+  {
+    "id": "ecoflow-bracket-pitched-roof-installation-guide-en-de-fr-v1-1-260410",
+    "original": {
+      "sha256": "2936c7f7159a49e1fe38d3fc5fb662f1c8136a20c4a004c0e25b518ef5a31d52"
+    },
+    "fail": "originali/bez-produkt/ecoflow-bracket-pitched-roof-installation-guide-en-de-fr-v1-1-260410.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-bracket-pitched-roof-installation-guide-en-de-fr-v1-1-260410-bg.pdf",
+    "zaglavia": [
+      "EcoFlow Bracket - Pitched Roof _Installation Guide-EN-DE-FR-V1.1--260410"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776154848347/EcoFlow%20Bracket%20-%20Pitched%20Roof%20_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+    "vid": "Ръководство за монтаж",
+    "ezik": "многоезичен",
+    "versiya": "1.1",
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 2,
+    "en_stranici": [
+      1
+    ],
+    "znaci": 219,
+    "skaniran": false,
+    "prazni_stranici": 1,
     "red": 80
   },
   {
