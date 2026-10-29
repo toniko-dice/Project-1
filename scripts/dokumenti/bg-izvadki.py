@@ -7,7 +7,7 @@
 `bg-stranici.py`). Тя е „официален BG" — текстът на EcoFlow — и стои преди
 нашия превод. `content/dokumenti/bg-izvadki.json` (в git; решението кои
 страници) → страниците, извадени без промяна, в
-`<папка>/bg-oficialni/izvadki/<id>-bg.pdf`; SHA-256 на оригинала се попълва в
+`<папка>/bg-oficialni/izvadki/<id>-bg-oficialen.pdf`; SHA-256 на оригинала се попълва в
 json-а. Вносът (`src/import-dokumenti.ts`) ги внася като „официален BG".
 """
 import hashlib
@@ -31,7 +31,7 @@ def main():
         orig = pypdfium2.PdfDocument(str(src))
         nov = pypdfium2.PdfDocument.new()
         nov.import_pages(orig, [p - 1 for p in z['stranici']])
-        out = DOC / 'bg-oficialni' / 'izvadki' / f'{id_}-bg.pdf'
+        out = DOC / 'bg-oficialni' / 'izvadki' / f'{id_}-bg-oficialen.pdf'  # ≠ „-bg.pdf" на превода
         out.parent.mkdir(parents=True, exist_ok=True)
         nov.save(str(out))
         print(f'✓ {id_}: стр. {z["stranici"]} → {out.relative_to(DOC)}')

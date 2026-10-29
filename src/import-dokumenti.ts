@@ -234,7 +234,7 @@ for (const [id, и] of Object.entries(извадки)) {
   const адрес = `${String(ориг.data.sourceUrl)}#bg`
   записи.push({
     key: { field: 'sourceUrl', value: адрес },
-    file: path.join(DOC_ROOT, 'bg-oficialni', 'izvadki', `${id}-bg.pdf`),
+    file: path.join(DOC_ROOT, 'bg-oficialni', 'izvadki', `${id}-bg-oficialen.pdf`),
     data: {
       title: ориг.data.title,
       kind: ориг.data.kind,
@@ -270,12 +270,12 @@ let обновени = 0
 let сФайл = 0
 const намери = async (where: Record<string, unknown>) =>
   (await payload.find({ collection: 'documents', where: where as never, limit: 1, depth: 0 })).docs[0] as
-    | { id: number; sha256?: string | null }
+    | { id: number; sha256?: string | null; filename?: string | null }
     | undefined
 // Оригиналите преди преводите — преводът сочи оригинала.
 for (const z of [...записи.filter((x) => !x.original), ...записи.filter((x) => x.original)]) {
   const хеш = sha(z.file)
-  let същ: { id: number; sha256?: string | null } | undefined
+  let същ: { id: number; sha256?: string | null; filename?: string | null } | undefined
   let data: Record<string, unknown> = { ...z.data, sha256: хеш }
   if (z.original) {
     const ориг = await намери({ [z.original.field]: { equals: z.original.value }, language: { equals: 'original' } })
@@ -288,7 +288,8 @@ for (const z of [...записи.filter((x) => !x.original), ...записи.fil
   if (!същ) {
     await payload.create({ collection: 'documents', data: data as never, filePath: z.file, depth: 0 })
     нови++
-  } else if (същ.sha256 !== хеш) {
+  } else if (същ.sha256 !== хеш || същ.filename !== path.basename(z.file)) {
+    // Нов файл или ново име (напр. „-bg-1.pdf" при съвпадение на имената) — качва се наново.
     await payload.update({ collection: 'documents', id: същ.id, data: data as never, filePath: z.file, depth: 0, overwriteExistingFiles: true })
     сФайл++
   } else {

@@ -26,7 +26,7 @@ paths:
   - `content/dokumenti/prevodi/` — `spisak.json` (`izvleci.py`), `FORMAT.md`, преводите `<id>.md` (в git); `rechnik.md` — речникът;
   - `content/dokumenti/izvlecheni/`, `prevodi-en/<id>.en.md` — помощни, не са в git;
   - `content/dokumenti/bg-prevodi/<продукт>/<id>-bg.pdf`, `prevodi-gotovi.json` — `prevod-pdf.mjs` (само минали проверката).
-  - `content/dokumenti/bg-izvadki.json` (в git) → `bg-oficialni/izvadki/<id>-bg.pdf` — `bg-izvadki.py`: българската част на многоезичен оригинал (страниците на EcoFlow без промяна) = официален BG; кои оригинали имат такава — `bg-stranici.py`.
+  - `content/dokumenti/bg-izvadki.json` (в git) → `bg-oficialni/izvadki/<id>-bg-oficialen.pdf` — `bg-izvadki.py`: българската част на многоезичен оригинал (страниците на EcoFlow без промяна) = официален BG; кои оригинали имат такава — `bg-stranici.py`.
 - **Вносът:** `npm run import:dokumenti:server` — качва липсващите PDF-и (наваксващо) и внася; повторяем (ключ: SHA-256 / адрес на източника / „bg-prevod" + оригинал); архив преди записа. Ръчни промени в админа по заглавие/продукти/„Скрит" се презаписват при следващ внос → трайното решение — в `opis.py`.
 - **Преводът не се внася, ако проверката не мине** (числа, брой предупреждения, останал английски, покритие, PDF с кирилица).
 - **Имената на документите:** „<вид> — <име от EcoFlow>"; общ файл за няколко продукта → всички в името („EcoFlow 160W/220W/400W …").
