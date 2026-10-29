@@ -67,6 +67,12 @@ const ВИД_BG: Record<string, string> = {
   drugo: 'Документ',
 }
 
+/** „Друго" — по заглавието (същото като в scripts/dokumenti/prevod-pdf.mjs). */
+const видBg = (kind: string, заглавие: string) =>
+  kind === 'drugo' && /What's in the Box/i.test(заглавие) ? 'Съдържание на опаковката'
+    : kind === 'drugo' && /App User Manual/i.test(заглавие) ? 'Ръководство за приложението'
+      : ВИД_BG[kind]
+
 /** „EcoFlow DELTA 3 Max Portable Power Station_User Manual V1.0 (EN)" → „EcoFlow DELTA 3 Max Portable Power Station". */
 const име = (t: string) =>
   t
@@ -161,7 +167,7 @@ for (const [хеш, { s, редове }] of поSha) {
     key: { field: 'sha256', value: хеш },
     file: path.join(DOC_ROOT, s.fail),
     data: {
-      title: `${ВИД_BG[kind]} — ${общоИме(редове.map((r) => r.zaglavie))}`,
+      title: `${видBg(kind, осн.zaglavie)} — ${общоИме(редове.map((r) => r.zaglavie))}`,
       kind,
       language: 'original',
       products: prod,

@@ -43,6 +43,11 @@ const ВИД_BG = {
   'Ръководство за монтаж': 'Ръководство за монтаж',
   Друго: 'Документ',
 }
+// „Друго" — по заглавието (същото като в src/import-dokumenti.ts).
+const видBg = (vid, заглавие) =>
+  vid === 'Друго' && /What's in the Box/i.test(заглавие) ? 'Съдържание на опаковката'
+    : vid === 'Друго' && /App User Manual/i.test(заглавие) ? 'Ръководство за приложението'
+      : (ВИД_BG[vid] ?? 'Документ')
 const БЛОКОВЕ = { danger: 'ОПАСНОСТ', warning: 'ПРЕДУПРЕЖДЕНИЕ', caution: 'ВНИМАНИЕ', note: 'ЗАБЕЛЕЖКА', tip: 'СЪВЕТ' }
 
 // Името — същото като в src/import-dokumenti.ts (име / общоИме): заглавието на превода = на оригинала.
@@ -84,7 +89,8 @@ const еАнглийско = (t) => {
   const en = w.filter((x) => EN_ДУМИ.has(x)).length
   return en >= 2 && ДРУГИ.every((s) => w.filter((x) => s.has(x)).length < en)
 }
-const норм = (t) => t.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()
+// NFKC: лигатурите в PDF-ите („ﬁ") → „fi".
+const норм = (t) => t.normalize('NFKC').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()
 const шингли = (t, n = 4) => {
   const w = норм(t).split(' ').filter(Boolean)
   const s = new Set()
@@ -167,11 +173,11 @@ function тяло(md) {
 }
 
 function страница(x, md, съдържание) {
-  const заглавие = `${ВИД_BG[x.vid] ?? 'Документ'} — ${общоИме(x.zaglavia)}`
+  const заглавие = `${видBg(x.vid, x.zaglavia[0])} — ${общоИме(x.zaglavia)}`
   const html = тяло(md)
   const раздели = [...html.matchAll(/<h1 id="(r\d+)">(.*?)<\/h1>/g)]
   const toc = съдържание && раздели.length >= 2
-    ? `<nav class="toc"><div class="toc-title">Съдържание</div><ol>${раздели.map((m) => `<li><a href="#${m[1]}">${m[2]}</a></li>`).join('')}</ol></nav>`
+    ? `<nav class="toc"><div class="toc-title">Съдържание</div><ul>${раздели.map((m) => `<li><a href="#${m[1]}">${m[2]}</a></li>`).join('')}</ul></nav>`
     : ''
   // Името на файла на EcoFlow — както е; версията е на отделен ред горе (отпечатаната в PDF-а).
   const оригинал = x.zaglavia[0]
