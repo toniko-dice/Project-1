@@ -214,3 +214,30 @@
 | Unfolded / Folded Dimensions | размери в разгънато / сгънато състояние |
 | WEEE | ОЕЕО (WEEE) |
 
+## Добавени от преводите (партида 4)
+
+| English | Български |
+|---|---|
+| active / apparent power | активна / привидна мощност |
+| Anti-islanding Protection | защита срещу островен режим (anti-islanding) |
+| branch circuit breaker | автоматичен прекъсвач на отклонението |
+| commissioning | въвеждане в експлоатация |
+| current transformer (CT) | токов трансформатор (CT) |
+| DIN rail | DIN шина |
+| distribution box / board | разпределително табло |
+| energy meter | електромер |
+| feed-in power | мощност, подавана към мрежата |
+| ferrite core | феритен филтър |
+| Grid / PV / Parallel / Grounding terminal | клема за мрежата / PV клема / клема за паралелно свързване / клема за заземяване |
+| grid-tied PV system | свързана към мрежата соларна (PV) система |
+| Initial Inclusion | първоначално добавяне |
+| irradiance | облъчване (слънчево) |
+| Maximum Fuse Current | максимален ток на предпазителя |
+| neutral (N) / live (L) wire / PE-bar | нулев проводник (N) / фазов проводник (L) / шина PE |
+| phase tester | фазомер |
+| power factor (leading / lagging) | фактор на мощността (капацитивен / индуктивен) |
+| power conversion equipment (PCE) | оборудване за преобразуване на енергия (PCE) |
+| rated current In | Iₙ (номинален ток) |
+| Total Harmonic Distortion | общо хармонично изкривяване |
+| wiring plan | схема на свързване |
+

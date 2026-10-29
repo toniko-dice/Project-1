@@ -1,0 +1,22 @@
+{
+  "ecoflow-stream-ultra-x-safety-instructions-multilingual-v1-0": {
+    "sha256": "b482cdcb9310752678a21f5f8ec57e92c05fc944a0f50bf3f7402bd14ba2ea24",
+    "fail": "originali/stream-ultra-x/ecoflow-stream-ultra-x-safety-instructions-multilingual-v1-0.pdf",
+    "stranici": [
+      21,
+      22
+    ],
+    "belezhka": "БЪЛГАРСКИ — инструкциите и техническата спецификация; декларацията и изхвърлянето на български са на многоезичните стр. 31–32 (не са извадени)"
+  },
+  "ecoflow-cables-for-alternator-charger-600-and-plus-1000-user-manual": {
+    "sha256": "671d4ba7c8cd0f4094b08959280be83b239f9b33105e452257d6bbce2b2cf5ba",
+    "fail": "originali/alternator-charger-custom-fit-output-cable-2m/ecoflow-cables-for-alternator-charger-600-and-plus-1000-user-manual.pdf",
+    "stranici": [
+      80,
+      81,
+      82,
+      83
+    ],
+    "belezhka": "българската част на многоезичното ръководство"
+  }
+}

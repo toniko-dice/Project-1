@@ -6,7 +6,7 @@
  *
  * Чете `content/dokumenti/opis.json` (в git) и от папката с документите
  * (`DOKUMENTI_ROOT`, иначе `content/dokumenti`): `svaleni.json`, `originali/`,
- * `bg-oficialni/`, `bg-prevodi/` + `prevodi-gotovi.json`. Четири вида записи:
+ * `bg-oficialni/`, `bg-prevodi/` + `prevodi-gotovi.json`. Пет вида записи:
  *  - официален BG — `bg-oficialni/<slug>.pdf`, ключ: адресът на източника;
  *  - оригинал PDF — от `svaleni.json`; еднакви по SHA-256 адреси → ЕДИН документ
  *    с всичките им продукти; ключ: SHA-256;
@@ -14,7 +14,9 @@
  *    ключ: адресът на източника;
  *  - превод (етап 5) — от `prevodi-gotovi.json` (само минали проверката,
  *    `scripts/dokumenti/prevod-pdf.mjs`); заглавието, продуктите и „Скрит" — на
- *    оригинала, връзка „Оригинал"; ключ: езикът „bg-prevod" + оригиналът.
+ *    оригинала, връзка „Оригинал"; ключ: езикът „bg-prevod" + оригиналът;
+ *  - официален BG от многоезичен оригинал — българските му страници
+ *    (`content/dokumenti/bg-izvadki.json`, `bg-oficialni/izvadki/`); ключ: адресът + „#bg".
  * Повторяем: съществуващ запис се обновява (данните; файлът — само ако е сменен).
  * Документ без видим продукт в сайта → „Скрит". Архив преди записа (освен на копие).
  */
@@ -214,6 +216,33 @@ for (const [id, g] of Object.entries(готови)) {
       sourceTitle: ориг.data.sourceTitle,
       sourceUrl: ориг.data.sourceUrl,
       sourceLanguage: ориг.data.sourceLanguage,
+      sourceDate: ориг.data.sourceDate,
+      version: ориг.data.version ?? null,
+      hidden: ориг.data.hidden,
+    },
+  })
+}
+
+// 5. Официалният български текст от многоезичен оригинал (`scripts/dokumenti/bg-izvadki.py`):
+// страниците на EcoFlow без промяна; ключ — адресът на оригинала + „#bg".
+type Извадка = { sha256: string; stranici: number[] }
+const извадкиF = path.join(/* turbopackIgnore: true */ ROOT, 'content/dokumenti/bg-izvadki.json')
+const извадки = existsSync(извадкиF) ? (JSON.parse(readFileSync(извадкиF, 'utf8')) as Record<string, Извадка>) : {}
+for (const [id, и] of Object.entries(извадки)) {
+  const ориг = записи.find((z) => !z.original && z.key.field === 'sha256' && z.key.value === и.sha256)
+  if (!ориг) throw new Error(`извадка „${id}": няма такъв оригинал — нищо не е записано`)
+  const адрес = `${String(ориг.data.sourceUrl)}#bg`
+  записи.push({
+    key: { field: 'sourceUrl', value: адрес },
+    file: path.join(DOC_ROOT, 'bg-oficialni', 'izvadki', `${id}-bg.pdf`),
+    data: {
+      title: ориг.data.title,
+      kind: ориг.data.kind,
+      language: 'bg-oficialen',
+      products: ориг.data.products,
+      sourceTitle: `${String(ориг.data.sourceTitle)} — стр. ${и.stranici.join(', ')} (БЪЛГАРСКИ)`,
+      sourceUrl: адрес,
+      sourceLanguage: 'BG',
       sourceDate: ориг.data.sourceDate,
       version: ориг.data.version ?? null,
       hidden: ориг.data.hidden,

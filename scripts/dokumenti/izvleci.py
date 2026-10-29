@@ -120,6 +120,8 @@ def main():
             zadachi[r['adres']] = {'redove': [r], 'fail': f, 'kluch': {'sourceUrl': r['adres']}}
 
     (DOC / 'izvlecheni').mkdir(exist_ok=True)
+    # Оригинали с официална българска част (bg-izvadki.json) — не се превеждат.
+    izvadki = {v['sha256'] for v in json.loads((D / 'bg-izvadki.json').read_text(encoding='utf8')).values()} if (D / 'bg-izvadki.json').exists() else set()
     spisak = []
     for z in zadachi.values():
         rs = z['redove']
@@ -149,6 +151,7 @@ def main():
             'en_stranici': en_str,
             'znaci': len(tekst),
             'skaniran': not en_str,
+            'oficialen_bg': z['kluch'].get('sha256') in izvadki,
             'prazni_stranici': prazni,
             '_red': (skrit, grupa, papka, rs[0]['vid'], id_),
         })
