@@ -68,8 +68,8 @@
     ],
     "skrit": false,
     "bg_iztochnik": "превод",
-    "nesigurna_vrazka": true,
-    "belezhka": "кабелите за Alternator Charger — кои точно, се вижда в PDF-а",
+    "nesigurna_vrazka": false,
+    "belezhka": "PDF-ът: XT150 1/2 m, XT60 1 m, Output 2 m, Solar Input 5 m",
     "dubli_po_zaglavie": true
   },
   {
@@ -99,8 +99,8 @@
     ],
     "skrit": false,
     "bg_iztochnik": "превод",
-    "nesigurna_vrazka": true,
-    "belezhka": "кабелите за Alternator Charger — кои точно, се вижда в PDF-а",
+    "nesigurna_vrazka": false,
+    "belezhka": "PDF-ът: XT150 1/2 m, XT60 1 m, Output 2 m, Solar Input 5 m",
     "dubli_po_zaglavie": true
   },
   {
@@ -536,21 +536,19 @@
     "vid": "Кратко ръководство (Quick Start)",
     "ezik": "EN",
     "produkti": [
-      "glacier-detachable-wheels-and-lever",
       "glacier-classic-protective-cover-35l",
       "glacier-classic-protective-cover-45l",
       "glacier-classic-protective-cover-55l"
     ],
     "produkti_imena": [
-      "EcoFlow GLACIER Detachable Wheels and Lever",
       "EcoFlow GLACIER Classic Protective Cover (35L)",
       "EcoFlow GLACIER Classic Protective Cover (45L)",
       "EcoFlow GLACIER Classic Protective Cover (55L)"
     ],
     "skrit": false,
     "bg_iztochnik": "превод",
-    "nesigurna_vrazka": true,
-    "belezhka": "аксесоарите на GLACIER Classic — кои точно, се вижда в PDF-а",
+    "nesigurna_vrazka": false,
+    "belezhka": "в сайта са само калъфите (Protective Cover)",
     "dubli_po_zaglavie": false
   },
   {
@@ -1364,75 +1362,6 @@
     "dubli_po_zaglavie": false
   },
   {
-    "zaglavie": "45W Portable Solar Panel (EF-Fold-P045-CG) User Manual",
-    "drugi_zaglavia": [],
-    "data": "2026-01-06",
-    "tip": "online",
-    "adres": "https://manuals.ecoflow.com/product/45w-solar-panel?lang=en_US",
-    "pati_v_spisaka": 1,
-    "vid": "Ръководство за потребителя",
-    "ezik": "EN",
-    "produkti": [
-      "solaren-panel-45w-type-c"
-    ],
-    "produkti_imena": [
-      "EcoFlow 45W Portable Solar Panel (Type-C)"
-    ],
-    "skrit": false,
-    "bg_iztochnik": "превод",
-    "nesigurna_vrazka": true,
-    "belezhka": "EF-Fold-P045-CG = 45W (Type-C)? — по модела",
-    "dubli_po_zaglavie": false
-  },
-  {
-    "zaglavie": "60W Portable Solar Panel (EF-Fold-P060-CG) User Manual",
-    "drugi_zaglavia": [],
-    "data": "2026-01-06",
-    "tip": "online",
-    "adres": "https://manuals.ecoflow.com/product/60w-solar-panel?lang=en_US",
-    "pati_v_spisaka": 1,
-    "vid": "Ръководство за потребителя",
-    "ezik": "EN",
-    "produkti": [
-      "solaren-panel-60w-type-c"
-    ],
-    "produkti_imena": [
-      "EcoFlow 60W Portable Solar Panel (Type-C)"
-    ],
-    "skrit": false,
-    "bg_iztochnik": "превод",
-    "nesigurna_vrazka": true,
-    "belezhka": "EF-Fold-P060-CG = 60W (Type-C)? — по модела",
-    "dubli_po_zaglavie": false
-  },
-  {
-    "zaglavie": "EcoFlow App User Manual_for STREAM Series_V1.0",
-    "drugi_zaglavia": [],
-    "data": "2026-09-14",
-    "tip": "pdf",
-    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1788344107999/EcoFlow%20App%20User%20Manual_for%20STREAM%20Seies.pdf",
-    "pati_v_spisaka": 2,
-    "vid": "Друго",
-    "ezik": "EN",
-    "produkti": [
-      "stream-microinverter",
-      "stream-pro",
-      "stream-ultra",
-      "stream-ultra-x"
-    ],
-    "produkti_imena": [
-      "EcoFlow STREAM Microinverter",
-      "EcoFlow STREAM Pro",
-      "EcoFlow STREAM Ultra",
-      "EcoFlow STREAM Ultra X"
-    ],
-    "skrit": false,
-    "bg_iztochnik": "превод",
-    "nesigurna_vrazka": true,
-    "belezhka": "приложението за серията STREAM — към всички STREAM в сайта",
-    "dubli_po_zaglavie": false
-  },
-  {
     "zaglavie": "EcoFlow STREAM Microinverter Quick Start Guide_en+de+fr_V1.2",
     "drugi_zaglavia": [],
     "data": "2026-04-14",
@@ -1900,8 +1829,8 @@
     ],
     "skrit": false,
     "bg_iztochnik": "превод",
-    "nesigurna_vrazka": true,
-    "belezhka": "Velcro Strap Handle го няма в сайта",
+    "nesigurna_vrazka": false,
+    "belezhka": "PDF-ът: Velcro Strap Handle, Car Vent Seal, Shower Kit — дръжката я няма в сайта",
     "dubli_po_zaglavie": false
   },
   {
@@ -2007,6 +1936,23 @@
     "bg_iztochnik": "— (само оригинал: друг език, има EN/BG вариант)",
     "nesigurna_vrazka": false,
     "belezhka": "",
+    "dubli_po_zaglavie": false
+  },
+  {
+    "zaglavie": "EcoFlow App User Manual_for STREAM Series_V1.0",
+    "drugi_zaglavia": [],
+    "data": "2026-09-14",
+    "tip": "pdf",
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1788344107999/EcoFlow%20App%20User%20Manual_for%20STREAM%20Seies.pdf",
+    "pati_v_spisaka": 2,
+    "vid": "Друго",
+    "ezik": "EN",
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "bg_iztochnik": "превод",
+    "nesigurna_vrazka": false,
+    "belezhka": "приложението — според PDF-а само за STREAM 5000 / AC 5000",
     "dubli_po_zaglavie": false
   },
   {
@@ -2673,6 +2619,23 @@
     "dubli_po_zaglavie": false
   },
   {
+    "zaglavie": "45W Portable Solar Panel (EF-Fold-P045-CG) User Manual",
+    "drugi_zaglavia": [],
+    "data": "2026-01-06",
+    "tip": "online",
+    "adres": "https://manuals.ecoflow.com/product/45w-solar-panel?lang=en_US",
+    "pati_v_spisaka": 1,
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "bg_iztochnik": "превод",
+    "nesigurna_vrazka": true,
+    "belezhka": "EF-Fold-P045-CG — не е доказано, че е 45W (Type-C) от сайта",
+    "dubli_po_zaglavie": false
+  },
+  {
     "zaglavie": "50'' Tilt Mount Bracket-User Manual (V1.0)",
     "drugi_zaglavia": [],
     "data": "2026-01-06",
@@ -2687,6 +2650,23 @@
     "bg_iztochnik": "превод",
     "nesigurna_vrazka": false,
     "belezhka": "50” Tilt Mount Bracket (в сайта е 28”)",
+    "dubli_po_zaglavie": false
+  },
+  {
+    "zaglavie": "60W Portable Solar Panel (EF-Fold-P060-CG) User Manual",
+    "drugi_zaglavia": [],
+    "data": "2026-01-06",
+    "tip": "online",
+    "adres": "https://manuals.ecoflow.com/product/60w-solar-panel?lang=en_US",
+    "pati_v_spisaka": 1,
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "bg_iztochnik": "превод",
+    "nesigurna_vrazka": true,
+    "belezhka": "EF-Fold-P060-CG — не е доказано, че е 60W (Type-C) от сайта",
     "dubli_po_zaglavie": false
   },
   {

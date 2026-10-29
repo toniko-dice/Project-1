@@ -93,3 +93,4 @@ content/snimki-imena-proverka.csv
 # Документите на EcoFlow (task-dokumenti.md) — в git са само описът и скриптовете; PDF-ите и ZIP-ът — не.
 content/dokumenti/**/*.pdf
 content/dokumenti/**/*.zip
+content/dokumenti/svaleni.json
