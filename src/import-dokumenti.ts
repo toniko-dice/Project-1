@@ -69,6 +69,24 @@ const име = (t: string) =>
     .replace(/_/g, ' ')
     .replace(/\s{2,}/g, ' ')
     .trim()
+/**
+ * Един файл под няколко заглавия (EcoFlow сочи един PDF от няколко продукта) →
+ * едно име с всички: общото начало и край + различната част, през „/".
+ * „EcoFlow 160W Lightweight …" + „EcoFlow 220W Lightweight …" → „EcoFlow 160W/220W Lightweight …".
+ */
+const общоИме = (заглавия: string[]) => {
+  const имена = [...new Set(заглавия.map(име))]
+  if (имена.length < 2) return имена[0] ?? ''
+  const думи = имена.map((n) => n.split(' '))
+  const еднакви = (k: (d: string[]) => string | undefined) => думи.every((d) => k(d) === k(думи[0]!))
+  let нач = 0
+  while (нач < думи[0]!.length && еднакви((d) => d[нач])) нач++
+  let край = 0
+  while (край < думи[0]!.length - нач && еднакви((d) => d[d.length - 1 - край])) край++
+  const среди = думи.map((d) => d.slice(нач, d.length - край).join(' '))
+  if (среди.some((x) => !x)) return имена.join(' / ')
+  return [...думи[0]!.slice(0, нач), среди.join('/'), ...думи[0]!.slice(думи[0]!.length - край)].join(' ')
+}
 const версия = (t: string) => t.match(/\bV\s?(\d+(?:\.\d+)*)/i)?.[1] ?? null
 const sha = (f: string) => createHash('sha256').update(readFileSync(f)).digest('hex')
 
@@ -134,7 +152,7 @@ for (const [хеш, { s, редове }] of поSha) {
     key: { field: 'sha256', value: хеш },
     file: path.join(DOC_ROOT, s.fail),
     data: {
-      title: `${ВИД_BG[kind]} — ${име(осн.zaglavie)}`,
+      title: `${ВИД_BG[kind]} — ${общоИме(редове.map((r) => r.zaglavie))}`,
       kind,
       language: 'original',
       products: prod,

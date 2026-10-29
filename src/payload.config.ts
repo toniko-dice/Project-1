@@ -197,7 +197,8 @@ export default buildConfig({
     fallbackLanguage: 'bg',
   },
   upload: {
-    // 20 MB — заради банерните видеа. Снимките са далеч под този размер.
-    limits: { fileSize: 20_000_000 },
+    // 50 MB — заради PDF-ите на документите (ръководствата за монтаж на STREAM са ~29 MB).
+    // Реалният таван е в nginx: 50m само за /api/documents, 12m за всичко останало.
+    limits: { fileSize: 50_000_000 },
   },
 })

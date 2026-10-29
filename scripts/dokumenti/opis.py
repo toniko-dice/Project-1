@@ -121,6 +121,11 @@ PRAVILA = [
     (r'520W Rigid', [], '520W Rigid Solar Panel', False),
 ]
 
+# Скрити по решение на собственика (по-стара версия на документ, който има по-нов) — регулярен израз за заглавието → бележка.
+SKRITI_RESHENIE = {
+    r'STREAM Ultra & Pro_Installation Guide_en\+de\+fr_V1\.0': 'по-старата версия (V1.0 en+de+fr) — има по-ново „STREAM Ultra&Pro Installation Guide"',
+}
+
 VIDOVE = [  # (регулярен израз, вид) — по реда
     (r"What's in the Box|App User Manual", 'Друго'),
     (r'Safety Instruction', 'Инструкции за безопасност'),
@@ -199,6 +204,10 @@ def main():
         z['produkti'] = vidimi
         z['produkti_imena'] = [produkti[s]['ime'] for s in vidimi]
         z['skrit'] = not vidimi or z['ezik'] in ('RU', 'NL', 'PL', 'DA', 'NO', 'SV', 'FI')
+        for rx, prichina in SKRITI_RESHENIE.items():
+            if re.search(rx, t):
+                z['skrit'] = True
+                bel = '; '.join(x for x in (bel, f'скрит: {prichina}') if x)
         z['bg_iztochnik'] = bg
         z['nesigurna_vrazka'] = nesig
         z['belezhka'] = bel

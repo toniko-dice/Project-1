@@ -1446,52 +1446,6 @@
     "dubli_po_zaglavie": true
   },
   {
-    "zaglavie": "EcoFlow STREAM Ultra & Pro_Installation Guide_en+de+fr_V1.0",
-    "drugi_zaglavia": [],
-    "data": "2026-04-16",
-    "tip": "pdf",
-    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747276514204/EcoFlow%20STREAM%20Ultra%20%26%20Pro_Installation%20Guide_en%2Bde%2Bfr_V1.0.pdf",
-    "pati_v_spisaka": 1,
-    "vid": "Ръководство за монтаж",
-    "ezik": "многоезичен",
-    "produkti": [
-      "stream-pro",
-      "stream-ultra"
-    ],
-    "produkti_imena": [
-      "EcoFlow STREAM Pro",
-      "EcoFlow STREAM Ultra"
-    ],
-    "skrit": false,
-    "bg_iztochnik": "превод",
-    "nesigurna_vrazka": false,
-    "belezhka": "",
-    "dubli_po_zaglavie": true
-  },
-  {
-    "zaglavie": "EcoFlow STREAM Ultra & Pro_Installation Guide_en+de+fr_V1.0",
-    "drugi_zaglavia": [],
-    "data": "2026-01-06",
-    "tip": "pdf",
-    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747295383404/EcoFlow%20STREAM%20Ultra%20%26%20Pro_Installation%20Guide_en%2Bde%2Bfr_V1.0.pdf",
-    "pati_v_spisaka": 1,
-    "vid": "Ръководство за монтаж",
-    "ezik": "многоезичен",
-    "produkti": [
-      "stream-pro",
-      "stream-ultra"
-    ],
-    "produkti_imena": [
-      "EcoFlow STREAM Pro",
-      "EcoFlow STREAM Ultra"
-    ],
-    "skrit": false,
-    "bg_iztochnik": "превод",
-    "nesigurna_vrazka": false,
-    "belezhka": "",
-    "dubli_po_zaglavie": true
-  },
-  {
     "zaglavie": "EcoFlow STREAM Ultra&Pro_Installation Guide",
     "drugi_zaglavia": [],
     "data": "2026-04-16",
@@ -1937,6 +1891,52 @@
     "nesigurna_vrazka": false,
     "belezhka": "",
     "dubli_po_zaglavie": false
+  },
+  {
+    "zaglavie": "EcoFlow STREAM Ultra & Pro_Installation Guide_en+de+fr_V1.0",
+    "drugi_zaglavia": [],
+    "data": "2026-04-16",
+    "tip": "pdf",
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747276514204/EcoFlow%20STREAM%20Ultra%20%26%20Pro_Installation%20Guide_en%2Bde%2Bfr_V1.0.pdf",
+    "pati_v_spisaka": 1,
+    "vid": "Ръководство за монтаж",
+    "ezik": "многоезичен",
+    "produkti": [
+      "stream-pro",
+      "stream-ultra"
+    ],
+    "produkti_imena": [
+      "EcoFlow STREAM Pro",
+      "EcoFlow STREAM Ultra"
+    ],
+    "skrit": true,
+    "bg_iztochnik": "превод",
+    "nesigurna_vrazka": false,
+    "belezhka": "скрит: по-старата версия (V1.0 en+de+fr) — има по-ново „STREAM Ultra&Pro Installation Guide\"",
+    "dubli_po_zaglavie": true
+  },
+  {
+    "zaglavie": "EcoFlow STREAM Ultra & Pro_Installation Guide_en+de+fr_V1.0",
+    "drugi_zaglavia": [],
+    "data": "2026-01-06",
+    "tip": "pdf",
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747295383404/EcoFlow%20STREAM%20Ultra%20%26%20Pro_Installation%20Guide_en%2Bde%2Bfr_V1.0.pdf",
+    "pati_v_spisaka": 1,
+    "vid": "Ръководство за монтаж",
+    "ezik": "многоезичен",
+    "produkti": [
+      "stream-pro",
+      "stream-ultra"
+    ],
+    "produkti_imena": [
+      "EcoFlow STREAM Pro",
+      "EcoFlow STREAM Ultra"
+    ],
+    "skrit": true,
+    "bg_iztochnik": "превод",
+    "nesigurna_vrazka": false,
+    "belezhka": "скрит: по-старата версия (V1.0 en+de+fr) — има по-ново „STREAM Ultra&Pro Installation Guide\"",
+    "dubli_po_zaglavie": true
   },
   {
     "zaglavie": "EcoFlow App User Manual_for STREAM Series_V1.0",
