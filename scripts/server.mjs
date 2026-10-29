@@ -9,6 +9,7 @@
  *   npm run import:product:server <slug>    — внос на продукт на сървъра (с архив)
  *   npm run import:page:server <slug>       — внос на страница на сървъра (с архив)
  *   npm run faq:dobavi:server <файл>        — въпросите от файла на сървъра (с архив)
+ *   npm run import:dokumenti:server         — документите (PDF) на сървъра, наваксващо + внос (с архив)
  *   npm run na-sarvara <npm скрипт> [арг.]  — който и да е npm скрипт на сървъра (с архив)
  *   npm run razblokirai [-- <IP>]           — fail2ban: отблокира IP-то (без IP — всички)
  *
@@ -222,6 +223,47 @@ const КОМАНДИ = {
     // import:page прави архив сам преди записа.
     const r = наСървъра(`cd ${q(DIR)} && CONTENT_ROOT=content-server npm run import:page -- ${q(slug)} ${арг.filter((a) => a.startsWith('-')).map(q).join(' ')}`)
     if (r.status !== 0) стоп('Вносът на сървъра не мина.')
+    опресни()
+  },
+
+  /*
+    Документите (`task-dokumenti.md`): PDF-ите от content/dokumenti/ →
+    content-server/dokumenti/ на сървъра — наваксващо (само липсващите или с
+    друг размер, на партиди; прекъснато качване продължава при следващото
+    пускане), после вносът там. Вносът прави архив сам.
+  */
+  async 'import-dokumenti'() {
+    const base = path.join(ROOT, 'content', 'dokumenti')
+    if (!existsSync(path.join(base, 'svaleni.json'))) стоп('Няма content/dokumenti/svaleni.json — първо scripts/dokumenti/svali.py.')
+    const { readdirSync, statSync } = await import('node:fs')
+    const локални = []
+    const обходи = (d) => {
+      for (const e of readdirSync(d, { withFileTypes: true })) {
+        const p = path.join(d, e.name)
+        if (e.isDirectory()) обходи(p)
+        else if (/\.pdf$|^svaleni\.json$/i.test(e.name)) локални.push({ rel: path.relative(base, p).split(path.sep).join('/'), size: statSync(p).size })
+      }
+    }
+    for (const d of ['originali', 'bg-oficialni', 'bg-prevodi']) if (existsSync(path.join(base, d))) обходи(path.join(base, d))
+    локални.push({ rel: 'svaleni.json', size: statSync(path.join(base, 'svaleni.json')).size })
+    const r = spawnSync(SSH, ['-o', 'BatchMode=yes', SERVER, `mkdir -p ${q(`${DIR}/content-server/dokumenti`)} && cd ${q(`${DIR}/content-server/dokumenti`)} && find . -type f -printf '%P %s\\n'`], { encoding: 'utf8' })
+    if (r.status !== 0) стоп('Не мога да прочета папката на сървъра.')
+    const там = new Map(r.stdout.split('\n').filter(Boolean).map((l) => { const i = l.lastIndexOf(' '); return [l.slice(0, i), Number(l.slice(i + 1))] }))
+    const липсват = локални.filter((f) => там.get(f.rel) !== f.size)
+    console.log(`→ документи: ${локални.length} файла, на сървъра липсват/различни ${липсват.length} (${Math.round(липсват.reduce((s, f) => s + f.size, 0) / 1048576)} MB)`)
+    for (let i = 0; i < липсват.length; i += 15) {
+      const партида = липсват.slice(i, i + 15)
+      await new Promise((resolve, reject) => {
+        const tar = spawn(TAR, ['-c', '-f', '-', ...партида.map((f) => f.rel)], { cwd: base, stdio: ['ignore', 'pipe', 'inherit'] })
+        const ssh = spawn(SSH, ['-o', 'BatchMode=yes', SERVER, `tar -x -f - -C ${q(`${DIR}/content-server/dokumenti`)}`], { stdio: ['pipe', 'inherit', 'inherit'] })
+        tar.stdout.pipe(ssh.stdin)
+        ssh.on('close', (code) => (code === 0 ? resolve() : reject(new Error(`качването спря (код ${code}) — пуснете пак, продължава оттук`))))
+        tar.on('error', reject)
+      })
+      console.log(`  качени ${Math.min(i + 15, липсват.length)}/${липсват.length}`)
+    }
+    const v = наСървъра(`cd ${q(DIR)} && DOKUMENTI_ROOT=content-server/dokumenti npm run import:dokumenti -- ${арг.filter((a) => a.startsWith('-')).map(q).join(' ')}`)
+    if (v.status !== 0) стоп('Вносът на документите на сървъра не мина.')
     опресни()
   },
 

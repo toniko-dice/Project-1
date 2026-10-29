@@ -3,6 +3,9 @@
  * (manuals.ecoflow.com/eu/product/<slug>?lang=bg_BG) → PDF.
  *
  *   node scripts/dokumenti/bg-pdf.mjs [<папка за документите>] [slug …]
+ *   node scripts/dokumenti/bg-pdf.mjs <папка> --en   — онлайн ръководствата БЕЗ официален BG, на английски
+ *     (оригиналите до преводите; списъкът — от content/dokumenti/opis.json) →
+ *     <папка>/originali/<продукт или bez-produkt>/<slug>-user-manual-en.pdf
  *
  * С инсталирания Chrome (playwright-core, без свален браузър; CHROME_PATH за друг път).
  * Преди печат: проверка, че страницата е останала на bg_BG и е на кирилица; превъртане
@@ -10,7 +13,7 @@
  * съдържание, бисквитките и чата; най-горе — бележка с източника и датата.
  * A4, полета 12 мм. → <папка>/bg-oficialni/<slug>.pdf; повторно пускане презаписва.
  */
-import { mkdirSync, statSync } from 'node:fs'
+import { mkdirSync, readFileSync, statSync } from 'node:fs'
 import path from 'node:path'
 import { chromium } from 'playwright-core'
 
@@ -23,24 +26,38 @@ const SLUGS = [
   '220w-lightweight-solar-panel', '160w-lightweight-solar-panel', '250w-rigid-solar-panel',
   '110w-lightweight-solar-panel', 'solar-panel-28w',
 ]
-const [, , outArg, ...only] = process.argv
-const OUT = path.join(outArg || path.join(import.meta.dirname, '..', '..', 'content', 'dokumenti'), 'bg-oficialni')
+const [, , outArg, ...rest] = process.argv
+const EN = rest.includes('--en')
+const only = rest.filter((a) => !a.startsWith('--'))
+const BASE = outArg || path.join(import.meta.dirname, '..', '..', 'content', 'dokumenti')
+const OUT = path.join(BASE, 'bg-oficialni')
+const LANG = EN ? 'en_US' : 'bg_BG'
+// --en: онлайн ръководствата без официален BG (от описа) → { slug, файл }.
+const ЗАДАЧИ = EN
+  ? JSON.parse(readFileSync(path.join(import.meta.dirname, '..', '..', 'content', 'dokumenti', 'opis.json'), 'utf8'))
+      .filter((z) => z.tip === 'online' && z.bg_iztochnik !== 'официален')
+      .map((z) => {
+        const slug = z.adres.replace(/^.*?\/product\//, '').replace(/[/?].*$/, '')
+        return { slug, file: path.join(BASE, 'originali', z.produkti[0] || 'bez-produkt', `${slug}-user-manual-en.pdf`) }
+      })
+  : SLUGS.map((slug) => ({ slug, file: path.join(OUT, `${slug}.pdf`) }))
 const CHROME = process.env.CHROME_PATH || 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe'
 const DATA = new Date().toLocaleDateString('bg-BG', { day: '2-digit', month: '2-digit', year: 'numeric' }) // „29.10.2026 г.“
 
-mkdirSync(OUT, { recursive: true })
 const browser = await chromium.launch({ executablePath: CHROME, headless: true })
 const ctx = await browser.newContext({ viewport: { width: 1200, height: 1600 }, locale: 'bg-BG' })
 const greshki = []
 
-for (const slug of only.length ? only : SLUGS) {
+for (const { slug, file } of ЗАДАЧИ.filter((z) => !only.length || only.includes(z.slug))) {
+  mkdirSync(path.dirname(file), { recursive: true })
   const page = await ctx.newPage()
   try {
-    const url = `https://manuals.ecoflow.com/eu/product/${slug}?lang=bg_BG`
+    const url = `https://manuals.ecoflow.com/eu/product/${slug}?lang=${LANG}`
     await page.goto(url, { waitUntil: 'networkidle', timeout: 90_000 })
-    if (!page.url().includes('lang=bg_BG')) throw new Error(`пренасочено към ${page.url()} — няма български`)
+    if (!page.url().includes(`lang=${LANG}`)) throw new Error(`пренасочено към ${page.url()} — няма ${LANG}`)
     const кирилица = await page.evaluate(() => (document.body.innerText.match(/[а-яА-Я]/g) || []).length)
-    if (кирилица < 2000) throw new Error(`само ${кирилица} кирилски букви`)
+    const текст = await page.evaluate(() => document.body.innerText.length)
+    if (EN ? текст < 3000 : кирилица < 2000) throw new Error(EN ? `само ${текст} знака текст` : `само ${кирилица} кирилски букви`)
 
     // Ленивите снимки: превъртане до края на стъпки, после изчакване всички да се заредят.
     await page.evaluate(async () => {
@@ -68,7 +85,7 @@ for (const slug of only.length ? only : SLUGS) {
         h1, h2, h3 { break-after: avoid; }
         .ef-izvor { font: 12px/1.45 Arial, sans-serif; color: #333; border: 1px solid #ccc; background: #f2f2f2; padding: 8px 12px; margin: 0 0 14px; }`,
     })
-    await page.evaluate(({ url, data }) => {
+    await page.evaluate(({ url, data, en }) => {
       // Отстъпът за страничното меню (padding-left ~374px) — махнат; навигацията с иконите
       // (ЧЗВ, Приложение, Политика, Общност) — скрита; съдържанието — на цялата ширина.
       const колона = document.querySelector('[class*="Outline_outline__"]')
@@ -78,12 +95,13 @@ for (const slug of only.length ? only : SLUGS) {
       document.querySelectorAll('.gridIcon').forEach((g) => { if (/ЧЗВ/.test(g.innerText)) g.classList.add('ef-skrij') })
       const d = document.createElement('div')
       d.className = 'ef-izvor'
-      d.textContent = `Официално ръководство на EcoFlow на български език. Източник: ${url.replace('https://', '')}, свалено на ${data}`
+      d.textContent = en
+        ? `Оригинално ръководство на EcoFlow (на английски). Източник: ${url.replace('https://', '')}, свалено на ${data}`
+        : `Официално ръководство на EcoFlow на български език. Източник: ${url.replace('https://', '')}, свалено на ${data}`
       ;(document.querySelector('[class*="Layout_content"]') || document.body).prepend(d)
-    }, { url, data: DATA })
-    const file = path.join(OUT, `${slug}.pdf`)
+    }, { url, data: DATA, en: EN })
     await page.pdf({ path: file, format: 'A4', printBackground: true, margin: { top: '12mm', bottom: '12mm', left: '12mm', right: '12mm' } })
-    console.log(`✓ ${slug} — ${кирилица} кирилски букви, ${Math.round(statSync(file).size / 1024)} KB`)
+    console.log(`✓ ${slug} — ${EN ? `${текст} знака` : `${кирилица} кирилски букви`}, ${Math.round(statSync(file).size / 1024)} KB → ${path.relative(BASE, file)}`)
   } catch (e) {
     greshki.push(`${slug}: ${e.message}`)
     console.log(`✗ ${slug}: ${e.message}`)

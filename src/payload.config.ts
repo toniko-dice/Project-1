@@ -14,6 +14,7 @@ import { Awards } from './collections/Awards'
 import { Backups } from './collections/Backups'
 import { Categories } from './collections/Categories'
 import { Media } from './collections/Media'
+import { Documents } from './collections/Documents'
 import { MenuPanels } from './collections/MenuPanels'
 import { Offers } from './collections/Offers'
 import { Pages } from './collections/Pages'
@@ -153,6 +154,7 @@ export default buildConfig({
     Attributes,
     MenuPanels,
     Media,
+    Documents,
     Testimonials,
     Awards,
     Subscribers,

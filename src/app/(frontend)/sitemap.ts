@@ -4,6 +4,7 @@ import { accessoriesForCategory, canHaveAccessoriesPage } from '@/lib/catalog'
 import { getCatalog, getCategoryTree, getPayloadClient, getPublishedProducts } from '@/lib/payload'
 import { mediaUrl } from '@/lib/media'
 import { CONTACT_PATH, FAQ_PATH } from '@/lib/legal'
+import { DOCUMENTS_PATH } from '@/lib/documents'
 import { categoryNoindex } from '@/lib/seo'
 import { absoluteUrl } from '@/lib/site-url'
 import { levelOf } from '@/lib/tree'
@@ -82,6 +83,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'weekly',
     },
     { url: absoluteUrl(CONTACT_PATH), changeFrequency: 'yearly' },
+    { url: absoluteUrl(DOCUMENTS_PATH), changeFrequency: 'monthly' },
   )
 
   for (const category of tree) {

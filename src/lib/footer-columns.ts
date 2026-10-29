@@ -1,5 +1,6 @@
 import { CONSENT_SETTINGS_HASH } from './consent'
 import { CONTACT_PATH, FAQ_PATH } from './legal'
+import { DOCUMENTS_PATH } from './documents'
 
 /**
  * Колоните на футъра (`task-futar.md`) — за `seed.ts` и за еднократния
@@ -23,6 +24,7 @@ export const FOOTER_COLUMNS = [
     links: [
       { label: 'Гаранция', url: '/garanciya' },
       { label: 'Ръководства', url: '/rakovodstvo-portativni-elektrocentrali' },
+      { label: 'Документи', url: DOCUMENTS_PATH },
       { label: 'Често задавани въпроси', url: FAQ_PATH },
       { label: 'Контакти', url: CONTACT_PATH },
     ],

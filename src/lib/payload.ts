@@ -624,3 +624,75 @@ export const getFaqGroups = cache(async (): Promise<FaqGroup[]> =>
     }),
   ),
 )
+
+/* ─────────── Документи (`task-dokumenti.md`) ─────────── */
+
+type DocRow = {
+  id: number
+  title: string
+  kind: string
+  language: string
+  sourceLanguage?: string | null
+  url?: string | null
+  filesize?: number | null
+  original?: { url?: string | null; sourceLanguage?: string | null } | number | null
+  products?: ({ id: number; title?: string; category?: number | Category | null } | number)[] | null
+}
+
+const ВИДИМИ_ДОКУМЕНТИ: Where = { hidden: { not_equals: true } }
+
+const документ = (d: DocRow) => ({
+  id: d.id,
+  title: d.title,
+  kind: d.kind,
+  language: d.language,
+  sourceLanguage: d.sourceLanguage ?? null,
+  url: d.url ?? '',
+  filesize: d.filesize ?? null,
+  original:
+    d.original && typeof d.original === 'object' && d.original.url
+      ? { url: d.original.url, sourceLanguage: d.original.sourceLanguage ?? null }
+      : null,
+})
+
+/** Видимите документи на продукт — за раздел „Документи" (редът — `sortDocuments`). */
+export const getProductDocuments = cache(async (productId: number) =>
+  cached(['documents', String(productId)], ['product', 'global'], async () => {
+    const payload = await getPayloadClient()
+    const result = await payload.find({
+      collection: 'documents',
+      where: { and: [ВИДИМИ_ДОКУМЕНТИ, { products: { in: [productId] } }] },
+      depth: 1,
+      limit: 200,
+      sort: '_order',
+      select: { title: true, kind: true, language: true, sourceLanguage: true, url: true, filename: true, filesize: true, original: true },
+    })
+    return (result.docs as unknown as DocRow[]).map(документ)
+  }),
+)
+
+/** Всички видими документи с продуктите им (име, адрес, категория) — за `/dokumenti`. */
+export const getAllDocuments = cache(async () =>
+  cached(['documents-all'], ['product', 'global'], async () => {
+    const payload = await getPayloadClient()
+    const result = await payload.find({
+      collection: 'documents',
+      where: ВИДИМИ_ДОКУМЕНТИ,
+      depth: 1,
+      pagination: false,
+      sort: '_order',
+      select: { title: true, kind: true, language: true, sourceLanguage: true, url: true, filename: true, filesize: true, original: true, products: true },
+    })
+    return (result.docs as unknown as DocRow[]).map((d) => ({
+      ...документ(d),
+      products: (d.products ?? [])
+        .filter((p): p is Exclude<typeof p, number> => typeof p === 'object' && p !== null)
+        .map((p) => ({
+          id: p.id,
+          title: p.title ?? '',
+          path: productPath(p as never),
+          categoryId: typeof p.category === 'object' && p.category ? p.category.id : (p.category ?? null),
+        })),
+    }))
+  }),
+)

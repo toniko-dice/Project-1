@@ -59,6 +59,7 @@ import * as migration_20261012_131700_domein_ecoflow_bg from './20261012_131700_
 import * as migration_20261013_052710_banner_biskvitki from './20261013_052710_banner_biskvitki';
 import * as migration_20261013_101202_kategoriya_skrita from './20261013_101202_kategoriya_skrita';
 import * as migration_20261019_095550_imeil_office from './20261019_095550_imeil_office';
+import * as migration_20261029_161823_dokumenti from './20261029_161823_dokumenti';
 
 export const migrations = [
   {
@@ -364,6 +365,11 @@ export const migrations = [
   {
     up: migration_20261019_095550_imeil_office.up,
     down: migration_20261019_095550_imeil_office.down,
-    name: '20261019_095550_imeil_office'
+    name: '20261019_095550_imeil_office',
+  },
+  {
+    up: migration_20261029_161823_dokumenti.up,
+    down: migration_20261029_161823_dokumenti.down,
+    name: '20261029_161823_dokumenti'
   },
 ];

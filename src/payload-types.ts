@@ -80,6 +80,7 @@ export interface Config {
     attributes: Attribute;
     'menu-panels': MenuPanel;
     media: Media;
+    documents: Document;
     testimonials: Testimonial;
     awards: Award;
     subscribers: Subscriber;
@@ -112,6 +113,7 @@ export interface Config {
     attributes: AttributesSelect<false> | AttributesSelect<true>;
     'menu-panels': MenuPanelsSelect<false> | MenuPanelsSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
+    documents: DocumentsSelect<false> | DocumentsSelect<true>;
     testimonials: TestimonialsSelect<false> | TestimonialsSelect<true>;
     awards: AwardsSelect<false> | AwardsSelect<true>;
     subscribers: SubscribersSelect<false> | SubscribersSelect<true>;
@@ -3415,6 +3417,55 @@ export interface MenuPanel {
   createdAt: string;
 }
 /**
+ * Ръководствата на EcoFlow. Първо се показват официалните на български, после преводите, после оригиналите. Документ за продукт, който го няма в сайта — „Скрит" (не се трие).
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "documents".
+ */
+export interface Document {
+  id: number;
+  _order?: string | null;
+  title: string;
+  kind: 'rakovodstvo' | 'kratko' | 'bezopasnost' | 'montazh' | 'drugo';
+  language: 'bg-oficialen' | 'bg-prevod' | 'original';
+  /**
+   * Документът се показва в раздел „Документи" на всеки от тях.
+   */
+  products?: (number | Product)[] | null;
+  /**
+   * Само за преводите — оригиналният документ на EcoFlow.
+   */
+  original?: (number | null) | Document;
+  version?: string | null;
+  sourceDate?: string | null;
+  /**
+   * EN, многоезичен…
+   */
+  sourceLanguage?: string | null;
+  sourceTitle?: string | null;
+  sourceUrl?: string | null;
+  /**
+   * За вноса — един файл не се качва два пъти.
+   */
+  sha256?: string | null;
+  /**
+   * Не се вижда на сайта (продуктът го няма), остава тук.
+   */
+  hidden?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  focalX?: number | null;
+  focalY?: number | null;
+  sizes?: {};
+}
+/**
  * Хората, абонирани за бюлетина през формата на сайта. Бутонът „Изтегли CSV" е над списъка.
  *
  * This interface was referenced by `Config`'s JSON-Schema
@@ -3712,6 +3763,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'media';
         value: number | Media;
+      } | null)
+    | ({
+        relationTo: 'documents';
+        value: number | Document;
       } | null)
     | ({
         relationTo: 'testimonials';
@@ -5690,6 +5745,37 @@ export interface MediaSelect<T extends boolean = true> {
               filename?: T;
             };
       };
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "documents_select".
+ */
+export interface DocumentsSelect<T extends boolean = true> {
+  _order?: T;
+  title?: T;
+  kind?: T;
+  language?: T;
+  products?: T;
+  original?: T;
+  version?: T;
+  sourceDate?: T;
+  sourceLanguage?: T;
+  sourceTitle?: T;
+  sourceUrl?: T;
+  sha256?: T;
+  hidden?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  url?: T;
+  thumbnailURL?: T;
+  filename?: T;
+  mimeType?: T;
+  filesize?: T;
+  width?: T;
+  height?: T;
+  focalX?: T;
+  focalY?: T;
+  sizes?: T | {};
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

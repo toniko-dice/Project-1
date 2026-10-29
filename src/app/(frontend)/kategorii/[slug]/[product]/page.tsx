@@ -24,6 +24,7 @@ import {
   getGlobal,
   getProduct,
   getProductCards,
+  getProductDocuments,
   getPublishedProducts,
 } from '@/lib/payload'
 import type { Category, Product } from '@/payload-types'
@@ -32,6 +33,8 @@ import { categoryCrumbs } from '@/lib/tree'
 import { accessoriesPath, productPath } from '@/lib/urls'
 import { pageTitle } from '@/lib/title'
 import { absoluteUrl } from '@/lib/site-url'
+import { DocumentList } from '@/components/DocumentList'
+import { sortDocuments } from '@/lib/documents'
 
 /** Колко карти най-много в „Съвместими аксесоари"; останалите са на страницата на серията. */
 const МАКС_АКСЕСОАРИ = 8
@@ -89,6 +92,8 @@ export default async function ProductPage({ params }: Args) {
   ])
 
   if (!product) notFound()
+  // Документите (`task-dokumenti.md`): първо българските, после оригиналите; без документи — без раздел.
+  const документи = sortDocuments(await getProductDocuments(product.id))
 
   /*
     Адресът съдържа серията. Ако някой отвори продукта под чужда серия —
@@ -165,6 +170,8 @@ export default async function ProductPage({ params }: Args) {
     anchorIds.push(id)
     anchors.push({ id, label })
   }
+  const документиId = документи.length ? uniqueAnchor('Документи', used) : null
+  if (документиId) anchors.push({ id: документиId, label: 'Документи' })
 
   const images: GalleryImage[] = [
     { value: product.image },
@@ -358,6 +365,18 @@ export default async function ProductPage({ params }: Args) {
         showBgn={showBgn}
         accessories={accessories.length ? [] : accessories}
       />
+
+      {/* ── Документи (ръководства, инструкции) — след секциите; без документи няма раздел ── */}
+      {документиId ? (
+        <section id={документиId} aria-labelledby="dokumenti-zaglavie" className="container-site scroll-mt-28 py-12 lg:py-16">
+          <h2 id="dokumenti-zaglavie" className="mb-8 text-center text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">
+            Документи
+          </h2>
+          <div className="mx-auto max-w-[860px]">
+            <DocumentList docs={документи} />
+          </div>
+        </section>
+      ) : null}
 
       {/* ── Лепнеща лента с цената и бутона — само на телефон ── */}
       <StickyBuyBar
