@@ -88,13 +88,16 @@ def izvleci(pdf: Path, mnogoezichen: bool):
 
 
 def versiya(zaglavie: str, tekst: str):
-    """От заглавието; ако там я няма — „V1.2" от първата страница на PDF-а."""
-    m = re.search(r'\bV\s?(\d+(?:\.\d+)*)', zaglavie, re.I)
-    if m:
-        return m[1]
+    """От заглавието; отпечатаната на първата страница („V1.1") печели, само ако е
+    по-нова (EcoFlow понякога качва V1.1 под име „…_V1.0"; по-стара на страницата
+    обикновено е друго число, не версията на документа)."""
+    t = re.search(r'\bV\s?(\d+(?:\.\d+)*)', zaglavie, re.I)
     parva = tekst.split('=== стр.')[1] if '=== стр.' in tekst else tekst
-    m = re.search(r'(?<![\w.])V(\d+\.\d+(?:\.\d+)?)(?![\w.])', parva)
-    return m[1] if m else None
+    p = re.search(r'(?<![\w.])V(\d+\.\d+(?:\.\d+)?)(?![\w.])', parva)
+    if t and p:
+        broi = lambda v: tuple(int(x) for x in v.split('.'))
+        return p[1] if broi(p[1]) > broi(t[1]) else t[1]
+    return (t or p)[1] if (t or p) else None
 
 
 def main():

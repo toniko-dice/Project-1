@@ -172,8 +172,8 @@ function страница(x, md, съдържание) {
   const toc = съдържание && раздели.length >= 2
     ? `<nav class="toc"><div class="toc-title">Съдържание</div><ol>${раздели.map((m) => `<li><a href="#${m[1]}">${m[2]}</a></li>`).join('')}</ol></nav>`
     : ''
-  // Версията — само ако я няма в името на файла.
-  const оригинал = `${x.zaglavia[0]}${x.versiya && !x.zaglavia[0].includes(x.versiya) ? `, V${x.versiya}` : ''}`
+  // Името на файла на EcoFlow — както е; версията е на отделен ред горе (отпечатаната в PDF-а).
+  const оригинал = x.zaglavia[0]
   return {
     заглавие,
     html: ШАБЛОН

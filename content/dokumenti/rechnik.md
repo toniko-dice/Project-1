@@ -147,3 +147,37 @@
 | strip light | светлинна лента |
 | transfer time (UPS) | време за превключване |
 | trolley | количка |
+
+## Добавени от преводите (партида 2)
+
+| English | Български |
+|---|---|
+| 2/3/4-Port Output | изход през 2/3/4 порта |
+| built-in cable / retractable cable | вграден кабел / прибиращ се кабел |
+| car battery protection | защита на автомобилния акумулатор |
+| Charge / Discharge Cut-Off Voltage | крайно напрежение при зареждане / разреждане |
+| child lock | защита от деца |
+| Confirm / Scroll Up / Scroll Down button | бутон за потвърждение / превъртане нагоре / надолу |
+| cycle count | брой на циклите |
+| deep sleep protection mode | защитен режим на дълбок сън |
+| Desktop Charger | настолно зарядно устройство |
+| drain plug | тапа за отводняване |
+| dynamic screen / screensaver | динамичен екран / заставка на екрана |
+| For indoor use only | Само за употреба на закрито |
+| General Safety Instructions | Общи инструкции за безопасност |
+| Healthy charging | щадящо зареждане (Healthy charging) |
+| hex key | шестостенен ключ |
+| ISED statement | декларация на ISED (Канада) |
+| lid latch | ключалка на капака |
+| magnetic block / magnetic charging puck | магнитен блок / магнитна зарядна шайба |
+| Passthrough Mode | режим на преминаващо зареждане |
+| plug-in battery (GLACIER) | сменяема батерия (GLACIER Plug-in Battery) |
+| Protective Cover | защитен калъф |
+| Radiation Exposure Statement | декларация за излагане на радиочестотно лъчение |
+| SAR | SAR (специфична степен на поглъщане) |
+| self-discharge | саморазреждане |
+| shopping-cart icon (in a figure) | показано с иконка на количка (без тълкуване) |
+| Space (app) | Space (пространство) |
+| standalone use | самостоятелна употреба |
+| UK PSTI regulation (2023 No. 1007) | Наредбата от 2023 г. за сигурността на продуктите и телекомуникационната инфраструктура (изисквания за сигурност към съответните свързваеми продукти) |
+
