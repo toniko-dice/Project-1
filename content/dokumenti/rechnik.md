@@ -259,3 +259,28 @@
 | Regulation (EU) 2023/1542 | Регламент (ЕС) 2023/1542 |
 | transfer switch / Manual Transfer Switch | превключвател на захранването / Manual Transfer Switch (ръчен превключвател на захранването) |
 
+## Добавени от преводите на скритите (партиди С1–С4)
+
+| English | Български |
+|---|---|
+| adjustable wrench | раздвижен гаечен ключ |
+| Alternator Charger | зарядно устройство за алтернатор (Alternator Charger) — както в българския текст на EcoFlow |
+| base load | базов товар (Base load) |
+| BKW-AC open end cable | кабел BKW-AC със свободен край |
+| Breathing / Solid / Blinking (LED) | пулсира / свети постоянно / мига |
+| cable gland | кабелен щуцер |
+| depth of discharge (DOD) | дълбочина на разреждане (DOD) |
+| feed-in tariff / revenue | изкупна цена / приходи от подаване към мрежата |
+| Island Detection | откриване на островен режим (Island Detection) |
+| Intelligent / Self-Powered / Custom mode (STREAM) | режим Intelligent / Self-powered / Custom (с обяснение при първа поява) |
+| MPPT | проследяване на точката на максимална мощност (MPPT) |
+| peak shaving | ограничаване на пиковете (Peak shaving) |
+| RCD | дефектнотокова защита (RCD) |
+| reverse polarity protection | защита от обратна полярност |
+| ring terminal / OT terminal | кабелна обувка (с кръгло ухо) |
+| SOC | ниво на заряда (SOC) |
+| time-of-use rates | тарифи по часови зони |
+| Trickle Charging Mode | режим на зареждане с малък ток (Trickle Charging) |
+| warranty policy summary | кратко описание на гаранционните условия |
+| wire ferrule | кабелен накрайник (гилза) |
+
