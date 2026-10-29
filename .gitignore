@@ -94,3 +94,6 @@ content/snimki-imena-proverka.csv
 content/dokumenti/**/*.pdf
 content/dokumenti/**/*.zip
 content/dokumenti/svaleni.json
+content/dokumenti/izvlecheni/
+content/dokumenti/prevodi-en/
+content/dokumenti/prevodi-gotovi.json

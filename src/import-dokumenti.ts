@@ -6,12 +6,15 @@
  *
  * Чете `content/dokumenti/opis.json` (в git) и от папката с документите
  * (`DOKUMENTI_ROOT`, иначе `content/dokumenti`): `svaleni.json`, `originali/`,
- * `bg-oficialni/`. Три вида записи:
+ * `bg-oficialni/`, `bg-prevodi/` + `prevodi-gotovi.json`. Четири вида записи:
  *  - официален BG — `bg-oficialni/<slug>.pdf`, ключ: адресът на източника;
  *  - оригинал PDF — от `svaleni.json`; еднакви по SHA-256 адреси → ЕДИН документ
  *    с всичките им продукти; ключ: SHA-256;
  *  - оригинал от онлайн ръководство без BG — `originali/…/<slug>-user-manual-en.pdf`;
- *    ключ: адресът на източника.
+ *    ключ: адресът на източника;
+ *  - превод (етап 5) — от `prevodi-gotovi.json` (само минали проверката,
+ *    `scripts/dokumenti/prevod-pdf.mjs`); заглавието, продуктите и „Скрит" — на
+ *    оригинала, връзка „Оригинал"; ключ: езикът „bg-prevod" + оригиналът.
  * Повторяем: съществуващ запис се обновява (данните; файлът — само ако е сменен).
  * Документ без видим продукт в сайта → „Скрит". Архив преди записа (освен на копие).
  */
@@ -39,6 +42,8 @@ type Red = {
   data: string
 }
 type Свален = { fail: string; sha256: string; zaglavie: string }
+type Ключ = { field: 'sha256' | 'sourceUrl'; value: string }
+type Готов = { bg_fail: string; original: { sha256?: string; sourceUrl?: string }; sha256: string; stranici: number }
 
 const dryRun = process.argv.includes('--dry-run')
 const ROOT = process.cwd()
@@ -101,7 +106,9 @@ for (const p of (await payload.find({ collection: 'products', pagination: false,
 }
 
 type Запис = {
-  key: { field: 'sha256' | 'sourceUrl'; value: string }
+  key: Ключ
+  /** Само при превод: ключът на оригинала (ключът на самия превод е „bg-prevod" + оригиналът). */
+  original?: Ключ
   file: string
   data: Record<string, unknown>
 }
@@ -188,13 +195,39 @@ for (const r of opis.filter((x) => x.tip === 'online' && x.bg_iztochnik !== 'о�
   })
 }
 
+// 4. Преводите — само готовите (минали проверката).
+const готовиF = path.join(DOC_ROOT, 'prevodi-gotovi.json')
+const готови = existsSync(готовиF) ? (JSON.parse(readFileSync(готовиF, 'utf8')) as Record<string, Готов>) : {}
+for (const [id, g] of Object.entries(готови)) {
+  const k: Ключ = g.original.sha256 ? { field: 'sha256', value: g.original.sha256 } : { field: 'sourceUrl', value: g.original.sourceUrl! }
+  const ориг = записи.find((z) => !z.original && z.key.field === k.field && z.key.value === k.value)
+  if (!ориг) throw new Error(`превод „${id}": няма такъв оригинал в описа — нищо не е записано`)
+  записи.push({
+    key: k,
+    original: k,
+    file: path.join(DOC_ROOT, g.bg_fail),
+    data: {
+      title: ориг.data.title,
+      kind: ориг.data.kind,
+      language: 'bg-prevod',
+      products: ориг.data.products,
+      sourceTitle: ориг.data.sourceTitle,
+      sourceUrl: ориг.data.sourceUrl,
+      sourceLanguage: ориг.data.sourceLanguage,
+      sourceDate: ориг.data.sourceDate,
+      version: ориг.data.version ?? null,
+      hidden: ориг.data.hidden,
+    },
+  })
+}
+
 // Проверка на файловете преди каквото и да е писане.
 const липсват = записи.filter((z) => !existsSync(z.file))
 if (липсват.length) {
   липсват.forEach((z) => log(`ЛИПСВА: ${path.relative(DOC_ROOT, z.file)}`))
   throw new Error(`${липсват.length} файла липсват — нищо не е записано`)
 }
-log(`Документи: ${записи.length} (официален BG ${записи.filter((z) => z.data.language === 'bg-oficialen').length}, оригинали ${записи.filter((z) => z.data.language === 'original').length}; скрити ${записи.filter((z) => z.data.hidden).length})`)
+log(`Документи: ${записи.length} (официален BG ${записи.filter((z) => z.data.language === 'bg-oficialen').length}, преводи ${записи.filter((z) => z.data.language === 'bg-prevod').length}, оригинали ${записи.filter((z) => z.data.language === 'original').length}; скрити ${записи.filter((z) => z.data.hidden).length})`)
 if (dryRun) process.exit(0)
 
 if (String(process.env.DATABASE_URI ?? '').includes('tmp-')) log('копие на базата — без архив')
@@ -206,12 +239,23 @@ else {
 let нови = 0
 let обновени = 0
 let сФайл = 0
-for (const z of записи) {
+const намери = async (where: Record<string, unknown>) =>
+  (await payload.find({ collection: 'documents', where: where as never, limit: 1, depth: 0 })).docs[0] as
+    | { id: number; sha256?: string | null }
+    | undefined
+// Оригиналите преди преводите — преводът сочи оригинала.
+for (const z of [...записи.filter((x) => !x.original), ...записи.filter((x) => x.original)]) {
   const хеш = sha(z.file)
-  const същ = (
-    await payload.find({ collection: 'documents', where: { [z.key.field]: { equals: z.key.value } }, limit: 1, depth: 0 })
-  ).docs[0] as { id: number; sha256?: string | null } | undefined
-  const data = { ...z.data, sha256: хеш }
+  let същ: { id: number; sha256?: string | null } | undefined
+  let data: Record<string, unknown> = { ...z.data, sha256: хеш }
+  if (z.original) {
+    const ориг = await намери({ [z.original.field]: { equals: z.original.value }, language: { equals: 'original' } })
+    if (!ориг) throw new Error(`оригиналът на превода „${String(z.data.title)}" липсва в базата`)
+    същ = await намери({ language: { equals: 'bg-prevod' }, original: { equals: ориг.id } })
+    data = { ...data, original: ориг.id }
+  } else {
+    същ = await намери({ [z.key.field]: { equals: z.key.value }, language: { not_equals: 'bg-prevod' } })
+  }
   if (!същ) {
     await payload.create({ collection: 'documents', data: data as never, filePath: z.file, depth: 0 })
     нови++

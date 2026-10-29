@@ -1,0 +1,3940 @@
+[
+  {
+    "id": "ecoflow-delta-3-classic-portable-power-station-safety-instructions-v1-0-global",
+    "original": {
+      "sha256": "662aeb9a2814b46812e9215312c6f6b1fb99dc111e94ba50916bdb8741446eab"
+    },
+    "fail": "originali/delta-3-classic/ecoflow-delta-3-classic-portable-power-station-safety-instructions-v1-0-global.pdf",
+    "bg_fail": "bg-prevodi/delta-3-classic/ecoflow-delta-3-classic-portable-power-station-safety-instructions-v1-0-global-bg.pdf",
+    "zaglavia": [
+      "EcoFlow DELTA 3 Classic Portable Power Station_Safety Instructions V1.0_Global"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1762326071120/EcoFlow%20DELTA%203%20Classic%20Portable%20Power%20Station_Safety%20Instructions%20V1.0_Global.pdf",
+    "vid": "Инструкции за безопасност",
+    "ezik": "многоезичен",
+    "versiya": "1.0",
+    "produkti": [
+      "delta-3-classic"
+    ],
+    "produkti_imena": [
+      "EcoFlow DELTA 3 Classic"
+    ],
+    "skrit": false,
+    "stranici": 16,
+    "en_stranici": [
+      1,
+      2,
+      13
+    ],
+    "znaci": 14417,
+    "skaniran": false,
+    "prazni_stranici": 1,
+    "red": 1
+  },
+  {
+    "id": "ecoflow-delta-3-classic-portable-power-station-quick-start-guide-v1-1-global",
+    "original": {
+      "sha256": "58e7eba4595be918273eced02854a3a9744a76b23bc4135e127d025efd1c3d00"
+    },
+    "fail": "originali/delta-3-classic/ecoflow-delta-3-classic-portable-power-station-quick-start-guide-v1-1-global.pdf",
+    "bg_fail": "bg-prevodi/delta-3-classic/ecoflow-delta-3-classic-portable-power-station-quick-start-guide-v1-1-global-bg.pdf",
+    "zaglavia": [
+      "EcoFlow DELTA 3 Classic Portable Power Station_Quick Start Guide V1.1_Global"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1762326051085/EcoFlow%20DELTA%203%20Classic%20Portable%20Power%20Station_Quick%20Start%20Guide%20V1.1_Global.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "многоезичен",
+    "versiya": "1.1",
+    "produkti": [
+      "delta-3-classic"
+    ],
+    "produkti_imena": [
+      "EcoFlow DELTA 3 Classic"
+    ],
+    "skrit": false,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 420,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 2
+  },
+  {
+    "id": "delta-pro-3-safety-instruction",
+    "original": {
+      "sha256": "24b1fc9a0376abe8149ed8487695139475e68287afd2faa019373c5a3e26fa8b"
+    },
+    "fail": "originali/delta-pro-3/delta-pro-3-safety-instruction.pdf",
+    "bg_fail": "bg-prevodi/delta-pro-3/delta-pro-3-safety-instruction-bg.pdf",
+    "zaglavia": [
+      "EcoFlow DELTA Pro 3_Safety Instruction"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776326416818/DELTA%20Pro%203_Safety%20Instruction.pdf",
+    "vid": "Инструкции за безопасност",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "delta-pro-3"
+    ],
+    "produkti_imena": [
+      "EcoFlow DELTA Pro 3"
+    ],
+    "skrit": false,
+    "stranici": 32,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      17,
+      18,
+      29,
+      31
+    ],
+    "znaci": 15011,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 3
+  },
+  {
+    "id": "ecoflow-delta-pro-3-quick-start-guide",
+    "original": {
+      "sha256": "bcbfadae45f4e6ddbf4ebfd65218973bdead9ca5912bf26ad2a8a1bbd84c8005"
+    },
+    "fail": "originali/delta-pro-3/ecoflow-delta-pro-3-quick-start-guide.pdf",
+    "bg_fail": "bg-prevodi/delta-pro-3/ecoflow-delta-pro-3-quick-start-guide-bg.pdf",
+    "zaglavia": [
+      "EcoFLow DELTA Pro 3_Quick Start Guide"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1768297883425/EcoFLow%20DELTA%20Pro%203_Quick%20Start%20Guide.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "delta-pro-3"
+    ],
+    "produkti_imena": [
+      "EcoFlow DELTA Pro 3"
+    ],
+    "skrit": false,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 841,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 4
+  },
+  {
+    "id": "ecoflow-delta-pro-ultra-quick-start-guide-v1-1-global",
+    "original": {
+      "sha256": "7e10550447499866e29a48179f2a81f22e9bdd6965544c19fa09a6c51c61d258"
+    },
+    "fail": "originali/delta-pro-ultra/ecoflow-delta-pro-ultra-quick-start-guide-v1-1-global.pdf",
+    "bg_fail": "bg-prevodi/delta-pro-ultra/ecoflow-delta-pro-ultra-quick-start-guide-v1-1-global-bg.pdf",
+    "zaglavia": [
+      "EcoFlow DELTA Pro Ultra Inverter_Safety Instructions_V1.1_Global"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1751449815317/EcoFlow%20DELTA%20Pro%20Ultra_Quick%20Start%20Guide_V1.1_Global.pdf",
+    "vid": "Инструкции за безопасност",
+    "ezik": "многоезичен",
+    "versiya": null,
+    "produkti": [
+      "delta-pro-ultra"
+    ],
+    "produkti_imena": [
+      "EcoFlow DELTA Pro Ultra"
+    ],
+    "skrit": false,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 707,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 5
+  },
+  {
+    "id": "ecoflow-delta-pro-ultra-safety-instruction",
+    "original": {
+      "sha256": "4d94f0e94d3e959a4797ae83d12bb27e75b7b7be61b707a8425b0466e38e0e10"
+    },
+    "fail": "originali/delta-pro-ultra/ecoflow-delta-pro-ultra-safety-instruction.pdf",
+    "bg_fail": "bg-prevodi/delta-pro-ultra/ecoflow-delta-pro-ultra-safety-instruction-bg.pdf",
+    "zaglavia": [
+      "EcoFlow DELTA Pro Ultra_Safety Instruction"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776411807275/EcoFlow%20DELTA%20Pro%20Ultra_Safety%20Instruction.pdf",
+    "vid": "Инструкции за безопасност",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "delta-pro-ultra"
+    ],
+    "produkti_imena": [
+      "EcoFlow DELTA Pro Ultra"
+    ],
+    "skrit": false,
+    "stranici": 28,
+    "en_stranici": [
+      1,
+      2,
+      6,
+      7,
+      15,
+      27,
+      28
+    ],
+    "znaci": 16389,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 6
+  },
+  {
+    "id": "ecoflow-delta-pro-ultra-series-battery-safety-instruction-v1-3",
+    "original": {
+      "sha256": "d4e99955ea2c28e0e4905745fabd4b2677172db4c3e93216a8024990fc10d5cb"
+    },
+    "fail": "originali/delta-pro-ultra/ecoflow-delta-pro-ultra-series-battery-safety-instruction-v1-3.pdf",
+    "bg_fail": "bg-prevodi/delta-pro-ultra/ecoflow-delta-pro-ultra-series-battery-safety-instruction-v1-3-bg.pdf",
+    "zaglavia": [
+      "EcoFlow DELTA Pro Ultra Series Battery_Safety Instruction_V1.3"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1779962636756/EcoFlow%20DELTA%20Pro%20Ultra%20Series%20Battery_Safety%20Instruction_V1.3.pdf",
+    "vid": "Инструкции за безопасност",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "delta-pro-ultra"
+    ],
+    "produkti_imena": [
+      "EcoFlow DELTA Pro Ultra"
+    ],
+    "skrit": false,
+    "stranici": 16,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 7167,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 7
+  },
+  {
+    "id": "delta-pro-ultra-user-manual-en",
+    "original": {
+      "sourceUrl": "https://manuals.ecoflow.com/product/delta-pro-ultra?lang=en_US"
+    },
+    "fail": "originali/delta-pro-ultra/delta-pro-ultra-user-manual-en.pdf",
+    "bg_fail": "bg-prevodi/delta-pro-ultra/delta-pro-ultra-user-manual-en-bg.pdf",
+    "zaglavia": [
+      "EcoFlow DELTA Pro Ultra User Manual"
+    ],
+    "adres": "https://manuals.ecoflow.com/product/delta-pro-ultra?lang=en_US",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "delta-pro-ultra"
+    ],
+    "produkti_imena": [
+      "EcoFlow DELTA Pro Ultra"
+    ],
+    "skrit": false,
+    "stranici": 43,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43
+    ],
+    "znaci": 61355,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 8
+  },
+  {
+    "id": "river-3-plus-wireless-user-manual-en",
+    "original": {
+      "sourceUrl": "https://manuals.ecoflow.com/eu/product/river-3-plus-wireless?lang=en_US"
+    },
+    "fail": "originali/river-3-plus-wireless/river-3-plus-wireless-user-manual-en.pdf",
+    "bg_fail": "bg-prevodi/river-3-plus-wireless/river-3-plus-wireless-user-manual-en-bg.pdf",
+    "zaglavia": [
+      "EcoFlow RIVER 3 Plus (Wireless)_User Manual"
+    ],
+    "adres": "https://manuals.ecoflow.com/eu/product/river-3-plus-wireless?lang=en_US",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "river-3-plus-wireless"
+    ],
+    "produkti_imena": [
+      "EcoFlow RIVER 3 Plus (Wireless)"
+    ],
+    "skrit": false,
+    "stranici": 29,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "znaci": 30887,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 9
+  },
+  {
+    "id": "ecoflow-glacier-classic-safety-instructions-v1-0-global",
+    "original": {
+      "sha256": "d8e82f93087da277c23f12161f0dc616469e7b8e0f2acb8aa3fc1b63930675cc"
+    },
+    "fail": "originali/glacier-classic-35l/ecoflow-glacier-classic-safety-instructions-v1-0-global.pdf",
+    "bg_fail": "bg-prevodi/glacier-classic-35l/ecoflow-glacier-classic-safety-instructions-v1-0-global-bg.pdf",
+    "zaglavia": [
+      "EcoFlow GLACIER Classic_Safety Instructions_V1.0_Global"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1744709771239/EcoFlow%20GLACIER%20Classic_Safety%20Instructions_V1.0_Global.pdf",
+    "vid": "Инструкции за безопасност",
+    "ezik": "многоезичен",
+    "versiya": null,
+    "produkti": [
+      "glacier-classic-35l",
+      "glacier-classic-45l",
+      "glacier-classic-55l"
+    ],
+    "produkti_imena": [
+      "EcoFlow GLACIER Classic 35L",
+      "EcoFlow GLACIER Classic 45L",
+      "EcoFlow GLACIER Classic 55L"
+    ],
+    "skrit": false,
+    "stranici": 28,
+    "en_stranici": [
+      1,
+      2,
+      25,
+      27
+    ],
+    "znaci": 13822,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 10
+  },
+  {
+    "id": "ecoflow-glacier-classic-quick-start-guide-v1-0-global",
+    "original": {
+      "sha256": "cb78d0955cc4b902c8f64e442f5e7c7cf5de3ad9b3bd80ebae65b67d10256ee5"
+    },
+    "fail": "originali/glacier-classic-35l/ecoflow-glacier-classic-quick-start-guide-v1-0-global.pdf",
+    "bg_fail": "bg-prevodi/glacier-classic-35l/ecoflow-glacier-classic-quick-start-guide-v1-0-global-bg.pdf",
+    "zaglavia": [
+      "EcoFlow GLACIER Classic_Quick Start Guide_V1.0_Global"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1744709778664/EcoFlow%20GLACIER%20Classic_Quick%20Start%20Guide_V1.0_Global.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "многоезичен",
+    "versiya": null,
+    "produkti": [
+      "glacier-classic-35l",
+      "glacier-classic-45l",
+      "glacier-classic-55l"
+    ],
+    "produkti_imena": [
+      "EcoFlow GLACIER Classic 35L",
+      "EcoFlow GLACIER Classic 45L",
+      "EcoFlow GLACIER Classic 55L"
+    ],
+    "skrit": false,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 510,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 11
+  },
+  {
+    "id": "glacier-classic-user-manual-en",
+    "original": {
+      "sourceUrl": "https://manuals.ecoflow.com/eu/product/glacier-classic?lang=en_US"
+    },
+    "fail": "originali/glacier-classic-35l/glacier-classic-user-manual-en.pdf",
+    "bg_fail": "bg-prevodi/glacier-classic-35l/glacier-classic-user-manual-en-bg.pdf",
+    "zaglavia": [
+      "EcoFlow GLACIER Classic_User Manual"
+    ],
+    "adres": "https://manuals.ecoflow.com/eu/product/glacier-classic?lang=en_US",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "glacier-classic-35l",
+      "glacier-classic-45l",
+      "glacier-classic-55l"
+    ],
+    "produkti_imena": [
+      "EcoFlow GLACIER Classic 35L",
+      "EcoFlow GLACIER Classic 45L",
+      "EcoFlow GLACIER Classic 55L"
+    ],
+    "skrit": false,
+    "stranici": 33,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "znaci": 34982,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 12
+  },
+  {
+    "id": "ecoflow-glacier-classic-accessories-quick-start-guide-v1-0",
+    "original": {
+      "sha256": "539a9c5d9f7c7ca2a4fa06ee37552ca89a08129ca711f9691490f0519225e556"
+    },
+    "fail": "originali/glacier-classic-protective-cover-35l/ecoflow-glacier-classic-accessories-quick-start-guide-v1-0.pdf",
+    "bg_fail": "bg-prevodi/glacier-classic-protective-cover-35l/ecoflow-glacier-classic-accessories-quick-start-guide-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow GLACIER Classic Accessories_Quick Start Guide"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1760927919924/EcoFlow%20GLACIER%20Classic%20Accessories_Quick%20Start%20Guide_V1.0.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "glacier-classic-protective-cover-35l",
+      "glacier-classic-protective-cover-45l",
+      "glacier-classic-protective-cover-55l"
+    ],
+    "produkti_imena": [
+      "EcoFlow GLACIER Classic Protective Cover (35L)",
+      "EcoFlow GLACIER Classic Protective Cover (45L)",
+      "EcoFlow GLACIER Classic Protective Cover (55L)"
+    ],
+    "skrit": false,
+    "stranici": 16,
+    "en_stranici": [
+      1,
+      2,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16
+    ],
+    "znaci": 1337,
+    "skaniran": false,
+    "prazni_stranici": 2,
+    "red": 13
+  },
+  {
+    "id": "glacier-plug-in-battery-user-manual-en",
+    "original": {
+      "sourceUrl": "https://manuals.ecoflow.com/product/glacier-plug-in-battery?lang=en_US"
+    },
+    "fail": "originali/glacier-plug-in-battery/glacier-plug-in-battery-user-manual-en.pdf",
+    "bg_fail": "bg-prevodi/glacier-plug-in-battery/glacier-plug-in-battery-user-manual-en-bg.pdf",
+    "zaglavia": [
+      "EcoFlow GLACIER Plug-in Battery_User Manual"
+    ],
+    "adres": "https://manuals.ecoflow.com/product/glacier-plug-in-battery?lang=en_US",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "glacier-plug-in-battery"
+    ],
+    "produkti_imena": [
+      "EcoFlow GLACIER Plug-in Battery"
+    ],
+    "skrit": false,
+    "stranici": 11,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "znaci": 10057,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 14
+  },
+  {
+    "id": "ecoflow-rapid-pro-desktop-charger-320w-5-ports-gan-quick-start-guide-v1-0",
+    "original": {
+      "sha256": "04a3fa455e96a6eb7887ead4e29fcd8e16a863843fbe2570528606736604cfd4"
+    },
+    "fail": "originali/rapid-pro-desktop-charger-320w/ecoflow-rapid-pro-desktop-charger-320w-5-ports-gan-quick-start-guide-v1-0.pdf",
+    "bg_fail": "bg-prevodi/rapid-pro-desktop-charger-320w/ecoflow-rapid-pro-desktop-charger-320w-5-ports-gan-quick-start-guide-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow RAPID Pro Desktop Charger (320W, 5 Ports, GaN)-Quick Start Guide V1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1749208004866/EcoFlow%20RAPID%20Pro%20Desktop%20Charger%20(320W%2C%205%20Ports%2C%20GaN)-Quick%20Start%20Guide%20V1.0.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": "1.0",
+    "produkti": [
+      "rapid-pro-desktop-charger-320w"
+    ],
+    "produkti_imena": [
+      "EcoFlow RAPID Pro Desktop Charger (320W, 5 Ports, GaN)"
+    ],
+    "skrit": false,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 12811,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 15
+  },
+  {
+    "id": "ecoflow-rapid-pro-power-bank-20000mah-230w-100w-built-in-cable-quick-start-guide-20250411",
+    "original": {
+      "sha256": "047e6e967046d7d5dd41ad5b16e4c13262b8ab83911fb08c45c36f30587891cf"
+    },
+    "fail": "originali/rapid-pro-power-bank-20000/ecoflow-rapid-pro-power-bank-20000mah-230w-100w-built-in-cable-quick-start-guide-20250411.pdf",
+    "bg_fail": "bg-prevodi/rapid-pro-power-bank-20000/ecoflow-rapid-pro-power-bank-20000mah-230w-100w-built-in-cable-quick-start-guide-20250411-bg.pdf",
+    "zaglavia": [
+      "EcoFlow RAPID Pro Power Bank (20000mAh, 230W, 100W Built-in Cable) Quick Start Guide_20250411"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1749201603297/EcoFlow%20RAPID%20Pro%20Power%20Bank%20(20000mAh%2C%20230W%2C%20100W%20Built-in%20Cable)%20Quick%20Start%20Guide_20250411.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "rapid-pro-power-bank-20000"
+    ],
+    "produkti_imena": [
+      "EcoFlow RAPID Pro Power Bank (20,000mAh, 230W, 100W Built-in Cable)"
+    ],
+    "skrit": false,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 18008,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 16
+  },
+  {
+    "id": "rapid-pro-power-bank-100w-user-manual-en",
+    "original": {
+      "sourceUrl": "https://manuals.ecoflow.com/product/rapid-pro-power-bank-100w?lang=en_US"
+    },
+    "fail": "originali/rapid-pro-power-bank-20000/rapid-pro-power-bank-100w-user-manual-en.pdf",
+    "bg_fail": "bg-prevodi/rapid-pro-power-bank-20000/rapid-pro-power-bank-100w-user-manual-en-bg.pdf",
+    "zaglavia": [
+      "EcoFlow RAPID Pro Power Bank (20000mAh, 230W, 100W Built-in Cable)_User Manual"
+    ],
+    "adres": "https://manuals.ecoflow.com/product/rapid-pro-power-bank-100w?lang=en_US",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "rapid-pro-power-bank-20000"
+    ],
+    "produkti_imena": [
+      "EcoFlow RAPID Pro Power Bank (20,000mAh, 230W, 100W Built-in Cable)"
+    ],
+    "skrit": false,
+    "stranici": 22,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "znaci": 17889,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 17
+  },
+  {
+    "id": "ecoflow-rapid-pro-power-bank-27650mah-300w-140w-built-in-cable-quick-start-guide-20250411",
+    "original": {
+      "sha256": "d5f5704af50209b362dec84ff2ce3301b4563de0e0132c742bef52b528697640"
+    },
+    "fail": "originali/rapid-pro-power-bank-27650/ecoflow-rapid-pro-power-bank-27650mah-300w-140w-built-in-cable-quick-start-guide-20250411.pdf",
+    "bg_fail": "bg-prevodi/rapid-pro-power-bank-27650/ecoflow-rapid-pro-power-bank-27650mah-300w-140w-built-in-cable-quick-start-guide-20250411-bg.pdf",
+    "zaglavia": [
+      "EcoFlow RAPID Pro Power Bank (27650mAh, 300W, 140W Built-in Cable) Quick Start Guide_20250411"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1749201710380/EcoFlow%20RAPID%20Pro%20Power%20Bank%20(27650mAh%2C%20300W%2C%20140W%20Built-in%20Cable)%20Quick%20Start%20Guide_20250411.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "rapid-pro-power-bank-27650"
+    ],
+    "produkti_imena": [
+      "EcoFlow RAPID Pro Power Bank (27,650mAh, 300W, 140W Built-in Cable)"
+    ],
+    "skrit": false,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 18447,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 18
+  },
+  {
+    "id": "rapid-pro-power-bank-140w-user-manual-en",
+    "original": {
+      "sourceUrl": "https://manuals.ecoflow.com/product/rapid-pro-power-bank-140w?lang=en_US"
+    },
+    "fail": "originali/rapid-pro-power-bank-27650/rapid-pro-power-bank-140w-user-manual-en.pdf",
+    "bg_fail": "bg-prevodi/rapid-pro-power-bank-27650/rapid-pro-power-bank-140w-user-manual-en-bg.pdf",
+    "zaglavia": [
+      "EcoFlow RAPID Pro Power Bank (27650mAh, 300W, 140W Built-in Cable)_User Manual"
+    ],
+    "adres": "https://manuals.ecoflow.com/product/rapid-pro-power-bank-140w?lang=en_US",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "rapid-pro-power-bank-27650"
+    ],
+    "produkti_imena": [
+      "EcoFlow RAPID Pro Power Bank (27,650mAh, 300W, 140W Built-in Cable)"
+    ],
+    "skrit": false,
+    "stranici": 22,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "znaci": 17891,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 19
+  },
+  {
+    "id": "ecoflow-rapid-pro-x-power-bank-27k-300w-quick-start-guide-20250903",
+    "original": {
+      "sha256": "6b837fc82665cff9aa59b93a596b086b7e9cd94b3e9c8ed6f4810d6f3e11981a"
+    },
+    "fail": "originali/rapid-pro-x-power-bank/ecoflow-rapid-pro-x-power-bank-27k-300w-quick-start-guide-20250903.pdf",
+    "bg_fail": "bg-prevodi/rapid-pro-x-power-bank/ecoflow-rapid-pro-x-power-bank-27k-300w-quick-start-guide-20250903-bg.pdf",
+    "zaglavia": [
+      "EcoFlow RAPID Pro X Power Bank (27K, 300W) Quick Start Guide_V1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1756879644092/EcoFlow%20RAPID%20Pro%20X%20Power%20Bank%20(27K%2C%20300W)%20Quick%20Start%20Guide_20250903.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "rapid-pro-x-power-bank"
+    ],
+    "produkti_imena": [
+      "EcoFlow RAPID Pro X Power Bank (27,650mAh, 300W)"
+    ],
+    "skrit": false,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 17156,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 20
+  },
+  {
+    "id": "rapid-pro-x-power-bank-user-manual-en",
+    "original": {
+      "sourceUrl": "https://manuals.ecoflow.com/product/rapid-pro-x-power-bank?lang=en_US"
+    },
+    "fail": "originali/rapid-pro-x-power-bank/rapid-pro-x-power-bank-user-manual-en.pdf",
+    "bg_fail": "bg-prevodi/rapid-pro-x-power-bank/rapid-pro-x-power-bank-user-manual-en-bg.pdf",
+    "zaglavia": [
+      "EcoFlow RAPID Pro X Power Bank (27,650mAh, 300W)_User Manual"
+    ],
+    "adres": "https://manuals.ecoflow.com/product/rapid-pro-x-power-bank?lang=en_US",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "rapid-pro-x-power-bank"
+    ],
+    "produkti_imena": [
+      "EcoFlow RAPID Pro X Power Bank (27,650mAh, 300W)"
+    ],
+    "skrit": false,
+    "stranici": 27,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "znaci": 23279,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 21
+  },
+  {
+    "id": "ecoflow-adjustable-ground-and-suspended-solar-bracket-installation-guide-v1-2",
+    "original": {
+      "sha256": "79d07ae0f163fa38b97df7350eba93469ffaed87a0bf09b0641dcb1865a399d5"
+    },
+    "fail": "originali/adjustable-ground-suspended-solar-bracket/ecoflow-adjustable-ground-and-suspended-solar-bracket-installation-guide-v1-2.pdf",
+    "bg_fail": "bg-prevodi/adjustable-ground-suspended-solar-bracket/ecoflow-adjustable-ground-and-suspended-solar-bracket-installation-guide-v1-2-bg.pdf",
+    "zaglavia": [
+      "EcoFlow Adjustable Ground & Suspended Solar Bracket_Installation Guide_V1.2"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1756351928747/EcoFlow%20Adjustable%20Ground%20%26%20Suspended%20Solar%20Bracket_Installation%20Guide_V1.2.pdf",
+    "vid": "Ръководство за монтаж",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "adjustable-ground-suspended-solar-bracket"
+    ],
+    "produkti_imena": [
+      "EcoFlow Adjustable Ground & Suspended Solar Bracket"
+    ],
+    "skrit": false,
+    "stranici": 32,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      22,
+      23,
+      26,
+      30
+    ],
+    "znaci": 8895,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 22
+  },
+  {
+    "id": "single-axis-solar-tracker-installation-guide-v2-0",
+    "original": {
+      "sha256": "6b63203fcad7b56e01b44e7615cf6a561c0c8f454974a486651331839ce5d890"
+    },
+    "fail": "originali/single-axis-solar-tracker/single-axis-solar-tracker-installation-guide-v2-0.pdf",
+    "bg_fail": "bg-prevodi/single-axis-solar-tracker/single-axis-solar-tracker-installation-guide-v2-0-bg.pdf",
+    "zaglavia": [
+      "Single Axis Solar Tracker - Installation Guide V2.0"
+    ],
+    "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/5/31/Single%20Axis%20Solar%20Tracker%20-%20Installation%20Guide%20V2.0_1685525529908.pdf",
+    "vid": "Ръководство за монтаж",
+    "ezik": "EN",
+    "versiya": "2.0",
+    "produkti": [
+      "single-axis-solar-tracker"
+    ],
+    "produkti_imena": [
+      "EcoFlow Single Axis Solar Tracker"
+    ],
+    "skrit": false,
+    "stranici": 20,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      7,
+      8,
+      9,
+      10,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      19,
+      20
+    ],
+    "znaci": 3535,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 23
+  },
+  {
+    "id": "single-axis-solar-tracker-user-manual-v1-0-en",
+    "original": {
+      "sha256": "43e90388b5991315f9f910df3c76fa6d16f6655c9efb607e0013ee83e5458525"
+    },
+    "fail": "originali/single-axis-solar-tracker/single-axis-solar-tracker-user-manual-v1-0-en.pdf",
+    "bg_fail": "bg-prevodi/single-axis-solar-tracker/single-axis-solar-tracker-user-manual-v1-0-en-bg.pdf",
+    "zaglavia": [
+      "Single Axis Solar Tracker-User Manual V1.0 (EN)"
+    ],
+    "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/5/31/Single%20Axis%20Solar%20Tracker-User%20Manual%20V1.0%20(EN)_1685525522659.pdf",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": "1.0",
+    "produkti": [
+      "single-axis-solar-tracker"
+    ],
+    "produkti_imena": [
+      "EcoFlow Single Axis Solar Tracker"
+    ],
+    "skrit": false,
+    "stranici": 14,
+    "en_stranici": [
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "znaci": 9636,
+    "skaniran": false,
+    "prazni_stranici": 2,
+    "red": 24
+  },
+  {
+    "id": "ecoflow-110w-lightweight-portable-solar-panel-safety-instructions-v1-1",
+    "original": {
+      "sha256": "62a0b424eae21d92796c93a7a8803527de265778738fadb3f6294f15bcd80eee"
+    },
+    "fail": "originali/solaren-panel-110w-lightweight/ecoflow-110w-lightweight-portable-solar-panel-safety-instructions-v1-1.pdf",
+    "bg_fail": "bg-prevodi/solaren-panel-110w-lightweight/ecoflow-110w-lightweight-portable-solar-panel-safety-instructions-v1-1-bg.pdf",
+    "zaglavia": [
+      "EcoFlow 110W Lightweight Portable Solar Panel_Safety Instructions_Global_V1.1"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1762933447620/EcoFlow%20110W%20Lightweight%20Portable%20Solar%20Panel_Safety%20Instructions_V1.1.pdf",
+    "vid": "Инструкции за безопасност",
+    "ezik": "многоезичен",
+    "versiya": null,
+    "produkti": [
+      "solaren-panel-110w-lightweight"
+    ],
+    "produkti_imena": [
+      "EcoFlow 110W Lightweight Portable Solar Panel"
+    ],
+    "skrit": false,
+    "stranici": 8,
+    "en_stranici": [
+      1,
+      7,
+      8
+    ],
+    "znaci": 9163,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 25
+  },
+  {
+    "id": "ecoflow-110w-lightweight-portable-solar-panel-quick-start-guide-v1-1",
+    "original": {
+      "sha256": "d6f993174cf3520d79abd8c88b5da30c4f7b2986c2cbb30f5678a55c1e8a7f78"
+    },
+    "fail": "originali/solaren-panel-110w-lightweight/ecoflow-110w-lightweight-portable-solar-panel-quick-start-guide-v1-1.pdf",
+    "bg_fail": "bg-prevodi/solaren-panel-110w-lightweight/ecoflow-110w-lightweight-portable-solar-panel-quick-start-guide-v1-1-bg.pdf",
+    "zaglavia": [
+      "EcoFlow 110W Lightweight Portable Solar Panel_Quick Start Guide_Global_V1.1"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1761620083998/EcoFlow%20110W%20Lightweight%20Portable%20Solar%20Panel_Quick%20Start%20Guide_V1.1.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "многоезичен",
+    "versiya": null,
+    "produkti": [
+      "solaren-panel-110w-lightweight"
+    ],
+    "produkti_imena": [
+      "EcoFlow 110W Lightweight Portable Solar Panel"
+    ],
+    "skrit": false,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 561,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 26
+  },
+  {
+    "id": "ecoflow-130w-rvmax-rigid-solar-panel-safety-instructions-v1-0",
+    "original": {
+      "sha256": "6b40376c032b777e3654ad0179ba014720e8a601bd1298d49be7268aa15fa3ac"
+    },
+    "fail": "originali/solaren-panel-130w-rvmax-2br/ecoflow-130w-rvmax-rigid-solar-panel-safety-instructions-v1-0.pdf",
+    "bg_fail": "bg-prevodi/solaren-panel-130w-rvmax-2br/ecoflow-130w-rvmax-rigid-solar-panel-safety-instructions-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow 130W RVMax Rigid Solar Panel_Safety Instructions_V1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747303300563/EcoFlow%20130W%20RVMax%20Rigid%20Solar%20Panel_Safety%20Instructions_V1.0.pdf",
+    "vid": "Инструкции за безопасност",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "solaren-panel-130w-rvmax-2br"
+    ],
+    "produkti_imena": [
+      "EcoFlow 130W RVMax Rigid Solar Panel (2 pieces)"
+    ],
+    "skrit": false,
+    "stranici": 12,
+    "en_stranici": [
+      1,
+      10
+    ],
+    "znaci": 8214,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 27
+  },
+  {
+    "id": "ecoflow-130w-rvmax-rigid-solar-panel-quick-start-guide-v1-2",
+    "original": {
+      "sha256": "9d97d423a77d7aadd7616d6293216be9b8347afb9ae5efd77aa67f4595e1aaf4"
+    },
+    "fail": "originali/solaren-panel-130w-rvmax-2br/ecoflow-130w-rvmax-rigid-solar-panel-quick-start-guide-v1-2.pdf",
+    "bg_fail": "bg-prevodi/solaren-panel-130w-rvmax-2br/ecoflow-130w-rvmax-rigid-solar-panel-quick-start-guide-v1-2-bg.pdf",
+    "zaglavia": [
+      "EcoFlow 130W RVMax Rigid Solar Panel_Quick Start Guide_V1.2"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747303278065/EcoFlow%20130W%20RVMax%20Rigid%20Solar%20Panel_Quick%20Start%20Guide_V1.2.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "solaren-panel-130w-rvmax-2br"
+    ],
+    "produkti_imena": [
+      "EcoFlow 130W RVMax Rigid Solar Panel (2 pieces)"
+    ],
+    "skrit": false,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 2280,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 28
+  },
+  {
+    "id": "ecoflow-160w-220w-400w-lightweight-portable-solar-panel-safety-instructions-v1-2",
+    "original": {
+      "sha256": "2be1f229e406edf10f9e1a0ecc1308cb5af457dbb10604b625a9756c8bc529e7"
+    },
+    "fail": "originali/solaren-panel-160w-lightweight/ecoflow-160w-220w-400w-lightweight-portable-solar-panel-safety-instructions-v1-2.pdf",
+    "bg_fail": "bg-prevodi/solaren-panel-160w-lightweight/ecoflow-160w-220w-400w-lightweight-portable-solar-panel-safety-instructions-v1-2-bg.pdf",
+    "zaglavia": [
+      "EcoFlow 160W Lightweight Portable Solar Panel_Safety Instructions",
+      "EcoFlow 220W Lightweight Portable Solar Panel_Safety Instructions",
+      "EcoFlow 400W Lightweight Portable Solar Panel_Safety Instructions"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1760344284513/EcoFlow%20160W_220W_400W%20Lightweight%20Portable%20Solar%20Panel_Safety%20Instructions_V1.2.pdf",
+    "vid": "Инструкции за безопасност",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "solaren-panel-160w-lightweight",
+      "solaren-panel-220w-lightweight",
+      "solaren-panel-400w-lightweight"
+    ],
+    "produkti_imena": [
+      "EcoFlow 160W Lightweight Portable Solar Panel",
+      "EcoFlow 220W Lightweight Portable Solar Panel",
+      "EcoFlow 400W Lightweight Portable Solar Panel"
+    ],
+    "skrit": false,
+    "stranici": 12,
+    "en_stranici": [
+      1,
+      11,
+      12
+    ],
+    "znaci": 8884,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 29
+  },
+  {
+    "id": "ecoflow-160w-lightweight-portable-solar-panel-quick-start-guide-v1-0",
+    "original": {
+      "sha256": "0393cb29f75ec4d520966aca03d4993432a8332ae5e3bf1936c1e268f0a40705"
+    },
+    "fail": "originali/solaren-panel-160w-lightweight/ecoflow-160w-lightweight-portable-solar-panel-quick-start-guide-v1-0.pdf",
+    "bg_fail": "bg-prevodi/solaren-panel-160w-lightweight/ecoflow-160w-lightweight-portable-solar-panel-quick-start-guide-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow 160W Lightweight Portable Solar Panel_Quick Start Guide"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1760344273638/EcoFlow%20160W%20Lightweight%20Portable%20Solar%20Panel_Quick%20Start%20Guide_V1.0.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "solaren-panel-160w-lightweight"
+    ],
+    "produkti_imena": [
+      "EcoFlow 160W Lightweight Portable Solar Panel"
+    ],
+    "skrit": false,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 504,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 30
+  },
+  {
+    "id": "ecoflow-220w-lightweight-portable-solar-panel-quick-start-guide-v1-0",
+    "original": {
+      "sha256": "5600d261298baad0a65ab6ee92741bbdc01ac1588ef6c3f9e0dd8d430959c729"
+    },
+    "fail": "originali/solaren-panel-220w-lightweight/ecoflow-220w-lightweight-portable-solar-panel-quick-start-guide-v1-0.pdf",
+    "bg_fail": "bg-prevodi/solaren-panel-220w-lightweight/ecoflow-220w-lightweight-portable-solar-panel-quick-start-guide-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow 220W Lightweight Portable Solar Panel_Quick Start Guide"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1760424579181/EcoFlow%20220W%20Lightweight%20Portable%20Solar%20Panel_Quick%20Start%20Guide_V1.0.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "solaren-panel-220w-lightweight"
+    ],
+    "produkti_imena": [
+      "EcoFlow 220W Lightweight Portable Solar Panel"
+    ],
+    "skrit": false,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 504,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 31
+  },
+  {
+    "id": "ecoflow-250w-rigid-solar-panel-safety-instructions-v1-0",
+    "original": {
+      "sha256": "952a035b4be91fcb3a75909b6cdf816be0d38b76284f01479083b279b54aa31f"
+    },
+    "fail": "originali/solaren-panel-250w-rigid-4br/ecoflow-250w-rigid-solar-panel-safety-instructions-v1-0.pdf",
+    "bg_fail": "bg-prevodi/solaren-panel-250w-rigid-4br/ecoflow-250w-rigid-solar-panel-safety-instructions-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow 250W Rigid Solar Panel_Safety Instructions_V1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747303495337/EcoFlow%20250W%20Rigid%20Solar%20Panel_Safety%20Instructions_V1.0.pdf",
+    "vid": "Инструкции за безопасност",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "solaren-panel-250w-rigid-4br"
+    ],
+    "produkti_imena": [
+      "EcoFlow 250W Rigid Solar Panel (4 pieces)"
+    ],
+    "skrit": false,
+    "stranici": 12,
+    "en_stranici": [
+      1,
+      10
+    ],
+    "znaci": 8183,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 32
+  },
+  {
+    "id": "ecoflow-400w-lightweight-portable-solar-panel-quick-start-guide-v1-0",
+    "original": {
+      "sha256": "4444a5e005fa98a7616577985afb9114942ffb245dd61c3610eb740bac7edd7a"
+    },
+    "fail": "originali/solaren-panel-400w-lightweight/ecoflow-400w-lightweight-portable-solar-panel-quick-start-guide-v1-0.pdf",
+    "bg_fail": "bg-prevodi/solaren-panel-400w-lightweight/ecoflow-400w-lightweight-portable-solar-panel-quick-start-guide-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow 400W Lightweight Portable Solar Panel_Quick Start Guide"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1760344768051/EcoFlow%20400W%20Lightweight%20Portable%20Solar%20Panel_Quick%20Start%20Guide_V1.0.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "solaren-panel-400w-lightweight"
+    ],
+    "produkti_imena": [
+      "EcoFlow 400W Lightweight Portable Solar Panel"
+    ],
+    "skrit": false,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 522,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 33
+  },
+  {
+    "id": "450w-rigid-solar-panel-user-manual-en",
+    "original": {
+      "sourceUrl": "https://manuals.ecoflow.com/product/450w-rigid-solar-panel?lang=en_US"
+    },
+    "fail": "originali/solaren-panel-450w-rigid-2br/450w-rigid-solar-panel-user-manual-en.pdf",
+    "bg_fail": "bg-prevodi/solaren-panel-450w-rigid-2br/450w-rigid-solar-panel-user-manual-en-bg.pdf",
+    "zaglavia": [
+      "EcoFlow 450W Rigid Solar Panel_User Manual"
+    ],
+    "adres": "https://manuals.ecoflow.com/product/450w-rigid-solar-panel?lang=en_US",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "solaren-panel-450w-rigid-2br"
+    ],
+    "produkti_imena": [
+      "EcoFlow 450W Rigid Solar Panel (2 pieces)"
+    ],
+    "skrit": false,
+    "stranici": 24,
+    "en_stranici": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "znaci": 23718,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 34
+  },
+  {
+    "id": "ecoflow-x-shelly-smart-meter-user-manual-multilingual-v1-3",
+    "original": {
+      "sha256": "cde8c619da8823d4cea81c7efe222de14f209b356d75f8488f1951afba7103ed"
+    },
+    "fail": "originali/shelly-pro-3em-smart-meter/ecoflow-x-shelly-smart-meter-user-manual-multilingual-v1-3.pdf",
+    "bg_fail": "bg-prevodi/shelly-pro-3em-smart-meter/ecoflow-x-shelly-smart-meter-user-manual-multilingual-v1-3-bg.pdf",
+    "zaglavia": [
+      "EcoFlow × Shelly Smart Meter User Manual_Multilingual_V1.3"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1758278924722/EcoFlow%20%C3%97%20Shelly%20Smart%20Meter%20User%20Manual_Multilingual_V1.3.pdf",
+    "vid": "Ръководство за потребителя",
+    "ezik": "многоезичен",
+    "versiya": null,
+    "produkti": [
+      "shelly-pro-3em-smart-meter"
+    ],
+    "produkti_imena": [
+      "EcoFlow × Shelly Smart Meter - Shelly Pro 3EM"
+    ],
+    "skrit": false,
+    "stranici": 2,
+    "en_stranici": [
+      1
+    ],
+    "znaci": 8390,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 35
+  },
+  {
+    "id": "ecoflow-smart-meter-user-manual-en-de-fr-v1-2",
+    "original": {
+      "sha256": "364b17ecd6ceeb86f1f0bedb262aee68d236ce126ae295d7efebe833855c9f86"
+    },
+    "fail": "originali/smart-meter/ecoflow-smart-meter-user-manual-en-de-fr-v1-2.pdf",
+    "bg_fail": "bg-prevodi/smart-meter/ecoflow-smart-meter-user-manual-en-de-fr-v1-2-bg.pdf",
+    "zaglavia": [
+      "EcoFlow Smart Meter User Manual_en+de+fr_V1.2"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1748598610444/EcoFlow%20Smart%20Meter%20User%20Manual_en%2Bde%2Bfr_V1.2.pdf",
+    "vid": "Ръководство за потребителя",
+    "ezik": "многоезичен",
+    "versiya": null,
+    "produkti": [
+      "smart-meter"
+    ],
+    "produkti_imena": [
+      "EcoFlow Smart Meter"
+    ],
+    "skrit": false,
+    "stranici": 24,
+    "en_stranici": [
+      1,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      23,
+      24
+    ],
+    "znaci": 8519,
+    "skaniran": false,
+    "prazni_stranici": 2,
+    "red": 36
+  },
+  {
+    "id": "ecoflow-x-shelly-smart-plug-user-manual-multilingual-v1-2",
+    "original": {
+      "sha256": "bc6926f5df356654c03df733b8f72783bf28db1d878484b38288441952b3ee1f"
+    },
+    "fail": "originali/smart-plug/ecoflow-x-shelly-smart-plug-user-manual-multilingual-v1-2.pdf",
+    "bg_fail": "bg-prevodi/smart-plug/ecoflow-x-shelly-smart-plug-user-manual-multilingual-v1-2-bg.pdf",
+    "zaglavia": [
+      "EcoFlow × Shelly Smart Plug User Manual_Multilingual_V1.2"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747300487832/EcoFlow%20%C3%97%20Shelly%20Smart%20Plug%20User%20Manual_Multilingual_V1.2.pdf",
+    "vid": "Ръководство за потребителя",
+    "ezik": "многоезичен",
+    "versiya": null,
+    "produkti": [
+      "smart-plug"
+    ],
+    "produkti_imena": [
+      "EcoFlow × Shelly Smart Plug"
+    ],
+    "skrit": false,
+    "stranici": 2,
+    "en_stranici": [
+      1
+    ],
+    "znaci": 7773,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 37
+  },
+  {
+    "id": "online-ecoflow-stream-microinverter-quick-start-guide-en-de-fr-v1-2",
+    "original": {
+      "sha256": "a80938f8511aa5166f41e94ef711b7c6568f2424acad51dd444e8762a9322d14"
+    },
+    "fail": "originali/stream-microinverter/online-ecoflow-stream-microinverter-quick-start-guide-en-de-fr-v1-2.pdf",
+    "bg_fail": "bg-prevodi/stream-microinverter/online-ecoflow-stream-microinverter-quick-start-guide-en-de-fr-v1-2-bg.pdf",
+    "zaglavia": [
+      "EcoFlow STREAM Microinverter Quick Start Guide_en+de+fr_V1.2"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1744707055908/Online-EcoFlow%20STREAM%20Microinverter%20Quick%20Start%20Guide_en%2Bde%2Bfr_V1.2.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "многоезичен",
+    "versiya": null,
+    "produkti": [
+      "stream-microinverter"
+    ],
+    "produkti_imena": [
+      "EcoFlow STREAM Microinverter"
+    ],
+    "skrit": false,
+    "stranici": 12,
+    "en_stranici": [
+      1,
+      8,
+      9
+    ],
+    "znaci": 806,
+    "skaniran": false,
+    "prazni_stranici": 1,
+    "red": 38
+  },
+  {
+    "id": "stream-microinverter-user-manual-en",
+    "original": {
+      "sourceUrl": "https://manuals.ecoflow.com/product/stream-microinverter?lang=en_US"
+    },
+    "fail": "originali/stream-microinverter/stream-microinverter-user-manual-en.pdf",
+    "bg_fail": "bg-prevodi/stream-microinverter/stream-microinverter-user-manual-en-bg.pdf",
+    "zaglavia": [
+      "EcoFlow STREAM Microinverter_User Manual"
+    ],
+    "adres": "https://manuals.ecoflow.com/product/stream-microinverter?lang=en_US",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "stream-microinverter"
+    ],
+    "produkti_imena": [
+      "EcoFlow STREAM Microinverter"
+    ],
+    "skrit": false,
+    "stranici": 32,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      31,
+      32
+    ],
+    "znaci": 26517,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 39
+  },
+  {
+    "id": "ecoflow-stream-parallel-cable-quick-start-guide-v1-0",
+    "original": {
+      "sha256": "c75569423662195de10d4987a1ad13ef2c3f78ec21ae09eaa185db6eb2c4dd54"
+    },
+    "fail": "originali/stream-parallel-cable/ecoflow-stream-parallel-cable-quick-start-guide-v1-0.pdf",
+    "bg_fail": "bg-prevodi/stream-parallel-cable/ecoflow-stream-parallel-cable-quick-start-guide-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow STREAM Parallel Cable_Quick Start Guide_V1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747295203926/EcoFlow%20STREAM%20Parallel%20Cable_Quick%20Start%20Guide_V1.0.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "stream-parallel-cable"
+    ],
+    "produkti_imena": [
+      "EcoFlow STREAM Parallel Cable (0.55m)"
+    ],
+    "skrit": false,
+    "stranici": 1,
+    "en_stranici": [
+      1
+    ],
+    "znaci": 604,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 40
+  },
+  {
+    "id": "ecoflow-stream-ultraandpro-installation-guide",
+    "original": {
+      "sha256": "c6bcde3a0f2bc277414d082c9d8e0851af90b4e8655f95319668f89a2a8130c2"
+    },
+    "fail": "originali/stream-pro/ecoflow-stream-ultraandpro-installation-guide.pdf",
+    "bg_fail": "bg-prevodi/stream-pro/ecoflow-stream-ultraandpro-installation-guide-bg.pdf",
+    "zaglavia": [
+      "EcoFlow STREAM Ultra&Pro_Installation Guide"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776333459685/EcoFlow%20STREAM%20Ultra%26Pro_Installation%20Guide.pdf",
+    "vid": "Ръководство за монтаж",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "stream-pro",
+      "stream-ultra"
+    ],
+    "produkti_imena": [
+      "EcoFlow STREAM Pro",
+      "EcoFlow STREAM Ultra"
+    ],
+    "skrit": false,
+    "stranici": 32,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13
+    ],
+    "znaci": 7605,
+    "skaniran": false,
+    "prazni_stranici": 2,
+    "red": 41
+  },
+  {
+    "id": "ecoflow-stream-ultra-x-safety-instructions-multilingual-v1-0",
+    "original": {
+      "sha256": "b482cdcb9310752678a21f5f8ec57e92c05fc944a0f50bf3f7402bd14ba2ea24"
+    },
+    "fail": "originali/stream-ultra-x/ecoflow-stream-ultra-x-safety-instructions-multilingual-v1-0.pdf",
+    "bg_fail": "bg-prevodi/stream-ultra-x/ecoflow-stream-ultra-x-safety-instructions-multilingual-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow STREAM Ultra X_Safety Instructions_multilingual_V1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1754450847185/EcoFlow%20STREAM%20Ultra%20X_Safety%20Instructions_multilingual_V1.0.pdf",
+    "vid": "Инструкции за безопасност",
+    "ezik": "многоезичен",
+    "versiya": null,
+    "produkti": [
+      "stream-ultra-x"
+    ],
+    "produkti_imena": [
+      "EcoFlow STREAM Ultra X"
+    ],
+    "skrit": false,
+    "stranici": 32,
+    "en_stranici": [
+      1,
+      2,
+      3
+    ],
+    "znaci": 6283,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 42
+  },
+  {
+    "id": "ecoflow-stream-ultra-x-installation-guide",
+    "original": {
+      "sha256": "b9a4207eaebc117938355033e21c27ddb11b050d601044a1e840a2bd99a5be55"
+    },
+    "fail": "originali/stream-ultra-x/ecoflow-stream-ultra-x-installation-guide.pdf",
+    "bg_fail": "bg-prevodi/stream-ultra-x/ecoflow-stream-ultra-x-installation-guide-bg.pdf",
+    "zaglavia": [
+      "EcoFlow STREAM Ultra X_Installation Guide"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776392472101/EcoFlow%20STREAM%20Ultra%20X_Installation%20Guide.pdf",
+    "vid": "Ръководство за монтаж",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "stream-ultra-x"
+    ],
+    "produkti_imena": [
+      "EcoFlow STREAM Ultra X"
+    ],
+    "skrit": false,
+    "stranici": 44,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13
+    ],
+    "znaci": 7349,
+    "skaniran": false,
+    "prazni_stranici": 5,
+    "red": 43
+  },
+  {
+    "id": "ecoflow-balcony-hook-kit-quick-start-guide-v1-1",
+    "original": {
+      "sha256": "2a7e9f34af7c55f94c6070d772f6da03e1f41714d6cb74963097283dc8d9a4a2"
+    },
+    "fail": "originali/balcony-hook-kit/ecoflow-balcony-hook-kit-quick-start-guide-v1-1.pdf",
+    "bg_fail": "bg-prevodi/balcony-hook-kit/ecoflow-balcony-hook-kit-quick-start-guide-v1-1-bg.pdf",
+    "zaglavia": [
+      "EcoFlow Balcony Hook Kit Quick Start Guide V1.1"
+    ],
+    "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/6/27/EcoFlow%20Balcony%20Hook%20Kit%20Quick%20Start%20Guide%20V1.1_1687862897529.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": "1.1",
+    "produkti": [
+      "balcony-hook-kit"
+    ],
+    "produkti_imena": [
+      "EcoFlow Balcony Hook Kit"
+    ],
+    "skrit": false,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 1335,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 44
+  },
+  {
+    "id": "ecoflow-shower-kit-safety-instructions-v1-0",
+    "original": {
+      "sha256": "83385e4498d2fdf42e4238704f13398a6babb689063d6e2d3afc00a596aeb605"
+    },
+    "fail": "originali/shower-kit/ecoflow-shower-kit-safety-instructions-v1-0.pdf",
+    "bg_fail": "bg-prevodi/shower-kit/ecoflow-shower-kit-safety-instructions-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow Shower Kit_Safety Instructions V1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1745565680814/EcoFlow%20Shower%20Kit_Safety%20Instructions%20V1.0.pdf",
+    "vid": "Инструкции за безопасност",
+    "ezik": "EN",
+    "versiya": "1.0",
+    "produkti": [
+      "shower-kit"
+    ],
+    "produkti_imena": [
+      "EcoFlow Shower Kit"
+    ],
+    "skrit": false,
+    "stranici": 8,
+    "en_stranici": [
+      1,
+      6
+    ],
+    "znaci": 8534,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 45
+  },
+  {
+    "id": "ecoflow-wave-3-accessories-velcro-strap-handle-car-vent-seal-shower-kit-quick-start-guide-v1-0",
+    "original": {
+      "sha256": "2ac984f82aab569d299f78d01f6f8e9d26fc2264de3c848c3bbd9c8d1a39d965"
+    },
+    "fail": "originali/wave-3-car-vent-seal/ecoflow-wave-3-accessories-velcro-strap-handle-car-vent-seal-shower-kit-quick-start-guide-v1-0.pdf",
+    "bg_fail": "bg-prevodi/shower-kit/ecoflow-wave-3-accessories-velcro-strap-handle-car-vent-seal-shower-kit-quick-start-guide-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow WAVE 3 Accessories (Velcro Strap Handle+Car Vent Seal+Shower Kit)_Quick Start Guide"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1745565722411/EcoFlow%20WAVE%203%20Accessories%20(Velcro%20Strap%20Handle%2BCar%20Vent%20Seal%2BShower%20Kit)_Quick%20Start%20Guide%20V1.0.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "shower-kit",
+      "wave-3-car-vent-seal"
+    ],
+    "produkti_imena": [
+      "EcoFlow Shower Kit",
+      "EcoFlow WAVE 3 Car Vent Seal (Magnetic Version)"
+    ],
+    "skrit": false,
+    "stranici": 6,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "znaci": 1191,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 46
+  },
+  {
+    "id": "ecoflow-wave-3-safety-instructions-v1-0",
+    "original": {
+      "sha256": "c2e8d080c5c42a47dc0212b08f1aefd70991b33f1c0609caae412c80c5958609"
+    },
+    "fail": "originali/wave-3/ecoflow-wave-3-safety-instructions-v1-0.pdf",
+    "bg_fail": "bg-prevodi/wave-3/ecoflow-wave-3-safety-instructions-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow WAVE 3_Safety Instructions V1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1746775723583/EcoFlow%20WAVE%203_Safety%20Instructions%20V1.0.pdf",
+    "vid": "Инструкции за безопасност",
+    "ezik": "EN",
+    "versiya": "1.0",
+    "produkti": [
+      "wave-3",
+      "wave-3-s-bateriya"
+    ],
+    "produkti_imena": [
+      "EcoFlow WAVE 3",
+      "EcoFlow WAVE 3 + WAVE 3 Add-On Battery"
+    ],
+    "skrit": false,
+    "stranici": 16,
+    "en_stranici": [
+      1,
+      2,
+      10,
+      11,
+      12,
+      14
+    ],
+    "znaci": 17467,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 47
+  },
+  {
+    "id": "ecoflow-wave-3-quick-start-guide-v1-0",
+    "original": {
+      "sha256": "21c3a73a50ef12650aa1c5fe4c95506b6934d76852b10e6e9fb9df0842c9131c"
+    },
+    "fail": "originali/wave-3/ecoflow-wave-3-quick-start-guide-v1-0.pdf",
+    "bg_fail": "bg-prevodi/wave-3/ecoflow-wave-3-quick-start-guide-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow WAVE 3_Quick Start Guide V1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1746775691083/EcoFlow%20WAVE%203_Quick%20Start%20Guide%20V1.0.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": "1.0",
+    "produkti": [
+      "wave-3",
+      "wave-3-s-bateriya"
+    ],
+    "produkti_imena": [
+      "EcoFlow WAVE 3",
+      "EcoFlow WAVE 3 + WAVE 3 Add-On Battery"
+    ],
+    "skrit": false,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 377,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 48
+  },
+  {
+    "id": "ecoflow-wave-3-add-on-battery-safety-instructions-v1-0",
+    "original": {
+      "sha256": "7cfe7b6e5e70c5508cad12bd8e8c63da7a2f8db3497829eb18170d6d8a32742f"
+    },
+    "fail": "originali/wave-3-add-on-battery/ecoflow-wave-3-add-on-battery-safety-instructions-v1-0.pdf",
+    "bg_fail": "bg-prevodi/wave-3-add-on-battery/ecoflow-wave-3-add-on-battery-safety-instructions-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow WAVE 3 Add-on Battery_Safety Instructions V1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1746775720372/EcoFlow%20WAVE%203%20Add-on%20Battery_Safety%20Instructions%20V1.0.pdf",
+    "vid": "Инструкции за безопасност",
+    "ezik": "EN",
+    "versiya": "1.0",
+    "produkti": [
+      "wave-3-add-on-battery",
+      "wave-3-s-bateriya"
+    ],
+    "produkti_imena": [
+      "EcoFlow WAVE 3 + WAVE 3 Add-On Battery",
+      "EcoFlow WAVE 3 Add-On Battery"
+    ],
+    "skrit": false,
+    "stranici": 16,
+    "en_stranici": [
+      1,
+      14
+    ],
+    "znaci": 9676,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 49
+  },
+  {
+    "id": "ecoflow-wave-3-add-on-battery-quick-start-guide-v1-0",
+    "original": {
+      "sha256": "29c17415b5b017de59dcc781621c6a380a8744945c1e899b1aca137de1414c1d"
+    },
+    "fail": "originali/wave-3-add-on-battery/ecoflow-wave-3-add-on-battery-quick-start-guide-v1-0.pdf",
+    "bg_fail": "bg-prevodi/wave-3-add-on-battery/ecoflow-wave-3-add-on-battery-quick-start-guide-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow WAVE 3 Add-on Battery_Quick Start Guide V1.0",
+      "EcoFlow WAVE 3 Add-on Battery_Quick Start Guide V1.0."
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1744711270750/EcoFlow%20WAVE%203%20Add-on%20Battery_Quick%20Start%20Guide%20V1.0.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": "1.0",
+    "produkti": [
+      "wave-3-add-on-battery",
+      "wave-3-s-bateriya"
+    ],
+    "produkti_imena": [
+      "EcoFlow WAVE 3 + WAVE 3 Add-On Battery",
+      "EcoFlow WAVE 3 Add-On Battery"
+    ],
+    "skrit": false,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 348,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 50
+  },
+  {
+    "id": "ecoflow-wave-3-add-on-battery-user-manual-en-v1-0",
+    "original": {
+      "sha256": "f8d37f992a8308f6c8b520b00a8cc1ee0ee6eb1500758796fdd0c67f2e6a0560"
+    },
+    "fail": "originali/wave-3-add-on-battery/ecoflow-wave-3-add-on-battery-user-manual-en-v1-0.pdf",
+    "bg_fail": "bg-prevodi/wave-3-add-on-battery/ecoflow-wave-3-add-on-battery-user-manual-en-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow WAVE 3 Add-on Battery_User Manual_en V1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1745565780732/EcoFlow%20WAVE%203%20Add-on%20Battery_User%20Manual_en%20V1.0.pdf",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": "1.0",
+    "produkti": [
+      "wave-3-add-on-battery",
+      "wave-3-s-bateriya"
+    ],
+    "produkti_imena": [
+      "EcoFlow WAVE 3 + WAVE 3 Add-On Battery",
+      "EcoFlow WAVE 3 Add-On Battery"
+    ],
+    "skrit": false,
+    "stranici": 15,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "znaci": 17795,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 51
+  },
+  {
+    "id": "ecoflow-cables-for-alternator-charger-600-and-plus-1000-user-manual",
+    "original": {
+      "sha256": "671d4ba7c8cd0f4094b08959280be83b239f9b33105e452257d6bbce2b2cf5ba"
+    },
+    "fail": "originali/alternator-charger-custom-fit-output-cable-2m/ecoflow-cables-for-alternator-charger-600-and-plus-1000-user-manual.pdf",
+    "bg_fail": "bg-prevodi/alternator-charger-custom-fit-output-cable-2m/ecoflow-cables-for-alternator-charger-600-and-plus-1000-user-manual-bg.pdf",
+    "zaglavia": [
+      "EcoFlow Cables for Alternator Charger 600 & Plus 1000_User Manual"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1765871380285/EcoFlow%20Cables%20for%20Alternator%20Charger%20600%20%26%20Plus%201000_User%20Manual.pdf",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [
+      "alternator-charger-custom-fit-output-cable-2m",
+      "alternator-charger-plus-1000-solar-input-cable-5m",
+      "alternator-charger-plus-custom-fit-output-cable-2m",
+      "alternator-charger-xt150-cable-1m",
+      "alternator-charger-xt150-cable-2m",
+      "alternator-charger-xt60-output-cable-1m"
+    ],
+    "produkti_imena": [
+      "EcoFlow Alternator Charger Custom Fit Output Cable (2m)",
+      "EcoFlow Alternator Charger Plus 1000 Solar Input Cable 12AWG (5m)",
+      "EcoFlow Alternator Charger Plus Custom Fit Output Cable (2m)",
+      "EcoFlow Alternator Charger XT150 Output Cable (1m)",
+      "EcoFlow Alternator Charger XT150 Output Cable (2m)",
+      "EcoFlow Alternator Charger XT60 Output Cable (1m)"
+    ],
+    "skrit": false,
+    "stranici": 88,
+    "en_stranici": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      48,
+      49,
+      51,
+      53,
+      54,
+      55,
+      60,
+      61,
+      62,
+      63
+    ],
+    "znaci": 10351,
+    "skaniran": false,
+    "prazni_stranici": 1,
+    "red": 52
+  },
+  {
+    "id": "manual-transfer-switch-installation-guide-multilingual-en-fr-de-it-sp-v1-0",
+    "original": {
+      "sha256": "6b6039beee945aece00ea54962780c896cc048f0bc3bbdd71bf66a6bb6d4d828"
+    },
+    "fail": "originali/manual-transfer-switch/manual-transfer-switch-installation-guide-multilingual-en-fr-de-it-sp-v1-0.pdf",
+    "bg_fail": "bg-prevodi/manual-transfer-switch/manual-transfer-switch-installation-guide-multilingual-en-fr-de-it-sp-v1-0-bg.pdf",
+    "zaglavia": [
+      "Manual Transfer Switch-Installation Guide-Multilingual-EN,FR,DE,IT,SP-V1.0.pdf"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1759212527216/Manual%20Transfer%20Switch-Installation%20Guide-Multilingual-EN%2CFR%2CDE%2CIT%2CSP-V1.0.pdf",
+    "vid": "Ръководство за монтаж",
+    "ezik": "многоезичен",
+    "versiya": "1.0",
+    "produkti": [
+      "manual-transfer-switch"
+    ],
+    "produkti_imena": [
+      "EcoFlow Manual Transfer Switch"
+    ],
+    "skrit": false,
+    "stranici": 35,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "znaci": 5438,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 53
+  },
+  {
+    "id": "ecoflow-app-user-manual-for-stream-seies",
+    "original": {
+      "sha256": "a62a8aa05bef053f540d45da54bb99048d990238c08fff9ae527dee3d79a5c22"
+    },
+    "fail": "originali/bez-produkt/ecoflow-app-user-manual-for-stream-seies.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-app-user-manual-for-stream-seies-bg.pdf",
+    "zaglavia": [
+      "EcoFlow App User Manual_for STREAM Series_V1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1788344107999/EcoFlow%20App%20User%20Manual_for%20STREAM%20Seies.pdf",
+    "vid": "Друго",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 24,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "znaci": 20828,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 54
+  },
+  {
+    "id": "ecoflow-single-axis-solar-tracker-2-what-s-in-the-box",
+    "original": {
+      "sha256": "e159e3b3d7845e1a19a2ec65244418866082fbd70b492a3eb7dd32fcffab3c5b"
+    },
+    "fail": "originali/bez-produkt/ecoflow-single-axis-solar-tracker-2-what-s-in-the-box.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-single-axis-solar-tracker-2-what-s-in-the-box-bg.pdf",
+    "zaglavia": [
+      "EcoFlow Single Axis Solar Tracker 2_What's in the Box"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747131078322/EcoFlow%20Single%20Axis%20Solar%20Tracker%202_What's%20in%20the%20Box.pdf",
+    "vid": "Друго",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 2,
+    "en_stranici": [
+      2
+    ],
+    "znaci": 938,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 55
+  },
+  {
+    "id": "ecoflow-28w-portable-solar-panel-safety-instructions-v1-0",
+    "original": {
+      "sha256": "33203fff7887558871360faa03f5493c9d17b0841e830ace9bc5b04ae43010ff"
+    },
+    "fail": "originali/bez-produkt/ecoflow-28w-portable-solar-panel-safety-instructions-v1-0.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-28w-portable-solar-panel-safety-instructions-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow 28W Portable Solar Panel_Safety Instructions"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1759132096209/EcoFlow%2028W%20Portable%20Solar%20Panel_Safety%20Instructions_V1.0.pdf",
+    "vid": "Инструкции за безопасност",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 8,
+    "en_stranici": [
+      1,
+      6,
+      7,
+      8
+    ],
+    "znaci": 9215,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 56
+  },
+  {
+    "id": "ecoflow-powerinsight-2-monitor-safety-instructions-v1-0",
+    "original": {
+      "sha256": "607b48ab8a950f439086f8af23a0a0a68d3b85ec8be9cffbc770e47b3d1b63c0"
+    },
+    "fail": "originali/bez-produkt/ecoflow-powerinsight-2-monitor-safety-instructions-v1-0.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-powerinsight-2-monitor-safety-instructions-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow PowerInsight 2 Monitor-Safety Instructions_EN"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1757300533839/EcoFlow%20PowerInsight%202%20Monitor-Safety%20Instructions_V1.0.pdf",
+    "vid": "Инструкции за безопасност",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 16,
+    "en_stranici": [
+      1,
+      6,
+      7,
+      15,
+      16
+    ],
+    "znaci": 12118,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 57
+  },
+  {
+    "id": "ecoflow-stream-ac-safety-instructions-multilingual-v1-0",
+    "original": {
+      "sha256": "594718bcbd027081930c2d20ca29f2e9aec4dc98e5a532d8a54d1a02b7b1ff36"
+    },
+    "fail": "originali/bez-produkt/ecoflow-stream-ac-safety-instructions-multilingual-v1-0.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-stream-ac-safety-instructions-multilingual-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow STREAM AC_Safety Instructions_multilingual_V1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1750824100256/EcoFlow%20STREAM%20AC_Safety%20Instructions_multilingual_V1.0.pdf",
+    "vid": "Инструкции за безопасност",
+    "ezik": "многоезичен",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 20,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      17,
+      18,
+      20
+    ],
+    "znaci": 13775,
+    "skaniran": false,
+    "prazni_stranici": 1,
+    "red": 58
+  },
+  {
+    "id": "ecoflow-stream-max-safety-instructions-multilingual-v1-0",
+    "original": {
+      "sha256": "8a53ca50da3d4f01b3f5cba91bd54e3c66a9ea90ebf83c1483608d82a489a0db"
+    },
+    "fail": "originali/bez-produkt/ecoflow-stream-max-safety-instructions-multilingual-v1-0.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-stream-max-safety-instructions-multilingual-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow STREAM Max_Safety Instructions_multilingual_V1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1750823866082/EcoFlow%20STREAM%20Max_Safety%20Instructions_multilingual_V1.0.pdf",
+    "vid": "Инструкции за безопасност",
+    "ezik": "многоезичен",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 20,
+    "en_stranici": [
+      1,
+      2,
+      17,
+      18,
+      20
+    ],
+    "znaci": 13698,
+    "skaniran": false,
+    "prazni_stranici": 1,
+    "red": 59
+  },
+  {
+    "id": "ecoflow-28w-portable-solar-panel-quick-start-guide-v1-0",
+    "original": {
+      "sha256": "1846a9869fb25de152b081122851d74368b7ab23132b702c00f624023252ac2d"
+    },
+    "fail": "originali/bez-produkt/ecoflow-28w-portable-solar-panel-quick-start-guide-v1-0.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-28w-portable-solar-panel-quick-start-guide-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow 28W Portable Solar Panel_Quick Start Guide"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1759131389624/EcoFlow%2028W%20Portable%20Solar%20Panel_Quick%20Start%20Guide_V1.0.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 418,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 60
+  },
+  {
+    "id": "ecoflow-bracket-facade-installation-guide-en-de-fr-v1-1-260410",
+    "original": {
+      "sha256": "f34053dee52b70e8f61a4bf15dbd6754aeeb3f219894ece759a01baa91555974"
+    },
+    "fail": "originali/bez-produkt/ecoflow-bracket-facade-installation-guide-en-de-fr-v1-1-260410.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-bracket-facade-installation-guide-en-de-fr-v1-1-260410-bg.pdf",
+    "zaglavia": [
+      "EcoFlow Bracket - Facade Quick Start Guide V1.1",
+      "EcoFlow Bracket - Facade_Quick Start Guide-V1.1"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776155645927/EcoFlow%20Bracket%20-%20Facade_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "многоезичен",
+    "versiya": "1.1",
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 3625,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 61
+  },
+  {
+    "id": "ecoflow-bracket-lightweight-facade-installation-guide-en-de-fr-v1-2-260410",
+    "original": {
+      "sha256": "7dd6a22996d2fa067126dff71f7b54e8fc6a867d49f55a81a86960ced7f99204"
+    },
+    "fail": "originali/bez-produkt/ecoflow-bracket-lightweight-facade-installation-guide-en-de-fr-v1-2-260410.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-bracket-lightweight-facade-installation-guide-en-de-fr-v1-2-260410-bg.pdf",
+    "zaglavia": [
+      "EcoFlow Bracket Lightweight - Facade_Quick Start Guide V1.2"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776154596924/EcoFlow%20Bracket%20-%20Lightweight%20-%20Facade_Installation%20Guide-EN-DE-FR-V1.2--260410.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "многоезичен",
+    "versiya": "1.2",
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 3637,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 62
+  },
+  {
+    "id": "ecoflow-bracket-pitched-roof-installation-guide-en-de-fr-v1-1-260410",
+    "original": {
+      "sha256": "2936c7f7159a49e1fe38d3fc5fb662f1c8136a20c4a004c0e25b518ef5a31d52"
+    },
+    "fail": "originali/bez-produkt/ecoflow-bracket-pitched-roof-installation-guide-en-de-fr-v1-1-260410.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-bracket-pitched-roof-installation-guide-en-de-fr-v1-1-260410-bg.pdf",
+    "zaglavia": [
+      "EcoFlow Bracket - Pitched Roof Quick Start Guide_V1.1"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776154848347/EcoFlow%20Bracket%20-%20Pitched%20Roof%20_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "многоезичен",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 2,
+    "en_stranici": [
+      1
+    ],
+    "znaci": 219,
+    "skaniran": false,
+    "prazni_stranici": 1,
+    "red": 63
+  },
+  {
+    "id": "ecoflow-powerinsight-2-monitor-quick-start-guide-v1-0",
+    "original": {
+      "sha256": "01d6b79706657817d3376298d7ed576fa66667c5fcd64f45336d2899d76e0ec5"
+    },
+    "fail": "originali/bez-produkt/ecoflow-powerinsight-2-monitor-quick-start-guide-v1-0.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-powerinsight-2-monitor-quick-start-guide-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow PowerInsight 2 Monitor-Quick Start Guide_EN"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1757300527935/EcoFlow%20PowerInsight%202%20Monitor-Quick%20Start%20Guide_V1.0.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 474,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 64
+  },
+  {
+    "id": "ecoflow-pv-clamp-holder-quick-start-guide-v1-0",
+    "original": {
+      "sha256": "ca17f82a23ba4a3220cac5ab9913dc9f2edd3c3952a76f8c496a8fbf1388636f"
+    },
+    "fail": "originali/bez-produkt/ecoflow-pv-clamp-holder-quick-start-guide-v1-0.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-pv-clamp-holder-quick-start-guide-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow PV Clamp Holder_Quick Start Guide_V1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1744706883536/EcoFlow%20PV%20Clamp%20Holder_Quick%20Start%20Guide_V1.0.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 1,
+    "en_stranici": [
+      1
+    ],
+    "znaci": 173,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 65
+  },
+  {
+    "id": "ecoflow-rapid-3-in-1-power-bank-10-000mah-35w-quick-start-guide-v1-0-20250530",
+    "original": {
+      "sha256": "e62a5a835972c483eeec220a4f59fbc78354f78f168ee7c96c620f4ad5cc3680"
+    },
+    "fail": "originali/bez-produkt/ecoflow-rapid-3-in-1-power-bank-10-000mah-35w-quick-start-guide-v1-0-20250530.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-rapid-3-in-1-power-bank-10-000mah-35w-quick-start-guide-v1-0-20250530-bg.pdf",
+    "zaglavia": [
+      "EcoFlow RAPID 3-in-1 Power Bank (10,000mAh, 35W) Quick Start Guide_V1.0_20250530"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1749209009823/EcoFlow%20RAPID%203-in-1%20Power%20Bank%20(10%2C000mAh%2C%2035W)%20Quick%20Start%20Guide_V1.0_20250530.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 14497,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 66
+  },
+  {
+    "id": "ecoflow-rapid-mag-power-bank-10k-7-5w-magnetic-charging-quick-start-guide-v2-0",
+    "original": {
+      "sha256": "1f3fc0900e9d2cb47d99a8d5f6bc48501160eb9721f9998ef77c44eafdfe2219"
+    },
+    "fail": "originali/bez-produkt/ecoflow-rapid-mag-power-bank-10k-7-5w-magnetic-charging-quick-start-guide-v2-0.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-rapid-mag-power-bank-10k-7-5w-magnetic-charging-quick-start-guide-v2-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow RAPID Mag Power Bank (10K, 7.5W, Magnetic Charging)_Quick Start Guide_V2.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1768462520256/EcoFlow%20RAPID%20Mag%20Power%20Bank%20(10K%2C%207.5W%2C%20Magnetic%20Charging)_Quick%20Start%20Guide_V2.0.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 13296,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 67
+  },
+  {
+    "id": "ecoflow-rapid-power-bank-10k-45w-with-retractable-cable-quick-start-guide-v1-0",
+    "original": {
+      "sha256": "acc6118ce9335bb0bea73b1c5917c9e48451621620221f238cb6c8c8af71ebfa"
+    },
+    "fail": "originali/bez-produkt/ecoflow-rapid-power-bank-10k-45w-with-retractable-cable-quick-start-guide-v1-0.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-rapid-power-bank-10k-45w-with-retractable-cable-quick-start-guide-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow RAPID Power Bank (10K, 45W, with Retractable Cable)_Quick Start Guide_V1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1775201868479/EcoFlow%20RAPID%20Power%20Bank%20(10K%2C%2045W%2C%20with%20Retractable%20Cable)_Quick%20Start%20Guide_V1.0.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 36,
+    "en_stranici": [
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      26,
+      27,
+      28,
+      30,
+      36
+    ],
+    "znaci": 10419,
+    "skaniran": false,
+    "prazni_stranici": 1,
+    "red": 68
+  },
+  {
+    "id": "ecoflow-rapid-power-bank-25-000mah-170w-100w-built-in-and-retractable-cables-quick-start-guide-v1-0",
+    "original": {
+      "sha256": "5e70ba247d4437400c8512ec96e63aabc45157f0fee4ebc7ff9a4fb6ae83331f"
+    },
+    "fail": "originali/bez-produkt/ecoflow-rapid-power-bank-25-000mah-170w-100w-built-in-and-retractable-cables-quick-start-guide-v1-0.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-rapid-power-bank-25-000mah-170w-100w-built-in-and-retractable-cables-quick-start-guide-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow RAPID Power Bank (25,000mAh, 170W, 100W Built-In and Retractable Cables) Quick Start Guide_V1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1749207620308/EcoFlow%20RAPID%20Power%20Bank%20(25%2C000mAh%2C%20170W%2C%20100W%20Built-In%20and%20Retractable%20Cables)%20Quick%20Start%20Guide_V1.0.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 15819,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 69
+  },
+  {
+    "id": "ecoflow-rapid-power-bank-25-000mah-170w-quick-start-guide-v1-0",
+    "original": {
+      "sha256": "01d4da818b0528506d84301f66fdca754d3406d2cb736b9afb7ac023c0da0262"
+    },
+    "fail": "originali/bez-produkt/ecoflow-rapid-power-bank-25-000mah-170w-quick-start-guide-v1-0.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-rapid-power-bank-25-000mah-170w-quick-start-guide-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow RAPID Power Bank (25,000mAh, 170W) Quick Start Guide_V1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1749207875523/EcoFlow%20RAPID%20Power%20Bank%20(25%2C000mAh%2C%20170W)%20Quick%20Start%20Guide_V1.0.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 15490,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 70
+  },
+  {
+    "id": "ecoflow-rapid-pro-3-in-1-power-bank-quick-start-guide-v1-0-20250528",
+    "original": {
+      "sha256": "d325ae31988c05ada84009570d85fbf33d2de1a24fc2f0dcd976d0f2ff5b44cd"
+    },
+    "fail": "originali/bez-produkt/ecoflow-rapid-pro-3-in-1-power-bank-quick-start-guide-v1-0-20250528.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-rapid-pro-3-in-1-power-bank-quick-start-guide-v1-0-20250528-bg.pdf",
+    "zaglavia": [
+      "EcoFlow RAPID Pro 3-in-1 Power Bank Quick Start Guide_V1.0_20250528"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1749207504374/EcoFlow%20RAPID%20Pro%203-in-1%20Power%20Bank%20Quick%20Start%20Guide_V1.0_20250528.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 14478,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 71
+  },
+  {
+    "id": "ecoflow-smart-cooling-deck-quick-start-guide-v1-0-en-de-it-es-nl-ru",
+    "original": {
+      "sha256": "d1e307df9c394cf596eb15c8c1255ffa5c48b45f0a90568f5379ed2d59659811"
+    },
+    "fail": "originali/bez-produkt/ecoflow-smart-cooling-deck-quick-start-guide-v1-0-en-de-it-es-nl-ru.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-smart-cooling-deck-quick-start-guide-v1-0-en-de-it-es-nl-ru-bg.pdf",
+    "zaglavia": [
+      "EcoFlow Smart Cooling Deck_Quick Start Guide V1.0 (EN+DE+IT+ES+NL+RU)"
+    ],
+    "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/8/8/EcoFlow%20Smart%20Cooling%20Deck_Quick%20Start%20Guide%20V1.0%20(EN%2BDE%2BIT%2BES%2BNL%2BRU)_1723107523802.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "многоезичен",
+    "versiya": "1.0",
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 1220,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 72
+  },
+  {
+    "id": "ecoflow-stream-diy-front-case-for-ecoflow-streanultra-x-quick-start-guide-v-1-0",
+    "original": {
+      "sha256": "dabdf35385d7fc8c095c422278e70f5f604545c8c480e660499d5142813aae9c"
+    },
+    "fail": "originali/bez-produkt/ecoflow-stream-diy-front-case-for-ecoflow-streanultra-x-quick-start-guide-v-1-0.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-stream-diy-front-case-for-ecoflow-streanultra-x-quick-start-guide-v-1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow STREAM DIY Front Case(For EcoFlow STREANUltra X_Quick Start Guide_V 1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1760608766947/EcoFlow%20STREAM%20DIY%20Front%20Case(For%20EcoFlow%20STREANUltra%20X_Quick%20Start%20Guide_V%201.0.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 1,
+    "en_stranici": [
+      1
+    ],
+    "znaci": 896,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 73
+  },
+  {
+    "id": "ecoflow-stream-gateway-quick-start-guide",
+    "original": {
+      "sha256": "9c5c6f1eaf3cf2235c66f697e183d8c2213b11a63d67a77f38339609314aaa1d"
+    },
+    "fail": "originali/bez-produkt/ecoflow-stream-gateway-quick-start-guide.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-stream-gateway-quick-start-guide-bg.pdf",
+    "zaglavia": [
+      "EcoFlow STREAM Gateway_Quick Start Guide"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1789028518527/EcoFlow%20STREAM%20Gateway_Quick%20Start%20Guide.pdf",
+    "vid": "Кратко ръководство (Quick Start)",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 2,
+    "en_stranici": [
+      1
+    ],
+    "znaci": 5606,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 74
+  },
+  {
+    "id": "ecoflow-bracket-adjustable-facade-installation-guide-en-de-fr-v1-1-260410",
+    "original": {
+      "sha256": "4f5eeeffd70355a82272fef02074531991551b0f38ed6c08496a1ef422a93525"
+    },
+    "fail": "originali/bez-produkt/ecoflow-bracket-adjustable-facade-installation-guide-en-de-fr-v1-1-260410.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-bracket-adjustable-facade-installation-guide-en-de-fr-v1-1-260410-bg.pdf",
+    "zaglavia": [
+      "EcoFlow Bracket Adjustable - Facade_Installation Guide-V1.1"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776154706526/EcoFlow%20Bracket%20Adjustable%20-%20Facade_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+    "vid": "Ръководство за монтаж",
+    "ezik": "многоезичен",
+    "versiya": "1.1",
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 2,
+    "en_stranici": [
+      1
+    ],
+    "znaci": 134,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 75
+  },
+  {
+    "id": "ecoflow-bracket-concrete-balcony-installation-guide-en-de-fr-v1-1-260410",
+    "original": {
+      "sha256": "ce7fc772bc2007a54d432c613ca79908cccaa9659107e4f1b5dee13427e83b3f"
+    },
+    "fail": "originali/bez-produkt/ecoflow-bracket-concrete-balcony-installation-guide-en-de-fr-v1-1-260410.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-bracket-concrete-balcony-installation-guide-en-de-fr-v1-1-260410-bg.pdf",
+    "zaglavia": [
+      "EcoFlow Bracket - Concrete Balcony_Installation Guide_V1.1"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776155589985/EcoFlow%20Bracket%20-%20Concrete%20Balcony_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+    "vid": "Ръководство за монтаж",
+    "ezik": "многоезичен",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 2,
+    "en_stranici": [
+      1
+    ],
+    "znaci": 1810,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 76
+  },
+  {
+    "id": "ecoflow-bracket-flat-roof-installation-guide-en-de-fr-v1-1-260410",
+    "original": {
+      "sha256": "47450a444d69765ef581759402e3acebfa85257a6ca69a7d39a7721e5730c280"
+    },
+    "fail": "originali/bez-produkt/ecoflow-bracket-flat-roof-installation-guide-en-de-fr-v1-1-260410.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-bracket-flat-roof-installation-guide-en-de-fr-v1-1-260410-bg.pdf",
+    "zaglavia": [
+      "EcoFlow Bracket - Flat Roof_Installation Guide_V1.1"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776154368786/EcoFlow%20Bracket%20-%20Flat%20Roof_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+    "vid": "Ръководство за монтаж",
+    "ezik": "многоезичен",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 2001,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 77
+  },
+  {
+    "id": "ecoflow-bracket-lattice-balcony-installation-guide-en-de-fr-v1-1-260410",
+    "original": {
+      "sha256": "6c8820ef8598412bd478fae78bb7aea22a2a2d37017a2f35ae73969135c1aac8"
+    },
+    "fail": "originali/bez-produkt/ecoflow-bracket-lattice-balcony-installation-guide-en-de-fr-v1-1-260410.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-bracket-lattice-balcony-installation-guide-en-de-fr-v1-1-260410-bg.pdf",
+    "zaglavia": [
+      "EcoFlow Bracket - Lattice Balcony_Installation Guide_V1.1"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776153711954/EcoFlow%20Bracket%20-%20Lattice%20Balcony_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+    "vid": "Ръководство за монтаж",
+    "ezik": "многоезичен",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 2,
+    "en_stranici": [
+      1
+    ],
+    "znaci": 2209,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 78
+  },
+  {
+    "id": "ecoflow-bracket-lightweight-installation-guide-multilingual-en-de-fr-it-es-nl-ru-jp-kr-cn-tw-v1-2-260410",
+    "original": {
+      "sha256": "7856f8a913718b4f39b93956e49ad4efaa1837c0eca25172920832c7b156cd65"
+    },
+    "fail": "originali/bez-produkt/ecoflow-bracket-lightweight-installation-guide-multilingual-en-de-fr-it-es-nl-ru-jp-kr-cn-tw-v1-2-260410.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-bracket-lightweight-installation-guide-multilingual-en-de-fr-it-es-nl-ru-jp-kr-cn-tw-v1-2-260410-bg.pdf",
+    "zaglavia": [
+      "EcoFlow Bracket - Lightweight_Installation Guide_Multilingual V1.2"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776154935336/EcoFlow%20Bracket%20-%20Lightweight_Installation%20Guide-Multilingual-EN-DE-FR-IT-ES-NL-RU-JP-KR-CN-TW-V1.2--260410.pdf",
+    "vid": "Ръководство за монтаж",
+    "ezik": "многоезичен",
+    "versiya": "1.2",
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 6384,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 79
+  },
+  {
+    "id": "ecoflow-bracket-lightweight-installation-guide-multilingual-v1-1",
+    "original": {
+      "sha256": "7f30df79a861cd38620eee508e3e70fbd61484fbe45869569d147691a8211c07"
+    },
+    "fail": "originali/bez-produkt/ecoflow-bracket-lightweight-installation-guide-multilingual-v1-1.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-bracket-lightweight-installation-guide-multilingual-v1-1-bg.pdf",
+    "zaglavia": [
+      "EcoFlow Bracket - Lightweight_Installation Guide_Multilingual V1.1"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1746706972448/EcoFlow%20Bracket%20-%20Lightweight_Installation%20Guide_Multilingual%20V1.1.pdf",
+    "vid": "Ръководство за монтаж",
+    "ezik": "многоезичен",
+    "versiya": "1.1",
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 3,
+    "en_stranici": [
+      1,
+      2,
+      3
+    ],
+    "znaci": 6458,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 80
+  },
+  {
+    "id": "ecoflow-bracket-semi-enclosed-balcony-installation-guide-en-de-fr-v1-1-260410",
+    "original": {
+      "sha256": "baea3660cb9c6f6a56ede18590c870637b74e820b16f1f4fd99e56d7e398c254"
+    },
+    "fail": "originali/bez-produkt/ecoflow-bracket-semi-enclosed-balcony-installation-guide-en-de-fr-v1-1-260410.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-bracket-semi-enclosed-balcony-installation-guide-en-de-fr-v1-1-260410-bg.pdf",
+    "zaglavia": [
+      "EcoFlow Bracket - Semi-enclosed Balcony_Installation Guide_V1.1"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776154502369/EcoFlow%20Bracket%20-%20Semi-enclosed%20Balcony_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+    "vid": "Ръководство за монтаж",
+    "ezik": "многоезичен",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 2,
+    "en_stranici": [
+      1
+    ],
+    "znaci": 1809,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 81
+  },
+  {
+    "id": "ecoflow-heatguard-solar-film-for-model-3-installation-guide-v1-0",
+    "original": {
+      "sha256": "ecf7e99bc65f4318a76b2e35c3d2e3df88d6802fa31e68c19ec656eb5dba2679"
+    },
+    "fail": "originali/bez-produkt/ecoflow-heatguard-solar-film-for-model-3-installation-guide-v1-0.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-heatguard-solar-film-for-model-3-installation-guide-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow HeatGuard Solar Film (For Model 3)_Installation Guide_Multilingual V1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747731727092/EcoFlow%20HeatGuard%20Solar%20Film%20(For%20Model%203)_Installation%20Guide%20V1.0.pdf",
+    "vid": "Ръководство за монтаж",
+    "ezik": "многоезичен",
+    "versiya": "1.0",
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 39,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      22,
+      23,
+      24,
+      25,
+      26,
+      37
+    ],
+    "znaci": 13397,
+    "skaniran": false,
+    "prazni_stranici": 1,
+    "red": 82
+  },
+  {
+    "id": "ecoflow-heatguard-solar-film-for-model-y-installation-guide-v1-0",
+    "original": {
+      "sha256": "2b831c621f8020470444940d5dbc601164a66727f4aaa273571c43a25e9b030d"
+    },
+    "fail": "originali/bez-produkt/ecoflow-heatguard-solar-film-for-model-y-installation-guide-v1-0.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-heatguard-solar-film-for-model-y-installation-guide-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow HeatGuard Solar Film (For Model Y)_Installation Guide_Multilingual V1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747731748105/EcoFlow%20HeatGuard%20Solar%20Film%20(For%20Model%20Y)_Installation%20Guide%20V1.0.pdf",
+    "vid": "Ръководство за монтаж",
+    "ezik": "многоезичен",
+    "versiya": "1.0",
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 39,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      22,
+      23,
+      24,
+      25,
+      26,
+      37
+    ],
+    "znaci": 13823,
+    "skaniran": false,
+    "prazni_stranici": 3,
+    "red": 83
+  },
+  {
+    "id": "ecoflow-single-axis-solar-tracker-2-installation-guide-v1-0",
+    "original": {
+      "sha256": "ec918a2c2d1efe2f0148dfad275a26a0746a501274f6d9688cafcf68879de356"
+    },
+    "fail": "originali/bez-produkt/ecoflow-single-axis-solar-tracker-2-installation-guide-v1-0.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-single-axis-solar-tracker-2-installation-guide-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow Single Axis Solar Tracker 2_Installation Guide V1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1746690725930/EcoFlow%20Single%20Axis%20Solar%20Tracker%202_Installation%20Guide%20V1.0_%E5%89%AF%E6%9C%AC.pdf",
+    "vid": "Ръководство за монтаж",
+    "ezik": "EN",
+    "versiya": "1.0",
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 30,
+    "en_stranici": [
+      1,
+      2,
+      4,
+      5,
+      10,
+      12,
+      14,
+      15,
+      20,
+      28
+    ],
+    "znaci": 12377,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 84
+  },
+  {
+    "id": "ecoflow-stream-5000-ac-5000-installation-guide",
+    "original": {
+      "sha256": "13011078a94de1d0c3d5e46381381dccf26e2ec596549f38a2882c1769fb59af"
+    },
+    "fail": "originali/bez-produkt/ecoflow-stream-5000-ac-5000-installation-guide.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-stream-5000-ac-5000-installation-guide-bg.pdf",
+    "zaglavia": [
+      "EcoFlow STREAM 5000_AC 5000 Installation Guide"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1789366326617/EcoFlow%20STREAM%205000_AC%205000%20Installation%20Guide.pdf",
+    "vid": "Ръководство за монтаж",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 52,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "znaci": 16493,
+    "skaniran": false,
+    "prazni_stranici": 4,
+    "red": 85
+  },
+  {
+    "id": "ecoflow-stream-ac-installation-guide-en-de-fr-v1-0",
+    "original": {
+      "sha256": "b3a4cd8812f64b9a0f86420aedc0ba2002630006712270ee09f0357c8dc6dbc3"
+    },
+    "fail": "originali/bez-produkt/ecoflow-stream-ac-installation-guide-en-de-fr-v1-0.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-stream-ac-installation-guide-en-de-fr-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow STREAM AC_Installation Guide_en+de+fr_V1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1750824047604/EcoFlow%20STREAM%20AC_Installation%20Guide_en%2Bde%2Bfr_V1.0.pdf",
+    "vid": "Ръководство за монтаж",
+    "ezik": "многоезичен",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 28,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "znaci": 4590,
+    "skaniran": false,
+    "prazni_stranici": 1,
+    "red": 86
+  },
+  {
+    "id": "ecoflow-stream-ac-pro-installation-guide",
+    "original": {
+      "sha256": "19da854f7aeff9656422128639d9133b922c04265ebd89a1d5117c1bdf4c24e4"
+    },
+    "fail": "originali/bez-produkt/ecoflow-stream-ac-pro-installation-guide.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-stream-ac-pro-installation-guide-bg.pdf",
+    "zaglavia": [
+      "EcoFlow STREAM AC Pro_Installation Guide"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776392079262/EcoFlow%20STREAM%20AC%20Pro_Installation%20Guide.pdf",
+    "vid": "Ръководство за монтаж",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 32,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13
+    ],
+    "znaci": 7050,
+    "skaniran": false,
+    "prazni_stranici": 2,
+    "red": 87
+  },
+  {
+    "id": "ecoflow-stream-expansion-battery-5000-installation-guide",
+    "original": {
+      "sha256": "c8a121f3870ee4c5211763559b0b2a5a2faa066d6bd74e7788fbb894f37ac6c2"
+    },
+    "fail": "originali/bez-produkt/ecoflow-stream-expansion-battery-5000-installation-guide.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-stream-expansion-battery-5000-installation-guide-bg.pdf",
+    "zaglavia": [
+      "EcoFLow STREAM Expansion Battery 5000_Installation Guide"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1789029060822/EcoFLow%20STREAM%20Expansion%20Battery%205000_Installation%20Guide.pdf",
+    "vid": "Ръководство за монтаж",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 24,
+    "en_stranici": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      19
+    ],
+    "znaci": 8841,
+    "skaniran": false,
+    "prazni_stranici": 1,
+    "red": 88
+  },
+  {
+    "id": "ecoflow-stream-max-installation-guide-en-de-fr-v1-0",
+    "original": {
+      "sha256": "c606ebf0f0edaba7a96d7bc33b4c096b21c912b3dfbea1b59201ec1fbc9d0c2c"
+    },
+    "fail": "originali/bez-produkt/ecoflow-stream-max-installation-guide-en-de-fr-v1-0.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-stream-max-installation-guide-en-de-fr-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow STREAM Max_Installation Guide_en+de+fr_V1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1750823695120/EcoFlow%20STREAM%20Max_Installation%20Guide_en%2Bde%2Bfr_V1.0.pdf",
+    "vid": "Ръководство за монтаж",
+    "ezik": "многоезичен",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 36,
+    "en_stranici": [
+      1,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "znaci": 5733,
+    "skaniran": false,
+    "prazni_stranici": 3,
+    "red": 89
+  },
+  {
+    "id": "ecoflow-stream-ultra-and-pro-installation-guide-en-de-fr-v1-0",
+    "original": {
+      "sha256": "cafa524837c96c26b177d2211ff0fb876ee950c8f0b10e88a35645c3650ad0c3"
+    },
+    "fail": "originali/stream-pro/ecoflow-stream-ultra-and-pro-installation-guide-en-de-fr-v1-0.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-stream-ultra-and-pro-installation-guide-en-de-fr-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow STREAM Ultra & Pro_Installation Guide_en+de+fr_V1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747276514204/EcoFlow%20STREAM%20Ultra%20%26%20Pro_Installation%20Guide_en%2Bde%2Bfr_V1.0.pdf",
+    "vid": "Ръководство за монтаж",
+    "ezik": "многоезичен",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 32,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13
+    ],
+    "znaci": 7047,
+    "skaniran": false,
+    "prazni_stranici": 2,
+    "red": 90
+  },
+  {
+    "id": "45w-solar-panel-user-manual-en",
+    "original": {
+      "sourceUrl": "https://manuals.ecoflow.com/product/45w-solar-panel?lang=en_US"
+    },
+    "fail": "originali/bez-produkt/45w-solar-panel-user-manual-en.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/45w-solar-panel-user-manual-en-bg.pdf",
+    "zaglavia": [
+      "45W Portable Solar Panel (EF-Fold-P045-CG) User Manual"
+    ],
+    "adres": "https://manuals.ecoflow.com/product/45w-solar-panel?lang=en_US",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 16,
+    "en_stranici": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      14,
+      15,
+      16
+    ],
+    "znaci": 12185,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 91
+  },
+  {
+    "id": "50-tilt-mount-bracket-user-manual-v1-0",
+    "original": {
+      "sha256": "352d59e4f1a22c70933fca1c60768bb361f41d2227ce4335edc903cc942edb64"
+    },
+    "fail": "originali/bez-produkt/50-tilt-mount-bracket-user-manual-v1-0.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/50-tilt-mount-bracket-user-manual-v1-0-bg.pdf",
+    "zaglavia": [
+      "50'' Tilt Mount Bracket-User Manual (V1.0)"
+    ],
+    "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/6/20/50''%20Tilt%20Mount%20Bracket-User%20Manual%20(V1.0)_1687232584726.pdf",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": "1.0",
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 18,
+    "en_stranici": [
+      1,
+      2,
+      7
+    ],
+    "znaci": 4897,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 92
+  },
+  {
+    "id": "520w-rigid-solar-panel-user-manual-en",
+    "original": {
+      "sourceUrl": "https://manuals.ecoflow.com/product/520w-rigid-solar-panel?lang=en_US"
+    },
+    "fail": "originali/bez-produkt/520w-rigid-solar-panel-user-manual-en.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/520w-rigid-solar-panel-user-manual-en-bg.pdf",
+    "zaglavia": [
+      "EcoFlow 520W Rigid Solar Panel_User Manual"
+    ],
+    "adres": "https://manuals.ecoflow.com/product/520w-rigid-solar-panel?lang=en_US",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 23,
+    "en_stranici": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "znaci": 23158,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 93
+  },
+  {
+    "id": "60w-solar-panel-user-manual-en",
+    "original": {
+      "sourceUrl": "https://manuals.ecoflow.com/product/60w-solar-panel?lang=en_US"
+    },
+    "fail": "originali/bez-produkt/60w-solar-panel-user-manual-en.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/60w-solar-panel-user-manual-en-bg.pdf",
+    "zaglavia": [
+      "60W Portable Solar Panel (EF-Fold-P060-CG) User Manual"
+    ],
+    "adres": "https://manuals.ecoflow.com/product/60w-solar-panel?lang=en_US",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 16,
+    "en_stranici": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      14,
+      15,
+      16
+    ],
+    "znaci": 12188,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 94
+  },
+  {
+    "id": "alternator-charger-500w-user-manual-en",
+    "original": {
+      "sourceUrl": "https://manuals.ecoflow.com/eu/product/alternator-charger-500w?lang=en_US"
+    },
+    "fail": "originali/bez-produkt/alternator-charger-500w-user-manual-en.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/alternator-charger-500w-user-manual-en-bg.pdf",
+    "zaglavia": [
+      "EcoFlow Alternator Charger (500W)_User Manual"
+    ],
+    "adres": "https://manuals.ecoflow.com/eu/product/alternator-charger-500w?lang=en_US",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 15,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "znaci": 21863,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 95
+  },
+  {
+    "id": "ecoflow-2kwh-and-5kwh-lfp-battery-user-manual-v1-3-en",
+    "original": {
+      "sha256": "f96cc438c633d2c9f46f0d1caed5553d04f08785f3a7498f16af9e26799f1727"
+    },
+    "fail": "originali/bez-produkt/ecoflow-2kwh-and-5kwh-lfp-battery-user-manual-v1-3-en.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-2kwh-and-5kwh-lfp-battery-user-manual-v1-3-en-bg.pdf",
+    "zaglavia": [
+      "EcoFlow 2kWh & 5kWh LFP Battery_User Manual_V1.3_en"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1745998539095/EcoFlow%202kWh%20%26%205kWh%20LFP%20Battery_User%20Manual_V1.3_en.pdf",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 20,
+    "en_stranici": [
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "znaci": 21333,
+    "skaniran": false,
+    "prazni_stranici": 2,
+    "red": 96
+  },
+  {
+    "id": "ecoflow-delta-2-max-smart-extra-battery-user-manual-v1-0-en",
+    "original": {
+      "sha256": "67c32a4ec33b97d213011b745aa8e5b4a1b49b054ea84e1bd5d53e9e50e2a6b8"
+    },
+    "fail": "originali/bez-produkt/ecoflow-delta-2-max-smart-extra-battery-user-manual-v1-0-en.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-delta-2-max-smart-extra-battery-user-manual-v1-0-en-bg.pdf",
+    "zaglavia": [
+      "EcoFlow DELTA 2 Max Smart Extra Battery User Manual"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1766714817894/EcoFlow%20DELTA%202%20Max%20Smart%20Extra%20Battery-User%20Manual%20V1.0%20(EN).pdf",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 11,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "znaci": 9688,
+    "skaniran": false,
+    "prazni_stranici": 1,
+    "red": 97
+  },
+  {
+    "id": "ecoflow-p1-meter-user-manual",
+    "original": {
+      "sha256": "1a020a4f13f735344318a57f7caa84ecefd3dd08b838075c5bae4751083f8d96"
+    },
+    "fail": "originali/bez-produkt/ecoflow-p1-meter-user-manual.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-p1-meter-user-manual-bg.pdf",
+    "zaglavia": [
+      "EcoFlow P1 Meter User Manual"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1764316005923/EcoFlow%20P1%20Meter%20User%20Manual.pdf",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 2,
+    "en_stranici": [
+      1,
+      2
+    ],
+    "znaci": 5972,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 98
+  },
+  {
+    "id": "ecoflow-powerstream-microinverter-user-manual-v1-4-en",
+    "original": {
+      "sha256": "3b919ad5ac752992f0390e42a613deca85fa4f707051654a805319be3b162ad1"
+    },
+    "fail": "originali/bez-produkt/ecoflow-powerstream-microinverter-user-manual-v1-4-en.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-powerstream-microinverter-user-manual-v1-4-en-bg.pdf",
+    "zaglavia": [
+      "EcoFlow PowerStream Microinverter User Manual V1.4 (EN)_1712066298361"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1755333337481/EcoFlow%20PowerStream%20Microinverter%20User%20Manual%20V1.4%20(EN)_1712066298361.pdf",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": "1.4",
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 33,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "znaci": 29184,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 99
+  },
+  {
+    "id": "ecoflow-smart-meter-dual-ct-user-manual",
+    "original": {
+      "sha256": "4ee45933169bc20b9c9f4dc68b7415a97f88ffe5b0b35cb2e7871cbe329e7e81"
+    },
+    "fail": "originali/bez-produkt/ecoflow-smart-meter-dual-ct-user-manual.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-smart-meter-dual-ct-user-manual-bg.pdf",
+    "zaglavia": [
+      "EcoFlow Smart Meter Dual CT User Manual"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1789028990939/EcoFlow%20Smart%20Meter%20Dual%20CT%20User%20Manual.pdf",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 36,
+    "en_stranici": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      11
+    ],
+    "znaci": 10080,
+    "skaniran": false,
+    "prazni_stranici": 2,
+    "red": 100
+  },
+  {
+    "id": "ecoflow-smart-plug-user-manual-v1-0-en",
+    "original": {
+      "sha256": "1a4a0ea161dff0704164aa3016ab62f048f462f9c4350fdc6545b7e16ad0ede7"
+    },
+    "fail": "originali/bez-produkt/ecoflow-smart-plug-user-manual-v1-0-en.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-smart-plug-user-manual-v1-0-en-bg.pdf",
+    "zaglavia": [
+      "EcoFlow Smart Plug User Manual V1.0 (EN)"
+    ],
+    "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/5/31/EcoFlow%20Smart%20Plug%20User%20Manual%20V1.0%20(EN)_1685526000132.pdf",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": "1.0",
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 8,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "znaci": 6027,
+    "skaniran": false,
+    "prazni_stranici": 1,
+    "red": 101
+  },
+  {
+    "id": "ecoflow-trail-200-dc-and-ecoflow-trail-300-dc-user-manual-global-v1-0",
+    "original": {
+      "sha256": "3d48abd4a51cf5dfe24afcb9e1e30aef39e9089193b199cfcb5fd287b81948fb"
+    },
+    "fail": "originali/bez-produkt/ecoflow-trail-200-dc-and-ecoflow-trail-300-dc-user-manual-global-v1-0.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/ecoflow-trail-200-dc-and-ecoflow-trail-300-dc-user-manual-global-v1-0-bg.pdf",
+    "zaglavia": [
+      "EcoFlow TRAIL 200 DC & EcoFlow TRAIL 300 DC_User Manual_global_V1.0"
+    ],
+    "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1757326207769/EcoFlow%20TRAIL%20200%20DC%20%26%20EcoFlow%20TRAIL%20300%20DC_User%20Manual_global_V1.0.pdf",
+    "vid": "Ръководство за потребителя",
+    "ezik": "многоезичен",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 167,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      34,
+      54,
+      55,
+      163
+    ],
+    "znaci": 16698,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 102
+  },
+  {
+    "id": "power-insight-2-monitor-user-manual-en",
+    "original": {
+      "sourceUrl": "https://manuals.ecoflow.com/product/power-insight-2-monitor?lang=en_US"
+    },
+    "fail": "originali/bez-produkt/power-insight-2-monitor-user-manual-en.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/power-insight-2-monitor-user-manual-en-bg.pdf",
+    "zaglavia": [
+      "EcoFlow PowerInsight 2 Monitor_User Manual"
+    ],
+    "adres": "https://manuals.ecoflow.com/product/power-insight-2-monitor?lang=en_US",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 14,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "znaci": 23969,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 103
+  },
+  {
+    "id": "powerstream-user-manual-en",
+    "original": {
+      "sourceUrl": "https://manuals.ecoflow.com/product/powerstream?lang=en_US"
+    },
+    "fail": "originali/bez-produkt/powerstream-user-manual-en.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/powerstream-user-manual-en-bg.pdf",
+    "zaglavia": [
+      "EcoFlow PowerStream_User Manual"
+    ],
+    "adres": "https://manuals.ecoflow.com/product/powerstream?lang=en_US",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 29,
+    "en_stranici": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "znaci": 30094,
+    "skaniran": false,
+    "prazni_stranici": 1,
+    "red": 104
+  },
+  {
+    "id": "rapid-magnetic-power-bank-user-manual-en",
+    "original": {
+      "sourceUrl": "https://manuals.ecoflow.com/product/rapid-magnetic-power-bank?lang=en_US"
+    },
+    "fail": "originali/bez-produkt/rapid-magnetic-power-bank-user-manual-en.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/rapid-magnetic-power-bank-user-manual-en-bg.pdf",
+    "zaglavia": [
+      "EcoFlow RAPID Magnetic Power Bank (10000mAh)_User Manual"
+    ],
+    "adres": "https://manuals.ecoflow.com/product/rapid-magnetic-power-bank?lang=en_US",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 12,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "znaci": 16700,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 105
+  },
+  {
+    "id": "rapid-power-bank-25000mah-170w-user-manual-en",
+    "original": {
+      "sourceUrl": "https://manuals.ecoflow.com/product/rapid-power-bank-25000mah-170w?lang=en_US"
+    },
+    "fail": "originali/bez-produkt/rapid-power-bank-25000mah-170w-user-manual-en.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/rapid-power-bank-25000mah-170w-user-manual-en-bg.pdf",
+    "zaglavia": [
+      "EcoFlow RAPID Power Bank (25,000mAh, 170W)_User Manual"
+    ],
+    "adres": "https://manuals.ecoflow.com/product/rapid-power-bank-25000mah-170w?lang=en_US",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 9,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "znaci": 12937,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 106
+  },
+  {
+    "id": "rapid-power-bank-25000mah-170w-with-cables-user-manual-en",
+    "original": {
+      "sourceUrl": "https://manuals.ecoflow.com/product/rapid-power-bank-25000mah-170w-with-cables?lang=en_US"
+    },
+    "fail": "originali/bez-produkt/rapid-power-bank-25000mah-170w-with-cables-user-manual-en.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/rapid-power-bank-25000mah-170w-with-cables-user-manual-en-bg.pdf",
+    "zaglavia": [
+      "EcoFlow RAPID Power Bank (25,000mAh, 170W, 100W Built-In and Retractable Cables)_User Manual"
+    ],
+    "adres": "https://manuals.ecoflow.com/product/rapid-power-bank-25000mah-170w-with-cables?lang=en_US",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 10,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "znaci": 13482,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 107
+  },
+  {
+    "id": "stream-3000-5000-ac-5000-user-manual-en",
+    "original": {
+      "sourceUrl": "https://manuals.ecoflow.com/product/stream-3000-5000-ac-5000?lang=en_US"
+    },
+    "fail": "originali/bez-produkt/stream-3000-5000-ac-5000-user-manual-en.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/stream-3000-5000-ac-5000-user-manual-en-bg.pdf",
+    "zaglavia": [
+      "EcoFlow STREAM 5000_AC 5000 User Manual"
+    ],
+    "adres": "https://manuals.ecoflow.com/product/stream-3000-5000-ac-5000?lang=en_US",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 32,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "znaci": 27066,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 108
+  },
+  {
+    "id": "stream-gateway-user-manual-en",
+    "original": {
+      "sourceUrl": "https://manuals.ecoflow.com/product/stream-gateway/?lang=en_US"
+    },
+    "fail": "originali/bez-produkt/stream-gateway-user-manual-en.pdf",
+    "bg_fail": "bg-prevodi/bez-produkt/stream-gateway-user-manual-en-bg.pdf",
+    "zaglavia": [
+      "EcoFlow STREAM Gateway_User Manual"
+    ],
+    "adres": "https://manuals.ecoflow.com/product/stream-gateway/?lang=en_US",
+    "vid": "Ръководство за потребителя",
+    "ezik": "EN",
+    "versiya": null,
+    "produkti": [],
+    "produkti_imena": [],
+    "skrit": true,
+    "stranici": 22,
+    "en_stranici": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "znaci": 16521,
+    "skaniran": false,
+    "prazni_stranici": 0,
+    "red": 109
+  }
+]

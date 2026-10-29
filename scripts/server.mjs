@@ -241,11 +241,13 @@ const КОМАНДИ = {
       for (const e of readdirSync(d, { withFileTypes: true })) {
         const p = path.join(d, e.name)
         if (e.isDirectory()) обходи(p)
-        else if (/\.pdf$|^svaleni\.json$/i.test(e.name)) локални.push({ rel: path.relative(base, p).split(path.sep).join('/'), size: statSync(p).size })
+        else if (/\.pdf$/i.test(e.name)) локални.push({ rel: path.relative(base, p).split(path.sep).join('/'), size: statSync(p).size })
       }
     }
     for (const d of ['originali', 'bg-oficialni', 'bg-prevodi']) if (existsSync(path.join(base, d))) обходи(path.join(base, d))
     локални.push({ rel: 'svaleni.json', size: statSync(path.join(base, 'svaleni.json')).size })
+    // Списъкът на готовите преводи — винаги (при нов PDF размерът му може да е същият).
+    if (existsSync(path.join(base, 'prevodi-gotovi.json'))) локални.push({ rel: 'prevodi-gotovi.json', size: -1 })
     const r = spawnSync(SSH, ['-o', 'BatchMode=yes', SERVER, `mkdir -p ${q(`${DIR}/content-server/dokumenti`)} && cd ${q(`${DIR}/content-server/dokumenti`)} && find . -type f -printf '%P %s\\n'`], { encoding: 'utf8' })
     if (r.status !== 0) стоп('Не мога да прочета папката на сървъра.')
     const там = new Map(r.stdout.split('\n').filter(Boolean).map((l) => { const i = l.lastIndexOf(' '); return [l.slice(0, i), Number(l.slice(i + 1))] }))
