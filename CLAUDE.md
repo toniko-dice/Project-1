@@ -65,8 +65,8 @@ npm run test:dice                   # тестът на парсера на dice
 ## Къде е останалото
 
 - **`.claude/rules/`** — правилата по части от кода; зареждат се сами, когато се пипат съответните файлове:
-  `payload-kolekcii` · `migracii-i-baza` · `frontend` · `kesh-i-adresi` · `snimki-i-media` · `vnos` · `dice` · `zaklyuchvane-i-sigurnost` · `server-i-deploy` · `oferti-i-zayavki` · `biskvitki` · `seo`; `obshti` (винаги).
-- **`.claude/skills/`** — процедури стъпка по стъпка: `vnos-na-produkt`, `vnos-na-stranica`, `deploy`, `nov-blok`, `migraciya`.
+  `payload-kolekcii` · `migracii-i-baza` · `frontend` · `kesh-i-adresi` · `snimki-i-media` · `vnos` · `dice` · `zaklyuchvane-i-sigurnost` · `server-i-deploy` · `oferti-i-zayavki` · `biskvitki` · `seo` · `dokumenti`; `obshti` (винаги).
+- **`.claude/skills/`** — процедури стъпка по стъпка: `vnos-na-produkt`, `vnos-na-stranica`, `deploy`, `nov-blok`, `migraciya`, `nov-dokument`.
 - **`docs/funkcii/`** — подробните описания и историята на всяка функция (пренесени дословно от стария CLAUDE.md); `resheniya.md` — 23-те решения, които НЕ се връщат назад, с причините (кратко — в правилата по тема: `defaultPopulate`, черновите, `RowLabel`, `orderable`, `requiredUnlessHidden` → `payload-kolekcii`; миграциите, архивите, „database is locked" → `migracii-i-baza`; кешът, адресите, пренасочванията, търсенето → `kesh-i-adresi`; CSS, `ScrollRow`, шрифтът, лентата с икони → `frontend`).
 - **`docs/ostava.md`** — какво остава; `docs/sigurnost-server.md` — сигурността на сървъра; `docs/biskvitki-inventar.md`.
 - **`docs/arhiv/CLAUDE-2026-10-13.md`** — старият CLAUDE.md, цял, за справка.

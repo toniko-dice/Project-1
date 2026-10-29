@@ -22,11 +22,14 @@ import { marked } from 'marked'
 import { chromium } from 'playwright-core'
 
 const ROOT = path.join(import.meta.dirname, '..', '..')
+// Без зачертаване: „~" в спецификациите (120V~20A … 220V~16A) не е Markdown.
+marked.use({ tokenizer: { del: () => undefined } })
 const args = process.argv.slice(2)
 const САМО_ПРОВЕРКА = args.includes('--samo-proverka')
 const поз = args.filter((a) => !a.startsWith('--'))
 const BASE = поз[0] && !/^[a-z0-9-]+$/.test(поз[0]) ? поз.shift() : path.join(ROOT, 'content', 'dokumenti')
-const PREVODI = path.join(ROOT, 'content', 'dokumenti', 'prevodi')
+// Преводите и английският текст — може от worktree (PREVODI_DIR, PREVODI_EN_DIR); PDF-ите — в BASE.
+const PREVODI = process.env.PREVODI_DIR || path.join(ROOT, 'content', 'dokumenti', 'prevodi')
 const CHROME = process.env.CHROME_PATH || 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe'
 const spisak = JSON.parse(readFileSync(path.join(PREVODI, 'spisak.json'), 'utf8'))
 const задачи = (поз.length ? поз.map((id) => spisak.find((x) => x.id === id) ?? стоп(`няма „${id}" в spisak.json`)) : spisak)
@@ -99,7 +102,7 @@ const безБлоковеИКод = (t) => t.replace(/`[^`]*`/g, '').replace(/^
 function провери(x) {
   const грешки = []
   const bgF = path.join(PREVODI, `${x.id}.md`)
-  const enF = path.join(BASE, 'prevodi-en', `${x.id}.en.md`)
+  const enF = path.join(process.env.PREVODI_EN_DIR || path.join(BASE, 'prevodi-en'), `${x.id}.en.md`)
   const izF = path.join(BASE, 'izvlecheni', `${x.id}.txt`)
   if (!existsSync(enF)) return [`няма ${path.relative(BASE, enF)}`]
   const bg = readFileSync(bgF, 'utf8')
@@ -133,7 +136,8 @@ function провери(x) {
       return ш.length && ш.filter((q) => enШ.has(q)).length / ш.length < 0.7
     })
     const покритие = изр.length ? 1 - непокрити.length / изр.length : 1
-    if (покритие < 0.9) грешки.push(`.en.md покрива ${Math.round(покритие * 100)}% от английските изречения (${изр.length}); липсват напр.: ${непокрити.slice(0, 3).map((s) => `„${s.trim().replace(/\s+/g, ' ').slice(0, 80)}"`).join('; ')}`)
+    // Едно непокрито изречение се допуска (плакатите: 15 езика, слети в един „абзац").
+    if (покритие < 0.9 && непокрити.length > 1) грешки.push(`.en.md покрива ${Math.round(покритие * 100)}% от английските изречения (${изр.length}); липсват напр.: ${непокрити.slice(0, 3).map((s) => `„${s.trim().replace(/\s+/g, ' ').slice(0, 80)}"`).join('; ')}`)
   }
   return грешки
 }

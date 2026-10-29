@@ -87,6 +87,16 @@ def izvleci(pdf: Path, mnogoezichen: bool):
     return '\n\n'.join(out) + '\n', en_str, prazni, n
 
 
+def versiya(zaglavie: str, tekst: str):
+    """От заглавието; ако там я няма — „V1.2" от първата страница на PDF-а."""
+    m = re.search(r'\bV\s?(\d+(?:\.\d+)*)', zaglavie, re.I)
+    if m:
+        return m[1]
+    parva = tekst.split('=== стр.')[1] if '=== стр.' in tekst else tekst
+    m = re.search(r'(?<![\w.])V(\d+\.\d+(?:\.\d+)?)(?![\w.])', parva)
+    return m[1] if m else None
+
+
 def main():
     opis = json.loads((D / 'opis.json').read_text(encoding='utf8'))
     svaleni = json.loads((DOC / 'svaleni.json').read_text(encoding='utf8'))
@@ -128,7 +138,7 @@ def main():
             'adres': rs[0]['adres'],
             'vid': rs[0]['vid'],
             'ezik': rs[0]['ezik'],
-            'versiya': (re.search(r'\bV\s?(\d+(?:\.\d+)*)', rs[0]['zaglavie'], re.I) or [None, None])[1],
+            'versiya': versiya(rs[0]['zaglavie'], tekst),
             'produkti': produkti,
             'produkti_imena': sorted({i for r in rs if not r['skrit'] for i in r.get('produkti_imena', [])}),
             'skrit': skrit,

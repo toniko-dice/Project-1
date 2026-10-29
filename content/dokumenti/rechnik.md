@@ -99,3 +99,51 @@
 | warranty | гаранция |
 | What's in the box | Съдържание на опаковката |
 | wireless charging | безжично зареждане |
+
+## Добавени от преводите (партида 1)
+
+| English | Български |
+|---|---|
+| after-sales service | следпродажбено обслужване |
+| battery input / car input | вход от батерия / вход от автомобил |
+| bind device (to account) | свързване на устройството с профила |
+| Bypass Mode | режим Bypass |
+| Charge Only / Discharge Only | Само зареждане / Само разреждане |
+| climate class | климатичен клас |
+| Communication Method | начин на комуникация |
+| cooling capacity | охлаждащ капацитет |
+| Customer Service (EcoFlow) | отделът за обслужване на клиенти на EcoFlow |
+| defrost | размразяване |
+| disconnecting device | устройство за изключване |
+| EcoFlow Proprietary Port | собствен порт на EcoFlow |
+| equipment grounding conductor | защитен заземителен проводник |
+| EU Declaration of Conformity | ЕС декларация за съответствие |
+| extension socket / portable socket outlet | разклонител |
+| FCC / IC compliance statement | декларация за съответствие с FCC / IC |
+| Compliance information | информация за съответствие |
+| grounding plug | щепсел със заземяване |
+| heat dissipation | охлаждане (разсейване на топлината) |
+| hibernation | режим на заспиване |
+| High-PV / Low-PV input | High-PV вход / Low-PV вход (соларен вход за високо / ниско напрежение) |
+| intermittent loads | консуматори с прекъсваща работа |
+| IP rating | степен на защита (IP) |
+| Low Temperature / Low Voltage Protection | защита при ниска температура / при ниско напрежение |
+| magnetic power bank | магнитна външна батерия |
+| nameplate | табелка с данни |
+| Noise Level | ниво на шума |
+| Output Port Memory | памет на изходите |
+| Over Temperature Protection | защита от прегряване |
+| Overvoltage Category | категория на пренапрежение |
+| Pollution Degree | степен на замърсяване |
+| pure sine wave / wave form | чиста синусоида / форма на вълната |
+| PV module / PV switch | соларен (PV) модул / PV прекъсвач |
+| rapid shutdown | бързо изключване (rapid shutdown) |
+| refrigerant / refrigerant circuit | хладилен агент / хладилен кръг |
+| RF exposure | излагане на радиочестотно лъчение |
+| scheduled task | планирана задача |
+| self-heating | самозагряване |
+| SoH (State of Health) | SoH (състояние на батерията) |
+| Socket Type | вид на контактите / вид на гнездото |
+| strip light | светлинна лента |
+| transfer time (UPS) | време за превключване |
+| trolley | количка |
