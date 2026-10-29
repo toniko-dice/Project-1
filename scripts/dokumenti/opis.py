@@ -149,6 +149,44 @@ def ezik(title, url):
     return 'EN'
 
 
+def faylove():
+    """Етап 7: пътят на файла в папката с документите (= в ZIP-а) — оригиналът и българският
+    (официален, официална извадка или превод). Само ако данните са тук (svaleni.json и т.н.
+    не са в git) — иначе колоните са празни."""
+    def cheti(ime):
+        f = D / ime
+        return json.loads(f.read_text(encoding='utf8')) if f.exists() else {}
+    svaleni = cheti('svaleni.json')
+    gotovi = cheti('prevodi-gotovi.json')
+    izvadki = cheti('bg-izvadki.json')
+    po_sha = {v['sha256']: k for k, v in izvadki.items()}
+    prevod = {}
+    for g in gotovi.values():
+        prevod[g['original'].get('sha256') or g['original'].get('sourceUrl')] = g['bg_fail']
+
+    def slug(a):
+        return re.sub(r'[/?].*', '', re.sub(r'^.*?/product/', '', a))
+
+    def fayl(z):
+        if z['adres'] in svaleni:
+            return svaleni[z['adres']]['fail'].replace('\\', '/')
+        if z['tip'] == 'online' and z['bg_iztochnik'] != 'официален':
+            f = f"originali/{(z['produkti'] or ['bez-produkt'])[0]}/{slug(z['adres'])}-user-manual-en.pdf"
+            return f if (D / f).exists() else ''
+        return ''
+
+    def fayl_bg(z):
+        if z.get('bg_adres'):
+            f = f"bg-oficialni/{slug(z['bg_adres'])}.pdf"
+            return f if (D / f).exists() else ''
+        sha = svaleni.get(z['adres'], {}).get('sha256')
+        if sha in po_sha:
+            return f'bg-oficialni/izvadki/{po_sha[sha]}-bg-oficialen.pdf'
+        return prevod.get(sha) or prevod.get(z['adres']) or ''
+
+    return fayl, fayl_bg
+
+
 def main():
     produkti = {}
     for l in (D / 'produkti-sarvar.tsv').read_text(encoding='utf8').splitlines():
@@ -233,12 +271,14 @@ def main():
     with open(D / 'opis.csv', 'w', encoding='utf-8-sig', newline='') as f:
         w = csv.writer(f, delimiter=';')
         w.writerow(['заглавие', 'вид', 'език', 'тип', 'адрес', 'продукт(и) в сайта', 'скрит', 'BG източник',
-                    'несигурна връзка', 'бележка', 'дубъл по заглавие', 'дата', 'други заглавия на EcoFlow'])
+                    'несигурна връзка', 'бележка', 'дубъл по заглавие', 'дата', 'други заглавия на EcoFlow',
+                    'файл', 'файл на български'])
+        fayl, fayl_bg = faylove()
         for z in zapisi:
             w.writerow([z['zaglavie'], z['vid'], z['ezik'], z['tip'], z['adres'],
                         ', '.join(z['produkti_imena']) or 'няма', 'да' if z['skrit'] else 'не', z['bg_iztochnik'],
                         'да' if z['nesigurna_vrazka'] else '', z['belezhka'], 'да' if z['dubli_po_zaglavie'] else '',
-                        z['data'], ' || '.join(z['drugi_zaglavia'])])
+                        z['data'], ' || '.join(z['drugi_zaglavia']), fayl(z), fayl_bg(z)])
     print(f'{len(zapisi)} записа → opis.json, opis.csv')
 
 

@@ -17,4 +17,5 @@ description: Нов или обновен документ на EcoFlow (рък�
    - `node scripts/dokumenti/prevod-pdf.mjs <id>` — проверка + PDF; при „✗" не се внася — оправи или запиши в отчета.
 6. **Внос:** `npm run import:dokumenti:server` (архив, наваксващо качване, опресняване).
 7. **Проверка:** продуктовата страница (раздел „Документи") и `/dokumenti`; PDF — GET 200 `application/pdf`.
-8. commit + push (`opis.*`, `prevodi/*.md`, `spisak.json`, скриптовете). PDF-ите не са в git.
+8. ZIP при нужда: `python scripts/dokumenti/opis.py` (колоните с файловете) → `python scripts/dokumenti/zip.py`.
+9. commit + push (`opis.*`, `prevodi/*.md`, `spisak.json`, скриптовете). PDF-ите не са в git.
