@@ -40,10 +40,14 @@ def main():
                 prichina = next((p for s, t, p in bez if s == n and (not t or (k[0] <= t[0] <= k[2] and k[1] <= t[1] <= k[3]))), None)
                 if prichina:
                     izkl.append(f'стр. {n}: {prichina}')
+        # Фигури, които детекторът не е открил (светлосиви рисунки, знаци) — добавени на ръка.
+        rachno = sum(1 for n, f in fig if not any(
+            k[0] < f[2] and f[0] < k[2] and k[1] < f[3] and f[1] < k[3] for k in kand.get(n, [])))
         redove.append({
             'документ': x['zaglavia'][0],
             'id': x['id'],
             'фигури в превода': len(fig),
+            'от тях добавени на ръка': rachno,
             'области в оригинала': oblasti,
             'във фигурите': oblasti - len(izkl),
             'изключени': len(izkl),

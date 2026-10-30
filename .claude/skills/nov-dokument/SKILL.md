@@ -14,6 +14,7 @@ description: Нов или обновен документ на EcoFlow (рък�
 5. **Превод** (няма официален BG):
    - `python scripts/dokumenti/izvleci.py` → `prevodi/spisak.json` и английският текст;
    - `<id>.en.md` (английският, който се превежда) + `<id>.md` (преводът) по `prevodi/FORMAT.md` и `rechnik.md`;
+   - фигурите: `python scripts/dokumenti/figuri.py kandidati <id>` → `figuri/<id>/pregled-p<N>.png`; всяка схема/снимка/QR/знак → `:::figure p<стр> x0,y0,x1,y1` с подпис и легенда на отпечатаното; останалите области → `<!-- bez-figura … -->` с причината; светлосивите рисунки детекторът не ги вижда — гледай страниците;
    - `node scripts/dokumenti/prevod-pdf.mjs <id>` — проверка + PDF; при „✗" не се внася — оправи или запиши в отчета.
 6. **Внос:** `npm run import:dokumenti:server` (архив, наваксващо качване, опресняване).
 7. **Проверка:** продуктовата страница (раздел „Документи") и `/dokumenti`; PDF — GET 200 `application/pdf`.
