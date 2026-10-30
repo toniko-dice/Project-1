@@ -151,6 +151,8 @@ function провери(x) {
     if (покритие < 0.9 && непокрити.length > 1) грешки.push(`.en.md покрива ${Math.round(покритие * 100)}% от английските изречения (${изр.length}); липсват напр.: ${непокрити.slice(0, 3).map((s) => `„${s.trim().replace(/\s+/g, ' ').slice(0, 80)}"`).join('; ')}`)
   }
   // 5. Фигурите — броят и областите им съвпадат с оригинала; изрязват се.
+  // Скритите (документи за продукти, които ги няма) — засега с препратки към оригинала.
+  if (x.skrit) return грешки
   const ф = spawnSync('python', [path.join(import.meta.dirname, 'figuri.py'), 'proveri', x.id, bgF, enF, '--papka', BASE], { encoding: 'utf8' })
   let фиг
   try { фиг = JSON.parse(ф.stdout.trim().split('\n').pop()) } catch { грешки.push(`figuri.py: ${(ф.stderr || ф.stdout).trim().slice(-300)}`) }
@@ -187,6 +189,8 @@ function тяло(md, фиг) {
       html += вид ? `<div class="notice notice-${вид}"><div class="notice-label">${БЛОКОВЕ[вид]}</div>${marked.parse(т)}</div>` : marked.parse(т)
     }
   }
+  // Препратките към оригинала (скритите, още без фигури) — по-бледо.
+  html = html.replace(/\((вижте фиг\.[^)]*)\)/g, '<span class="fig">($1)</span>')
   // Котви за съдържанието.
   let к = 0
   html = html.replace(/<h1>/g, () => `<h1 id="r${++к}">`)
@@ -262,7 +266,7 @@ for (const x of задачи) {
     console.log(`✗ ${x.id} — PDF-ът не се чете както трябва (код ${r.status}, стр. ${стр}, кирилица ${Math.round((кир / Math.max(1, букви.length)) * 100)}%)`)
     continue
   }
-  const ф = фигури.get(x.id)
+  const ф = фигури.get(x.id) ?? { figuri: [], kandidati: 0, izkliucheni: 0 }
   готови[x.id] = {
     bg_fail: x.bg_fail,
     original: x.original,
