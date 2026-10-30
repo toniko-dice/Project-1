@@ -131,14 +131,15 @@ def kandidati_str(page):
     return [[round(v) for v in b] for b in kand]
 
 
-def kandidati(doc_id):
+def kandidati(doc_id, oshte=()):
     x = zapis(doc_id)
     D = papka()
     out = D / 'figuri' / doc_id
     out.mkdir(parents=True, exist_ok=True)
     pdf = pdfium.PdfDocument(D / x['fail'])
     rez = {}
-    for n in x['en_stranici']:
+    # Английските страници + страниците с фигури в превода (текст като криви — извличането не го вижда).
+    for n in sorted(set(x['en_stranici']) | set(oshte)):
         page = pdf[n - 1]
         kand = kandidati_str(page)
         rez[n] = kand
@@ -160,12 +161,20 @@ def izrezhi(pdf, n, bb, out):
     page = pdf[n - 1]
     w, h = page.get_size()
     plosht = max(1, (bb[2] - bb[0]) * (bb[3] - bb[1]))
-    for r, o in obekti(page, raw.FPDF_PAGEOBJ_IMAGE):
+    # Текст върху снимката (номера, надписи) е отделен от картинката — тогава само изрязване.
+    nadpisi = any(r[0] < bb[2] and bb[0] < r[2] and r[1] < bb[3] and bb[1] < r[3]
+                  for r, _ in obekti(page, raw.FPDF_PAGEOBJ_TEXT))
+    for r, o in ([] if nadpisi else obekti(page, raw.FPDF_PAGEOBJ_IMAGE)):
         ix = max(0, min(r[2], bb[2]) - max(r[0], bb[0])) * max(0, min(r[3], bb[3]) - max(r[1], bb[1]))
         pr = max(1, (r[2] - r[0]) * (r[3] - r[1]))
         if ix >= 0.85 * plosht and ix >= 0.85 * pr:
             try:
-                im = o.get_bitmap(render=True).to_pil().convert('RGB')
+                im = o.get_bitmap(render=True).to_pil()
+                if im.mode in ('RGBA', 'LA', 'PA'):  # прозрачният фон — бял, не черен
+                    bg = Image.new('RGB', im.size, 'white')
+                    bg.paste(im.convert('RGBA'), mask=im.convert('RGBA').split()[3])
+                    im = bg
+                im = im.convert('RGB')
             except Exception:
                 break
             f = out.with_suffix('.jpg')
@@ -200,8 +209,9 @@ def proveri(doc_id, bg_md, en_md):
     bez = [(int(m[1]), int(m[2]), int(m[3]), m[4].strip()) for m in BEZ_RE.finditer(bg) if m[2]]
     bez_str = {int(m[1]) for m in BEZ_RE.finditer(bg) if not m[2]}
     kf = D / 'figuri' / doc_id / 'kandidati.json'
-    if not kf.exists():
-        kandidati(doc_id)
+    stranici = {p for p, _ in fb}
+    if not kf.exists() or stranici - {int(k) for k in json.loads(kf.read_text(encoding='utf8'))}:
+        kandidati(doc_id, stranici)
     kand = {int(k): v for k, v in json.loads(kf.read_text(encoding='utf8')).items()}
     izkl = 0
     for n, spisuk in kand.items():
@@ -218,8 +228,6 @@ def proveri(doc_id, bg_md, en_md):
         if not any(k[0] <= px <= k[2] and k[1] <= py <= k[3] for k in kand.get(p, [])):
             problemi.append(f'„bez-figura p{p} {px},{py}" не сочи фигура от оригинала')
     for p, f in fb:
-        if p not in kand:
-            problemi.append(f'фигура на стр. {p} — не е английска страница на оригинала')
         if f[2] <= f[0] or f[3] <= f[1]:
             problemi.append(f'празна област на фигура: стр. {p}, {f}')
     figuri = []
