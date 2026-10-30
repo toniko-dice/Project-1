@@ -71,6 +71,15 @@
   `backups/` > 8 GB, с `turbopackIgnore` на тези пътища (`backup.ts`,
   `Backups.ts`, `trim-image.ts`, `mail-log.ts`) — 2,4 GB. `content-server/`
   и документите не влияят.
+- **Таван на паметта на билда (30.10.2026):** `scripts/deploy.sh` пуска
+  `next build` в `systemd-run --user --scope -p MemoryMax=4G
+  -p MemorySwapMax=1G` — scope в systemd на ecoflow (паметта е делегирана:
+  `Delegate=pids memory cpu`), без sudo и без промени в `/etc`. Изисква
+  `Linger=yes` за ecoflow (`loginctl enable-linger ecoflow`, включен от
+  собственика): deploy-ът върви откачено, а без linger systemd на
+  потребителя спира със SSH връзката и убива билда. Без linger deploy-ът
+  строи без таван и пише „⚠ няма linger". 4G + 3G на сайта < 7,8 GB.
+  Вариантът със sudoers (обвивка в `/usr/local/sbin`) е отхвърлен.
 - `npm run deploy` върви **откачено** на сървъра (`setsid nohup`, `flock`,
   `NODE_OPTIONS=--max-old-space-size=4096`): прекъсната връзка не спира
   билда; логът и кодът на изхода — `deploy-log/<време>.log` и `.exit`.

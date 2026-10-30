@@ -28,7 +28,22 @@ npm run migrate
 
 step "5/7 билд (в .next-new — работещият сайт не се пипа)"
 rm -rf .next-new
-NEXT_DIST_DIR=.next-new npm run build
+# С таван на паметта: отделен scope в systemd на потребителя (без sudo;
+# паметта е делегирана на user@ — Delegate=pids memory cpu). Билд, който се
+# развихри, умира сам, вместо да изтласка сайта в swap до глобален OOM
+# (29.10.2026 — над 11 GB). Пикът е ~2,4 GB; сайтът има свои 3G.
+# Нужен е Linger=yes за ecoflow (включен 30.10.2026): deploy-ът върви
+# откачено, а без linger systemd на потребителя спира с SSH връзката и
+# убива билда. Без linger — билд без таван, с предупреждение.
+build=(env NEXT_DIST_DIR=.next-new /usr/bin/time -f 'пикова памет на билда (RSS): %M KB, време: %e s' npm run build)
+export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
+if [ "$(loginctl show-user "$(id -un)" -p Linger --value 2>/dev/null)" = yes ] && systemctl --user show-environment >/dev/null 2>&1; then
+  systemd-run --user --scope --quiet --collect -p MemoryMax=4G -p MemorySwapMax=1G \
+    --unit="ecoflow-build-$(date +%s)" "${build[@]}"
+else
+  echo "⚠ няма linger за $(id -un) — билдът е БЕЗ таван на паметта"
+  "${build[@]}"
+fi
 # Кешът на четенията (fetch-cache) остава от новия билд. Кешът на
 # оптимизатора на снимки (.next/cache/images) се пренася — иначе след всеки
 # deploy всички снимки се правят наново.
