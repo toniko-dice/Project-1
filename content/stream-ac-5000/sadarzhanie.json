@@ -12,7 +12,7 @@
     "compareAtPrice": null,
     "externalUrl": "https://dice.bg/v-nshna-ac-kuplirana-baterija-za-domashna-sistema-ecoflow-stream-ac-5000-solar-battery-5kwh-gray-black",
     "ctaLabel": "Купи сега",
-    "availability": "in-stock",
+    "availability": "out-of-stock",
     "brand": "EcoFlow",
     "sku": "80320",
     "ean": "4895251687348",
@@ -220,21 +220,21 @@
       "tabs": [
         {
           "label": "Ръчен режим",
-          "image": "stream-ac-5000-rezhim-rachen-1.webp",
+          "image": "stream-ac-5000-rezhimi-1.webp",
           "imageAlt": "STREAM AC 5000 в дома със соларни панели — ръчен режим",
           "caption": "Задайте собствени графици по час, соларен добив, тарифи и предпочитания за уредите. С батерия самозадоволяването се увеличава с до 40% спрямо системи без съхранение — средно около 1506 € спестявания годишно за домакинство.",
           "rows": []
         },
         {
           "label": "Режим „Собствено потребление“",
-          "image": "stream-ac-5000-rezhim-sobstveno-1.webp",
+          "image": "stream-ac-5000-rezhimi-2.webp",
           "imageAlt": "STREAM AC 5000 и уредите в дома — режим „Собствено потребление“",
           "caption": "Използва метеорологичната прогноза, за да реши кога да съхранява излишната слънчева енергия и кога да захранва уредите. Собственото потребление се увеличава с до 10%.",
           "rows": []
         },
         {
           "label": "Интелигентен режим+",
-          "image": "stream-ac-5000-rezhim-inteligenten-1.webp",
+          "image": "stream-ac-5000-rezhimi-3.webp",
           "imageAlt": "STREAM AC 5000 в целия дом — интелигентен режим+",
           "caption": "Изгражда енергийна стратегия по соларния добив, потреблението на дома, метеорологичната прогноза и тарифите. Използването на слънчевата енергия се увеличава с до 32%.",
           "rows": []
