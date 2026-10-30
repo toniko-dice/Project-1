@@ -6,6 +6,7 @@
  *              npm run import:all -- --only river-3-plus,river-3-ups
  *              npm run import:all -- --no-download
  *              npm run import:all -- --draft      (новите стават чернова)
+ *              npm run import:all -- --only <slug> --publikuvai   (черновата се публикува)
  *
  * Минава през всяка папка в `content/`, която съдържа `sadarzhanie.json`,
  * по азбучен ред, и вика същото ядро като `import:product`. Папките без
@@ -50,6 +51,8 @@ const dryRun = args.includes('--dry-run')
 const noDownload = args.includes('--no-download')
 // Новите продукти стават чернова вместо публикувани — когато първо трябва преглед.
 const draft = args.includes('--draft')
+// Съществуваща чернова се публикува (иначе остава чернова) — само изрично.
+const publish = args.includes('--publikuvai')
 
 const onlyArg = args.find((a) => a.startsWith('--only'))
 const onlyValue = onlyArg?.includes('=')
@@ -142,6 +145,7 @@ for (const [i, folder] of папки.entries()) {
       dryRun,
       noDownload,
       draft,
+      publish,
       // Отместено навътре, за да личи кой ред на кой продукт е.
       log: (m) => console.log(`    ${m}`),
     })

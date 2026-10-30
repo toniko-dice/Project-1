@@ -121,6 +121,11 @@ export type ImportOptions = {
   noDownload?: boolean
   /** Новият продукт става чернова, а не публикуван — `--draft`. */
   draft?: boolean
+  /**
+   * Съществуваща чернова се публикува — `--publikuvai`. Само изрично: без него
+   * черновата остава чернова (някой може да я е върнал нарочно).
+   */
+  publish?: boolean
   /** Къде отиват редовете за напредъка. Груповият внос ги отмества навътре. */
   log?: (message: string) => void
 }
@@ -1596,7 +1601,7 @@ export const importProduct = async (
       ? options.draft
         ? 'създаден като чернова'
         : 'създаден и публикуван'
-      : wasPublished
+      : wasPublished || options.publish
         ? 'обновен и публикуван'
         : 'обновен (остава чернова)'
     if (!existing) {
@@ -1622,7 +1627,7 @@ export const importProduct = async (
     по средата, след като версията вече е записана. Без съобщение.
     Админът записва с depth 0 и не го засяга; скрипт и REST — трябва изрично.
   */
-  if (existing && wasPublished) {
+  if (existing && (wasPublished || options.publish)) {
     try {
       await payload.update({
         collection: 'products',

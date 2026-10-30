@@ -49,7 +49,7 @@ if (!slug) {
   die('Липсва адрес на продукта.\n  Пример: npm run import:product delta-3-classic')
 }
 
-const FLAGS = ['--no-download', '--draft', '--dry-run']
+const FLAGS = ['--no-download', '--draft', '--dry-run', '--publikuvai']
 const непознати = process.argv.slice(2).filter((a) => a.startsWith('-') && a !== '--' && !FLAGS.includes(a))
 if (непознати.length) {
   die(`Непознат флаг: ${непознати.join(', ')}. Познати: ${FLAGS.join(', ')}`)
@@ -79,7 +79,7 @@ try {
 
 let result
 try {
-  result = await importProduct(payload, slug!, { noDownload, draft, dryRun })
+  result = await importProduct(payload, slug!, { noDownload, draft, dryRun, publish: process.argv.includes('--publikuvai') })
 } catch (err) {
   if (err instanceof ImportError) die(err.message)
   throw err
