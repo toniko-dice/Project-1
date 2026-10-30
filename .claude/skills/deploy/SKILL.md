@@ -13,7 +13,7 @@ description: Качване на нов код на сървъра (npm run depl
 4. **Успех:** „Сайтът отговаря (200)" или „Сайтът е заключен — … /vhod (307)" + продукт 200/301/307 + последният commit.
 5. **Ако спре** — старата версия работи (билдът е в `.next-new`). Срещани причини:
    - `Module not found … font/google` — временен проблем с Google Fonts → пусни пак;
-   - `Killed` — памет: предупреждение „The file pattern … matches N files" (нов `path.join(process.cwd(), …)` без `turbopackIgnore`); `free -h`;
+   - `Killed` — памет: предупреждение „The file pattern … matches N files" (нов `path.join(process.cwd(), …)` без `turbopackIgnore`) — или, без предупреждение, нов `path.join(<папка>, <шаблон на име>)` без `turbopackIgnore` (`.claude/rules/server-i-deploy.md`); `journalctl -k | grep -i oom` ("Free swap = 12kB" = swap-ът е изчерпан); `free -h`;
    - „Друг deploy още върви" — `flock`; изчакай.
 6. **Връщане назад** (root): `cd /srv/ecoflow-bg && mv .next .next-bad && mv .next-old .next && systemctl restart ecoflow`.
 7. **Без deploy** при задачи само за документация (`.md`).

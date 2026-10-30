@@ -60,6 +60,17 @@
   в изхода на билда = нов такъв път** — слага се коментарът в самия
   `path.join` (на променливата не действа). Swap на сървъра: 1 GB + 4 GB
   (`/swapfile2`).
+- **29.10.2026 — пак OOM, без предупреждение.** Билдът стигаше над 11 GB
+  (7,1 GB RAM + 4,3 GB swap; в `journalctl -k` „Free swap = 12kB" — swap-ът
+  Е изчерпан; малкият swap след това е, защото убитият процес го освобождава).
+  Причината: `path.join(dir, `arhiv-${stamp}.zip`)`, `path.join(dir,
+  `${stem}-trimmed-${w}x${h}.webp`)` и `mail-log` — с папка-параметър или
+  променлива Turbopack прави шаблон от името и ЧЕТЕ всеки съвпадащ файл в
+  проекта (12 архива × 1,37 GB); `outputFileTracingExcludes` ги маха чак
+  след това. Измерено на копие (`/usr/bin/time -v`): без данни 2,4 GB, с
+  `backups/` > 8 GB, с `turbopackIgnore` на тези пътища (`backup.ts`,
+  `Backups.ts`, `trim-image.ts`, `mail-log.ts`) — 2,4 GB. `content-server/`
+  и документите не влияят.
 - `npm run deploy` върви **откачено** на сървъра (`setsid nohup`, `flock`,
   `NODE_OPTIONS=--max-old-space-size=4096`): прекъсната връзка не спира
   билда; логът и кодът на изхода — `deploy-log/<време>.log` и `.exit`.

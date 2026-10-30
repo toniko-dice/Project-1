@@ -149,7 +149,7 @@ export const Backups: CollectionConfig = {
             trigger: 'ръчно',
           })
 
-          await stageRestore(path.join(STORE_DIR, doc.filename), {
+          await stageRestore(path.join(/* turbopackIgnore: true */ STORE_DIR, doc.filename), {
             id: doc.id,
             label: doc.label,
           })

@@ -13,7 +13,7 @@ import type { EmailAdapter, SendEmailOptions } from 'payload'
  * Включва се с `EMAIL_MODE=log` в `.env`, или само по себе си, когато няма
  * `SMTP_HOST`. Папката е извън git.
  */
-export const MAIL_LOG_DIR = path.resolve(process.cwd(), 'mail-log')
+export const MAIL_LOG_DIR = path.resolve(/* turbopackIgnore: true */ process.cwd(), 'mail-log')
 
 const адреси = (v: SendEmailOptions['to']): string[] =>
   (Array.isArray(v) ? v : v ? [v] : []).map((a) => (typeof a === 'string' ? a : `${a.name ?? ''} <${a.address}>`.trim()))
@@ -26,7 +26,7 @@ export const mailLogAdapter =
     defaultFromAddress: from.address,
     sendEmail: async (message) => {
       const stamp = new Date().toISOString().replace(/[:.]/g, '-')
-      const base = path.join(MAIL_LOG_DIR, stamp)
+      const base = path.join(/* turbopackIgnore: true */ MAIL_LOG_DIR, stamp)
       await mkdir(MAIL_LOG_DIR, { recursive: true })
       const meta = {
         from: message.from ?? `${from.name} <${from.address}>`,

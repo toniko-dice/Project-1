@@ -106,8 +106,8 @@ export const buildArchive = async (
 
   const stamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19)
   const filename = `arhiv-${stamp}.zip`
-  const filePath = path.join(BUILD_DIR, filename)
-  const tmpDb = path.join(BUILD_DIR, `.snapshot-${stamp}.db`)
+  const filePath = path.join(/* turbopackIgnore: true */ BUILD_DIR, filename)
+  const tmpDb = path.join(/* turbopackIgnore: true */ BUILD_DIR, `.snapshot-${stamp}.db`)
 
   await snapshotDatabase(payload, tmpDb)
 
@@ -171,14 +171,14 @@ export const stageRestore = async (
 
   await extract(archivePath, { dir: STAGING_DIR })
 
-  const stagedDb = path.join(STAGING_DIR, 'ecoflow.db')
+  const stagedDb = path.join(/* turbopackIgnore: true */ STAGING_DIR, 'ecoflow.db')
   if (!(await exists(stagedDb))) {
     await fs.rm(STAGING_DIR, { recursive: true, force: true })
     throw new Error('Архивът не съдържа файл на базата — възстановяването е отменено.')
   }
 
   await fs.writeFile(
-    path.join(STAGING_DIR, 'restore.json'),
+    path.join(/* turbopackIgnore: true */ STAGING_DIR, 'restore.json'),
     JSON.stringify(
       {
         подготвен: new Date().toISOString(),
@@ -242,7 +242,7 @@ export const pruneOldBackups = async (payload: Payload): Promise<number> => {
 
   for (const doc of extra) {
     if (doc.filename) {
-      const exists = await fs.access(path.join(STORE_DIR, doc.filename)).then(() => true, () => false)
+      const exists = await fs.access(path.join(/* turbopackIgnore: true */ STORE_DIR, doc.filename)).then(() => true, () => false)
       if (!exists) payload.logger.warn(`Архив № ${doc.id} („${doc.label}"): файлът ${doc.filename} липсва — записът се трие`)
     }
     try {

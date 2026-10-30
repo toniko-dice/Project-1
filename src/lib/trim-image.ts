@@ -97,7 +97,7 @@ export const makeTrimmed = async (
     .toBuffer({ resolveWithObject: true })
 
   const filename = trimmedName(stem, out.width, out.height)
-  await fs.writeFile(path.join(dir, filename), data)
+  await fs.writeFile(path.join(/* turbopackIgnore: true */ dir, filename), data)
 
   // Малкото копие — от готовия вариант, не от оригинала: рамката е същата.
   const { data: sm, info: so } = await sharp(data)
@@ -105,7 +105,7 @@ export const makeTrimmed = async (
     .webp({ quality: 80, alphaQuality: 90 })
     .toBuffer({ resolveWithObject: true })
   const small = trimmedName(stem, so.width, so.height)
-  if (small !== filename) await fs.writeFile(path.join(dir, small), sm)
+  if (small !== filename) await fs.writeFile(path.join(/* turbopackIgnore: true */ dir, small), sm)
 
   return { filename, width: out.width, height: out.height, small }
 }
@@ -114,9 +114,13 @@ export const makeTrimmed = async (
  * Трие файла на вариант. Папката идва като параметър нарочно: с
  * `path.join(<константа>, name)` в `Media.ts` Turbopack приема, че кодът
  * чете цялата `media/` (16 806 файла), и го пише като предупреждение при билд.
+ *
+ * `turbopackIgnore` трябва и тук: и с папка-параметър Turbopack прави шаблон
+ * от името (`*-trimmed-*x*.webp`) и чете ВСЕКИ такъв файл в проекта, без
+ * предупреждение (29.10.2026, заедно с архивите в `backups/` — билдът убит).
  */
 export const removeTrimmedFile = async (dir: string, name: string | null | undefined) => {
-  if (name) await fs.rm(path.join(dir, name), { force: true })
+  if (name) await fs.rm(path.join(/* turbopackIgnore: true */ dir, name), { force: true })
 }
 
 /** Празното поле — за запис, когато вариант няма (иначе `update` би оставил стария). */
