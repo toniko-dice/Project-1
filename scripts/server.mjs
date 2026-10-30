@@ -211,6 +211,26 @@ const КОМАНДИ = {
     const r = наСървъра(`cd ${q(DIR)} && CONTENT_ROOT=content-server npm run import:all -- --only ${q(slug)} ${арг.filter((a) => a.startsWith('-')).map(q).join(' ')}`)
     if (r.status !== 0) стоп('Вносът на сървъра не мина.')
     опресни()
+    /*
+      Вносът на сървъра дава смислени имена на свалените снимки и сменя
+      имената в content-server/<slug>/ (JSON-ът, prevod-nadpisi.md …). Без
+      връщане следващият внос качва пак локалния JSON със старите имена —
+      снимките не се намират, свалят се и се качват в Медия втори път (с „-2“;
+      STREAM AC 5000, 30.10.2026). Затова текстовите файлове се връщат локално.
+    */
+    if (!арг.includes('--dry-run')) {
+      await new Promise((resolve, reject) => {
+        const ssh = spawn(SSH, ['-o', 'BatchMode=yes', SERVER,
+          `cd ${q(`${DIR}/content-server`)} && tar -c -f - $(ls -d ${q(slug)}/*.json ${q(slug)}/*.md ${q(slug)}/*.txt 2>/dev/null)`], {
+          stdio: ['ignore', 'pipe', 'inherit'],
+        })
+        const tar = spawn(TAR, ['-x', '-f', '-', '-C', path.join(ROOT, 'content')], { stdio: ['pipe', 'inherit', 'inherit'] })
+        ssh.stdout.pipe(tar.stdin)
+        tar.on('close', (code) => (code === 0 ? resolve() : reject(new Error(`връщането спря (код ${code})`))))
+        ssh.on('error', reject)
+      })
+      console.log(`← content/${slug}/: JSON-ът и текстовете — от сървъра (с новите имена на снимките)`)
+    }
   },
 
   async 'import-page'() {

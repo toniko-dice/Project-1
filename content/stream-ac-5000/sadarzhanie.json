@@ -1,0 +1,732 @@
+{
+  "_bележка": "Съдържание за внасяне. Пуска се с: npm run import:product:server stream-ac-5000. Снимките се свалят по линковете в _svali_snimki (галерия и секции); преведените инфографики се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "eu.ecoflow.com/products/stream-ac-solar-battery, прочетено на 29.10.2026 (desktop снимки _pc_). Цена, SKU и наличност — dice.bg (XML). Спецификациите са 1:1 от „Specs“ на EcoFlow.",
+  "produkt": {
+    "title": "EcoFlow STREAM AC 5000",
+    "slug": "stream-ac-5000",
+    "categorySlug": "stream-seriya",
+    "productType": "hero",
+    "tagline": "AC соларна батерия за дома · 5 kWh LFP, до 3000W изход, разширяема до 90 kWh",
+    "badge": "none",
+    "price": 1599,
+    "compareAtPrice": null,
+    "externalUrl": "https://dice.bg/v-nshna-ac-kuplirana-baterija-za-domashna-sistema-ecoflow-stream-ac-5000-solar-battery-5kwh-gray-black",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "80320",
+    "ean": "4895251687348",
+    "description": "AC свързана соларна батерия за дома: 5024 Wh LFP (10 000 цикъла, 10 години гаранция), до 3000W AC изход за мощни уреди като сушилня или кана, 800W към мрежата. Работи със съществуващата ви соларна система и с умни електромери Shelly, HomeWizard, Everhome, Tibber и Homey. Разширява се с до 2 батерии STREAM Expansion Battery 5000 до 15 kWh, а системата — до 90 kWh. С 40% по-малко място на пода, IP65, под 30 dB, UPS 0 ms, локален режим без интернет и управление в приложението EcoFlow.",
+    "highlights": [
+      {
+        "title": "5 kWh, 100% използваем капацитет",
+        "text": "Разширява се до 15 kWh на устройство и до 90 kWh в система."
+      },
+      {
+        "title": "До 3000W AC изход",
+        "text": "За мощни уреди — сушилня, пералня, кана; 800W към мрежата."
+      },
+      {
+        "title": "Работи със съществуващата ви соларна система",
+        "text": "И с умни електромери Shelly, HomeWizard, Everhome, Tibber, Homey."
+      },
+      {
+        "title": "LFP, 10 000 цикъла, 10 години гаранция",
+        "text": "До 15 години живот на батерията."
+      },
+      {
+        "title": "40% по-малко място на пода",
+        "text": "Вградена дръжка; за вътре и навън, IP65."
+      },
+      {
+        "title": "Локален режим и UPS 0 ms",
+        "text": "Работи и без интернет; превключва без прекъсване при спиране на тока."
+      }
+    ],
+    "metaTitle": "EcoFlow STREAM AC 5000 — соларна батерия за дома 5 kWh",
+    "metaDescription": "Соларна батерия EcoFlow STREAM AC 5000: 5 kWh LFP, до 3000W изход, 800W към мрежата, разширяема до 90 kWh, работи със съществуваща соларна система."
+  },
+  "galeriya": [
+    {
+      "file": "stream-ac-5000-1.webp",
+      "alt": "EcoFlow STREAM AC 5000"
+    },
+    {
+      "file": "stream-ac-5000-2.webp",
+      "alt": "EcoFlow STREAM AC 5000 — под ъгъл"
+    },
+    {
+      "file": "stream-ac-5000-3.webp",
+      "alt": "EcoFlow STREAM AC 5000 — отстрани"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "",
+      "body": "",
+      "image": "stream-ac-5000-pregled-1.webp",
+      "imageAlt": "EcoFlow STREAM AC 5000 до пералня — 15 години живот на батерията, 800W/3000W AC изход, 40% по-малко място"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Спестявания",
+      "heading": "",
+      "body": "",
+      "image": "stream-ac-5000-spestyavaniya-1.webp",
+      "imageAlt": "До 7068 kWh годишно"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Съвместимост",
+      "heading": "Без да сменяте съществуващата си соларна система",
+      "body": "Работи със съществуващи фотоволтаични системи и с водещи умни електромери на други производители, включително Shelly, HomeWizard, Everhome, Tibber и Homey.",
+      "image": "stream-ac-5000-savmestimost-1.webp",
+      "imageAlt": "Соларни панели на покрива и STREAM AC 5000 до разпределителното табло; логата Nest, tibber, Homey, ecobee, Shelly, everHome"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Акценти",
+      "heading": "Накратко",
+      "body": "",
+      "image": "stream-ac-5000-akcenti-1-2.webp",
+      "imageAlt": "До 3000W изход, 5–90 kWh модулно, OASIS 3.0, 15 години живот, 10 години гаранция, 40% по-малко място, UPS 0 ms, локален режим, 2 предпазни клапана"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Мощност",
+      "heading": "Към мрежата 800W | Извън мрежата 2500W",
+      "subheading": "Повече мощност, повече спестявания",
+      "subheadingPosition": "above",
+      "body": "Захранва мощни домакински уреди — дори съдомиялна или пералня.",
+      "image": "stream-ac-5000-moshtnost-1.webp",
+      "imageAlt": "STREAM AC 5000 захранва сушилня — изходна мощност 3000W и 800W"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "layout": "tabs-top",
+      "heading": "Уреди, които захранва",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Хладилник",
+          "image": "stream-ac-5000-uredi-koito-zahranva-1-2.webp",
+          "imageAlt": "Хладилник — 150 W",
+          "caption": "Хладилник — 150 W",
+          "rows": []
+        },
+        {
+          "label": "Пералня",
+          "image": "stream-ac-5000-uredi-koito-zahranva-2-2.webp",
+          "imageAlt": "Пералня — 2000 W",
+          "caption": "Пералня — 2000 W",
+          "rows": []
+        },
+        {
+          "label": "Сушилня",
+          "image": "stream-ac-5000-uredi-koito-zahranva-3-2.webp",
+          "imageAlt": "Сушилня — 2500 W",
+          "caption": "Сушилня — 2500 W",
+          "rows": []
+        },
+        {
+          "label": "Климатик",
+          "image": "stream-ac-5000-uredi-koito-zahranva-4-2.webp",
+          "imageAlt": "Климатик — 1500 W",
+          "caption": "Климатик — 1500 W",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Капацитет",
+      "heading": "5 kWh съхранение със 100% използваем капацитет",
+      "body": "Без загуби. Точно колкото трябва. От сутрин до вечер покрива изцяло енергийните ви нужди. Разширява се до 90 kWh — лесно като подреждане на строителни блокчета.",
+      "image": "stream-ac-5000-kapacitet-1.webp",
+      "imageAlt": "5 kWh основа — 90 kWh при разширяване"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Безопасност",
+      "heading": "Безопасна и надеждна",
+      "body": "",
+      "image": "stream-ac-5000-bezopasnost-1.webp",
+      "imageAlt": "EcoFlow — 140 държави и региона, 1524 патента, над 6 милиона потребители; 10 000 цикъла; UPS 0 ms; 22 NTC сензора; алуминиев корпус; 2 предпазни клапана"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Проектирана за безопасност",
+      "body": "Активна защита срещу претоварване.",
+      "image": "stream-ac-5000-proektirana-za-bezopasnost-1.webp",
+      "imageAlt": "Умно отчитане, динамично регулиране, хардуерна защита"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "15 нива на защита",
+      "body": "",
+      "image": "stream-ac-5000-15-niva-na-zashtita-1-2.webp",
+      "imageAlt": "Разглобен изглед на STREAM AC 5000 с 15-те нива на защита"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Монтаж",
+      "heading": "Лесен монтаж",
+      "subheading": "Компактна. Поставете я, където има място.",
+      "subheadingPosition": "below",
+      "body": "",
+      "image": "stream-ac-5000-montazh-1.webp",
+      "imageAlt": "Стъпка 1: поставяне; 40% по-малко място; стъпка 2: свързване; стъпка 3: приложението"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Приложение",
+      "heading": "EcoFlow EcoBot — вашият енергиен партньор за повече спестявания",
+      "subheading": "№ 1 в света приложение за умно домашно съхранение на енергия по брой регистрирани потребители¹",
+      "subheadingPosition": "above",
+      "body": "OASIS 3.0: проактивна, самообучаваща се интелигентна система.\n\n**01 ПИТАЙТЕ — Задайте целта си.** Не са нужни технически познания. Просто кажете какво искате.\n\n**02 ПРОГНОЗА — Планирайте пътя.** Препоръки, съобразени с вашето потребление на енергия.\n\n**03 ДЕЙСТВИЕ — Вие одобрявате, ние изпълняваме.** След вашето потвърждение EcoBot поема тежката част.",
+      "image": "stream-ac-5000-prilozhenie-1-2.png",
+      "imageAlt": "Приложението EcoFlow с EcoBot на телефон"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Режими",
+      "layout": "tabs-top",
+      "heading": "Вашата енергия, по вашия начин",
+      "intro": "Система за управление на енергията в целия дом.",
+      "tabs": [
+        {
+          "label": "Ръчен режим",
+          "image": "stream-ac-5000-rezhim-rachen-1.webp",
+          "imageAlt": "STREAM AC 5000 в дома със соларни панели — ръчен режим",
+          "caption": "Задайте собствени графици по час, соларен добив, тарифи и предпочитания за уредите. С батерия самозадоволяването се увеличава с до 40% спрямо системи без съхранение — средно около 1506 € спестявания годишно за домакинство.",
+          "rows": []
+        },
+        {
+          "label": "Режим „Собствено потребление“",
+          "image": "stream-ac-5000-rezhim-sobstveno-1.webp",
+          "imageAlt": "STREAM AC 5000 и уредите в дома — режим „Собствено потребление“",
+          "caption": "Използва метеорологичната прогноза, за да реши кога да съхранява излишната слънчева енергия и кога да захранва уредите. Собственото потребление се увеличава с до 10%.",
+          "rows": []
+        },
+        {
+          "label": "Интелигентен режим+",
+          "image": "stream-ac-5000-rezhim-inteligenten-1.webp",
+          "imageAlt": "STREAM AC 5000 в целия дом — интелигентен режим+",
+          "caption": "Изгражда енергийна стратегия по соларния добив, потреблението на дома, метеорологичната прогноза и тарифите. Използването на слънчевата енергия се увеличава с до 32%.",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Следете спестяванията си всеки ден",
+      "body": "",
+      "image": "stream-ac-5000-sledete-spestyavaniyata-si-vseki-1-2.webp",
+      "imageAlt": "Ясно енергийно табло в приложението; локален режим — работи и без интернет"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията — STREAM AC 5000",
+      "items": [
+        {
+          "name": "STREAM AC 5000",
+          "qty": 1,
+          "image": "stream-ac-5000-kakvo-ima-v-kutiyata-1-2.webp",
+          "imageAlt": "STREAM AC 5000"
+        },
+        {
+          "name": "Кабел за мрежата",
+          "qty": 1,
+          "image": "stream-ac-5000-kakvo-ima-v-kutiyata-2-2.png",
+          "imageAlt": "Кабел за мрежата"
+        },
+        {
+          "name": "Ръководство за монтаж",
+          "qty": 1,
+          "image": "stream-ac-5000-kakvo-ima-v-kutiyata-3-2.webp",
+          "imageAlt": "Ръководство за монтаж"
+        },
+        {
+          "name": "Гаранционна карта",
+          "qty": 1,
+          "image": "stream-ac-5000-kakvo-ima-v-kutiyata-4-2.webp",
+          "imageAlt": "Гаранционна карта"
+        },
+        {
+          "name": "Скоба за стена",
+          "qty": 1,
+          "image": "stream-ac-5000-kakvo-ima-v-kutiyata-5-2.webp",
+          "imageAlt": "Скоба за стена"
+        },
+        {
+          "name": "Винт M6×14",
+          "qty": 1,
+          "image": "stream-ac-5000-kakvo-ima-v-kutiyata-6-2.png",
+          "imageAlt": "Винт M6×14"
+        },
+        {
+          "name": "Дюбел",
+          "qty": 2,
+          "image": "stream-ac-5000-kakvo-ima-v-kutiyata-7-2.png",
+          "imageAlt": "Дюбел"
+        },
+        {
+          "name": "Винт ST5.5×3.2",
+          "qty": 2,
+          "image": "stream-ac-5000-kakvo-ima-v-kutiyata-8-2.png",
+          "imageAlt": "Винт ST5.5×3.2"
+        }
+      ],
+      "_iztochnik": "„What’s in the Box — EcoFlow STREAM AC 5000“ (основният вариант, без допълнителни батерии)."
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "faqBlock",
+      "anchorLabel": "Въпроси",
+      "heading": "Често задавани въпроси",
+      "items": [
+        {
+          "question": "Каква е гаранцията на STREAM 5000 / STREAM AC 5000?",
+          "answer": "STREAM 5000 / STREAM AC 5000 са с 10 години гаранция. Повече информация за гаранцията — на официалния сайт."
+        },
+        {
+          "question": "Какво съдържа основният вариант на STREAM AC 5000?",
+          "answer": "Основният вариант на STREAM AC 5000 включва основното устройство STREAM AC 5000, мрежов кабел, скоба за стена, винт M6×14, дюбели (×2) и винтове ST5.5×32 (×2)."
+        },
+        {
+          "question": "Каква е разликата между STREAM 5000 и STREAM AC 5000?",
+          "answer": "И двата модела са съвместими с инвертори на други производители. В сравнение със STREAM AC 5000, STREAM 5000 има още четири соларни входа с максимална соларна мощност до 5000W."
+        },
+        {
+          "question": "Каква батерия използва STREAM 5000 / STREAM AC 5000? Какъв е животът ѝ?",
+          "answer": "STREAM 5000 / STREAM AC 5000 използват литиево-железофосфатни (LiFePO₄) клетки с живот 10 000 цикъла / 60% запазен капацитет: след 10 000 пълни цикъла на зареждане и разреждане капацитетът на клетките е над 60% от фабричния номинален капацитет.\n\nЗа батерия 5 kWh при около 1 пълен цикъл на ден:\n10 000 цикъла ≈ 27 години живот."
+        },
+        {
+          "question": "Какви са размерите и теглото на STREAM AC 5000?",
+          "answer": "Размерите на STREAM AC 5000 са 295 × 489 × 298 мм, а теглото — 44,6 (±0,5) кг (само устройството)."
+        },
+        {
+          "question": "Каква е максималната мощност на зареждане на батерията? Колко най-бързо се зарежда напълно?",
+          "answer": "Максималната мощност на зареждане на батерията е 2500W. Задайте ръчна задача за зареждане с максимална мощност — при идеални условия батерията се зарежда напълно за около 2,5 часа."
+        },
+        {
+          "question": "Каква е максималната изходна мощност на STREAM AC 5000 в мрежата и извън мрежата?",
+          "answer": "STREAM AC 5000 има два сценария на работа — свързан към мрежата и извън мрежата — и два изхода: порт към мрежата и AC контакт.\n\ni. Свързан към мрежата (към домашната мрежа)\nПри едно устройство максималната изходна мощност на порта към мрежата е 2500W. С разширителна батерия тя се увеличава до 3000W.\nКогато системата е свързана към мрежата, устройството автоматично ограничава подаваната към мрежата мощност според ограничението в местните разпоредби.\nПри работа в мрежата максималното натоварване на AC контакта на едно устройство е 3600W в байпас режим.\n\nii. Извън мрежата (без връзка с домашната мрежа)\nИзвън мрежата максималната изходна мощност на AC контакта на едно устройство като аварийно захранване е 2500W. С разширителна батерия тя се увеличава до 3000W."
+        },
+        {
+          "question": "Каква е максималната изходна мощност към мрежата на STREAM 5000 / STREAM AC 5000 в система?",
+          "answer": "Когато STREAM 5000 е свързан с фотоволтаици или работи в паралел с разширителна батерия, максималната мощност към мрежата е 3000W. Когато STREAM AC 5000 работи в паралел с разширителна батерия, максималната мощност към мрежата също е 3000W.\n\nЕдна система може да включва до шест основни устройства STREAM AC 5000 / STREAM 5000 с обща максимална изходна мощност 18 kW.\n\nНачалните фабрични настройки ограничават изходната мощност на устройствата в системата до горната граница по местните разпоредби."
+        },
+        {
+          "question": "Какъв е капацитетът на STREAM 5000 / STREAM AC 5000?",
+          "answer": "STREAM 5000 е с капацитет 5024 Wh на устройство. Поддържа разширяване чрез подреждане една върху друга с EcoFlow STREAM Expansion Battery 5000. Един STREAM AC 5000 може да се разшири с до 2 допълнителни батерии — до 15 kWh (варианти 5 kWh / 10 kWh / 15 kWh).\n\nЕдна система поддържа до 6 устройства STREAM 5000 и STREAM AC 5000, с максимален капацитет до 90 kWh."
+        },
+        {
+          "question": "Какви са предимствата на STREAM AC 5000 пред предишното поколение балконски системи EcoFlow?",
+          "answer": "В сравнение с предишното поколение балконски системи за съхранение EcoFlow STREAM 5000 има явни подобрения:\n\n1. По-голям капацитет: 5024 Wh на устройство — няколко пъти повече от предишното поколение. Поддържа паралелно разширяване с до 2 допълнителни батерии — до 15 kWh на основно устройство; до шест основни устройства в една система — до 90 kWh;\n3. По-висока мощност към мрежата: максимумът при един STREAM 5000 е 3000W, а при един STREAM AC 5000 — 2500W, като с допълнителна батерия стига 3000W;\n4. Достатъчна мощност извън мрежата: AC контактът е с максимален изход 3600W — за мощни уреди;\n5. Гъвкаво разширяване: подреждане една върху друга — едно основно устройство с 2 допълнителни батерии;\n6. Повече интелигентност: Интелигентен режим и намаляване на пиковете (Peak Shaving) — по-лесно управление на енергията."
+        },
+        {
+          "question": "Как работи локалният режим (Local Mode) на STREAM 5000 / STREAM AC 5000?",
+          "answer": "Локалният режим е допълнителен начин на свързване (изисква умен електромер): когато е включен, приложението и устройството комуникират само през домашната локална мрежа, системата работи за собствено потребление и може да работи с аксесоари и електромери, които поддържат локален достъп. Данните не се качват в облака и остават изцяло локални — по-добра защита на личните ви данни и сигурността."
+        },
+        {
+          "question": "Как работи Интелигентният режим на системата STREAM? Каква е ползата?",
+          "answer": "Интелигентният режим комбинира метеорологичната прогноза, навиците ви на потребление, състоянието на устройствата и динамичните цени или тарифите по часови зони и автоматично свежда разходите за ток до минимум — разрежда при високи цени и зарежда при ниски. Основните предимства:\n\n- При динамични цени на тока разходите автоматично падат до минимум, без да променяте навиците си;\n- При тарифи по часови зони, в сравнение с ръчните задачи по час, интелигентният режим сам задава зареждането и разреждането според метеорологичната прогноза и очаквания соларен добив."
+        },
+        {
+          "question": "Какво е режимът за намаляване на пиковете (Peak Shaving) на системата STREAM и как работи?",
+          "answer": "В часовете с пиково потребление, когато домът тегли от мрежата повече от зададения лимит, системата автоматично разрежда батерията според зададения заряд (SOC) за намаляване на пиковете и така свежда пиковата мощност от мрежата. Работи заедно с режимите „Собствено потребление“ и AI, без да превключвате отделно."
+        },
+        {
+          "question": "Каква е ползата от режима за намаляване на пиковете?",
+          "answer": "Спестяване: там, където сметката зависи от пиковата мощност или капацитета, по-ниските месечни / годишни пикове могат да намалят таксите за мощност и договорения капацитет.\n\nПовече спокойствие: при едновременна работа на мощни уреди (напр. зареждане на електромобил, термопомпа и фурна) намалява натоварването на главната линия и риска от изключване на предпазителя.\n\nПовече гъвкавост: позволява повече електроуреди в дома, без да увеличавате договорената мощност или да променяте електрическата инсталация.\n\nПовече удобство: работи автоматично след задаване на лимита и периода — без честа ръчна намеса."
+        },
+        {
+          "question": "Мога ли да ползвам STREAM 5000 / STREAM AC 5000 при спиране на тока?",
+          "answer": "При спиране на тока STREAM 5000 веднага превключва в режим извън мрежата: портът към мрежата спира да подава, а устройството захранва уредите, включени в AC контакта.\n\nУсловия:\n1. В батерията трябва да има достатъчно заряд;\n2. Уредите трябва да са включени в AC контакта на STREAM 5000.\n\nЗабележки:\n- Портът към мрежата се изключва веднага щом засече спиране на тока и не може да се ползва за захранване извън мрежата;\n- Не свързвайте AC контакта на STREAM 5000 към мрежата;\n- Реалното време на работа зависи от мощността на уредите, заряда на батерията и соларната мощност.\n\nАко в района ви токът спира често, препоръчваме батерията да е винаги заредена — така превключването към резервно захранване е без прекъсване."
+        },
+        {
+          "question": "Защитени ли са STREAM 5000 и STREAM AC 5000 от вода и прах?",
+          "answer": "STREAM 5000 / STREAM AC 5000 са с клас на защита IP65 и могат да се ползват вътре и навън. Препоръчва се монтаж на проветриво, хладно и сенчесто място."
+        },
+        {
+          "question": "Кои умни електромери са съвместими със STREAM 5000 / STREAM AC 5000?",
+          "answer": "В момента — EcoFlow Smart Meter и EcoFlow & Shelly Smart Meter (EU и UK)."
+        },
+        {
+          "question": "Съвместим ли е STREAM 5000 / STREAM AC 5000 с PowerStream?",
+          "answer": "STREAM 5000 не може да работи с PowerStream в една и съща система.\n- STREAM 5000 и PowerStream са серии с различно предназначение, различна логика на управление на енергията и различни комуникационни протоколи;\n- В момента не могат да се добавят в една система в приложението EcoFlow за общо управление.\n\nPowerStream обаче може да се ползва като инвертор на друг производител — свързан директно към AC OUTLET или към домашната инсталация: първо захранва уредите, излишъкът зарежда батерията, а след това се подава към мрежата."
+        },
+        {
+          "question": "Съвместим ли е EcoFlow STREAM 5000 / STREAM AC 5000 с инвертори на други производители? Как?",
+          "answer": "Инверторите на други производители се свързват директно към AC OUTLET на STREAM 5000 / STREAM AC 5000 (при свързване към AC Outlet изходната мощност на инвертора не трябва да надвишава 3680W) или директно към домашната инсталация.\n\nРазпределението на енергията между инвертора и EcoFlow STREAM 5000 / STREAM AC 5000:\nПърви приоритет: захранване на уредите в дома\nВтори приоритет: зареждане на батерията\nТрети приоритет: подаване на излишъка към мрежата\n\nЗабележка: извън мрежата инверторът е свързан директно към AC OUTLET. Ако изходната мощност на инвертора надвиши 3000W, входът от него спира."
+        },
+        {
+          "question": "Как да ползвам устройството plug & play?",
+          "answer": "При свързване към мрежата STREAM 5000 автоматично ограничава изходната си мощност до максимално позволената по местните разпоредби. В Германия системите в рамките на опростеното присъединяване трябва да се регистрират в Marktstammdatenregister и да се уведоми местният мрежов оператор."
+        },
+        {
+          "question": "Може ли STREAM AC 5000 да се разширява в паралел?",
+          "answer": "STREAM AC 5000 се разширява чрез подреждане с EcoFlow STREAM Expansion Battery 5000. Един STREAM 5000 може да се разшири с до 2 допълнителни батерии — до 15 kWh (варианти 5 kWh / 10 kWh / 15 kWh). Една система поддържа до 6 устройства STREAM 5000 и STREAM AC 5000, с максимален капацитет до 90 kWh."
+        },
+        {
+          "question": "Могат ли основните устройства STREAM AC 5000 / STREAM 5000 да работят в паралел?",
+          "answer": "1. STREAM 5000 / STREAM AC 5000: пряко физическо свързване между основните устройства засега не се поддържа, но устройствата могат да са в една система чрез разпределено свързване — така енергията се разпределя и между тях.\n2. STREAM AC 5000 може да се подрежда с EcoFlow STREAM Expansion Battery 5000 и Expansion Battery 3000. Един STREAM AC 5000 може да се разшири с до 2 допълнителни батерии — до 15 kWh (варианти 5 kWh / 8 kWh / 10 kWh / 11 kWh / 13 kWh / 15 kWh).\n\nЕдна система поддържа до 6 устройства STREAM 5000 и STREAM AC 5000, с максимален капацитет до 90 kWh."
+        },
+        {
+          "question": "Как се подрежда и ползва STREAM 5000 / STREAM AC 5000 с EcoFlow STREAM Expansion Battery 5000?",
+          "answer": "На дъното на STREAM 5000 / STREAM AC 5000 има порт за паралелно свързване, а EcoFlow STREAM Expansion Battery 5000 има такъв порт и отгоре, и отдолу. Паралелното свързване става, като устройствата се подредят едно върху друго."
+        }
+      ]
+    },
+    {
+      "blockType": "footnotes",
+      "items": [
+        {
+          "text": "По брой регистрирани потребители на приложението към 31 март 2026 г. Източник: Frost & Sullivan, 2025 Global Smart Home Energy Storage System App Market Research Report."
+        },
+        {
+          "text": "Функцията „Умно отчитане / динамично регулиране“ се очаква да бъде пусната през септември 2026 г."
+        },
+        {
+          "text": "Освен ако не е посочено друго, всички данни за работата са от изпитания в лабораториите на EcoFlow при контролирани условия и са само за справка. Реалните резултати зависят от условията на употреба, състоянието на устройството, версията на софтуера и други фактори."
+        },
+        {
+          "text": "Освен ако не е посочено друго, снимките и съдържанието на екраните са само за справка. Реалният вид, цвят, размер и съдържание на екрана може да се различават."
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Батерия и мощност",
+      "rows": [
+        {
+          "label": "Капацитет",
+          "value": "5024 Wh"
+        },
+        {
+          "label": "Живот",
+          "value": "10 000 цикъла"
+        },
+        {
+          "label": "Макс. мощност на зареждане на батерийната система",
+          "value": "3000 W"
+        },
+        {
+          "label": "Макс. мощност на разреждане на батерийната система",
+          "value": "3000 W"
+        },
+        {
+          "label": "Макс. мощност на зареждане на батерията на основното устройство",
+          "value": "2500 W"
+        },
+        {
+          "label": "Макс. мощност на разреждане на батерията на основното устройство",
+          "value": "2500 W"
+        },
+        {
+          "label": "AC зареждане",
+          "value": "3000 W"
+        },
+        {
+          "label": "AC изход — извън мрежата",
+          "value": "3000 W"
+        },
+        {
+          "label": "AC изход — към мрежата",
+          "value": "800 W / 3000 W"
+        },
+        {
+          "label": "Максимална мощност на уредите",
+          "value": "3600 W"
+        }
+      ]
+    },
+    {
+      "groupLabel": "Общи",
+      "rows": [
+        {
+          "label": "Работна температура",
+          "value": "−20 до 55 °C"
+        },
+        {
+          "label": "Самозатопляне на батерията",
+          "value": "активиране на зареждането при ниска температура (≤10 °C)"
+        },
+        {
+          "label": "Свързаност",
+          "value": "Wi-Fi / Bluetooth / CAN"
+        },
+        {
+          "label": "Клас на защита",
+          "value": "IP65"
+        },
+        {
+          "label": "Нето тегло",
+          "value": "44,6 кг"
+        },
+        {
+          "label": "Размери",
+          "value": "295 × 287 × 489 мм"
+        },
+        {
+          "label": "Шум",
+          "value": "<30 dB"
+        },
+        {
+          "label": "Гаранция",
+          "value": "10 години"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ac-5000-1250309993.webp",
+      "file": "stream-ac-5000-1.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ac-5000-1250309992.webp",
+      "file": "stream-ac-5000-2.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-stream-ac-5000-1250309991.webp",
+      "file": "stream-ac-5000-3.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/01_PC_AC_KV_eu.webp",
+      "file": "stream-ac-5000-pregled-1.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/02_pc_saving_eu.webp",
+      "file": "stream-ac-5000-spestyavaniya-1.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/03_pc.webp",
+      "file": "stream-ac-5000-savmestimost-1.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/04_pc_ksp_eu.webp",
+      "file": "stream-ac-5000-akcenti-1-2.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/05_pc_off_grid_eu.webp",
+      "file": "stream-ac-5000-moshtnost-1.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/06_01_PC.webp",
+      "file": "stream-ac-5000-uredi-koito-zahranva-1-2.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/06_02_PC.webp",
+      "file": "stream-ac-5000-uredi-koito-zahranva-2-2.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/06_03_PC.webp",
+      "file": "stream-ac-5000-uredi-koito-zahranva-3-2.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/06_04_PC.webp",
+      "file": "stream-ac-5000-uredi-koito-zahranva-4-2.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/07_pc_capacity_eu.webp",
+      "file": "stream-ac-5000-kapacitet-1.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/08_pc_safety_eu.webp",
+      "file": "stream-ac-5000-bezopasnost-1.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/09_pc_Engineered_for_Safety_eu.webp",
+      "file": "stream-ac-5000-proektirana-za-bezopasnost-1.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/10_pc_15_Layers_of_Protection_eu.webp",
+      "file": "stream-ac-5000-15-niva-na-zashtita-1-2.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/11_pc_install_eu.webp",
+      "file": "stream-ac-5000-montazh-1.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/iPhone_17_Pro_-_Deep_Blue_-_Portrait_3.png",
+      "file": "stream-ac-5000-prilozhenie-1-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/14_pc_local_moeul_eu.webp",
+      "file": "stream-ac-5000-sledete-spestyavaniyata-si-vseki-1-2.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/STREAM_AC_5000.webp",
+      "file": "stream-ac-5000-kakvo-ima-v-kutiyata-1-2.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Grid_Cable.png",
+      "file": "stream-ac-5000-kakvo-ima-v-kutiyata-2-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Installation_Guide.webp",
+      "file": "stream-ac-5000-kakvo-ima-v-kutiyata-3-2.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Warranty.webp",
+      "file": "stream-ac-5000-kakvo-ima-v-kutiyata-4-2.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Wall_mount_bracket.webp",
+      "file": "stream-ac-5000-kakvo-ima-v-kutiyata-5-2.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Frame_2094655919.png",
+      "file": "stream-ac-5000-kakvo-ima-v-kutiyata-6-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Frame_2094655918.png",
+      "file": "stream-ac-5000-kakvo-ima-v-kutiyata-7-2.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Frame_2094655917.png",
+      "file": "stream-ac-5000-kakvo-ima-v-kutiyata-8-2.png"
+    }
+  ],
+  "_prevod_nadpisi": {
+    "stream-ac-5000-pregled-1.webp": {
+      "Are you wasting your solars by feeding back to grid even getting fined?": "Подарявате ли слънчевата си енергия на мрежата — и дори плащате глоби за това?",
+      "No. 1 Smart Home Energy Storage Solutions*": "№ 1 в умното домашно съхранение на енергия*",
+      "15-year / battery lifespan": "15 години / живот на батерията",
+      "800W/3000W / AC Output": "800W/3000W / AC изход",
+      "40% / Less floor space": "40% / по-малко място на пода"
+    },
+    "stream-ac-5000-spestyavaniya-1.webp": {
+      "up to / 7,068 kWh / Annual": "до / 7068 kWh / годишно"
+    },
+    "stream-ac-5000-savmestimost-1.webp": {
+      "Nest / tibber / Homey / ecobee / Shelly / everHome": "остават (марки)"
+    },
+    "stream-ac-5000-akcenti-1-2.webp": {
+      "Up to 3000W Output / Ready for high-demand appliance": "До 3000W изход / за мощни уреди",
+      "5 - 90kWh / Modular and Stackable": "5–90 kWh / модулна, подрежда се една върху друга",
+      "OASIS 3.0 / Whole Home Energy Management": "OASIS 3.0 / управление на енергията в целия дом",
+      "15-Year / Lifespan": "15 години / живот",
+      "10 Year / Warranty": "10 години / гаранция",
+      "Takes up to / 40% / less floor space": "До / 40% / по-малко място на пода",
+      "0ms / ups": "0 ms / UPS",
+      "Local / Mode": "Локален / режим",
+      "2 × / Pressure Relief Valves": "2 × / предпазни клапана за налягане"
+    },
+    "stream-ac-5000-moshtnost-1.webp": {
+      "Output power 3000 W*": "Изходна мощност 3000 W*",
+      "Output power 800 W*": "Изходна мощност 800 W*"
+    },
+    "stream-ac-5000-uredi-koito-zahranva-1-2.webp": {
+      "Refrigerator 150 W": "Хладилник 150 W"
+    },
+    "stream-ac-5000-kapacitet-1.webp": {
+      "5kWh / Basic": "5 kWh / основа",
+      "90kWh / Expandable": "90 kWh / при разширяване"
+    },
+    "stream-ac-5000-bezopasnost-1.webp": {
+      "ECOFLOW / NO.1 Smart Home Energy Storage Solutions*": "ECOFLOW / № 1 в умното домашно съхранение на енергия*",
+      "140 / Countries & Regions": "140 / държави и региона",
+      "1524 / Global Patents": "1524 / патента",
+      "6 Million+ / Global Users": "6 милиона+ / потребители",
+      "10000 / Charging Cycles": "10 000 / цикъла на зареждане",
+      "0ms / UPS": "0 ms / UPS",
+      "Thermal Management / 22 NTC / thermal sensors": "Термично управление / 22 NTC / термодатчика",
+      "Fire resistance / Alumium-Alloy Housing / 46% ↑ incrased heat dissipation efficiency v.s. last generation": "Огнеустойчивост / корпус от алуминиева сплав / 46% ↑ по-добро разсейване на топлината спрямо предишното поколение",
+      "2 x / Pressure relief valves v.s. industry standard": "2 × / предпазни клапана за налягане спрямо стандарта в бранша"
+    },
+    "stream-ac-5000-proektirana-za-bezopasnost-1.webp": {
+      "Smart Sensing / Monitors real-time circuit current to keep the load within your breaker's limit.": "Умно отчитане / Следи тока във веригата в реално време, за да държи натоварването в границата на предпазителя.",
+      "Dynamic Adjustment / Automatically reduces STREAM output before the circuit reaches its limit.": "Динамично регулиране / Автоматично намалява изхода на STREAM, преди веригата да стигне границата си.",
+      "Hardware Failsafe / Your certified breaker remains the final layer of protection.": "Хардуерна защита / Сертифицираният ви предпазител остава последното ниво на защита.",
+      "*Expected to launch in September 2026.": "*Очаква се да бъде пусната през септември 2026 г."
+    },
+    "stream-ac-5000-15-niva-na-zashtita-1-2.webp": {
+      "Reverse Current and Anti-Islanding Protection / Helps protect your home and devices during grid abnormalities": "Защита от обратен ток и островен режим / Пази дома и уредите при аномалии в мрежата",
+      "Data Logging Module / Monitors real-time performance data for smarter maintenance": "Модул за запис на данни / Следи работата в реално време за по-умна поддръжка",
+      "Metal Plate and Steel Banding / Prevents cell swelling and dampens vibration": "Метална плоча и стоманени ленти / Предотвратяват подуване на клетките и поемат вибрациите",
+      "Thermal Runaway Containment / Helps contain heat and limit cell-to-cell propagation": "Ограничаване на топлинен пробив / Задържа топлината и ограничава разпространението между клетките",
+      "Aluminum Alloy Enclosure / Corrosion-resistant and built for harsh environments": "Корпус от алуминиева сплав / Устойчив на корозия, за тежки условия",
+      "Floating Terminal Design / Protects connectors during installation and use": "Плаващи клеми / Пазят конекторите при монтаж и употреба",
+      "Fully Integrated water resistant Design / Seamless waterproofing from top to bottom": "Изцяло водоустойчива конструкция / Непрекъсната защита от вода отгоре до долу",
+      "Ceramic Cell Coating / Resists high temperatures and helps prevent internal short circuits": "Керамично покритие на клетките / Издържа на високи температури и предпазва от вътрешно късо съединение",
+      "Aerogel and Thermal Foam Barrier / Helps slow heat propagation between cells": "Бариера от аерогел и термопяна / Забавя разпространението на топлина между клетките",
+      "Two Pressure Relief Valves / Enables safe venting during pressure build-up": "Два предпазни клапана / Безопасно изпускане при повишено налягане",
+      "Insulation Fault Detection / Continuously monitors for electrical leakage and short-circuit risks": "Откриване на повреда в изолацията / Постоянно следи за утечка на ток и риск от късо съединение",
+      "PV Overvoltage Protection / Ultra-fast hardware cut-off helps prevent overcharging": "Защита от пренапрежение на PV / Свръхбързо хардуерно изключване срещу презареждане",
+      "AFE Protection Chip / 80+ built-in protection protocols for safer operation": "Защитен чип AFE / Над 80 вградени защитни протокола",
+      "24 NTC Temperature Sensors / Continuous temperature monitoring across every cell": "24 NTC термодатчика / Постоянно следене на температурата на всяка клетка",
+      "Enlarged Heat Sink and Optimised Thermal Structure / 46% better heat dissipation — runs cooler, lasts longer": "По-голям радиатор и оптимизирана термична конструкция / 46% по-добро разсейване на топлината — по-хладна работа, по-дълъг живот"
+    },
+    "stream-ac-5000-montazh-1.webp": {
+      "Step 1: Set Up / Space-saving and flexibly placeable.": "Стъпка 1: Поставяне / Пести място и се поставя навсякъде.",
+      "Fits Where You Need It / Takes up to 40% less floor space, with a built-in handle for easy placement, indoors or out.⁴": "Събира се, където ви трябва / До 40% по-малко място на пода и вградена дръжка за лесно поставяне — вътре или навън.⁴",
+      "40%* ↓ / Less Floor Space": "40%* ↓ / по-малко място на пода",
+      "Step 2: Connect & Plug-in* / True Plug & Play. / Set up in just a few minutes – no electrician required for the basic installation.": "Стъпка 2: Свържете и включете* / Истински plug & play. / Готово за минути — без електротехник за основния монтаж.",
+      "Step 3: Set Up the App* / Follow the In-App Guidance to Get Started": "Стъпка 3: Настройте приложението* / Следвайте указанията в приложението",
+      "Magnetic IR Reader": "Магнитен IR четец"
+    },
+    "stream-ac-5000-sledete-spestyavaniyata-si-vseki-1-2.webp": {
+      "Clear Energy Dashboard / See how much you've saved": "Ясно енергийно табло / Вижте колко сте спестили",
+      "Modern apartment / Double storey villa / Red roof villa / Log villa": "Модерен апартамент / Двуетажна къща / Къща с червен покрив / Дървена къща",
+      "Stay Powered, Even Offline* / No internet? No problem. With Local Mode, your system keeps working and your devices stay connected.": "Със захранване и без интернет* / Няма интернет? Няма проблем. С локалния режим системата продължава да работи, а устройствата остават свързани."
+    },
+    "stream-ac-5000-uredi-koito-zahranva-2-2.webp": {
+      "Washing machine 2,000 W": "Пералня 2000 W"
+    },
+    "stream-ac-5000-uredi-koito-zahranva-3-2.webp": {
+      "Dryer 2,500 W": "Сушилня 2500 W"
+    },
+    "stream-ac-5000-uredi-koito-zahranva-4-2.webp": {
+      "Air Conditioner 1,500 W": "Климатик 1500 W"
+    }
+  },
+  "_neyasni": [
+    "Цена, зачертана цена, SKU и наличност — НЕ са попълнени (dice.bg показа проверка на Cloudflare и не се отвори). Попълни ги от XML-а на dice по EAN 4895251687348 (SpecialPrice → price, Price → compareAtPrice, Identifier → sku, stock → availability), преди внос. Името в dice: „Външна AC куплирана батерия за домашна система EcoFlow STREAM AC 5000 Solar Battery 5kWh Gray/Black“ (по адреса) — заглавието в сайта е официалното „EcoFlow STREAM AC 5000“.",
+    "Провери в базата на сървъра за EAN 4895251687348 и за продукти със „AC 5000“ в името (включително скрити), преди внос. В content/ няма такъв продукт; търсачката на сайта не го намира.",
+    "Слагът е stream-ac-5000 (в EU: stream-ac-solar-battery). Категория stream-seriya — провери, че е правилната за STREAM AC Pro / STREAM Ultra; ако STREAM е в друга, сложи го там.",
+    "Галерията: взети са само трите снимки на основния вариант (1250309991–93). Снимките с допълнителни батерии (1250309994, 1250309995) и „2 × STREAM AC 5000“ (1255634537.png) не са включени — допълнителната батерия я няма в сайта.",
+    "Секциите при EcoFlow с видео („Опит с EcoFlow STREAM“ — видео ревюта на нидерландски; „Вашата енергия, по вашия начин“ — 6 видеа; видео в „Проектирана за безопасност“) — видеата не се пренасят. „Вашата енергия, по вашия начин“ е направена с табове без снимка (image: \"\"); собственикът може да добави снимка в админа.",
+    "Секцията „Build your energy system“ (комплекти с 1 и 2 допълнителни батерии и цените на EcoFlow) и блокът с цената / бонусите / Alma — не се пренасят (цената е от dice; допълнителната батерия я няма).",
+    "„06_0x_PC.webp“ (четирите уреда) — проверено по alt и надписите, без текст в самата снимка освен името и мощността; ако има текст на английски — в prevod-nadpisi.md.",
+    "08_pc_safety_eu.webp на десктоп е една обща снимка (на телефон са две — 08_m_safety_1 и _2). Взета е десктопната.",
+    "Звездичките при EcoFlow („Up to 3000W Output*“, „Highest energy density among 5kWh solutions*“, „40%* less floor space“, „Step 2*“, „Step 3*“, „Stay Powered, Even Offline*“) нямат видим текст на бележката под линия на страницата — пренесени са само бележките, които имат текст (№1 приложение, септември 2026, общите уговорки от Disclaimer).",
+    "В FAQ „What are the advantages…“ при EcoFlow липсва т. 2 (номерацията е 1, 3, 4, 5, 6) — оставено 1:1.",
+    "В FAQ размерите са 295×489×298 мм, а в „Specs“ — 295×287×489 мм. Оставено 1:1 според източника.",
+    "Разделите „Вашата енергия, по вашия начин“: при EcoFlow са видеа без отделна снимка; снимките на трите раздела са кадри от видеата на EcoFlow (без телефона с текста на нидерландски) — scratchpad kadar.mjs, Claude Code 30.10.2026."
+  ]
+}
