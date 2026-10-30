@@ -38,7 +38,12 @@
   .notice-warning { border-left-color: #e06a00; } .notice-warning .notice-label { color: #b35500; }
   .notice-caution { border-left-color: #d9a400; } .notice-caution .notice-label { color: #8a6a00; }
   .notice-note, .notice-tip { border-left-color: #555; }
-  .fig { color: #777; font-style: italic; }
+  .figura { margin: 10px 0 14px; break-inside: avoid; text-align: center; }
+  .figura img { max-width: 100%; max-height: 165mm; object-fit: contain; } /* + подписът и легендата — на една страница */
+  .figura figcaption { font-weight: 600; font-size: 9pt; margin-top: 4px; text-align: left; }
+  .legenda { font-size: 9pt; text-align: left; }
+  .legenda ul, .legenda ol { margin: 2px 0 0; }
+  .legenda li { margin: 0 0 1px; }
   .krai { margin-top: 14px; padding-top: 8px; break-before: avoid; border-top: 1px solid #ccc; font-size: 9pt; color: #333; }
 </style>
 </head>

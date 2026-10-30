@@ -8,6 +8,8 @@
  *  1. проверка (формат — `content/dokumenti/prevodi/FORMAT.md`) срещу
  *     `<папка>/prevodi-en/<id>.en.md` и `<папка>/izvlecheni/<id>.txt`:
  *     числата, броят на предупрежденията, останал английски, покритието;
+ *     фигурите (`figuri.py proveri`): същите в двата файла, всяка фигура на оригинала
+ *     е в превода (или изрично изключена) — изрязват се в `<папка>/figuri/<id>/`;
  *  2. само ако мине — PDF по `scripts/dokumenti/shablon.html` с инсталирания Chrome
  *     (playwright-core) → `<папка>/<bg_fail>`; после PDF-ът се чете обратно
  *     (`pdftotext`): отваря се, има кирилица, няма счупени знаци;
@@ -56,6 +58,7 @@ const име = (t) =>
     .replace(/\.pdf$/i, '')
     .replace(/[_\s-]+(User Manual|User manual|Quick Start Guide|QSG|Safety Instructions?|Installation Guide|What's in the Box|Handleiding|Руководство пользователя)(?=$|[^A-Za-z]).*$/i, '')
     .replace(/\s*\((EN|RU|NL)\)\s*$/, '')
+    .replace(/\bEcoFLow\b/g, 'EcoFlow')
     .replace(/_/g, ' ')
     .replace(/\s{2,}/g, ' ')
     .trim()
@@ -97,7 +100,7 @@ const шингли = (t, n = 4) => {
   for (let i = 0; i + n <= w.length; i++) s.add(w.slice(i, i + n).join(' '))
   return s
 }
-const числа = (t) => new Set(t.replace(/\(see Fig[^)]*\)|\(вижте фиг[^)]*\)/gi, '').match(/\d+(?:[.,]\d+)*/g) ?? [])
+const числа = (t) => new Set(t.replace(/^:::figure .*$/gm, '').match(/\d+(?:[.,]\d+)*/g) ?? [])
 const блокове = (t) => {
   const c = {}
   for (const m of t.matchAll(/^:::(\w+)\s*$/gm)) c[m[1]] = (c[m[1]] ?? 0) + 1
@@ -147,35 +150,52 @@ function провери(x) {
     // Едно непокрито изречение се допуска (плакатите: 15 езика, слети в един „абзац").
     if (покритие < 0.9 && непокрити.length > 1) грешки.push(`.en.md покрива ${Math.round(покритие * 100)}% от английските изречения (${изр.length}); липсват напр.: ${непокрити.slice(0, 3).map((s) => `„${s.trim().replace(/\s+/g, ' ').slice(0, 80)}"`).join('; ')}`)
   }
+  // 5. Фигурите — броят и областите им съвпадат с оригинала; изрязват се.
+  const ф = spawnSync('python', [path.join(import.meta.dirname, 'figuri.py'), 'proveri', x.id, bgF, enF, '--papka', BASE], { encoding: 'utf8' })
+  let фиг
+  try { фиг = JSON.parse(ф.stdout.trim().split('\n').pop()) } catch { грешки.push(`figuri.py: ${(ф.stderr || ф.stdout).trim().slice(-300)}`) }
+  if (фиг) {
+    грешки.push(...фиг.problemi)
+    фигури.set(x.id, фиг)
+  }
   return грешки
 }
+const фигури = new Map()
 
 // ── HTML и PDF ──────────────────────────────────────────────────────────────
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 const ШАБЛОН = readFileSync(path.join(import.meta.dirname, 'shablon.html'), 'utf8')
 const ЛОГО = `data:image/png;base64,${readFileSync(path.join(import.meta.dirname, 'ecoflow-logo.png')).toString('base64')}`
 
-function тяло(md) {
+const ТИП = { '.png': 'image/png', '.jpg': 'image/jpeg' }
+function тяло(md, фиг) {
   // Блоковете → <div class="notice …"> с надписа; съдържанието им — Markdown.
-  // split с група: [текст, вид, вътре, '' (затварящото), текст, …]
-  const части = md.split(/^:::(\w*)[ \t]*$/m)
+  // Фигурата → <figure>: изрязаната картинка, под нея подписът (първият ред) и легендата.
+  // split с групи: [текст, вид, параметри, вътре, '' (затварящото), '', текст, …]
+  const части = md.split(/^:::(\w*)([^\n]*)$/m)
   let html = marked.parse(части[0])
-  for (let i = 1; i < части.length; i += 2) {
-    const вид = части[i]
-    const т = части[i + 1] ?? ''
-    html += вид ? `<div class="notice notice-${вид}"><div class="notice-label">${БЛОКОВЕ[вид]}</div>${marked.parse(т)}</div>` : marked.parse(т)
-  }
-  // Препратките към фигурите — по-бледо.
-  html = html.replace(/\((вижте фиг\.[^)]*)\)/g, '<span class="fig">($1)</span>')
-  // Котви за съдържанието.
   let n = 0
-  html = html.replace(/<h1>/g, () => `<h1 id="r${++n}">`)
+  for (let i = 1; i < части.length; i += 3) {
+    const вид = части[i]
+    const т = части[i + 2] ?? ''
+    if (вид === 'figure') {
+      const f = фиг.figuri[n++]
+      const src = `data:${ТИП[path.extname(f.fail)]};base64,${readFileSync(f.fail).toString('base64')}`
+      const [подпис, ...легенда] = т.trim().split('\n')
+      html += `<figure class="figura"><img src="${src}" style="width:${f.shirina}%" alt=""><figcaption>${marked.parseInline(подпис)}</figcaption>${легенда.length ? `<div class="legenda">${marked.parse(легенда.join('\n'))}</div>` : ''}</figure>`
+    } else {
+      html += вид ? `<div class="notice notice-${вид}"><div class="notice-label">${БЛОКОВЕ[вид]}</div>${marked.parse(т)}</div>` : marked.parse(т)
+    }
+  }
+  // Котви за съдържанието.
+  let к = 0
+  html = html.replace(/<h1>/g, () => `<h1 id="r${++к}">`)
   return html
 }
 
 function страница(x, md, съдържание) {
   const заглавие = `${видBg(x.vid, x.zaglavia[0])} — ${общоИме(x.zaglavia)}`
-  const html = тяло(md)
+  const html = тяло(md, фигури.get(x.id))
   const раздели = [...html.matchAll(/<h1 id="(r\d+)">(.*?)<\/h1>/g)]
   const toc = съдържание && раздели.length >= 2
     ? `<nav class="toc"><div class="toc-title">Съдържание</div><ul>${раздели.map((m) => `<li><a href="#${m[1]}">${m[2]}</a></li>`).join('')}</ul></nav>`
@@ -242,13 +262,15 @@ for (const x of задачи) {
     console.log(`✗ ${x.id} — PDF-ът не се чете както трябва (код ${r.status}, стр. ${стр}, кирилица ${Math.round((кир / Math.max(1, букви.length)) * 100)}%)`)
     continue
   }
+  const ф = фигури.get(x.id)
   готови[x.id] = {
     bg_fail: x.bg_fail,
     original: x.original,
     sha256: createHash('sha256').update(readFileSync(out)).digest('hex'),
     stranici: стр,
+    figuri: ф.figuri.length,
   }
-  console.log(`✓ ${x.id} — ${стр} стр. → ${x.bg_fail}`)
+  console.log(`✓ ${x.id} — ${стр} стр., фигури ${ф.figuri.length} (в оригинала ${ф.kandidati} области, изключени ${ф.izkliucheni}) → ${x.bg_fail}`)
 }
 await browser?.close()
 if (!САМО_ПРОВЕРКА) writeFileSync(готовиF, JSON.stringify(готови, null, 2) + '\n')

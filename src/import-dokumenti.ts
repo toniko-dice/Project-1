@@ -79,6 +79,7 @@ const име = (t: string) =>
     .replace(/\.pdf$/i, '')
     .replace(/[_\s-]+(User Manual|User manual|Quick Start Guide|QSG|Safety Instructions?|Installation Guide|What's in the Box|Handleiding|Руководство пользователя)(?=$|[^A-Za-z]).*$/i, '') // не `\b`: „_" е „буква" за него
     .replace(/\s*\((EN|RU|NL)\)\s*$/, '')
+    .replace(/\bEcoFLow\b/g, 'EcoFlow') // печатна грешка в заглавията на EcoFlow — официалното име
     .replace(/_/g, ' ')
     .replace(/\s{2,}/g, ' ')
     .trim()
