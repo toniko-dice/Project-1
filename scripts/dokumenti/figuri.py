@@ -40,7 +40,7 @@ MASTILO = 200       # яркост под това е мастило (светл
 IKONKA = 45         # pt — по-малкото (и по двете страни) е иконка (⚠, крушката на съвета), не фигура
 MASHTAB = 2.5       # изрязването: 180 dpi
 FIG_RE = re.compile(r'^:::figure\s+p(\d+)\s+(-?\d+),\s*(-?\d+),\s*(-?\d+),\s*(-?\d+)\s*$', re.M)
-BEZ_RE = re.compile(r'<!--\s*bez-figura\s+p(\d+)(?:\s+(\d+),\s*(\d+))?\s*:([^>]*)-->')
+BEZ_RE = re.compile(r'<!--\s*bez-figura\s+p(\d+)(?:\s+(\d+),\s*(\d+))?\s*:(.*?)-->')
 
 
 def papka():
@@ -239,7 +239,7 @@ def proveri(doc_id, bg_md, en_md):
             # Ширината — като в отпечатания оригинал, малко по-едро (A4: 516 pt между полетата);
             # еднакъв мащаб между фигурите.
             figuri.append({'str': p, 'bbox': f, 'fail': str(fail), 'vid': vid,
-                           'shirina': round(min(100, max(30, (f[2] - f[0]) * 1.3 / 516 * 100)))})
+                           'shirina': round(min(100, max(12, (f[2] - f[0]) * 1.3 / 516 * 100)))})
     print(json.dumps({'ok': not problemi, 'problemi': problemi, 'figuri': figuri,
                       'kandidati': sum(len(v) for v in kand.values()), 'izkliucheni': izkl}, ensure_ascii=False))
 
