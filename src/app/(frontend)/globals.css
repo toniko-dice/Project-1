@@ -202,6 +202,33 @@
   }
 
   /*
+    Лентата със секциите на продукта (`ProductAnchorNav`): от 768 px нагоре
+    точките, които не се побират, минават на втори ред, центрирани — без
+    скрол встрани (никой не го прави и „Документи" оставаше скрит зад ръба,
+    task-lenta-sekcii.md). Побират ли се — един ред, както преди. На телефон —
+    пак хоризонтален скрол: два-три реда там заемат половината екран.
+  */
+  @media (min-width: 768px) {
+    .anchor-row {
+      flex-wrap: wrap;
+      justify-content: center;
+      overflow-x: visible;
+      scroll-snap-type: none;
+      row-gap: 0.25rem;
+      column-gap: 0.75rem;
+    }
+  }
+
+  /*
+    Котвите на продукта спират под залепената лента. Височината ѝ се мени
+    (два реда на компютър) — пише я `ProductAnchorNav` в `--anchor-nav-h`;
+    отгоре — още 3.5rem въздух (както досегашното `scroll-mt-28` при 56 px).
+  */
+  .anchor-target {
+    scroll-margin-top: calc(var(--anchor-nav-h, 3.5rem) + 3.5rem);
+  }
+
+  /*
     Плъзгачът „Цена от–до" — два `input[type=range]` един върху друг.
 
     Самите ленти не приемат мишка (`pointer-events: none` в компонента),

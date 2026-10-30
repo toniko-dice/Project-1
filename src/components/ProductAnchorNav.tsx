@@ -29,20 +29,44 @@ export type Anchor = { id: string; label: string }
 export const ProductAnchorNav = ({ anchors }: { anchors: Anchor[] }) => {
   const [active, setActive] = useState<string>(anchors[0]?.id ?? '')
   const rowRef = useRef<HTMLUListElement>(null)
+  const navRef = useRef<HTMLElement>(null)
   const edge = useScrollEdges(rowRef)
+
+  /*
+    Височината на лентата → `--anchor-nav-h` (котвите спират под нея,
+    `.anchor-target`). На компютър лентата става на два реда, когато
+    секциите не се побират — с фиксиран отстъп заглавието би се скрило.
+  */
+  useEffect(() => {
+    const nav = navRef.current
+    if (!nav) return
+    const root = document.documentElement
+    const ro = new ResizeObserver(() => root.style.setProperty('--anchor-nav-h', `${nav.offsetHeight}px`))
+    ro.observe(nav)
+    return () => {
+      ro.disconnect()
+      root.style.removeProperty('--anchor-nav-h')
+    }
+  }, [])
 
   /*
     Активната точка се вижда винаги: на телефон лентата е по-широка от
     екрана и без това активната оставаше отрязана вдясно. Мести се САМО
     лентата (`scrollTo` на нея), не страницата — `scrollIntoView` би
     дръпнал и прозореца по средата на скрола.
+    Мигновено, не `smooth`: плавното превъртане на лентата (със scroll-snap)
+    не завършваше — лентата изоставаше с една секция назад (30.10.2026).
+    Мястото се смята спрямо самата лента (`getBoundingClientRect`), не с
+    `offsetLeft` — той е спрямо залепения `nav` и включва отстъпа на контейнера.
   */
   useEffect(() => {
     const row = rowRef.current
     const link = row?.querySelector<HTMLElement>(`a[href="#${CSS.escape(active)}"]`)
     if (!row || !link || row.scrollWidth <= row.clientWidth) return
-    const център = link.offsetLeft + link.offsetWidth / 2 - row.clientWidth / 2
-    row.scrollTo({ left: Math.max(0, център), behavior: 'smooth' })
+    const r = row.getBoundingClientRect()
+    const l = link.getBoundingClientRect()
+    const център = row.scrollLeft + (l.left - r.left) + l.width / 2 - row.clientWidth / 2
+    row.scrollTo({ left: Math.max(0, център), behavior: 'instant' })
   }, [active])
 
   useEffect(() => {
@@ -55,10 +79,12 @@ export const ProductAnchorNav = ({ anchors }: { anchors: Anchor[] }) => {
     if (!sections.length) return
 
     /*
-      Линията е малко под лентата (56 px висока, котвите спират на 56 —
-      `scroll-mt-14`): секция, до която е скочил линк, вече е активна.
+      Линията е малко под мястото, където спират котвите (височината на
+      лентата + 56 px — `.anchor-target`): секция, до която е скочил линк, вече
+      е активна. Височината се чете всеки път — на компютър лентата може да е
+      на два реда.
     */
-    const LINE = 96
+    const line = () => (navRef.current?.offsetHeight ?? 56) + 56 + 16
     let frame = 0
 
     const update = () => {
@@ -70,6 +96,7 @@ export const ProductAnchorNav = ({ anchors }: { anchors: Anchor[] }) => {
         return
       }
       let current = sections[0]!.id
+      const LINE = line()
       for (const el of sections) {
         if (el.getBoundingClientRect().top <= LINE) current = el.id
         else break
@@ -95,6 +122,7 @@ export const ProductAnchorNav = ({ anchors }: { anchors: Anchor[] }) => {
 
   return (
     <nav
+      ref={navRef}
       aria-label="Съдържание на страницата"
       /*
         Лепне под хедъра: на телефон хедърът също лепне и пише височината
@@ -104,11 +132,12 @@ export const ProductAnchorNav = ({ anchors }: { anchors: Anchor[] }) => {
     >
       <div className="container-site">
         {/*
-          На широк екран точките стоят в центъра, както в оригинала. При
-          препълване „safe center" се отказва от центрирането и лентата се
-          скролва отляво — виж scroll-row-center в globals.css.
+          На широк екран точките стоят в центъра, както в оригинала; които не
+          се побират — на втори ред (`anchor-row`). На телефон при препълване
+          „safe center" се отказва от центрирането и лентата се скролва
+          отляво — виж scroll-row-center в globals.css.
         */}
-        <ul ref={rowRef} data-edge={edge} className="scroll-row scroll-row-center edge-fade py-0">
+        <ul ref={rowRef} data-edge={edge} className="scroll-row scroll-row-center anchor-row edge-fade py-0">
           {anchors.map((a) => (
             <li key={a.id}>
               <a

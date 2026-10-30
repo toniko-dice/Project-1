@@ -368,7 +368,7 @@ export default async function ProductPage({ params }: Args) {
 
       {/* ── Документи (ръководства, инструкции) — след секциите; без документи няма раздел ── */}
       {документиId ? (
-        <section id={документиId} aria-labelledby="dokumenti-zaglavie" className="container-site scroll-mt-28 py-12 lg:py-16">
+        <section id={документиId} aria-labelledby="dokumenti-zaglavie" className="container-site anchor-target py-12 lg:py-16">
           <h2 id="dokumenti-zaglavie" className="mb-8 text-center text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">
             Документи
           </h2>

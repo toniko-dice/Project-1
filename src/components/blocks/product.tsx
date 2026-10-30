@@ -28,8 +28,8 @@ const Section = ({
 }) => (
   <section
     {...(id ? { id } : {})}
-    // Заглавието не бива да се скрива под залепената лента при прескачане.
-    className={`scroll-mt-28 ${className}`}
+    // Заглавието не бива да се скрива под залепената лента при прескачане (и на два реда).
+    className={`anchor-target ${className}`}
   >
     {children}
   </section>
