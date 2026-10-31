@@ -1,0 +1,5443 @@
+{
+ "sabrano": "2026-10-31",
+ "regioni": [
+  "eu",
+  "us",
+  "uk",
+  "ca",
+  "au"
+ ],
+ "zapisi": [
+  {
+   "zaglavie": "160W Portable Solar Panel_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/160w-solar-panel?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "220W Bifacial Portable Solar Panel - User Manual",
+   "adres": "https://manuals.ecoflow.com/product/220w-bifacial-solar-panel?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "45W Portable Solar Panel (EF-Fold-P045-CG) User Manual",
+   "adres": "https://manuals.ecoflow.com/product/45w-solar-panel?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "48V ALT Connection with Power Kits",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1746523911830/48V%20Alternator%20Details_2025-5-6.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "50'' Tilt Mount Bracket-User Manual (V1.0)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/6/20/50''%20Tilt%20Mount%20Bracket-User%20Manual%20(V1.0)_1687232584726.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "60W Portable Solar Panel (EF-Fold-P060-CG) User Manual",
+   "adres": "https://manuals.ecoflow.com/product/60w-solar-panel?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "Микроинвертор EcoFlow PowerStream Руководство пользователя V1.2 (RU)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/6/17/%D0%9C%D0%B8%D0%BA%D1%80%D0%BE%D0%B8%D0%BD%D0%B2%D0%B5%D1%80%D1%82%D0%BE%D1%80%20EcoFlow%20PowerStream%20%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE%20%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8F%20V1.2%20(RU)_1718609718404.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow × Shelly Smart Meter User Manual_Multilingual_V1.3",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1758278924722/EcoFlow%20%C3%97%20Shelly%20Smart%20Meter%20User%20Manual_Multilingual_V1.3.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow × Shelly Smart Plug User Manual_Multilingual_V1.2",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747300487832/EcoFlow%20%C3%97%20Shelly%20Smart%20Plug%20User%20Manual_Multilingual_V1.2.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 100W Flexible Solar Panel-User Manual V0.1 (EN+JA+CN+DE+FR+IT+ES+NL+RU+KR+HK）",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/9/13/1468399432_1663042123171.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 100W Rigid Solar Panel-User Manual V0.1 (EN+JA+CN+DE+FR+IT+ES+NL+RU+KR+HK）",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/9/27/847014202_1664271284498.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 110W Lightweight Portable Solar Panel_Quick Start Guide_Global_V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1761620083998/EcoFlow%20110W%20Lightweight%20Portable%20Solar%20Panel_Quick%20Start%20Guide_V1.1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-05-27",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 110W Lightweight Portable Solar Panel_Safety Instructions_Global_V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1762933447620/EcoFlow%20110W%20Lightweight%20Portable%20Solar%20Panel_Safety%20Instructions_V1.1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-05-27",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 110W Lightweight Portable Solar Panel_User manual",
+   "adres": "https://manuals.ecoflow.com/product/110w-lightweight-portable-solar-panel?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-05-27",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 110W Lightweight Portable Solar Panel_User manual",
+   "adres": "https://manuals.ecoflow.com/product/110w-lightweight-solar-panel",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-05-27",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 110W Portable Solar Panel-User Manual PL",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1736910226233/110W-.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 110W Portable Solar Panel-User Manual V1.1 (EN+DE+FR+IT+ES+NL+RU+JP+KR+CHS+CHT）",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/5/30/EcoFlow%20110W%20Portable%20Solar%20Panel-User%20Manual%20V1.0%20(EN%2BDE%2BFR%2BIT%2BES%2BNL%2BRU%2BJP%2BKR%2BCHS%2BCHT)_1717062520219.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 125W ×4 Bifacial Modular Solar Panel_Quick Start Guide V1.0",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/11/11/EcoFlow%20125W%20%C3%974%20Bifacial%20Modular%20Solar%20Panel_Quick%20Start%20Guide%20V1.0_1731324273192.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 125W Bifacial Modular Solar Panel_User Manual_en",
+   "adres": "https://manuals.ecoflow.com/product/125w-modular-solar-panel?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 130W RVMax Rigid Solar Panel_Quick Start Guide_V1.2",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747303278065/EcoFlow%20130W%20RVMax%20Rigid%20Solar%20Panel_Quick%20Start%20Guide_V1.2.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 130W RVMax Rigid Solar Panel_Safety Instructions_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747303300563/EcoFlow%20130W%20RVMax%20Rigid%20Solar%20Panel_Safety%20Instructions_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 130W RVMax Rigid Solar Panel_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/130w-rvmax-rigid-solar-panel?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 160W Bifacial Portable Solar Panel_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/160w-bifacial-portable-solar-panel?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 160W Lightweight Portable Solar Panel_Quick Start Guide",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1760344273638/EcoFlow%20160W%20Lightweight%20Portable%20Solar%20Panel_Quick%20Start%20Guide_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 160W Lightweight Portable Solar Panel_Safety Instructions",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1760344284513/EcoFlow%20160W_220W_400W%20Lightweight%20Portable%20Solar%20Panel_Safety%20Instructions_V1.2.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 160W Lightweight Portable Solar Panel_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/160w-lightweight-solar-panel?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 160W Portable Solar Panel-User Manual PL",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1736909800492/L3-%233-EcoFlow%2060W%20160W%20Solar%20Panel-User%20Manual.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 160W Portable Solar Panel-User Manual V1.0 (EN+DE+FR+IT+ES+NL+RU+JP+KR+CHS+CHT)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/5/13/EcoFlow%20160W%20Portable%20Solar%20Panel-User%20Manual-V1.0(EN%2BDE%2BFR%2BIT%2BES%2BNL%2BRU%2BJP%2BKR%2BCHS%2BCHT)_1715594939325.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 160W/110W/ 60W Solar Panel User Manual",
+   "adres": "https://websiteoss.ecoflow.com/website/upload/2022/2/22/Solar_Panel_User_Manual_1645511420499.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 160W/110W/ 60W Solar Panel User Manual",
+   "adres": "https://websiteoss.ecoflow.com/website/upload/2022/2/22/Solar_Panel_User_Manual_1645511441662.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 160W/110W/ 60W Solar Panel User Manual",
+   "adres": "https://websiteoss.ecoflow.com/website/upload/2022/2/22/Solar_Panel_User_Manual_1645511448625.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 175W Rigid Solar Panel_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/175w-rigid-solar-panel?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 175W Rigid Solar Panel-Quick Start Guide",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/5/30/EcoFlow%20175W%20Rigid%20Solar%20Panel-Quick%20Start%20Guide%20V1.0_1717050113261.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 175W Rigid Solar Panel-Safety Instructions",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/5/30/EcoFlow%20175W%20Rigid%20Solar%20Panel-Safety%20Instructions%20V1.0_1717050133698.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 220W Bifacial Portable Solar Panel-User Manual PL-V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1744358441330/220W.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 220W Bifacial Portable Solar Panel-User Manual V1.1 (EN+DE+FR+IT+ES+NL+RU+JP+KR+CHS+CHT）",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1744358286963/EcoFlow%20220W%20Bifacial%20Portable%20Solar%20Panel%20User%20Manual%20V1.1%20(EN%2BDE%2BFR%2BIT%2BES%2BNL%2BRU%2BJP%2BKR%2BCHS%2BCHT).pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 220W Lightweight Portable Solar Panel_Quick Start Guide",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1760424579181/EcoFlow%20220W%20Lightweight%20Portable%20Solar%20Panel_Quick%20Start%20Guide_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-16",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 220W Lightweight Portable Solar Panel_Safety Instructions",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1760424586373/EcoFlow%20160W_220W_400W%20Lightweight%20Portable%20Solar%20Panel_Safety%20Instructions_V1.2.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-16",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 220W Lightweight Portable Solar Panel_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/220w-lightweight-solar-panel?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-04-16",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 250W Rigid Solar Panel_Quick Start Guide_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747303495337/EcoFlow%20250W%20Rigid%20Solar%20Panel_Safety%20Instructions_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 250W Rigid Solar Panel_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/250w-rigid-solar-panel?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 28W Portable Solar Panel_Quick Start Guide",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1759131389624/EcoFlow%2028W%20Portable%20Solar%20Panel_Quick%20Start%20Guide_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 28W Portable Solar Panel_Safety Instructions",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1759132096209/EcoFlow%2028W%20Portable%20Solar%20Panel_Safety%20Instructions_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 28W Portable Solar Panel_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/solar-panel-28w?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 2kWh & 5kWh LFP Battery User Manual_EN_FOR AU",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1745576323296/EcoFlow%202kWh%265kWh%20LFP%20Battery%20User%20Manual_EN_20250425.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 2kWh & 5kWh LFP Battery_User Manual_V1.3_en",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1745998539095/EcoFlow%202kWh%20%26%205kWh%20LFP%20Battery_User%20Manual_V1.3_en.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 2kWh LFP Battery User Manual_EN_FOR AU",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/1/29/EcoFlow%202kWh%265kWh%20LFP%20Battery%20User%20Manual_EN_FOR%20AU_1706515888618.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 2kWh LFP Battery_User Manual_V1.1_(EN+DE+FR+IT+ES+CHS)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/11/28/EcoFlow%202KWh%20LFP%20Battery-User%20Manual%20V1.1%20(EN%2BDE%2BFR%2BIT%2BES%2BCHS)_1732785710247.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 2KWh LFP Battery-User Manual V1.1 (EN+DE+FR+IT+ES+CHS)",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1745998682751/EcoFlow%202kWh%20%26%205kWh%20LFP%20Battery_User%20Manual_V1.3_en.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 30/50A AC/DC Smart Distribution Panel_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/30-50a-ac-dc-smart-distribution-panel?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 400W Lightweight Portable Solar Panel_Quick Start Guide",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1760344768051/EcoFlow%20400W%20Lightweight%20Portable%20Solar%20Panel_Quick%20Start%20Guide_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 400W Lightweight Portable Solar Panel_Safety Instructions",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1760344773466/EcoFlow%20160W_220W_400W%20Lightweight%20Portable%20Solar%20Panel_Safety%20Instructions_V1.2.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 400W Lightweight Portable Solar Panel_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/400w-lightweight-solar-panel?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 400W Rigid Solar Panel-User Manual (EN+DE+FR+IT+ES+NL+RU)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/10/15/-178226429_1665775405788.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 450W Rigid Solar Panel_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/450w-rigid-solar-panel?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 45W Portable Solar Panel (EF-Fold-P045-CG)-User Manual V1.0 (EN）",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/6/5/45W%20Portable%20Solar%20Panel_User%20Manual_1717577105457.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 45W Portable Solar Panel (Type-C)_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/45w-portable-solar-panel-type-c?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 520W Rigid Solar Panel_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/520w-rigid-solar-panel?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 5kWh LFP Battery-User Manual_V1.1_(EN+DE+FR+IT+ES+CHS)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/11/28/EcoFlow%205KWh%20LFP%20Battery-User%20Manual%20V1.1%20(EN%2BDE%2BFR%2BIT%2BES%2BCHS)_1732785745330.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 60W Lightweight Portable Solar Panel (Type-C)_Quick Start Guide-V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1785310024640/EcoFlow%2060W%20Lightweight%20Portable%20Solar%20Panel%20(Type-C)-Quick%20Start%20Guide-V1.0-260714.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-07-29",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 60W Lightweight Portable Solar Panel (Type-C)_Safety Instructions-V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1785310135950/EcoFlow%2060W%20Lightweight%20Portable%20Solar%20Panel%20(Type-C)-Safety%20Instructions-V1.0-260714.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-07-29",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 60W Lightweight Portable Solar Panel (Type-C)_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/60w-lightweight-portable-solar-panel-type-c?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-07-29",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 60W Portable Solar Panel (EF-Fold-P060-CG)-User Manual V1.0 (EN）",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/6/2/60W%20Portable%20Solar%20Panel_User%20Manual_1717321153715.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 60W Portable Solar Panel (Type-C)_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/60w-portable-solar-panel-type-c?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow 60W Portable Solar Panel-User Manual PL",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1736909842516/L3-%233-EcoFlow%2060W%20160W%20Solar%20Panel-User%20Manual.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Солнечная панель 110 Вт-User Manual V1.1 (EN+DE+FR+IT+ES+NL+RU+JP+KR+CHS+CHT）",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/5/30/EcoFlow%20110W%20Portable%20Solar%20Panel-User%20Manual%20V1.0%20(EN%2BDE%2BFR%2BIT%2BES%2BNL%2BRU%2BJP%2BKR%2BCHS%2BCHT)_1717062697720.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow AC DC Smart Distribution Panel-User Manual V1.2 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/9/29/-928912982_1664459090359.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow AC/DC Smart Distribution Panel_User Manual_V1.3_(EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/11/28/EcoFlow%20AC%20DC%20Smart%20Distribution%20Panel-User%20Manual%20V1.3%20(EN)_1732785790580.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Adjustable Ground & Suspended Solar Bracket_Installation Guide_V1.2",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1756351378494/EcoFlow%20Adjustable%20Ground%20%26%20Suspended%20Solar%20Bracket_Installation%20Guide_V1.2.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Adjustable Ground & Suspended Solar Bracket_Installation Guide_V1.2",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1756351928747/EcoFlow%20Adjustable%20Ground%20%26%20Suspended%20Solar%20Bracket_Installation%20Guide_V1.2.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Alternator Charger (500W)_User Manual",
+   "adres": "https://manuals.ecoflow.com/eu/product/alternator-charger-500w?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Alternator Charger (800W)_User Manual",
+   "adres": "https://manuals.ecoflow.com/eu/product/alternator-charger-800w?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Alternator Charger (800W)_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/alternator-charger-800w?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Alternator Charger 600 User Manual",
+   "adres": "https://manuals.ecoflow.com/product/alternator-charger-600?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-05-09",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Alternator Charger Plus 1000 User Manual",
+   "adres": "https://manuals.ecoflow.com/product/alternator-charger-plus-1000",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-05-09",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow App User Manual",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/10/10/1677531949_1665383115587.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-09-14",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow App User Manual_for STREAM Series_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1788344107999/EcoFlow%20App%20User%20Manual_for%20STREAM%20Seies.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-09-14",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Auto Transfer Switch_User Manual_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1753148427815/EcoFlow%20Auto%20Transfer%20Switch_User%20Manual_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-17",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Balcony Hook Kit Quick Start Guide V1.1",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/6/27/EcoFlow%20Balcony%20Hook%20Kit%20Quick%20Start%20Guide%20V1.1_1687862897529.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow BLADE - Quick Start Guide V 5.0 (multilingual)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/5/10/EcoFlow%20Blade%20-%20Quick%20Start%20Guide%20V%205.0%20(multilingual)_1682507249801_1683688430160.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow BLADE-User Manual V2.0 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/4/26/EcoFlow%20Blade-User%20Manual%20V2.0%20(EN)_1682491239157.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow BLADE-User Manual V2.0 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/4/26/EcoFlow%20Blade-User%20Manual%20V2.0%20(EN)_1682491313822.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow BLADE-User Manual V2.0 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/5/10/EcoFlow%20Blade-User%20Manual%20V2.0%20(EN)_1682390832815_1683688258981.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Bracket - Concrete Balcony_Installation Guide_V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776155589985/EcoFlow%20Bracket%20-%20Concrete%20Balcony_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Bracket - Concrete Balcony_Installation Guide_V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776154016967/EcoFlow%20Bracket%20-%20Concrete%20Balcony_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Bracket - Facade Quick Start Guide V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776155645927/EcoFlow%20Bracket%20-%20Facade_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Bracket - Facade_Quick Start Guide-V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776154190461/EcoFlow%20Bracket%20-%20Facade_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Bracket - Flat Roof_Installation Guide_V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776155684143/EcoFlow%20Bracket%20-%20Flat%20Roof_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Bracket - Flat Roof_Installation Guide_V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776154368786/EcoFlow%20Bracket%20-%20Flat%20Roof_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Bracket - Lattice Balcony_Installation Guide_V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776153711954/EcoFlow%20Bracket%20-%20Lattice%20Balcony_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Bracket - Lattice Balcony_Installation Guide_V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776155202268/EcoFlow%20Bracket%20-%20Lattice%20Balcony_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Bracket - Lightweight_Installation Guide_Multilingual V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1746706972448/EcoFlow%20Bracket%20-%20Lightweight_Installation%20Guide_Multilingual%20V1.1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Bracket - Lightweight_Installation Guide_Multilingual V1.2",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776154935336/EcoFlow%20Bracket%20-%20Lightweight_Installation%20Guide-Multilingual-EN-DE-FR-IT-ES-NL-RU-JP-KR-CN-TW-V1.2--260410.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Bracket - Lightweight_Installation Guide_Multilingual V1.2",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776155899787/EcoFlow%20Bracket%20-%20Lightweight_Installation%20Guide-Multilingual-EN-DE-FR-IT-ES-NL-RU-JP-KR-CN-TW-V1.2--260410.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Bracket - Pitched Roof Quick Start Guide_V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776154848347/EcoFlow%20Bracket%20-%20Pitched%20Roof%20_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Bracket - Pitched Roof Quick Start Guide_V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776155859906/EcoFlow%20Bracket%20-%20Pitched%20Roof%20_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Bracket - Semi-enclosed Balcony_Installation Guide_V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776154502369/EcoFlow%20Bracket%20-%20Semi-enclosed%20Balcony_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Bracket - Semi-enclosed Balcony_Installation Guide_V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776155725034/EcoFlow%20Bracket%20-%20Semi-enclosed%20Balcony_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Bracket Adjustable - Facade_Installation Guide-V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776154706526/EcoFlow%20Bracket%20Adjustable%20-%20Facade_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Bracket Adjustable - Facade_Installation Guide-V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776155806599/EcoFlow%20Bracket%20Adjustable%20-%20Facade_Installation%20Guide-EN-DE-FR-V1.1--260410.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Bracket Lightweight - Facade Quick Start Guide V1.2",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776155766966/EcoFlow%20Bracket%20-%20Lightweight%20-%20Facade_Installation%20Guide-EN-DE-FR-V1.2--260410.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Bracket Lightweight - Facade_Quick Start Guide V1.2",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776154596924/EcoFlow%20Bracket%20-%20Lightweight%20-%20Facade_Installation%20Guide-EN-DE-FR-V1.2--260410.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Cables for Alternator Charger 600 & Plus 1000_User Manual",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1765871380285/EcoFlow%20Cables%20for%20Alternator%20Charger%20600%20%26%20Plus%201000_User%20Manual.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-05-09",
+   "regioni": [
+    "eu",
+    "uk",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Cables for Alternator Charger 600 & Plus 1000_User Manual",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1765785531628/EcoFlow%20Cables%20for%20Alternator%20Charger%20600%20%26%20Plus%201000_User%20Manual.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-05-09",
+   "regioni": [
+    "eu",
+    "uk",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 2 Max Smart Extra Battery User Manual",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1766714817894/EcoFlow%20DELTA%202%20Max%20Smart%20Extra%20Battery-User%20Manual%20V1.0%20(EN).pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 2 Max Smart Extra Battery-User Manual V1.0 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/5/18/EcoFlow%20DELTA%202%20Max%20Smart%20Extra%20Battery-User%20Manual%20V1.0%20(EN)_1684404521057.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 2 Max Smart Extra Battery-User Manual V1.0 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/1/5/EcoFlow%20DELTA%202%20Max%20Smart%20Extra%20Battery-User%20Manual%20V1.0%20(EN)_1684389522506_1704434984389.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 2 Max-QUICK START GUIDE_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1756903162339/DELTA%20Max(LFP)-120x200mm-V0.1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 2 Max-User Manual",
+   "adres": "https://manuals.ecoflow.com/us/product/delta-2-max-portable-power-station?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 2 Max-User Manual (EN)",
+   "adres": "https://manuals.ecoflow.com/eu/product/delta-2-max-portable-power-station?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 2 Smart Extra Battery-User Manual V1.1 (EN)",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1741164012665/EcoFlow%20DELTA%202%20Smart%20Extra%20Battery-User%20Manual%20V1.1%20(EN).pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 2 Smart Extra Battery-User Manual_PL",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1736489800769/EcoFlow%20DELTA%202%20Smart%20Extra%20Battery_User%20Manual_pl.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 2_QUICK START GUIDE_ V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1757055005651/DELTA%20Max(LFP)-120x200mm-V0.1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 2_Quick Start Guide_V0.2",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1756902813540/Quick%20Start%20Guide-DELTA%202-V0.2.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-13",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 2-User Manual",
+   "adres": "https://manuals.ecoflow.com/us/product/delta-2-portable-power-station?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 3 1000 Air User Manual",
+   "adres": "https://manuals.ecoflow.com/product/delta-3-1000-air?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 3 1500 Portable Power Station_QUICK START GUIDE_V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1756907343686/EcoFlow%20DELTA%203%201500-QUICK%20START%20GUIDE-V1.1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 3 1500_Quick Start Guide_V1.0_Global",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1745913304513/EcoFlow%20DELTA%203%201500_Quick%20Start%20Guide_V1.0_Global.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 3 1500_Safety Instructions_V1.1_Global",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1745913306693/EcoFlow%20DELTA%203%201500_Safety%20Instructions_V1.1_Global.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 3 1500_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/delta-3-1500?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 3 Classic Portable Power Station_Quick Start Guide V1.1_Global",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1762326051085/EcoFlow%20DELTA%203%20Classic%20Portable%20Power%20Station_Quick%20Start%20Guide%20V1.1_Global.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-09-29",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 3 Classic Portable Power Station_Safety Instructions V1.0_Global",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1762326071120/EcoFlow%20DELTA%203%20Classic%20Portable%20Power%20Station_Safety%20Instructions%20V1.0_Global.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-09-29",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 3 Classic_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/delta-3-classic",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-09-29",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 3 Max Plus Portable Power Station_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/delta-3-max-plus?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 3 Max Plus Smart Extra Battery_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/delta-3-max-plus-smart-extra-battery?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 3 Max Portable Power Station_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/delta-3-max?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 3 Plus Portable Power Station_User Manual",
+   "adres": "https://manuals.ecoflow.com/us/product/delta-3-plus?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 3 Plus_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/delta-3-plus?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 3 Portable Power Station_User Manual_da",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1787123062519/EcoFlow%20DELTA%203%20Portable%20Power%20Station_User%20Manual_da.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-08-19",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 3 Portable Power Station_User Manual_no",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1787123074219/EcoFlow%20DELTA%203%20Portable%20Power%20Station_User%20Manual_no.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-08-19",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 3 Portable Power Station_User Manual_sv",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1787123078832/EcoFlow%20DELTA%203%20Portable%20Power%20Station_User%20Manual_sv.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-08-19",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 3 Smart Extra Battery_Quick Start Guide_Global V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1745913378041/EcoFlow%20DELTA%203%20Smart%20Extra%20Battery_Quick%20Start%20Guide_Global%20V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 3 Smart Extra Battery_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/delta-3-extra-battery?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 3 Ultra Plus Portable Power Station_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/delta-3-ultra-plus?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-19",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 3 Ultra Portable Power Station_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/delta-3-ultra?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-19",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 3_Portable Power Station_User Manual_fi",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1787123068833/EcoFlow%20DELTA%203_Portable%20Power%20Station_User%20Manual_fi.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-08-19",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA 3_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/delta-3?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-08-19",
+   "regioni": [
+    "eu",
+    "us",
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Max 1600-User Manual PL",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1736909667601/L2-%234-MR310%26MR311-DELTA%20Max-.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Max 1600-User Manual V1.0 (EN+DE+FR+ES+IT+NL+RU+HK)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/9/27/EcoFlow%20DELTA%20Max-User%20Manual%20V1.0%20(EN%2BDE%2BFR%2BES%2BIT%2BNL%2BRU%2BHK)_1727409889901.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Max 1600-User Manual V1.0 (EN+FR)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/9/27/EcoFlow%20DELTA%20Max%20-User%20Manual%20V1.0%20(EN%2BFR)_1727409647535.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Max 2000-User Manual PL",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1736909514993/L2-%234-MR310%26MR311-DELTA%20Max-.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Max 2000-User Manual V1.0 (EN+DE+FR+ES+IT+NL+RU+HK)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/9/27/EcoFlow%20DELTA%20Max-User%20Manual%20V1.0%20(EN%2BDE%2BFR%2BES%2BIT%2BNL%2BRU%2BHK)_1727409593879.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Max EB-User Manual V1.0 (EN+DE+FR+ES+IT+NL+RU+HK)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/10/7/2048902442_1665094747354.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Max Smart Extra Battery User Manual",
+   "adres": "https://websiteoss.ecoflow.com/website/upload/2022/2/22/EcoFlow_DELTA_Max_Smart_Extra_Battery_User_Manual_1645511725813.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA mini User Manual",
+   "adres": "https://websiteoss.ecoflow.com/website/upload/2022/2/23/DELTA_mini_User_Manual_1645588428557.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA mini-User manual PL",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1736909396099/L2-%235-MR320-DELTA%20Mini-.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA MINI-User Manual V1.0 (EN+FR)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/5/23/EcoFlow%20DELTA%20MINI-User%20Manual%20V1.0%20(EN%2BFR)_1716448512389.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro 3 Portable Power Station_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/delta-pro-3-portable-power-station?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-04-16",
+   "regioni": [
+    "eu",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro 3 Smart Extra Battery_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/delta-pro-3-smart-extra-battery?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFLow DELTA Pro 3_Quick Start Guide",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1768297883425/EcoFLow%20DELTA%20Pro%203_Quick%20Start%20Guide.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-16",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFLow DELTA Pro 3_Quick Start Guide",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1768297968687/EcoFLow%20DELTA%20Pro%203_Quick%20Start%20Guide.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-16",
+   "regioni": [
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFLow DELTA Pro 3_Quick Start Guide",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1768298036646/EcoFLow%20DELTA%20Pro%203_Quick%20Start%20Guide.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-16",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro 3_Safety Instruction",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776326416818/DELTA%20Pro%203_Safety%20Instruction.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-16",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro 3_Safety Instruction",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776326178662/DELTA%20Pro%203_Safety%20Instruction.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-16",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro 3_Safety Instruction",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776327058109/DELTA%20Pro%203_Safety%20Instruction.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-16",
+   "regioni": [
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro 3_Safety Instruction",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776327609037/DELTA%20Pro%203_Safety%20Instruction.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-16",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro EB Smart Extra Battery-User Manual V1.0 (EN+DE+FR+IT+ES+NL+RU+CHT)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/10/13/232119342_1665629246688.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA PRO Remote Control-User Manual V0.1 (EN+DE+FR+IT+ES+NL+RU+JA+KR+CN+HK)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/10/7/-989526997_1665094304397.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro Smart Extra Battery User Manual",
+   "adres": "https://websiteoss.ecoflow.com/website/upload/2022/2/22/DELTA_Pro_Smart_Extra_Battery_User_Manual_1645511757697.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro Ultra - UL9540 Certificate",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/1/25/EcoFlow%20DELTA%20Pro%20Ultra%20-%20UL9540%20Certificate_1706171731816.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro Ultra Battery - cSGSus UL1973 Certificate",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/1/25/EcoFlow%20DELTA%20Pro%20Ultra%20Battery%20-%20cSGSus%20UL1973%20Certificate_1706171820930.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro Ultra Battery_Safety Instructions_V1.2_Global",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1751595833959/EcoFlow%20DELTA%20Pro%20Ultra%20Battery_Safety%20Instructions_V1.2_Global.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-17",
+   "regioni": [
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro Ultra Inverter - cSGSus UL1012 & UL1778 & CSA 107.3 Certificate",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/1/25/EcoFlow%20DELTA%20Pro%20Ultra%20Inverter%20-%20cSGSus%20UL1012%20%26%20UL1778%20%26%20CSA%20107.3%20Certificate_1706171841115.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro Ultra Inverter - cSGSus UL1741 & CSA107.1 & UL1699B Certificate",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/1/25/EcoFlow%20DELTA%20Pro%20Ultra%20Inverter%20-%20cSGSus%20UL1741%20%26%20CSA107.1%20%26%20UL1699B%20Certificate_1706171855090.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro Ultra Inverter_Safety Instructions_V1.1_Global",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1751449815317/EcoFlow%20DELTA%20Pro%20Ultra_Quick%20Start%20Guide_V1.1_Global.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-17",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro Ultra Series Battery_Safety Instruction_V1.3",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1779962636756/EcoFlow%20DELTA%20Pro%20Ultra%20Series%20Battery_Safety%20Instruction_V1.3.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-05-28",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro Ultra X_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/delta-pro-ultra-x?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-10-15",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro Ultra_Quick Start Guide_V1.1_Global",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1751595844571/EcoFlow%20DELTA%20Pro%20Ultra_Quick%20Start%20Guide_V1.1_Global.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-17",
+   "regioni": [
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro Ultra_Safety Instruction",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776411807275/EcoFlow%20DELTA%20Pro%20Ultra_Safety%20Instruction.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-17",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro Ultra_Safety Instruction",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776411730816/EcoFlow%20DELTA%20Pro%20Ultra_Safety%20Instruction.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-17",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro Ultra_Safety Instruction",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776411956069/EcoFlow%20DELTA%20Pro%20Ultra_Safety%20Instruction.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-17",
+   "regioni": [
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro Ultra_Safety Instruction",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776411989041/EcoFlow%20DELTA%20Pro%20Ultra_Safety%20Instruction.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-17",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro Ultra_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/delta-pro-ultra?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-04-17",
+   "regioni": [
+    "eu",
+    "uk",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro Ultra_User Manual",
+   "adres": "https://manuals.ecoflow.com/us/product/delta-pro-ultra?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-04-17",
+   "regioni": [
+    "uk",
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro-Quick Start Guide US V2.0 (EN+FR+CHT)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/9/30/-122829674_1664509999895.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro-User Manual",
+   "adres": "https://manuals.ecoflow.com/us/product/delta-pro-portable-power-station?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA Pro-User Manual PL",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1736909246109/L2-%233-MR500-DELTA%20PRO%20.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA User Manual",
+   "adres": "https://websiteoss.ecoflow.com/website/upload/2022/2/22/EcoFlow_DELTA_User_Manual_1645511344047.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow DELTA-User Manual V1.1 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/8/20/EcoFlow%20DELTA-User%20Manual%20V1.1%20(EN-US)_1724120671655.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Double Voltage Hub-Power Input Output Port (EcoFlow DELTA Pro) Quick Start Guide V1.0 (EN+FR)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/1/5/EcoFlow%20Double%20Voltage%20Hub-Power%20Input%20Output%20Port%20(EcoFlow%20DELTA%20Pro)%20Quick%20Start%20Guide%20V1.0%20(EN%2BFR)_1704450371742.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Double Voltage Hub-User Manual V0.2 (EN+JA)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/9/19/-1385766304_1663569283423.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow EV X-Stream Adapter-User Manual V0.1 (EN+DE+FR+IT+ES+NL+RU+JA+KR+CN+HK)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/10/7/-1024443311_1665092319455.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow FlowMaster Generator Rectifier_Installation Guide V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1792030079675/EcoFlow%20FlowMaster%20Generator%20Rectifier_Installation%20Guide.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-15",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Foldable Bracket-User Manual V1.0 (EN+DE+FR+IT+ES+NL+RU)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/5/10/EcoFlow%20Foldable%20Bracket-User%20Manual%20V1.0%20(EN%2BDE%2BFR%2BIT%2BES%2BNL%2BRU)_1715335563221.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-05-25",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow GLACIER Classic Accessories_Quick Start Guide",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1760927919924/EcoFlow%20GLACIER%20Classic%20Accessories_Quick%20Start%20Guide_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow GLACIER Classic Accessories_Quick Start Guide",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1760926574227/EcoFlow%20GLACIER%20Classic%20Accessories_Quick%20Start%20Guide_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow GLACIER Classic Accessories_Quick Start Guide",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1760927207456/EcoFlow%20GLACIER%20Classic%20Accessories_Quick%20Start%20Guide_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow GLACIER Classic_Quick Start Guide_V1.0_Global",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1744709778664/EcoFlow%20GLACIER%20Classic_Quick%20Start%20Guide_V1.0_Global.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow GLACIER Classic_Safety Instructions_V1.0_Global",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1744709771239/EcoFlow%20GLACIER%20Classic_Safety%20Instructions_V1.0_Global.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow GLACIER Classic_User Manual",
+   "adres": "https://manuals.ecoflow.com/eu/product/glacier-classic?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow GLACIER Plug-in Battery_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/glacier-plug-in-battery?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow GLACIER Plug-in Battery-User Manual V1.0 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/4/18/EcoFlow%20Glacier%20Plug-in%20Battery-User%20Manual%20V1.0%20(EN)_1681802958387.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-05-25",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Glacier-User Manual V1.0 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/6/26/EcoFlow%20Glacier-User%20Manual%20V1.0%20(EN)_1687768605568.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow GLACIER-User Manual V1.0 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/4/26/EcoFlow%20Glacier-User%20Manual%20V1.0%20(EN)_1682489732382.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow GLACIER-User Manual V1.1 (EN)",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1779673032814/EcoFlow%20Glacier-User%20Manual%20V1.1%20(EN).pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-05-25",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow HeatGuard Solar Film (For Model 3)_Installation Guide_Multilingual V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747731727092/EcoFlow%20HeatGuard%20Solar%20Film%20(For%20Model%203)_Installation%20Guide%20V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow HeatGuard Solar Film (For Model Y)_Installation Guide_Multilingual V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747731748105/EcoFlow%20HeatGuard%20Solar%20Film%20(For%20Model%20Y)_Installation%20Guide%20V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow J1939 Protocol",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/11/13/EcoFlow%20J1939%20Protocol_V1.02_20241112_1731460673096.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow LFP Battery Power Distribution Terminal-Quick Installation Guide V1.0 (EN+JP+CHS)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/11/3/-265668628_1667448431899.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Lithium 12V 100Ah Deep Cycle LiFePO4 Battery_User Manual_V1.2 (EN+FR)",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1745574118477/EcoFlow%20Lithium%2012V%20100Ah%20Deep%20Cycle%20LiFePO4%20Battery_User%20Manual_V1.2%20(EN%2BFR).pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Lithium 12V 100Ah Deep Cycle Marine Trolling Motor Battery_User Manual_V1.3",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1745574075543/EcoFlow%20Lithium%2012V%20100Ah%20Deep%20Cycle%20Marine%20Trolling%20Motor%20Battery_User%20Manual_V1.3%20(EN%2BFR).pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Manual Transfer Switch_User Manual_V1.0_EN",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1753927117807/EcoFlow%20Manual%20Transfer%20Switch_User%20Manual_V1.0_EN.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-17",
+   "regioni": [
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow OCEAN Pro Solar Battery System_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/ocean-pro-solar-battery-system?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow OCEAN Smart Electrical Panel (40 circuits and 8 circuits)_User manual",
+   "adres": "https://manuals.ecoflow.com/product/ocean-smart-electrical-panel?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow P1 Meter User Manual",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1764316005923/EcoFlow%20P1%20Meter%20User%20Manual.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Portable Power Station Grounding Adapter-User Manual V1.4 (en+ja+chs+de+fr+it+es+nl+ru+cht)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/10/18/Portable%20Power%20Station%20Grounding%20Adapter%20User%20Manual%20V1.4_1729234372296.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Power Dock_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/power-dock?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Power Hat_Frequently Asked Questions",
+   "adres": "https://manuals.ecoflow.com/product/power-hat?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Power Hat_Quick Start Guide V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1745907557716/EcoFlow%20Power%20Hat-Quick%20Start%20Guide%20V1.1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Power Hub (2.6kW) User Manual_EN_20240110",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/4/3/EcoFlow%20Power%20Hub%20(2.6kW)%20User%20Manual_EN_20240110_1706515521030_1712135333530.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Power Hub (3.6kW)-User Manual V1.2 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/10/7/2076290784_1665077248683.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Power Hub 5kVA_Quick Start Guide",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1744964926083/EcoFlow%20Power%20Hub%205kVA_Quick%20Start%20Guide_20250214.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Power Hub 5kVA_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/power-hub-5kva?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Power Hub-User Manual V1.4 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/12/5/2133549086_1670236845138.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-05-22",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Power Hub-User Manual-V1.5 (EN)",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1779443602158/EcoFlow%20Power%20Hub_User%20Manual_V1.5_%20EN_for%20US%20site%20update%20only.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-05-22",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Power Kit Console_User Manual_V2.0_(EN+DE+FR+IT+ES+CHS)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/11/28/EcoFlow%20Power%20Kit%20Console-User%20Manual%20V2.0%20(EN%2BDE%2BFR%2BIT%2BES%2BCHS)_1732785984620.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Power Kit Console-User Manual V2.0 (EN+DE+FR+IT+ES+CHS)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/8/11/-1740663352_1660199424720.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Power Kits-Quick Start Guide V1.1 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/10/9/1714893841_1665306619601.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Power Kits-Quick Start Guide V1.3 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/12/5/1772152143_1670236998105.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-05-22",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Power Link_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/power-link?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow PowerInsight 2 Monitor_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/power-insight-2-monitor?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow PowerInsight 2 Monitor-Quick Start Guide_EN",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1757300527935/EcoFlow%20PowerInsight%202%20Monitor-Quick%20Start%20Guide_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow PowerInsight 2 Monitor-Safety Instructions_EN",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1757300533839/EcoFlow%20PowerInsight%202%20Monitor-Safety%20Instructions_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow PowerInsight Manuel d’utilisation V1.0 (FR)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/2/2/EcoFlow%20PowerInsight%20Manuel%20d%E2%80%99utilisation%20V1.0%20(FR)_1706846620929.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow PowerInsight User Manual V1.1 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/2/2/EcoFlow%20PowerInsight%20User%20Manual%20V1.1%20(EN)_1706846633458.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow PowerInsight_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/powerinsight?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow PowerPulse EV Charger (9.6kW)_Installation Guide_en V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1752129635271/EcoFlow%20PowerPulse%20EV%20Charger%20(9.6kW)_Installation%20Guide_en%20V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow PowerPulse EV Charger (9.6kW)_Safety Instructions_en V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1752129639417/EcoFlow%20PowerPulse%20EV%20Charger%20(9.6kW)_Safety%20Instructions_en%20V1.1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow PowerPulse EV Charger (9.6kW)_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/powerpulse-9-6kW",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow PowerPulse Residential EV Charger-Error Code List V1.0 (EN+DE)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/2/26/EcoFlow%20PowerPulse%20Residential%20EV%20Charger-Error%20Code%20List%20V1.0%20(EN%2BDE)_1708913552629.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow PowerStream Micro-omvormer Handleiding V1.2 (NL)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/6/17/EcoFlow%20PowerStream%20Micro-omvormer%20Handleiding%20V1.2%20(NL)_1718609635434.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow PowerStream Microinverter User Manual V1.4 (EN)_1712066298361",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1755333337481/EcoFlow%20PowerStream%20Microinverter%20User%20Manual%20V1.4%20(EN)_1712066298361.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow PowerStream_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/powerstream?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow PV Clamp Holder_Quick Start Guide_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1744706883536/EcoFlow%20PV%20Clamp%20Holder_Quick%20Start%20Guide_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID 20W GaN Charger_Quick Start Guide V1.0 (EN+DE+FR+IT+ES+NL+RU+CHT+KR)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/8/8/EcoFlow%20RAPID%2020W%20GaN%20Charger_Quick%20Start%20Guide%20V1.0%20(EN%2BDE%2BFR%2BIT%2BES%2BNL%2BRU%2BCHT%2BKR)_1723113960445.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID 3-in-1 Power Bank (10,000mAh, 35W) Quick Start Guide_V1.0_20250530",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1749209009823/EcoFlow%20RAPID%203-in-1%20Power%20Bank%20(10%2C000mAh%2C%2035W)%20Quick%20Start%20Guide_V1.0_20250530.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID 3-in-1 Power Bank (10,000mAh, 35W)_Documentation",
+   "adres": "https://manuals.ecoflow.com/product/rapid-power-bank-10000-mah-35w?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID 30W GaN Charger_Quick Start Guide_V1.0 (en+de+fr+it+es+nl+ru+cht+ko)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/9/11/EcoFlow%20RAPID%2030W%20GaN%20Charger_Quick%20Start%20Guide_V1.0%20(en%2Bde%2Bfr%2Bit%2Bes%2Bnl%2Bru%2Bcht%2Bko)_1726048655772.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID 65W GaN Charger_Quick Start Guide_Quick Start Guide V1.0 (en+de+fr+it+es+nl+ru+chs+jp+cht+ko)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/9/11/EcoFlow%20RAPID%2065W%20GaN%20Charger_Quick%20Start%20Guide_Quick%20Start%20Guide%20V1.0%20(en%2Bde%2Bfr%2Bit%2Bes%2Bnl%2Bru%2Bchs%2Bjp%2Bcht%2Bko)_1726048725273.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Charger (45W, Retractable Cable, GaN) Quick Guide_V1.0_20250612",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1764234542719/EcoFlow%20RAPID%20Charger%20(45W%2C%20Retractable%20Cable%2C%20GaN)%20Quick%20Guide_V1.0_20250612.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Charger (65W, Retractable Cable, GaN) Quick Guide_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1764234150830/EcoFlow%20RAPID%20Charger%20(65W%2C%20Retractable%20Cable%2C%20GaN)%20Quick%20Guide_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Mag Power Bank (10,000mAh, 7.5W, Magnetic Charging)_Documentation",
+   "adres": "https://manuals.ecoflow.com/product/rapid-mag-power-bank-10000-mah?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-15",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Mag Power Bank (10K, 7.5W, Magnetic Charging)_Quick Start Guide_V2.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1768462520256/EcoFlow%20RAPID%20Mag%20Power%20Bank%20(10K%2C%207.5W%2C%20Magnetic%20Charging)_Quick%20Start%20Guide_V2.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-15",
+   "regioni": [
+    "eu",
+    "us",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Mag Power Bank (5,000mAh, 7.5W, Magnetic Charging)_Documentation",
+   "adres": "https://manuals.ecoflow.com/product/rapid-mag-power-bank-5000-mah?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-07",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Mag Power Bank (5K, 7.5W, Magnetic Charging) Quick Guide_Global_V1.0_en+de+fr+it+es+nl+ru+ja+ko+zh+pt+ar",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1766717803957/EcoFlow%20RAPID%20Mag%20Power%20Bank%20(5K%2C%207.5W%2C%20Magnetic%20Charging)%20Quick%20Guide_Global_V1.0_20250513.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-07",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Mag Power Bank (Built-in USB-C Cable)_Qiuck Start Guide_Global_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1764235412799/EcoFlow%20RAPID%20Mag%20Power%20Bank%20(Built-in%20USB-C%20Cable)_Qiuck%20Start%20Guide_Global_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Mag Power Bank (Built-in USB-C Cable)_Qiuck Start Guide_Global_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1764235181352/EcoFlow%20RAPID%20Mag%20Power%20Bank%20(Built-in%20USB-C%20Cable)_Qiuck%20Start%20Guide_Global_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Mag Power Bank (Built-in USB-C Cable)_Quick Start Guide_Global_V2.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1766977752757/EcoFlow%20RAPID%20Mag%20Power%20Bank%20(Built-in%20USB-C%20Cable)_Quick%20Start%20Guide_Global_V2.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Mag Power Bank_Quick Start Guide_Global_V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1766978910473/EcoFlow%20RAPID%20Mag%20Power%20Bank_Quick%20Start%20Guide_Global_V1.1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Mag Wireless Charging Station (3-in-1 Foldable)_Global_Quick Start Guide_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1768459044034/EcoFlow%20RAPID%20Mag%20Wireless%20Charging%20Station%20(3-in-1%20Foldable)_Quick%20Start%20Guide_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-15",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Magnetic Power Bank (10000mAh) Quick Start Guide_V1.3",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1765521986055/EcoFlow%20RAPID%20Magnetic%20Power%20Bank%20(10000mAh)%20Quick%20Start%20Guide_V1.3_20250617_NEW.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Magnetic Power Bank (10000mAh)_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/rapid-magnetic-power-bank?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Magnetic Power Bank (5000mAh) Quick Start Guide_V1.5",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1765521849982/EcoFlow%20RAPID%20Magnetic%20Power%20Bank%20(5000mAh)%20Quick%20Start%20Guide_V1.5_20250617.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-07",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Magnetic Power Bank (5000mAh) User Manual (EN) V1.2",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/11/19/EcoFlow%20RAPID%20Magnetic%20Power%20Bank%20(5000mAh)%20User%20Manual%20(EN)_V1.2_20241119_1732000643013.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Magnetic Power Bank (5000mAh) User Manual (EN)_V1.2",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1767766201664/EcoFlow%20RAPID%20Magnetic%20Power%20Bank%20(5000mAh)%20User%20Manual%20(EN)_V1.2.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-07",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Magnetic Power Bank (5000mAh)_Documentation",
+   "adres": "https://manuals.ecoflow.com/product/rapid-magnetic-power-bank-5000?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-07",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Power Bank (10K, 45W, with Retractable Cable)_Quick Start Guide_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1775201868479/EcoFlow%20RAPID%20Power%20Bank%20(10K%2C%2045W%2C%20with%20Retractable%20Cable)_Quick%20Start%20Guide_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-03",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Power Bank (25,000mAh, 170W, 100W Built-In and Retractable Cables) Quick Start Guide_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1749207620308/EcoFlow%20RAPID%20Power%20Bank%20(25%2C000mAh%2C%20170W%2C%20100W%20Built-In%20and%20Retractable%20Cables)%20Quick%20Start%20Guide_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Power Bank (25,000mAh, 170W, 100W Built-In and Retractable Cables)_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/rapid-power-bank-25000mah-170w-with-cables?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Power Bank (25,000mAh, 170W) Quick Start Guide_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1749207875523/EcoFlow%20RAPID%20Power%20Bank%20(25%2C000mAh%2C%20170W)%20Quick%20Start%20Guide_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Power Bank (25,000mAh, 170W)_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/rapid-power-bank-25000mah-170w?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Pro 3-in-1 Power Bank (10,000mAh, 67W)_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/rapid-pro-3-in-1-power-bank-10000mah-67w?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Pro 3-in-1 Power Bank Quick Start Guide_V1.0_20250528",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1749207504374/EcoFlow%20RAPID%20Pro%203-in-1%20Power%20Bank%20Quick%20Start%20Guide_V1.0_20250528.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Pro Charger (140W, 4 Ports, GaN)_Quick Start Guide_Global_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1764140430831/EcoFlow%20RAPID%20Pro%20Charger%20(140W%2C%204%20Ports%2C%20GaN)_Quick%20Start%20Guide_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Pro Charger(100W, 3 Ports, GaN)_Quick Start Guide_Global_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1764229064958/EcoFlow%20RAPID%20Pro%20Charger(100W%2C%203%20Ports%2C%20GaN)_Quick%20Start%20Guide_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Pro Desktop Charger (320W, 5 Ports, GaN)_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/rapid-pro-desktop-charger-320w-5-ports-gan?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Pro Desktop Charger (320W, 5 Ports, GaN)-Quick Start Guide V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1749208004866/EcoFlow%20RAPID%20Pro%20Desktop%20Charger%20(320W%2C%205%20Ports%2C%20GaN)-Quick%20Start%20Guide%20V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Pro Power Bank (20000mAh, 230W, 100W Built-in Cable) Quick Start Guide_20250411",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1749201603297/EcoFlow%20RAPID%20Pro%20Power%20Bank%20(20000mAh%2C%20230W%2C%20100W%20Built-in%20Cable)%20Quick%20Start%20Guide_20250411.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-05-26",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Pro Power Bank (20000mAh, 230W, 100W Built-in Cable)_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/rapid-pro-power-bank-100w?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-05-26",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Pro Power Bank (27650mAh, 300W, 140W Built-in Cable) Quick Start Guide_20250411",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1749201710380/EcoFlow%20RAPID%20Pro%20Power%20Bank%20(27650mAh%2C%20300W%2C%20140W%20Built-in%20Cable)%20Quick%20Start%20Guide_20250411.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Pro Power Bank (27650mAh, 300W, 140W Built-in Cable)_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/rapid-pro-power-bank-140w?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Pro X Magnetic Block_User Manual_V1.1-en-de-fr-it-es-nl-pt-ru-ar-ko-ja-tw",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1763453783642/EcoFlow%20RAPID%20Pro%20X%20Magnetic%20Block_User%20Manual_V1.1-en-de-fr-it-es-nl-pt-ru-ar-ko-ja-tw.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Pro X Power Bank (27,650mAh, 300W)_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/rapid-pro-x-power-bank?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RAPID Pro X Power Bank (27K, 300W) Quick Start Guide_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1756879644092/EcoFlow%20RAPID%20Pro%20X%20Power%20Bank%20(27K%2C%20300W)%20Quick%20Start%20Guide_20250903.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER 2 & RIVER 2 240 Portable Power Station_User Manual",
+   "adres": "https://manuals.ecoflow.com/us/product/river-2-portable-power-station?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER 2 230_Quick Start Guide_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1756907967783/EcoFlow%20RIVER%202-QUICK%20START%20GUIDE-V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER 2 230_Quick Start Guide_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1756908188022/EcoFlow%20RIVER%202-QUICK%20START%20GUIDE-V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER 2 Max-QUICK START GUIDE V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1756908612306/EcoFlow%20RIVER%202%20Max-QUICK%20START%20GUIDE-V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-05-26",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER 2 Max-QUICK START GUIDE V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1756908596708/EcoFlow%20RIVER%202%20Max-QUICK%20START%20GUIDE-V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER 2 Max-QUICK START GUIDE V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1756908682171/EcoFlow%20RIVER%202%20Max-QUICK%20START%20GUIDE-V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER 2 Max-QUICK START GUIDE V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1756908573032/EcoFlow%20RIVER%202%20Max-QUICK%20START%20GUIDE-V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER 2 Max-Troubleshooting Guide (multilingual) V1.0",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/12/18/EcoFlow%20RIVER%202%20Max%20Troubleshooting%20Guide%20V1.0%20(multilingual)_1702886050931.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER 2 Pro-QUICK START GUIDE-V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1756909039831/EcoFlow%20RIVER%202%20Pro-QUICK%20START%20GUIDE-V1.1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-05-27",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER 2 Pro-Troubleshooting Guide (multilingual) V1.0",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/12/18/EcoFlow%20RIVER%202%20Pro%20Troubleshooting%20Guide%20V1.0%20(multilingual)_1702886086645.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER 2-Troubleshooting (EN) V1.0",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/8/16/EcoFlow%20RIVER%202-Troubleshooting%20(EN)%20V1.0_1692171180895.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER 2-Troubleshooting (EN) V1.0",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/8/31/EcoFlow%20RIVER%202-Troubleshooting%20(EN)%20V1.0_1693462468276.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER 2-Troubleshooting Guide (multilingual) V1.0",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/12/18/EcoFlow%20RIVER%202%20Troubleshooting%20Guide%20V1.0%20(multilingual)_1702885917863.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER 2-User Manual (EU-PL) V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1736489453448/EcoFlow%20RIVER%202_User%20Manual_pl.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER 3 Plus (Wireless) Magnetic Power Bank_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/river-3-plus-wireless-magnetic-power-bank?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER 3 Plus (Wireless)_User Manual",
+   "adres": "https://manuals.ecoflow.com/eu/product/river-3-plus-wireless?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER 3 Plus Smart Extra Battery_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/river-3-plus-smart-extra-battery?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER 3 Plus/RIVER 3 Plus (270)_User Manual",
+   "adres": "https://manuals.ecoflow.com/eu/product/river-3-plus?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER 3 Plus/RIVER 3 Plus (270)_User Manual",
+   "adres": "https://manuals.ecoflow.com/us/product/river-3-plus?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER 3 Plus/RIVER 3 Plus (270)_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/river-3-plus?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "uk",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER 3/RIVER 3 (230)/RIVER 3 (10 ms UPS)_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/river-3?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER Extra Battery-User Manual-V1.0 (EN）",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/10/7/1192754668_1665094949433.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER Max Plus-User Manual V1.1 (EN+JP+CN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/6/7/-1328426078_1658743878916_1717735877547.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER Max User Manual",
+   "adres": "https://websiteoss.ecoflow.com/website/upload/2022/2/22/RIVER_Max_User_Manual_1645511183941.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER Max-User Manual V1.1 (AU)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/6/7/231564715_1668163028291_1717735464028.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER Max-User Manual V1.1 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/6/7/EcoFlow%20RIVER%20Max-User%20Manual-V1.0%EF%BC%88EN%EF%BC%89_1655475600515_1717731145959.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER Max-User Manual V1.1 (EN+DE+IT+FR+SP+NL+RU+CN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/6/7/231564715_1668163028291_1717735400545.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER Mini (Wireless) User Manual V1.1 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/6/7/EcoFlow%20RIVER%20Mini%20User%20Manual-V1.0%20%EF%BC%88EN%EF%BC%89_1655788480886_1717735972598.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER Mini (Wireless)-User Manual V1.1（EN+DE+IT+FR+SP+NL+RU+CN）",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/6/7/EcoFlow%20RIVER%20Mini%20User%20Manual-V1.0%EF%BC%88EN%26DE%26IT%26FR%26SP%26NL%26RU%26CN%EF%BC%89_1655790595298_1717736183489.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER mini Wireless User Manual",
+   "adres": "https://websiteoss.ecoflow.com/website/upload/2022/2/22/RIVER_mini_Wireless_User_manual_1645511255523.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER Mini-User Manual PL",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1736910757391/L1-%238-MR%20420-RIVER%20mini-.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER Mini-User Manual V1.1 (EN+DE+IT+FR+SP+NL+RU+CN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/6/7/EcoFlow%20RIVER%20Mini%20-User%20Manual-V1.0(%20EN%26DE%26IT%26FR%26SP%26NL%26RU%26CN)_1655844280474_1717736419127.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER Pro Extra Battery User Manual",
+   "adres": "https://websiteoss.ecoflow.com/website/upload/2022/2/22/EcoFlow_RIVER_Pro_Extra_Battery_User_Manual_1645511894934.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER Pro Extra Battery-User Manual V1.0 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/7/14/EcoFlow RIVER Pro Extra Battery-User Manual-V1.0（EN）_1657730907656.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER Pro User Manual",
+   "adres": "https://websiteoss.ecoflow.com/website/upload/2022/2/22/RIVER_Pro_User_Manual_1645511172403.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER Pro-User Manual PL",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1736908950352/L1-%234-MR401-RIVER%20600%20PRO--PL.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER Pro-User Manual V1.0 (AU)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/6/18/EcoFlow RIVER Pro-User Manual-V1.0（AU）_1655483225915.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER Pro-User Manual V1.0 (EN+DE+IT+FR+SP+NL+RU+CN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/6/18/EcoFlow RIVER Pro-User Manual-V1.0（EN&DE&IT&FR&SP&NL&RU&CN）_1655483353473.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER Pro-User Manual V1.1 (AU)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/6/7/EcoFlow%20RIVER%20Pro-User%20Manual-V1.0%EF%BC%88EN%26DE%26IT%26FR%26SP%26NL%26RU%26CN%EF%BC%89_1655456317244_1717736712792.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER Pro-User Manual V1.1 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/6/7/EcoFlow%20RIVER%20Pro-User%20Manual-V1.0%EF%BC%88EN%EF%BC%89_1655455246481_1717736626522.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER Pro-User Manual V1.1 (EN+DE+IT+FR+SP+NL+RU+CN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/6/7/EcoFlow%20RIVER%20Pro-User%20Manual-V1.0%EF%BC%88EN%26DE%26IT%26FR%26SP%26NL%26RU%26CN%EF%BC%89_1655456317244_1717736744428.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER-User Manual PL",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1736909059106/L1-%235-MR400-RIVER%20600--%20PL.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER-User Manual V1.0 (AU)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/6/18/EcoFlow RIVER-User Manual-V1.0（AU)_1655482276950.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER-User Manual V1.0 (EN+DE+IT+FR+SP+NL+RU+CN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/6/18/EcoFlow RIVER-User Manual-V1.0（EN&DE&IT&FR&SP&NL&RU&CN)_1655483018190.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER-User Manual V1.1 (AU)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/6/7/EcoFlow%20RIVER-User%20Manual-V1.1%EF%BC%88AU)_1655476865339_1717729727815.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow RIVER-User Manual V1.1 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/5/31/EcoFlow%20RIVER-User%20Manual-V1.0%EF%BC%88EN)_1655476774819_1717120878655.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Shower Kit_Quick Start Guide V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1744710974530/EcoFlow%20Shower%20Kit_Quick%20Start%20Guide%20V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-05-22",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Shower Kit_Safety Instructions V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1745565680814/EcoFlow%20Shower%20Kit_Safety%20Instructions%20V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Shower Kit_Safety Instructions V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1744710978931/EcoFlow%20Shower%20Kit_Safety%20Instructions%20V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-05-22",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Shower Kit_Safety Instructions V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1745565931555/EcoFlow%20Shower%20Kit_Safety%20Instructions%20V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Single Axis Solar Tracker - Installation Guide V2.0",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/5/31/Single%20Axis%20Solar%20Tracker%20-%20Installation%20Guide%20V2.0_1685521976403.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Single Axis Solar Tracker 2_Installation Guide V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1746690725930/EcoFlow%20Single%20Axis%20Solar%20Tracker%202_Installation%20Guide%20V1.0_%E5%89%AF%E6%9C%AC.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Single Axis Solar Tracker 2_User Manual",
+   "adres": "https://manuals.ecoflow.com/cn/product/single-axis-solar-tracker-2?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Single Axis Solar Tracker 2_What's in the Box",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747131078322/EcoFlow%20Single%20Axis%20Solar%20Tracker%202_What's%20in%20the%20Box.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Auto Battery Charger User Manual V1.0 (Multilingual)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/2/26/EcoFlow%20Smart%20Auto%20Battery%20Charger%20User%20Manual%20V1.0%20(Multilingual)_1708934188760.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Cooling Deck_Quick Start Guide V1.0 (EN+DE+IT+ES+NL+RU)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/8/8/EcoFlow%20Smart%20Cooling%20Deck_Quick%20Start%20Guide%20V1.0%20(EN%2BDE%2BIT%2BES%2BNL%2BRU)_1723107523802.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Extra Battery  - Quick Start Guide V3.0 (multilingual)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/4/27/EcoFlow%20Smart%20Extra%20Battery%20%20-%20Quick%20Start%20Guide%20V3.0%20(multilingual)_1682588566762.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Extra Battery-User Manual V1.0",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/5/10/EcoFlow%20Smart%20Extra%20Battery-User%20Manual%20V1.0_1683712075482.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Gateway (200A)_Installation Guide_EN&FR_V1.3",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776158259835/EcoFlow%20Smart%20Gateway%20(200A)_Installation%20Guide_EN%26FR_V1.3.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Gateway (200A)_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/smart-gateway-200a?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Generator 3000 (Dual Fuel)_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/dual-fuel-smart-generator-3000?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Generator 4000 (Dual Fuel)_User Manual_US_EPA_V1.4 (EN+FR+CHT)",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1741328384267/EcoFlow%20Smart%20Generator%204000%20(Dual%20Fuel)_User%20Manual_US_EPA_V1.4%20(EN%2BFR%2BCHT).pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Generator User Manual",
+   "adres": "https://websiteoss.ecoflow.com/website/upload/2022/3/7/Smart_Generator_User_Manual_1646656403861.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Generator-User Manual V1.0",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/9/29/979222362_1664457932165.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Generator-User Manual V1.0 (EN+FR)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/8/15/392503383_1660547741388.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Generator（Dual Fuel) -User Manual V1.0",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/4/24/EcoFlow%20Smart%20Generator%EF%BC%88Dual%20Fuel%EF%BC%89-User%20Manual%20V1.0_1682301317450.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Generator（Dual Fuel）-User Manual V1.0",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/4/27/EcoFlow%20Smart%20Generator%EF%BC%88Dual%20Fuel%EF%BC%89-User%20Manual%20V1.0_1682586854568.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Home Panel 10 (120V/240V)_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/smart-home-panel-10?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-10-29",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Home Panel 2 Owner Manual",
+   "adres": "https://manuals.ecoflow.com/product/smart-home-panel-2?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Home Panel 2_Installation Guide_V2.2",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1756975334105/EcoFlow%20Smart%20Home%20Panel%202%20Installation%20Guide_EN_20250904.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Home Panel 3 (32&24)-Installation Guide-EN&FR-V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776158057004/EcoFlow%20Smart%20Home%20Panel%203%20(32%2624)-Installation%20Guide-EN%26FR-V1.1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Home Panel 3_User Manual_EN_V1.0",
+   "adres": "https://manuals.ecoflow.com/product/smart-home-panel-3-32-circuits?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Home Panel installation Manual V0.1 (EN+DE+FR+IT+ES+NL+RU）",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/10/7/-627434040_1665089475370.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Home Panel User Manual V0.1 (EN+DE+FR+IT+ES+NL+RU）",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/10/7/-77543367_1665089458345.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Home Panel-APP User Manual V1.1(EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/4/23/EcoFlow%20Smart%20Home%20Panel-APP%20User%20Manual%20V1.1(EN)_1713863059672.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Home Panel-APP User Manual V1.1(EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/4/23/EcoFlow%20Smart%20Home%20Panel-APP%20User%20Manual%20V1.1(EN)_1713863168637.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Home Panel-APP User Manual V1.1(EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/4/23/EcoFlow%20Smart%20Home%20Panel-APP%20User%20Manual%20V1.1(EN)_1713863261921.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Inlet Box(Smart Home Panel 2 Upgrade)_Installation guide_V1.1_EN&FR",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1779782650187/EcoFlow%20Smart%20Inlet%20Box(Smart%20Home%20Panel%202%20Upgrade)_Installation%20guide_EN%26FR_V1.1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-05-26",
+   "regioni": [
+    "us",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Meter Dual CT User Manual",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1789028990939/EcoFlow%20Smart%20Meter%20Dual%20CT%20User%20Manual.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-09-10",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Meter User Manual_en+de+fr_V1.2",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1748598610444/EcoFlow%20Smart%20Meter%20User%20Manual_en%2Bde%2Bfr_V1.2.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Smart Plug User Manual V1.0 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/5/31/EcoFlow%20Smart%20Plug%20User%20Manual%20V1.0%20(EN)_1685526000132.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Solar Tracker User Manual",
+   "adres": "https://websiteoss.ecoflow.com/website/upload/2022/2/22/EcoFlow_Solar_Tracker_User_Manual_1645511678100.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Solar Tracker-User Manual V1.1 (EN+DE+FR+JP+CHS)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/5/30/EcoFlow%20Solar%20Tracker-User%20Manual%20V1.1%20(EN%2BDE%2BFR%2BJP%2BCHS)(1)_1685414023644.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM 5000_AC 5000 Installation Guide",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1789366326617/EcoFlow%20STREAM%205000_AC%205000%20Installation%20Guide.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-09-14",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM 5000_AC 5000 Installation Guide",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1789366279335/EcoFlow%20STREAM%205000_AC%205000%20Installation%20Guide.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-09-14",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM 5000_AC 5000 Installation Guide",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1789366292841/EcoFlow%20STREAM%205000_AC%205000%20Installation%20Guide.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-09-14",
+   "regioni": [
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM 5000_AC 5000 Installation Guide",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1789366314215/EcoFlow%20STREAM%205000_AC%205000%20Installation%20Guide.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-09-14",
+   "regioni": [
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM 5000_AC 5000 User Manual",
+   "adres": "https://manuals.ecoflow.com/product/stream-3000-5000-ac-5000?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-09-14",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM AC Pro_Installation Guide",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776392079262/EcoFlow%20STREAM%20AC%20Pro_Installation%20Guide.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-17",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM AC Pro_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/stream-ac-pro?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-04-17",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM AC_Installation Guide_en+de+fr_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1750824047604/EcoFlow%20STREAM%20AC_Installation%20Guide_en%2Bde%2Bfr_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM AC_Safety Instructions_multilingual_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1750824100256/EcoFlow%20STREAM%20AC_Safety%20Instructions_multilingual_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM AC_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/stream-ac?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM BKW-AC Cable_Quick Start Guide_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1766129751383/EcoFlow%20STREAM%20BKW-AC%20Cable_Quick%20Start%20Guide_EN-V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM DIY Front Case(For EcoFlow STREANUltra X_Quick Start Guide_V 1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1760608766947/EcoFlow%20STREAM%20DIY%20Front%20Case(For%20EcoFlow%20STREANUltra%20X_Quick%20Start%20Guide_V%201.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-17",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFLow STREAM Expansion Battery 5000_Installation Guide",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1789029060822/EcoFLow%20STREAM%20Expansion%20Battery%205000_Installation%20Guide.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-09-14",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM Gateway_Quick Start Guide",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1789028518527/EcoFlow%20STREAM%20Gateway_Quick%20Start%20Guide.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-09-10",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM Gateway_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/stream-gateway/?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-09-10",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM Max_Installation Guide_en+de+fr_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1750823695120/EcoFlow%20STREAM%20Max_Installation%20Guide_en%2Bde%2Bfr_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM Max_Safety Instructions_multilingual_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1750823866082/EcoFlow%20STREAM%20Max_Safety%20Instructions_multilingual_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM Max_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/stream-max?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM Microinverter Quick Start Guide",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747018059501/Online-EcoFlow%20STREAM%20Microinverter%20Quick%20Start%20Guide_en%2Bes_V1.0_NA.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM Microinverter Quick Start Guide_en+de+fr_V1.2",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1744707055908/Online-EcoFlow%20STREAM%20Microinverter%20Quick%20Start%20Guide_en%2Bde%2Bfr_V1.2.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM Microinverter Safety Instructions",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747018047862/Online-EcoFlow%20STREAM%20Microinverter%20Safety%20Instructions_en%2Bes_V1.0_NA.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM Microinverter_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/stream-microinverter?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM Parallel Cable_Quick Start Guide_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747295052905/EcoFlow%20STREAM%20Parallel%20Cable_Quick%20Start%20Guide_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-16",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM Parallel Cable_Quick Start Guide_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747295203926/EcoFlow%20STREAM%20Parallel%20Cable_Quick%20Start%20Guide_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM Solar Panel Extension Cable_Quick Start Guide_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1766129674391/EcoFlow%20STREAM%20BKW%20DIY%20Cable_Quick%20Start%20Guide_EN-V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-14",
+   "regioni": [
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM Ultra & Pro_Installation Guide_en+de+fr_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747276514204/EcoFlow%20STREAM%20Ultra%20%26%20Pro_Installation%20Guide_en%2Bde%2Bfr_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-16",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM Ultra & Pro_Installation Guide_en+de+fr_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1747295383404/EcoFlow%20STREAM%20Ultra%20%26%20Pro_Installation%20Guide_en%2Bde%2Bfr_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM Ultra & Pro_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/stream-pro-and-ultra?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-04-16",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM Ultra Installation Guide_en+es_NA_V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1752722701956/EcoFlow%20STREAM%20Ultra%20Installation%20Guide_en%2Bes_NA_V1.1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM Ultra Safety Instructions_multilingual_V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1752722568264/EcoFlow%20STREAM%20Ultra%20Safety%20Instructions_multilingual_V1.1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM Ultra X_Installation Guide",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776392472101/EcoFlow%20STREAM%20Ultra%20X_Installation%20Guide.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-17",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM Ultra X_Safety Instructions_multilingual_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1754450847185/EcoFlow%20STREAM%20Ultra%20X_Safety%20Instructions_multilingual_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-17",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM Ultra X_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/stream-ultra-x?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-04-17",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM Ultra_User Manual",
+   "adres": "https://manuals.ecoflow.com/us/product/stream-ultra?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow STREAM Ultra&Pro_Installation Guide",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1776333459685/EcoFlow%20STREAM%20Ultra%26Pro_Installation%20Guide.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-16",
+   "regioni": [
+    "eu",
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow TITAN 5000 Classic_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/titan-5000-classic?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow TITAN 5000 Plus_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/titan-5000-plus",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow TITAN 5000_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/titan-5000?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow TITAN Battery 5kWh_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/titan-5000-battery?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-10-23",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow TRAIL 200 DC & EcoFlow TRAIL 300 DC_User Manual_global_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1757326207769/EcoFlow%20TRAIL%20200%20DC%20%26%20EcoFlow%20TRAIL%20300%20DC_User%20Manual_global_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow TRAIL 200 DC & EcoFlow TRAIL 300 DC_User Manual_global_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1757326229388/EcoFlow%20TRAIL%20200%20DC%20%26%20EcoFlow%20TRAIL%20300%20DC_User%20Manual_global_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow TRAIL 200 DC & EcoFlow TRAIL 300 DC_User Manual_global_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1752807935813/EcoFlow%20TRAIL%20200%20DC%20%26%20EcoFlow%20TRAIL%20300%20DC_User%20Manual_global_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "uk",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow TRAIL 200 DC & EcoFlow TRAIL 300 DC_User Manual_global_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1752808238764/EcoFlow%20TRAIL%20200%20DC%20%26%20EcoFlow%20TRAIL%20300%20DC_User%20Manual_global_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "uk",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow TRAIL 200 DC & EcoFlow TRAIL 300 DC_User Manual_global_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1757323257729/EcoFlow%20TRAIL%20200%20DC%20%26%20EcoFlow%20TRAIL%20300%20DC_User%20Manual_global_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow TRAIL 200 DC & EcoFlow TRAIL 300 DC_User Manual_global_V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1757323286975/EcoFlow%20TRAIL%20200%20DC%20%26%20EcoFlow%20TRAIL%20300%20DC_User%20Manual_global_V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow TRAIL Plus 300 DC_User Manual",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1760349714697/EcoFlow%20Trail%20Plus%20300%20DC%20User%20Manual.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Velcro Strap Handle_Quick Start Guide V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1744710971471/EcoFlow%20Velcro%20Strap%20Handle_Quick%20Start%20Guide%20V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-05-22",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow WAVE 2 -Troubleshooting Guide(EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/6/9/EcoFlow%20Wave%202%20-Troubleshooting%20Guide(EN)_1686294994156.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Wave 2 Add-on Battery-User Manual",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/6/26/EcoFlow%20Wave%202%20Add-on%20Battery-User%20Manual%20V1.0%20(EN)_1687768367606.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow WAVE 2 Add-on Battery-User Manual V1.1 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/1/31/EcoFlow%20WAVE%202%20Add-on%20Battery-User%20Manual%20V1.1%20(EN)_1706696270250.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow WAVE 2 Add-on Battery-User Manual V1.1 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/2/1/EcoFlow%20WAVE%202%20Add-on%20Battery-User%20Manual%20V1.1%20(EN)_1706776333609.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow WAVE 2 Manual do Utilizador V1.0 (PT)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/4/26/EcoFlow%20Wave%202%20Manual%20do%20Utilizador%20V1.0%20(PT)_1682492925811.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow WAVE 2 Portable Air Conditioner_User Manual",
+   "adres": "https://manuals.ecoflow.com/us/product/wave-2-portable-air-conditioner?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Wave 2 Portable Air conditioner-User Manual V1.0 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/6/26/EcoFlow%20Wave%202%20Portable%20Air%20conditioner-User%20Manual%20V1.1%20(EN)_1687768328317.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "Ecoflow Wave 2 Troubleshooting Guide",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/6/26/EcoFlow%20Wave%202%20-Troubleshooting%20Guide(EN)_1686193567241_1687768413053.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow WAVE 2 User Manual V1.2 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/8/22/EcoFlow%20WAVE%202%20Portable%20Air%20conditioner-User%20Manual%20V1.2%20(EN)_1724332028693.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow WAVE 2-User Manual V1.0 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/6/26/EcoFlow%20Wave%202%20Portable%20Air%20conditioner-User%20Manual%20V1.0%20(EN)_1687764568190.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow WAVE 3 Accessories (Velcro Strap Handle+Car Vent Seal+Shower Kit)_Quick Start Guide",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1745565722411/EcoFlow%20WAVE%203%20Accessories%20(Velcro%20Strap%20Handle%2BCar%20Vent%20Seal%2BShower%20Kit)_Quick%20Start%20Guide%20V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow WAVE 3 Accessories (Velcro Strap Handle+Car Vent Seal+Shower Kit)_Quick Start Guide",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1745565917608/EcoFlow%20WAVE%203%20Accessories%20(Velcro%20Strap%20Handle%2BCar%20Vent%20Seal%2BShower%20Kit)_Quick%20Start%20Guide%20V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow WAVE 3 Add-on Battery_Quick Start Guide V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1744711270750/EcoFlow%20WAVE%203%20Add-on%20Battery_Quick%20Start%20Guide%20V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow WAVE 3 Add-on Battery_Quick Start Guide V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1744949645392/EcoFlow%20WAVE%203%20Add-on%20Battery_Quick%20Start%20Guide%20V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-05-22",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow WAVE 3 Add-on Battery_Quick Start Guide V1.0.",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1746775709429/EcoFlow%20WAVE%203%20Add-on%20Battery_Quick%20Start%20Guide%20V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow WAVE 3 Add-on Battery_Safety Instructions V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1745565249816/EcoFlow%20WAVE%203%20Add-on%20Battery_Safety%20Instructions%20V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow WAVE 3 Add-on Battery_Safety Instructions V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1746775720372/EcoFlow%20WAVE%203%20Add-on%20Battery_Safety%20Instructions%20V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow WAVE 3 Add-on Battery_User Manual_en V1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1748261116414/EcoFlow%20WAVE%203%20Add-on%20Battery_User%20Manual_en%20V1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-05-22",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow WAVE 3 Add-on Battery_User Manual_en V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1745565308066/EcoFlow%20WAVE%203%20Add-on%20Battery_User%20Manual_en%20V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow WAVE 3 Add-on Battery_User Manual_en V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1745565780732/EcoFlow%20WAVE%203%20Add-on%20Battery_User%20Manual_en%20V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow WAVE 3 Add-on Battery_User Manual_en V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1745565909687/EcoFlow%20WAVE%203%20Add-on%20Battery_User%20Manual_en%20V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow WAVE 3_Quick Start Guide V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1746775691083/EcoFlow%20WAVE%203_Quick%20Start%20Guide%20V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow WAVE 3_Quick Start Guide V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1744710963683/EcoFlow%20WAVE%203_Quick%20Start%20Guide%20V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-05-22",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow WAVE 3_Safety Instructions V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1746775723583/EcoFlow%20WAVE%203_Safety%20Instructions%20V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow WAVE 3_Safety Instructions V1.1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1779437977011/EcoFlow%20Wave%203%20Safety%20Instructions%20V1.1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-05-22",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow WAVE 3_User Manual V1.0",
+   "adres": "https://manuals.ecoflow.com/product/wave-3?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "us",
+    "uk",
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "Ecoflow WAVE BP-User Manual V1.0 (EN+FR+HK)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/10/24/539958812_1666602646587.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow WAVE Series Car Vent Seal_Quick Start Guide V1.0",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1744710967357/EcoFlow%20WAVE%20Series%20Car%20Vent%20Seal_Quick%20Start%20Guide%20V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-05-22",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "Ecoflow WAVE User Manual V1.0 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/6/21/Ecoflow-WAVE-User Manual V1.0(EN)_1655794066145.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow Zonnepaneel 110 W-User Manual V1.1 (EN+DE+FR+IT+ES+NL+RU+JP+KR+CHS+CHT）",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/5/30/EcoFlow%20110W%20Portable%20Solar%20Panel-User%20Manual%20V1.0%20(EN%2BDE%2BFR%2BIT%2BES%2BNL%2BRU%2BJP%2BKR%2BCHS%2BCHT)_1717062674789.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_CSA_Compliance_Certificate_SmartHomePanel10-120V_EF-SHP-10-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791537623699/EcoFlow_CSA_Compliance_Certificate_SmartHomePanel10-120V_EF-SHP-10-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-29",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_CSA_Compliance_Certificate_SmartHomePanel10-240V_EF-SHP-10-G1S",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1792478880632/EcoFlow_CSA_Compliance_Certificate_SmartHomePanel10-240V_EF-SHP-10-G1S.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-29",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_EMC_FCC_Compliance_Certificate_SmartHomePanel10-120V_EF-SHP-10-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791537707240/EcoFlow_EMC_FCC_Compliance_Certificate_SmartHomePanel10-120V_EF-SHP-10-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-29",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_EMC_FCC_Compliance_Certificate_SmartHomePanel10-240V_EF-SHP-10-G1S",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1792478897907/EcoFlow_EMC_FCC_Compliance_Certificate_SmartHomePanel10-240V_EF-SHP-10-G1S.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-29",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_EMC_FCC_Compliance_Certificate_TITAN5000_EF-TT-5-G1&TITAN5000Plus_EF-TT-5P-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791538638388/EcoFlow_EMC_FCC_Compliance_Certificate_TITAN5000_EF-TT-5-G1%26TITAN5000Plus_EF-TT-5P-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_EMC_FCC_Compliance_Certificate_TITAN5000_EF-TT-5-G1&TITAN5000Plus_EF-TT-5P-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791538185342/EcoFlow_EMC_FCC_Compliance_Certificate_TITAN5000_EF-TT-5-G1%26TITAN5000Plus_EF-TT-5P-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_EMC_FCC_Compliance_Certificate_TITAN5000Classic_EF-TT-5C-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791539039244/EcoFlow_EMC_FCC_Compliance_Certificate_TITAN5000Classic_EF-TT-5C-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_EMC_FCC_Compliance_SOC_SmartHomePanel10-120V_EF-SHP-10-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791537726734/EcoFlow_EMC_FCC_Compliance_SOC_SmartHomePanel10-120V_EF-SHP-10-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-29",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_EMC_FCC_Compliance_SOC_SmartHomePanel10-240V_EF-SHP-10-G1S",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1792478913929/EcoFlow_EMC_FCC_Compliance_SOC_SmartHomePanel10-240V_EF-SHP-10-G1S.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-29",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_EMC_FCC_Compliance_SOC_TITAN5000_EF-TT-5-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791538219560/EcoFlow_EMC_FCC_Compliance_SOC_TITAN5000_EF-TT-5-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_EMC_FCC_Compliance_SOC_TITAN5000Classic_EF-TT-5C-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791539050193/EcoFlow_EMC_FCC_Compliance_SOC_TITAN5000Classic_EF-TT-5C-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_EMC_FCC_Compliance_SOC_TITAN5000Plus_EF-TT-5P-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791538648933/EcoFlow_EMC_FCC_Compliance_SOC_TITAN5000Plus_EF-TT-5P-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_EMC_ISED_Compliance_Certificate_SmartHomePanel10-120V_EF-SHP-10-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791537744338/EcoFlow_EMC_ISED_Compliance_Certificate_SmartHomePanel10-120V_EF-SHP-10-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-29",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_EMC_ISED_Compliance_Certificate_SmartHomePanel10-240V_EF-SHP-10-G1S",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1792478932848/EcoFlow_EMC_ISED_Compliance_Certificate_SmartHomePanel10-240V_EF-SHP-10-G1S.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-29",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_EMC_ISED_Compliance_Certificate_TITAN5000_EF-TT-5-G1&TITAN5000Plus_EF-TT-5P-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791538659247/EcoFlow_EMC_ISED_Compliance_Certificate_TITAN5000_EF-TT-5-G1%26TITAN5000Plus_EF-TT-5P-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_EMC_ISED_Compliance_Certificate_TITAN5000_EF-TT-5-G1&TITAN5000Plus_EF-TT-5P-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791538243421/EcoFlow_EMC_ISED_Compliance_Certificate_TITAN5000_EF-TT-5-G1%26TITAN5000Plus_EF-TT-5P-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_EMC_ISED_Compliance_Certificate_TITAN5000Classic_EF-TT-5C-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791539060759/EcoFlow_EMC_ISED_Compliance_Certificate_TITAN5000Classic_EF-TT-5C-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_EMC_ISED_Compliance_VOC_SmartHomePanel10-120V_EF-SHP-10-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791537757830/EcoFlow_EMC_ISED_Compliance_VOC_SmartHomePanel10-120V_EF-SHP-10-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-29",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_EMC_ISED_Compliance_VOC_SmartHomePanel10-240V_EF-SHP-10-G1S",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1792478946881/EcoFlow_EMC_ISED_Compliance_VOC_SmartHomePanel10-240V_EF-SHP-10-G1S.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-29",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_EMC_ISED_Compliance_VOC_TITAN5000_EF-TT-5-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791538255569/EcoFlow_EMC_ISED_Compliance_VOC_TITAN5000_EF-TT-5-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_EMC_ISED_Compliance_VOC_TITAN5000Classic_EF-TT-5C-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791539072613/EcoFlow_EMC_ISED_Compliance_VOC_TITAN5000Classic_EF-TT-5C-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_EMC_ISED_Compliance_VOC_TITAN5000Plus_EF-TT-5P-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791538669979/EcoFlow_EMC_ISED_Compliance_VOC_TITAN5000Plus_EF-TT-5P-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_NRC_EFFICIENCY_Certificate_TITAN5000_EF-TT-5-G1&TITANBattery5kWh_EF-TT-E5-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791538267825/EcoFlow_NRC_EFFICIENCY_Certificate_TITAN5000_EF-TT-5-G1%26TITANBattery5kWh_EF-TT-E5-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_NRC_EFFICIENCY_Certificate_TITAN5000_EF-TT-5-G1&TITANBattery5kWh_EF-TT-E5-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791538438831/EcoFlow_NRC_EFFICIENCY_Certificate_TITAN5000_EF-TT-5-G1%26TITANBattery5kWh_EF-TT-E5-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-23",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_NRC_EFFICIENCY_Certificate_TITAN5000Classic_EF-TT-5C-G1&TITANBattery5kWh_EF-TT-E5-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791539085317/EcoFlow_NRC_EFFICIENCY_Certificate_TITAN5000Classic_EF-TT-5C-G1%26TITANBattery5kWh_EF-TT-E5-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_NRC_EFFICIENCY_Certificate_TITAN5000Classic_EF-TT-5C-G1&TITANBattery5kWh_EF-TT-E5-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791538449751/EcoFlow_NRC_EFFICIENCY_Certificate_TITAN5000Classic_EF-TT-5C-G1%26TITANBattery5kWh_EF-TT-E5-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-23",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_NRC_EFFICIENCY_Certificate_TITAN5000Plus_EF-TT-5P-G1&TITANBattery5kWh_EF-TT-E5-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791538839044/EcoFlow_NRC_EFFICIENCY_Certificate_TITAN5000Plus_EF-TT-5P-G1%26TITANBattery5kWh_EF-TT-E5-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_NRC_EFFICIENCY_Certificate_TITAN5000Plus_EF-TT-5P-G1&TITANBattery5kWh_EF-TT-E5-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791538461160/EcoFlow_NRC_EFFICIENCY_Certificate_TITAN5000Plus_EF-TT-5P-G1%26TITANBattery5kWh_EF-TT-E5-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-23",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_UL1973_Compliance_Certificate_TITAN5000_EF-TT-5-G1&TITAN5000Plus_EF-TT-5P-G1&TITANBattery5kWh_EF-TT-E5-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791538850799/EcoFlow_UL1973_Compliance_Certificate_TITAN5000_EF-TT-5-G1%26TITAN5000Plus_EF-TT-5P-G1%26TITANBattery5kWh_EF-TT-E5-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_UL1973_Compliance_Certificate_TITAN5000_EF-TT-5-G1&TITAN5000Plus_EF-TT-5P-G1&TITANBattery5kWh_EF-TT-E5-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791538278298/EcoFlow_UL1973_Compliance_Certificate_TITAN5000_EF-TT-5-G1%26TITAN5000Plus_EF-TT-5P-G1%26TITANBattery5kWh_EF-TT-E5-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_UL1973_Compliance_Certificate_TITAN5000_EF-TT-5-G1&TITAN5000Plus_EF-TT-5P-G1&TITANBattery5kWh_EF-TT-E5-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791538473830/EcoFlow_UL1973_Compliance_Certificate_TITAN5000_EF-TT-5-G1%26TITAN5000Plus_EF-TT-5P-G1%26TITANBattery5kWh_EF-TT-E5-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-23",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_UL1973_Compliance_Certificate_TITAN5000Classic_EF-TT-5C-G1&TITANBattery5kWh_EF-TT-E5-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791538486010/EcoFlow_UL1973_Compliance_Certificate_TITAN5000Classic_EF-TT-5C-G1%26TITANBattery5kWh_EF-TT-E5-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-23",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_UL1973_Compliance_Certificate_TITAN5000Classic_EF-TT-5C-G1&TITANBattery5kWh_EF-TT-E5-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791539100640/EcoFlow_UL1973_Compliance_Certificate_TITAN5000Classic_EF-TT-5C-G1%26TITANBattery5kWh_EF-TT-E5-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_UL2743_Compliance_Certificate_TITAN5000_EF-TT-5-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791538290054/EcoFlow_UL2743_Compliance_Certificate_TITAN5000_EF-TT-5-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_UL2743_Compliance_Certificate_TITAN5000Classic_EF-TT-5C-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791539111553/EcoFlow_UL2743_Compliance_Certificate_TITAN5000Classic_EF-TT-5C-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_UL2743_Compliance_Certificate_TITAN5000Plus_EF-TT-5P-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791538913376/EcoFlow_UL2743_Compliance_Certificate_TITAN5000Plus_EF-TT-5P-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_UL9540_Compliance_Certificate_TITAN5000_EF-TT-5-G1&TITAN5000Plus_EF-TT-5P-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791538927606/EcoFlow_UL9540_Compliance_Certificate_TITAN5000_EF-TT-5-G1%26TITAN5000Plus_EF-TT-5P-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_UL9540_Compliance_Certificate_TITAN5000_EF-TT-5-G1&TITAN5000Plus_EF-TT-5P-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791538306281/EcoFlow_UL9540_Compliance_Certificate_TITAN5000_EF-TT-5-G1%26TITAN5000Plus_EF-TT-5P-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_UL9540_Compliance_Certificate_TITAN5000Classic_EF-TT-5C-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791539123201/EcoFlow_UL9540_Compliance_Certificate_TITAN5000Classic_EF-TT-5C-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_UN38.3_Transport_TestReport_TITAN5000_EF-TT-5-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791538321163/EcoFlow_UN38.3_Transport_TestReport_TITAN5000_EF-TT-5-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_UN38.3_Transport_TestReport_TITAN5000Classic_EF-TT-5C-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791539134797/EcoFlow_UN38.3_Transport_TestReport_TITAN5000Classic_EF-TT-5C-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_UN38.3_Transport_TestReport_TITAN5000Plus_EF-TT-5P-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791538938706/EcoFlow_UN38.3_Transport_TestReport_TITAN5000Plus_EF-TT-5P-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-09",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow_UN38.3_Transport_TestReport_TITANBattery5kWh_EF-TT-E5-G1",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1791538500645/EcoFlow_UN38.3_Transport_TestReport_TITANBattery5kWh_EF-TT-E5-G1.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-23",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EcoFlow-Smart Generator-User Manual",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/9/29/998723428_1664457721991.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "Ecoflow-WAVE-User Manual V1.0 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2022/10/7/-142416512_1665084420571.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "EF-GC-H-35",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1757580280519/EF-GC-H-35_CE%20DOC_Format_%E8%8B%B1%E8%AF%AD.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "uk",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EF-GC-H-45",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1757580810351/EF-GC-H-45_CE%20DOC_Format_%E8%8B%B1%E8%AF%AD.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "uk",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EF-GC-H-55",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1757580903648/EF-GC-H-55_CE%20DOC_Format_%E8%8B%B1%E8%AF%AD.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "us",
+    "uk",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "EFWN511_EFWN511B G98 Grid VoC---EN",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/6/1/EFWN511_EFWN511B%20G98%20Grid%20VoC---EN_1685589401465.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EFWN511_EFWN511B G98 Grid VoC---EN",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/6/1/EFWN511_EFWN511B%20G98%20Grid%20VoC---EN_1685590667519.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "uk"
+   ]
+  },
+  {
+   "zaglavie": "EFWN511_EFWN511B Grid Certificate of Conformity EN50549---CH",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/10/23/EFWN511_EFWN511B%20Grid%20Certificate%20of%20Conformity%20EN50549---CH_1698027183032.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EFWN511_EFWN511B Grid Certificate of Conformity Interface Protection---CH",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/10/23/EFWN511_EFWN511B%20Grid%20Certificate%20of%20Conformity%20Interface%20Protection---CH_1698027185485.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EFWN511_EFWN511B Grid Certificate--- Latvia",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/8/29/EFWN511_EFWN511B%20Grid%20Certificate---%20Latvia_1693306246059.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EFWN511_EFWN511B Grid Certificate---AT",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/8/29/EFWN511_EFWN511B%20Grid%20Certificate---AT_1693306290829.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EFWN511_EFWN511B Grid Certificate---Be",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/8/29/EFWN511_EFWN511B%20Grid%20Certificate---Be_1693306251046.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EFWN511_EFWN511B Grid Certificate---CZ",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/8/29/EFWN511_EFWN511B%20Grid%20Certificate---CZ_1693306253412.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EFWN511_EFWN511B Grid Certificate---DEN",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/8/29/EFWN511_EFWN511B%20Grid%20Certificate---DEN_1693306255939.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EFWN511_EFWN511B Grid Certificate---FIN",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/8/29/EFWN511_EFWN511B%20Grid%20Certificate---FIN_1693306258236.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EFWN511_EFWN511B Grid Certificate---NL",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/8/29/EFWN511_EFWN511B%20Grid%20Certificate---NL_1693306261061.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EFWN511_EFWN511B Grid COC---POL",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/8/29/EFWN511_EFWN511B%20Grid%20COC---POL_1693306263537.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "EFWN511_EFWN511B RED Certificate",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/6/1/EFWN511_EFWN511B%20RED%20Certificate_1685589436198.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "LCD Icon List",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2024/1/9/LCD%20Icon%20List_1704787677562.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "Manual Transfer Switch-Installation Guide-Multilingual-EN,FR,DE,IT,SP-V1.0.pdf",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1759212527216/Manual%20Transfer%20Switch-Installation%20Guide-Multilingual-EN%2CFR%2CDE%2CIT%2CSP-V1.0.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-04-17",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "NextGen 220W Portable Solar Panel_User Manual",
+   "adres": "https://manuals.ecoflow.com/product/nextgen-220w-portable-solar-panel?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "RIVER 2 Max & RIVER 2 Max 500 Portable Power Station_User Manual",
+   "adres": "https://manuals.ecoflow.com/us/product/river-2-max-portable-power-station?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "RIVER 2 Pro & RIVER 2 Pro 700 Portable Power Station_User Manual",
+   "adres": "https://manuals.ecoflow.com/us/product/river-2-pro-portable-power-station?lang=en_US",
+   "vid": "ONLINE",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "RIVER Bank User Manual",
+   "adres": "https://websiteoss.ecoflow.com/website/upload/2022/2/22/EcoFlow_RIVER_Bank_User_Manual_Multi-language_version_1645512381610.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "ca",
+    "au"
+   ]
+  },
+  {
+   "zaglavie": "Single Axis Solar Tracker - Installation Guide V2.0",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/5/31/Single%20Axis%20Solar%20Tracker%20-%20Installation%20Guide%20V2.0_1685525529908.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "Single Axis Solar Tracker-User Manual V1.0 (EN)",
+   "adres": "https://websiteoss.ecoflow.com/cms/upload/2023/5/31/Single%20Axis%20Solar%20Tracker-User%20Manual%20V1.0%20(EN)_1685525522659.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-01-06",
+   "regioni": [
+    "eu"
+   ]
+  },
+  {
+   "zaglavie": "Smart Home Panel 10 Installation Guide",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1793261362158/Smart%20Home%20Panel%2010%20(120V%3A240V)_Installation%20Guide.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-29",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  },
+  {
+   "zaglavie": "Smart Home Panel 10 Installation Guide",
+   "adres": "https://ecoflow-service-us-prod.oss-us-west-1.aliyuncs.com/cms/upload/1793261206235/Smart%20Home%20Panel%2010%20(120V%3A240V)_Installation%20Guide.pdf",
+   "vid": "MANUAL",
+   "ezik": "en_US",
+   "data": "2026-10-29",
+   "regioni": [
+    "us",
+    "ca"
+   ]
+  }
+ ]
+}
