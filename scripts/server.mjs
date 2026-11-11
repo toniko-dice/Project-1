@@ -217,12 +217,13 @@ const КОМАНДИ = {
       връщане следващият внос качва пак локалния JSON със старите имена —
       снимките не се намират, свалят се и се качват в Медия втори път (с „-2“;
       STREAM AC 5000, 30.10.2026). Затова текстовите файлове се връщат локално —
-      и снимките за превод (content-server/za-prevod/<slug>-*), които собственикът превежда.
+      и снимките за превод (content-server/za-prevod/<slug>-*), които собственикът превежда,
+      заедно със списъка им (spisak.md — пресмята се на сървъра от всички продукти).
     */
     if (!арг.includes('--dry-run')) {
       await new Promise((resolve, reject) => {
         const ssh = spawn(SSH, ['-o', 'BatchMode=yes', SERVER,
-          `cd ${q(`${DIR}/content-server`)} && tar -c -f - $(ls -d ${q(slug)}/*.json ${q(slug)}/*.md ${q(slug)}/*.txt za-prevod/${q(slug)}-* 2>/dev/null)`], {
+          `cd ${q(`${DIR}/content-server`)} && tar -c -f - $(ls -d ${q(slug)}/*.json ${q(slug)}/*.md ${q(slug)}/*.txt za-prevod/${q(slug)}-* za-prevod/spisak.md 2>/dev/null)`], {
           stdio: ['ignore', 'pipe', 'inherit'],
         })
         const tar = spawn(TAR, ['-x', '-f', '-', '-C', path.join(ROOT, 'content')], { stdio: ['pipe', 'inherit', 'inherit'] })
@@ -230,7 +231,7 @@ const КОМАНДИ = {
         tar.on('close', (code) => (code === 0 ? resolve() : reject(new Error(`връщането спря (код ${code})`))))
         ssh.on('error', reject)
       })
-      console.log(`← content/${slug}/ и content/za-prevod/${slug}-*: от сървъра (с новите имена на снимките)`)
+      console.log(`← content/${slug}/, content/za-prevod/${slug}-* и spisak.md: от сървъра (с новите имена на снимките)`)
     }
   },
 

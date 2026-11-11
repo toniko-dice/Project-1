@@ -1,0 +1,159 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg (+ eu.ecoflow.com/products/delta-pro-ultra-battery)",
+  "produkt": {
+    "title": "EcoFlow DELTA Pro Ultra Battery",
+    "slug": "delta-pro-ultra-extra-battery",
+    "categorySlug": "dopalnitelni-baterii",
+    "productType": "accessory",
+    "tagline": "Допълнителна батерия 6144Wh за DELTA Pro Ultra",
+    "badge": "none",
+    "price": 2499,
+    "externalUrl": "https://dice.bg/ecoflow-delta-pro-ultra-whole-home-backup-power-6144wh-inovativna-profesionalna-elektrotsentrala-i-rezervno-zahranvane-za-tseliya-dom-cheren-item72779-1",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "75837",
+    "ean": "4895251611725",
+    "description": "Допълнителна батерия 6144Wh за системата EcoFlow DELTA Pro Ultra. Работи само с инвертора на DELTA Pro Ultra; до 5 батерии на инвертор, до 90 kWh със 3 инвертора.",
+    "highlights": [
+      {
+        "text": "6144Wh"
+      },
+      {
+        "text": "LFP, 3500 цикъла до 80%"
+      },
+      {
+        "text": "Подреждат се една върху друга"
+      },
+      {
+        "text": "Само с инвертора DELTA Pro Ultra"
+      }
+    ],
+    "metaTitle": "DELTA Pro Ultra Battery — допълнителна батерия 6144Wh",
+    "metaDescription": "Допълнителна батерия EcoFlow DELTA Pro Ultra 6144Wh — разширява системата за резервно захранване на дома. LFP, 3500 цикъла.",
+    "compatibleWith": [
+      "delta-pro-ultra"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "delta-pro-ultra-extra-battery-1.webp",
+      "alt": "EcoFlow DELTA Pro Ultra Battery — допълнителна батерия"
+    },
+    {
+      "file": "delta-pro-ultra-extra-battery-2.webp",
+      "alt": "EcoFlow DELTA Pro Ultra Battery — допълнителна батерия"
+    },
+    {
+      "file": "delta-pro-ultra-extra-battery-3.webp",
+      "alt": "EcoFlow DELTA Pro Ultra Battery — допълнителна батерия"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Повече капацитет за DELTA Pro Ultra",
+      "body": "Добавете още 6 kWh към DELTA Pro Ultra. Свържете до 3 инвертора DELTA Pro Ultra с до 15 батерии и стигнете 90 kWh — за стандартно домакинство това са над 30 дни основно резервно захранване за осветление и хладилник (времето зависи от консумацията). Цялата система се събира и в ограничено пространство — гараж или склад.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Включи и работи",
+      "body": "Батериите се подреждат една върху друга, без бъркотия с кабели, и се свързват за минута.\n\nВнимание: това е само батерия — не работи самостоятелно без инвертора на DELTA Pro Ultra.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow DELTA Pro Ultra Battery 6144Wh",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "DELTA Pro Ultra 6144Wh Extra Battery"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFDeltaProUltra-BP-US"
+        },
+        {
+          "label": "Капацитет",
+          "value": "102,4V ⎓ 60A, 6144Wh"
+        },
+        {
+          "label": "Батерия",
+          "value": "LFP, 80% капацитет след 3500 цикъла"
+        },
+        {
+          "label": "Защити",
+          "value": "от пренапрежение, претоварване, прегряване, късо съединение, ниска температура, ниско напрежение, свръхток"
+        },
+        {
+          "label": "Размери",
+          "value": "660 × 455 × 204 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "50,7 кг"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "само с инвертора EcoFlow DELTA Pro Ultra"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "60 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/d/s/dsdsss.webp",
+      "file": "delta-pro-ultra-extra-battery-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/s/d/sdsdsed.webp",
+      "file": "delta-pro-ultra-extra-battery-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/d/d/ddddded.webp",
+      "file": "delta-pro-ultra-extra-battery-3.webp"
+    }
+  ],
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "По решение на собственика (11.11.2026) се качва по данните на dice.bg, въпреки че фабричният номер там е EFDeltaProUltra-BP-US, а в eu.ecoflow.com батерията е с EAN 4895251660129 и номер EFDELTAPROULTRABT.",
+    "Страницата в dice.bg е копие на DELTA Pro Ultra (адрес …item72779-1) и описва цялата система — взето е само това, което е за батерията. Шумът, UPS, свързаността и IP рейтингът са за инвертора — пропуснати.",
+    "Снимката hqdefault (видео) от dice не е взета.",
+    "Обърни внимание при XML синхронизацията: в XML-а има и „DELTA Pro Ultra Inverter“ с EAN 4895251608596-1 — не е част от тази задача.",
+    "Цена/SKU/наличност — от XML на dice (11.11.2026); зачертана цена няма."
+  ]
+}

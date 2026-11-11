@@ -1,0 +1,214 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg + eu.ecoflow.com/products/delta-pro-3-extra-battery",
+  "produkt": {
+    "title": "EcoFlow DELTA Pro 3 Smart Extra Battery",
+    "slug": "delta-pro-3-smart-extra-battery",
+    "categorySlug": "dopalnitelni-baterii",
+    "productType": "accessory",
+    "tagline": "Допълнителна батерия 4096Wh за DELTA Pro 3",
+    "badge": "none",
+    "price": 2199,
+    "compareAtPrice": 2300.3,
+    "externalUrl": "https://dice.bg/ecoflow-delta-pro-3-max-smart-extra-battery-4096wh-dopalnitelna-zaryadna-bateria-za-elektrotsentrala-ecoflow-pro-3-tamnosiv-item70377",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "70377",
+    "ean": "4895251622844",
+    "description": "Допълнителна батерия 4096Wh за EcoFlow DELTA Pro 3 — удвоява или утроява капацитета. LFP батерия, LCD дисплей, зарежда се и се разрежда синхронно с електроцентралата.",
+    "highlights": [
+      {
+        "text": "4096Wh"
+      },
+      {
+        "text": "Разширение до 12kWh"
+      },
+      {
+        "text": "Зарежда се синхронно"
+      },
+      {
+        "text": "LFP, 4000 цикъла"
+      }
+    ],
+    "metaTitle": "EcoFlow DELTA Pro 3 Smart Extra Battery 4096Wh",
+    "metaDescription": "Допълнителна батерия EcoFlow DELTA Pro 3 Smart Extra Battery 4096Wh — удвоява или утроява капацитета на DELTA Pro 3. LFP, LCD дисплей.",
+    "compatibleWith": [
+      "delta-pro-3"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "delta-pro-3-smart-extra-battery-1.webp",
+      "alt": "EcoFlow DELTA Pro 3 Smart Extra Battery — допълнителна батерия"
+    },
+    {
+      "file": "delta-pro-3-smart-extra-battery-2.webp",
+      "alt": "EcoFlow DELTA Pro 3 Smart Extra Battery — допълнителна батерия"
+    },
+    {
+      "file": "delta-pro-3-smart-extra-battery-3.webp",
+      "alt": "EcoFlow DELTA Pro 3 Smart Extra Battery — допълнителна батерия"
+    },
+    {
+      "file": "delta-pro-3-smart-extra-battery-4.webp",
+      "alt": "EcoFlow DELTA Pro 3 Smart Extra Battery — допълнителна батерия"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Повече капацитет за DELTA Pro 3",
+      "body": "Удвоете или утроете капацитета на DELTA Pro 3 — по-дълго време за работа на основните ви уреди. Системата се разширява до 12kWh.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Зарежда се заедно с електроцентралата",
+      "body": "Зареждате по всяко време и навсякъде. Умната допълнителна батерия се зарежда и разрежда синхронно и поддържа еднакъв процент и в двете устройства.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Винаги знаете какво става",
+      "body": "Ярък LCD дисплей отпред показва всичко нужно — изход, вход, оставащ заряд и оставащо време за работа.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Дълъг живот с LFP",
+      "body": "4000 цикъла до 80% капацитет. LFP батерията е по-надеждна, ефективна и безопасна дори при високи температури. Включи и работи, а формата позволява батериите да се подреждат една върху друга — подходяща за резервно захранване у дома.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow DELTA Pro 3 Smart Extra Battery 4096Wh",
+          "qty": 1
+        },
+        {
+          "name": "Кабел EcoFlow Extra Battery Flat Link Cable (0,85 м)",
+          "qty": 1
+        },
+        {
+          "name": "Ръководство за употреба",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "DELTA Pro 3 Smart Extra Battery 4096Wh"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFDELTAPRO3EB"
+        },
+        {
+          "label": "Капацитет",
+          "value": "4096Wh"
+        },
+        {
+          "label": "Батерия",
+          "value": "LFP, 4000 цикъла до 80% капацитет"
+        },
+        {
+          "label": "Вход",
+          "value": "40–58,4V ⎓ 80A макс."
+        },
+        {
+          "label": "Изход",
+          "value": "40–58,4V ⎓ 100A макс."
+        },
+        {
+          "label": "Дисплей",
+          "value": "LCD"
+        },
+        {
+          "label": "Температура на зареждане",
+          "value": "0 °C до 45 °C"
+        },
+        {
+          "label": "Температура на разреждане",
+          "value": "−10 °C до 45 °C"
+        },
+        {
+          "label": "Температура на съхранение",
+          "value": "−10 °C до 45 °C"
+        },
+        {
+          "label": "Размери",
+          "value": "694 × 295 × 215 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "33 кг"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "само EcoFlow DELTA Pro 3"
+        },
+        {
+          "label": "Цвят",
+          "value": "тъмносив"
+        },
+        {
+          "label": "Гаранция",
+          "value": "60 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70377_1_1.webp",
+      "file": "delta-pro-3-smart-extra-battery-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70377_2_1.webp",
+      "file": "delta-pro-3-smart-extra-battery-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70377_3_1.webp",
+      "file": "delta-pro-3-smart-extra-battery-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70377_4_1.webp",
+      "file": "delta-pro-3-smart-extra-battery-4.webp"
+    }
+  ],
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Циклите са 4000 до 80% — по eu.ecoflow.com, по решение на собственика (11.11.2026); dice.bg пише 3000. Останалите данни са по dice.bg.",
+    "В dice.bg има явни грешки, пренесени от DELTA 2 Max: „до 4032Wh или 6048Wh“ и „да използвате DELTA 2 Max“. Не са взети; вместо тях е „удвоете или утроете“ + „до 12kWh“ от eu.ecoflow.com.",
+    "dice.bg пише „LCD дисплей“ в описанието и „LED“ в спецификациите — оставено LCD.",
+    "Общият текст на dice.bg за LFP батериите не е сложен — повтаря се при всички батерии (както при DELTA 3 Smart Extra Battery).",
+    "Цена/зачертана цена/SKU/наличност — от XML на dice (11.11.2026)."
+  ]
+}

@@ -15,7 +15,7 @@ paths:
 Подробно — `docs/funkcii/dice.md`. Файлът: `https://dice.bg/xtento_exports/Ecoflow-XML.xml`.
 
 - **Полетата на XML-а — ТОЧНИТЕ имена, без догадки** (`src/lib/dice/parse.ts`): `Identifier` → SKU (после `ProductNumber`); `ean`; `Name`; `Manufacturer`; **`Price` — редовната; `SpecialPrice` — намалената**; `quantity` — брой (само той); `stock` (`in stock` / `out of stock`; друго → грешка; празно → по броя).
-- **Цена и зачертана — `finalPrice`, едно място:** `SpecialPrice` > 0 и < `Price` → цена `SpecialPrice`, зачертана `Price`; празна/0 → `Price` без зачертана; ≥ `Price` → `Price` + предупреждение; негодна `Price` → продуктът се пропуска.
+- **Цена и зачертана — `finalPrice`, едно място:** `SpecialPrice` > 0 и < `Price` → цена `SpecialPrice`, зачертана `Price`; празна/0 → `Price` без зачертана; ≥ `Price` → `Price` + предупреждение; негодна `Price` → продуктът се пропуска; **`Price` 0 → само цената не се пипа** (предупреждение), наличността се обновява (In-Series Solar Connection Cable 82840, 11.11.2026: в dice 0, на сайта — цена от EcoFlow EU).
 - **Съвпадение** (`src/lib/dice/match.ts`): първо `Identifier` = SKU за всички редове, после EAN (8–14 цифри; наставки `…-1` не се търсят по EAN); по име — никога.
 - **Пипа само** `price`, `compareAtPrice`, `availability`, `stockQty`; „Не синхронизирай" (`noSync`) пропуска. Чернова остава чернова.
 - **Режими:** „Тестов" (цените → „Цени за одобрение", без график) и „Автоматичен" (всеки ден в часа, всичко направо, пакет `С-…` за връщане). Решението на собственика (13.10.2026): **автоматично, без одобрение** — включва го той в админа.

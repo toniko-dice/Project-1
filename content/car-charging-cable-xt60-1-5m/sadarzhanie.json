@@ -1,0 +1,135 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow Car Charging Cable XT60 (1.5m)",
+    "slug": "car-charging-cable-xt60-1-5m",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "Кабел за зареждане от запалката на автомобила",
+    "badge": "none",
+    "price": 40.39,
+    "externalUrl": "https://dice.bg/ecoflow-car-charging-cable-xt60-black-item60695",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "60695",
+    "ean": "4897082661276",
+    "description": "Оригинален кабел EcoFlow за зареждане на електроцентралите EcoFlow от запалката на автомобила (12V). Дължина 1,5 м, конектор XT60.",
+    "highlights": [
+      {
+        "text": "От запалката на колата (12V)"
+      },
+      {
+        "text": "Конектор XT60"
+      },
+      {
+        "text": "1,5 м"
+      }
+    ],
+    "metaTitle": "Кабел EcoFlow XT60 за зареждане от автомобил, 1,5 м",
+    "metaDescription": "Оригинален кабел EcoFlow Car Charging Cable XT60 — зарежда електроцентралите EcoFlow от запалката на автомобила (12V). 1,5 м."
+  },
+  "galeriya": [
+    {
+      "file": "car-charging-cable-xt60-1-5m-1.webp",
+      "alt": "EcoFlow Car Charging Cable XT60 (1,5 м) — кабел"
+    },
+    {
+      "file": "car-charging-cable-xt60-1-5m-2.webp",
+      "alt": "EcoFlow Car Charging Cable XT60 (1,5 м) — кабел"
+    },
+    {
+      "file": "car-charging-cable-xt60-1-5m-3.webp",
+      "alt": "EcoFlow Car Charging Cable XT60 (1,5 м) — кабел"
+    },
+    {
+      "file": "car-charging-cable-xt60-1-5m-4.webp",
+      "alt": "EcoFlow Car Charging Cable XT60 (1,5 м) — кабел"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Зареждане от колата",
+      "body": "Заредете електроцентралата EcoFlow от запалката на автомобила (12V) по време на път.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow кабел XT60 за зареждане от автомобил",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Car Charging Cable XT60"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFCAR-XT60CBL1.5M"
+        },
+        {
+          "label": "Дължина",
+          "value": "1,5 м"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "електроцентрали EcoFlow"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60695_1.webp",
+      "file": "car-charging-cable-xt60-1-5m-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60695_2.webp",
+      "file": "car-charging-cable-xt60-1-5m-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60695_3.webp",
+      "file": "car-charging-cable-xt60-1-5m-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60695_4.webp",
+      "file": "car-charging-cable-xt60-1-5m-4.webp"
+    }
+  ],
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "По dice.bg — в eu.ecoflow.com няма отделна страница.",
+    "dice.bg пише само „EcoFlow електроцентрали“ → без „Съвместим с“ (не е ясно с кои точно; XT60 вход има при RIVER и DELTA). Собственикът да добави от админа, ако иска.",
+    "Атрибути за филтъра: дължина 1,5; конектор XT60.",
+    "Цена/SKU/наличност — от XML на dice (11.11.2026); зачертана цена няма."
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow DELTA Pro Waterproof Bag",
+    "slug": "delta-pro-waterproof-bag",
+    "categorySlug": "chanti-i-kalafi",
+    "productType": "accessory",
+    "tagline": "Водоустойчива чанта за DELTA Pro",
+    "badge": "none",
+    "price": 106.86,
+    "externalUrl": "https://dice.bg/ecoflow-delta-pro-waterproof-bag-black-item60761",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "60761",
+    "ean": "4897082665519",
+    "description": "Водоустойчива чанта за EcoFlow DELTA Pro — пази от вода, мръсотия и удари, с прозрачен капак за екрана.",
+    "highlights": [
+      {
+        "text": "Водоустойчива"
+      },
+      {
+        "text": "Прозрачен капак за екрана"
+      },
+      {
+        "text": "Достъп до всички портове"
+      }
+    ],
+    "metaTitle": "Водоустойчива чанта за EcoFlow DELTA Pro",
+    "metaDescription": "Водоустойчива чанта EcoFlow за DELTA Pro — пази от вода, мръсотия и удари, с прозрачен капак за екрана."
+  },
+  "galeriya": [
+    {
+      "file": "delta-pro-waterproof-bag-1.webp",
+      "alt": "EcoFlow DELTA Pro Waterproof Bag — чанта"
+    },
+    {
+      "file": "delta-pro-waterproof-bag-2.webp",
+      "alt": "EcoFlow DELTA Pro Waterproof Bag — чанта"
+    },
+    {
+      "file": "delta-pro-waterproof-bag-3.webp",
+      "alt": "EcoFlow DELTA Pro Waterproof Bag — чанта"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Защита по време на път",
+      "body": "Чантата запазва лекотата на използване на DELTA Pro и я пази от вода, мръсотия и повреди по време на път. Лекият, водоустойчив и износоустойчив материал предпазва от атмосферни влияния, удари и драскотини.\n\nОсигурява достъп до всички контакти и дръжката, а прозрачният капак пази екрана, без да пречи да го следите.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow водоустойчива чанта",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Waterproof Bag"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "BDELTAPro"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "EcoFlow DELTA Pro"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60761_1.webp",
+      "file": "delta-pro-waterproof-bag-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60761_2.webp",
+      "file": "delta-pro-waterproof-bag-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/6/0/60761_3.webp",
+      "file": "delta-pro-waterproof-bag-3.webp"
+    }
+  ],
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "По dice.bg, по образеца на DELTA Max Waterproof Bag.",
+    "DELTA Pro (1-во поколение) не е в сайта → без „Съвместим с“ (решение от 06.10.2026: аксесоарите остават, без връзки към тях).",
+    "В eu.ecoflow.com „EcoFlow DELTA Pro Bag“ е с друг EAN (842783107091), същия фабричен номер BDELTAPro.",
+    "Цена/SKU/наличност — от XML на dice (11.11.2026); зачертана цена няма."
+  ]
+}

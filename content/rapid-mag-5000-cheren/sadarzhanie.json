@@ -1,0 +1,535 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "eu.ecoflow.com/products/rapid-mag-power-bank-5k (Midnight Black) + dice.bg; снето на 11.11.2026",
+  "produkt": {
+    "title": "EcoFlow RAPID Mag Power Bank 5000mAh (черен)",
+    "slug": "rapid-mag-5000-cheren",
+    "categorySlug": "vanshni-baterii-rapid",
+    "productType": "hero",
+    "tagline": "Ултратънка магнитна външна батерия 5000 mAh, 9,4 мм — черен",
+    "badge": "none",
+    "price": 39,
+    "compareAtPrice": 45.5,
+    "externalUrl": "https://dice.bg/prenosima-v-nshna-baterija-s-usb-c-port-i-bezzhichno-zarezhdane-s-magsafe-ecoflow-rapid-mag-magnetic-wireless-power-bank-5000-mah-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "73049",
+    "ean": "4895251647809",
+    "description": "Ултратънка магнитна външна батерия 5000 mAh — само 9,4 мм и 123 г. Безжично зареждане до 7,5W, USB-C 20W, магнити N52 и X-Cooling, който държи повърхността под 38 °C.",
+    "highlights": [
+      {
+        "text": "Само 9,4 мм и 123 г"
+      },
+      {
+        "text": "Безжично 7,5W + USB-C 20W"
+      },
+      {
+        "text": "Магнити N52, 11N захват"
+      },
+      {
+        "text": "X-Cooling — под 38 °C"
+      }
+    ],
+    "metaTitle": "EcoFlow RAPID Mag 5000mAh — ултратънка магнитна батерия",
+    "metaDescription": "Ултратънка магнитна външна батерия EcoFlow RAPID Mag 5000 mAh, черна: 9,4 мм, безжично 7,5W, USB-C 20W, магнити N52, X-Cooling.",
+    "alsoInCategories": [
+      "vanshni-baterii"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "rapid-mag-5000-cheren-1.png",
+      "alt": "EcoFlow RAPID Mag Power Bank 5000mAh (черен) — магнитна външна батерия"
+    },
+    {
+      "file": "rapid-mag-5000-cheren-2.jpg",
+      "alt": "EcoFlow RAPID Mag Power Bank 5000mAh (черен) — магнитна външна батерия"
+    },
+    {
+      "file": "rapid-mag-5000-cheren-3.jpg",
+      "alt": "EcoFlow RAPID Mag Power Bank 5000mAh (черен) — магнитна външна батерия"
+    },
+    {
+      "file": "rapid-mag-5000-cheren-4.jpg",
+      "alt": "EcoFlow RAPID Mag Power Bank 5000mAh (черен) — магнитна външна батерия"
+    },
+    {
+      "file": "rapid-mag-5000-cheren-5.jpg",
+      "alt": "EcoFlow RAPID Mag Power Bank 5000mAh (черен) — магнитна външна батерия"
+    },
+    {
+      "file": "rapid-mag-5000-cheren-6.jpg",
+      "alt": "EcoFlow RAPID Mag Power Bank 5000mAh (черен) — магнитна външна батерия"
+    },
+    {
+      "file": "rapid-mag-5000-cheren-7.jpg",
+      "alt": "EcoFlow RAPID Mag Power Bank 5000mAh (черен) — магнитна външна батерия"
+    },
+    {
+      "file": "rapid-mag-5000-cheren-8.jpg",
+      "alt": "EcoFlow RAPID Mag Power Bank 5000mAh (черен) — магнитна външна батерия"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Най-тънката магнитна външна батерия в бранша³",
+      "body": "",
+      "image": "rapid-mag-5000-cheren-pregled-1.jpg",
+      "imageAlt": "RAPID Mag Power Bank — основни предимства"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Дизайн",
+      "layout": "tabs-top",
+      "heading": "Тънка, мека на допир, винаги знаете заряда",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Ултратънка 9,4 мм",
+          "image": "rapid-mag-5000-cheren-dizayn-1.jpg",
+          "imageAlt": "RAPID Mag в ръка — 9,4 мм дебелина",
+          "caption": "Колкото купчина от пет монети по 20 цента. Литиево-кобалтова батерия събира 5000 mAh в тънък корпус. Влиза незабелязано в джоба на панталона, в тънка чанта за лаптоп или в дамска чанта.",
+          "rows": []
+        },
+        {
+          "label": "Копринено мека на допир",
+          "image": "rapid-mag-5000-cheren-dizayn-2.jpg",
+          "imageAlt": "Матовата повърхност на RAPID Mag",
+          "caption": "Копринено матовата повърхност държи здраво в ръката по време на тренировка, път или на кафе. Устойчива на пот и отпечатъци, лека.",
+          "rows": []
+        },
+        {
+          "label": "LED индикатор на заряда",
+          "image": "rapid-mag-5000-cheren-dizayn-3.jpg",
+          "imageAlt": "LED индикаторът на RAPID Mag",
+          "caption": "Четири светодиода показват заряда в реално време. Проверявате оставащия заряд в самолета, на преход или при спиране на тока и планирате следващото зареждане лесно.",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Зареждане",
+      "layout": "tabs-top",
+      "heading": "Хладна, бърза и здраво закрепена",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Хладна на допир — 38 °C",
+          "image": "rapid-mag-5000-cheren-zarezhdane-1.jpg",
+          "imageAlt": "RAPID Mag на телефон",
+          "caption": "Технологията X-Cooling поддържа повърхността под 38 °C¹ и удължава живота на батерията на телефона.⁴",
+          "rows": []
+        },
+        {
+          "label": "Зарежда, докато се зарежда",
+          "image": "rapid-mag-5000-cheren-zarezhdane-2.jpg",
+          "imageAlt": "RAPID Mag зарежда телефон, докато се зарежда",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Презареждане 20W",
+          "image": "rapid-mag-5000-cheren-zarezhdane-3.jpg",
+          "imageAlt": "RAPID Mag се зарежда с 20W",
+          "caption": "С 20W RAPID стига 50% само за 48 минути. Заредете RAPID и телефона, докато спите.\n* 100% за 126 минути",
+          "rows": []
+        },
+        {
+          "label": "Захват 11N, без изпускане",
+          "image": "rapid-mag-5000-cheren-zarezhdane-4.jpg",
+          "imageAlt": "RAPID Mag на телефон по време на бягане",
+          "caption": "Магнитите N52 от военен клас издържат на бягане, колоездене и блъсканицата в метрото.²",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Приложения",
+      "layout": "tabs-top",
+      "heading": "Винаги с вас",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Разходки в града",
+          "image": "rapid-mag-5000-cheren-prilozheniya-1.jpg",
+          "imageAlt": "RAPID Mag на разходка в града",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "На кафе",
+          "image": "rapid-mag-5000-cheren-prilozheniya-2.jpg",
+          "imageAlt": "RAPID Mag в кафене",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Преходи",
+          "image": "rapid-mag-5000-cheren-prilozheniya-3.jpg",
+          "imageAlt": "RAPID Mag на преход",
+          "caption": "",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Съвместимост",
+      "layout": "tabs-top",
+      "heading": "Зареждане на Apple устройства",
+      "intro": "Съвместима с iPhone 12–16 и AirPods с калъф за безжично зареждане.",
+      "tabs": [
+        {
+          "label": "Зареждане по модели",
+          "image": "rapid-mag-5000-cheren-savmestimost-1.jpg",
+          "imageAlt": "Процент зареждане на различни модели iPhone",
+          "caption": "* По вътрешни лабораторни тестове. Напълно заредена батерия 5000 mAh дава около 3000–3100 mAh използваема енергия заради 35–40% загуби.",
+          "rows": []
+        },
+        {
+          "label": "Работи с калъф",
+          "image": "rapid-mag-5000-cheren-savmestimost-2.jpg",
+          "imageAlt": "RAPID Mag върху телефон с магнитен калъф",
+          "caption": "Сложете магнитен калъф — бобината се центрира веднага, по време на тренировка или в натоварения път до работа.",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow RAPID Mag Power Bank 5000 mAh (черен)",
+          "qty": 1
+        },
+        {
+          "name": "Кабел USB-C към USB-C",
+          "qty": 1
+        },
+        {
+          "name": "Ръководство за употреба",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "faqBlock",
+      "anchorLabel": "Въпроси",
+      "heading": "Често задавани въпроси",
+      "items": [
+        {
+          "question": "Мога ли да я ползвам, докато се зарежда?",
+          "answer": "Да, поддържа едновременно зареждане и разреждане. Безжичното зареждане е до 7,5W. При едновременно разреждане безжичното зареждане е изключено по подразбиране — включва се със задържане на бутона 3 секунди."
+        },
+        {
+          "question": "Защо телефонът се загрява при зареждане от външна батерия? Има ли вреда?",
+          "answer": "Нормално е телефонът да се загрява, докато се зарежда от външна батерия — заради загубите при преобразуване на енергията, едновременно зареждане и ползване или висока околна температура. За да избегнете прегряване, дръжте телефона и батерията на проветриво място. При силно нагряване устройството може да намали мощността, а зареждането може да спре и да продължи, след като се охлади. Продуктът има множество сертификати за безопасност и отговаря на строги изисквания."
+        },
+        {
+          "question": "Съвместима ли е с телефони с Android?",
+          "answer": "Съвместима е с повечето телефони с Android, но не поддържа собствените протоколи за безжично зареждане на Android телефоните. Препоръчваме калъф с магнитно закрепване за по-добро ползване."
+        },
+        {
+          "question": "За какво е бутонът?",
+          "answer": "Едно натискане — събужда батерията и показва оставащия заряд. Двойно натискане — превключва между бърз режим на безжично зареждане (зелена светлина) и режим с ниска температура (синя светлина). Задържане 3 секунди — включва/изключва безжичното зареждане."
+        },
+        {
+          "question": "Защо батерията спира да зарежда телефона на 80%?",
+          "answer": "Това е част от управлението на температурата в iOS: ако температурата стане твърде висока по време на зареждане, iPhone може сам да спре на 80%, за да предпази батерията си. Зареждането продължава, след като телефонът се охлади — на по-хладно място става по-бързо."
+        },
+        {
+          "question": "Мога ли да я взема в самолета?",
+          "answer": "Да. RAPID Mag е 38,7Wh при 10000 mAh и 19,5Wh при 5000 mAh. Според Международната организация за гражданска авиация (ICAO) и повечето авиокомпании външни батерии под 100Wh са разрешени."
+        },
+        {
+          "question": "Условия за ползване и съхранение",
+          "answer": "След 300 цикъла капацитетът е над 80%. Батерията се зарежда и разрежда на надморска височина до 3000 м и при 0–40 °C. Ако не я ползвате дълго, съхранявайте я при −10 до 40 °C и я зареждайте поне веднъж на 3 месеца."
+        },
+        {
+          "question": "Как да зареждам безжично по-ефективно?",
+          "answer": "Без калъф или с тънък магнитен калъф под 2,5 мм, подравнен с мястото за безжично зареждане на батерията."
+        },
+        {
+          "question": "Има ли кабел в комплекта?",
+          "answer": "Да — 30 см кабел USB-C към USB-C, който поддържа 60W."
+        },
+        {
+          "question": "Защо номиналният и реалният капацитет са различни?",
+          "answer": "Номиналният капацитет е общият капацитет на клетките в батерията, а реалният (rated) — енергията, която батерията дава при стандартни условия (напр. 5V/2A). Номиналният е теоретична стойност; реалният отчита загубите при преобразуване и в схемата и затова е по-нисък."
+        },
+        {
+          "question": "USB-C портът за зареждане и за разреждане ли е?",
+          "answer": "Да, USB-C портът е двупосочен — за зареждане и за разреждане."
+        }
+      ]
+    },
+    {
+      "blockType": "footnotes",
+      "items": [
+        {
+          "text": "¹ Проверено в лабораторни условия"
+        },
+        {
+          "text": "² Зависи от модела на телефона"
+        },
+        {
+          "text": "³ Сравнение с EcoFlow RAPID 5K"
+        },
+        {
+          "text": "⁴ Зависи от модела на телефона"
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Rapid Mag Magnetic Wireless Power Bank 5000 mAh"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EF-RAPIDQI1-5K-B-EU"
+        },
+        {
+          "label": "Капацитет на клетките",
+          "value": "5000 mAh (3,8V)"
+        },
+        {
+          "label": "Реален капацитет",
+          "value": "3100 mAh (5V ⎓ 2A)"
+        },
+        {
+          "label": "Химия",
+          "value": "литиев кобалтов оксид"
+        },
+        {
+          "label": "Цикли",
+          "value": "300"
+        },
+        {
+          "label": "Портове",
+          "value": "1 × USB-C (вход/изход), макс. 20W"
+        },
+        {
+          "label": "Вход (USB-C)",
+          "value": "5V/3A, 9V/2,22A, 12V/1,67A (макс. 20W)"
+        },
+        {
+          "label": "Изход (USB-C)",
+          "value": "5V/3A, 9V/2,22A, 12V/1,67A (макс. 20W)"
+        },
+        {
+          "label": "Безжично",
+          "value": "макс. 7,5W"
+        },
+        {
+          "label": "Приложение",
+          "value": "Не"
+        },
+        {
+          "label": "Индикация",
+          "value": "LED светлини"
+        },
+        {
+          "label": "Устойчивост на падане",
+          "value": "1 м"
+        },
+        {
+          "label": "Оптимална работна температура",
+          "value": "15–40 °C"
+        },
+        {
+          "label": "Температура на зареждане",
+          "value": "0–40 °C"
+        },
+        {
+          "label": "Температура на съхранение",
+          "value": "−10 до 45 °C"
+        },
+        {
+          "label": "Размери",
+          "value": "103 × 71,6 × 9,4 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "123 г"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "iPhone 12 и по-нови, Samsung S24 и по-нови, AirPods с калъф за безжично зареждане"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-mag-power-bank-5-000mah-7-5w-magnetic-charging-1171422036.png",
+      "file": "rapid-mag-5000-cheren-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-mag-power-bank-5-000mah-7-5w-magnetic-charging-1174090670.jpg",
+      "file": "rapid-mag-5000-cheren-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-mag-power-bank-5-000mah-7-5w-magnetic-charging-1174090674.jpg",
+      "file": "rapid-mag-5000-cheren-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-mag-power-bank-5-000mah-7-5w-magnetic-charging-1174090668.jpg",
+      "file": "rapid-mag-5000-cheren-4.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-mag-power-bank-5-000mah-7-5w-magnetic-charging-1174090671.jpg",
+      "file": "rapid-mag-5000-cheren-5.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-mag-power-bank-5-000mah-7-5w-magnetic-charging-1174090672.jpg",
+      "file": "rapid-mag-5000-cheren-6.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-mag-power-bank-5-000mah-7-5w-magnetic-charging-1174090669.jpg",
+      "file": "rapid-mag-5000-cheren-7.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-mag-power-bank-5-000mah-7-5w-magnetic-charging-1174090673.jpg",
+      "file": "rapid-mag-5000-cheren-8.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_ksp_eu_0fe81a8d-35aa-4a1f-8a58-960ed804b568.jpg",
+      "file": "rapid-mag-5000-cheren-pregled-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Ultra-Slim.jpg",
+      "file": "rapid-mag-5000-cheren-dizayn-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Silk-Soft_Touch.jpg",
+      "file": "rapid-mag-5000-cheren-dizayn-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_LED_Power_Indicator.jpg",
+      "file": "rapid-mag-5000-cheren-dizayn-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_100_F_Cool_Touch.jpg",
+      "file": "rapid-mag-5000-cheren-zarezhdane-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Charge_While_Recharging.jpg",
+      "file": "rapid-mag-5000-cheren-zarezhdane-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_20W_Recharging.jpg",
+      "file": "rapid-mag-5000-cheren-zarezhdane-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_11N_Grip_Zero_Drops.jpg",
+      "file": "rapid-mag-5000-cheren-zarezhdane-4.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc___04.jpg",
+      "file": "rapid-mag-5000-cheren-prilozheniya-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc___05_684b2112-a160-4f60-b24d-7e151423d766.jpg",
+      "file": "rapid-mag-5000-cheren-prilozheniya-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc___03.jpg",
+      "file": "rapid-mag-5000-cheren-prilozheniya-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Model-by-Model_Charging_eu_144b8ecf-b849-4b19-98de-f35398602e89.jpg",
+      "file": "rapid-mag-5000-cheren-savmestimost-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Phone_Case-Friendly.jpg",
+      "file": "rapid-mag-5000-cheren-savmestimost-2.jpg"
+    }
+  ],
+  "_prevod_nadpisi": {
+    "rapid-mag-5000-cheren-2.jpg": {
+      "Ultra-Slim 9.4 mm": "Ултратънка 9,4 мм",
+      "Around the same thickness as a stack of four 1-Euro coins": "Колкото купчина от четири монети по 1 евро",
+      "5,000mAh": "5000 mAh",
+      "Dimensions:": "Размери:",
+      "Weight:": "Тегло:"
+    },
+    "rapid-mag-5000-cheren-3.jpg": {
+      "11N Grip, Zero Drops": "Захват 11N, без изпускане",
+      "Military-grade N52 magnets withstand running, cycling, and metro chaos.": "Магнитите N52 от военен клас издържат на бягане, колоездене и блъсканицата в метрото."
+    },
+    "rapid-mag-5000-cheren-4.jpg": {
+      "5,000mAh On-Demand Energy": "5000 mAh енергия при нужда",
+      "charges*": "зареждания*",
+      "* Based on internal laboratory testing": "* По вътрешни лабораторни тестове"
+    },
+    "rapid-mag-5000-cheren-5.jpg": {
+      "Charge While Recharging": "Зарежда, докато се зарежда",
+      "Charging": "Зареждане",
+      "7.5W wireless or 20W wired": "7,5W безжично или 20W с кабел",
+      "Recharging": "Презареждане",
+      "20W 0-50% in only 48 min": "20W 0–50% само за 48 мин"
+    },
+    "rapid-mag-5000-cheren-6.jpg": {
+      "X-Cooling": "X-Cooling",
+      "38°C Cool Touch": "Хладна на допир — 38 °C",
+      "Extending phone battery life.": "Удължава живота на батерията на телефона."
+    },
+    "rapid-mag-5000-cheren-7.jpg": {
+      "Silk-Soft Touch": "Копринено мека на допир",
+      "Silky matte texture ensures a secure grip during workouts, commutes, or coffee runs. Sweat-proof, fingerprint-resistant, and lightweight.": "Копринено матовата повърхност държи здраво по време на тренировка, път или на кафе. Устойчива на пот и отпечатъци, лека."
+    },
+    "rapid-mag-5000-cheren-8.jpg": {
+      "LED Power Indicator": "LED индикатор на заряда",
+      "Four LEDs track battery levels in real-time.": "Четири светодиода показват заряда в реално време."
+    },
+    "rapid-mag-5000-cheren-pregled-1.jpg": {
+      "Lithium Cobalt Battery": "Литиево-кобалтова батерия",
+      "38°C Cool Touch with EcoFlow X-Cooling": "Хладна на допир — 38 °C с EcoFlow X-Cooling",
+      "5,000mAh Capacity": "5000 mAh капацитет",
+      "Ultra-Slim 9.4 mm/0.37 in": "Ултратънка 9,4 мм",
+      "Superior and Safe Performance with EcoFlow": "Висока и безопасна работа с EcoFlow",
+      "LED Power Indicator": "LED индикатор на заряда"
+    },
+    "rapid-mag-5000-cheren-savmestimost-1.jpg": {
+      "Maximum wired charging percentages for various iPhone models*": "Максимален процент зареждане с кабел за различни модели iPhone*",
+      "Maximum wireless charging percentages for various iPhone models*": "Максимален процент безжично зареждане за различни модели iPhone*"
+    }
+  },
+  "_neyasni": [
+    "По решение на собственика (11.11.2026) — като eu.ecoflow.com (както RAPID Pro и RAPID Magnetic).",
+    "Галерията в eu.ecoflow.com е обща за двата цвята — освен първата снимка (черен), инфографиките показват белия модел. Така е и при EcoFlow.",
+    "EcoFlow EU дава гаранция 1,5 години, dice.bg — 24 месеца. Оставено 24 месеца (dice).",
+    "Мощността на USB-C: eu.ecoflow.com 20W; dice.bg изброява 9V/2A и 9V/2,22A — оставено 9V/2,22A (20W).",
+    "Снимката „20W Recharging“ има само „20W“ — без превод. Снимките с хора и сцени са без надписи.",
+    "В инфографиката в галерията пише „four 1-Euro coins“, а в текста на страницата — „five 20-cent coins“. Преводът е по това, което пише на всяко място.",
+    "В „Какво има в кутията“ кабелът е по FAQ на EcoFlow и по dice.bg (30 см USB-C към USB-C).",
+    "Цена/зачертана цена/SKU/наличност — от XML на dice (11.11.2026)."
+  ]
+}

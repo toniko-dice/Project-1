@@ -137,6 +137,14 @@
         "Осветление"
       ]
     },
+    "car-charging-cable-xt60-1-5m": {
+      "duljina": [
+        1.5
+      ],
+      "konektor": [
+        "XT60"
+      ]
+    },
     "cushion": {
       "vid": [
         "Къмпинг"
@@ -187,6 +195,11 @@
         2
       ]
     },
+    "delta-pro-3-smart-extra-battery": {
+      "kapacitet-wh": [
+        4096
+      ]
+    },
     "delta-pro-extra-battery-cable": {
       "duljina": [
         0.75
@@ -200,6 +213,16 @@
     "delta-pro-to-smart-generator-adapter": {
       "konektor": [
         "4+8"
+      ]
+    },
+    "delta-pro-ultra-extra-battery": {
+      "kapacitet-wh": [
+        6144
+      ]
+    },
+    "delta-pro-waterproof-bag": {
+      "vid": [
+        "Чанта"
       ]
     },
     "ev-x-stream-adapter-delta-pro": {
@@ -266,6 +289,22 @@
         "C20"
       ]
     },
+    "in-parallel-solar-connection-cable-xt60": {
+      "vid": [
+        "Кабел"
+      ],
+      "konektor": [
+        "XT60"
+      ]
+    },
+    "in-series-solar-connection-cable-xt60": {
+      "vid": [
+        "Кабел"
+      ],
+      "konektor": [
+        "XT60"
+      ]
+    },
     "infinity-cable-2m": {
       "duljina": [
         2
@@ -319,6 +358,30 @@
         3
       ]
     },
+    "rapid-mag-10000-cheren": {
+      "kapacitet-mah": [
+        10000
+      ],
+      "moshtnost": [
+        30
+      ]
+    },
+    "rapid-mag-5000-cheren": {
+      "kapacitet-mah": [
+        5000
+      ],
+      "moshtnost": [
+        20
+      ]
+    },
+    "rapid-magnetic-10000-srebrist": {
+      "kapacitet-mah": [
+        10000
+      ],
+      "moshtnost": [
+        65
+      ]
+    },
     "rapid-magnetic-5000-cheren": {
       "kapacitet-mah": [
         5000
@@ -333,6 +396,14 @@
       ],
       "moshtnost": [
         30
+      ]
+    },
+    "rapid-power-bank-25000-srebrist": {
+      "kapacitet-mah": [
+        25000
+      ],
+      "moshtnost": [
+        170
       ]
     },
     "rapid-pro-charger-100w": {

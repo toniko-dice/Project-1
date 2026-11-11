@@ -1,0 +1,353 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "eu.ecoflow.com/products/rapid-magnetic-power-bank (вариант 10000mAh / Silver) + dice.bg; снето на 11.11.2026",
+  "produkt": {
+    "title": "EcoFlow RAPID Magnetic Power Bank 10000mAh (сребрист)",
+    "slug": "rapid-magnetic-10000-srebrist",
+    "categorySlug": "vanshni-baterii-rapid",
+    "productType": "hero",
+    "tagline": "Магнитна външна батерия 10000 mAh, 65W, Qi2 — сребрист",
+    "badge": "none",
+    "price": 65.96,
+    "compareAtPrice": 91.52,
+    "externalUrl": "https://dice.bg/ecoflow-rapid-magnetic-wireless-charging-power-bank-10000-mah-65w-prenosima-vanshna-bateria-vgraden-usb-c-kabel-usb-c-port-i-bezzhichno-zarezhdane-s-magsafe-srebrist-item70355",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "70355",
+    "ean": "4895251627474",
+    "description": "Магнитна външна батерия 10000 mAh с безжично зареждане Qi2 до 15W, вграден прибиращ се USB-C кабел и бързо жично зареждане 65W. TFT дисплей, вградена стойка и двойна охлаждаща защита.",
+    "highlights": [
+      {
+        "text": "Безжично Qi2 до 15W"
+      },
+      {
+        "text": "Вграден USB-C кабел, 65W"
+      },
+      {
+        "text": "TFT дисплей, приложение EcoFlow"
+      },
+      {
+        "text": "Вградена стойка — вертикално и хоризонтално"
+      }
+    ],
+    "metaTitle": "EcoFlow RAPID Magnetic 10000mAh 65W — сребриста",
+    "metaDescription": "Магнитна външна батерия EcoFlow RAPID 10000 mAh, сребрист цвят: безжично Qi2 15W, 65W през вградения USB-C кабел, TFT дисплей, стойка.",
+    "alsoInCategories": [
+      "vanshni-baterii"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "rapid-magnetic-10000-srebrist-1.png",
+      "alt": "EcoFlow RAPID Magnetic Power Bank 10000mAh (сребрист) — магнитна външна батерия"
+    },
+    {
+      "file": "rapid-magnetic-10000-srebrist-2.webp",
+      "alt": "EcoFlow RAPID Magnetic Power Bank 10000mAh (сребрист) — магнитна външна батерия"
+    },
+    {
+      "file": "rapid-magnetic-5000-cheren-3.jpg",
+      "alt": "EcoFlow RAPID Magnetic Power Bank 10000mAh (сребрист) — магнитна външна батерия"
+    },
+    {
+      "file": "rapid-magnetic-5000-cheren-4.jpg",
+      "alt": "EcoFlow RAPID Magnetic Power Bank 10000mAh (сребрист) — магнитна външна батерия"
+    },
+    {
+      "file": "rapid-magnetic-5000-cheren-5.jpg",
+      "alt": "EcoFlow RAPID Magnetic Power Bank 10000mAh (сребрист) — магнитна външна батерия"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Бързо зареждане и презареждане с RAPID",
+      "body": "RAPID използва патентованата технология X-Stream — енергийна плътност като при флагманските смартфони и бързо зареждане. С протокола PD 3.0 се зарежда и зарежда устройствата ви светкавично. Безжичното зареждане със сертификат Qi2 и вграденият кабел правят зареждането толкова лесно, колкото да щракнете батерията на телефона.",
+      "image": "rapid-magnetic-5000-cheren-pregled-1.jpg",
+      "imageAlt": "EcoFlow RAPID Magnetic Power Bank, закрепена магнитно към телефон"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Съвместима с почти всичко",
+      "body": "Благодарение на високата изходна мощност и поддръжката на различни протоколи за зареждане RAPID зарежда повечето преносими устройства — iPhone, iPad, Kindle, фитнес гривни и слушалки.",
+      "image": "rapid-magnetic-5000-cheren-savmestima-s-pochti-vsichko-1.jpg",
+      "imageAlt": "RAPID Magnetic Power Bank до телефон, таблет и слушалки"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Приложения",
+      "layout": "tabs-top",
+      "heading": "Енергия, където и да сте",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Работа от разстояние",
+          "image": "rapid-magnetic-5000-cheren-prilozheniya-1.jpg",
+          "imageAlt": "RAPID на бюро до лаптоп",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "В движение",
+          "image": "rapid-magnetic-5000-cheren-prilozheniya-2.jpg",
+          "imageAlt": "RAPID зарежда телефон до леглото",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "С приятели",
+          "image": "rapid-magnetic-5000-cheren-prilozheniya-3.jpg",
+          "imageAlt": "Приятели с телефон и RAPID в кафене",
+          "caption": "",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Стойка",
+      "heading": "В ръка или със свободни ръце",
+      "body": "RAPID съчетава изчистен дизайн с практичност. Силните магнити и покритието против приплъзване държат телефона здраво, а вградената стойка ви оставя свободни ръце и служи и като стойка за бюро.",
+      "image": "rapid-magnetic-5000-cheren-stoyka-1.jpg",
+      "imageAlt": "Мъж държи телефон с прикрепена RAPID батерия"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "layout": "tabs-top",
+      "heading": "Здраво закрепване и удобна стойка",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Магнит против приплъзване",
+          "image": "rapid-magnetic-5000-cheren-zdravo-zakrepvane-i-udobna-1.jpg",
+          "imageAlt": "RAPID закрепена магнитно на гърба на телефон",
+          "caption": "Магнитите N52 и елементите против приплъзване държат батерията и телефона плътно заедно — батерията не се плъзга, докато ползвате телефона.",
+          "rows": []
+        },
+        {
+          "label": "Стойка — вертикално и хоризонтално",
+          "image": "rapid-magnetic-5000-cheren-zdravo-zakrepvane-i-udobna-2.jpg",
+          "imageAlt": "Телефон на стойката на RAPID",
+          "caption": "Вградената стойка държи телефона изправен вертикално или хоризонтално — за видео разговори и гледане без ръце.",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Дисплей",
+      "heading": "Умен TFT дисплей",
+      "body": "Дисплеят показва капацитета на батерията, входа и изхода и времето до пълно зареждане. През приложението EcoFlow може да сложите на дисплея името си или емоджи.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Защита",
+      "heading": "Двойна защита за здрава и дълготрайна батерия",
+      "body": "Двойната охлаждаща защита на EcoFlow — конструкция за разсейване на топлината и следене на температурата 500 пъти в секунда — намалява нагряването и забавя стареенето на батерията.",
+      "image": "rapid-magnetic-5000-cheren-zashtita-1.jpg",
+      "imageAlt": "Вътрешната конструкция на RAPID Magnetic Power Bank"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Уникална конструкция за ниска температура",
+      "body": "Технология от автомобилната индустрия намалява електрическото съпротивление, а собствената вътрешна охлаждаща система намалява топлината при магнитно зареждане.",
+      "image": "rapid-magnetic-5000-cheren-unikalna-konstrukciya-za-niska-1.jpg",
+      "imageAlt": "Охлаждащата система на RAPID Magnetic Power Bank"
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Винаги готова",
+      "body": "Батерията запазва над 95% от енергията си за един месец. Дори да не я ползвате известно време, няма нужда да я презареждате.",
+      "image": "rapid-magnetic-5000-cheren-vinagi-gotova-1.jpg",
+      "imageAlt": "Приятели снимат с телефон и RAPID батерия"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow RAPID Magnetic Power Bank 10000 mAh (сребрист)",
+          "qty": 1
+        },
+        {
+          "name": "Ръководство за употреба",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "footnotes",
+      "items": [
+        {
+          "text": "¹ Всички резултати от тестове на страницата са от вътрешни тестове на EcoFlow и зависят от условията — температура, влажност и калибриране на оборудването. Дадени са само за информация."
+        },
+        {
+          "text": "² Батерията е съвместима с iPhone 12 и по-нови, iPad, MacBook и AirPods. Зарежда и телефони с Android (напр. Samsung и Google), но при тях магнитното закрепване и безжичното зареждане 15W не работят, а ефективността на зареждане е по-ниска."
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Rapid Magnetic Wireless Charging Power Bank 10000 mAh 65W"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EF-RAPID10000-EU"
+        },
+        {
+          "label": "Капацитет",
+          "value": "10000 mAh"
+        },
+        {
+          "label": "Портове",
+          "value": "вграден прибиращ се USB-C кабел (вход/изход); USB-C порт (вход/изход)"
+        },
+        {
+          "label": "Ефективност на преобразуване",
+          "value": ">75%"
+        },
+        {
+          "label": "Вход (USB-C / вграден кабел)",
+          "value": "5V/3A, 9V/3A, 12V/3A, 15V/3A, 20V/3,25A (макс. 65W)"
+        },
+        {
+          "label": "Изход (USB-C / вграден кабел)",
+          "value": "5V/3A, 9V/3A, 12V/3A, 15V/3A, 20V/3,25A (макс. 65W)"
+        },
+        {
+          "label": "Безжично (Qi2)",
+          "value": "5 / 7,5 / 10 / 15W"
+        },
+        {
+          "label": "Дисплей",
+          "value": "TFT"
+        },
+        {
+          "label": "Приложение",
+          "value": "EcoFlow (персонализиране на дисплея)"
+        },
+        {
+          "label": "Размери",
+          "value": "108 × 70 × 22,9 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "258 г"
+        },
+        {
+          "label": "Безжична съвместимост",
+          "value": "iPhone 16, 15, 14 и всеки iPhone с MagSafe"
+        },
+        {
+          "label": "Цвят",
+          "value": "сребрист"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-magnetic-power-bank-59606425436503.png",
+      "file": "rapid-magnetic-10000-srebrist-1.png"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/7/0/70355_1.webp",
+      "file": "rapid-magnetic-10000-srebrist-2.webp"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-magnetic-power-bank-59704394809687.jpg",
+      "file": "rapid-magnetic-5000-cheren-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-magnetic-power-bank-59704394875223.jpg",
+      "file": "rapid-magnetic-5000-cheren-4.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-magnetic-power-bank-59704394907991.jpg",
+      "file": "rapid-magnetic-5000-cheren-5.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/xstream_557efa07-f862-4224-9c4c-80f44e444833.jpg",
+      "file": "rapid-magnetic-5000-cheren-pregled-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Versatile_and_universally_compatible_9630f46b-a225-4a82-865e-1674646b9441.jpg",
+      "file": "rapid-magnetic-5000-cheren-savmestima-s-pochti-vsichko-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Remote_Work.jpg",
+      "file": "rapid-magnetic-5000-cheren-prilozheniya-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/On-the-go_4794f23a-71d3-49a7-b5a3-6286808964df.jpg",
+      "file": "rapid-magnetic-5000-cheren-prilozheniya-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Socializing_2b8bf418-7010-46a7-95d5-43236919349d.jpg",
+      "file": "rapid-magnetic-5000-cheren-prilozheniya-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Built-in_stand_and_strong_magnetic_connection_fb565b0d-bbf9-4425-92fb-bf4a12aaa16c.jpg",
+      "file": "rapid-magnetic-5000-cheren-stoyka-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Anti-slip_magnetism_98636eb6-11c0-47f7-a424-ce8bc3754dd4.jpg",
+      "file": "rapid-magnetic-5000-cheren-zdravo-zakrepvane-i-udobna-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Kickstand_for_upright_side_view_0f30eb39-6bbd-4b0f-b328-d9a7468457f7.jpg",
+      "file": "rapid-magnetic-5000-cheren-zdravo-zakrepvane-i-udobna-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Double_protection_for_healthy_long-lasting_charging_1eb95648-7e9c-4fb3-9392-02fa2a567ed2.jpg",
+      "file": "rapid-magnetic-5000-cheren-zashtita-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/low_temp_34bb78ea-f464-4491-952a-3428d5d924a4.jpg",
+      "file": "rapid-magnetic-5000-cheren-unikalna-konstrukciya-za-niska-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/Always_ready_32c524f4-0b73-451d-9a93-0a4ea829bad9.jpg",
+      "file": "rapid-magnetic-5000-cheren-vinagi-gotova-1.jpg"
+    }
+  ],
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "Същата страница в eu.ecoflow.com като RAPID Magnetic 5000 (rapid-magnetic-power-bank) — секциите и снимките са същите като при rapid-magnetic-5000-cheren (същите имена на файловете, без повторен превод), плюс секция „Умен TFT дисплей“, която важи само за 10000 mAh.",
+    "Спецификациите са по dice.bg (EF-RAPID10000-EU).",
+    "Цена/зачертана цена/SKU/наличност — от XML на dice (11.11.2026)."
+  ]
+}

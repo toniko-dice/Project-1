@@ -1,0 +1,141 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "eu.ecoflow.com/products/ecoflow-in-parallel-solar-connection-cable-xt60 + dice.bg",
+  "produkt": {
+    "title": "EcoFlow In-Parallel Solar Connection Cable (XT60)",
+    "slug": "in-parallel-solar-connection-cable-xt60",
+    "categorySlug": "kabeli",
+    "productType": "accessory",
+    "tagline": "Кабел за паралелно свързване на два еднакви соларни панела",
+    "badge": "none",
+    "price": 15,
+    "externalUrl": "https://dice.bg/kabel-za-paralelno-sv-rzvane-na-njakolko-ecoflow-lightweight-solarni-panela-k-m-ecoflow-elektrocentrali-ecoflow-in-parallel-solar-connection-cable-xt60",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "82887",
+    "ean": "4895251636629",
+    "description": "Оригинален кабел EcoFlow за паралелно свързване на два еднакви соларни панела към електроцентралите EcoFlow DELTA и RIVER — по-бързо зареждане. Конектори XT60.",
+    "highlights": [
+      {
+        "text": "Паралелно свързване на 2 панела"
+      },
+      {
+        "text": "По-бързо соларно зареждане"
+      },
+      {
+        "text": "DELTA и RIVER"
+      }
+    ],
+    "metaTitle": "Кабел EcoFlow XT60 за паралелно свързване на соларни панели",
+    "metaDescription": "Оригинален кабел EcoFlow (XT60) за паралелно свързване на два еднакви соларни панела към DELTA и RIVER — по-бързо зареждане.",
+    "compatibleWith": [
+      "sgavaemi-paneli",
+      "stacionarni-paneli"
+    ],
+    "alsoInCategories": [
+      "montazh-i-kabeli-za-paneli"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "in-parallel-solar-connection-cable-xt60-1.png",
+      "alt": "EcoFlow In-Parallel Solar Connection Cable (XT60) — кабел"
+    },
+    {
+      "file": "in-parallel-solar-connection-cable-xt60-2.webp",
+      "alt": "EcoFlow In-Parallel Solar Connection Cable (XT60) — кабел"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Два панела паралелно",
+      "body": "Свързва паралелно два соларни панела от един и същ модел към електроцентрала EcoFlow (серии DELTA и RIVER) — за по-бързо и по-ефективно зареждане.\n\nЗа тези панели се препоръчва паралелно свързване: 45W и 60W Portable Solar Panel, 110W Lightweight Portable Solar Panel.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Важно",
+      "body": "Използвайте кабела само за два соларни панела от абсолютно еднакъв модел — с еднаква мощност, напрежение и ток. Не свързвайте различни модели панели.\n\nОбщата мощност на двата панела не трябва да надвишава максималната входна мощност, напрежение или ток на електроцентралата.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow In-Parallel Solar Connection Cable (XT60)",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "In-Parallel Solar Connection Cable XT60"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EFL-SOLAR45-XT600"
+        },
+        {
+          "label": "Конектори",
+          "value": "XT60"
+        },
+        {
+          "label": "Препоръчва се за",
+          "value": "45W и 60W Portable Solar Panel, 110W Lightweight Portable Solar Panel"
+        },
+        {
+          "label": "Съвместимост",
+          "value": "електроцентрали EcoFlow DELTA и RIVER"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-in-parallel-solar-connection-cable-xt60-1256644308.png",
+      "file": "in-parallel-solar-connection-cable-xt60-1.png"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/4/8/4895251636629-1.webp",
+      "file": "in-parallel-solar-connection-cable-xt60-2.webp"
+    }
+  ],
+  "_prevod_nadpisi": {},
+  "_neyasni": [
+    "По eu.ecoflow.com и dice.bg (съвпадат).",
+    "„Съвместим с“ — като Solar Parallel Connection Cable (сгъваеми и стационарни панели). Собственикът да промени от админа, ако иска само Lightweight панелите.",
+    "Атрибути за филтъра: вид — Кабел; конектор XT60.",
+    "Фабричен номер: dice.bg „EFL-SOLAR45-XT600“, eu.ecoflow.com „EFL-SOLAR45-XT60“ — оставено като dice.",
+    "В dice.bg първото изречение казва „In-Series“ за този кабел — грешка, не е взето.",
+    "Цена/SKU/наличност — от XML на dice (11.11.2026)."
+  ]
+}

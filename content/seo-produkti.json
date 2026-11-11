@@ -600,6 +600,50 @@
     "wave-stabilizing-strap-kit": {
       "metaTitle": "Комплект за укрепване на климатик EcoFlow WAVE",
       "metaDescription": "Комплект ремъци EcoFlow за укрепване на климатика WAVE 3 или WAVE 2 и батерията му в кемпер, яхта и други превозни средства."
+    },
+    "delta-pro-3-smart-extra-battery": {
+      "metaTitle": "EcoFlow DELTA Pro 3 Smart Extra Battery 4096Wh",
+      "metaDescription": "Допълнителна батерия EcoFlow DELTA Pro 3 Smart Extra Battery 4096Wh — удвоява или утроява капацитета на DELTA Pro 3. LFP, LCD дисплей."
+    },
+    "delta-pro-ultra-extra-battery": {
+      "metaTitle": "DELTA Pro Ultra Battery — допълнителна батерия 6144Wh",
+      "metaDescription": "Допълнителна батерия EcoFlow DELTA Pro Ultra 6144Wh — разширява системата за резервно захранване на дома. LFP, 3500 цикъла."
+    },
+    "rapid-magnetic-10000-srebrist": {
+      "metaTitle": "EcoFlow RAPID Magnetic 10000mAh 65W — сребриста",
+      "metaDescription": "Магнитна външна батерия EcoFlow RAPID 10000 mAh, сребрист цвят: безжично Qi2 15W, 65W през вградения USB-C кабел, TFT дисплей, стойка."
+    },
+    "rapid-mag-5000-cheren": {
+      "metaTitle": "EcoFlow RAPID Mag 5000mAh — ултратънка магнитна батерия",
+      "metaDescription": "Ултратънка магнитна външна батерия EcoFlow RAPID Mag 5000 mAh, черна: 9,4 мм, безжично 7,5W, USB-C 20W, магнити N52, X-Cooling."
+    },
+    "rapid-mag-10000-cheren": {
+      "metaTitle": "EcoFlow RAPID Mag 10000mAh — магнитна батерия със стойка",
+      "metaDescription": "Магнитна външна батерия EcoFlow RAPID Mag 10000 mAh, черна: безжично 7,5W, USB-C 30W, вградена стойка, магнити N52, X-Cooling."
+    },
+    "rapid-power-bank-25000-srebrist": {
+      "metaTitle": "EcoFlow RAPID 25000mAh 170W — батерия с вградени кабели",
+      "metaDescription": "Външна батерия EcoFlow RAPID 25000 mAh, 170W, с вграден и прибиращ се USB-C кабел 100W, TFT дисплей, до 4 устройства. Сребриста."
+    },
+    "stream-microinverter-800w": {
+      "metaTitle": "EcoFlow STREAM Microinverter 800W — микроинвертор без кабели",
+      "metaDescription": "Микроинвертор EcoFlow STREAM 800W за балконска соларна система: 2 MPPT входа, IP67, 10 години гаранция. Без кабели — продават се отделно."
+    },
+    "delta-pro-waterproof-bag": {
+      "metaTitle": "Водоустойчива чанта за EcoFlow DELTA Pro",
+      "metaDescription": "Водоустойчива чанта EcoFlow за DELTA Pro — пази от вода, мръсотия и удари, с прозрачен капак за екрана."
+    },
+    "car-charging-cable-xt60-1-5m": {
+      "metaTitle": "Кабел EcoFlow XT60 за зареждане от автомобил, 1,5 м",
+      "metaDescription": "Оригинален кабел EcoFlow Car Charging Cable XT60 — зарежда електроцентралите EcoFlow от запалката на автомобила (12V). 1,5 м."
+    },
+    "in-series-solar-connection-cable-xt60": {
+      "metaTitle": "Кабел EcoFlow XT60 за последователно свързване на панели",
+      "metaDescription": "Оригинален кабел EcoFlow (XT60) за последователно свързване на два еднакви соларни панела към DELTA и RIVER — по-бързо зареждане."
+    },
+    "in-parallel-solar-connection-cable-xt60": {
+      "metaTitle": "Кабел EcoFlow XT60 за паралелно свързване на соларни панели",
+      "metaDescription": "Оригинален кабел EcoFlow (XT60) за паралелно свързване на два еднакви соларни панела към DELTA и RIVER — по-бързо зареждане."
     }
   }
 }

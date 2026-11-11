@@ -1,0 +1,251 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "dice.bg",
+  "produkt": {
+    "title": "EcoFlow RAPID Mag Power Bank 10000mAh (черен)",
+    "slug": "rapid-mag-10000-cheren",
+    "categorySlug": "vanshni-baterii-rapid",
+    "productType": "accessory",
+    "tagline": "Тънка магнитна външна батерия 10000 mAh със стойка — черен",
+    "badge": "none",
+    "price": 49,
+    "compareAtPrice": 65.96,
+    "externalUrl": "https://dice.bg/prenosima-v-nshna-baterija-s-usb-c-port-i-bezzhichno-zarezhdane-s-magsafe-ecoflow-rapid-mag-magnetic-wireless-power-bank-10000-mah-cheren",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "73052",
+    "ean": "4895251648004",
+    "description": "Тънка магнитна външна батерия 10000 mAh с вградена стойка. Безжично зареждане до 7,5W и USB-C до 30W — зарежда две устройства едновременно. X-Cooling и магнити N52.",
+    "highlights": [
+      {
+        "text": "Безжично 7,5W + USB-C 30W"
+      },
+      {
+        "text": "Вградена стойка"
+      },
+      {
+        "text": "Магнити N52"
+      },
+      {
+        "text": "X-Cooling — под 38 °C"
+      }
+    ],
+    "metaTitle": "EcoFlow RAPID Mag 10000mAh — магнитна батерия със стойка",
+    "metaDescription": "Магнитна външна батерия EcoFlow RAPID Mag 10000 mAh, черна: безжично 7,5W, USB-C 30W, вградена стойка, магнити N52, X-Cooling.",
+    "alsoInCategories": [
+      "vanshni-baterii"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "rapid-mag-10000-cheren-1.webp",
+      "alt": "EcoFlow RAPID Mag Power Bank 10000mAh (черен) — магнитна външна батерия"
+    },
+    {
+      "file": "rapid-mag-10000-cheren-2.webp",
+      "alt": "EcoFlow RAPID Mag Power Bank 10000mAh (черен) — магнитна външна батерия"
+    },
+    {
+      "file": "rapid-mag-10000-cheren-3.webp",
+      "alt": "EcoFlow RAPID Mag Power Bank 10000mAh (черен) — магнитна външна батерия"
+    },
+    {
+      "file": "rapid-mag-10000-cheren-4.webp",
+      "alt": "EcoFlow RAPID Mag Power Bank 10000mAh (черен) — магнитна външна батерия"
+    },
+    {
+      "file": "rapid-mag-10000-cheren-5.webp",
+      "alt": "EcoFlow RAPID Mag Power Bank 10000mAh (черен) — магнитна външна батерия"
+    },
+    {
+      "file": "rapid-mag-10000-cheren-6.webp",
+      "alt": "EcoFlow RAPID Mag Power Bank 10000mAh (черен) — магнитна външна батерия"
+    },
+    {
+      "file": "rapid-mag-10000-cheren-7.webp",
+      "alt": "EcoFlow RAPID Mag Power Bank 10000mAh (черен) — магнитна външна батерия"
+    },
+    {
+      "file": "rapid-mag-10000-cheren-8.webp",
+      "alt": "EcoFlow RAPID Mag Power Bank 10000mAh (черен) — магнитна външна батерия"
+    },
+    {
+      "file": "rapid-mag-10000-cheren-9.webp",
+      "alt": "EcoFlow RAPID Mag Power Bank 10000mAh (черен) — магнитна външна батерия"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Тънка магнитна батерия с MagSafe",
+      "body": "Закрепва се магнитно към iPhone с MagSafe и го зарежда безжично до 7,5W. Силните магнити щракват на място, а материалите на зарядния модул са подбрани така, че да не прегрява.\n\nВградената стойка държи телефона изправен в удобен ъгъл.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "heading": "Две устройства едновременно",
+      "body": "Едно безжично до 7,5W и едно с кабел през USB-C порта до 30W. Зарежда и всяко друго устройство с безжично зареждане Qi.\n\nLED индикатор показва заряда. Технологията X-Cooling държи повърхността под 38 °C, а магнитите N52 от военен клас издържат на бягане, колоездене и други спортове.",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow RAPID Mag Power Bank 10000 mAh (черен)",
+          "qty": 1
+        },
+        {
+          "name": "Ръководство за употреба",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "Rapid Mag Magnetic Wireless Power Bank 10000 mAh"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EF-RAPIDQI1-10K-B-EU"
+        },
+        {
+          "label": "Капацитет на клетките",
+          "value": "10000 mAh (7,6V)"
+        },
+        {
+          "label": "Реален капацитет",
+          "value": "6500 mAh (5V ⎓ 2A)"
+        },
+        {
+          "label": "Химия",
+          "value": "литиев кобалтов оксид"
+        },
+        {
+          "label": "Цикли",
+          "value": "300"
+        },
+        {
+          "label": "Вход (USB-C)",
+          "value": "5V/3A, 9V/3A, 12V/2,5A, 15V/2A, 20V/1,5A (макс. 30W)"
+        },
+        {
+          "label": "Изход (USB-C)",
+          "value": "5V/3A, 9V/3A, 12V/2,5A, 15V/2A, 20V/1,5A (макс. 30W)"
+        },
+        {
+          "label": "Безжично (Qi)",
+          "value": "макс. 7,5W"
+        },
+        {
+          "label": "Индикация",
+          "value": "5 LED индикатора"
+        },
+        {
+          "label": "Размери",
+          "value": "103 × 71,6 × 15,5 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "187 г"
+        },
+        {
+          "label": "Безжична съвместимост",
+          "value": "всички iPhone с MagSafe и калъфи с MagSafe"
+        },
+        {
+          "label": "Цвят",
+          "value": "черен"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": [
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_rapid_mag_magnetic_wireless_power_bank_10000_mah-black-1.webp",
+      "file": "rapid-mag-10000-cheren-1.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_rapid_mag_magnetic_wireless_power_bank_10000_mah-black-2.webp",
+      "file": "rapid-mag-10000-cheren-2.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_rapid_mag_magnetic_wireless_power_bank_10000_mah-black-3.webp",
+      "file": "rapid-mag-10000-cheren-3.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_rapid_mag_magnetic_wireless_power_bank_10000_mah-black-4.webp",
+      "file": "rapid-mag-10000-cheren-4.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_rapid_mag_magnetic_wireless_power_bank_10000_mah-black-5.webp",
+      "file": "rapid-mag-10000-cheren-5.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_rapid_mag_magnetic_wireless_power_bank_10000_mah-black-6.webp",
+      "file": "rapid-mag-10000-cheren-6.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_rapid_mag_magnetic_wireless_power_bank_10000_mah-black-7.webp",
+      "file": "rapid-mag-10000-cheren-7.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_rapid_mag_magnetic_wireless_power_bank_10000_mah-black-8.webp",
+      "file": "rapid-mag-10000-cheren-8.webp"
+    },
+    {
+      "url": "https://cdn.dice.bg/media/mf_webp/jpg/media/catalog/product/cache/03f33d0269cbe2cb49892bd5a60c7e5d/e/c/ecoflow_rapid_mag_magnetic_wireless_power_bank_10000_mah-black-9.webp",
+      "file": "rapid-mag-10000-cheren-9.webp"
+    }
+  ],
+  "_prevod_nadpisi": {
+    "rapid-mag-10000-cheren-3.webp": {
+      "X-Cooling": "X-Cooling",
+      "38℃ Cool Touch": "Хладна на допир — 38 °C",
+      "Extending phone battery life.": "Удължава живота на батерията на телефона."
+    },
+    "rapid-mag-10000-cheren-4.webp": {
+      "60° Kickstand and 11N Grip": "Стойка 60° и захват 11N",
+      "Multi-angled stand": "Стойка под различен ъгъл",
+      "Military-grade N52 magnets": "Магнити N52 от военен клас"
+    },
+    "rapid-mag-10000-cheren-5.webp": {
+      "Silk-Soft Touch": "Копринено мека на допир",
+      "Silky matte texture ensures a secure grip during workouts, commutes, or coffee runs. Sweat-proof, fingerprint-resistant, and lightweight.": "Копринено матовата повърхност държи здраво по време на тренировка, път или на кафе. Устойчива на пот и отпечатъци, лека."
+    },
+    "rapid-mag-10000-cheren-6.webp": {
+      "LED Power Indicator": "LED индикатор на заряда",
+      "Four LEDs track battery levels in real-time.": "Четири светодиода показват заряда в реално време."
+    }
+  },
+  "_neyasni": [
+    "Този модел (EF-RAPIDQI1-10K-B-EU, EAN 4895251648004) го няма в eu.ecoflow.com — там са само RAPID Mag Qi2 10000mAh 15W и Qi2.2 25W (други EAN). По правилото → изцяло по dice.bg, кратка страница.",
+    "dice.bg пише „литиево-метална“ батерия в описанието и „литиев кобалтов оксид“ в спецификациите — оставено литиев кобалтов оксид (същото като RAPID Mag 5000 при EcoFlow).",
+    "Снимките от dice (9 бр.) може да са с английски надписи — Code да ги прегледа при вноса; ако има надписи → в za-prevod по обичайния ред.",
+    "Цена/зачертана цена/SKU/наличност — от XML на dice (11.11.2026).",
+    "Code (11.11.2026): от 9-те снимки от dice 4 са с английски надписи (3 X-Cooling, 4 стойка/захват, 5 Silk-Soft Touch, 6 LED индикатор) — в _prevod_nadpisi, преводите — като при RAPID Mag 5000; останалите 5 са без текст."
+  ]
+}

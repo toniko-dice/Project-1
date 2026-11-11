@@ -242,12 +242,20 @@ export const planSync = async (
     if (p.noSync) { plan.skippedNoSync++; continue }
 
     const data: Record<string, unknown> = {}
-    if (updatePrice) {
-      const цена = finalPrice(row)
-      if (!цена.ok) {
-        plan.errors.push(`${p.title}: ${цена.error} — продуктът не е пипнат`)
-        continue
-      }
+    const цена = updatePrice ? finalPrice(row) : null
+    /*
+      Цена 0 в dice = „няма цена там" (In-Series Solar Connection Cable 82840:
+      0.00, на сайта — 15 € от EcoFlow EU по решение на собственика, 11.11.2026).
+      Цената не се пипа, наличността се обновява. Друга негодна цена — както
+      досега: продуктът не се пипа.
+    */
+    const цена0 = цена !== null && !цена.ok && row.regularPrice === 0
+    if (цена && !цена.ok && !цена0) {
+      plan.errors.push(`${p.title}: ${цена.error} — продуктът не е пипнат`)
+      continue
+    }
+    if (цена0) plan.warnings.push(`${p.title} (${rowLabel(row)}): цена 0 във файла — цената на сайта не е пипната, наличността се обновява`)
+    if (цена?.ok) {
       if (цена.warning) plan.warnings.push(`${p.title} (${rowLabel(row)}): ${цена.warning}`)
       const сменена = цена.price !== (p.price ?? null)
       const смененаЗачертана = (p.compareAtPrice ?? null) !== цена.compareAtPrice

@@ -1,0 +1,543 @@
+{
+  "_bележка": "Съдържание за внасяне: npm run import:all. Снимките се свалят сами по _svali_snimki; преведените се слагат в content/snimki/ под същото име.",
+  "_iztochnik": "eu.ecoflow.com/products/rapid-power-bank-25k-built-in-and-retractable-cables (Silver) + dice.bg; снето на 11.11.2026",
+  "produkt": {
+    "title": "EcoFlow RAPID Power Bank (25,000mAh, 170W, 100W Built-In and Retractable Cables) (сребрист)",
+    "slug": "rapid-power-bank-25000-srebrist",
+    "categorySlug": "vanshni-baterii-rapid",
+    "productType": "hero",
+    "tagline": "Външна батерия 25000 mAh, 170W, с вграден и прибиращ се USB-C кабел — сребрист",
+    "badge": "none",
+    "price": 99,
+    "compareAtPrice": 111.97,
+    "externalUrl": "https://dice.bg/v-nshna-baterija-s-vgradeni-2xusb-c-kabeli-i-usb-c-usb-a-portove-i-tehnologija-za-b-rzo-zarezhdane-ecoflow-rapid-power-bank-with-built-in-retractable-cables-25000-mah-170w-srebrist",
+    "ctaLabel": "Купи сега",
+    "availability": "in-stock",
+    "brand": "EcoFlow",
+    "sku": "73043",
+    "ean": "4895251653664",
+    "description": "Външна батерия 25000 mAh (90Wh) с общо 170W изход и до 100W от един порт. Два вградени USB-C кабела — прибиращ се и с каишка, USB-C и USB-A порт, TFT дисплей. Зарежда до 4 устройства едновременно.",
+    "highlights": [
+      {
+        "text": "170W общо, 100W от един порт"
+      },
+      {
+        "text": "Вграден и прибиращ се USB-C кабел"
+      },
+      {
+        "text": "25000 mAh, разрешена в самолет"
+      },
+      {
+        "text": "TFT дисплей"
+      }
+    ],
+    "metaTitle": "EcoFlow RAPID 25000mAh 170W — батерия с вградени кабели",
+    "metaDescription": "Външна батерия EcoFlow RAPID 25000 mAh, 170W, с вграден и прибиращ се USB-C кабел 100W, TFT дисплей, до 4 устройства. Сребриста.",
+    "alsoInCategories": [
+      "vanshni-baterii"
+    ]
+  },
+  "galeriya": [
+    {
+      "file": "rapid-power-bank-25000-srebrist-1.png",
+      "alt": "EcoFlow RAPID Power Bank 25000mAh 170W (сребрист) — външна батерия"
+    },
+    {
+      "file": "rapid-power-bank-25000-srebrist-2.jpg",
+      "alt": "EcoFlow RAPID Power Bank 25000mAh 170W (сребрист) — външна батерия"
+    },
+    {
+      "file": "rapid-power-bank-25000-srebrist-3.jpg",
+      "alt": "EcoFlow RAPID Power Bank 25000mAh 170W (сребрист) — външна батерия"
+    },
+    {
+      "file": "rapid-power-bank-25000-srebrist-4.jpg",
+      "alt": "EcoFlow RAPID Power Bank 25000mAh 170W (сребрист) — външна батерия"
+    },
+    {
+      "file": "rapid-power-bank-25000-srebrist-5.jpg",
+      "alt": "EcoFlow RAPID Power Bank 25000mAh 170W (сребрист) — външна батерия"
+    },
+    {
+      "file": "rapid-power-bank-25000-srebrist-6.jpg",
+      "alt": "EcoFlow RAPID Power Bank 25000mAh 170W (сребрист) — външна батерия"
+    },
+    {
+      "file": "rapid-power-bank-25000-srebrist-7.jpg",
+      "alt": "EcoFlow RAPID Power Bank 25000mAh 170W (сребрист) — външна батерия"
+    },
+    {
+      "file": "rapid-power-bank-25000-srebrist-8.jpg",
+      "alt": "EcoFlow RAPID Power Bank 25000mAh 170W (сребрист) — външна батерия"
+    }
+  ],
+  "sekcii": [
+    {
+      "blockType": "featureSection",
+      "layout": "stacked",
+      "theme": "light",
+      "anchorLabel": "Преглед",
+      "heading": "Бързо зареждане за всеки ден",
+      "body": "",
+      "image": "rapid-power-bank-25000-srebrist-pregled-1.jpg",
+      "imageAlt": "RAPID Power Bank 25000mAh — основни предимства"
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Зареждане",
+      "layout": "tabs-top",
+      "heading": "Мощност и удобство",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Бързо зареждане",
+          "image": "rapid-power-bank-25000-srebrist-zarezhdane-1.jpg",
+          "imageAlt": "RAPID зарежда лаптоп, телефон, часовник и слушалки",
+          "caption": "Зареждане с технологията EcoFlow X-Stream. Когато устройството има нужда, получава до 100W през USB-C. С умно разпределение захранва лаптоп, телефон, таблет и слушалки — четири устройства едновременно.",
+          "rows": []
+        },
+        {
+          "label": "Бързо презареждане",
+          "image": "rapid-power-bank-25000-srebrist-zarezhdane-2.jpg",
+          "imageAlt": "RAPID се зарежда със 100W",
+          "caption": "Мощност на часа преди път или полет? Батерията се зарежда до 50% само за 26 минути — достатъчно за две пълни зареждания на телефон или бързо допълване на лаптоп за целия ден.\n\nСъс 100W през USB-C порта или кабела:\n- от 0% до 80% (20000 mAh) за 53 минути\n- от 0% до 100% (25000 mAh) за 80 минути",
+          "rows": []
+        },
+        {
+          "label": "Вградени кабели",
+          "image": "rapid-power-bank-25000-srebrist-zarezhdane-3.jpg",
+          "imageAlt": "Вграденият прибиращ се USB-C кабел на RAPID",
+          "caption": "Без изгубени кабели — вграденият прибиращ се USB-C кабел 100W и кабелът с каишка са винаги на място, прибрани в корпуса. Прибиращият механизъм ви дава захранване за секунди.",
+          "rows": []
+        },
+        {
+          "label": "Голям капацитет, малък размер",
+          "image": "rapid-power-bank-25000-srebrist-zarezhdane-4.jpg",
+          "imageAlt": "RAPID до кутийка напитка",
+          "caption": "90Wh — разрешена в самолет*, а клетките с висока плътност събират максимален капацитет в компактен корпус.\n- Зарежда MacBook Pro 1 път — 24 часа повече работа\n- Зарежда iPhone 16 4,6 пъти — 115 часа повече работа\n- Зарежда Steam Deck 1,75 пъти — 10 часа повече игра\n\n* Правилата на авиокомпаниите се различават. Проверете ограниченията за батерии при вашата авиокомпания преди пътуване.",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Защита",
+      "layout": "tabs-top",
+      "heading": "Защита, дисплей и съвместимост",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Висока безопасност",
+          "image": "rapid-power-bank-25000-srebrist-zashtita-1.jpg",
+          "imageAlt": "Вътрешната защита на RAPID",
+          "caption": "Защита с EcoFlow X-Guard. Технологията на батериите е като в електромобилите. Системата за управление на батерията следи зареждането постоянно с четирикратна защита — от презареждане, преразреждане, прегряване и късо съединение — за безопасна и стабилна работа.",
+          "rows": []
+        },
+        {
+          "label": "Умен дисплей",
+          "image": "rapid-power-bank-25000-srebrist-zashtita-2.jpg",
+          "imageAlt": "TFT дисплеят на RAPID",
+          "caption": "Умен TFT дисплей с динамично изображение. Виждате в реално време капацитета, мощността на портовете, здравето на батерията, температурата, циклите на зареждане, емоджита и още. Ясният TFT дисплей се чете под всеки ъгъл и при всякаква светлина.",
+          "rows": []
+        },
+        {
+          "label": "Универсална съвместимост",
+          "image": "rapid-power-bank-25000-srebrist-zashtita-3.jpg",
+          "imageAlt": "RAPID с телефони, лаптопи и конзоли",
+          "caption": "Съвместима с 99% от електронните устройства за всеки ден.",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Приложения",
+      "layout": "tabs-top",
+      "heading": "Навсякъде с вас",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Работа от разстояние",
+          "image": "rapid-power-bank-25000-srebrist-prilozheniya-1.jpg",
+          "imageAlt": "RAPID при работа от разстояние",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Пътуване",
+          "image": "rapid-power-bank-25000-srebrist-prilozheniya-2.jpg",
+          "imageAlt": "RAPID по време на пътуване",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "В офиса",
+          "image": "rapid-power-bank-25000-srebrist-prilozheniya-3.jpg",
+          "imageAlt": "RAPID в офиса",
+          "caption": "",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "tabbedShowcase",
+      "anchorLabel": "Портове",
+      "layout": "tabs-top",
+      "heading": "Зареждане на няколко устройства",
+      "intro": "",
+      "tabs": [
+        {
+          "label": "Един порт",
+          "image": "rapid-power-bank-25000-srebrist-portove-1.jpg",
+          "imageAlt": "Мощност при зареждане от един порт",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Два порта",
+          "image": "rapid-power-bank-25000-srebrist-portove-2.jpg",
+          "imageAlt": "Мощност при зареждане от два порта",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Три порта",
+          "image": "rapid-power-bank-25000-srebrist-portove-3.jpg",
+          "imageAlt": "Мощност при зареждане от три порта",
+          "caption": "",
+          "rows": []
+        },
+        {
+          "label": "Четири порта",
+          "image": "rapid-power-bank-25000-srebrist-portove-4.jpg",
+          "imageAlt": "Мощност при зареждане от четири порта",
+          "caption": "",
+          "rows": []
+        }
+      ]
+    },
+    {
+      "blockType": "inTheBox",
+      "anchorLabel": "Какво има в кутията",
+      "heading": "Какво има в кутията",
+      "items": [
+        {
+          "name": "EcoFlow RAPID Power Bank 25000 mAh 170W (сребрист)",
+          "qty": 1
+        },
+        {
+          "name": "Ръководство за употреба",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "blockType": "specTable",
+      "anchorLabel": "Спецификации",
+      "heading": "Спецификации"
+    },
+    {
+      "blockType": "faqBlock",
+      "anchorLabel": "Въпроси",
+      "heading": "Често задавани въпроси",
+      "items": [
+        {
+          "question": "Кои устройства са съвместими?",
+          "answer": "Лаптопи, телефони, таблети, слушалки, смарт часовници, игрови конзоли и други устройства с USB-C — например MacBook Pro/Air, iPhone, iPad, Dell XPS и Samsung Galaxy."
+        },
+        {
+          "question": "Кои протоколи за бързо зареждане поддържа?",
+          "answer": "BC1.2 / Apple 2.4A / QC3.0 / FCP / SCP / AFC / UFCS / PD3.0 / PPS"
+        },
+        {
+          "question": "Как да зареждам и разреждам батерията бързо?",
+          "answer": "За бързо и стабилно зареждане и разреждане препоръчваме:\n1. Подходящо зарядно — с протоколи за бързо зареждане и висока мощност (напр. PD 65W или 100W). Не ползвайте зарядни с ниска мощност (напр. 5V/1A).\n2. Добър кабел — оригинален или качествен кабел за бързо зареждане. Конекторите да са чисти и добре включени; избягвайте много дълги кабели.\n3. Съвместимо устройство — то трябва да поддържа протоколи за бързо зареждане, иначе бързото зареждане няма да работи."
+        },
+        {
+          "question": "Живот на батерията и температура",
+          "answer": "След 300 цикъла батерията запазва над 80% от капацитета си. Зарежда се и се разрежда на надморска височина до 3000 м и при 0–40 °C. Ако не я ползвате дълго, съхранявайте я при −20 до 40 °C и я зареждайте поне веднъж на 3 месеца."
+        },
+        {
+          "question": "Мога ли да я взема в самолета?",
+          "answer": "Да. Според Международната организация за гражданска авиация (ICAO) и повечето авиокомпании външни батерии под 100Wh са разрешени. Батерията е 25000 mAh (90Wh) и отговаря на това изискване."
+        },
+        {
+          "question": "Защо номиналният и реалният капацитет са различни?",
+          "answer": "Номиналният капацитет е общият капацитет на клетките в батерията, а реалният (rated) — енергията, която батерията дава при стандартни условия (напр. 5V/3A). Номиналният е теоретична стойност; реалният отчита загубите при преобразуване и в схемата и затова е по-нисък."
+        },
+        {
+          "question": "Може ли да зарежда и да се зарежда през няколко порта едновременно?",
+          "answer": "Да. Докато се зарежда през USB-C порта, може да дава енергия през другия USB-C порт или през един USB-C + USB-A порт едновременно, но не през два USB-C порта едновременно."
+        }
+      ]
+    }
+  ],
+  "specGroups": [
+    {
+      "groupLabel": "Спецификации",
+      "rows": [
+        {
+          "label": "Модел",
+          "value": "RAPID Power Bank (25,000mAh, 170W, 100W Built-In and Retractable Cables)"
+        },
+        {
+          "label": "Фабричен номер",
+          "value": "EF-RAPID25K100W-S-EU"
+        },
+        {
+          "label": "Капацитет на клетките",
+          "value": "25000 mAh"
+        },
+        {
+          "label": "Реален капацитет",
+          "value": "14500 mAh (разреждане 5V/3A)"
+        },
+        {
+          "label": "Химия",
+          "value": "троен литий (NCM)"
+        },
+        {
+          "label": "Цикли",
+          "value": "300 до 80% капацитет"
+        },
+        {
+          "label": "Изходи",
+          "value": "1 × USB-C порт: 100W; 1 × прибиращ се USB-C кабел: 100W; 1 × вграден USB-C кабел: 100W; 1 × USB-A порт: 18W; общо 170W"
+        },
+        {
+          "label": "Вградени кабели",
+          "value": "вграден USB-C кабел (двупосочен, 100W): 26 см; прибиращ се USB-C кабел (двупосочен, 100W): 67 см"
+        },
+        {
+          "label": "Вход",
+          "value": "100W (USB-C порт / вграден / прибиращ се кабел); няколко входа едновременно не се поддържат"
+        },
+        {
+          "label": "Приложение",
+          "value": "Не"
+        },
+        {
+          "label": "Дисплей",
+          "value": "TFT"
+        },
+        {
+          "label": "Устойчивост на падане",
+          "value": "1 м"
+        },
+        {
+          "label": "Огнеустойчивост",
+          "value": "корпус V0"
+        },
+        {
+          "label": "Температура на зареждане",
+          "value": "20–30 °C"
+        },
+        {
+          "label": "Температура на разреждане",
+          "value": "0–45 °C"
+        },
+        {
+          "label": "Температура на съхранение",
+          "value": "−10 до 45 °C"
+        },
+        {
+          "label": "Размери",
+          "value": "157 × 53,8 × 48,8 мм"
+        },
+        {
+          "label": "Тегло",
+          "value": "около 580 г"
+        },
+        {
+          "label": "Цвят",
+          "value": "сребрист"
+        },
+        {
+          "label": "Гаранция",
+          "value": "24 месеца"
+        }
+      ]
+    }
+  ],
+  "_svali_snimki": [
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-power-bank-25-000mah-170w-100w-built-in-and-retractable-cables-1171445211.png",
+      "file": "rapid-power-bank-25000-srebrist-1.png"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-power-bank-25-000mah-170w-100w-built-in-and-retractable-cables-1174090688.jpg",
+      "file": "rapid-power-bank-25000-srebrist-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-power-bank-25-000mah-170w-100w-built-in-and-retractable-cables-1174090689.jpg",
+      "file": "rapid-power-bank-25000-srebrist-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-power-bank-25-000mah-170w-100w-built-in-and-retractable-cables-1174090685.jpg",
+      "file": "rapid-power-bank-25000-srebrist-4.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-power-bank-25-000mah-170w-100w-built-in-and-retractable-cables-1174090684.jpg",
+      "file": "rapid-power-bank-25000-srebrist-5.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-power-bank-25-000mah-170w-100w-built-in-and-retractable-cables-1174090687.jpg",
+      "file": "rapid-power-bank-25000-srebrist-6.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-power-bank-25-000mah-170w-100w-built-in-and-retractable-cables-1174090683.jpg",
+      "file": "rapid-power-bank-25000-srebrist-7.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-rapid-power-bank-25-000mah-170w-100w-built-in-and-retractable-cables-1174090686.jpg",
+      "file": "rapid-power-bank-25000-srebrist-8.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_ksp_eu_5eb9e780-3584-4789-a9f3-b7615c317c06.jpg",
+      "file": "rapid-power-bank-25000-srebrist-pregled-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Premium_Fast_Charging_eu.jpg",
+      "file": "rapid-power-bank-25000-srebrist-zarezhdane-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Fast_Recharging_47268c90-c95f-4d6a-89f3-be96f42869b1.jpg",
+      "file": "rapid-power-bank-25000-srebrist-zarezhdane-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Multi-Function_Power_eu.jpg",
+      "file": "rapid-power-bank-25000-srebrist-zarezhdane-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Premium_and_Compact_Design.jpg",
+      "file": "rapid-power-bank-25000-srebrist-zarezhdane-4.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Superior_Safety_eu_ec9a4bd7-fa97-4c3f-94e2-e2ff10585c34.jpg",
+      "file": "rapid-power-bank-25000-srebrist-zashtita-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Smart_Screen_Display.jpg",
+      "file": "rapid-power-bank-25000-srebrist-zashtita-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_Universal_Compatibility_eu.jpg",
+      "file": "rapid-power-bank-25000-srebrist-zashtita-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc___01_d7eceb22-3e7f-4cbe-b1c0-0348c3a90483.jpg",
+      "file": "rapid-power-bank-25000-srebrist-prilozheniya-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc___03_dbe7ef28-b153-410d-bf28-f99d693d4577.jpg",
+      "file": "rapid-power-bank-25000-srebrist-prilozheniya-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc___02.jpg",
+      "file": "rapid-power-bank-25000-srebrist-prilozheniya-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_port_01.jpg",
+      "file": "rapid-power-bank-25000-srebrist-portove-1.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_port_02.jpg",
+      "file": "rapid-power-bank-25000-srebrist-portove-2.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_port_03.jpg",
+      "file": "rapid-power-bank-25000-srebrist-portove-3.jpg"
+    },
+    {
+      "url": "https://eu.ecoflow.com/cdn/shop/files/pc_port_04.jpg",
+      "file": "rapid-power-bank-25000-srebrist-portove-4.jpg"
+    }
+  ],
+  "_prevod_nadpisi": {
+    "rapid-power-bank-25000-srebrist-2.jpg": {
+      "170W Max Charging": "Зареждане до 170W",
+      "100W single-port output": "100W от един порт",
+      "Supports up to 170W total output": "Общо до 170W изход",
+      "0-50% MacBook Pro 14\" = 30 min": "0–50% MacBook Pro 14\" = 30 мин"
+    },
+    "rapid-power-bank-25000-srebrist-3.jpg": {
+      "Dual Built-in Cables, Ready When You Are": "Два вградени кабела — винаги готови",
+      "100W USB-C retractable cable": "Прибиращ се USB-C кабел 100W",
+      "Passed 20,000 pull cycle tests and 125,000 swing tests": "Издържа 20 000 издърпвания и 125 000 огъвания",
+      "100W USB-C lanyard cable": "USB-C кабел с каишка 100W",
+      "Supports up to 20 kg": "Издържа до 20 кг"
+    },
+    "rapid-power-bank-25000-srebrist-4.jpg": {
+      "100W": "100W",
+      "Recharge in a Flash": "Презареждане за миг",
+      "0-50% capacity (12,500mAh)": "0–50% капацитет (12 500 mAh)",
+      "0-80% capacity (20,000mAh)": "0–80% капацитет (20 000 mAh)",
+      "0-100% capacity (25,000mAh)": "0–100% капацитет (25 000 mAh)",
+      "min": "мин"
+    },
+    "rapid-power-bank-25000-srebrist-5.jpg": {
+      "Large Capacity in a Compact Size": "Голям капацитет в малък размер",
+      "25,000mAh": "25 000 mAh",
+      "Capacity, Air-Travel-Friendly*": "Капацитет, разрешена в самолет*",
+      "157×54×49 mm": "157 × 54 × 49 мм",
+      "580 g": "580 г",
+      "* Airline regulations vary by region and carrier. Please confirm battery restrictions with your airline before travel.": "* Правилата се различават според региона и авиокомпанията. Проверете ограниченията за батерии при вашата авиокомпания преди пътуване."
+    },
+    "rapid-power-bank-25000-srebrist-6.jpg": {
+      "Advanced Protection, Maximum Performance": "Надеждна защита, максимална работа",
+      "Quadruple Protection": "Четирикратна защита",
+      "Overcharging": "Презареждане",
+      "Over-discharging": "Преразреждане",
+      "Overheating": "Прегряване",
+      "Short-circuiting": "Късо съединение"
+    },
+    "rapid-power-bank-25000-srebrist-7.jpg": {
+      "Universal Compatibility": "Универсална съвместимост",
+      "Compatible with 99% of everyday electronic devices": "Съвместима с 99% от електронните устройства за всеки ден",
+      "iPhone / Samsung / Google Pixel Series": "iPhone / Samsung / Google Pixel",
+      "MacBook Pro/ Air Series": "MacBook Pro / Air",
+      "Steam Deck / Asus ROG Ally": "Steam Deck / Asus ROG Ally",
+      "Apple Watch/AirPods": "Apple Watch / AirPods",
+      "iPad Pro/mini/Air Series": "iPad Pro / mini / Air"
+    },
+    "rapid-power-bank-25000-srebrist-8.jpg": {
+      "Smart Screen Display": "Умен дисплей",
+      "Smart TFT Screen with a Dynamic Display": "Умен TFT дисплей с динамично изображение",
+      "Multiple outputs": "Няколко изхода"
+    },
+    "rapid-power-bank-25000-srebrist-pregled-1.jpg": {
+      "Up to 170W Ultra-Fast Charging": "До 170W ултрабързо зареждане",
+      "100W Max Single Port Input & Output": "100W макс. вход и изход от един порт",
+      "100W Built-in Lanyard and Retractable Cables": "100W вграден кабел с каишка и прибиращ се кабел",
+      "TFT Smart Screen Power at a Glance": "Умен TFT дисплей — всичко с един поглед",
+      "Superior and Safe Performance with EcoFlow": "Висока и безопасна работа с EcoFlow",
+      "Vehicle-Grade Battery for Extended Lifespan": "Батерия от автомобилен клас за по-дълъг живот",
+      "Large Capacity in a Compact Size, 90Wh Air-Travel-Friendly": "Голям капацитет в малък размер, 90Wh — разрешена в самолет"
+    },
+    "rapid-power-bank-25000-srebrist-zarezhdane-1.jpg": {
+      "100W single-port output": "100W от един порт",
+      "170W two-port output": "170W от два порта"
+    },
+    "rapid-power-bank-25000-srebrist-zarezhdane-3.jpg": {
+      "Supports a 20kg max weight (26cm lanyard cable)": "Издържа до 20 кг (кабел с каишка 26 см)",
+      "Passed 20,000× pull cycle tests (retractable cable)": "Издържа 20 000 издърпвания (прибиращ се кабел)",
+      "Passed 125,000× swing tests for a stronger connection between the port and wire (retractable cable)": "Издържа 125 000 огъвания — по-здрава връзка между конектора и кабела (прибиращ се кабел)"
+    },
+    "rapid-power-bank-25000-srebrist-zashtita-1.jpg": {
+      "Quadruple Protection Prevents:": "Четирикратна защита от:",
+      "Overcharging": "презареждане",
+      "Over-discharging": "преразреждане",
+      "Overheating": "прегряване",
+      "Short-circuiting": "късо съединение"
+    }
+  },
+  "_neyasni": [
+    "По решение на собственика (11.11.2026) — като eu.ecoflow.com (както RAPID Pro).",
+    "Заглавието е официалното име от eu.ecoflow.com. В dice.bg моделът е „Laptop Power Bank … 25000 mAh 165W“ — EcoFlow казва 170W; оставено 170W.",
+    "dice.bg: „Съвместимост … до 30W“ — явно грешка (батерията дава 100W); не е взето.",
+    "Снимките „Работа от разстояние / Пътуване / В офиса“ при EcoFlow са 6 (pc___01…06) с 3 надписа — взети са първите 3. Снимките по портове са само с числа (W) — без превод.",
+    "Галерията в eu.ecoflow.com е обща за двата цвята — първата снимка е сребристата, инфографиките са общи.",
+    "Гаранция: EcoFlow 2 години, dice.bg 24 месеца — съвпадат.",
+    "Цена/зачертана цена/SKU/наличност — от XML на dice (11.11.2026)."
+  ]
+}
