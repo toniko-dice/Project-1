@@ -1,9 +1,46 @@
 import type { Page, Product } from '@/payload-types'
 import { categoryBranchIds, getCategoryProducts, getCategoryTree } from './payload'
+import { newestFirst } from './catalog'
 import { publishedRelation, resolvedRelations } from './relations'
 
 type Layout = NonNullable<Page['layout']>
 type Carousel = Extract<Layout[number], { blockType: 'productCarousel' }>
+type BannerRow = Extract<Layout[number], { blockType: 'bannerProductRow' }>
+
+/**
+ * Продуктите на ред „Банер + продукти".
+ *
+ * „Ръчно" (и „Автоматично" без категория — нямаше откъде) — ръчният
+ * списък. „Автоматично" — закрепените, после публикуваните от категорията
+ * и подкатегориите ѝ по „новите отпред" (`newestFirst`), общо до „Брой
+ * продукти". Продуктът на банера не се повтаря в реда.
+ */
+export const bannerRowProducts = async (block: BannerRow): Promise<Product[]> => {
+  const cat = block.fromCategory
+  if (block.mode === 'manual' || !cat) {
+    return resolvedRelations<Product>(block.products, 'bannerProductRow.products')
+  }
+
+  const банер = block.showBanner ? block.banner?.product : null
+  const банерId = typeof банер === 'number' ? банер : (банер?.id ?? null)
+  const брой = Math.max(1, block.autoCount ?? 5)
+
+  const tree = await getCategoryTree()
+  const id = typeof cat === 'number' ? cat : cat.id
+  const slug = tree.find((c) => c.id === id)?.slug
+  const отКатегорията = slug ? await getCategoryProducts(slug, categoryBranchIds(tree, id)) : []
+
+  const видени = new Set<number>(банерId !== null ? [банерId] : [])
+  const out: Product[] = []
+  const add = (p: Product) => {
+    if (видени.has(p.id) || out.length >= брой) return
+    видени.add(p.id)
+    out.push(p)
+  }
+  resolvedRelations<Product>(block.pinnedProducts, 'bannerProductRow.pinnedProducts').forEach(add)
+  ;[...отКатегорията].sort(newestFirst).forEach(add)
+  return out
+}
 
 /**
  * Продуктите на карусела.

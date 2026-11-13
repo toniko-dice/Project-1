@@ -271,6 +271,8 @@ const cardSelect = (extra: Record<string, true> = {}) =>
     ...(Products.defaultPopulate as Record<string, true>),
     _order: true,
     categories: true,
+    // За „новите отпред" (`newestFirst`).
+    createdAt: true,
     ...extra,
   }) as ProductsSelect<true>
 
@@ -347,6 +349,7 @@ export const getCatalogIndex = cache(
             availability: true,
             _order: true,
             updatedAt: true,
+            createdAt: true,
           },
           sort: ['_order', 'title'],
           pagination: false,
@@ -380,6 +383,7 @@ export const getCatalogIndex = cache(
             availability: doc.availability ?? null,
             order: doc._order ?? '',
             updatedAt: doc.updatedAt ?? null,
+            createdAt: doc.createdAt ?? null,
           }
         })
       }),

@@ -27,6 +27,8 @@ export type CatalogEntry = {
   availability: string | null
   order: string
   updatedAt: string | null
+  /** Кога е добавен в сайта — за правилото „новите отпред" (`newestFirst`). */
+  createdAt: string | null
 }
 
 export type Catalog = {
@@ -156,6 +158,34 @@ export const byAvailabilityThenOrder = (
   const наличен = (p: typeof a) => (p.availability === 'in-stock' ? 0 : 1)
   if (наличен(a) !== наличен(b)) return наличен(a) - наличен(b)
   // `_order` е дробен ключ — сравнява се като низ, не по азбуката на езика.
+  const ka = a._order ?? a.order ?? ''
+  const kb = b._order ?? b.order ?? ''
+  if (ka !== kb) return ka < kb ? -1 : 1
+  return a.title.localeCompare(b.title, 'bg')
+}
+
+/**
+ * „НОВИТЕ ОТПРЕД" — редът на автоматичните панели в менюто и на редовете
+ * „Банер + продукти" на началната (`task-novi-produkti-avtomatichno.md`).
+ *
+ * Изчерпаните (`out-of-stock`) — след останалите, каквато и да е датата им;
+ * после по дата на добавяне в сайта, най-новите първи; при равенство —
+ * `_order` и заглавие.
+ *
+ * Датата е `createdAt`: вносът обновява съществуващия продукт по slug, не
+ * го пресъздава, затова повторен внос не я мени (проверено 12.11.2026 —
+ * датите на сървъра са тези на първия внос).
+ */
+export const newestFirst = (
+  a: { availability?: string | null; createdAt?: string | null; _order?: string | null; order?: string; title: string },
+  b: { availability?: string | null; createdAt?: string | null; _order?: string | null; order?: string; title: string },
+) => {
+  const изчерпан = (p: typeof a) => (p.availability === 'out-of-stock' ? 1 : 0)
+  if (изчерпан(a) !== изчерпан(b)) return изчерпан(a) - изчерпан(b)
+  const da = a.createdAt ?? ''
+  const db = b.createdAt ?? ''
+  // ISO датите се сравняват като низове; по-новата — първа.
+  if (da !== db) return da > db ? -1 : 1
   const ka = a._order ?? a.order ?? ''
   const kb = b._order ?? b.order ?? ''
   if (ka !== kb) return ka < kb ? -1 : 1

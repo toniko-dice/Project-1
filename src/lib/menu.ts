@@ -6,6 +6,7 @@ import {
   accessoriesForProduct,
   byAvailabilityThenOrder,
   canHaveAccessoriesPage,
+  newestFirst,
   type Catalog,
 } from '@/lib/catalog'
 import { getCatalog, getProductsByIds } from '@/lib/payload'
@@ -72,6 +73,68 @@ const sectionCategory = (section: PanelSection): Category | null => {
 const viewAllUrl = (section: PanelSection) => {
   const c = sectionCategory(section)
   return c ? categoryPath(c.slug) : (section.viewAllUrl ?? null)
+}
+
+/**
+ * Продуктова секция в режим „Автоматично" — с категория. Без категория
+ * няма откъде да се пълни и се показва като ръчна. Празен режим (ред,
+ * записан преди полето) е „Автоматично" — стойността по подразбиране.
+ */
+const isAutoSection = (section: PanelSection) =>
+  !section.accessories && section.mode !== 'manual' && sectionCategory(section) !== null
+
+/**
+ * Продуктите на автоматична секция — всички публикувани от категорията ѝ и
+ * от подкатегориите (по която и да е от „Категории" на продукта, тоест и
+ * там, където категорията е допълнителна), по правилото „новите отпред".
+ * Каталогът съдържа само публикуваните.
+ */
+const autoSectionIds = (section: PanelSection, catalog: Catalog): number[] => {
+  const категория = sectionCategory(section)
+  if (!категория) return []
+  const клон = catalog.branch(категория.id)
+  return catalog.entries
+    .filter((e) => e.categories.some((c) => клон.has(c)))
+    .sort(newestFirst)
+    .map((e) => e.id)
+}
+
+/**
+ * Редът на картите в автоматична секция: закрепените редове (в реда им),
+ * после продуктите от категорията без закрепените. Незакрепен ред за
+ * продукт от списъка дава само полетата си (име, подзаглавие, снимка,
+ * етикет); първият такъв ред печели. Без повторения.
+ */
+const autoSectionCards = (
+  section: PanelSection,
+  byId: Record<number, Product>,
+  catalog: Catalog,
+): MenuCard[] => {
+  const редове = section.cards ?? []
+  const видени = new Set<number>()
+  const out: MenuCard[] = []
+
+  for (const card of редове) {
+    if (!card.pinned) continue
+    const id = cardProductId(card)
+    const product = id !== null ? byId[id] : undefined
+    if (!product || видени.has(product.id)) continue
+    видени.add(product.id)
+    out.push(productCard(card, product))
+  }
+
+  const полета = new Map<number, PanelCard>()
+  for (const card of редове) {
+    const id = cardProductId(card)
+    if (id !== null && !card.pinned && !полета.has(id)) полета.set(id, card)
+  }
+  for (const id of autoSectionIds(section, catalog)) {
+    const product = byId[id]
+    if (!product || видени.has(id)) continue
+    видени.add(id)
+    out.push(productCard(полета.get(id) ?? null, product))
+  }
+  return out
 }
 
 /** Раздел „Аксесоари" без нито един ред — пълни се сам. */
@@ -145,7 +208,8 @@ const accessoriesLink = (panel: MenuPanel, section: PanelSection, catalog: Catal
 }
 
 /**
- * Секциите на панела — точно редовете от админа, в този ред.
+ * Секциите на панела — в режим „Ръчно" точно редовете от админа, в този
+ * ред; в „Автоматично" — `autoSectionCards`.
  *
  * Първият ред е голямата карта, останалите — малките, общо до шест
  * (`MAX_SECTION_CARDS`); останалите са зад „Виж всички". Чернова и изтрит
@@ -193,13 +257,15 @@ const panelSections = (
     }
 
     // Първите шест ПОКАЗВАЕМИ — чернова или изтрит продукт не заема място.
-    const cards = (section.cards ?? [])
-      .flatMap((card) => {
-        const id = cardProductId(card)
-        const product = id !== null ? byId[id] : undefined
-        return product ? [productCard(card, product)] : []
-      })
-      .slice(0, MAX_SECTION_CARDS)
+    const cards = (
+      isAutoSection(section)
+        ? autoSectionCards(section, byId, catalog)
+        : (section.cards ?? []).flatMap((card) => {
+            const id = cardProductId(card)
+            const product = id !== null ? byId[id] : undefined
+            return product ? [productCard(card, product)] : []
+          })
+    ).slice(0, MAX_SECTION_CARDS)
     const [first, ...rest] = cards
     if (!first) return []
 
@@ -228,6 +294,7 @@ export const buildNavItems = async (header: HeaderGlobal): Promise<NavItem[]> =>
     Вместо да се вдига дълбочината на целия глобал, продуктите се дотеглят
     отделно — и само публикуваните: чернова в менюто не бива да излиза.
   */
+  const catalog = await getCatalog()
   const ids = new Set<number>()
   for (const panel of panels) {
     for (const section of panel.sections ?? []) {
@@ -235,12 +302,13 @@ export const buildNavItems = async (header: HeaderGlobal): Promise<NavItem[]> =>
         const id = cardProductId(card)
         if (id !== null) ids.add(id)
       }
+      // Автоматичната секция — само първите шест; останалите не се показват.
+      if (isAutoSection(section)) {
+        for (const id of autoSectionIds(section, catalog).slice(0, MAX_SECTION_CARDS)) ids.add(id)
+      }
     }
   }
-  const [cardsById, catalog] = await Promise.all([
-    getProductsByIds([...ids].sort((a, b) => a - b)),
-    getCatalog(),
-  ])
+  const cardsById = await getProductsByIds([...ids].sort((a, b) => a - b))
 
   /*
     Празните раздели „Аксесоари" — кои аксесоари за кой панел. Картите им

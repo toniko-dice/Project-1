@@ -63,6 +63,7 @@ const entries: CatalogEntry[] = продукти.map((p) => ({
   availability: null,
   order: p._order ?? '',
   updatedAt: null,
+  createdAt: null,
 }))
 const catalog = makeCatalog(tree, entries)
 

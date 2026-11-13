@@ -14,8 +14,7 @@ import { ProductCard } from '../ProductCard'
 import { ScrollRow } from '../ScrollRow'
 import { BannerButton, BannerEyebrow, PageSection, SectionHeading } from './section'
 import { ImagePlaceholder } from '../ImagePlaceholder'
-import { resolvedRelations } from '@/lib/relations'
-import { carouselProducts } from '@/lib/page-products'
+import { bannerRowProducts, carouselProducts } from '@/lib/page-products'
 
 type Layout = NonNullable<Page['layout']>
 type BlockOf<T extends string> = Extract<Layout[number], { blockType: T }>
@@ -228,14 +227,15 @@ const RoundArrow = () => (
   </span>
 )
 
-export const BannerProductRowBlock = ({
+export const BannerProductRowBlock = async ({
   block,
   showBgn,
 }: {
   block: BlockOf<'bannerProductRow'>
   showBgn: boolean
 }) => {
-  const products = resolvedRelations<Product>(block.products, 'bannerProductRow.products')
+  // Ръчният списък или „новите отпред" от категорията — виж `bannerRowProducts`.
+  const products = await bannerRowProducts(block)
   const banner = block.banner
   // Webp размерите, изрязани от CSS — виж `bannerImage`.
   const bannerImg = bannerImage(banner?.image)

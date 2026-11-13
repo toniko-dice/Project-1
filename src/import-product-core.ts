@@ -108,8 +108,6 @@ export type ImportResult = {
   failedDownloads: string[]
   missingFiles: string[]
   publishError: string | null
-  /** Къде в менюто е добавен НОВИЯТ продукт — или защо никъде. Празно при обновяване. */
-  menu: string[]
   /** Нищо не е записано — само проверка. */
   dryRun: boolean
 }
@@ -1553,13 +1551,6 @@ export const importProduct = async (
   const wasPublished = existing?._status === 'published'
   let action: ImportAction
   let publishError: string | null = null
-  let menu: string[] = []
-  // Полетата на реда в менюто — от продукта; етикетът остава празен.
-  const карта = {
-    title: (content.produkt.title as string | undefined) ?? null,
-    specLine: (content.produkt.tagline as string | undefined) ?? null,
-    image: mainImage ?? null,
-  }
 
   const резултат = (): ImportResult => ({
     slug: content.produkt.slug as string,
@@ -1579,7 +1570,6 @@ export const importProduct = async (
     failedDownloads,
     missingFiles,
     publishError,
-    menu,
     dryRun,
   })
 
@@ -1604,15 +1594,6 @@ export const importProduct = async (
       : wasPublished || options.publish
         ? 'обновен и публикуван'
         : 'обновен (остава чернова)'
-    if (!existing) {
-      menu = await addToMenuPanels(payload, {
-        productId: DRY_ID,
-        card: карта,
-        categoryId,
-        dryRun: true,
-      })
-      for (const ред of menu) log(`  ${ред}`)
-    }
     return резултат()
   }
 
@@ -1690,17 +1671,11 @@ export const importProduct = async (
     const published = action === 'създаден и публикуван'
 
     /*
-      Новият продукт влиза в менюто сам — в края на секцията за своята
-      категория. САМО при създаване: обновяване не пипа панелите, затова
-      махнат от собственика продукт не се връща при следващ внос.
+      Менюто и редовете на началната не се пипат: автоматичните секции
+      показват новия продукт сами („новите отпред", `src/lib/menu.ts`).
+      До 12.11.2026 вносът добавяше ред в КРАЯ на секцията и в пълна
+      секция новият не се виждаше (task-novi-produkti-avtomatichno.md).
     */
-    menu = await addToMenuPanels(payload, {
-      productId: created.id,
-      card: карта,
-      categoryId,
-      dryRun: false,
-    })
-    for (const ред of menu) log(`  ${ред}`)
 
     /*
       Колоната „този модел" в сравнителната таблица сочи самия продукт, а
@@ -1729,141 +1704,6 @@ export const importProduct = async (
   }
 
   return резултат()
-}
-
-/* ─────────── менюто ─────────── */
-
-/**
- * Добавя НОВ продукт в края на секциите в менюто — като ред с попълнени
- * име, подзаглавие и снимка и празен етикет. Връща редове за обобщението.
- *
- * Панелите нямат автоматичен режим: сайтът показва точно списъка на всяка
- * секция. Вносът само ДОБАВЯ новите продукти; махане и подредба са на
- * собственика. Затова се вика единствено при създаване — обновяване не
- * пипа панелите и махнат продукт не се връща.
- *
- * Къде:
- * - в секцията с НАЙ-БЛИЗКАТА категория: първо тази на продукта, после
- *   родителската серия, после главната. Най-близката, не първата срещната:
- *   „Аксесоари" (главна) и „Кабели" (под нея) и двете съдържат кабела,
- *   а мястото му е в „Кабели". При равенство — първата по реда в менюто;
- * - никога в раздел „Аксесоари" (отметката `accessories`): празният се
- *   пълни сам от „Съвместим с" (`Header.tsx`), а ред от вноса би го
- *   направил ръчен и би спрял попълването;
- * - САМО в панели, които са в менюто. Стари панели извън него имат секции
- *   със същите категории и иначе новият продукт отиваше там, където никой
- *   не го вижда.
- */
-export const addToMenuPanels = async (
-  payload: Payload,
-  {
-    productId,
-    card,
-    categoryId,
-    dryRun,
-  }: {
-    productId: number
-    card: { title: string | null; specLine: string | null; image: number | null }
-    categoryId: number
-    dryRun: boolean
-  },
-): Promise<string[]> => {
-  const header = await payload.findGlobal({ slug: 'header', depth: 0 })
-  const panelIds: number[] = []
-  for (const item of header.items ?? []) {
-    for (const group of item.groups ?? []) {
-      for (const entry of group.entries ?? []) {
-        const id = typeof entry.panel === 'number' ? entry.panel : entry.panel?.id
-        if (typeof id === 'number' && !panelIds.includes(id)) panelIds.push(id)
-      }
-    }
-  }
-
-  const categories = await payload.find({
-    collection: 'categories',
-    pagination: false,
-    depth: 0,
-  })
-  const parentOf = new Map<number, number | null>()
-  const titleOf = new Map<number, string>()
-  for (const c of categories.docs) {
-    parentOf.set(c.id, typeof c.parent === 'number' ? c.parent : (c.parent?.id ?? null))
-    titleOf.set(c.id, c.title)
-  }
-
-  /** Категорията и всички над нея: [сама, родител, баба…]. */
-  const нагоре = (id: number): number[] => {
-    const out: number[] = []
-    for (let c: number | null | undefined = id; c != null && !out.includes(c); c = parentOf.get(c)) {
-      out.push(c)
-    }
-    return out
-  }
-
-  const panels = panelIds.length
-    ? (
-        await payload.find({
-          collection: 'menu-panels',
-          where: { id: { in: panelIds } },
-          pagination: false,
-          depth: 0,
-        })
-      ).docs.sort((a, b) => panelIds.indexOf(a.id) - panelIds.indexOf(b.id))
-    : []
-
-  type Цел = { panelIndex: number; sectionIndex: number }
-  const цели: Цел[] = []
-
-  // Секцията с най-близката категория.
-  const предци = нагоре(categoryId)
-  let най: (Цел & { разстояние: number }) | null = null
-  panels.forEach((panel, panelIndex) => {
-    ;(panel.sections ?? []).forEach((section, sectionIndex) => {
-      if (section.accessories) return
-      const c = section.viewAllCategory
-      const id = typeof c === 'number' ? c : c?.id
-      if (typeof id !== 'number') return
-      const разстояние = предци.indexOf(id)
-      if (разстояние < 0) return
-      if (!най || разстояние < най.разстояние) най = { panelIndex, sectionIndex, разстояние }
-    })
-  })
-  if (най) цели.push(най)
-
-  if (!цели.length) {
-    return [
-      `не е добавен в панел: няма секция за категория „${titleOf.get(categoryId) ?? categoryId}"`,
-    ]
-  }
-
-  const редове: string[] = []
-  const докоснати = new Set<number>()
-  for (const { panelIndex, sectionIndex } of цели) {
-    const panel = panels[panelIndex]!
-    const section = panel.sections![sectionIndex]!
-    const cards = section.cards ?? []
-    const ids = cards.map((c) => (typeof c.product === 'number' ? c.product : c.product?.id))
-    if (ids.includes(productId)) continue
-    section.cards = [...cards, { product: productId, ...card, label: null }]
-    докоснати.add(panelIndex)
-    редове.push(
-      `${dryRun ? 'би се добавил' : 'добавен'} в панел „${panel.title}" › „${section.heading}" (${cards.length + 1}-и)`,
-    )
-  }
-
-  if (!dryRun) {
-    for (const panelIndex of докоснати) {
-      const panel = panels[panelIndex]!
-      await payload.update({
-        collection: 'menu-panels',
-        id: panel.id,
-        data: { sections: panel.sections } as never,
-        depth: 0,
-      })
-    }
-  }
-
-  return редове
 }
 
 /* ─────────── кешът на работещия сървър ─────────── */

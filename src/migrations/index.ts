@@ -60,6 +60,7 @@ import * as migration_20261013_052710_banner_biskvitki from './20261013_052710_b
 import * as migration_20261013_101202_kategoriya_skrita from './20261013_101202_kategoriya_skrita';
 import * as migration_20261019_095550_imeil_office from './20261019_095550_imeil_office';
 import * as migration_20261029_161823_dokumenti from './20261029_161823_dokumenti';
+import * as migration_20261112_095545_novi_otpred from './20261112_095545_novi_otpred';
 
 export const migrations = [
   {
@@ -370,6 +371,11 @@ export const migrations = [
   {
     up: migration_20261029_161823_dokumenti.up,
     down: migration_20261029_161823_dokumenti.down,
-    name: '20261029_161823_dokumenti'
+    name: '20261029_161823_dokumenti',
+  },
+  {
+    up: migration_20261112_095545_novi_otpred.up,
+    down: migration_20261112_095545_novi_otpred.down,
+    name: '20261112_095545_novi_otpred'
   },
 ];

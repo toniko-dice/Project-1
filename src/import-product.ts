@@ -94,7 +94,6 @@ console.log(
 )
 console.log(`✓ Продукт: ${result.title} — ${actionLabel(result.action, dryRun)}`)
 if (result.publishError) console.log(`  ✗ ${result.publishError.split('\n')[0]}`)
-for (const ред of result.menu) console.log(`✓ Меню: ${ред}`)
 console.log(`✓ Галерия: ${result.gallery} снимки (първата е основната)`)
 console.log(`✓ Спецификации: ${result.specGroups} групи`)
 console.log(`✓ Секции: ${result.sections}`)

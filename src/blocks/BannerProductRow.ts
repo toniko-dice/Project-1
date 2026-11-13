@@ -1,4 +1,4 @@
-import type { Block } from 'payload'
+import type { Block, Validate } from 'payload'
 import { eyebrowColorField, linkField, requiredUnlessHidden, themeField } from './shared'
 
 /**
@@ -10,6 +10,13 @@ import { eyebrowColorField, linkField, requiredUnlessHidden, themeField } from '
  * (Домашно захранване, Захранване на открито, Домашна батерия,
  * Външни батерии, Аксесоари).
  */
+/** „Автоматично" без категория няма откъде да се пълни. */
+const категорияПриАвтоматично: Validate = (value, { siblingData }) => {
+  const блок = siblingData as { hidden?: boolean; mode?: string } | undefined
+  if (блок?.hidden === true || блок?.mode === 'manual') return true
+  return value ? true : 'Изберете категория или превключете „Продукти в реда" на „Ръчно".'
+}
+
 export const BannerProductRow: Block = {
   slug: 'bannerProductRow',
   labels: { singular: 'Банер + продукти', plural: 'Банери + продукти' },
@@ -92,6 +99,64 @@ export const BannerProductRow: Block = {
         themeField,
       ],
     },
+    /*
+      „Новите отпред" (`task-novi-produkti-avtomatichno.md`, 12.11.2026):
+      в режим „Автоматично" редът се пълни сам от категорията — закрепените
+      първо, после най-новите (`newestFirst`), без продукта на банера.
+      Съществуващите блокове бяха оставени на „Ръчно" от миграцията;
+      ръчният списък остава непокътнат и при превключване.
+    */
+    {
+      name: 'mode',
+      type: 'select',
+      label: 'Продукти в реда',
+      defaultValue: 'auto',
+      options: [
+        { label: 'Автоматично — най-новите от категорията', value: 'auto' },
+        { label: 'Ръчно — точно избраните', value: 'manual' },
+      ],
+      admin: {
+        description:
+          'Автоматично: първо закрепените, после всички видими продукти от категорията — най-новите първи, изчерпаните накрая, без продукта на банера. Нов продукт излиза сам.',
+      },
+    },
+    {
+      type: 'row',
+      admin: { condition: (_, sibling) => sibling?.mode !== 'manual' },
+      fields: [
+        {
+          name: 'fromCategory',
+          type: 'relationship',
+          relationTo: 'categories',
+          label: 'Категория',
+          validate: категорияПриАвтоматично,
+          admin: {
+            width: '65%',
+            description: 'Редът показва продуктите от нея и от подкатегориите ѝ.',
+          },
+        },
+        {
+          name: 'autoCount',
+          type: 'number',
+          label: 'Брой продукти',
+          defaultValue: 5,
+          min: 1,
+          max: 12,
+          admin: { width: '35%', description: 'Заедно със закрепените. На широк екран — пет колони.' },
+        },
+      ],
+    },
+    {
+      name: 'pinnedProducts',
+      type: 'relationship',
+      relationTo: 'products',
+      hasMany: true,
+      label: 'Закрепени продукти',
+      admin: {
+        condition: (_, sibling) => sibling?.mode !== 'manual',
+        description: 'По избор. Стоят най-отпред, в този ред, преди най-новите от категорията.',
+      },
+    },
     {
       name: 'products',
       type: 'relationship',
@@ -99,6 +164,7 @@ export const BannerProductRow: Block = {
       hasMany: true,
       label: 'Продукти в реда',
       admin: {
+        condition: (_, sibling) => sibling?.mode === 'manual',
         description:
           'Подредбата тук определя реда на екрана. Препоръчително 4–5 броя — на широк екран се показват пет колони.',
       },
