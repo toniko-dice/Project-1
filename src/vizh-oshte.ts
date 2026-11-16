@@ -9,8 +9,10 @@
  *   категорията на DELTA Pro Ultra; снимка → `delta-pro-ultra-1.png`
  *   (вече е в Медия — нищо не се сваля).
  *
- * 16 ноември 2026: Rapid — „Брой продукти" 5 → 4 (плочката беше сама на
- * втори ред при 1440 px) и без описанието от PowerOcean.
+ * 16 ноември 2026: Rapid — текстът на плочката „Всички външни батерии RAPID"
+ * (вместо „Сравнете всички решения за дома" от PowerOcean), снимката —
+ * банерната на реда (№ 1269); „Брой продукти" обратно на 5 — плочката
+ * вече сама отнема един продукт (`bannerRowProducts`).
  *
  * Пипа САМО `showMoreTile`, `moreTile.url`, `moreTile.image` (и при Rapid —
  * `autoCount`, `moreTile.description`) на тези два реда; останалото се сравнява преди и след записа. Повторяем. Архив
@@ -68,10 +70,14 @@ if (!dpu) throw new Error('няма продукт delta-pro-ultra')
 const dpuКат = await категория({ id: { equals: номер(dpu.category) } })
 const dpuСнимка = await снимка('delta-pro-ultra-1.png')
 
-const цели: { заглавие: string; url: string; image?: number; autoCount?: number; безОписание?: boolean }[] = [
-  // 4 продукта + плочката = един ред от 5 колони при 1440 px; описанието
-  // „Сравнете всички решения за дома" е останало от PowerOcean.
-  { заглавие: 'EcoFlow Rapid външни батерии', url: categoryUrl(rapid)!, autoCount: 4, безОписание: true },
+const rapidСнимка = await снимка('Mountain cabin remote work, powered.png')
+
+const цели: { заглавие: string; url: string; image?: number; autoCount?: number; описание?: string }[] = [
+  // „Брой продукти" остава 5: с включена плочка редът сам показва с един
+  // по-малко (4 + плочката, `bannerRowProducts`). Описанието от PowerOcean
+  // „Сравнете всички решения за дома" → собствено; снимката — банерната
+  // на реда (№ 1269), вместо сивия квадрат № 44.
+  { заглавие: 'EcoFlow Rapid външни батерии', url: categoryUrl(rapid)!, image: rapidСнимка.id, autoCount: 5, описание: 'Всички външни батерии RAPID' },
   { заглавие: 'EcoFlow DELTA Pro Ultra Power Станция', url: categoryUrl(dpuКат)!, image: dpuСнимка.id },
 ]
 
@@ -89,13 +95,13 @@ for (const ц of цели) {
   if (b.moreTile?.url !== ц.url) промени.push(`„${ц.заглавие}": адрес ${b.moreTile?.url ?? '(празно)'} → ${ц.url}`)
   if (номер(b.moreTile?.image) !== образ) промени.push(`„${ц.заглавие}": снимка ${номер(b.moreTile?.image) ?? '(няма)'} → № ${образ}`)
   if (ц.autoCount !== undefined && b.autoCount !== ц.autoCount) промени.push(`„${ц.заглавие}": брой продукти ${b.autoCount ?? '—'} → ${ц.autoCount}`)
-  if (ц.безОписание && b.moreTile?.description) промени.push(`„${ц.заглавие}": махнат текстът „${b.moreTile.description}"`)
+  if (ц.описание !== undefined && b.moreTile?.description !== ц.описание) промени.push(`„${ц.заглавие}": текст „${b.moreTile?.description ?? ''}" → „${ц.описание}"`)
   if (!образ) throw new Error(`„${ц.заглавие}": плочката остава без снимка`)
   const нов = {
     ...b,
     showMoreTile: true,
     ...(ц.autoCount !== undefined ? { autoCount: ц.autoCount } : {}),
-    moreTile: { ...b.moreTile, url: ц.url, image: образ, ...(ц.безОписание ? { description: null } : {}) },
+    moreTile: { ...b.moreTile, url: ц.url, image: образ, ...(ц.описание !== undefined ? { description: ц.описание } : {}) },
   }
   if (чисто(нов) !== чисто({ ...b, moreTile: { ...b.moreTile, image: номер(b.moreTile?.image) } })) {
     layout[i] = нов

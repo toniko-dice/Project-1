@@ -23,7 +23,16 @@ export const bannerRowProducts = async (block: BannerRow): Promise<Product[]> =>
 
   const банер = block.showBanner ? block.banner?.product : null
   const банерId = typeof банер === 'number' ? банер : (банер?.id ?? null)
-  const брой = Math.max(1, block.autoCount ?? 5)
+  /*
+    С включена плочка „Виж още" (същото условие като в BannerProductRowBlock)
+    — с един продукт по-малко, за да е плочката на същия ред (пет колони на
+    широк екран: 4 продукта + плочката).
+  */
+  const more = block.moreTile
+  const плочка =
+    Boolean(block.showMoreTile) &&
+    Boolean((more?.label && more?.url) || (more?.secondaryLabel && more?.secondaryUrl))
+  const брой = Math.max(1, (block.autoCount ?? 5) - (плочка ? 1 : 0))
 
   const tree = await getCategoryTree()
   const id = typeof cat === 'number' ? cat : cat.id
