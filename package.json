@@ -41,6 +41,7 @@
     "trail:skrivane": "payload run src/trail-skrivane.ts --",
     "novi:otpred": "payload run src/novi-otpred.ts --",
     "vizh:oshte": "payload run src/vizh-oshte.ts --",
+    "nachalna:delta-pro": "payload run src/nachalna-delta-pro.ts --",
     "domein:ecoflow-bg": "payload run src/domein-ecoflow-bg.ts --",
     "deploy": "node scripts/server.mjs deploy",
     "razblokirai": "node scripts/server.mjs razblokirai",
